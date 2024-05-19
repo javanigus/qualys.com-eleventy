@@ -30,8 +30,8 @@ const walk = dir => {
 };
 
 const edit = filePath => {
-  if (filePath.endsWith('/company/index.njk') || filePath.endsWith('/apps/cybersecurity-asset-management/index.njk') || filePath.endsWith('/emails/lunch-learn/2022-02-03/ransomware-virtual/confirm/index.njk') || filePath.endsWith('/webcasts/untitled-entry-2024-01-22-at-09-38-40/index.njk') && !filePath.includes("_includes")) {
-  // if (filePath.endsWith('.njk') && !filePath.includes("_includes")) {
+  // if (filePath.endsWith('/company/index.njk') || filePath.endsWith('/apps/cybersecurity-asset-management/index.njk') || filePath.endsWith('/emails/lunch-learn/2022-02-03/ransomware-virtual/confirm/index.njk') || filePath.endsWith('/webcasts/untitled-entry-2024-01-22-at-09-38-40/index.njk') && !filePath.includes("_includes")) {
+  if (filePath.endsWith('.njk') && !filePath.includes("_includes")) {
     var oldContent = fs.readFileSync(filePath, {encoding: 'utf8'});
 
     // REPLACE {{#if class}} with {% if class %}
