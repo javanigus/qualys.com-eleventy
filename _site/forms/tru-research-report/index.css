@@ -378,7 +378,6 @@
 /** bouncing arrow separator **/
 
 .q-tru-arrow {
-	text-align: center;
 	display: block;
 	text-align: center;
 	padding: 10px 0;
@@ -529,7 +528,6 @@
 }
 .q-tru-slides-paging {
 	display: none;
-	position: -webkit-sticky;
 	position: sticky;
 	width: 40px;
 	top: 0;
@@ -927,5 +925,4 @@
 		display: block;
 	}
 }
-
 /*# sourceMappingURL=index.css.map */

@@ -91,8 +91,6 @@
 	.q-qsc-section h3 {
 		margin-bottom: 1.526em;
 	}
-}
-@media (min-width: 720px) {
 	.q-qsc-city__hero {
 		background-image: url(https://ik.imagekit.io/qualys/image/2022/qsc/mumbai/qsc-mumbai-website-desktop.jpg);
 		background-position: center;
@@ -333,5 +331,4 @@ ul.company-list li {
 		top: 15px;
 	}
 }
-
 /*# sourceMappingURL=index.css.map */

@@ -228,7 +228,6 @@
 	font-family: Gotham, sans-serif;
 	font-weight: 400;
 	letter-spacing: -0.01em;
-	line-height: 1.15;
 	color: #262626;
 	line-height: 1.33333;
 }
@@ -707,8 +706,6 @@
 	}
 	.tradition .heading--2 {
 		margin-top: 2em;
-	}
-	.tradition .heading--2 {
 		max-width: 880px;
 	}
 	.q-apps-outro__heading {
@@ -923,8 +920,6 @@
 	.q-subscriptions-hero-cta__link-wrap {
 		text-align: left;
 	}
-}
-@media (min-width: 1080px) {
 	.q-default-hero__image {
 		top: 8em;
 		bottom: auto;
@@ -1140,8 +1135,6 @@
 	}
 	.vmdr-workflow-table2 .td {
 		border-bottom: 1px solid #ccc;
-	}
-	.vmdr-workflow-table2 .td {
 		border-right: 2px solid #2E8BE0;
 	}
 	.vmdr-workflow-table2 .td:last-of-type {
@@ -1300,5 +1293,4 @@
 		padding-right: 70px;
 	}
 }
-
 /*# sourceMappingURL=index.css.map */

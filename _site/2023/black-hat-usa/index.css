@@ -334,9 +334,6 @@ a.session-bg:hover,
 	.session.two .box-column,
 	.session.four .box-column {
 		margin-left: 5%;
-	}
-	.session.two .box-column,
-	.session.four .box-column {
 		order: 2;
 	}
 	.session-bg {

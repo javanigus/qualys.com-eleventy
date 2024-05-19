@@ -28,7 +28,6 @@
 	margin: 40px auto 50px auto;
 	display: block;
     width: auto;
-    max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
 }
@@ -100,5 +99,4 @@ blockquote {
     color: #6A778B;
     font-weight: 300;
 }
-
 /*# sourceMappingURL=index.css.map */

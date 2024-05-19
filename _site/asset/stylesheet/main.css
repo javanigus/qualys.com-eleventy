@@ -311,7 +311,6 @@ form[name="search"] input[type="submit"] {
 #toplinks li:before {
 	content: "";
 	content: none;
-	content: none;
 	margin: 0;
 	padding: 0;
 }
@@ -441,8 +440,6 @@ div.toolbar li a:hover {
 }
 #nav span.seal {
 	background-image: url(https://d1dejaj6dcqv24.cloudfront.net/images/badge/secure-seal-36.png);
-}
-#nav span.seal {
 	text-indent: -9999px;
 }
 #nav span.badge,
@@ -1006,9 +1003,6 @@ div.triangle,
 #nav div.local-dropdown.partners div.triangle {
 	left: 394px;
 }
-#nav div.local-dropdown.partners div.triangle {
-	left: 394px;
-}
 #nav div.local-dropdown.partners div.outer.triangle {
 	left: 393px;
 }
@@ -1047,7 +1041,6 @@ div.toolbar li {
 #nav li:before,
 div.toolbar li:before {
 	content: "";
-	content: none;
 	content: none;
 	margin: 0;
 	padding: 0;
@@ -6486,8 +6479,7 @@ div.card.flip div.card-wrapper {
 /* hide back of pane during swap */
 div.card.flip a.front,
 div.card.flip a.back {
-	-webkit-backface-visibility: hidden;
-	        backface-visibility: hidden;
+	backface-visibility: hidden;
 	transition: transform 1s;
 	transform-style: preserve-3d;
 }
@@ -6825,8 +6817,6 @@ div.search-panel-wrapper {
 	z-index: 202;
 	border-top: 1px solid #D7D7D7;
 	border-bottom: 1px solid #D7D7D7;
-}
-div.search-panel-wrapper {
 	display: none;
 }
 div.search-panel-overlay.search-active,
@@ -7221,7 +7211,6 @@ body.notifications div.section strong {
 		margin-left: -0.4em;
 	}
 	div.mobile-nav li {
-		color: #333;
 		font-size: 2rem;
 		color: #666;
 		margin-bottom: 1%;
@@ -7781,5 +7770,4 @@ body.notifications div.section strong {
 		display: none;
 	}
 }
-
 /*# sourceMappingURL=main.css.map */

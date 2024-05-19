@@ -15,7 +15,6 @@ background:#F7FAFC;
 }
 
 .section17 .q-single-video-inner:hover .poster {
-    -webkit-filter: brightness(80%);
     filter: brightness(80%);
 }
 
@@ -41,7 +40,6 @@ background:#F7FAFC;
 
 .section17 .heading-column {
     height: auto;
-    display: flex;
     align-items: center;
     display: flex;
     margin: auto;
@@ -155,3 +153,4 @@ background:#F7FAFC;
 		width: 130px;
 	}
 }
+/*# sourceMappingURL=section17.css.map */

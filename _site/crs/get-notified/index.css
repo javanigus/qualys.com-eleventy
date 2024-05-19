@@ -1,6 +1,5 @@
 .tagline {
 	font-size: 21px;
-	margin-left: 21px;
 	color: #000;
 	line-height: 1.2;
 	text-transform: uppercase;
@@ -237,9 +236,6 @@ select.mktoField {
 
 .q-default-hero__image {
     display: block;
-}
-
-.q-default-hero__image {
     background-color: transparent;
     min-height: unset;
     position: relative;
@@ -304,7 +300,6 @@ select.mktoField {
 	font-weight: 500;
 	color: #fff;
 	padding:5px 6px;
-	width: -webkit-max-content;
 	width: -moz-max-content;
 	width: max-content;
 	position: absolute;
@@ -332,5 +327,4 @@ select.mktoField {
 		font-size: 20px;
 	}
 }
-
 /*# sourceMappingURL=index.css.map */

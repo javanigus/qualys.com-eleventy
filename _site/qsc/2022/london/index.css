@@ -92,8 +92,6 @@
 	.q-qsc-section h3 {
 		margin-bottom: 1.526em;
 	}
-}
-@media (min-width: 720px) {
 	.q-qsc-city__hero {
 		background-image: url(https://ik.imagekit.io/qualys/image/2022/qsc/london/qsc-london-website-desktop.jpg);
 		background-position: center;

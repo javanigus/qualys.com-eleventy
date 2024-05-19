@@ -62,7 +62,7 @@
 .marketo-form-wrapper input[type=email].mktoField {
 	font-weight: 500;
 }
-.marketo-form-wrapper input[type=email].mktoField::-ms-input-placeholder {
+.marketo-form-wrapper input[type=email].mktoField::-moz-placeholder {
 	font-weight: normal;
 }
 .marketo-form-wrapper input[type=email].mktoField::placeholder {
@@ -118,7 +118,7 @@
 	padding-left: 10px;
 	padding-right: 10px;
 }
-.q-nav-actions__item--ai-signup .hero-email::-ms-input-placeholder {
+.q-nav-actions__item--ai-signup .hero-email::-moz-placeholder {
 	text-align: center;
 }
 .q-nav-actions__item--ai-signup .hero-email::placeholder {
@@ -138,7 +138,7 @@
 		margin-bottom: 0;
 	}
 }
-.hero-email::-ms-input-placeholder {
+.hero-email::-moz-placeholder {
 	color: #A8B0BC;
 }
 .hero-email::placeholder {

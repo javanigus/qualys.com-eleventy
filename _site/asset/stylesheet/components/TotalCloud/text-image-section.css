@@ -11,7 +11,6 @@
 }
 
 .q-single-video-inner:hover .poster {
-    -webkit-filter: brightness(80%);
     filter: brightness(80%);
 }
 
@@ -36,7 +35,6 @@
 
 .heading-column {
     height: auto;
-    display: flex;
     align-items: center;
     display: flex;
     margin: auto;
@@ -75,3 +73,4 @@
         padding: 100px 0;
     }
 }
+/*# sourceMappingURL=text-image-section.css.map */

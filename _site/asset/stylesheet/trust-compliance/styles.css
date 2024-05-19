@@ -59,10 +59,6 @@
 	src: local("Caecilia LT Pro 76 Bold Italic"), local("CaeciliaLTPro-76BoldItalic"), local("PMN Caecilia Com 76 Bold Italic"), local("CaeciliaCom-76BoldItalic"), url(https://d1uyme8f6ss6qi.cloudfront.net/font/caecilia-lt-pro-76-bold-italic.woff2) format("woff2"), url(https://d1uyme8f6ss6qi.cloudfront.net/font/caecilia-lt-pro-76-bold-italic.woff) format("woff");
 }
 
-@-ms-viewport {
-	width: device-width;
-}
-
 @-o-viewport {
 	width: device-width;
 }
@@ -137,7 +133,7 @@ textarea,
 select {
 	font-family: inherit;
 }
-input::-ms-input-placeholder, textarea::-ms-input-placeholder, select::-ms-input-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
 	opacity: 1;
 	color: #627281;
 }
@@ -761,8 +757,6 @@ h6 {
 	.q-content-hero__box-wrap {
 		margin-right: 8.52713%;
 	}
-}
-@media (min-width: 960px) {
 	.q-content-hero__box-wrap-inner {
 		margin-top: -21.15385%;
 	}
@@ -1297,11 +1291,6 @@ h6 {
 	opacity: 0;
 	flex: 1 1 auto;
 }
-.q-content-hero__content-inner {
-	will-change: opacity, transform;
-	opacity: 0;
-	flex: 1 1 auto;
-}
 .q-apps-hero-content {
 	padding-bottom: 60px;
 }
@@ -1335,7 +1324,6 @@ h6 {
 	font-family: Gotham, sans-serif;
 	font-weight: 400;
 	letter-spacing: -0.01em;
-	line-height: 1.15;
 	color: #262626;
 	margin-bottom: 1.53846em;
 	max-width: 19.23077em;
@@ -1411,7 +1399,6 @@ h6 {
 	font-family: Gotham, sans-serif;
 	font-weight: 400;
 	letter-spacing: -0.01em;
-	line-height: 1.15;
 	color: #262626;
 	margin-bottom: 1.53846em;
 	max-width: 19.23077em;
@@ -2385,5 +2372,4 @@ a:visited.q-button__start-a-discussion {
 		margin-bottom: 40px;
 	}
 }
-
 /*# sourceMappingURL=styles.css.map */

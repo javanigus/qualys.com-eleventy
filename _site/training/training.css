@@ -963,7 +963,6 @@ h4.q-course-handson {
 .q-course-col > span {
 	-webkit-user-select: none;
 	   -moz-user-select: none;
-	    -ms-user-select: none;
 	        user-select: none;
 }
 .q-course-row--head .q-course-col > span {
@@ -1028,7 +1027,6 @@ h4.q-course-handson {
 	align-self: flex-end;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
-	    -ms-user-select: none;
 	        user-select: none;
 }
 .q-course-type {

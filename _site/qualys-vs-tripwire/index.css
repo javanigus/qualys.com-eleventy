@@ -118,9 +118,6 @@
 	background-color: transparent;
 	border: 0;
 	width: 100px;
-}
-
-.q-home-feed__pagination2 .q-carousel-button {
 	top: 129px;
 	height: 255px;
 }
@@ -684,7 +681,6 @@
 	font-family: Gotham, sans-serif;
 	font-weight: 400;
 	letter-spacing: -0.01em;
-	line-height: 1.15;
 	color: #262626;
 	line-height: 1.33333;
 }
@@ -1285,9 +1281,6 @@
 
 	.tradition .heading--2 {
 		margin-top: 2em;
-	}
-
-	.tradition .heading--2 {
 		max-width: 880px;
 	}
 
@@ -1825,9 +1818,6 @@
 
 	.vmdr-workflow-table2 .td {
 		border-bottom: 1px solid #ccc;
-	}
-
-	.vmdr-workflow-table2 .td {
 		border-right: 2px solid #2E8BE0;
 	}
 
@@ -2230,10 +2220,8 @@ th.bg-red {
 @media (min-width:375px) {
 	.q-grid__container.comparison {
 		margin-left: -10px;
-	}
-	.q-grid__container.comparison {
 		padding-left: 30px;
-   }
+	}
 }
 @media (min-width:400px) {
 	.q-grid__container.comparison {

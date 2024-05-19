@@ -11,8 +11,6 @@ td.time {
 }
 .vmdr-screenshot {
 	max-width: 740px;
-}
-.vmdr-screenshot {
 	display: none;
 }
 @media (min-width: 480px) {

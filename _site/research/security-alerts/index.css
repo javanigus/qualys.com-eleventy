@@ -26,7 +26,6 @@
 	font-family: Gotham, sans-serif;
 	font-weight: 400;
 	letter-spacing: -0.01em;
-	line-height: 1.15;
 	color: #262626;
 	line-height: 1.33333;
 }
@@ -129,8 +128,6 @@
 	}
 	.q-grid__container {
 		margin-top: 0;
-	}
-	.q-grid__container {
 		padding-left: 50px;
 		padding-right: 50px;
 	}
@@ -178,5 +175,4 @@
 .vendor {
 	font-weight: 700;
 }
-
 /*# sourceMappingURL=index.css.map */

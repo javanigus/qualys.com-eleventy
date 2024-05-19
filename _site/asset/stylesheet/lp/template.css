@@ -2,8 +2,6 @@
 	.q-grid__column-10 {
 		width: calc(100%);
 	}
-}
-@media (min-width: 720px) {
 	.q-header--compact .q-logo__horizontal {
 		opacity: 1;
 		visibility: visible;
@@ -1030,5 +1028,4 @@
 		padding-bottom: 61.8%;
 	}
 }
-
 /*# sourceMappingURL=template.css.map */

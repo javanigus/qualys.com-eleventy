@@ -1,7 +1,5 @@
 div.screenshot img {
 	border: 2px solid #CFCFCF;
-}
-div.screenshot img {
 	display: block;
 	position: relative;
 	z-index: 99;
@@ -17,5 +15,4 @@ span.shadow {
 	position: relative;
 	top: -2px;
 }
-
 /*# sourceMappingURL=index.css.map */

@@ -349,9 +349,6 @@
 	padding-bottom: 20px;
 	border-bottom: 1px solid #fff;
 	color: #707f93;
-}
-.q-package-breakdown-features h4
-{
 	margin-bottom: 5px;
 }
 .q-plus{
@@ -488,9 +485,6 @@
 	}
 	.q-cybersecurity-package {
 		min-height: auto;
-	}
-	.q-cybersecurity-package 
-	{
 		padding: 20px 12px 10px 12px;
 	}
 	.q-cybersecurity-package p.parapraph--1 {
@@ -504,12 +498,9 @@
 .icons img
 {
 	margin: auto;
-}
-.icons img {
     display: inline-block;
 	max-width: 55px;
 	width: 60px;
-  
 }
 
 @media (max-width:375px) {
@@ -530,7 +521,6 @@
 .q-line-arrow
 {
 	margin: auto;
-	width: -webkit-max-content;
 	width: -moz-max-content;
 	width: max-content;
 }
@@ -568,12 +558,6 @@
     padding-right: 30px;
 }
 	  }
-@media (min-width: 460px){
-.package-breakdown {
-    padding-left: 30px;
-    padding-right: 30px;
-}
-}
 	  @media (min-width: 375px)
 	  {
 	
@@ -885,5 +869,4 @@
     padding: 0px 30px;
 }
 } */
-
 /*# sourceMappingURL=index.css.map */

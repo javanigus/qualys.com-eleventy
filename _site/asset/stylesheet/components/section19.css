@@ -18,9 +18,6 @@
 
 .section19 .q-bulletlist__item{
     background: url(https://q-website-images.s3.amazonaws.com/www/image/icon/light-color-check-icon.png) 0 0 no-repeat;
-}
-
-.section19 .q-bulletlist__item {
     font-size: 16px;
     padding: 0 0 15px 30px;
     font-family: Gotham, sans-serif;
@@ -28,3 +25,5 @@
     letter-spacing: -0.013em;
     line-height: 1.41176;
 }
+
+/*# sourceMappingURL=section19.css.map */

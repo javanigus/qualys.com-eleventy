@@ -172,7 +172,6 @@ div.local-nav {
 	vertical-align: top;
 }
 div.local-nav a {
-	color: #333;
 	display: inline-block;
 	text-align: center;
 	font-weight: 600;
@@ -182,8 +181,6 @@ div.local-nav a {
 	width: 116px;
 	height: 74px;
 	box-sizing: border-box;
-}
-div.local-nav a {
 	background-color: #D8D8D8;
 	color: #333;
 	border-right: 1px solid #FFF;
@@ -315,5 +312,4 @@ div.flex-wrapper {
 		padding: 1rem 3rem;
 	}
 }
-
 /*# sourceMappingURL=index.css.map */

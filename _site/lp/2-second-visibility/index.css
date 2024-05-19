@@ -2,8 +2,6 @@
 	.q-grid__column-10 {
 		width: calc(100%);
 	}
-}
-@media (min-width: 720px) {
 	.q-header--compact .q-logo__horizontal {
 		opacity: 1;
 		visibility: visible;
@@ -186,15 +184,10 @@
 		font-size: 24px;
 		line-height: 1.3;
 		margin: 35px auto;
-		max-width: 663px;
 		display: block;
 		margin-bottom: 33px;
 		font-family: Gotham, sans-serif;
 		color: #FFF;
-	}
-}
-@media (min-width: 920px) {
-	.heroContent .description {
 		max-width: 520px;
 		margin-left: 0;
 	}
@@ -979,5 +972,4 @@ select.mktoField {
 		max-width: 27em;
 	}
 }
-
 /*# sourceMappingURL=index.css.map */

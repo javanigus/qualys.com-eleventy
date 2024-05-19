@@ -45,8 +45,6 @@ background:#F7FAFC;
 .q-number-heading-box{
     padding-left:0
 }
-}
-@media (min-width:720px){
 .section24 .box-column .q-number-box h3{
     font-size:40px;
     font-weight:500
@@ -54,7 +52,7 @@ background:#F7FAFC;
 .section24 .box-column .q-number-heading-box p{
     font-size:22px;
     line-height:1.3
-} 
+}
 }
 @media (min-width:920px){
 .section24 .box-column .q-number-box h3{
@@ -99,3 +97,4 @@ margin-bottom:0px
     font-size:21px
 
 }
+/*# sourceMappingURL=section24.css.map */

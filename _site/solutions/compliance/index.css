@@ -5,7 +5,8 @@
 	filter: none;
 }
 .compliance-intro{
-	column-count: 2;
+	-moz-column-count: 2;
+	     column-count: 2;
 }
 .compliance-intro-block{
 	margin: auto;
@@ -161,8 +162,10 @@ margin-bottom: 30px;
 }
 
 .complaince p{
-	column-count: 2;
-	column-gap: 40px;
+	-moz-column-count: 2;
+	     column-count: 2;
+	-moz-column-gap: 40px;
+	     column-gap: 40px;
 }
 
 .q-txt-block-icons {
@@ -206,9 +209,6 @@ margin-bottom: 30px;
 
 .q-content-hero__content {
     margin-top: 157px;
-}
-
-.q-content-hero__content{
 	background-image: url(https://q-website-images.s3.amazonaws.com/www/image/solutions/compliance/compliance-background.jpg);
 	background-size: cover;
 }
@@ -301,7 +301,8 @@ margin: auto;
 
 @media (max-width:720px) {
 	.complaince p {
-    column-count: auto;
+    -moz-column-count: auto;
+         column-count: auto;
 	}
 	.q-complaince-policy-box{
 		margin-bottom: 60px;
@@ -313,7 +314,8 @@ margin: auto;
 		text-align: center;
 	}
 	.compliance-intro {
-		column-count: auto;
+		-moz-column-count: auto;
+		     column-count: auto;
 	}
 	.q-default-hero__container{
 		padding: 0px;
@@ -446,3 +448,5 @@ margin: auto;
     padding-top: 100px;
 }
 }
+
+/*# sourceMappingURL=index.css.map */

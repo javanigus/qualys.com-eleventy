@@ -13,11 +13,12 @@ module.exports = function(eleventyConfig) {
 			"apple-touch*",
 			"mask-icon.svg",
 			"robots.txt",
-			"**/*.css",
+			//"**/*.css",
 			"**/*.js",
 			"**/*.json",
 			"!**/*.11ty.js",
 			"!**/*.11tydata.js",
+			//"!src/asset/stylesheet/tailwind.css",
 		]
 	});
 

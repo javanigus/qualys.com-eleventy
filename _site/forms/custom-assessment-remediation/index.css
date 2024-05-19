@@ -159,8 +159,6 @@
 }
 .heroContent {
 	max-width: 530px;
-}
-.heroContent {
 	max-width: none;
 }
 .form .heading--3 {
@@ -401,5 +399,4 @@ span.icon-wrapper {
 	display: block;
 	margin-right: 10px;
 }
-
 /*# sourceMappingURL=index.css.map */

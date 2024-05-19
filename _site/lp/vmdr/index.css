@@ -30,7 +30,7 @@
 		margin-bottom: 0;
 	}
 }
-.hero-email::-ms-input-placeholder {
+.hero-email::-moz-placeholder {
 	color: #A8B0BC;
 }
 .hero-email::placeholder {
@@ -83,7 +83,7 @@
 		width: 332px;
 	}
 }
-.hero-email::-ms-input-placeholder {
+.hero-email::-moz-placeholder {
 	color: #A8B0BC;
 }
 .hero-email::placeholder {

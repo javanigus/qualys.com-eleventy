@@ -68,8 +68,6 @@
 	border: 0;
 	font-size: 20px;
 	font-family: Gotham, sans-serif;
-	letter-spacing: -0.01em;
-	line-height: 1.15;
 	color: #262626;
 	margin-bottom: 0.73529em;
 	line-height: 1.28571;
@@ -90,5 +88,4 @@
 		font-size: 28px;
 	}
 }
-
 /*# sourceMappingURL=newsroom.css.map */

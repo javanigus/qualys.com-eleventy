@@ -412,7 +412,6 @@
 /** bouncing arrow separator **/
 
 .q-tru-arrow {
-	text-align: center;
 	display: block;
 	text-align: center;
 	padding: 10px 0;
@@ -488,8 +487,6 @@
 	margin: 30px 0 0 0;
 }
 .q-lp-form .mktoButton {
-	border-radius: 2px;
-	background-size: cover;
 	background: none;
 	background-image: url(https://ik.imagekit.io/qualys/image/2023/cloud-security-insights/form-cta--bg.png);
 	background-position: center;
@@ -579,7 +576,6 @@
 }
 .q-tru-slides-paging {
 	display: none;
-	position: -webkit-sticky;
 	position: sticky;
 	width: 40px;
 	top: 0;
@@ -1089,9 +1085,7 @@
 	max-width: 100%;
 }
 .q-right-slide-5 img, .q-left-slide-5 img{
-	text-align: center;
 	margin: auto;
-	vertical-align: top;
 	text-align: center;
 	align-items: center;
 	display: flex;
@@ -1129,9 +1123,7 @@ padding-bottom: 20px;
 		padding-top: 20px;
 	}
 	.q-right-slide-5 img, .q-left-slide-5 img{
-		text-align: center;
 		margin: auto;
-		vertical-align: top;
 		text-align: center;
 		align-items: center;
 		display: flex;

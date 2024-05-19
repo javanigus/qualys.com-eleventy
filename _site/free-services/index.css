@@ -128,8 +128,6 @@
 	.try-it {
 		display: none;
 	}
-}
-@media (min-width: 720px) {
 	.q-bullet-list__item {
 		margin-bottom: 3%;
 		max-width: 440px;
@@ -336,5 +334,4 @@ only screen and (                min-resolution: 2dppx) {
 		max-width: 53em;
 	}
 }
-
 /*# sourceMappingURL=index.css.map */

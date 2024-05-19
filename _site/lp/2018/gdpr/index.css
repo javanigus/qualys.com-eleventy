@@ -394,7 +394,6 @@ textarea.mktoField {
 	left: 0;
 	position: absolute;
 	z-index: 98;
-	height: 70%;
 	width: 70px;
 	height: 100%;
 	top: 0;
@@ -555,5 +554,4 @@ textarea.mktoField {
 		display: none;
 	}
 }
-
 /*# sourceMappingURL=index.css.map */

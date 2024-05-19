@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ["./site/**/*.{hbs,js,json}"],
+	content: ["./src/**/*.{njk,js,json}"],
 	safelist: [
 		'border-transparent',
 		{

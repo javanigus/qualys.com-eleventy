@@ -1,6 +1,5 @@
 .tagline {
 	font-size: 21px;
-	margin-left: 21px;
 	color: #000;
 	line-height: 1.2;
 	text-transform: uppercase;
@@ -475,7 +474,6 @@
 	font-weight: 500;
 	color: #fff;
 	padding:5px 6px;
-	width: -webkit-max-content;
 	width: -moz-max-content;
 	width: max-content;
 	position: absolute;
@@ -528,8 +526,6 @@
 }
 .q-default-hero__image {
 	position: relative;
-}
-.q-default-hero__image {
 	min-height: auto;
 }
 @media (min-width:720px) {

@@ -169,8 +169,6 @@
 }
 .q-training__videos-thumbnail a {
 	display: block;
-}
-.q-training__videos-thumbnail a{
 	text-decoration: none;
 }
 /* .q-training__videos-thumbnail a img {
@@ -215,5 +213,4 @@
 .q-training__video-summary{
 	padding-top:8px
 }
-
 /*# sourceMappingURL=training-library.css.map */

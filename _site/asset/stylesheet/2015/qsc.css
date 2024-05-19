@@ -629,7 +629,6 @@ a.hotel:hover {
 }
 div.room-rsvp {
 	background-color: #FFF;
-	opacity: 0.83;
 	display: inline-block;
 	position: absolute;
 	left: 0;
@@ -663,5 +662,4 @@ div.room-rsvp h2 {
 div.room-rsvp p {
 	font-size: 14pt;
 }
-
 /*# sourceMappingURL=qsc.css.map */

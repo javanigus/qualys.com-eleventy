@@ -70,7 +70,6 @@ body {
 	margin: 0;
 }
 .q-section-heading {
-	line-height: 1;
 	font-weight: bold;
 	letter-spacing: -0.027em;
 	font-size: 54px;
@@ -88,7 +87,6 @@ body {
 	font-family: 'Gotham';
 	color: #6A778B;
 	font-size: 33px;
-	line-height: 1.143;
 	font-weight: 100;
 	line-height: 1.1;
 	text-align: center;

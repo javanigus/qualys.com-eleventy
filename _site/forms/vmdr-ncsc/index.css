@@ -62,8 +62,6 @@
 }
 .vmdr-screenshot {
 	max-width: 740px;
-}
-.vmdr-screenshot {
 	display: none;
 }
 .q-grid__container.trial-container {
@@ -146,8 +144,6 @@
 }
 .heroContent {
 	max-width: 530px;
-}
-.heroContent {
 	max-width: none;
 }
 .form .heading--3 {

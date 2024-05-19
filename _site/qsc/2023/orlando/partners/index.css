@@ -93,7 +93,6 @@
 .conference-title-wrapper.label .conference-title {
 	-webkit-user-select: none;
 	   -moz-user-select: none;
-	    -ms-user-select: none;
 	        user-select: none;
 }
 .training .agenda {
@@ -109,8 +108,6 @@
 	.session-container td.conference-td {
 		padding: 0 0 15px 50px;
 	}
-}
-@media (min-width: 720px) {
 	.q-qsc-city__hero {
 		background-image: url(https://ik.imagekit.io/qualys/image/2023/qsc/orlando/qsc23-orlando-hero-desktop-hero-background.png);
 		background-position: left;

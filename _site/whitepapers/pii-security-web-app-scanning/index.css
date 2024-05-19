@@ -31,7 +31,6 @@
     background: url(https://ik.imagekit.io/qualys/image/icon/link-arrow.svg);
 }
 .q-btn{
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content
 }

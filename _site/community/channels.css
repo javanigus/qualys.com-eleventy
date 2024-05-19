@@ -128,14 +128,12 @@
 .q-top-contributors {
 	/* word-break: break-all; */
 	-webkit-hyphens: auto;
-	    -ms-hyphens: auto;
 	        hyphens: auto;
 }
 .q-trending-content h2,
 .q-recent-content h2,
 .q-top-contributors h2 {
 	-webkit-hyphens: none;
-	    -ms-hyphens: none;
 	        hyphens: none;
 }
 
@@ -358,7 +356,6 @@ a.q-link-with-arrow {
 	word-break: break-word;
 	/* Adds a hyphen where the word breaks, if supported (No Blink) */
 	-webkit-hyphens: auto;
-	    -ms-hyphens: auto;
 	        hyphens: auto;
 }
 .q-recent-avatar__container,
@@ -843,6 +840,4 @@ h2.q-documents-panel-heading {
 .q-apps-documents + .q-apps-documents .q-documents-panel-heading {
 	display: none;
 }
-
-
 /*# sourceMappingURL=channels.css.map */

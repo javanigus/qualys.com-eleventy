@@ -55,8 +55,6 @@
 		padding-right: 70px;
 		max-width: 1430px;
 	}
-}
-@media (min-width: 1080px) {
 	.q-private-cloud-features__background {
 		background: #F7FAFC;
 	}
@@ -211,8 +209,6 @@
 	.q-private-cloud-local-storage__row--separator {
 		margin-bottom: 7.8125em;
 	}
-}
-@media (min-width: 720px) {
 	.q-private-cloud-local-storage__col {
 		flex: none;
 		padding-left: 15px;
@@ -342,8 +338,6 @@
 		padding-right: 70px;
 		max-width: 1430px;
 	}
-}
-@media (min-width: 1080px) {
 	.q-private-cloud-server__inner {
 		margin-left: 8.52713%;
 	}
@@ -530,5 +524,4 @@
 	}
 	
 }
-
 /*# sourceMappingURL=private-cloud.css.map */

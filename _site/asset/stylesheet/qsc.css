@@ -994,11 +994,8 @@ body {
 		line-height: 1.85;
 	}
 	.q-qsc-venue__container .q-grid__column-6 {
-		padding-left: 62px;
 		padding-right: 0;
 		padding-top: 5px;
-	}
-	.q-qsc-venue__container .q-grid__column-6 {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
@@ -1087,7 +1084,6 @@ body {
 	height: 100%;
 	top: 0;
 	left: 0;
-	color: #FFF;
 	background-color: rgba(0, 0, 0, 0.7);
 	transition: all 0.4s ease-in 0s;
 	padding: 20px;
@@ -2491,8 +2487,6 @@ h4.class-notice b {
 	font-size: 14px;
 	font-weight: 400;
 	display: block;
-}
-.breakout {
 	text-decoration: none;
 }
 .parallel .conference-title-wrapper.label:before,

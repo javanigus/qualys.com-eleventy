@@ -158,8 +158,6 @@
 }
 .heroContent {
 	max-width: 530px;
-}
-.heroContent {
 	max-width: none;
 }
 .form .heading--3 {
@@ -397,5 +395,4 @@
 	margin: auto;
 	text-align: center;
 }
-
 /*# sourceMappingURL=index.css.map */

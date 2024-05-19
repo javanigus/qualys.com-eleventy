@@ -104,10 +104,6 @@ blockquote {
 @media (min-width: 1440px) {
 	.ovum {
 		max-width: none;
-		width: 350px;
-	}
-	.ovum {
-		max-width: none;
 		width: 430px;
 		position: relative;
 		left: -1em;

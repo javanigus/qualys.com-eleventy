@@ -1662,11 +1662,7 @@ div.owasp-top-10 div.image,
 div.owasp-top-10 a.image {
 	width: 408px;
 	height: 233px;
-	margin: 0;
 	background-position: -450px -1500px;
-}
-div.owasp-top-10 div.image,
-div.owasp-top-10 a.image {
 	margin: 0;
 }
 body.qualysguard.features div.rogue-devices div.image {
@@ -1800,5 +1796,4 @@ a.feature-box.dashboard-reports span.icon {
 body.features div.link-wrapper a.image-overlay {
 	display: inline;
 }
-
 /*# sourceMappingURL=smb.css.map */

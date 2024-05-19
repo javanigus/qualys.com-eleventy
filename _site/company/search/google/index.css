@@ -50,7 +50,6 @@ h1.page-heading {
 	color: #545454;
 	display: inline-block;
 	font-size: 1em;
-	line-height: 1.333;
 	margin: 0;
 	outline: none;
 	padding: 0.4em !important;
@@ -160,5 +159,4 @@ div.gsc-cursor-page {
 		visibility: visible;
 	}
 }
-
 /*# sourceMappingURL=index.css.map */

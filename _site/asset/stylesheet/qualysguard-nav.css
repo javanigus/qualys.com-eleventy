@@ -10,10 +10,7 @@ div.submenu {
 	padding: 0 0 0 32px;
 	position: absolute;
 	top: 0;
-	width: 926px;
 	z-index: 100;
-}
-div.submenu {
 	padding-left: 21px;
 	width: 937px;
 }
@@ -285,5 +282,4 @@ div.badge-was {
 .product-subnav p.subscription {
 	margin-left: -70px;
 }
-
 /*# sourceMappingURL=qualysguard-nav.css.map */

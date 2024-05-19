@@ -356,7 +356,6 @@ div.venue-container div.container {
 }
 div.room-rsvp {
 	background-color: #FFF;
-	opacity: 0.83;
 	display: inline-block;
 	position: absolute;
 	left: 0;
@@ -441,5 +440,4 @@ div.sponsor {
 a.aria-link {
 	color: #FFF;
 }
-
 /*# sourceMappingURL=qsc.css.map */

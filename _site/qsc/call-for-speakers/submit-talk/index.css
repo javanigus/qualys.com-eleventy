@@ -113,7 +113,6 @@ fieldset + .kw-field-error-message {
 .form-field input[type=text],
 .form-field textarea,
 .form-field select {
-	width: 100%;
 	border: 1.5px solid rgba(71, 83, 105, 0.20);
 	outline: none;
 	/* max-width: 410px; */
@@ -159,9 +158,7 @@ fieldset + .kw-field-error-message {
 	color: #FFF;
 	cursor: pointer;
 	font-family: inherit;
-	font-size: 15px;
 	font-style: normal;
-	font-weight: 500;
 	line-height: inherit;
 	
 	vertical-align: baseline;
@@ -344,5 +341,4 @@ fieldset + .kw-field-error-message {
 	color:#262626;
 	font-family: "Gotham", sans-serif;
 }
-
 /*# sourceMappingURL=index.css.map */

@@ -635,7 +635,7 @@ a:visited.q-button__start-a-discussion {
 	font-weight: 400;
 	letter-spacing: -0.12px;
 }
-.q-search .magic-box .magic-box-input > input::-ms-input-placeholder {
+.q-search .magic-box .magic-box-input > input::-moz-placeholder {
 	color: #6A778B;
 	opacity: 1;
 }
@@ -874,5 +874,4 @@ a:visited.q-button__start-a-discussion {
 .comm-page-home .body .siteforceContentArea .comm-layout-column .ui-widget:not(:last-child) {
 	margin-bottom: 2rem;
 }
-
 /*# sourceMappingURL=shared.css.map */

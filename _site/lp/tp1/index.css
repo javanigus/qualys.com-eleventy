@@ -593,8 +593,6 @@ th.bg-blue {
 }
 .heroContent {
 	max-width: 530px;
-}
-.heroContent {
 	max-width: none;
 }
 .form .heading--3 {
@@ -809,5 +807,4 @@ th.bg-blue {
 		margin-top: 50px;
 	}
 }
-
 /*# sourceMappingURL=index.css.map */

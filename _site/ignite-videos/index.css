@@ -266,7 +266,6 @@
 	cursor: pointer;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
-	    -ms-user-select: none;
 	        user-select: none;
 }
 .q-ignite__videos-list h3.heading--3 {

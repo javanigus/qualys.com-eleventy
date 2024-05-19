@@ -611,10 +611,6 @@ hr.seperator-transparent {
 	float: right;
 }
 .q-grid__container.hero {
-	margin-top: 85px;
-	margin-bottom: 63px;
-}
-.q-grid__container.hero {
 	margin-top: 62px;
 	margin-bottom: 45px;
 }
@@ -758,5 +754,4 @@ hr.seperator-transparent {
 .mktoCheckboxList {
 	text-align: left;
 }
-
 /*# sourceMappingURL=index.css.map */

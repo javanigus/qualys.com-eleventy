@@ -11,7 +11,6 @@
 	max-width: 90%;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
-	    -ms-user-select: none;
 	        user-select: none;
 	height: auto;
 }
@@ -353,7 +352,7 @@
 .q-resources-filter__input:focus {
 	outline: none;
 }
-.q-resources-filter__input::-ms-input-placeholder {
+.q-resources-filter__input::-moz-placeholder {
 	color: inherit;
 }
 .q-resources-filter__input::placeholder {
@@ -367,7 +366,7 @@
 	border: 1px solid #627281;
 	outline: none;
 }
-.q-resources-filter__input:active::-ms-input-placeholder, .q-resources-filter__input:focus::-ms-input-placeholder {
+.q-resources-filter__input:active::-moz-placeholder, .q-resources-filter__input:focus::-moz-placeholder {
 	color: transparent;
 }
 .q-resources-filter__input:active::placeholder,
@@ -1173,5 +1172,4 @@ form.resource-filters ul {
 .q-resources-filter__reset a:hover {
 	cursor: pointer;
 }
-
 /*# sourceMappingURL=resources.css.map */

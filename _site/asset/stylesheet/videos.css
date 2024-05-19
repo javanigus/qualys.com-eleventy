@@ -22,7 +22,6 @@ a:hover {
 #container {
 	-ms-box-shadow: 0 0 90px #000;
 	-o-box-shadow: 0 0 90px #000;
-	-webkit-box-shadow: 0 0 90px #000;
 	        box-shadow: 0 0 90px #000;
 	height: auto;
 	margin: 0 auto;
@@ -57,5 +56,4 @@ a:hover {
 iframe {
 	max-width: 100%;
 }
-
 /*# sourceMappingURL=videos.css.map */

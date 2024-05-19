@@ -255,10 +255,6 @@
 	.q-cloud-platform-results {
 		padding-top: 130px;
 		padding-bottom: 120px;
-	}
-}
-@media (min-width: 1430px) {
-	.q-cloud-platform-results {
 		padding-bottom: 0;
 	}
 }
@@ -344,8 +340,6 @@
 		margin-left: -15px;
 		margin-right: -15px;
 	}
-}
-@media (min-width: 1430px) {
 	.q-cloud-platform-results__content {
 		flex: none;
 		padding-left: 15px;
@@ -404,8 +398,6 @@
 	.q-cloud-platform-results__menu--mobile {
 		display: none;
 	}
-}
-@media (min-width: 1080px) {
 	.q-cloud-platform-results__menu {
 		margin-bottom: -45px;
 		width: 870px;
@@ -415,13 +407,8 @@
 	.q-cloud-platform-results__menu {
 		margin-top: 0;
 		margin-left: 0;
-		margin-bottom: -90px;
 		padding-left: 15px;
 		width: 1072px;
-	}
-}
-@media (min-width: 1430px) {
-	.q-cloud-platform-results__menu {
 		margin-bottom: -60px;
 		margin-left: -37px;
 	}
@@ -1078,12 +1065,7 @@
 }
 @media (min-width: 1430px) {
 	.q-cloud-platform-stats {
-		padding-top: 120px;
 		padding-bottom: 120px;
-	}
-}
-@media (min-width: 1430px) {
-	.q-cloud-platform-stats {
 		padding-top: 100px;
 	}
 }
@@ -1318,8 +1300,6 @@
 		margin: 15px 0 0;
 		max-width: 26.66667em;
 	}
-}
-@media (min-width: 720px) {
 	.q-cloud-platform-work__logos {
 		flex: 0 1 50%;
 	}
@@ -1331,7 +1311,6 @@
 	color: #315286;
 	font-family: Gotham, sans-serif;
 	font-size: inherit;
-	max-width: 200px;
 	max-width: 540px;
 }
 @media (max-width: 1290px) {
@@ -1341,5 +1320,4 @@
 		margin: -16% auto 0;
 	}
 }
-
 /*# sourceMappingURL=cloud-platform.css.map */

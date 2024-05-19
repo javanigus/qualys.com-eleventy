@@ -16,7 +16,8 @@
 .tc2-banner-video-bg video {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	mix-blend-mode: screen;
 	position: absolute;
 	top: 0;
@@ -40,7 +41,8 @@
 .tc2-cloud-video {
 	width: 240px;
 	height: auto;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	mix-blend-mode: screen;
 	-webkit-mask-box-image: url(https://q-website-images.s3.amazonaws.com/www/image/home/cloud-motion-mask.svg);
 }
@@ -75,6 +77,7 @@
 	font-weight: 300;
 	line-height: 1.35;
 	margin: 0 auto;
+	max-width: -moz-fit-content;
 	max-width: fit-content;
 	padding-top: 50px;
 	padding-bottom: 30px;
@@ -92,6 +95,7 @@
 }
 .tc2-banner-logo {
 	padding-bottom: 30px;
+	max-width: -moz-fit-content;
 	max-width: fit-content;
 	margin: 0 auto;
 }
@@ -112,6 +116,7 @@
 }
 .tc2-banner-cta {
 	margin: 30px auto 0;
+	max-width: -moz-fit-content;
 	max-width: fit-content;
 }
 @media (min-width: 620px) {
@@ -159,3 +164,5 @@
 		margin: none;
 	}
 }
+
+/*# sourceMappingURL=index.css.map */

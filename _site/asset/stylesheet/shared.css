@@ -1,6 +1,5 @@
 .q-link--gray {
 	text-decoration: none;
-	-webkit-transition: color 0.4s;
 	transition: color 0.4s;
 }
 .q-link--gray:hover {
@@ -22,7 +21,6 @@
 	bottom: 0;
 	pointer-events: none;
 	overflow: hidden;
-	-webkit-transform-origin: 50% 0%;
 	transform-origin: 50% 0%;
 }
 .q-grid.hidden,
@@ -35,7 +33,6 @@
 	padding-right: 15px;
 	opacity: 0;
 	height: 100%;
-	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 }
 @media (min-width: 375px) {
@@ -61,26 +58,18 @@
 	opacity: 1;
 }
 .q-grid.horizontalVisible {
-	background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.05))), -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.15)));
 	background: linear-gradient(to bottom, transparent calc(100% - (1 / var(--grid-baseline-calc) * 100%)), rgba(0, 0, 0, 0.05) calc(100% - (1 / var(--grid-baseline-calc) * 100%))), linear-gradient(to bottom, transparent calc(100% - (1 / var(--grid-baseline-calc) * 100%)), rgba(255, 255, 255, 0.15) calc(100% - (1 / var(--grid-baseline-calc) * 100%)));
 	background-size: var(--grid-baseline) var(--grid-baseline);
 }
 .q-grid__row {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: stretch;
-	-ms-flex-align: stretch;
 	align-items: stretch;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	margin-left: -15px;
 	margin-right: -15px;
 	height: 100%;
 }
 .q-grid__column {
-	-webkit-box-flex: 0;
-	-ms-flex: none;
 	flex: none;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -94,7 +83,6 @@
 	margin-left: auto;
 	margin-right: auto;
 	opacity: 1;
-	-webkit-transition: none;
 	transition: none;
 }
 .q-grid__inner {
@@ -268,7 +256,6 @@
 	border: 0;
 	font-size: 34px;
 	font-family: "Gotham", sans-serif;
-	font-weight: 400;
 	letter-spacing: -0.01em;
 	line-height: 1.15;
 	color: #262626;
@@ -329,19 +316,13 @@
 }
 
 .q-social-list__item a {
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+	align-items: center;
 	border-radius: 50%;
 	border: 1px solid #6ca3cf;
 	display: block;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	height: 47px;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	justify-content: center;
 	width: 47px;
 }
 .q-social-list__item a:hover {

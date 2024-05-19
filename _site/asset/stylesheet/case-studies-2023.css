@@ -267,8 +267,6 @@
 @media (min-width:720px) {
 	.q-story-content-txt-col {
 		padding-top: 0px;
-	}
-	.q-story-content-txt-col {
 		padding-right: 40px;
 		position: relative;
 	}
@@ -441,10 +439,7 @@
 
 @media (min-width:720px) {
 	.q-story-quote-block blockquote p {
-		font-size: 34px;
 		line-height: 1.28;
-	}
-	.q-story-quote-block blockquote p {
 		font-size: 28px;
 	}
 }

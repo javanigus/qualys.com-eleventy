@@ -483,10 +483,7 @@
 }
 .q-home-intro__copy {
 	line-height: 1.79;
-	letter-spacing: -0.1px;
 	margin-bottom: 30px;
-}
-.q-home-intro__copy {
 	padding: 0;
 	margin: 0;
 	font-family: inherit;
@@ -573,5 +570,4 @@
 		margin-top: 160px;
 	}
 }
-
 /*# sourceMappingURL=index.css.map */

@@ -126,7 +126,6 @@ html{
 	margin-bottom: 4px;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
-	    -ms-user-select: none;
 	        user-select: none;
 }
 .q-document-top::before,
@@ -239,5 +238,4 @@ span[data-rel="Integrations"] + ul li strong {
 	display: inline;
 	color: #6A778B;
 }
-
 /*# sourceMappingURL=documentation.css.map */

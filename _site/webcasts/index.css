@@ -32,12 +32,8 @@
 }
 .webcast {
 	margin-bottom: 4.5em;
-	-webkit-box-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	flex: 1;
+	justify-content: space-between;
 }
 .webcast__date {
 	font-weight: 500;
@@ -128,8 +124,6 @@
 
 /* list of badges for each webcast */
 .badges {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	float: left;
 	margin-right: 0.5em;
@@ -149,13 +143,8 @@
 /* desktop - small */
 @media screen and (min-width: 720px) {
 	.webcasts {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		    -ms-flex-flow: row wrap;
-		        flex-flow: row wrap;
+		flex-flow: row wrap;
 	}
 	.webcast {
 		min-width: 50%;
@@ -188,5 +177,4 @@
 	}
 
 }
-
 /*# sourceMappingURL=index.css.map */

@@ -44,9 +44,6 @@
 
     font-weight: 600;
  }
-}
-
-@media (min-width: 720px) {
 .q-story__header-content h2 {
     font-size: 28px;
     line-height: 1.6;
@@ -72,3 +69,4 @@
 .q-story__header-label {
 	margin-top:20px
 }
+/*# sourceMappingURL=index.css.map */

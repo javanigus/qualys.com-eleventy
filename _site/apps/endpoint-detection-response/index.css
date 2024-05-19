@@ -95,7 +95,6 @@ img.mitre-attack.lazyload {
 	font-family: 'Gotham', sans-serif;
 	font-weight: 400;
 	letter-spacing: -0.01em;
-	line-height: 1.15;
 	color: #262626;
 	line-height: 1.33333;
 }
@@ -461,8 +460,6 @@ b {
 		position: relative;
 		left: 1.6em;
 		top: -1.4em;
-	}
-	.augment-team .q-grid__column-logos {
 		display: block;
 	}
 	.ntt.logo {
@@ -927,5 +924,4 @@ b {
 	overflow: hidden;
 	position: relative;
 }
-
 /*# sourceMappingURL=index.css.map */

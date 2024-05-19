@@ -20,6 +20,7 @@ margin: auto;
 text-align: center;
 
 padding: 0px 0px 0px 0;
+width: -moz-max-content;
 width: max-content;
 border-radius: 50px;
 align-items: center;
@@ -165,7 +166,6 @@ border-bottom-right-radius:0px
 .section11 .q-activeproduct-expand {
 display: inline-block;
 animation: slideIn 2s cubic-bezier(0.5, 0, 0.5, 1) forwards;
-padding-left:10px;
 background-color: #1D2737;
 padding:11.5px 0;
 margin-left:-5px;
@@ -252,8 +252,6 @@ left: 0 !important;
 visibility: visible !important;
 font-size: 18px !important;
 position: relative !important;
-}
-.section11 .q-abbrevation {
 position: absolute;
 white-space: normal;
 }
@@ -331,3 +329,4 @@ font-size:12px
     transform: rotate(-45deg);
 	top: 1.2em;
 }
+/*# sourceMappingURL=section11.css.map */

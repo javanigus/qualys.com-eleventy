@@ -180,10 +180,6 @@
 
 .section27 .q-sqauare-logos {
     list-style: none;
-}
-
-.section27 .q-sqauare-logos {
-    list-style: none;
     list-style-position: inside;
     display: flex;
     justify-content: space-between;
@@ -216,9 +212,7 @@
 
     .section27 .q-hero-cta .q-hero-cta__link-wrap {
         padding-left: 30px;
-    }
-
-    .section27 .q-hero-cta .q-hero-cta__link-wrap {
         padding-top: 0px;
     }
 }
+/*# sourceMappingURL=section27.css.map */

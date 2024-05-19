@@ -427,8 +427,6 @@ textarea.mktoField {
 }
 .slider-image svg {
 	min-width: 290px;
-}
-.slider-image svg {
 	max-width: 80%;
 }
 @media (min-width: 720px) {
@@ -679,9 +677,6 @@ textarea.mktoField {
 		background-size: 1px 9px;
 		background-position: right;
 	}
-}
-
-@media (min-width: 992px) {
 	.grid-item:nth-child(4n) .heading--3,
 	.grid-item:nth-child(6n) .heading--3,
 	.grid-item:nth-child(9n) .heading--3 {
@@ -1079,8 +1074,6 @@ textarea.mktoField {
 	.continuous-discovery-content {
 		margin-bottom: 7.5em;
 	}
-}
-@media (min-width: 1080px){
 	.q-apps-powered-by__row {
 		justify-content: space-between;
 	}

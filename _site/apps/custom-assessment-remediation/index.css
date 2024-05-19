@@ -90,7 +90,6 @@
 	font-family: 'Gotham', sans-serif;
 	font-weight: 400;
 	letter-spacing: -0.01em;
-	line-height: 1.15;
 	color: #262626;
 	line-height: 1.33333;
 }
@@ -246,8 +245,6 @@ b {
 		flex-direction: column;
 		margin-bottom: 12px;
 	}
-}
-@media (min-width: 720px) {
 	.q-default-hero__box-wrap {
 		margin-right: 4%;
 	}
@@ -500,5 +497,4 @@ b {
 .q-resource-label__text {
     max-width: 24em;
 }
-
 /*# sourceMappingURL=index.css.map */

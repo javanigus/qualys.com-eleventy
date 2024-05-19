@@ -68,7 +68,6 @@
 @media (max-width:640px) {
 	.column2 .type2 li a
 {
-	width: -webkit-max-content;
 	width: -moz-max-content;
 	width: max-content
 }

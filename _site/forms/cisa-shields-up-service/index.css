@@ -26,8 +26,6 @@
 	}
 	.heading--highlighted {
 		text-align: left;
-	}
-	.heading--highlighted {
 		font-size: 29px;
 		line-height: 1.586;
 		margin: 0;
@@ -129,8 +127,6 @@ div.gallery-close-button {
 }
 .vmdr-screenshot {
 	max-width: 740px;
-}
-.vmdr-screenshot {
 	display: none;
 }
 .q-grid__container.trial-container {
@@ -211,8 +207,6 @@ div.gallery-close-button {
 }
 .heroContent {
 	max-width: 530px;
-}
-.heroContent {
 	max-width: none;
 }
 .form .heading--3 {
@@ -431,5 +425,4 @@ div.gallery-close-button {
 		margin-top: -433px;
 	}
 }
-
 /*# sourceMappingURL=index.css.map */

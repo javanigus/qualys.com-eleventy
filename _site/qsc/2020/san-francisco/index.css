@@ -168,8 +168,6 @@
 		line-height: 1.364;
 		letter-spacing: -0.007em;
 	}
-}
-@media (min-width: 720px) {
 	.conference-speaker {
 		font-size: 16px;
 	}

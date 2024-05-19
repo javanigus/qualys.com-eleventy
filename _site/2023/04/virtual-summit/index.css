@@ -139,8 +139,6 @@ img.bluevoyant {
 @media only screen and (min-width:720px) and (max-width:1025px) {
     .q-tracks-session {
         width: 50% !important;
-    }
-    .q-tracks-session{
         flex: none;
     }
 }
@@ -278,7 +276,6 @@ img.bluevoyant {
     height: 100%;
     top: 0;
     left: 0;
-    color: #FFF;
     background-color: rgba(0, 0, 0, 0.7);
     transition: all 0.4s ease-in 0s;
     padding: 20px;
@@ -749,9 +746,6 @@ background-color: #e9f0f6;
 
 .resources .swiper-pagination {
     display: none;
-}
-
-.resources .swiper-pagination {
     margin: 20px 0 0;
     transform: translateX(-50%);
     left: 50%;

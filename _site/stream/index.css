@@ -249,9 +249,6 @@ body {
 .q-attend-live-content p {
 	color: #fff;
 	font-weight: 300;
-}
-
-.q-attend-live-content p {
 	font-family: 'Gotham', sans-serif;
 }
 
@@ -471,9 +468,6 @@ margin-top: 30px;
 
 .q-active-slider-resources .swiper-pagination {
 	display: none;
-}
-
-.q-active-slider-resources .swiper-pagination {
 	margin: 20px 0 0;
 	transform: translateX(-50%);
 	left: 50%;
@@ -899,7 +893,9 @@ a{
 	width: 400px;
 	height: auto;
 	max-width: 100%;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	        user-select: none;
 	transform-origin: center;
 	transition: transform 0.35s;
 }
@@ -1118,6 +1114,7 @@ a{
 	#product-demos-videos .q-resources-featured__container {
 		padding-left: 0px;
 		padding-right: 0px;
+		max-width: -moz-fit-content;
 		max-width: fit-content;
 	}
 }
@@ -1315,9 +1312,6 @@ width: 12px;
 	#product-demos-videos .q-resources-featured__pagination{
 		justify-content: end;
 	}
-	#product-demos-videos .q-resources-featured__pagination{
-		justify-content: end;
-	}
 }
 
 #feature-testimonial .q-grid__container.q-lp__container{
@@ -1330,9 +1324,6 @@ width: 12px;
 
 .q-resource-label__icon {
 	margin-right: 5px !important;
-}
-
-.q-resource-label__icon {
 	width: 100px;
 	background-color: transparent;
 }
@@ -1511,6 +1502,7 @@ width: 12px;
 	.webinar-carousel .q-resources-featured__container {
 		padding-left: 0px;
 		padding-right: 0px;
+		max-width: -moz-fit-content;
 		max-width: fit-content;
 	}
 	.webinar-carousel .q-resources-featured__container-inner {
@@ -1557,9 +1549,6 @@ width: 12px;
 }
 
 @media (min-width: 767px) {
-	.webinar-carousel .q-resources-featured__pagination{
-		justify-content: end;
-	}
 	.webinar-carousel .q-resources-featured__pagination{
 		justify-content: end;
 	}
@@ -1613,6 +1602,7 @@ width: 12px;
 	.webinar-carousel .q-resources-featured__container {
 		padding-left: 0px;
 		padding-right: 0px;
+		max-width: -moz-fit-content;
 		max-width: fit-content;
 	}
 	.webinar-carousel .q-resources-featured__container-inner {
@@ -1659,9 +1649,6 @@ width: 12px;
 }
 
 @media (min-width: 767px) {
-	.webinar-carousel .q-resources-featured__pagination{
-		justify-content: end;
-	}
 	.webinar-carousel .q-resources-featured__pagination{
 		justify-content: end;
 	}
@@ -1792,3 +1779,4 @@ width: 12px;
 .author-name h3 {
 	margin-bottom:10px
 }
+/*# sourceMappingURL=index.css.map */

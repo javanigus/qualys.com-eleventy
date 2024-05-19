@@ -84,8 +84,6 @@
 }
 .heroContent {
 	max-width: 530px;
-}
-.heroContent {
 	max-width: none;
 }
 .form .heading--3 {
@@ -185,5 +183,4 @@ h3.q-lp-form__header
 {
     color:#262626
 }
-
 /*# sourceMappingURL=index.css.map */

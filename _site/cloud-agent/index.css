@@ -166,8 +166,6 @@
 	.heroImage {
 		margin: 0px auto -20px;
 	}
-}
-@media (min-width: 720px) {
 	.q-content-hero__container {
 		padding-top: 60px;
 	}
@@ -419,8 +417,6 @@
 @media (min-width: 1024px) and (max-width: 1289px) {
 	.beyond-traditional .col2 {
 		top: 0;
-	}
-	.beyond-traditional .col2 {
 		left: auto;
 		right: 0;
 	}

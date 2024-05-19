@@ -33,9 +33,6 @@
 
 .section34 .dates-column:last-child {
     padding-right: 0;
-}
-
-.section34 .dates-column:last-child {
     border-right: none;
 }
 
@@ -200,3 +197,5 @@
         padding: 0 28px;
     }
 }
+
+/*# sourceMappingURL=section34.css.map */

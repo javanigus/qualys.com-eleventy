@@ -267,7 +267,6 @@
 		margin: 0 1em 1em;
 		max-width: 18%;
 	}
-	.customers .logo {}
 }
 @media (min-width: 850px) {
 	.customers .logos {
@@ -533,7 +532,6 @@
 	line-height: 1.2;
 }
 .try-it .paragraph--1 {
-	line-height: 1.65;
 	margin-bottom: 1.5em;
 	line-height: 1.778;
 }
@@ -663,6 +661,4 @@
 		text-align: left;
 	}
 }
-
-
 /*# sourceMappingURL=index.css.map */

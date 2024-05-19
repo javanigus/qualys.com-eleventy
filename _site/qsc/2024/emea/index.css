@@ -88,8 +88,6 @@
 		transition: all 0.35s ease-in-out;
 		width: 20px;
 		height: 2px;
-	}
-	.conference-title-wrapper.label:before {
 		content: "";
 		position: absolute;
 		background: #B5D0E5;
@@ -98,8 +96,6 @@
 		content: "";
 		position: absolute;
 		background: #B5D0E5;
-	}
-	.conference-title-wrapper.label:after {
 		transition: all 0.35s ease-in-out;
 		transform: rotate(-90deg);
 		opacity: 1;
@@ -108,8 +104,6 @@
 		width: 20px;
 		height: 2px;
 	}
-}
-@media (min-width: 320px) {
 	.session-container td.conference-td {
 		padding: 0 0 15px 50px;
 	}
@@ -130,7 +124,6 @@
 .conference-title-wrapper.label .conference-title {
 	-webkit-user-select: none;
 	   -moz-user-select: none;
-	    -ms-user-select: none;
 	        user-select: none;
 }
 .training .agenda {
@@ -140,8 +133,6 @@
 	.q-qsc-section h3 {
 		margin-bottom: 1em;
 	}
-}
-@media (min-width: 720px) {
 	.q-qsc-city__hero {
 		background-image: url(https://ik.imagekit.io/qualys/image/2024/qsc/london/qualys-qsc-2024-emea-desktop.jpg);
 		background-position: left;
@@ -383,7 +374,6 @@ ul.conference-description {
 	.q-qsc-city {
 		min-height: 450px;
 		-o-object-fit: cover;
-		   object-fit: cover;
 		justify-content: start;
 		background-size: cover;
 		object-fit: cover;
@@ -478,7 +468,6 @@ ul.conference-description {
     align-items: center;
     left: 0;
     right: 0;
-    width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
     margin: auto;

@@ -636,7 +636,6 @@ sup {
 	font-family: Gotham, sans-serif;
 	font-weight: 400;
 	letter-spacing: -0.01em;
-	line-height: 1.15;
 	color: #262626;
 	line-height: 1.33333;
 }
@@ -1128,13 +1127,8 @@ sup {
 }
 .accurate-features .q-apps-features__col:nth-child(2){
 	border-right: none;
-	}
-}
-@media (min-width: 1180px){
-	.accurate-features .q-apps-features__col:nth-child(2) {
 		border-right: 1px solid #ddd;
 	}
-
 }
 @media (min-width: 1080px){
 	.accurate-features .q-apps-features {
@@ -1421,8 +1415,6 @@ sup {
 	    width: 410px;
 		right:unset
 	}
-}
-@media (min-width: 1080px) {
 	.q-default-hero__image {
 		top: 8em;
 		bottom: auto;
@@ -1537,8 +1529,7 @@ sup {
 .vmdr-workflow-table2 .addon {
 	justify-content: flex-end !important;
     transform: rotate(0deg);
-    -webkit-text-orientation: mixed;
-            text-orientation: mixed;
+    text-orientation: mixed;
     writing-mode: vertical-rl;
 }
 .vmdr-workflow-table2 .what-does,
@@ -1581,7 +1572,6 @@ sup {
     transition-duration: 1s;
     filter: invert(2);
     border: 2px solid #fff;
-    padding: 3px;
     border-radius: 50%;
     width: 25px;
     padding: 4px;
@@ -1670,8 +1660,6 @@ sup {
 	}
 	.vmdr-workflow-table2 .td {
 		border-bottom: 1px solid #ccc;
-	}
-	.vmdr-workflow-table2 .td {
 		border-right: 2px solid #E4E4E4;
 	}
 	.vmdr-workflow-table2 .td:last-of-type {
@@ -1897,6 +1885,4 @@ sup {
 	font-size: 0.3em;
 	line-height: 1;
 }
-
-
 /*# sourceMappingURL=index.css.map */

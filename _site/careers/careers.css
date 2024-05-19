@@ -447,16 +447,12 @@
 		margin-left: -15px;
 		margin-right: -15px;
 	}
-}
-@media (min-width: 720px) {
 	.q-careers-videos__text {
 		flex: none;
 		padding-left: 15px;
 		padding-right: 15px;
 		width: calc(5 / 10 * 100%);
 	}
-}
-@media (min-width: 720px) {
 	.q-careers-videos__videos {
 		flex: none;
 		padding-left: 15px;
@@ -547,5 +543,4 @@
 .q-play-button .q-video-link:hover {
 	color: #4C5864;
 }
-
 /*# sourceMappingURL=careers.css.map */

@@ -388,7 +388,6 @@
 /** bouncing arrow separator **/
 
 .q-tru-arrow {
-	text-align: center;
 	display: block;
 	text-align: center;
 	padding: 10px 0;
@@ -464,8 +463,6 @@
 	margin: 30px 0 0 0;
 }
 .q-lp-form .mktoButton {
-	border-radius: 2px;
-	background-size: cover;
 	background: none;
 	background-image: url(/asset/image/2023/cloud-security-insights/form-cta--bg.png);
 	background-position: center;
@@ -555,7 +552,6 @@
 }
 .q-tru-slides-paging {
 	display: none;
-	position: -webkit-sticky;
 	position: sticky;
 	width: 40px;
 	top: 0;
@@ -1013,5 +1009,4 @@ right: -6%;
 .js-slide-img{
 	opacity: 0;
 }
-
 /*# sourceMappingURL=index.css.map */

@@ -1,8 +1,11 @@
 @media (min-width:720px){
 .section6 .two-column-text p {
-    column-count: 2;
+    -moz-column-count: 2;
+         column-count: 2;
 }
 }
 .section6 .is-center{
     text-align:center
 }
+
+/*# sourceMappingURL=section6.css.map */

@@ -19,7 +19,8 @@
     width: 80px;
     max-width: 100%;
     max-height: 65px;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 .section13 .q-icon .q-content__copy{
     font-size:16px
@@ -69,3 +70,4 @@
     border-right:1px solid #ddd;
 }
 }
+/*# sourceMappingURL=section13.css.map */

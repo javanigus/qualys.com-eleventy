@@ -83,8 +83,6 @@
 }
 .company-bod-profile__links li {
 	display: inline-block;
-}
-.company-bod-profile__links li {
 	margin-right: 35px;
 }
 .company-bod-profile__links li a {
@@ -215,5 +213,4 @@
 .expandedHeight button {
 	background-position: 0 3em;
 }
-
 /*# sourceMappingURL=index.css.map */
