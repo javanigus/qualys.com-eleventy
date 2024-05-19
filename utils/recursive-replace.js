@@ -48,13 +48,13 @@ const edit = filePath => {
     // REPLACE page.platform with platform
     oldContent = newContent;
     regex = /<header class="sticky(.|\n)*?<\/header>/gi;
-    var replaceVal = '{% include "src/_includes/header-chaitraili.njk" %}';
+    var replaceVal = '{% include "src/_includes/header-chaitrali.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{markdown biography}} with {{ biography | markdown | safe }}
     oldContent = newContent;
     regex = /<footer role="footer"(.|\n)*?<\/footer>/gi;
-    var replaceVal = '{% include "src/_includes/footer-chaitraili.njk" %}';
+    var replaceVal = '{% include "src/_includes/footer-chaitrali.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
 	oldContent = newContent;
