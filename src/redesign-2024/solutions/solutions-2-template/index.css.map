@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../site/pages/redesign-2024/solutions/solutions-2-template/index.css"],"names":[],"mappings":"AAAA;CACC,cAAc;CACd,gBAAgB;CAChB,+BAA+B;AAChC","file":"index.css","sourcesContent":[".active-tab {\n\tcolor: #ED2E26;\n\tfont-weight: 700;\n\tborder-bottom:3px solid #ED2E26;\n}"]}

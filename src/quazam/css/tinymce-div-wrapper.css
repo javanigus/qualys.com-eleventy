@@ -1,9 +1,0 @@
-/* CSS Document */
-
-#content {
-	border: none;
-	
-	-moz-box-shadow: none; //* for firefox */
-	-webkit-box-shadow: none; /* for chrome and safari */
-	box-shadow: none; /* for CSS3-supported browsers */
-}

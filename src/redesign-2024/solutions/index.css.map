@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../site/pages/redesign-2024/solutions/index.css"],"names":[],"mappings":"AAAA;CACC;EACC,SAAS;CACV;AACD","file":"index.css","sourcesContent":["@media (min-width: 768px){\n\t.q-swiper-tabs, .q-swiper-tabs > ul {\n\t\tgap: 0rem;\n\t}\n}\n"]}

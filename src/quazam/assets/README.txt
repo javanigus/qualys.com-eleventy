@@ -1,1 +1,0 @@
-Yii expects this directory to exist.
