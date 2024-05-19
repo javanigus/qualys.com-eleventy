@@ -36,25 +36,25 @@ const edit = filePath => {
 
     // REPLACE {{#if class}} with {% if class %}
     var regex = /<header class="q-header"(.|\n)*?\<\/header>/gi;
-    var replaceVal = '{% include "header-ueno.njk" %}';
+    var replaceVal = '{% include "src/_includes/header-ueno.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{/if}} with {% endif %}
     oldContent = newContent;
     regex = /<footer class="q-footer"(.|\n)*?<\/footer>/gi;
-    var replaceVal = '{% include "footer-ueno.njk" %}';
+    var replaceVal = '{% include "src/_includes/footer-ueno.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE page.platform with platform
     oldContent = newContent;
     regex = /<header class="sticky(.|\n)*?<\/header>/gi;
-    var replaceVal = '{% include "header-chaitrail.njk" %}';
+    var replaceVal = '{% include "src/_includes/header-chaitrail.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{markdown biography}} with {{ biography | markdown | safe }}
     oldContent = newContent;
     regex = /<footer role="footer"(.|\n)*?<\/footer>/gi;
-    var replaceVal = '{% include "footer-chaitrail.njk" %}';
+    var replaceVal = '{% include "src/_includes/footer-chaitrail.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
 	oldContent = newContent;
