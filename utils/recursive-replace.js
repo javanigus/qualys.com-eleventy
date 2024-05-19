@@ -30,31 +30,31 @@ const walk = dir => {
 };
 
 const edit = filePath => {
-  // if (filePath.endsWith('/company/index.njk') || filePath.endsWith('/apps/cybersecurity-asset-management/index.njk') || filePath.endsWith('/emails/lunch-learn/2022-02-03/ransomware-virtual/confirm/index.njk')) {
-  if (filePath.endsWith('.njk')) {
+  if (filePath.endsWith('/company/index.njk') || filePath.endsWith('/apps/cybersecurity-asset-management/index.njk') || filePath.endsWith('/emails/lunch-learn/2022-02-03/ransomware-virtual/confirm/index.njk') || filePath.endsWith('/webcasts/untitled-entry-2024-01-22-at-09-38-40/index.njk') && !filePath.includes("_includes")) {
+  // if (filePath.endsWith('.njk') && !filePath.includes("_includes")) {
     var oldContent = fs.readFileSync(filePath, {encoding: 'utf8'});
 
     // REPLACE {{#if class}} with {% if class %}
     var regex = /<header class="q-header"(.|\n)*?\<\/header>/gi;
-    var replaceVal = '{% include "src/_includes/header-ueno.njk" %}';
+    var replaceVal = '{% include "header-ueno.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{/if}} with {% endif %}
     oldContent = newContent;
     regex = /<footer class="q-footer"(.|\n)*?<\/footer>/gi;
-    var replaceVal = '{% include "src/_includes/footer-ueno.njk" %}';
+    var replaceVal = '{% include "footer-ueno.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE page.platform with platform
     oldContent = newContent;
     regex = /<header class="sticky(.|\n)*?<\/header>/gi;
-    var replaceVal = '{% include "src/_includes/header-chaitrail.njk" %}';
+    var replaceVal = '{% include "header-chaitrail.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{markdown biography}} with {{ biography | markdown | safe }}
     oldContent = newContent;
     regex = /<footer role="footer"(.|\n)*?<\/footer>/gi;
-    var replaceVal = '{% include "src/_includes/footer-chaitrail.njk" %}';
+    var replaceVal = '{% include "footer-chaitrail.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
 	oldContent = newContent;
