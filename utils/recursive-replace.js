@@ -30,29 +30,30 @@ const walk = dir => {
 };
 
 const edit = filePath => {
-  if (filePath.endsWith('company/index.njk') || filePath.endsWith('cybersecurity-asset-management/index.njk')) {
+  // if (filePath.endsWith('/company/index.njk') || filePath.endsWith('/apps/cybersecurity-asset-management/index.njk')) {
+  if (filePath.endsWith('.njk')) {
     var oldContent = fs.readFileSync(filePath, {encoding: 'utf8'});
 
     // REPLACE {{#if class}} with {% if class %}
-    var regex = /<header class="1-header"(.|\n)*?</header>/gi;
+    var regex = /<header class="q-header"(.|\n)*?\<\/header>/gi;
     var replaceVal = '{% include "src/_includes/header-ueno.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{/if}} with {% endif %}
     oldContent = newContent;
-    regex = /<footer class="q-footer"(.|\n)*?</footer>/gi;
+    regex = /<footer class="q-footer"(.|\n)*?<\/footer>/gi;
     var replaceVal = '{% include "src/_includes/footer-ueno.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE page.platform with platform
     oldContent = newContent;
-    regex = /<header class="sticky"(.|\n)*?</header>/gi;
+    regex = /<header class="sticky(.|\n)*?<\/header>/gi;
     var replaceVal = '{% include "src/_includes/header-chaitrail.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
     // REPLACE {{markdown biography}} with {{ biography | markdown | safe }}
     oldContent = newContent;
-    regex = /<footer role="footer"(.|\n)*?</footer>/gi;
+    regex = /<footer role="footer"(.|\n)*?<\/footer>/gi;
     var replaceVal = '{% include "src/_includes/footer-chaitrail.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
