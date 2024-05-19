@@ -506,7 +506,7 @@
 					<td class="mailer-padding"></td>
 					<td>
 						<a
-							href="https://www.qualys.com/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign={{my.utmCampaign}}&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}">
+							href="https://www.qualys.com/?utm_source={# marketo variable #}&utm_medium={# marketo variable #}&utm_campaign={# marketo variable #}&utm_term={# marketo variable #}&leadsource={# marketo variable #}">
 							<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/webcasts/qualys-logo-145-2x.png"
 								width="145" class="qualys-logo">
 						</a>
@@ -611,17 +611,17 @@
 					<td>
 						<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif;">
 							<p>
-								Dear {{lead.First Name:default=Security Professional}},
+								Dear {# marketo variable #},
 							</p>
 							<br>
 							<p>We wanted to assure you that our teams are continuing to work around the clock to evolve our detection mechanisms to help identify vulnerable systems and applications via our authenticated, unauthenticated, and agent-based scans. 
 							</p>
 							<br>
-							<p>We have created a <a href="https://www.qualys.com/log4shell-cve-2021-44228/?{{my.utm-tracking}}" class="text-link">resource page</a> that highlights the important updates, including a few helpful videos on how to run Log4Shell specific scans and other resources. </p>
+							<p>We have created a <a href="https://www.qualys.com/log4shell-cve-2021-44228/?{# marketo variable #}" class="text-link">resource page</a> that highlights the important updates, including a few helpful videos on how to run Log4Shell specific scans and other resources. </p>
 							<br>
 							<p>In addition to these resources, we are holding a webinar on Monday, Dec 20th 10:00 am PT to give you more updates and answer additional questions you have on how to deal with the Log4Shell issues. </p>
 							<br>
-							<p>In the meantime, feel free to reach out to your technical account manager with questions or if you need additional assistance. For immediate assistance on urgent issues, <a href="https://www.qualys.com/support/?{{my.utm-tracking}}#phone" class="text-link">call Qualys Support</a>, or access the Qualys <a href="https://success.qualys.com/support/s/article/000001106" class="text-link">Customer Support Portal</a> online. </p>
+							<p>In the meantime, feel free to reach out to your technical account manager with questions or if you need additional assistance. For immediate assistance on urgent issues, <a href="https://www.qualys.com/support/?{# marketo variable #}#phone" class="text-link">call Qualys Support</a>, or access the Qualys <a href="https://success.qualys.com/support/s/article/000001106" class="text-link">Customer Support Portal</a> online. </p>
 							<br>
 							<p>Thank you, <br>
 Qualys Customer Support Team  
@@ -700,11 +700,10 @@ Qualys Customer Support Team
 													<span
 														style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93; max-width: 500px;">This
 														email was sent to <a
-															style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{{lead.Email
-															Address}}</a>.
+															style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{# marketo variable #}</a>.
 														<br>
 														You may adjust your <a
-															href="https://www.qualys.com/communication-preferences/?{{my.utm-tracking}}&email={{lead.Email Address}}"
+															href="https://www.qualys.com/communication-preferences/?{# marketo variable #}&email={# marketo variable #}"
 															class="text-link">email preferences or unsubscribe</a> at
 														any time.</span>
 												</font>
@@ -722,7 +721,7 @@ Qualys Customer Support Team
 										style="text-align: center;">
 										<tr>
 											<td class="mailer-footer-links" style="text-align: center;">
-												<a href="https://www.qualys.com/company/privacy/?{{my.utm-tracking}}"
+												<a href="https://www.qualys.com/company/privacy/?{# marketo variable #}"
 													style="text-decoration: none; color: #2e8be0">
 													<font face="'Open Sans', sans-serif"
 														style="font-family: 'Open Sans', sans-serif; font-size: 11pt;  display: inline;">
@@ -732,7 +731,7 @@ Qualys Customer Support Team
 													style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93; display: inline;">
 													|</font>
 
-												<a href="https://www.qualys.com/company/contacts/?{{my.utm-tracking}}"
+												<a href="https://www.qualys.com/company/contacts/?{# marketo variable #}"
 													style="text-decoration: none; color: #707f93; display: inline;">
 													<font face="'Open Sans', sans-serif"
 														style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #2e8be0 ;display: inline;">
@@ -742,7 +741,7 @@ Qualys Customer Support Team
 													style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93;  display: inline;">
 													|</font>
 
-												<a href="https://www.qualys.com/support/?{{my.utm-tracking}}"
+												<a href="https://www.qualys.com/support/?{# marketo variable #}"
 													style="text-decoration: none; color: #2e8be0">
 													<font face="'Open Sans', sans-serif"
 														style="font-family: 'Open Sans', sans-serif; font-size: 11pt;  display: inline;">
@@ -777,7 +776,7 @@ Qualys Customer Support Team
 													<br><br class="showOnMobile">
 
 													Qualys is a global company with offices around the world. Find an <a
-														href="https://www.qualys.com/company/contacts/?{{my.utm-tracking}}#regional-offices"
+														href="https://www.qualys.com/company/contacts/?{# marketo variable #}#regional-offices"
 														style="text-decoration: none; color: #2e8be0; white-space: nowrap;">office
 														near you</a>.
 												</font>
@@ -796,7 +795,7 @@ Qualys Customer Support Team
 											<td align="center">
 												<font face="'Open Sans', sans-serif"
 													style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">
-													© {{my.Current Year}} <span class="nowrap">Qualys, Inc.</span> All
+													© {# marketo variable #} <span class="nowrap">Qualys, Inc.</span> All
 													rights reserved.</font>
 											</td>
 										</tr>

@@ -488,7 +488,7 @@ b {
 					<tr>
 						<td class="horizontal-padding"></td>
 						<td class="logo">
-							<a href="https://www.qualys.com/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign={{my.utmCampaign}}&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}">
+							<a href="https://www.qualys.com/?utm_source={# marketo variable #}&utm_medium={# marketo variable #}&utm_campaign={# marketo variable #}&utm_term={# marketo variable #}&leadsource={# marketo variable #}">
 								<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/webcasts/qualys-logo-145-2x.png" width="166" class="qualys-logo">
 							</a>
 						</td>
@@ -556,7 +556,7 @@ b {
 						<td class="horizontal-padding"></td>
 						<td>
 							<font face="'Open Sans', sans-serif"><p>
-							<p>Dear {{lead.First Name:default=Qualys Customer}},</p>
+							<p>Dear {# marketo variable #},</p>
 							<br>
 							<p>Qualys Patch Management is now available for our Consultant/MSP partners via Consulting Edition. This is a game-changing addition to the Vulnerability Management lifecycle that lets you take immediate action to patch threats as they are discovered – all in a single UI and workflow. This combination is truly unique in the industry, only Qualys offers built-in patching.  <a href="https://www.qualys.com/apps/patch-management/" class="nowrap text-link">Learn more here.</a> </p>
 							<br>
@@ -641,8 +641,8 @@ b {
 											<tr>
 												<td align="center" style="line-height: 1.4;">
 													<font face="'Open Sans', sans-serif">
-														<span style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93; max-width: 500px;">This email was sent to <a style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{{lead.Email Address}}</a>. <br>
-															You may adjust your <a href="https://www.qualys.com/communication-preferences/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign=&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}&email={{lead.Email Address}}" class="text-link">email preferences or unsubscribe</a> at any time.</span></font>
+														<span style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93; max-width: 500px;">This email was sent to <a style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{# marketo variable #}</a>. <br>
+															You may adjust your <a href="https://www.qualys.com/communication-preferences/?utm_source={# marketo variable #}&utm_medium={# marketo variable #}&utm_campaign=&utm_term={# marketo variable #}&leadsource={# marketo variable #}&email={# marketo variable #}" class="text-link">email preferences or unsubscribe</a> at any time.</span></font>
 												</td>
 											</tr>
 										</table>
@@ -701,7 +701,7 @@ b {
 										<table cellpadding="0" cellspacing="0" border="0" align="center">
 											<tr>
 												<td align="center">
-													<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">© {{my.Current Year}} Qualys, Inc. All rights reserved.</font>
+													<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">© {# marketo variable #} Qualys, Inc. All rights reserved.</font>
 												</td>
 											</tr>
 										</table>

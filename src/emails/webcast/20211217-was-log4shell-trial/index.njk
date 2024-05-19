@@ -506,7 +506,7 @@
 					<td class="mailer-padding"></td>
 					<td>
 						<a
-							href="https://www.qualys.com/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign={{my.utmCampaign}}&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}">
+							href="https://www.qualys.com/?utm_source={# marketo variable #}&utm_medium={# marketo variable #}&utm_campaign={# marketo variable #}&utm_term={# marketo variable #}&leadsource={# marketo variable #}">
 							<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/webcasts/qualys-logo-145-2x.png"
 								width="145" class="qualys-logo">
 						</a>
@@ -611,7 +611,7 @@
 					<td>
 						<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif;">
 							<p>
-								Dear {{lead.First Name:default=Security Professional}},
+								Dear {# marketo variable #},
 							</p>
 							<br>
 							<p>The Apache Log4Shell zero-day RCE vulnerability has raised alarms at companies around the globe, with U. S. government officials calling it "one of the most serious flaws they've seen." The vulnerability poses potential threats for almost every single web application, with the list of known exploits growing daily.   
@@ -621,7 +621,7 @@
 							<br>
 							<p>In response to this unprecedented threat, Qualys is offering 30 day free access to our industry-leading Web Application Scanning (WAS) apps. </p>
 							<br>
-							<p><b>To sign up for this service, simply visit</b> <a href="https://qualys.com/was-log4shell-help/?{{my.utm-tracking}}" class="text-link">https://qualys.com/was-log4shell-help</a>.</p>
+							<p><b>To sign up for this service, simply visit</b> <a href="https://qualys.com/was-log4shell-help/?{# marketo variable #}" class="text-link">https://qualys.com/was-log4shell-help</a>.</p>
 							<br>
 							<p>If you are an existing Qualys WAS customer, please reach out to your technical account manager or Qualys Customer Support with questions or if you need additional assistance.   </p>
 							<br>
@@ -706,11 +706,10 @@ Qualys Research team
 													<span
 														style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93; max-width: 500px;">This
 														email was sent to <a
-															style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{{lead.Email
-															Address}}</a>.
+															style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{# marketo variable #}</a>.
 														<br>
 														You may adjust your <a
-															href="https://www.qualys.com/communication-preferences/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign={{my.utmCampaign}}&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}&email={{lead.Email Address}}"
+															href="https://www.qualys.com/communication-preferences/?utm_source={# marketo variable #}&utm_medium={# marketo variable #}&utm_campaign={# marketo variable #}&utm_term={# marketo variable #}&leadsource={# marketo variable #}&email={# marketo variable #}"
 															class="text-link">email preferences or unsubscribe</a> at
 														any time.</span>
 												</font>
@@ -728,7 +727,7 @@ Qualys Research team
 										style="text-align: center;">
 										<tr>
 											<td class="mailer-footer-links" style="text-align: center;">
-												<a href="https://www.qualys.com/company/privacy/?{{my.utm-tracking}}"
+												<a href="https://www.qualys.com/company/privacy/?{# marketo variable #}"
 													style="text-decoration: none; color: #2e8be0">
 													<font face="'Open Sans', sans-serif"
 														style="font-family: 'Open Sans', sans-serif; font-size: 11pt;  display: inline;">
@@ -738,7 +737,7 @@ Qualys Research team
 													style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93; display: inline;">
 													|</font>
 
-												<a href="https://www.qualys.com/company/contacts/?{{my.utm-tracking}}"
+												<a href="https://www.qualys.com/company/contacts/?{# marketo variable #}"
 													style="text-decoration: none; color: #707f93; display: inline;">
 													<font face="'Open Sans', sans-serif"
 														style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #2e8be0 ;display: inline;">
@@ -748,7 +747,7 @@ Qualys Research team
 													style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93;  display: inline;">
 													|</font>
 
-												<a href="https://www.qualys.com/support/?{{my.utm-tracking}}"
+												<a href="https://www.qualys.com/support/?{# marketo variable #}"
 													style="text-decoration: none; color: #2e8be0">
 													<font face="'Open Sans', sans-serif"
 														style="font-family: 'Open Sans', sans-serif; font-size: 11pt;  display: inline;">
@@ -783,7 +782,7 @@ Qualys Research team
 													<br><br class="showOnMobile">
 
 													Qualys is a global company with offices around the world. Find an <a
-														href="https://www.qualys.com/company/contacts/?{{my.utm-tracking}}#regional-offices"
+														href="https://www.qualys.com/company/contacts/?{# marketo variable #}#regional-offices"
 														style="text-decoration: none; color: #2e8be0; white-space: nowrap;">office
 														near you</a>.
 												</font>
@@ -802,7 +801,7 @@ Qualys Research team
 											<td align="center">
 												<font face="'Open Sans', sans-serif"
 													style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">
-													© {{my.Current Year}} <span class="nowrap">Qualys, Inc.</span> All
+													© {# marketo variable #} <span class="nowrap">Qualys, Inc.</span> All
 													rights reserved.</font>
 											</td>
 										</tr>

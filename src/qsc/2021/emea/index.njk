@@ -39,47 +39,7 @@
 
 
 	
-<header class="q-header">
-	<div class="q-header__container">
-		<button class="q-header__hamburger js-menu">
-			<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14">
-				<path fill="#4a4a4a" fill-rule="evenodd" d="M0 0h18v2H0V0zm0 6h18v2H0V6zm0 6h18v2H0v-2z"></path>
-			</svg>
-		</button>
-
-		<a href="/qsc/locations/" class="q-qsc__logo">
-			<img src="https://q-website-images.s3.amazonaws.com/www/image/logo/qsc-sans-year.svg" alt="Qualys Security Conference" />
-		</a>
-		<p class="tagline tagline-desktop">
-			
-			Qualys Security Conference
-		</p>
-		<div class="q-qsc__header--navigation">
-			<ul class="q-qsc__menu">
-
-					<li>
-						<a href="/qsc/2021/emea/#agenda">Agenda</a>
-					</li>
-					<li>
-						<a href="/qsc/2021/emea/#digital-platform">Digital Platform</a>
-					</li>
-					<li>
-						<a href="/qsc/2021/emea/#why-attend">Why Attend</a>
-					</li>				
-				<li class="q-qsc__menu--location">
-					<a href="/qsc/locations/" class="">Locations</a>
-				</li>
-			</ul>
-		</div>
-			<div class="q-qsc__header--cta ">
-				<a href="https://login.swapcard.com/" class="q-button right appendUTM"><span>Log in</span></a>
-			</div>
-	</div>
-	<p class="tagline tagline-mobile">
-		
-		Qualys Security Conference
-	</p>
-</header><div class="q-navigation-mobile">
+{% include "src/_includes/header-ueno.njk" %}<div class="q-navigation-mobile">
 	<div class="q-navigation-mobile__panel q-navigation-mobile__panel--first">
 		<div class="q-navigation-mobile__header">
 			<button class="q-navigation-mobile__button js-menu">Close</button>
@@ -1033,84 +993,7 @@
 	</div>
 </div>
 
-<footer class="q-footer">
-	<div class="q-grid__container">
-		<div class="q-grid__inner">
-			<div class="q-grid__row">
-				<div class="q-qsc__footer-column">
-					<ul class="q-qsc__social-list">
-						<li>
-							<a href="https://twitter.com/hashtag/QSCEMEA" title="Twitter" target="_blank" rel="noopener">
-								<span class="q-qsc__social-icon">
-									<svg class="q-social-list__icon"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 47"><path d="M12.6677 12.1982L21.9003 24.5431L12.6094 34.5801H14.7004L22.8346 25.7926L29.4068 34.5801H36.5226L26.7705 21.5408L35.4184 12.1982H33.3274L25.8362 20.2913L19.7835 12.1982H12.6677ZM15.7427 13.7385H19.0117L33.4471 33.0396H30.1781L15.7427 13.7385Z" fill="#BDBDBD"></path></svg>
-								</span>
-								#qsc2024
-							</a>
-						</li>
-						<li>
-							<a href="https://vimeo.com/937885972&background=0&autoplay=1&loop=0" title="Vimeo" target="_blank" class="" data-fancybox>
-								<span class="q-qsc__social-icon">
-									<svg class="q-social-list__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 86.67"><path fill="#FFF" d="M100 20.05q-.72 14.63-20.44 40.06Q59.16 86.67 45 86.67q-8.74 0-14.79-16.17l-8.02-29.66q-4.49-16.17-9.64-16.18-1.12 0-7.85 4.72L0 23.31q7.4-6.52 14.59-13 9.87-8.55 14.82-9 11.67-1.12 14.37 16 2.91 18.47 4 23 3.36 15.32 7.41 15.31 3.14 0 9.43-9.94t6.73-15.13q.9-8.58-6.73-8.58a18.7 18.7 0 0 0-7.4 1.64Q64.63-.66 85.42 0 100.84.47 100 20.05z"></path></svg>
-								</span>
-								QSC24 Highlights
-								</a>
-						</li>
-						<li>
-							<a href="https://blog.qualys.com/tag/qsc" title="Blog" target="_blank" rel="noopener">
-								<span class="q-qsc__social-icon">
-									<svg class="q-social-list__icon" width="16" height="16" viewBox="0 0 612 612" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="feed" fill="#FFFFFF" fill-rule="nonzero"><circle id="Oval" cx="83.9" cy="528.1" r="83.9"></circle><path d="M405.7,612 L286.8,612 C286.8,453.9 158.1,325.2 0,325.2 L0,206.3 C223.8,206.3 405.7,388.2 405.7,612 Z M489.6,612 C489.6,341.3 270.7,122.4 0,122.4 L0,0 C337.8,0 612,274.2 612,612 L489.6,612 Z" id="Shape"></path></g>
-									</svg>
-								</span>
-								QSC Blog
-								</a>
-						</li>
-					</ul>
-				</div>
-				<div class="q-qsc__footer-column">
-					<h3 class="q-qsc__footer-heading">Locations</h3>
-					<ul class="q-qsc__footer-navigation">
-						<li>
-							<a href="/qsc/2024/san-diego">QSC24 Americas</a>
-						</li>
-						<li>
-							<a href="/qsc/2024/emea">QSC24 EMEA</a>
-						</li>
-						<li>
-							<a href="/qsc/2023/orlando/videos/">QSC23 Americas</a>
-						</li>
-						<li>
-							<a href="/qsc/2023/mumbai/">QSC23 Mumbai</a>
-						</li>
-						<li>
-							<a href="/qsc/2023/munich/">QSC23 Munich</a>
-						</li>
-					
-						<li>
-							<a href="/qsc/2023/london/">QSC23 London</a>
-						</li>
-						
-					</ul>
-				</div>
-				<div class="q-qsc__footer-column">
-					<ul class="q-qsc__footer-contact">
-						<li>
-							Phone: <br/>
-							<a href="tel:16508016100">+1 (650) 801 6100</a>
-						</li>
-						<li>
-							For questions, email us at: <br/>
-							<a href="mailto:qsc@qualys.com">qsc@qualys.com</a>
-						</li>
-						<li>
-							To subscribe to QSC updates: <br/>
-							<a href="/qsc/get-notified/">Get Notified</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
+{% include "src/_includes/footer-ueno.njk" %}
 <div style="display: none">
 	<div class="q-qsc__register-window" id="qsc20_registration">
 		<div class="q-qsc__register-container">

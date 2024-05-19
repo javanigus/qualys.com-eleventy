@@ -506,7 +506,7 @@
 					<td class="mailer-padding"></td>
 					<td>
 						<a
-							href="https://www.qualys.com/?{{my.utm-tracking}}">
+							href="https://www.qualys.com/?{# marketo variable #}">
 							<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/webcasts/qualys-logo-145-2x.png"
 								width="145" class="qualys-logo">
 						</a>
@@ -558,7 +558,7 @@
 					<td>
 						<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif;">
 							<p>
-								Dear {{lead.First Name:default=Security Professional}},
+								Dear {# marketo variable #},
 							</p>
 							<br>
 							<p>As the holidays approach, I would like to thank you for all the work you and your teammates are doing as Cyber First Responders, to protect us all, and for your support of Qualys during this year of change. The one constant at Qualys is our focus on the success of our customers and partners and helping you navigate the ever-changing threat landscape.  
@@ -566,7 +566,7 @@
 							<br>
 							<p>2021 has been a challenging year with continued remote working, multiple severe vulnerabilities like Log4Shell, and an upsurge in ransomware attacks. The common need is to respond quickly to all these vulnerabilities and attacks. Cybersecurity solutions that only provide a long list of issues are no longer cutting it, given the speed needed for remediation. Therefore, with insights from our customers and partners, we have prioritized leveraging the same cloud agent to deliver speedy responses for Cyber Security Asset Management (CSAM), Vulnerability Management Detection & Response (VMDR) and Patch Management.   </p>
 							<br>
-							<p>Product innovation has always been a priority for Qualys, and in 2022 we will focus on cloud-native security, container security, endpoint detection and response (EDR) and our XDR solutions. We had a very successful <a href="https://www.qualys.com/qsc/2021/las-vegas/?{{my.utm-tracking}}" class="text-link">Qualys Security Conference</a> (QSC) in Las Vegas recently with over 300 people joining us in person and 3,000 virtually. If you missed it, I highly recommend listening to the sessions, and please share your feedback on our direction.  </p>
+							<p>Product innovation has always been a priority for Qualys, and in 2022 we will focus on cloud-native security, container security, endpoint detection and response (EDR) and our XDR solutions. We had a very successful <a href="https://www.qualys.com/qsc/2021/las-vegas/?{# marketo variable #}" class="text-link">Qualys Security Conference</a> (QSC) in Las Vegas recently with over 300 people joining us in person and 3,000 virtually. If you missed it, I highly recommend listening to the sessions, and please share your feedback on our direction.  </p>
 							<br>
 							<p>We value our relationship and look forward to working with you in the year ahead to improve everyone’s overall cybersecurity posture. I would like to thank you all for your staunch support of Qualys and wish all of you and your loved ones a Happy Holiday season. </p>
 							<br>
@@ -652,11 +652,10 @@
 													<span
 														style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93; max-width: 500px;">This
 														email was sent to <a
-															style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{{lead.Email
-															Address}}</a>.
+															style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{# marketo variable #}</a>.
 														<br>
 														You may adjust your <a
-															href="https://www.qualys.com/communication-preferences/?{{my.utm-tracking}}&email={{lead.Email Address}}"
+															href="https://www.qualys.com/communication-preferences/?{# marketo variable #}&email={# marketo variable #}"
 															class="text-link">email preferences or unsubscribe</a> at
 														any time.</span>
 												</font>
@@ -674,7 +673,7 @@
 										style="text-align: center;">
 										<tr>
 											<td class="mailer-footer-links" style="text-align: center;">
-												<a href="https://www.qualys.com/company/privacy/?{{my.utm-tracking}}"
+												<a href="https://www.qualys.com/company/privacy/?{# marketo variable #}"
 													style="text-decoration: none; color: #2e8be0">
 													<font face="'Open Sans', sans-serif"
 														style="font-family: 'Open Sans', sans-serif; font-size: 11pt;  display: inline;">
@@ -684,7 +683,7 @@
 													style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93; display: inline;">
 													|</font>
 
-												<a href="https://www.qualys.com/company/contacts/?{{my.utm-tracking}}"
+												<a href="https://www.qualys.com/company/contacts/?{# marketo variable #}"
 													style="text-decoration: none; color: #707f93; display: inline;">
 													<font face="'Open Sans', sans-serif"
 														style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #2e8be0 ;display: inline;">
@@ -694,7 +693,7 @@
 													style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93;  display: inline;">
 													|</font>
 
-												<a href="https://www.qualys.com/support/?{{my.utm-tracking}}"
+												<a href="https://www.qualys.com/support/?{# marketo variable #}"
 													style="text-decoration: none; color: #2e8be0">
 													<font face="'Open Sans', sans-serif"
 														style="font-family: 'Open Sans', sans-serif; font-size: 11pt;  display: inline;">
@@ -729,7 +728,7 @@
 													<br><br class="showOnMobile">
 
 													Qualys is a global company with offices around the world. Find an <a
-														href="https://www.qualys.com/company/contacts/?{{my.utm-tracking}}#regional-offices"
+														href="https://www.qualys.com/company/contacts/?{# marketo variable #}#regional-offices"
 														style="text-decoration: none; color: #2e8be0; white-space: nowrap;">office
 														near you</a>.
 												</font>
@@ -748,7 +747,7 @@
 											<td align="center">
 												<font face="'Open Sans', sans-serif"
 													style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">
-													© {{my.Current Year}} <span class="nowrap">Qualys, Inc.</span> All
+													© {# marketo variable #} <span class="nowrap">Qualys, Inc.</span> All
 													rights reserved.</font>
 											</td>
 										</tr>

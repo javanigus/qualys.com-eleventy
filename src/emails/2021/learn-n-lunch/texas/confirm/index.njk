@@ -761,7 +761,7 @@ b {
 						<td>
 							<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif;">
 								<p>
-									Dear {{lead.First Name:default=Security Professional}},
+									Dear {# marketo variable #},
 								</p>
 								<br>
 								<p>
@@ -841,8 +841,8 @@ b {
 											<tr>
 												<td align="center" style="line-height: 1.4;">
 													<font face="'Open Sans', sans-serif">
-														<span style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93; max-width: 500px;">This email was sent to <a style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{{lead.Email Address}}</a>. <br>
-															You may adjust your <a href="https://www.qualys.com/communication-preferences/?utm_source=marketo&utm_medium=email&utm_campaign=fortworthtxlunch&learn8dec2021&leadsource=344572118&email={{lead.Email Address}}" class="text-link">email preferences or unsubscribe</a> at any time.</span></font>
+														<span style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93; max-width: 500px;">This email was sent to <a style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{# marketo variable #}</a>. <br>
+															You may adjust your <a href="https://www.qualys.com/communication-preferences/?utm_source=marketo&utm_medium=email&utm_campaign=fortworthtxlunch&learn8dec2021&leadsource=344572118&email={# marketo variable #}" class="text-link">email preferences or unsubscribe</a> at any time.</span></font>
 												</td>
 											</tr>
 										</table>
@@ -901,7 +901,7 @@ b {
 										<table cellpadding="0" cellspacing="0" border="0" align="center">
 											<tr>
 												<td align="center">
-													<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">© {{my.Current Year}} <span class="nowrap">Qualys, Inc.</span> All rights reserved.</font>
+													<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">© {# marketo variable #} <span class="nowrap">Qualys, Inc.</span> All rights reserved.</font>
 												</td>
 											</tr>
 										</table>

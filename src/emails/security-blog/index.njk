@@ -501,7 +501,7 @@ a.text-link {
 							<tr>
 								<td width="76" class="mailer-padding"></td>
 								<td align="center" class="blue-header-td">
-									<font face="'Open Sans', sans-serif" class="header-text"><a href="{{system.viewAsWebpageLink}}">View this email in your browser</a></font>
+									<font face="'Open Sans', sans-serif" class="header-text"><a href="{# marketo variable #}">View this email in your browser</a></font>
 								</td>
 								<td width="76" class="mailer-padding"></td>
 							</tr>
@@ -529,7 +529,7 @@ a.text-link {
 						<table cellpadding="0" cellspacing="0" border="0" align="center" class="logo-table" width="100%">
 							<tr>
 								<td align="center" class="logo-td">
-									<a href="https://www.qualys.com/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign={{my.utmCampaign}}&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}">
+									<a href="https://www.qualys.com/?utm_source={# marketo variable #}&utm_medium={# marketo variable #}&utm_campaign={# marketo variable #}&utm_term={# marketo variable #}&leadsource={# marketo variable #}">
 										<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/webcasts/qualys-logo-145-2x.png" width="145">
 									</a>
 								</td>
@@ -556,7 +556,7 @@ a.text-link {
 				<tr>
 					<td width="76" class="mailer-padding"></td>
 					<td align="center">
-						<a href="https://blog.qualys.com/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign={{my.utmCampaign}}&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}">
+						<a href="https://blog.qualys.com/?utm_source={# marketo variable #}&utm_medium={# marketo variable #}&utm_campaign={# marketo variable #}&utm_term={# marketo variable #}&leadsource={# marketo variable #}">
 							<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/blog-email-header.png" class="blog-headr-banner" width="346">
 						</a>
 					</td>
@@ -728,8 +728,8 @@ a.text-link {
 										</tr>
 										<tr>
 											<td align="center">
-												<a href="{{system.forwardToFriendLink}} "><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/send-email.png" width="75" class="subscription-icon share-article" /></a><br>
-												<a href="{{system.forwardToFriendLink}}" class="subscription-links">Share this article</a>
+												<a href="{# marketo variable #} "><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/send-email.png" width="75" class="subscription-icon share-article" /></a><br>
+												<a href="{# marketo variable #}" class="subscription-links">Share this article</a>
 											</td>
 										</tr>
 										<tr>
@@ -866,10 +866,10 @@ a.text-link {
 													<span
 														style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93; max-width: 500px;">This
 														email was sent to <a
-															style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{{lead.Email Address}}</a>.
+															style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{# marketo variable #}</a>.
 														<br>
 														You may adjust your <a
-															href="https://www.qualys.com/communication-preferences/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign={{my.utmCampaign}}&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}&email={{lead.Email Address}}"
+															href="https://www.qualys.com/communication-preferences/?utm_source={# marketo variable #}&utm_medium={# marketo variable #}&utm_campaign={# marketo variable #}&utm_term={# marketo variable #}&leadsource={# marketo variable #}&email={# marketo variable #}"
 															class="text-link">email preferences or unsubscribe</a> at
 														any time.</span></font>
 											</td>
@@ -886,7 +886,7 @@ a.text-link {
 										style="text-align: center;">
 										<tr>
 											<td class="mailer-footer-links" style="text-align: center;">
-												<a href="https://www.qualys.com/company/privacy/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign={{my.utmCampaign}}&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}"
+												<a href="https://www.qualys.com/company/privacy/?utm_source={# marketo variable #}&utm_medium={# marketo variable #}&utm_campaign={# marketo variable #}&utm_term={# marketo variable #}&leadsource={# marketo variable #}"
 													style="text-decoration: none; color: #2e8be0">
 													<font face="'Open Sans', sans-serif"
 														style="font-family: 'Open Sans', sans-serif; font-size: 11pt;  display: inline;">
@@ -896,7 +896,7 @@ a.text-link {
 													style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93; display: inline;">
 													|</font>
 	
-												<a href="https://www.qualys.com/company/contacts/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign={{my.utmCampaign}}&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}"
+												<a href="https://www.qualys.com/company/contacts/?utm_source={# marketo variable #}&utm_medium={# marketo variable #}&utm_campaign={# marketo variable #}&utm_term={# marketo variable #}&leadsource={# marketo variable #}"
 													style="text-decoration: none; color: #707f93; display: inline;">
 													<font face="'Open Sans', sans-serif"
 														style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #2e8be0 ;display: inline;">
@@ -906,7 +906,7 @@ a.text-link {
 													style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93;  display: inline;">
 													|</font>
 	
-												<a href="https://www.qualys.com/support/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign={{my.utmCampaign}}&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}"
+												<a href="https://www.qualys.com/support/?utm_source={# marketo variable #}&utm_medium={# marketo variable #}&utm_campaign={# marketo variable #}&utm_term={# marketo variable #}&leadsource={# marketo variable #}"
 													style="text-decoration: none; color: #2e8be0">
 													<font face="'Open Sans', sans-serif"
 														style="font-family: 'Open Sans', sans-serif; font-size: 11pt;  display: inline;">
@@ -941,7 +941,7 @@ a.text-link {
 													<br><br class="showOnMobile">
 	
 													Qualys is a global company with offices around the world. Find an <a
-														href="https://www.qualys.com/company/contacts/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign={{my.utmCampaign}}&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}#regional-offices"
+														href="https://www.qualys.com/company/contacts/?utm_source={# marketo variable #}&utm_medium={# marketo variable #}&utm_campaign={# marketo variable #}&utm_term={# marketo variable #}&leadsource={# marketo variable #}#regional-offices"
 														style="text-decoration: none; color: #2e8be0; white-space: nowrap;">office
 														near you</a>.</font>
 											</td>
@@ -959,7 +959,7 @@ a.text-link {
 											<td align="center">
 												<font face="'Open Sans', sans-serif"
 													style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">
-													© {{my.Current Year}} <span class="nowrap">Qualys, Inc.</span> All
+													© {# marketo variable #} <span class="nowrap">Qualys, Inc.</span> All
 													rights reserved.</font>
 											</td>
 										</tr>
