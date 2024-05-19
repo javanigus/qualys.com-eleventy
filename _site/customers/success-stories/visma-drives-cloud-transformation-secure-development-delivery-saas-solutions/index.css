@@ -1,0 +1,10 @@
+.hero {
+	background-image: url("https://q-website-images.s3.amazonaws.com/www/image/success-stories/capital-one-1440-2x.jpg");
+}
+.box.a {
+	background-color: #D03027;
+}
+.box.b,
+.quote-box {
+	background-color: #D03027;
+}

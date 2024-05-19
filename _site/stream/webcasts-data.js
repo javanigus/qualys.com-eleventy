@@ -1,0 +1,4 @@
+"use strict";const moment=require("moment-timezone"),contentful=require("contentful-sync-cli/contentful-local"),client=contentful.createClient({space:"4l0w8syj29ap",localPath:"site/cache/contentful"});module.exports=client.getEntries({content_type:"resource","fields.type":"Webcast",order:"-fields.eventDate"}).then(client.unWrap).then(function(a){// function to sort array of objects by property
+a.items=a.items.filter(a=>0<Object.keys(a).length);var b,c;// limit to 5 webcasts
+return c=a.items.filter(a=>"Webcast"===a.type),b=c.filter(a=>!a.eventDate||moment(a.eventDate).isAfter()),b.sort(function(c){var d=1;return"-"===c[0]&&(d=-1,c=c.substr(1)),function(e,a){var b=e[c]<a[c]?-1:e[c]>a[c]?1:0;return b*d}}("eventDate")),b=b.slice(0,5),b});
+//# sourceMappingURL=webcasts-data.js.map

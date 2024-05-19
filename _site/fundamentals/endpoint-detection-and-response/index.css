@@ -1,0 +1,144 @@
+.resources {
+	margin-bottom: 0 !important;
+}
+.glossary{
+    margin: 50px auto;
+} 
+.download-ebook{
+    padding: 20px 0px;
+}
+.edr-heading{
+    padding-top: 15px;
+}
+.heading--sub {
+    color: #262626;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+}
+.q-grid__row {
+    margin-top: 40px;
+}
+
+.swiper-container {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1;
+}
+
+.swiper-pagination-bullet {
+	margin: 0 4px;
+}
+
+.heroBox .swiper-pagination-bullet-active {
+	background: #fff;
+}
+
+.heroBox .swiper-container-horizontal>.swiper-pagination-bullets,
+.heroBox .swiper-pagination-custom, .swiper-pagination-fraction {
+	bottom: 10px;
+}
+
+.resources {
+	background: #F7FAFC;
+	text-align: center;
+	padding-bottom: 60px;
+	margin-top: 60px;
+	margin-bottom: 7em;
+}
+
+.resources-heading {
+	color: #1D2737;
+	font-size: 20px;
+	letter-spacing: -0.23px;
+	font-family: Gotham, sans-serif;
+	line-height: 1.7;
+	margin: 0;
+	padding: 50px 0;
+	font-weight: 400;
+}
+
+@media (min-width: 720px) {
+	.resources-heading {
+		padding: 60px 0 45px;
+	}
+	.resources {
+		padding-bottom: 100px;
+		margin-top: 80px;
+	}
+}
+@media (min-width: 990px) {
+	.resources-heading {
+		padding: 75px 0 70px;
+	}
+	.resources {
+		padding-bottom: 120px;
+	}
+	.resources-heading {
+		font-size: 26px;
+		line-height: 1.308;
+	}
+}
+
+.resources-slide {
+	width: 240px;
+	min-height: 275px;
+	background: #FFFFFF;
+	border-radius: 3px;
+	margin-right: 37px;
+	transition: box-shadow 0.35s;
+	text-decoration: none;
+}
+
+.resources-slide:hover {
+	box-shadow: 0 0 30px 0 rgba(29,39,55,0.10);
+}
+.resources-slide:last-child {
+	margin-right: 0;
+}
+.resources-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 35px;
+}
+.resources-icon {
+	background: #9BC0E0;
+	width: 35px;
+	height: 35px;
+	display: flex;
+	justify-content: center;
+}
+.resources-title .heading--3 {
+	margin: 20px 0 10px;
+	font-size: 17px;
+	line-height: 1.353;
+	letter-spacing: -0.2px;
+	font-weight: 500;
+	text-align: center;
+	padding: 0 10px;
+}
+.resources-title span {
+	font-size: 16px;
+	line-height: 1.625;
+	color: #6A778B;
+}
+.resources-slider-container {
+	overflow: visible;
+}
+.resources .swiper-pagination {
+	margin: 20px 0 0;
+	transform: translateX(-50%);
+	left: 50%;
+}
+@media (min-width: 1400px) {
+	.resources .swiper-pagination {
+		display: none;
+	}
+}
+
+/*# sourceMappingURL=index.css.map */

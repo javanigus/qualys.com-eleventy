@@ -1,0 +1,23 @@
+.hero {
+	background-image: url("https://q-website-images.s3.amazonaws.com/www/image/success-stories/university-east-asia-1440-2x.jpg");
+}
+.aws-poster {
+	max-width: 575px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+.aws-poster img {
+	max-width: 100%;
+}
+.aws-poster h4 {
+	text-align: center;
+}
+.box.a {
+	background-color: #2f4a94;
+}
+.box.b,
+.quote-box {
+	background-color: #2f4a94;
+}

@@ -1,0 +1,59 @@
+.q-grid__container {
+	margin-bottom: 140px;
+	margin-top: 66px;
+}
+.heading--archive {
+	margin-top: 66px;
+}
+
+
+/*
+ * reset OLs
+ */
+.archive-years,
+.archive-months,
+.archive-weeks {
+	list-style: none;
+	padding-left: 0;
+}
+
+
+/*
+ * create columns on wider devices
+ */
+@media screen and (min-width: 375px) {
+	.archive-months {
+		-moz-column-count: 2;
+		     column-count: 2;
+	}
+}
+@media screen and (min-width: 694px) {
+	.archive-months {
+		-moz-column-count: 3;
+		     column-count: 3;
+	}
+}
+@media screen and (min-width: 768px) {
+	.archive-months {
+		-moz-column-count: 4;
+		     column-count: 4;
+	}
+}
+@media screen and (min-width: 1004px) {
+	.archive-months {
+		-moz-column-count: 1;
+		     column-count: 1;
+		font-size: 11pt;
+	}
+	.archive-weeks {
+		-moz-column-count: 5;
+		     column-count: 5;
+	}
+}
+@media screen and (min-width: 1136px) {
+	.archive-months {
+		font-size: 12pt;
+	}
+}
+
+/*# sourceMappingURL=index.css.map */

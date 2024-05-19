@@ -1,0 +1,49 @@
+
+.section26 .quote-block-content{
+   color:#6A778B;
+   line-height:34px;
+   font-size:19px;
+   margin-bottom: 0px;
+     font-style:italic;
+     font-weight:300
+}
+
+.section26 .quote-by{
+   color:#262626;
+   font-family :'Gotham';
+   padding-left:0px;
+   font-weight: 500;
+   letter-spacing: -0.2px;
+}
+
+.section26 .quote-icon{
+   padding-top:35px
+}
+
+@media (min-width:720px){
+   .section26 .quote-block-content{
+      font-size:  24px;  
+} 
+.section26 .quote-by{
+   padding-left:60px;
+   font-size:20px
+}
+}
+
+@media (min-width:1290px){
+
+.section26 .quote-by{
+   padding-left:110px;
+   font-size:19px
+}
+}
+
+@media (min-width:1290px){
+   .section26 .quote-block-content{
+      font-size:34px;
+      line-height:49px;
+} 
+}
+.section26 .quote-by{
+   margin-top:30px
+}

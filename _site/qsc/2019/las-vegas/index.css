@@ -1,0 +1,147 @@
+.qsc19 {
+	text-align: center;
+	background: #F7FAFC;
+}
+.video-container {
+	width: 329px;
+	margin-bottom: 40px;
+	margin-right: 2em;
+}
+.video-container:nth-child(2n) {
+	margin-right: 0;
+}
+@media (min-width: 425px) {
+	.video-container {
+		margin-bottom: 20px;
+	}
+}
+@media (min-width: 1408px) {
+	.video-container:nth-child(2n) {
+		margin-right: 2em;
+	}
+	.video-container:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+.q-qsc-videos__container .video {
+	width: 329px;
+	height: 185px;
+	display: block;
+	background-color: #D8D8D8;
+	margin-bottom: 1.5em;
+	position: relative;
+}
+.q-qsc-videos__container .poster {
+	margin-bottom: 1.5em;
+}
+.q-qsc-videos__container .video .play-icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 48px;
+	height: 48px;
+}
+.q-qsc-videos__container .video .lock-icon {
+	height: 29px;
+	margin-top: 15px;
+	margin-left: 2px;
+}
+.q-qsc-videos__container .video .play-icon .bg {
+	transition: fill 0.25s;
+}
+.q-qsc-videos__container .video:hover .play-icon .bg {
+	fill: #E3241C;
+}
+.q-qsc-videos__container .videos {
+	justify-content: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 2.1em;
+}
+@media (min-width: 1408px) {
+	.q-qsc-videos__container .videos {
+		flex-wrap: wrap;
+	}
+}
+.video-container .title,
+.video-container .subtitle {
+	font-size: 17px;
+	font-weight: 500;
+	font-family: Gotham, sans-serif;
+	color: #262626;
+	line-height: 1.4;
+}
+.video-container .subtitle {
+	color: #6A778B;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+@media (min-width: 425px) {
+	.video-container .title {
+		font-size: 20px;
+	}
+	.video-container .subtitle {
+		font-size: 18px;
+	}
+}
+.video-container .speaker {
+	font-size: 17px;
+	font-family: Gotham, sans-serif;
+	color: #262626;
+	line-height: 1.4;
+	margin-top: 5px;
+	margin-bottom: 4px;
+}
+@media (min-width: 425px) {
+	.video-container .speaker {
+		font-size: 18px;
+	}
+}
+.video-type-container {
+	margin-bottom: 5.3em;
+}
+.session-types {
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+.heading--2 {
+	margin-bottom: 1.2em;
+}
+.note {
+	color: #6a778b;
+	font-family: Gotham, sans-serif;
+	font-style: italic;
+	font-size: 13px;
+	margin-top: 0;
+	line-height: 1.4;
+}
+.q-qsc-city__hero {
+	background-image: url(https://ik.imagekit.io/qualys/image/2019/qsc/qsc-conference-wallpaper-mobile.jpg);
+	background-position: center;
+}
+.q-qsc__hero-location {
+	margin: 0;
+}
+@media (min-width: 480px) {
+	.q-qsc-city__hero {
+		background-image: url(https://ik.imagekit.io/qualys/image/2019/qsc/qsc-conference-wallpaper-stage.jpg);
+	}
+	.q-qsc__city-hero--heading {
+		color: #1d2737;
+	}
+	.q-qsc__city-hero--copy {
+		color: #1d2737;
+		text-shadow: none;
+	}
+}
+.panelists-link:hover {
+	cursor: pointer;
+}
+.speaker.panelists {
+	font-size: 15px;
+}
+.interviews .video-container {
+	margin-bottom: 36px;
+}
+/*# sourceMappingURL=index.css.map */

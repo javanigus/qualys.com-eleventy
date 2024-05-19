@@ -1,0 +1,224 @@
+.section27.background {
+    background-image: url(https://q-website-images.s3.amazonaws.com/www/image/apps/pc/policy_compliance_hero.png);
+    background-size: cover;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.section27 .pt-0 {
+    padding-top: 0px;
+}
+
+.section27 .heading {
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: -1.7px;
+    margin-top: 25px;
+}
+
+.section27 .sub-heading {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    padding-top: 0;
+    line-height: 1.5;
+    letter-spacing: -1.6px;
+}
+
+.section27 .q-sqaure__pc-logos_list-2 li img {
+    width: 100px;
+}
+
+@media (min-width:375px) {
+    .section27 .q-default-hero__content-image img {
+        width: 80px;
+    }
+
+    .section27 .q-sqaure__pc-logos_list-2 li img {
+        width: 120px;
+    }
+}
+
+@media (min-width:720px) {
+    .section27 .q-sqaure__pc-logos_list-2 li img {
+        max-width: 100px;
+    }
+}
+
+@media (min-width:980px) {
+    .section27 .q-sqaure__pc-logos_list-2 li img {
+        max-width: 200px;
+    }
+}
+
+.section27 .q-apps-hero-content__list {
+    width: 80%;
+    margin: auto;
+}
+
+.section27 .q-default-hero__content-image img {
+    text-align: center;
+    width: 60px;
+    margin: auto;
+}
+
+
+
+.section27 .hero-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.section27 .hero-content .heroContent {
+    margin: auto;
+}
+
+.section27 .q-default-hero__subheading {
+    max-width: 100%;
+}
+
+@media only screen and (min-width:720px) {
+    .section27 .heading {
+        font-size: 40px;
+    }
+
+    .section27 .sub-heading {
+        font-size: 22px;
+    }
+}
+
+@media (min-width:720px) {
+    .section27 .hero-content {
+        flex-direction: row;
+    }
+
+    .section27 .q-default-hero__content-image img {
+        padding-top: 0px;
+    }
+
+    .section27 .sub-heading {
+        font-size: 20px;
+    }
+
+    .section27 .q-default-hero__content-image img {}
+
+    .section27 .hero-content {
+        text-align: left;
+    }
+
+    .section27 .q-default-hero__subheading {
+        max-width: 19em;
+    }
+
+    .section27 .q-default-hero__content-image img {
+        width: 80%;
+    }
+
+    .section27 .q-apps-hero-content__list {
+        width: 100%;
+    }
+}
+
+@media (min-width:992px) {
+    .section27 .q-default-hero__content.heroContent {
+        width: 600px;
+    }
+
+    .section27 .heading {
+        font-size: 45px;
+    }
+
+    .section27 .sub-heading {
+        font-size: 30px;
+    }
+
+    .section27.background {
+        padding: 32px 0;
+    }
+
+    .section27 .q-sqaure__pc-logos_list-2 .q-square__pc-list-2-logo2 {
+        width: 120px;
+    }
+
+    .section27 .q-sqaure__pc-logos_list-2 .q-square__pc-list-2-logo1 {
+        width: 120px;
+    }
+}
+
+@media (min-width:1440px) {
+    .section27 .heading {
+        font-size: 60px;
+    }
+
+    .section27 .q-sqaure__pc-logos_list-2 .q-square__pc-list-2-logo2 {
+        width: 180px;
+    }
+
+    .section27 .q-sqaure__pc-logos_list-2 .q-square__pc-list-2-logo1 {
+        width: 200px;
+    }
+
+    .section27 .q-default-hero__content-image img {
+        width: 100%;
+    }
+}
+
+@media (min-width:720px) {
+    .section27 .hero-content .heroContent {
+        width: 60%;
+        margin-left: 0;
+    }
+
+    .section27 .q-default-hero__content-image {
+        width: 40%;
+        order: 2;
+    }
+}
+
+.section27 .q-sqauare-logos {
+    list-style: none;
+}
+
+.section27 .q-sqauare-logos {
+    list-style: none;
+    list-style-position: inside;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0px;
+    margin-bottom: 33px;
+    margin-top: 34px;
+}
+
+.section27 .q-hero-cta {
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+
+.section27 .q-hero-cta .q-hero-cta__link-wrap {
+    padding-top: 30px;
+}
+
+@media (min-width:720px) {
+    .section27 .q-hero-cta {
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: flex-start;
+        display: flex;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-family: Gotham, sans-serif;
+    }
+
+    .section27 .q-hero-cta .q-hero-cta__link-wrap {
+        padding-left: 30px;
+    }
+
+    .section27 .q-hero-cta .q-hero-cta__link-wrap {
+        padding-top: 0px;
+    }
+}

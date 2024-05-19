@@ -1,0 +1,28 @@
+.q-grid__container {
+	margin-bottom: 140px;
+	margin-top: 66px;
+}
+hr {
+	margin-bottom: 66px;
+	margin-top: 66px;
+	border: 0 none;
+	border-bottom: 1px solid #E4E4E4;
+}
+.newsletter-content {
+	max-width: 45em;
+}
+
+/* style H2s in the newletter to look like our H4s */
+.newsletter-content h2 {
+	font-family: Gotham, sans-serif;
+	font-weight: 500;
+	font-size: 13pt;
+	line-height: 1.4;
+	letter-spacing: -0.15pt;
+	color: #30405B;
+}
+.newsletter-content a[href] {
+	color: #2E8BE0;
+}
+
+/*# sourceMappingURL=newsletter.css.map */

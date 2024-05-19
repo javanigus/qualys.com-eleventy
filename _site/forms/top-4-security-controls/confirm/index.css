@@ -1,0 +1,36 @@
+#content {
+	font-size: 100%;
+}
+.section {
+	padding-top: 20px;
+}
+#content div.section-highlight li {
+	list-style: none!important;
+}
+h1 {
+	text-align: left;
+	margin-top: 1em;
+}
+label {
+	width: auto;
+}
+h3.check-your-email {
+	background-attachment: scroll;
+	background-color: #FFF;
+	background-image: url(/images/forms/browsercheck-business-edition/icon-check-your-email.png);
+	background-position: 1px 1px;
+	background-repeat: no-repeat;
+	font-size: 16px;
+	line-height: 1;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	padding-left: 52px;
+}
+div.confirmation {
+	min-height: 500px;
+}
+#content h3 {
+	color: #414141;
+}
+
+/*# sourceMappingURL=index.css.map */

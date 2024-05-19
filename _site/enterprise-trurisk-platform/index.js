@@ -1,0 +1,16 @@
+"use strict";/** jQuery */ /* eslint-disable */ /* eslint-enable */ /* eslint-disable */ /* eslint-enable */ /*
+ * add class to nav link to highlight it
+ */ /* global jQuery  */webpackJsonp([13],{/***/11:(/***/function _(a,b,c){"use strict";function d(a){return a&&a.__esModule?a:{default:a}}// set up other transition elements
+var e=c(0),f=d(e),g=c(1),h=d(g),i=document.querySelector(".q-cloud-platform-stats"),j=document.querySelector(".phone-container"),k=document.querySelector(".phone .phone-ui"),l=k.childNodes,m=document.querySelector(".q-cloud-platform-results"),n=document.querySelector(".q-cloud-platform-work"),o=window.Power4.easeInOut,p=new f.default,q=new f.default,r=new f.default,s=new f.default,t=new h.default({//eslint-disable-line
+element:i,offset:"100%",handler:function(a){"down"===a&&p.fromTo(".q-cloud-platform-stats__heading",1,{y:"-20%",autoAlpha:0},{y:"0%",autoAlpha:1,ease:window.Power4.easeInOut},.3).staggerFromTo(".q-numbers__item",.8,{y:"20%",autoAlpha:0},{y:"0%",autoAlpha:1,ease:window.Power4.easeInOut},.2,"-=0.75")}}),u=!1,v=new h.default({// eslint-disable-line
+element:j,offset:"100%",handler:function(a){"down"!==a||u||q.addLabel("start").fromTo(".phone .phone-shape",1,{y:"20%",autoAlpha:0},{y:"0%",autoAlpha:1,ease:window.Power4.easeInOut},.3).fromTo(".phone .shadow",1,{autoAlpha:0},{autoAlpha:1,ease:window.Power4.easeInOut},.6).staggerFromTo(l,1,{y:"20%",autoAlpha:0},{y:"0%",autoAlpha:1,ease:o,onComplete:function onComplete(){u=!0}},.1,// stagger duration between elements
+.6// time position
+)}}),w=!1,x=new h.default({// eslint-disable-line
+element:m,offset:"100%",handler:function(a){"down"!==a||w||r.fromTo(".q-cloud-platform-results__menu--desktop",1,{x:"25%",autoAlpha:0},{x:"0%",autoAlpha:1,ease:o,onComplete:function onComplete(){w=!0;for(var a,b=0;b<this.target.length;b+=1)a=this.target.item(b),a.classList.add("laptop-complete")}})}}),y=new h.default({// eslint-disable-line
+element:n,offset:"50%",handler:function(a){"down"===a&&s.staggerFromTo(".q-cloud-platform-cards__item",1,{x:"20%",autoAlpha:0},{x:"0%",autoAlpha:1,ease:o},.1)}});// transition in numbers
+// animate phone under data-analyzed
+// animate laptop
+// stagger in cards
+/***/}),/***/31:(/***/function _(){// removed by extract-text-webpack-plugin
+/***/}),/***/65:(/***/function _(a,b,c){c(11),a.exports=c(31)})},[65]),webpackJsonp([17],{/***/21:(/***/function _(a,b,c){"use strict";var d=c(4),e=function(a){return a&&a.__esModule?a:{default:a}}(d);(0,e.default)()}),/***/75:(/***/function _(a,b,c){a.exports=c(21)})},[75]),function(){var a=document.querySelector(".q-navigation__link.cloud-platform");a&&a.classList.add("active")}(),function(a){"use strict";a(document).ready(function(){a(".q-cpd-link").each(function(){var b=a(this);b.hover(function(){var c=b.data("target"),d=a("#"+c);d.addClass("hover")},function(){var c=b.data("target"),d=a("#"+c);d.removeClass("hover")})}),a(".q-cpd-box").each(function(){var b=a(this);b.hover(function(){var c=b.data("target"),d=a("#"+c);d.addClass("hover")},function(){var c=b.data("target"),d=a("#"+c);d.removeClass("hover")})})})}(jQuery);
+//# sourceMappingURL=index.js.map

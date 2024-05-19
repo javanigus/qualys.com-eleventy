@@ -1,0 +1,78 @@
+.q-default-hero__subsubheading {
+	font-family: Caecilia, serif;
+	font-weight: 400;
+	margin-bottom: 3em;
+	max-width: 500px;
+	position: relative;
+}
+.q-default-hero__form {
+	background: #F7FAFC;
+	color: #6A778B;
+}
+.mktoButton:last-child {
+	background: #ED2E26;
+}
+.mktoButton {
+	border-radius: 2px;
+	height: 88px;
+	padding: 0 25px;
+	transition: background 400ms;
+}
+.mktoButtonRow .mktoButtonWrap {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+.q-default-hero__trialform-privacy {
+	font-size: 12px;
+	margin-bottom: 22px;
+	font-weight: 300;
+	font-family: Gotham, sans-serif;
+	display: inline-block;
+	width: 100%;
+	margin-top: 16px;
+	letter-spacing: -0.011em;
+}
+.q-lp-privacy-info .inline-link {
+	font-weight: 500;
+}
+.mktoFormRow.LastName + .mktoFormRow .mktoHtmlText {
+	font-size: 17px;
+	margin-top: 1em;
+}
+.mktoForm .qmktoCheckboxListLabel {
+	margin: 0;
+}
+@media (min-width: 480px) {
+	.q-default-hero__image {
+		background-size: 100%;
+		background-image: url(https://ik.imagekit.io/qualys/image/guy-smiling-computer-1290-2x.jpg);
+		top: 120px;
+	}
+}
+@media (min-width: 720px) {
+	.q-default-hero__splash {
+		top: -1em;
+	}
+	.q-default-hero__form {
+		padding: 50px 50px 30px;
+	}
+}
+@media (min-width: 1200px) {
+	.q-default-hero__subsubheading {
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 1440px) {
+	.q-default-hero__form {
+		padding: 83px 80px 57px;
+	}
+	.q-default-hero__image {
+		top: 280px;
+	}
+	.q-default-hero__splash {
+		top: -12em;
+	}
+}
+
+/*# sourceMappingURL=index.css.map */

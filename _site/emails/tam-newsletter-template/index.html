@@ -1,0 +1,3999 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- this doctype has the least inconsistencies according to http://www.emailology.org/#1 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="x-apple-disable-message-reformatting">
+		<meta name="robots" content="noindex, nofollow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+		</style>
+		<style type="text/css">
+			/**************************/
+			/* CLIENT-SPECIFIC STYLES */
+			/**************************/
+			#outlook a {
+				/* Force Outlook to provide a "view in browser" menu link. */
+				padding: 0;
+			}
+
+			body {
+				/* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+				width: 100% !important;
+				-webkit-text-size-adjust: 100%;
+				-ms-text-size-adjust: 100%;
+				margin: 0;
+				padding: 0;
+			}
+
+			body,
+			li:before,
+			.ui-widget,
+			input,
+			textarea {
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				font-smoothing: antialiased;
+				text-rendering: optimizeLegibility;
+			}
+
+			.ExternalClass {
+				/* Force Hotmail to display emails at full width */
+				width: 100%;
+			}
+
+			.ExternalClass,
+			.ExternalClass p,
+			.ExternalClass span,
+			.ExternalClass font,
+			.ExternalClass td,
+			.ExternalClass div {
+				/* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+				line-height: 100%;
+			}
+
+			#backgroundTable {
+				margin: 0;
+				padding: 0;
+				width: 100% !important;
+				line-height: 100% !important;
+			}
+
+			font {
+				display: block;
+			}
+
+			.nowrap {
+				white-space: nowrap;
+			}
+
+			/**************************/
+			/* RESET IMAGES           */
+			/**************************/
+			img {
+				outline: none;
+				text-decoration: none;
+				border: none;
+				-ms-interpolation-mode: bicubic;
+				/* works to help ie properly resize images in IE. (if you are resizing them using the width and height attributes)*/
+			}
+
+			a img {
+				border: none;
+				/* removes border when linking images */
+			}
+
+			.image_fix {
+				display: block;
+				/* add this class to images that show extra space below them */
+			}
+
+			img.banner {
+				max-width: 100%;
+				height: auto;
+			}
+
+			/**************************/
+			/* RESET PARAGRAPHS       */
+			/**************************/
+			p {
+				margin: 0 0 0.45em;
+				color: #6A778B;
+			}
+
+			a.text-link {
+				color: #2e8be0;
+				text-decoration: none;
+			}
+
+			/**************************/
+			/* RESET HEADINGS         */
+			/**************************/
+			/* To minimize inconsistencies, don't use heading tags (h1, h2, h3, h4, h5, h6). Instead, use span tags with a class indicating its heading level. */
+			span.h1 {
+				/* define h1 style here */
+			}
+
+			span.h2 {
+				/* define h1 style here */
+			}
+
+			span.h3 {
+				/* define h1 style here */
+			}
+
+			span.h4 {
+				/* define h1 style here */
+			}
+
+			span.h5 {
+				/* define h1 style here */
+			}
+
+			span.h6 {
+				/* define h1 style here */
+			}
+
+			/**************************/
+			/* RESET TABLES, CELLS    */
+			/**************************/
+			table td {
+				border-collapse: collapse;
+				padding: 0;
+			}
+
+			table {
+				border-collapse: collapse;
+				mso-table-lspace: 0pt;
+				mso-table-rspace: 0pt;
+				padding: 0;
+				border-spacing: 0;
+			}
+
+			/**************************/
+			/* PREHEADER              */
+			/**************************/
+			div.preheader,
+			div.preheader font {
+				/* prevents users from seeing the "If you're having trouble viewing this message, click here" message in their inbox */
+				display: none;
+				visibility: hidden;
+				color: #255496;
+				background-color: #255496;
+			}
+
+			/**************************/
+			/* OTHER                 */
+			/**************************/
+			.background-table {
+				border-collapse: collapse;
+				background-color: #EDEEED;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				line-height: 100% !important;
+			}
+
+			.wrapper-table {
+				max-width: 684px;
+				width: 684px;
+			}
+
+			.showOnMobile {
+				display: none;
+			}
+
+			.address a {
+				color: #2E8BE0;
+			}
+
+			.button a {
+				font-size: 16px;
+				color: #fff;
+				text-decoration: none;
+				font-weight: 600;
+				border-radius: 3px;
+				padding: 11px 18px;
+				border: 1px solid #ED2E26;
+				display: inline-block;
+				white-space: nowrap;
+			}
+
+			/*********************************/
+			/* RESPONSIVE STYLES             */
+			/*********************************/
+			@media screen and (max-width:684px) {
+
+				table.wrapper,
+				.wrapper-table {
+					width: 100% !important;
+				}
+
+				.hideOnMobile {
+					display: none !important;
+				}
+
+				.showOnMobile {
+					display: block !important;
+				}
+			}
+		</style>
+		<style type="text/css">
+			a {
+				font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif;
+			}
+
+			.master-table {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				line-height: 100%;
+				border-collapse: collapse;
+				background-color: #EDEEED;
+			}
+
+			.mailer-table {
+				background: #ffffff;
+			}
+
+			.mailer-padding {
+				width: 76px;
+			}
+
+			.mailer-logo {
+				text-align: left;
+			}
+
+			.logo-td {
+				width: 145px;
+			}
+
+			.mailer-title-container {
+				text-align: left;
+				vertical-align: middle;
+			}
+
+			.mailer-header-title {
+				font-size: 22px;
+				color: #607D8D;
+				font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif;
+			}
+
+			.mailer-header-hero {
+				display: block;
+				max-width: 100%;
+				height: auto;
+				vertical-align: -webkit-baseline-middle;
+			}
+
+			.mailer-hero-title-table {
+				background: #AFBEC6;
+			}
+
+			.mailer-main-subheading {
+				color: #FFFFFF;
+				font-weight: bold;
+				font-size: 16px;
+				font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif;
+			}
+
+			p,
+			li {
+				font-size: 12pt;
+			}
+
+			.intro-text {
+				color: #6A778B;
+				font-size: 16px;
+				line-height: 1.6;
+				font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif;
+			}
+
+			.intro-text p {
+				margin-bottom: 1.4em;
+				color: #0E1215;
+				font-size: 15px;
+			}
+
+			.intro {
+				font-weight: 600;
+			}
+
+			.link {
+				color: #2E8BE0;
+				text-decoration: none;
+			}
+
+			.link:hover {
+				color: #175e9e;
+			}
+
+			.features-heading {
+				color: #364750;
+				font-size: 48px;
+				line-height: 1;
+			}
+
+			.features-sub-heading {
+				color: #364750;
+				font-size: 16px;
+				font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif;
+			}
+
+			.cloud-app-table {
+				width: 100%;
+			}
+
+			.cloud-app-table td {
+				text-align: left;
+			}
+
+			.cloud-app-title {
+				color: #364750;
+				font-size: 20px;
+			}
+
+			.app-release-table {
+				background: #F7F8F9;
+			}
+
+			.app-release-td {
+				text-align: right;
+				vertical-align: top;
+			}
+
+			.app-release-title {
+				font-size: 16px;
+				color: #528FC9;
+				font-weight: bold;
+				line-height: 1.35;
+				font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif;
+			}
+
+			.app-release-sub-title {
+				color: #0E1215;
+				font-size: 16px;
+				line-height: 1.45;
+				font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif;
+			}
+
+			.app-release-type {
+				color: #607D8D;
+				font-size: 12.5px;
+				font-weight: bold;
+				line-height: 1.85;
+				white-space: nowrap;
+				font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif;
+			}
+
+			.release-table-seperator {
+				background: #FFFFFF;
+				height: 2px;
+			}
+
+			.app-release-text-line {
+				font-size: 14px;
+				color: #607D8D;
+				line-height: normal;
+				line-height: 1.45;
+				font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif;
+			}
+
+			.app-bullet-list {
+				margin: 0;
+				padding: 0 0 0 20px;
+				list-style: disc;
+				color: #607D8D;
+				font-size: 14px;
+				list-style-position: outside;
+			}
+
+			.app-bullet-line {
+				font-size: 14px;
+				color: #607D8D;
+				line-height: 1.45;
+				font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif;
+			}
+
+			.app-links {
+				text-decoration: none !important;
+			}
+
+			/*********************************/
+			/* RESPONSIVE STYLES             */
+			/*********************************/
+			@media screen and (max-width:683px) {
+				.mailer-table {
+					width: 100% !important;
+				}
+
+				.mailer-padding {
+					width: 30px !important;
+				}
+
+				.no-padding {
+					display: none;
+				}
+
+				.mailer-table table {
+					width: 100% !important;
+				}
+
+				.mailer-footer-seperator {
+					display: none;
+				}
+
+				.mailer-footer-links {
+					float: left;
+					text-align: center;
+					width: 100%;
+					height: 30px;
+				}
+
+				.speaker-table-seperator {
+					height: 33px;
+				}
+
+				.intro-text {
+					font-size: 1.4rem !important;
+				}
+
+				.mailer-main-subheading {
+					font-size: 1.34em;
+					line-height: 1.34;
+					font-weight: 600;
+				}
+
+				.mailer-main-heading {
+					font-size: 2em;
+				}
+
+				.logo-td {
+					width: 100%;
+					display: block;
+					float: left;
+					text-align: center;
+				}
+
+				.logo-td-seperator {
+					width: 100%;
+					display: block;
+					float: left;
+					height: 20px;
+				}
+
+				.mailer-title-container {
+					float: left;
+					width: 100%;
+					text-align: center;
+				}
+
+				.mailer-header-hero-mobile {
+					width: 100%;
+				}
+
+				.mailer-hero-title-table {
+					width: 100% !important;
+				}
+
+				.mailer-table table.button {
+					width: auto !important;
+				}
+
+				.features-heading {
+					font-size: 1.85em;
+				}
+			}
+
+			@media screen and (max-width:414px) {
+				.no-column {
+					display: none;
+				}
+			}
+		</style>
+		<!-- http://templates.mailchimp.com/development/css/outlook-conditional-css/
+		Target Outlook 2007, 2010 and 2013
+		The first font in the list of fonts MUST be available on the client's machine in order for the font-family to work. -->
+		<!--[if gte mso 12]>
+		<style type="text/css">
+		body, td, p, h2, h1, ul, li, span { font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, sans-serif !important; }
+		</style>
+	<![endif]-->
+	</head>
+
+	<body>
+		<div class="preheader">
+			<span style="font-family:'Open Sans', sans-serif;">TAM Newsletter</span>
+		</div>
+		<table cellpadding="0" cellspacing="0" border="0" class="background-table">
+			<td height="12">
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" class="wrapper-table" align="center">
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable"
+										class="master-table">
+										<tr>
+											<td height="35" style="height:35px"></td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td height="27" style="height: 27px;"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td width="76" class="mailer-padding"></td>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" class="logo-table" width="100%">
+																<tr>
+																	<td align="left" class="logo-td">
+																		<a href="https://www.qualys.com/">
+																			<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/webcasts/qualys-logo-145-2x.png"
+																				width="145">
+																		</a>
+																	</td>
+																	<td width="12" class="logo-td-seperator"></td>
+																	<td class="mailer-title-container">
+																		<font
+																			face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																			class="mailer-header-title">TAMs Newsletter
+																		</font>
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<td width="76" class="mailer-padding"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td height="30" style="height: 30px;"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td class="hideOnMobile"><img
+																src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/tam-newsletter-hero-684-2x.png"
+																width="684" class="mailer-header-hero" /></td>
+														<!--[if !mso 9]><!-->
+														<td class="showOnMobile">
+															<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/tam-newsletter-hero-375-2x.png"
+																width="375" class="image_fix mailer-header-hero-mobile">
+														</td>
+														<!--<![endif]-->
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-hero-title-table" width="684">
+													<tr>
+														<td width="76" class="mailer-padding"></td>
+														<td style="height: 12px;">
+															</font>
+														</td>
+														<td width="76" class="mailer-padding"></td>
+													</tr>
+													<tr>
+														<td width="76" class="mailer-padding"></td>
+														<td>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="mailer-main-subheading">April & May, 2019.<br
+																	class="showOnMobile"> Planned enhancements and
+																product updates.</font>
+														</td>
+														<td width="76" class="mailer-padding"></td>
+													</tr>
+													<tr>
+														<td width="76" class="mailer-padding"></td>
+														<td style="height: 12px;">
+															</font>
+														</td>
+														<td width="76" class="mailer-padding"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td height="44" style="height: 44px;"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td width="74" class="mailer-padding"></td>
+														<td>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="intro-text">
+																<p>Hello TAM!</p>
+																<p>Welcome to the first edition of Lookin’ Forward, the
+																	newsletter from Qualys Product Management to keep
+																	you sharply updated about the main planned
+																	enhancements and product updated across our product
+																	offering.</p>
+																<p>Below you will find a clickable map, to navigate
+																	across the main new features within the five app
+																	domains of the Qualysphere, the platform and the
+																	sensors. Each new feature/enhancement is briefly
+																	described to illustrate the use case, and clicking
+																	on it will bring you directly to more context and
+																	details.</p>
+																<p>We hope this initiative will help you to stay
+																	informed about the evolution of our offering,
+																	despite the many applications composing the Qualys
+																	Cloud Platform. Please let us know your feedback by
+																	writing at pmonly@qualys.com, and with your help we
+																	will refine this to perfection.</p>
+																<p>Enjoy, </p>
+																<p>Qualys Product Management Team</p>
+															</font>
+														</td>
+														<td width="74" class="mailer-padding"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td height="44" style="height: 44px;"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td style="text-align: center">
+															<table border="0" cellspacing="0" cellpadding="0"
+																class="button" align="center">
+																<tr>
+																	<td>
+																		<table border="0" cellspacing="0"
+																			cellpadding="0">
+																			<tr>
+																				<td align="center"
+																					style="border-radius: 3px;"
+																					bgcolor="#ED2E26">
+																					<a
+																						href="https://community.qualys.com/docs/DOC-6159">
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							style="font-size: 15px; font-weight: 500; line-height: 1.45;">
+																							View roadmap</font>
+																					</a>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td height="90" style="height: 90px;"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td width="76" class="mailer-padding"></td>
+														<td>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="features-heading">What's New? </font><br>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="features-sub-heading">– Feature Releases by Apps
+															</font>
+														</td>
+														<td width="76" class="mailer-padding"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td height="44" style="height: 44px;"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td width="76" class="mailer-padding"></td>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="cloud-app-table">
+																<tr>
+																	<td style="width: 30px">
+																		<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/icon-global-it-assets.png"
+																			width="30" />
+																	</td>
+																	<td width="10" style="width: 10px"></td>
+																	<td>
+																		<font
+																			face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																			class="cloud-app-title">Global IT Asset
+																			Management</font>
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<td width="76" class="mailer-padding"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td height="10" style="height: 10px;"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td width="76" class="mailer-padding"></td>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-table">
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="16" style="width: 16px"></td>
+																				<td width="26" style="width: 26px">
+																					<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-ai.png"
+																						width="26">
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																				<td>
+																					<a href="https://community.qualys.com/docs/DOC-6432"
+																						class="app-links">
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-title">
+																							Asset Inventory</font>
+																					</a>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="58" style="width: 58px"></td>
+																				<td>
+																					<p>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-sub-title">
+																							Bug Fixes</font>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-type">
+																							April (v1.0.2)</font>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-text-line">
+																							Includes bug fixes to ensure
+																							improved usability and
+																							performance of the product.
+																						</font>
+																					</p>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																			<tr>
+																				<td width="58" style="width: 58px"></td>
+																				<td>
+																					<p>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-sub-title">
+																							Future Lifecycle</font>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-type">May
+																							(v1.0.3)</font>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-text-line">
+																							New feature to report future
+																							end-of-life dates (EOL in 3
+																							months, 9 months, ...).
+																						</font>
+																					</p>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																			<tr>
+																				<td width="58" style="width: 58px"></td>
+																				<td>
+																					<p>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-sub-title">
+																							Public API (Beta)</font>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-type">May
+																							(v1.0.3)</font>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-text-line">
+																							Enable customers to download
+																							asset data in bulk so that
+																							it can be integrated with
+																							downstream systems: CMDB,
+																							data lakes, data warehousing
+																							and BI tools, etc.</font>
+																					</p>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td class="release-table-seperator"></td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="16" style="width: 16px"></td>
+																				<td width="26" style="width: 26px">
+																					<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-sem.png"
+																						width="26">
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																				<td>
+																					<a href="https://community.qualys.com/docs/DOC-6626"
+																						class="app-links">
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-title">
+																							Security Enterprise Mobility
+																						</font>
+																					</a>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="58" style="width: 58px"></td>
+																				<td>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-sub-title">
+																						Android Support</font>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-type">April
+																						(v0.9.0 - Beta)</font>
+																					<ul class="app-bullet-list">
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								Visibility</font>
+																						</li>
+																						<li>
+																							<p>
+																								<font
+																									face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																									class="app-bullet-line">
+																									Gather device
+																									system, network
+																									information, and
+																									list of installed
+																									apps.</font>
+																							</p>
+																						</li>
+																					</ul>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																			<tr>
+																				<td width="58" style="width: 58px"></td>
+																				<td>
+																					<p>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-sub-title">
+																							High-level security posture
+																							visibility</font>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-type">
+																							April (v0.9.0 - Beta)</font>
+																					<ul class="app-bullet-list">
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								Passcode not present
+																							</font>
+																						</li>
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								Encryption Status</font>
+																						</li>
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								Unauthorized Root Access
+																								(Jailbroken or not)
+																							</font>
+																						</li>
+																					</ul>
+																					</p>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																			<tr>
+																				<td width="58" style="width: 58px"></td>
+																				<td>
+																					<p>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-sub-title">
+																							Perform OTA actions on
+																							devices</font>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-type">
+																							April (v0.9.0 - Beta)</font>
+																					<ul class="app-bullet-list">
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								Lock screen</font>
+																						</li>
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								On-demand fetching of
+																								latest information from
+																								devices</font>
+																						</li>
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								Send push notification
+																							</font>
+																						</li>
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								Factory reset</font>
+																						</li>
+																					</ul>
+																					</p>
+																					<p>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-sub-title">
+																							Integration with Asset View
+																							and Asset Inventory</font>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-type">
+																							April (v0.9.0 - Beta)</font>
+																					</p>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td class="release-table-seperator"></td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="16" style="width: 16px"></td>
+																				<td width="26" style="width: 26px">
+																					<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-sac.png"
+																						width="26">
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																				<td>
+																					<a href="https://community.qualys.com/docs/DOC-6492"
+																						class="app-links">
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-title">
+																							Secure Access Control</font>
+																					</a>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-type">April
+																					</font>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="58" style="width: 58px"></td>
+																				<td>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-text-line">
+																						Open For Early Adopters.</font>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																				<td class="app-release-td">
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-type">
+																						<!-- NO RELEASE NUMBER -->
+																					</font>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+															</table>
+														</td>
+														<td width="76" class="mailer-padding"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td height="40" style="height: 40px;"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td width="76" class="mailer-padding"></td>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="cloud-app-table">
+																<tr>
+																	<td style="width: 30px">
+																		<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/icon-it-security.png"
+																			width="30" />
+																	</td>
+																	<td width="10" style="width: 10px"></td>
+																	<td>
+																		<font
+																			face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																			class="cloud-app-title">IT SECURITY</font>
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<td width="76" class="mailer-padding"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td height="10" style="height: 10px;"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													class="mailer-table" width="684">
+													<tr>
+														<td width="76" class="mailer-padding"></td>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-table">
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="16" style="width: 16px"></td>
+																				<td width="26" style="width: 26px">
+																					
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																				<td>
+																					<a href="https://community.qualys.com/docs/DOC-4772"
+																						class="app-links">
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-title">
+																							VMDR
+																						</font>
+																					</a>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="58" style="width: 58px"></td>
+																				<td>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-sub-title">
+																						Custom Remote Checks (QRDI)
+																					</font>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-type">April
+																						(QWeb 8.19)</font>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-text-line">
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-text-line">
+																							Enable customers to create
+																							their own remote (non-auth)
+																							checks using TCP packets,
+																							HTTP GET and POST, as well
+																							as LUA scripting.</font>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+
+																<!-- dashboard -->
+
+																<tr>
+																	<td class="release-table-seperator"></td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="16" style="width: 16px"></td>
+																				<td width="26" style="width: 26px">
+																					<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-rpt.png"
+																						width="26">
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																				<td>
+																					<a href="https://community.qualys.com/docs/DOC-4772"
+																						class="app-links">
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-title">
+																							Dashboard
+																						</font>
+																					</a>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="58" style="width: 58px"></td>
+																				<td>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-sub-title">
+																						Custom Remote Checks (QRDI)
+																					</font>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-type">April
+																						(QWeb 8.19)</font>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-text-line">
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-text-line">
+																							Enable customers to create
+																							their own remote (non-auth)
+																							checks using TCP packets,
+																							HTTP GET and POST, as well
+																							as LUA scripting.</font>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+
+																<!-- Vulnerability Management section -->
+
+																<tr>
+																	<td class="release-table-seperator"></td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="16" style="width: 16px"></td>
+																				<td width="26" style="width: 26px">
+																					<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-vm.png"
+																						width="26">
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																				<td>
+																					<a href="https://community.qualys.com/docs/DOC-4772"
+																						class="app-links">
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-title">
+																							Vulnerability Management
+																						</font>
+																					</a>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="58" style="width: 58px"></td>
+																				<td>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-sub-title">
+																						Custom Remote Checks (QRDI)
+																					</font>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-type">April
+																						(QWeb 8.19)</font>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-release-text-line">
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-text-line">
+																							Enable customers to create
+																							their own remote (non-auth)
+																							checks using TCP packets,
+																							HTTP GET and POST, as well
+																							as LUA scripting.</font>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+
+																<tr>
+																	<td class="release-table-seperator"></td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="16" style="width: 16px"></td>
+																				<td width="26" style="width: 26px">
+																					<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-ca.png"
+																						width="26">
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																				<td>
+																					<a href="https://community.qualys.com/docs/DOC-5667"
+																						class="app-links">
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-title">
+																							Cloud Agent</font>
+																					</a>
+																				</td>
+																				<td width="16" style="width: 16px"></td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="height: 16px;"></td>
+																</tr>
+																<tr>
+																	<td>
+																		<table cellpadding="0" cellspacing="0"
+																			border="0" align="center"
+																			style="width: 100%"
+																			class="app-release-content-table">
+																			<tr>
+																				<td width="58" style="width: 58px"></td>
+																				<td>
+																					<p>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-sub-title">
+																							Windows 3.0</font>
+																						<font
+																							face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																							class="app-release-type">
+																							April</font>
+																					<ul class="app-bullet-list">
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								Patch Mgmt GA (Windows)
+																							</font>
+																						</li>
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								Agent Version Control
+																								(needs Portal release
+																								[June])</font>
+																						</li>
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								Move agents from one AK
+																								to another (needs Portal
+																								release [June])</font>
+																						</li>
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								Agent Health and Status
+																							</font>
+																						</li>
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								IBM Cloud Provider
+																								metadata</font>
+																						</li>
+																						<li>
+																							<font
+																								face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																								class="app-bullet-line">
+																								On-Demand Scan
+																								(client-side)</font>
+																						</li>
+																					</ul>
+																					</p>
+																				</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Linux 2.4
+																			</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">May</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Agent
+																					Version Control (needs Portal
+																					release [June])</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Move agents
+																					from one AK to another (needs Portal
+																					release [June])</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Agent Health
+																					and Status</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">IBM Cloud
+																					Provider metadata</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">On-Demand
+																					Scan (client-side)</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td class="app-release-td">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td class="release-table-seperator"></td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="16" style="width: 16px"></td>
+																	<td width="26" style="width: 26px">
+																		<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-cri.png"
+																			width="26">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td>
+																		<a href="https://community.qualys.com/docs/DOC-6631"
+																			class="app-links">
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-title">Certificate
+																				Inventory / Certificate Assessment
+																				(CertView)</font>
+																		</a>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Remove
+																				dependency on API add-on</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">April</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-text-line">The
+																				External Sites and Internal Sites
+																				sub-tab in "Assets" currently utilize
+																				QWeb 2.0 APIs, hence the need to enable
+																				the API add-on for the subscription.
+																				This release will remove that dependency
+																				so that these sub-tabs in CertView will
+																				work without the API add-on enabled.
+																			</font>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td class="app-release-td">
+																	</td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Other
+																				Enhancements</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">April</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-text-line">Add IP,
+																				Port, service (HTTP, LDAP, ...) and
+																				Grade Summary highlights to CSV report.
+																			</font>
+																		</p>
+																	</td>
+																	<td class="app-release-td">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td class="release-table-seperator"></td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="16" style="width: 16px"></td>
+																	<td width="26" style="width: 26px">
+																		<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-sa.png"
+																			width="26">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td>
+																		<a href="https://community.qualys.com/docs/DOC-4774"
+																			class="app-links">
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-title">Security
+																				Analytics & Data Lake</font>
+																		</a>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Title
+																			</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">Date</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-text-line">
+																				Description</font>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td class="release-table-seperator"></td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="16" style="width: 16px"></td>
+																	<td width="26" style="width: 26px">
+																		<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-ioc.png"
+																			width="26">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td>
+																		<a href="https://community.qualys.com/docs/DOC-4774"
+																			class="app-links">
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-title">Indication of
+																				Compromise</font>
+																		</a>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Title
+																			</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">Date</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-text-line">
+																				Description</font>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td class="release-table-seperator"></td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="16" style="width: 16px"></td>
+																	<td width="26" style="width: 26px">
+																		<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-pm.png"
+																			width="26">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td>
+																		<a href="https://community.qualys.com/docs/DOC-4774"
+																			class="app-links">
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-title">Patch
+																				Management</font>
+																		</a>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Title
+																			</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">Date</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-text-line">
+																				Description</font>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+												</table>
+											</td>
+											<td width="76" class="mailer-padding"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										class="mailer-table" width="684">
+										<tr>
+											<td height="40" style="height: 40px;"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										class="mailer-table" width="684">
+										<tr>
+											<td width="76" class="mailer-padding"></td>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													style="width: 100%" class="cloud-app-table">
+													<tr>
+														<td style="width: 30px">
+															<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/icon-cloud-container-sec.png"
+																width="32" />
+														</td>
+														<td width="10" style="width: 10px"></td>
+														<td>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="cloud-app-title">CLOUD/CONTAINER SECURITY</font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td width="76" class="mailer-padding"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										class="mailer-table" width="684">
+										<tr>
+											<td height="10" style="height: 10px;"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										class="mailer-table" width="684">
+										<tr>
+											<td width="76" class="mailer-padding"></td>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													style="width: 100%" class="app-release-table">
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="16" style="width: 16px"></td>
+																	<td width="26" style="width: 26px">
+																		<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-ci.png"
+																			width="26">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td>
+																		<a href="https://community.qualys.com/docs/DOC-6154"
+																			class="app-links">
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-title">Cloud
+																				Inventory / Cloud Security Assessment
+																				(CloudView)</font>
+																		</a>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">New
+																				Controls</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">April
+																				(v1.8.0.0)</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">CIS Google
+																					Cloud Platform Foundation benchmark
+																				</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">AWS Security
+																					Assessment</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td class="app-release-td">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Policy and
+																				Mandate-based On-screen Report for AWS
+																			</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">April
+																				(v1.8.0.0)</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-bullet-line">Ability to
+																				generate reports for CIS Benchmarks,
+																				mandates like PCI, CCM, NIST800-53.
+																			</font>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td class="app-release-td">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">API
+																				Support</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">April
+																				(v1.8.0.0)</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Public
+																					Facing API for Azure and Google
+																					Connector Creation</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Public
+																					Facing API for Azure and GCP Control
+																					Evaluations</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td class="app-release-td">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Unified
+																				Connector</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">April
+																				(v1.8.0.0)</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Ability to
+																					enable VM, PC support from Cloud
+																					View Connectors</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">EC2
+																					Connectors support ability to use
+																					for CloudView</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">New
+																				Features and Enhancements</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">May</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">New Azure
+																					Controls</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Set up
+																					connector polling frequency</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Group
+																					accounts by business units</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">AWS Control
+																					Remediation</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td class="release-table-seperator"></td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="16" style="width: 16px"></td>
+																	<td width="26" style="width: 26px">
+																		<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-cs.png"
+																			width="26">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td>
+																		<a href="https://community.qualys.com/docs/DOC-5838"
+																			class="app-links">
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-title">Container
+																				Security</font>
+																		</a>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<font
+																			face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																			class="app-release-sub-title">Enhancements
+																		</font>
+																		<font
+																			face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																			class="app-release-type">May</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Performance
+																					enhancements</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Registry
+																					scanning for GCR (estimated)</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Registry
+																					scanning for ACR</font>
+																			</li>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+												</table>
+											</td>
+											<td width="76" class="mailer-padding"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										class="mailer-table" width="684">
+										<tr>
+											<td height="40" style="height: 40px;"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										class="mailer-table" width="684">
+										<tr>
+											<td width="76" class="mailer-padding"></td>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													style="width: 100%" class="cloud-app-table">
+													<tr>
+														<td style="width: 30px">
+															<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/icon-web-app-sec.png"
+																width="30" />
+														</td>
+														<td width="10" style="width: 10px"></td>
+														<td>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="cloud-app-title">WEB APP SECURITY</font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td width="76" class="mailer-padding"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										class="mailer-table" width="684">
+										<tr>
+											<td height="10" style="height: 10px;"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										class="mailer-table" width="684">
+										<tr>
+											<td width="76" class="mailer-padding"></td>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													style="width: 100%" class="app-release-table">
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="16" style="width: 16px"></td>
+																	<td width="26" style="width: 26px">
+																		<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-was.png"
+																			width="26">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td>
+																		<a href="https://community.qualys.com/docs/DOC-4776"
+																			class="app-links">
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-title">Web App
+																				Scanning</font>
+																		</a>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">
+																				Information Disclosure via Response
+																				Header</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">April</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-text-line">Ability to
+																				report when web app discloses
+																				information such as web server type,
+																				ASP.NET version, etc.</font>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td class="app-release-td">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Cancel
+																				slice in a multi-scan</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">May</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-text-line">Ability to
+																				allow an individual running scan within
+																				a multi-scan to be cancelled. Today the
+																				entire multi-scan must be cancelled.
+																			</font>
+																		</p>
+																	</td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Search
+																				Findings API call</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">May</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-text-line">
+																				Enhancement of verbose mode of Search
+																				Findings API call to return tags and
+																				ignore details (if any).</font>
+																		</p>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td class="release-table-seperator"></td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="16" style="width: 16px"></td>
+																	<td width="26" style="width: 26px">
+																		<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-waf.png"
+																			width="26">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td>
+																		<a href="https://community.qualys.com/docs/DOC-4777"
+																			class="app-links">
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-title">Web App
+																				Firewall</font>
+																		</a>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">WebApp
+																				assets</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">April</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Alibaba (GA)
+																				</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">PAYG pricing
+																					(Beta)</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Dashboard
+																				v2 (Beta)</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">April</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Ability to
+																					customize dashboard pages with
+																					preferred widgets.</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<font
+																			face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																			class="app-release-sub-title">CloudView
+																			Integration (Beta)</font>
+																		<font
+																			face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																			class="app-release-type">April</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<p>
+																					<font
+																						face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																						class="app-bullet-line">Feed
+																						CloudView with WAF
+																						applications/appliances hosted
+																						in the Cloud.</font>
+																				</p>
+																			</li>
+																		</ul>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Additional
+																				Enhancements</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">April</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Kubernetes
+																					(Beta)</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">PKP Header
+																					(Beta)</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">DDos
+																				(Beta)</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">May</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Protect
+																					applications against application
+																					layer DDoS attacks.</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Traffic
+																				Cluster (Beta)</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">May</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Define a new
+																					traffic clustering method (CARP,
+																					VRRP...).</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">TLS/1.3
+																				(GA)</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">May</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Support for
+																					the latest TLS version.</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td class="app-release-td">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Additional
+																				Enhancements</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">May</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Wildcard App
+																					(Beta)</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Sitemap SRE
+																					(Beta)</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+												</table>
+											</td>
+											<td width="76" class="mailer-padding"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										class="mailer-table" width="684">
+										<tr>
+											<td height="40" style="height: 40px;"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										class="mailer-table" width="684">
+										<tr>
+											<td width="76" class="mailer-padding"></td>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													style="width: 100%" class="cloud-app-table">
+													<tr>
+														<td style="width: 30px">
+															<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/icon-compliance.png"
+																width="30" />
+														</td>
+														<td width="10" style="width: 10px"></td>
+														<td>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="cloud-app-title">COMPLIANCE</font>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td width="76" class="mailer-padding"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										class="mailer-table" width="684">
+										<tr>
+											<td height="10" style="height: 10px;"></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										class="mailer-table" width="684">
+										<tr>
+											<td width="76" class="mailer-padding"></td>
+											<td>
+												<table cellpadding="0" cellspacing="0" border="0" align="center"
+													style="width: 100%" class="app-release-table">
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="16" style="width: 16px"></td>
+																	<td width="26" style="width: 26px">
+																		<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-pc.png"
+																			width="26">
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																	<td>
+																		<a href="https://community.qualys.com/docs/DOC-4773"
+																			class="app-links">
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-title">Policy
+																				Compliance</font>
+																		</a>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td style="height: 16px;"></td>
+													</tr>
+													<tr>
+														<td>
+															<table cellpadding="0" cellspacing="0" border="0"
+																align="center" style="width: 100%"
+																class="app-release-content-table">
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Platform
+																				Features</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">April</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Database UDC
+																					UI - Oracle, SQL</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">
+																					Auto-discovery for Tomcat, Websphere
+																				</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Fix for OS
+																					String (Unicode, French OS)
+																					identification and persisting DB
+																					data after agent OS scans</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+																<tr>
+																	<td width="58" style="width: 58px"></td>
+																	<td>
+																		<p>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-sub-title">Middleware
+																				technology support on PC agents</font>
+																			<font
+																				face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																				class="app-release-type">May</font>
+																		<ul class="app-bullet-list">
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Database UDC
+																					UI - Oracle, SQL</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">Windows File
+																					Parsing support</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">PC agent
+																					data processing improvements on QWeb
+																				</font>
+																			</li>
+																			<li>
+																				<font
+																					face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																					class="app-bullet-line">First and
+																					last detected configuration
+																					vulnerabilities</font>
+																			</li>
+																		</ul>
+																		</p>
+																	</td>
+																	<td width="16" style="width: 16px"></td>
+																</tr>
+														</td>
+														<td width="16" style="width: 16px"></td>
+													</tr>
+
+													<td width="16" style="width: 16px"></td>
+													<td class="app-release-td">
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-type">
+															<!-- NO RELEASE NUMBER -->
+														</font>
+													</td>
+													<td width="16" style="width: 16px"></td>
+										</tr>
+
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td style="height: 16px;"></td>
+					</td>
+				</tr>
+				<tr>
+					<td class="release-table-seperator"></td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+							class="app-release-content-table">
+							<tr>
+								<td width="16" style="width: 16px"></td>
+								<td width="26" style="width: 26px">
+									<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-pci.png"
+										width="26">
+								</td>
+								<td width="16" style="width: 16px"></td>
+								<td>
+									<a href="https://community.qualys.com/docs/DOC-4774" class="app-links">
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-title">PCI Compliance</font>
+									</a>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+							class="app-release-content-table">
+							<tr>
+								<td width="58" style="width: 58px"></td>
+								<td>
+									<p>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-sub-title">Title</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-type">Date</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-text-line">Description</font>
+									</p>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td class="release-table-seperator"></td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+							class="app-release-content-table">
+							<tr>
+								<td width="16" style="width: 16px"></td>
+								<td width="26" style="width: 26px">
+									<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-oca.png"
+										width="26">
+								</td>
+								<td width="16" style="width: 16px"></td>
+								<td>
+									<a href="https://community.qualys.com/docs/DOC-6143" class="app-links">
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-title">Out-of-Band Configuration Assessment (OCA)</font>
+									</a>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+							class="app-release-content-table">
+							<tr>
+								<td width="58" style="width: 58px"></td>
+								<td>
+									<p>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-sub-title">New features</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-type">April (v1.0)</font>
+									<ul class="app-bullet-list">
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">UI support for the entire workflow</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Bulk asset data upload</font>
+										</li>
+									</ul>
+									</p>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+							<tr>
+								<td width="58" style="width: 58px"></td>
+								<td>
+									<p>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-sub-title">Expanded Technology Coverage</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-type">May</font>
+									<ul class="app-bullet-list">
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Aruba WLC</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Bluecoat Proxy</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Cisco ACS</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">HP Comware</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">HP Tandem</font>
+										</li>
+									</ul>
+									</p>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td class="release-table-seperator"></td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+							class="app-release-content-table">
+							<tr>
+								<td width="16" style="width: 16px"></td>
+								<td width="26" style="width: 26px">
+									<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-sca.png"
+										width="26">
+								</td>
+								<td width="16" style="width: 16px"></td>
+								<td>
+									<a href="https://community.qualys.com/docs/DOC-6143" class="app-links">
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-title">Security Configuration Assessment</font>
+									</a>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+							class="app-release-content-table">
+							<tr>
+								<td width="58" style="width: 58px"></td>
+								<td>
+									<p>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-type">April</font>
+									<ul class="app-bullet-list">
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Support for NIST and CIS Top 20 mandates</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Roll-up reporting to PC mandates</font>
+										</li>
+									</ul>
+									</p>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td class="release-table-seperator"></td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+							class="app-release-content-table">
+							<tr>
+								<td width="16" style="width: 16px"></td>
+								<td width="26" style="width: 26px">
+									<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-fim.png"
+										width="26">
+								</td>
+								<td width="16" style="width: 16px"></td>
+								<td>
+									<a href="https://community.qualys.com/docs/DOC-6014" class="app-links">
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-title">File Integrity Monitoring</font>
+									</a>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+							class="app-release-content-table">
+							<tr>
+								<td width="58" style="width: 58px"></td>
+								<td>
+									<p>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-sub-title">New features</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-type">April (v1.9)</font>
+									<ul class="app-bullet-list">
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">FIM Status Tracking and Agent Health visibility
+											</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Event Tuning (Noise Reduction)</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Change Incident Report</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">New and improved FIM Monitoring Profile Editor
+											</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">FIM platform and UI updates (usability and
+												workflow) Expand Library and Automate Publication</font>
+										</li>
+									</ul>
+									</p>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+							<tr>
+								<td width="58" style="width: 58px"></td>
+								<td>
+									<p>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-sub-title">New features</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-type">May (v2.0)</font>
+									<ul class="app-bullet-list">
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Basic Alerting and Notification</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Automated Event Correlation Engine</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Bug Fixes for FIM APIs (Get to Post)</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">First phase of Splunk Integration</font>
+										</li>
+									</ul>
+									</p>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td class="release-table-seperator"></td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+							class="app-release-content-table">
+							<tr>
+								<td width="16" style="width: 16px"></td>
+								<td width="26" style="width: 26px">
+									<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-saq.png"
+										width="26">
+								</td>
+								<td width="16" style="width: 16px"></td>
+								<td>
+									<a href="https://community.qualys.com/docs/DOC-4774" class="app-links">
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-title">Security Assessment Questionnaire</font>
+									</a>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+							class="app-release-content-table">
+							<tr>
+								<td width="58" style="width: 58px"></td>
+								<td>
+									<p>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-sub-title">New role - Risk Analyst</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-type">April</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-text-line">A new role is added for Risk Analyst. A Risk
+											analyst will have access to vendor on-boarding, initiate campaign, conduct
+											vendor response review and close the campaigns.</font>
+									</p>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+							<tr>
+								<td width="58" style="width: 58px"></td>
+								<td>
+									<p>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-sub-title">Better, Intuitive Workflow</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-type">April</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-text-line">Campaigned-based workflow is added help to
+											initiate assessments for multiple vendors at a time. Campaign template will
+											be auto selected for each vendor, based on vendor criticality, with ability
+											to change it.</font>
+									</p>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+							<tr>
+								<td width="58" style="width: 58px"></td>
+								<td>
+									<p>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-sub-title">Vendor Details Page</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-type">April</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-text-line">The Vendor Details page provides detailed
+											information about number of campaigns run for a vendor as well as trend
+											analysis of vendor compliance over the period. It will also provide ability
+											to edit vendor information.</font>
+									</p>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+							<tr>
+								<td width="58" style="width: 58px"></td>
+								<td>
+									<p>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-sub-title">Additional Features and Enhancements</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-type">May</font>
+									<ul class="app-bullet-list">
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Vendor bulk upload</font>
+										</li>
+										<li>
+											<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+												class="app-bullet-line">Vendor criticality auto-calculation</font>
+										</li>
+									</ul>
+									</p>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="release-table-seperator"></td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+							class="app-release-content-table">
+							<tr>
+								<td width="16" style="width: 16px"></td>
+								<td width="26" style="width: 26px">
+									<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-ssc.png"
+										width="26">
+								</td>
+								<td width="16" style="width: 16px"></td>
+								<td>
+									<a href="https://community.qualys.com/docs/DOC-4774" class="app-links">
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-title">SaaS Security Compliance (SSC)</font>
+									</a>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+							class="app-release-content-table">
+							<tr>
+								<td width="58" style="width: 58px"></td>
+								<td>
+									<p>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-sub-title">Title</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-type">Date</font>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="app-release-text-line">Description</font>
+									</p>
+								</td>
+								<td width="16" style="width: 16px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+				<tr>
+					<td style="height: 16px;"></td>
+				</tr>
+				<tr>
+					<td class="release-table-seperator"></td>
+				</tr>
+		</table>
+		</td>
+		<td width="76" class="mailer-padding"></td>
+		</tr>
+		</table>
+		</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="40" style="height: 40px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="76" class="mailer-padding"></td>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+								class="cloud-app-table">
+								<tr>
+									<td style="width: 30px">
+										<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/icon-virtual-scanners.png"
+											width="30" />
+									</td>
+									<td width="10" style="width: 10px"></td>
+									<td>
+										<font face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+											class="cloud-app-title">TECHNOLOGY</font>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td width="76" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="10" style="height: 10px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="76" class="mailer-padding"></td>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 100%"
+								class="app-release-table">
+								<tr>
+									<td style="height: 16px;"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" align="center"
+											style="width: 100%" class="app-release-content-table">
+											<tr>
+												<td width="16" style="width: 16px"></td>
+												<td width="26" style="width: 26px">
+													<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-pns.png"
+														width="26">
+												</td>
+												<td width="16" style="width: 16px"></td>
+												<td>
+													<a href="https://community.qualys.com/docs/DOC-6670"
+														class="app-links">
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-title">Passive Network Sensor</font>
+													</a>
+												</td>
+												<td width="16" style="width: 16px"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" align="center"
+											style="width: 100%" class="app-release-content-table">
+											<tr>
+												<td width="58" style="width: 58px"></td>
+												<td>
+													<p>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-sub-title">Beta 1</font>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-type">April</font>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-text-line">Start first batch of Beta
+															Customers.</font>
+													</p>
+												</td>
+												<td width="16" style="width: 16px"></td>
+											</tr>
+											<tr>
+												<td width="58" style="width: 58px"></td>
+												<td>
+													<p>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-sub-title">Beta 2</font>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-type">May (v0.9.2)</font>
+													<ul class="app-bullet-list">
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Feedback Loop: Capturing traces
+																and PCAPs for fingerprinting enhancements.</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Appliance performance of 900Mbps
+																for 1G interfaces.</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Appliance software upgrade from
+																cloud.</font>
+														</li>
+													</ul>
+													</p>
+												</td>
+												<td width="16" style="width: 16px"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 16px;"></td>
+								</tr>
+								<tr>
+									<td class="release-table-seperator"></td>
+								</tr>
+								<tr>
+									<td style="height: 16px;"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" align="center"
+											style="width: 100%" class="app-release-content-table">
+											<tr>
+												<td width="16" style="width: 16px"></td>
+												<td width="26" style="width: 26px">
+													<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-qgs.png"
+														width="26">
+												</td>
+												<td width="16" style="width: 16px"></td>
+												<td>
+													<a href="https://community.qualys.com/docs/DOC-6346"
+														class="app-links">
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-title">Qualys Gateway Service</font>
+													</a>
+												</td>
+												<td width="16" style="width: 16px"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 16px;"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" align="center"
+											style="width: 100%" class="app-release-content-table">
+											<tr>
+												<td width="58" style="width: 58px"></td>
+												<td>
+													<p>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-sub-title">New Features</font>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-type">April (v1.0 GA)</font>
+													<ul class="app-bullet-list">
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Virtual Appliance - VMware
+															</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Qualys UI Management</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Proxy support</font>
+														</li>
+													</ul>
+													</p>
+												</td>
+												<td width="16" style="width: 16px"></td>
+											</tr>
+											<tr>
+												<td width="58" style="width: 58px"></td>
+												<td>
+													<p>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-sub-title">Cache Support</font>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-type">May (v1.1)</font>
+													<ul class="app-bullet-list">
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Cache support for agent
+																downloads (manifests, installers).</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Cache support for Patch
+																Management downloads (patches).</font>
+														</li>
+													</ul>
+													</p>
+												</td>
+												<td width="16" style="width: 16px"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 16px;"></td>
+								</tr>
+								<tr>
+									<td class="release-table-seperator"></td>
+								</tr>
+								<tr>
+									<td style="height: 16px;"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" align="center"
+											style="width: 100%" class="app-release-content-table">
+											<tr>
+												<td width="16" style="width: 16px"></td>
+												<td width="26" style="width: 26px">
+													<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/tam-newsletter/badge-vs.png"
+														width="26">
+												</td>
+												<td width="16" style="width: 16px"></td>
+												<td>
+													<a href="https://community.qualys.com/docs/DOC-6675"
+														class="app-links">
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-title">Vulnerability Signatures</font>
+													</a>
+												</td>
+												<td width="16" style="width: 16px"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 16px;"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" align="center"
+											style="width: 100%" class="app-release-content-table">
+											<tr>
+												<td width="58" style="width: 58px"></td>
+												<td>
+													<p>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-sub-title">New Technology Support</font>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-type">April, May</font>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-text-line">Support will be added for the
+															following technologies in April:</font>
+													<ul class="app-bullet-list">
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Huawei Routers (Remote)</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Huawei Lanswitch - V100R003
+															</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Huawei Quidway Switch</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Huawei S6506R routing switch VRP
+																3.10</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Arista EOS version 4.15.x</font>
+														</li>
+													</ul>
+													</p>
+													<p>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-text-line">Support will be added for the
+															following technologies in May:</font>
+													<ul class="app-bullet-list">
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Crestron RMC3 Devices</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Cisco Meeting Server 1000</font>
+														</li>
+													</ul>
+													</p>
+												</td>
+												<td width="16" style="width: 16px"></td>
+											</tr>
+											<tr>
+												<td width="58" style="width: 58px"></td>
+												<td>
+													<p>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-sub-title">Additional Features and
+															Enhancements</font>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-type">April, May</font>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-text-line">The following technologies
+															will be added in April:</font>
+													<ul class="app-bullet-list">
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Improvements for QIDs posting
+																potential on Agent</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Auto-discovery for Websphere
+															</font>
+														</li>
+													</ul>
+													</p>
+													<p>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-text-line">The following technologies
+															will be added in May:</font>
+													<ul class="app-bullet-list">
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Report access for customers
+																using login credentials</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">Scanner and Agent Support</font>
+														</li>
+														<li>
+															<font
+																face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+																class="app-bullet-line">FreeBSD, NCR Vulnerabilities
+															</font>
+														</li>
+													</ul>
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td width="58" style="width: 58px"></td>
+												<td>
+													<p>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-sub-title">Microsoft Azure Stack Reports
+															via authentication</font>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-type">May</font>
+														<font
+															face="'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif"
+															class="app-release-text-line">Ability to allow customers to
+															access reports using login credentials.</font>
+													</p>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 16px;"></td>
+								</tr>
+								<tr>
+									<td class="release-table-seperator"></td>
+								</tr>
+							</table>
+						</td>
+						<td width="76" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="44" style="height: 44px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="51" style="height: 51px;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+					<tr>
+						<td class="mailer-padding"></td>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center">
+								<tr>
+									<td>
+										<a href="https://twitter.com/qualys">
+											<img src="https://ik.imagekit.io/qualys/image/2018/rsa/mailer-twitter-icon-34-2x.jpg"
+												width="37">
+										</a>
+									</td>
+									<td width="10" style="width: 10px;"></td>
+									<td>
+										<a href="https://www.facebook.com/qualys">
+											<img src="https://ik.imagekit.io/qualys/image/2018/rsa/mailer-facebook-icon-34-2x.jpg"
+												width="37">
+										</a>
+									</td>
+									<td width="10" style="width: 10px;"></td>
+									<td>
+										<a href="https://www.linkedin.com/company/qualys">
+											<img src="https://ik.imagekit.io/qualys/image/2018/rsa/mailer-linkedin-icon-34-2x.jpg"
+												width="37">
+										</a>
+									</td>
+									<td width="10" style="width: 10px;"></td>
+									<td>
+										<a href="https://vimeo.com/qualys">
+											<img src="https://d1dejaj6dcqv24.cloudfront.net/asset/image/icon/vimeo-circle-37-2x.png"
+												width="37">
+										</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="16" style="height: 16px;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+					<tr>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center">
+								<tr>
+									<td class="mailer-footer-links">
+										<a href="https://www.qualys.com/company/privacy/"
+											style="text-decoration: none; color: #707f93">
+											<font face="'Open Sans', sans-serif"
+												style="font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif; font-size: 11pt;">
+												Privacy</font>
+										</a>
+									</td>
+									<td width="20" style="text-align: center;" class="mailer-footer-seperator">
+										<font face="'Open Sans', sans-serif"
+											style="font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif; font-size: 11pt; color: #707f93">
+											|</font>
+									</td>
+									<td class="mailer-footer-links">
+										<a href="https://lps.qualys.com/subscription-preference.html?_ga=2.42669990.263175417.1519626781-1834129541.1514460500"
+											style="text-decoration: none; color: #707f93">
+											<font face="'Open Sans', sans-serif"
+												style="font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif; font-size: 11pt; color: #707f93">
+												Communication Preferences</font>
+										</a>
+									</td>
+									<td width="20" style="text-align: center;" class="mailer-footer-seperator">
+										<font face="'Open Sans', sans-serif"
+											style="font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif; font-size: 11pt; color: #707f93">
+											|</font>
+									</td>
+									<td class="mailer-footer-links">
+										<a href="https://www.qualys.com/company/contacts/"
+											style="text-decoration: none; color: #707f93">
+											<font face="'Open Sans', sans-serif"
+												style="font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif; font-size: 11pt; color: #707f93">
+												Contacts</font>
+										</a>
+									</td>
+									<td width="20" style="text-align: center;" class="mailer-footer-seperator">
+										<font face="'Open Sans', sans-serif"
+											style="font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif; font-size: 11pt; color: #707f93">
+											|</font>
+									</td>
+									<td class="mailer-footer-links">
+										<a href="https://www.qualys.com/support/"
+											style="text-decoration: none; color: #707f93">
+											<font face="'Open Sans', sans-serif"
+												style="font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif; font-size: 11pt;">
+												Support</font>
+										</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="17" style="height: 17px;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+					<tr>
+						<td align="center">
+							<a href="https://www.qualys.com/careers/"
+								style="text-decoration: none; color: #707f93; font-weight: 600">
+								<font face="'Open Sans', sans-serif"
+									style="font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif; font-size: 14pt;">
+									WE'RE HIRING ></font>
+							</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="18" style="height: 18px;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+					<tr>
+						<td align="center">
+							<font face="'Open Sans', sans-serif"
+								style="font-family: 'Open Sans', 'Segoe UI', 'Robot', 'Ubuntu', sans-serif; font-size: 10.5pt; color: #707f93">
+								©  Qualys, Inc. All rights reserved.</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="100" style="height: 100px;"></td>
+		</tr>
+		</table>
+		</td>
+		</tr>
+		</table>
+		</td>
+		</tr>
+		</table>
+	</body>
+
+</html>

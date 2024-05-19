@@ -1,0 +1,202 @@
+/**
+ * paystand window
+ */
+
+ body {
+	background-color: #F7FAFC;
+}
+body.md-default-theme, body, html.md-default-theme, html {
+	background-color: #F7FAFC !important;
+}
+#ps_loading {
+	background-color: transparent !important;
+}
+.ps-checkout-app {
+	background-color: transparent !important;
+}
+progress-wrap {
+	background-color: #F7FAFC !important;
+}
+.ps-theme-checkout-standard .ps-header-view .ps-header-amount-wrap {
+	margin: 0 auto;
+	width: 600px;
+}
+.ps-theme-checkout-standard .ps-header-view .ps-background {
+	display: none;
+	background: unset;
+}
+.ps-theme-checkout-standard .ps-header-view .ps-header-wrap {
+	background-color: #30405B !important;
+	background-image: unset;
+	left: 0;
+}
+.layout-column.flex {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ps-header-logo-wrap {
+	display: none;
+}
+.ps-checkout-inner {
+	background-color: #F7FAFC !important;
+}
+.ps-theme-checkout-standard .ps-fund-select-type-buttons {
+	background-color: transparent !important;
+	border: 0 !important;
+}
+.ps-theme-base .ps-fund-buttons .ps-fund-button.is-active {
+	background-color: #ED2E26 !important;
+}
+.ps-theme-base .ps-fund-buttons .ps-fund-button {
+	background: #6A778B !important;
+}
+.ps-theme-checkout-standard .ps-button-back button {
+	background: #6A778B !important;
+}
+.ps-theme-checkout-standard .ps-button-second button {
+	background: #ED2E26 !important;
+}
+.ps-theme-base .ps-bank-choose-assured {
+	background: #eff5fb !important;
+}
+.ps-theme-checkout-standard .ps-header-view .ps-header-logo img {
+	width: 80px !important;
+	height: 80px !important;
+	margin: 18px 0 0 0 !important;
+}
+.ps-dialog-close {
+	display: none !important;
+}
+.ps-theme-checkout-standard md-sidenav,
+.longtail-confirm,
+.longtail-session {
+	background-image: unset;
+	background-color: #F7FAFC !important;
+	color: #30405B !important;
+}
+.longtail-confirm,
+.longtail-session {
+	border-radius: 4px;
+}
+.ps-theme-checkout-standard md-sidenav md-content button {
+	background: #6A778B !important;
+}
+.ps-theme-checkout-standard md-sidenav md-content {
+	color: #30405B !important;
+	font-size: 14px;
+	line-height: 1.5;
+}
+.ps-theme-checkout-standard md-sidenav md-content i {
+	font-size: 34px;
+}
+.ps-theme-base .ps-fund-buttons .ps-fund-button:focus,
+.ps-theme-checkout-standard md-sidenav md-content button:focus,
+.ps-theme-checkout-standard .ps-button-second button:focus,
+.ps-theme-checkout-standard .ps-bank-session-content .ps-button-next button:focus,
+.ps-theme-checkout-standard .ps-receipt_portal-link .ps-button button:focus,
+.ps-theme-checkout-standard .ps-receipt_portal-link .ps-button-success button:focus {
+	outline: unset !important;
+}
+.longtail-logo {
+	color: #30405B !important;
+}
+.ps-theme-checkout-standard .ps-bank-session-content .ps-button-next button {
+	background: #ED2E26 !important;
+}
+.ps-theme-checkout-standard .ps-bank-session-content .ps-button-next button[disabled]{
+	color: #eee !important;
+	background: #bbb!important;
+}
+.ps-theme-checkout-standard .ps-bank-session-content {
+	background: #eff5fb !important;
+}
+.ps-theme-checkout-standard .ps-bank-session-content .md-no-float label {
+	margin-bottom: 8px;
+	display: block;
+}
+.ps-theme-base .ps-progress-center-on,
+.ps-theme-base .ps-progress-left,
+.ps-theme-base .ps-progress-right-on {
+	background: #ED2E26 !important;
+}
+.ps-theme-checkout-standard .ps-receipt-background {
+	background: transparent !important;
+	border-radius: 4px;
+	color: #30405B !important;
+}
+.ps-theme-checkout-standard .ps-receipt-content,
+.ps-theme-checkout-standard .ps-receipt_portal-link span {
+	color: #30405B !important;
+}
+.ps-theme-checkout-standard .ps-receipt_portal-link .ps-button button,
+.ps-theme-checkout-standard .ps-receipt_portal-link .ps-button-success button {
+	background: #ED2E26 !important;
+}
+.ps-theme-checkout-standard .ps-receipt_portal-link .ps-portal-email-success {
+	color: #30405B !important;
+}
+.ps-bank-modal-title > div::after {
+	content: "";
+	display: block;
+	width: 310px;
+	height: 120px;
+	background: #30405B;
+	position: absolute;
+	z-index: -1;
+	border-radius: 4px;
+	top: 51px;
+	transform: translateX(-50%);
+	left: 50%;
+}
+.ps-theme-checkout-standard md-input-container span.md-no-float {
+	margin-bottom: 10px;
+	display: block;
+}
+.ps-theme-checkout-standard .ps-critical-error {
+	background: transparent !important;
+	color: #30405B !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+.ps-theme-checkout-standard .ps-critical-error > div[role="button"] {
+	display: none !important;
+}
+.ps-theme-checkout-standard md-sidenav,
+.longtail-confirm,
+.longtail-session {
+	left: 0;
+}
+.ps-theme-checkout-standard md-sidenav {
+	box-shadow: 1px 0 21px -10px rgba(0,0,0,0.15);
+}
+.ps-theme-base .ps-checkout {
+	background-color: transparent !important;
+}
+
+/** Banks **/
+
+.ps-theme-base md-radio-group md-radio-button {
+	margin: 0 0 0;
+}
+.ps-theme-base .ps-radio-wrap {
+	line-height: 1.45;
+}
+.ps-theme-checkout-standard .ps-bank-review-wrap {
+	z-index: 0;
+	position: relative;
+}
+.ps-bank-review-logo::after {
+	content: "";
+	background: #30405B;
+	border-radius: 4px;
+	width: 200px;
+	height: 80px;
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+
+/*# sourceMappingURL=checkout-window.css.map */

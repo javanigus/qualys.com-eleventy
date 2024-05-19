@@ -1,0 +1,278 @@
+h1 {
+	font-size: 40pt;
+	color: #000;
+	margin-top: 59px;
+	margin-bottom: 41px;
+	line-height: 1.2;
+}
+h2 {
+	font-size: 20pt;
+	margin-top: 32px;
+	padding-bottom: 0;
+}
+h3 {
+	font-weight: 400;
+}
+h4 {
+	color: #000;
+	font-size: 17pt;
+	margin-top: 26px;
+	margin-bottom: 15px;
+	margin-bottom: 1px;
+}
+p {
+	font-size: 13pt;
+	line-height: 1.6;
+}
+#content.full-width div.section.intro {
+	padding-bottom: 55px;
+}
+#content.full-width div.section.other {
+	padding-top: 19px;
+	padding-bottom: 95px;
+}
+#content div.section.qualysguard {
+	padding-left: calc(50% - 502px);
+	padding-right: calc(50% - 502px);
+	padding-bottom: 0;
+	width: 1004px;
+	margin: 0 auto;
+	background-color: #0060B3;
+	background: #0060B3 url(https://ik.imagekit.io/qualys/image/blue-background-diagonal-lines.jpg) top center no-repeat;
+	overflow: hidden;
+	position: relative;
+	min-height: 630px;
+	text-align: center;
+}
+div.suite {
+	margin: 55px auto 0;
+	width: 918px;
+	position: relative;
+	color: #FFF;
+	padding: 2px 0 32px;
+}
+div.section.other a,
+div.section.intro a {
+	font-weight: 500;
+}
+#content div.background {
+	position: absolute;
+	background: #FFF;
+	background: linear-gradient(to bottom,  rgba(125,185,232,1) 0%,rgba(211,230,244,0) 100%);
+	height: 267px;
+	width: 100%;
+	opacity: 0.31;
+}
+div.suite a.prev,
+div.suite a.next,
+div.slideshow a.prev,
+div.slideshow a.next {
+	position: absolute;
+	top: 215px;
+	background-image: url(https://ik.imagekit.io/qualys/image/enterprises/qualysguard/overview/sprite-enterprises-qualysguard.png);
+	background-color: rgba(0, 0, 0, 0);
+	overflow: hidden;
+	width: 26px;
+	height: 92px;
+	text-indent: -9999px;
+	z-index: 200;
+	cursor: pointer;
+}
+div.suite a.prev,
+div.suite a.next {
+	top: 166px;
+}
+div.suite a.prev, div.slideshow a.prev {
+	left: -40px;
+}
+div.suite a.next,
+div.slideshow a.next {
+	background-position: -50px 0;
+	right: -46px;
+}
+div.navi {
+	font-size: 66.67%;
+	left: 50%;
+	margin-left: -16.2em;
+	position: absolute;
+	text-align: center;
+	top: 0.6em;
+	width: 32.4em;
+	z-index: 99;
+}
+div.badge-wrapper {
+	margin: 0 0 19px;
+}
+a.badge {
+	border-radius: 10px 0 10px 10px;
+	display: inline-block;
+	margin: 0 5px 0 0;
+	vertical-align: top;
+	padding: 9px 6px;
+	text-align: left;
+	font-size: 9pt;
+	line-height: 1.2;
+	min-width: 80px;
+}
+div.badge-wrapper a.cm {
+	background-color: #EE312C;
+	box-shadow: 2px 2px 0 #441110;
+	border: 2px solid #EE312C;
+}
+div.badge-wrapper a.vm {
+	background-color: #19599B;
+	box-shadow: 2px 2px 0 #20235D;
+	border: 2px solid #19599B;
+}
+div.badge-wrapper a.pc, div.badge-wrapper a.saq, div.badge-wrapper a.pci {
+	background-color: #62BA5C;
+	box-shadow: 2px 2px 0 #0D4427;
+	border: 2px solid #62BA5C;
+}
+div.badge-wrapper a.was, div.badge-wrapper a.mds, div.badge-wrapper a.waf {
+	background-color: #00B0ED;
+	box-shadow: 2px 2px 0 #253F83;
+	border: 2px solid #00B0ED;
+}
+div.badge-wrapper a.seal {
+	background-color: #97999C;
+	box-shadow: 2px 2px 0 #2F2F2F;
+	border: 2px solid #97999C;
+}
+a.badge {
+	color: #FFF;
+}
+#content a.badge:hover {
+	text-decoration: none;
+	background-color: #FFF;
+}
+div.badge-wrapper > a.cm:hover {
+	color: #EE312C;
+}
+div.badge-wrapper > a.vm:hover {
+	color: #19599B;
+}
+div.badge-wrapper > a.pc:hover,
+div.badge-wrapper > a.saq:hover,
+div.badge-wrapper > a.pci:hover {
+	color: #62BA5C;
+}
+div.badge-wrapper > a.was:hover,
+div.badge-wrapper > a.mds:hover,
+div.badge-wrapper > a.waf:hover {
+	color: #00B0ED;
+}
+div.badge-wrapper > a.seal:hover {
+	color: #97999C;
+}
+#content a.badge:hover {
+	text-decoration: none;
+	background-color: #FFF;
+}
+a.badge abbr {
+	font-size: 11pt;
+	font-weight: 600;
+	display: block;
+	text-shadow: -1px 0 1px rgba(0, 0, 0, 0.5);
+}
+a.badge:hover abbr {
+	text-shadow: none;
+}
+div.enterprise div.suite div.container h5 {
+	font-size: 25pt;
+	line-height: 32pt;
+}
+div.section.enterprise div.container.slide1 h5 {
+	font-weight: 400;
+	width: 918px;
+	margin: 0;
+}
+div.suite div.container img {
+	float: right;
+	margin: 0 20px 0 0;
+	border-radius: 10px;
+}
+div.suite div.slide1 img {
+	margin: 44px 0 0;
+	float: none;
+}
+div.items > div {
+	float: left;
+}
+div.container {
+	width: 1254px;
+	height: 380px;
+	position: relative;
+}
+#content div.suite div.container {
+	width: 918px;
+	text-align: left;
+	height: 313px;
+}
+div.section.qualysguard div.container h5,
+div.section.qualysguard div.container ul {
+	width: 450px;
+	margin: 0 0 0 35px;
+}
+div.suite div.container h5 {
+	font-size: 26pt;
+	line-height: 32pt;
+}
+div.section.qualysguard div.container ul {
+	margin-top: 15px;
+}
+div.section.qualysguard div.container ul > li {
+	padding: 0;
+	margin: 0 15px 12px 0;
+	font-size: 14pt;
+}
+div.suite div.container > ul > li:before {
+	content: none;
+	margin: 0;
+	padding: 0;
+}
+div.section.qualysguard div.container > a {
+	margin: 12px 0 0 35px;
+	font-size: 15pt;
+	font-weight: 600;
+	position: relative;
+	display: inline-block;
+}
+div.section.qualysguard div.container > a:after {
+	content: url(https://ik.imagekit.io/qualys/image/enterprises/qualysguard/overview/icon-circle-arrow.png);
+	position: absolute;
+	top: -1px;
+	right: -35px;
+}
+#content div.section.qualysguard div.container.slide1 {
+	text-align: center;
+}
+div.section.qualysguard div.container.slide1 h5 {
+	font-weight: 400;
+	width: 918px;
+	margin: 0;
+}
+div.section.qualysguard a {
+	color: #FFF;
+}
+div.section.qualysguard div.container.slide1 h5 strong {
+	color: #FFF;
+	font-weight: 700;
+}
+div.suite a.button-type1 {
+	margin: 31px 0 20px;
+	padding: 17px 59px 21px;
+}
+div.suite p.features {
+	position: relative;
+	z-index: 2;
+	font-size: 12pt;
+}
+#content p.features a {
+	font-weight: 400;
+}
+h4.change-impact {
+	margin-bottom: 22px;
+}
+
+/*# sourceMappingURL=index.css.map */

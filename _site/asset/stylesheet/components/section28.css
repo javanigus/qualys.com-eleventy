@@ -1,0 +1,98 @@
+.section28{
+    background:#1D2737;
+    padding:20px 0;
+}
+.section28 .q-three-column{
+    width:100%;
+    color:#fff;
+    padding-bottom:20px
+}
+.section28 .q-content{
+    display:block;
+    margin-top: 10px;
+}
+@media (min-width:720px)
+{
+.section28 .q-content{
+    display:inline-block;
+    padding-left:20px;
+    margin-top:0
+}
+.section28 .q-three-column{
+    width:50%;
+    color:#fff;
+    display:inline-block;
+    padding: 0 60px;
+}
+}
+.section28 .q-content p{
+    color:#fff;
+    margin-bottom:0px;
+    margin-top:0px;
+    font-family: Gotham, sans-serif;
+    font-size:17px;
+}
+.section28 .q-content p a{
+   text-decoration:none;
+   font-size:14px;
+   font-family: Gotham, sans-serif;
+   font-size:15px
+}
+@media (min-width:720px){
+.section28 .q-content p{
+    font-size:15px;
+}
+.section28 .q-content p a{
+    font-size:13px
+}
+}
+
+@media (min-width:980px){
+.section28 .q-content p{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.section28 .q-content p a{
+    font-size:12px
+}
+}
+
+.section28 img{
+    display:inline-block;
+    width:34px;
+    vertical-align: top;
+    margin-top:5px
+}
+@media (min-width:1290px)
+{
+
+.section28 .q-three-column{
+    width: auto;
+}
+}
+
+.section28 .q-content p a:after {
+    content: "";
+    background: url(https://q-website-images.s3.amazonaws.com/www/image/icon/link-arrow-white.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 7px;
+    height: 10px;
+    opacity: 1;
+    top: 68%;
+    will-change: right, opacity;
+    margin-left:15px
+}
+
+@media (min-width:720px)
+{
+    .section28 .q-content p a:after {
+    top: 66%;
+    }
+}
+@media (min-width:1290px)
+{
+    .section28 .q-content p a:after {
+    top: 65%;
+    }
+}

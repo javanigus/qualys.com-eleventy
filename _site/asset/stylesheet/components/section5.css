@@ -1,0 +1,185 @@
+.section5.background{
+    background-image: url(https://q-website-images.s3.amazonaws.com/www/image/bg-totalcloud-banner.png);
+    background-size: cover;
+    color:#fff;
+    padding:50px 0;
+}
+
+.section5 .pt-0{
+    padding-top:0px
+}
+
+.section5 .heading{
+    color:#fff;
+    font-size:30px
+}
+
+.section5 .sub-heading{
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    padding-top: 10px;
+    line-height:1.5
+}
+.section5 .q-default-hero__content-image img{
+    text-align: center;
+    margin: auto;
+    padding-top:40px;
+}
+
+.section5 .hero-content{
+ display: flex;
+ justify-content: center;
+ flex-direction : column;
+ justify-content: space-between;
+ text-align:center
+}
+
+.section5 .hero-content .heroContent{
+    margin:auto
+}
+
+.section5 .q-default-hero__subheading{
+    max-width:100%
+}
+@media only screen and (min-width:720px) and (max-width:992px){
+.section5 .heading{
+    font-size:40px
+}
+.section5 .sub-heading{
+    font-size:22px
+} 
+}
+
+@media (min-width:720px){
+    .section5 .hero-content {
+    flex-direction: row;   
+}
+.section5 .q-default-hero__content-image img{
+    padding-top: 0px;
+}
+.section5 .sub-heading{
+    font-size:20px
+}
+.section5 .q-default-hero__content-image img{
+
+}
+.section5 .hero-content{
+    text-align:left
+}
+.section5 .q-default-hero__subheading{
+    max-width:23.11111em;
+}
+.section5 .q-default-hero__content-image img{
+    width:auto
+}
+}
+
+
+@media (min-width:992px){
+   .q-default-hero__content.heroContent{
+    width:600px
+   }
+   .section5 .heading{
+    font-size:45px
+    }
+
+.section5 .sub-heading{
+    font-size:30px
+} 
+
+.section5.background{
+    padding:80px 0
+}
+}
+
+@media (min-width:1440px){
+.section5 .heading{
+    font-size:60px
+    }
+}
+
+@media (min-width:720px){
+.section5 .hero-content .heroContent{
+width:60%;
+margin-left:0
+ }
+.section5 .q-default-hero__content-image{
+    width:40%
+ }
+}
+.section5 .q-hero-cta {
+    margin-top:1.8em;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    
+}
+.section5 .q-hero-cta__button {
+    flex: none;
+    display:block;
+}
+.section5 .q-hero-cta__link-wrap {
+    color: #fff;
+    display:block;
+}
+.section5 .q-hero-cta__link span{
+    display: block;
+    text-align: center;
+    font-weight: 500;
+}
+.section5 .q-hero-cta__link-wrap a{
+    font-size: 14px;
+    background-color: #D5E6F8;
+    color: #2E8BE0;
+    min-width: 9.33333em;
+    padding: 12px 18px;
+    height: 44px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 200ms, color 200ms;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-top:10px
+   
+}
+@media (min-width:425px){
+   .section5 .q-hero-cta__link-wrap {
+    text-align:left;
+    padding-left: 1em;
+    color: #fff;
+    display:inline-block
+}
+.section5 .q-hero-cta__link span{
+    display: inline-block;
+    text-align: center;
+}
+.section5 .q-hero-cta__link .q-additioanl-text{
+    margin-right:15px;
+}
+.section5 .q-hero-cta__button {
+    flex: none;
+    display:inline-block
+}
+.section5 .q-hero-cta__link-wrap a{
+    font-size: 15px;
+    margin-top:0px
+ }
+}
+
+.section5 .q-hero-cta{
+    font-weight:500;
+    font-family: Gotham, sans-serif;
+    font-size:15px
+}
+.section5 .q-book-a-meeting-link.q-button span:after {
+    background: url(https://q-website-images.s3.amazonaws.com/www/image/icon/link-arrow.svg);
+}
+@media (min-width: 960px)
+.q-hero-cta__link-wrap {
+    margin-top: 0;
+
+.q-hero-cta__link-wrap {
+    text-align: left;
+ }
+}

@@ -1,0 +1,3 @@
+"use strict";/* global  Swiper:false */(function(){"use strict";// init news and events carousel
+new Swiper(".swiper-container",{slidesPerView:"auto",navigation:{nextEl:".q-carousel-button--next",prevEl:".q-carousel-button--prev",disabledClass:"q-carousel-button--disabled"},pagination:{el:".swiper-pagination",type:"bullets"},centeredSlides:!1,spaceBetween:30})})();
+//# sourceMappingURL=index.js.map

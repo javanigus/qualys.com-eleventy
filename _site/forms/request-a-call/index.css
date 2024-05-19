@@ -1,0 +1,45 @@
+.paragraph--1.description {
+	max-width: 500px;
+}
+textarea.mktoField {
+	height: auto;
+	padding: 1em 30px;
+	min-height: 105px;
+}
+@media (min-width: 720px) {
+	textarea.mktoField {
+		min-height: 0;
+	}
+}
+.q-default-hero__form {
+	background: #F7FAFC;
+	color: #6A778B;
+	padding-top: 27px;
+}
+@media (min-width: 720px) {
+	.q-default-hero__form {
+		padding: 50px 50px 15px;
+	}
+}
+@media (min-width: 1280px) {
+	.q-default-hero__form {
+		padding: 50px 80px 27px;
+	}
+}
+@media (min-width: 480px) {
+	.q-default-hero__image {
+		background-image: url(https://ik.imagekit.io/qualys/image/support-hero-bg-2x.jpg);
+	}
+}
+input.disabled,
+select.disabled,
+textarea.disabled,
+.communicationConsent.disabled label,
+.mktoCheckboxList.disabled label:before {
+	border-color: #bdc0c3 !important;
+	color: #bdc0c3 !important;
+}
+.mktoButton.disabled {
+	background-color: #bdc0c3 !important;
+}
+/*# sourceMappingURL=index.css.map */

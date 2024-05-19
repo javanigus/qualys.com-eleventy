@@ -1,0 +1,195 @@
+.page-hero-container {
+	margin-top: 0;
+	align-items: baseline;
+}
+.more-info {
+	text-align: center;
+}
+.page-hero {
+	display: block;
+	width: 100%;
+	background: url(https://ik.imagekit.io/qualys/image/trurisk/trurisk-hero-bg.jpg) right top no-repeat #0081df;
+	background-size: cover;
+	color: #FFF;
+	padding: 0 30px;
+}
+.page-hero-content {
+	padding: 80px 0;
+}
+.page-hero-heading {
+	letter-spacing: -0.54px;
+	font-size: 42px;
+	color: #FFF;
+	font-family: "Gotham", sans-serif;
+	font-weight: 500;
+	line-height: 1.05;
+	margin: 0 auto;
+	padding: 0 15px;
+	text-align: center;
+}
+@media (min-width: 760px) {
+	.page-hero-heading {
+		padding: 0;
+		font-size: 4.4vw;
+	}
+}
+@media (min-width: 980px) {
+	.page-hero-heading {
+		max-width: 13.182em;
+	}
+}
+@media (min-width: 1440px) {
+	.page-hero-heading {
+		font-size: 60px;
+		line-height: 1.15;
+	}
+}
+.countdown-label {
+	text-align: center;
+	margin: 2.65em auto 0;
+	color: #FFF;
+	font-family: "Gotham", sans-serif;
+	font-weight: 500;
+	font-size: 1.85em;
+	letter-spacing: -0.54px;
+}
+.content-header {
+	text-align: center;
+	margin: 1.45em auto 0;
+	font-family: "Gotham", sans-serif;
+	font-weight: 400;
+	font-size: 2.15em;
+	letter-spacing: -0.54px;
+	color: #262626;
+	max-width: 20em;
+	line-height: 1.35;
+}
+.content-header br {
+	display: none;
+}
+.content-header ~ .paragraph--1 {
+	text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 1440px) {
+	.content-header {
+		font-size: 2.25vw;
+	}
+	.content-header br {
+		display: block;
+	}
+	.content-header ~ .paragraph--1 {
+		max-width: 46em;
+		margin-bottom: 2em;
+	}
+}
+.watch-more {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 80px;
+}
+.cta-blocks-container {
+	display: block;
+	padding: 2em 0;
+}
+.cta-block {
+	width: 100%;
+	margin-bottom: 40px;
+	background: #f7fafc;
+}
+.cta-block:last-child {
+	margin-bottom: 0;
+}
+@media (min-width: 720px) {
+	.cta-blocks-container {
+		display: flex;
+		flex-flow: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		padding: 2em 0;
+	}
+	.cta-block {
+		width: calc(50% - 20px);
+		margin-bottom: 0;
+		background: #f7fafc;
+	}
+}
+.cta-block-header {
+	padding: 20px 15px;
+	display: block;
+	background-color: #cdd0d2;
+}
+.cta-block-header h4 {
+	font-family: "Gotham", sans-serif;
+	color: #262626;
+	text-align: center;
+	font-weight: 500;
+	font-size: 1.24em;
+	line-height: 1;
+	margin: 0;
+}
+.cta-block-content {
+	text-align: center;
+	padding: 2em;
+    padding-top: 0;
+}
+@media (min-width: 1170px) {
+	.cta-block-content .paragraph--1 {
+		min-height: 80px;
+	}
+}
+.countdown-container {
+	text-align: center;
+}
+.countdown-container time {
+	margin: 0 auto;
+	display: inline-block;
+}
+span.countdown {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: nowrap;
+	margin-top: 30px;
+}
+span.countdown > div {
+	margin: 0 10px 0 0;
+	text-align: center;
+	flex: 1;
+	width: 60px;
+}
+span.countdown > div:last-child {
+	margin: 0;
+}
+span.countdown > div span.num {
+	display: block;
+	background-color: #FFF;
+	border-radius: 4px;
+	color: #6A778B;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 1;
+	padding: 20px 10px;
+	font-family: "Gotham", sans-serif;
+}
+span.countdown > div span.label {
+	display: block;
+	margin-top: 10px;
+	font-size: 18px;
+	line-height: 1;
+	font-family: "Gotham", sans-serif;
+}
+@media (min-width: 720px) {
+	span.countdown > div {
+		width: 100px;
+		margin: 0 20px 0 0;
+	}
+	span.countdown > div span.num {
+		font-size: 60px;
+	}
+	span.countdown > div span.label {
+		font-size: 24px;
+	}
+}
+/*# sourceMappingURL=index.css.map */

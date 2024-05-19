@@ -1,0 +1,348 @@
+.hero {
+	margin-bottom: 5em;
+}
+.coSpeakerInfo {
+	display: none;
+}
+.form {
+	margin-bottom: 4em;
+	padding-top: 85px;
+}
+.submittalk {
+color: #fff;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+.summit-your-talk-banner .q-qsc-events-heading {
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
+	font-weight: 400;
+	font-size: clamp(30px, 5vw, 68px);
+}
+.summit-your-talk-banner .q-qsc-events-content{
+	color: #fff;
+    font-size: clamp(18px, 5vw, 32px);
+    margin: 0;
+    padding-top: 0px;
+    padding-bottom: 12px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+fieldset {
+	border: 0;
+	padding: 0 0 15px;
+	margin: 0;
+	display: block;
+}
+fieldset > p,
+fieldset label,
+fieldset > legend {
+	font-family: "Gotham", sans-serif;
+	font-size: 15px;
+}
+fieldset legend {
+	color: #262626;
+	display: block;
+	margin: 0;
+	width: 100%;
+	padding: 15px 0;
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 32px;
+}
+fieldset label {
+	font-size: 18px;
+	font-weight: 300;
+	color: #44536B;
+	padding-bottom: 10px;
+}
+.spacer {
+	display: block;
+	height: 12px;
+}
+.form-field-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 15px;
+}
+.form-field-wrapper:last-child {
+	padding-bottom: 0;
+}
+.form-field-wrapper label {
+	
+}
+fieldset.kw-color-error {
+	padding-bottom: 0;
+}
+fieldset + .kw-field-error-message {
+	margin-bottom: 10px !important;
+}
+
+@media (min-width: 720px) {
+	.form-field-wrapper {
+	display: inline-block;
+    flex-direction: column;
+    padding-bottom: 24px;
+    width: 49.7%;
+    padding-right: 40px;
+	}
+	.form-field-wrapper label {
+		width: 35%;
+		margin-right: 20px;
+		margin-bottom: 0;
+	}
+	.form-field-wrapper .form-field {
+		flex: 1;
+	}
+	fieldset + .kw-field-error-message {
+		margin-left: 0 !important;
+	}
+}
+.q-full-width  {
+	width: 100%;
+}
+.q-full-width textarea {
+	width: 100%;
+}
+
+.form-field .small {
+	display: block;
+	font-family: "Gotham", sans-serif;
+	font-size: 0.85em;
+	margin: 5px 0 0;
+}
+.form-field input[type=text],
+.form-field textarea,
+.form-field select {
+	width: 100%;
+	border: 1.5px solid rgba(71, 83, 105, 0.20);
+	outline: none;
+	/* max-width: 410px; */
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	background-color: transparent;
+	border-radius: 6px;
+	background-color: #ffff;
+	color: inherit;
+	display: block;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: normal;
+	font-weight: inherit;
+	height: 52px;
+	line-height: inherit;
+	margin: 0;
+	padding: 0 12px;
+	position: relative;
+	width: 100%;
+	font-family: "Gotham", sans-serif;
+	
+}
+.form-field textarea {
+	resize: none;
+	height: 120px;
+	padding: 12px;
+}
+.form-field select {
+	background-image: url(https://ik.imagekit.io/qualys/image/form/select-arrows.png);
+	background-position: calc(100% - 16px) 50%;
+	background-repeat: no-repeat;
+	background-size: 8px 20px;
+}
+.form-field button {
+	background-color: #ED2E26;
+	padding:16px 40px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	border: 0;
+	color: #FFF;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: inherit;
+	
+	vertical-align: baseline;
+	width: 100%;
+	max-width: 230px;
+	border-radius: 2px;
+	font-family: "Gotham", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+}
+.kw-field-error-message {
+	font-family: "Gotham", sans-serif;
+}
+.kw-alert {
+	font-family: "Gotham", sans-serif;
+	border-radius: 2px !important;
+}
+.kw-alert.kw-alert-error {
+	background-color: rgb(255 235 238 / 24%);
+}
+.kw-alert.kw-alert-success {
+	background-color: rgb(239 250 243 / 30%);
+}
+
+.required-astrik:before{
+	content: "*";
+    color: #DC412C;
+}
+
+.summit-your-talk-banner {
+	background-image: url(https://ik.imagekit.io/qualys/image/2023/qsc/call-for-speaker-form-banner.jpg);
+	background-size: cover;
+	min-height: 486px;
+    background-position: center;
+	
+}
+.q-qsc-events-details {
+	color: #ffffff;
+	font-family: "Gotham", sans-serif;
+}
+
+.q-qsc-events-heading {
+	font-size: 38px;
+	font-style: normal;
+	font-weight: 600;
+	margin: 0px;
+}
+
+.q-qsc-events-content {
+	font-size: 24px;
+	font-weight: 300;
+	margin-top: 0;
+	margin-bottom:0px;
+}
+
+.q-qsc-events-date-details {
+	font-size: 18px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.q-divider {
+	font-weight: 300;
+	padding: 0 10px;
+	display: inline-block;
+}
+
+.q-divider img {
+    position: relative;
+    top: 10px;
+}
+
+.q-qsc__heading {
+	color: #262626;
+	font-size: 40px;
+}
+
+.q-radio-form-filed {
+	display: inline-block;
+}
+
+.q-qsc-events-details {
+	height: 486px;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	justify-content: center;
+}
+
+@media (min-width:720px) {
+    .form-field input[type=text],
+    .form-field textarea,
+    .form-field select {
+	margin-top:10px;
+    }
+
+	.q-radio-form {
+		width: 350px !important;
+		display: inline-block;
+		color: #262626;
+		font-weight: 400;
+		font-size: 24px;
+	}	
+	.q-qsc-events-details {
+	   height: 486px;
+       display: flex;
+       flex-direction: column;
+       position: absolute;
+       justify-content: center;
+	}
+	.coSpeakerYesNo {
+		padding-top: 20px;
+	}
+	.coSpeakerInfo {
+		padding-bottom: 30px;
+	}
+	.q-radio-form-filed {
+		padding-left: 20px;
+	}
+	.kw-field-error-message {
+		font-family: "Gotham", sans-serif;
+		margin: 5px 0 0 !important;
+		position: absolute;
+		font-size: 12px !important;
+		margin-top: 0px !important;
+	}
+	#field-error-coSpeakerYesNo {
+		position: relative;
+	}
+	#field-error-panelDiscussionYes {
+		position: relative;
+	}
+	.q-full-width .kw-field-error-message {
+		position: relative;
+	}
+	.q-radio-form {
+		padding-bottom: 0;
+	}
+	.q-qsc-events-heading {
+		font-size: 68px;
+		font-style: normal;
+		font-weight: 600;
+		margin: 0px;
+	}
+	
+	.q-qsc-events-content {
+		font-size: 32px;
+		font-weight: 300;
+		margin-top: 0;
+		margin-bottom:15px;
+	}
+	
+	.q-qsc-events-date-details {
+		font-size: 28px;
+		font-weight: 400;
+		margin: 0;
+	}
+
+	.q-divider {
+		padding: 0 20px;
+		padding-bottom: 5px;
+	}
+}
+
+.personal-info {
+	margin-top: 30px;
+}
+
+.kwes-form .kw-border-error {
+	border: 1px solid #ff3852 !important;
+}
+
+.q-confirm-content {
+	padding: 40px 15px;
+}
+
+.q-form-label-info {
+	font-weight: 400;
+    font-size: 24px;
+	color:#262626;
+	font-family: "Gotham", sans-serif;
+}
+
+/*# sourceMappingURL=index.css.map */

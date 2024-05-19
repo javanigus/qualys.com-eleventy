@@ -1,0 +1,78 @@
+.q-grid__container{
+    padding-bottom: 80px;
+}
+.q-summit-banner {
+    margin: auto;
+    margin-bottom: 50px;
+    display: none;
+}
+.heading--1{
+    margin-bottom:0px;
+}
+.heading--1{
+    margin-bottom: 15px;
+}
+.virtual-time{
+	display:flex;
+	/* justify-content: center; */
+	align-items: center;
+	margin-bottom: 25px;
+	flex-direction: column;
+}
+.q-virtual-text{
+	display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    font-family: "Gotham", sans-serif;
+}
+.q-time-zone{
+    padding-left: 9%;
+}
+.q-virtual-text img{
+	width: 20px;
+    height: 22px;
+}
+.q-virtual-text span{
+	margin-left: 10px;
+}
+.q-icon-plus-content__heading p{
+	margin-top: 0px;
+}
+
+.q-icon-plus-content__image {
+    max-width: 85px;
+    border-radius: 50%;
+	margin-top: 5px;
+}
+.q-subscriptions-training__button{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.q-text-content{
+    padding-top: 3em;
+    text-align: center;
+}
+.mobile-banner {
+	width: 100vw;
+}
+@media (min-width: 720px) {
+	.mobile-banner {
+		display: none;
+	}
+	.q-summit-banner {
+		display: block;
+	}
+	.heading--1{
+		margin-top: 0;
+	}
+    .q-text-content{
+        padding-top: 1.2em;
+    }
+	.q-default-hero__container {
+		padding-left: 0px; 
+		padding-right: 0px;
+	}
+	
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,157 @@
+.section17.lightbg{
+background:#F7FAFC;
+}
+
+.section17 .q-single-video-wrapper {
+    margin: auto;
+    display: block;
+}
+
+.section17 .q-single-video-inner {
+    padding: 56.25% 0 0 0;
+    position: relative;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.section17 .q-single-video-inner:hover .poster {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+}
+
+.section17  {
+    padding: 60px 0 60px;
+}
+
+.section17 .text-left-content {
+    margin-bottom: 30px
+}
+
+.section17 .text-left-content h3 {
+    font-size: 24px;
+    margin: 0;
+    letter-spacing: -1.7px;
+}
+
+@media (min-width: 1024px) {
+    .section17 .text-left-content h3 {
+        font-size: 36px;
+    }
+}
+
+.section17 .heading-column {
+    height: auto;
+    display: flex;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    text-align: center
+}
+
+.section17 .text-left-content p {
+    font-size: 16px
+}
+
+
+@media (min-width:720px) {
+    .section17 .text-left-content {
+        width: 90%;
+        margin: auto;
+        margin-bottom:20px
+    }
+
+    .section17 .heading-column {
+        text-align: left
+    }
+}
+
+@media (min-width:992px) {
+   .section17  .text-left-content h3 {
+        font-size: 36px
+    }
+
+    .section17 .text-left-content .sub-copy {
+        font-size: 18px
+    }
+
+    .section17  {
+        padding: 100px 0;
+    }
+}
+
+.section17 .q-grid-video {
+    padding:0 15px;
+    width:100%;  
+}
+
+@media (min-width: 720px)
+{
+.section17 .play-icon {
+    width: 130px;
+}
+}
+.section17 .play-icon {
+    z-index: 3;
+    width: 100px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section17 .q-grid-video-heading {
+    padding:0 15px;
+    text-align:center
+}
+
+@media (min-width: 992px)
+{
+.section17 .q-grid-video-heading {
+    width: 45%;
+    padding:0;
+    text-align:left;
+    margin:auto
+}
+.section17 .q-grid-video {
+    width: 55%;
+    padding:0 15px;
+}
+}
+
+.section17 .video-link-wrapper img{
+	filter: grayscale(100%);
+}
+
+.section17 .video-link-wrapper:hover img{
+	filter: grayscale(0%);
+}
+.section17 .q-video-inner {
+	padding:56.25% 0 0 0;
+	position:relative;
+	z-index: 4;
+	cursor: pointer;
+}
+.section17 .poster, .section17 .play-icon {
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.section17 .play-icon {
+	z-index: 3;
+	width: 100px;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.section17 .q-grid-left-content{
+	margin:auto;
+	height:auto;
+}
+@media (min-width: 720px) {
+	.section17 .play-icon {
+		width: 130px;
+	}
+}

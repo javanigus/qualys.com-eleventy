@@ -1,0 +1,1641 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- this doctype has the least inconsistencies according to http://www.emailology.org/#1 -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="x-apple-disable-message-reformatting">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+	</style>
+	<style type="text/css">
+		/**************************/
+		/* CLIENT-SPECIFIC STYLES */
+		/**************************/
+		#outlook a { /* Force Outlook to provide a "view in browser" menu link. */
+			padding:0;
+		}
+		a[href^="x-apple-data-detectors:"] {
+			color: inherit;
+			text-decoration: none;
+		}
+		body { /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+			width:100% !important;
+			-webkit-text-size-adjust:100%;
+			-ms-text-size-adjust:100%;
+			margin:0;
+			padding:0;
+		}
+		body,
+		li:before,
+		.ui-widget,
+		input,
+		textarea {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+		}
+		.ExternalClass { /* Force Hotmail to display emails at full width */
+			width:100%;
+		}
+		.ExternalClass,
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td,
+		.ExternalClass div { /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+			line-height: 100%;
+		}
+		#backgroundTable {
+			margin:0;
+			padding:0;
+			width:100% !important;
+			line-height: 100% !important;
+		}
+		font {
+			display: block;
+		}
+		.nowrap {
+			white-space: nowrap;
+		}
+
+		/* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+		.text-link,
+		.long-text {
+			/* These are technically the same, but use both */
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+
+			-ms-word-break: break-all;
+			/* This is the dangerous one in WebKit, as it breaks things wherever */
+			word-break: break-all;
+			/* Instead use this non-standard one: */
+			word-break: break-word;
+
+			/* Adds a hyphen where the word breaks, if supported (No Blink) */
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+		}
+
+		/**************************/
+		/* RESET IMAGES           */
+		/**************************/
+		img {
+			outline:none;
+			text-decoration:none;
+			border: none;
+			-ms-interpolation-mode: bicubic; /* works to help ie properly resize images in IE. (if you are resizing them using the width and height attributes)*/
+		}
+		a img {
+			border:none; /* removes border when linking images */
+		}
+		.image_fix {
+			display:block; /* add this class to images that show extra space below them */
+		}
+		img.banner {
+			max-width: 100%;
+			height: auto;
+		}
+
+		/**************************/
+		/* RESET PARAGRAPHS       */
+		/**************************/
+		p,
+		li {
+			margin: 0;
+			color: #6A778B;
+			font-size: 15px;
+			line-height: 1.625;
+		}
+		a.text-link {
+			color: #2e8be0;
+			text-decoration: none;
+		}
+
+		/**************************/
+		/* RESET HEADINGS         */
+		/**************************/
+		/* To minimize inconsistencies, don't use heading tags (h1, h2, h3, h4, h5, h6). Instead, use span tags with a class indicating its heading level. */
+		span.h1 {
+			/* define h1 style here */
+		}
+		span.h2 {
+			/* define h1 style here */
+		}
+		span.h3 {
+			/* define h1 style here */
+		}
+		span.h4 {
+			/* define h1 style here */
+		}
+		span.h5 {
+			/* define h1 style here */
+		}
+		span.h6 {
+			/* define h1 style here */
+		}
+
+		/**************************/
+		/* RESET TABLES, CELLS    */
+		/**************************/
+		table td {
+			border-collapse: collapse;
+			padding: 0;
+		}
+		table {
+			border-collapse:collapse;
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+			padding: 0;
+			border-spacing: 0;
+		}
+		/**************************/
+		/* PREHEADER              */
+		/**************************/
+		div.preheader,
+		div.preheader font { /* prevents users from seeing the "If you're having trouble viewing this message, click here" message in their inbox */
+			display: none;
+			visibility: hidden;
+			color: #255496;
+			background-color: #255496;
+		}
+		/**************************/
+		/* OTHER                 */
+		/**************************/
+		.background-table {
+			border-collapse: collapse;
+			background-color: #EDEEED;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			line-height: 100% !important;
+		}
+		.wrapper-table {
+			max-width: 684px;
+			width: 684px;
+		}
+		.showOnMobile {
+			display: none;
+		}
+		.address a {
+			color: #2E8BE0;
+		}
+		.button a {
+			font-size: 16px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 600;
+			border-radius: 3px;
+			padding: 11px 18px;
+			border: 1px solid #ED2E26;
+			display: inline-block;
+			white-space: nowrap;
+		}
+		sup {
+			font-size: 0.6em;
+		}
+		/*********************************/
+		/* RESPONSIVE STYLES             */
+		/*********************************/
+		@media screen and (max-width:683px) {
+			
+		}
+		/* 414px MAX WIDTH OF MOBILE */
+		@media screen and (max-width:414px) {
+			/* OVERRIDE per-page CSS 
+			   Nick wants text margins on mobile to be 20px on all emails */
+			.mailer-padding.mailer-padding {
+				width: 20px !important;
+				min-width: 20px !important;
+			}
+		}
+	</style>
+
+			<style type="text/css">
+a {
+	font-family: 'Open Sans', sans-serif;
+}
+.master-table {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	line-height: 100%;
+	border-collapse: collapse;
+}
+.wrapper {
+	width: 684px;
+	background-color: #ffffff;
+}
+.header-logo {
+	text-align: left;
+	vertical-align: top;
+}
+.header-date {
+	text-align: right;
+	vertical-align: top;
+}
+.header-date-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16.35px;
+	font-weight: 600;
+	line-height: 2.8;
+	color: #000;
+}
+.header-heading {
+	font-size: 35.8px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+.big-buttons {
+	text-decoration: none;
+	background: #ed2f26;
+	padding: 11px 23px;
+	display: inline-block;
+	border-radius: 2px;
+}
+.big-buttons-2 {
+	text-decoration: none;
+	background: #ed2f26;
+	padding: 11px 19px;
+	display: inline-block;
+	border-radius: 2px;
+}
+.spacing-horizontal-72 {
+	padding-left:72px;
+	padding-right:72px;
+}
+.big-buttons-font {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 15.7px;
+	color: #ffffff;
+}
+.mailer-subheading {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 31px;
+	line-height: 1.1;
+	letter-spacing: 0.01em;
+}
+.mailer-subheading-trial {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 33px;
+	line-height: 1.1;
+	letter-spacing: 0.02em;
+}
+.mailer-paragraph {
+	font-family: 'Open Sans', sans-serif;
+	color: #6A778B;
+	font-size: 16px;
+	line-height: 1.5;
+}
+.mailer-paragraph-trial {
+	font-family: 'Open Sans', sans-serif;
+	color: #6A778B;
+	font-size: 17.15px;
+	line-height: 1.5;
+}
+.mailer-links {
+	text-decoration: none;
+	color: #2E8BE0;
+}
+.mailer-links-font {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 17.2px;
+	line-height: 1.45;
+	font-weight: 600;
+	letter-spacing: 0.025em;
+}
+.news-item-table {
+	max-width: 100%;
+}
+.mailer-items-links {
+	text-decoration: none;
+	color: #2E8BE0;
+}
+.mailer-items-links-font {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 1.6;
+	font-weight: 600;
+	letter-spacing: 0.025em;
+}
+.news-right-column {
+	vertical-align: top;
+}
+.show-mobile-only {
+	display: none;
+}
+.free-trial-img {
+	max-width: 100%;
+	height: auto;
+}
+.footer a {
+	text-decoration: none;
+}
+.mobile-show-row {
+	display: none;
+}
+.mobile-news-seperator {
+	height: 1px;
+	border-width: 0;
+	background-color: #e8e8e8;
+}
+
+/*********************************/
+/* RESPONSIVE STYLES             */
+/*********************************/
+
+@media screen and (max-width:525px) {
+	.mailer-banner-img {
+		max-width: 100%;
+		height: auto !important;
+	}
+	.spacing-horizontal-72 {
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+	.header-logo {
+		vertical-align: middle !important;
+	}
+	.header-date {
+		vertical-align: middle !important;
+	}
+	.header-date-text {
+		font-size: 15px !important;
+		line-height: 1.2 !important;
+	}
+	.mobile-center-align {
+		text-align: center !important;
+	}
+	.mobile-height-50 {
+		height: 50px !important;
+	}
+	.news-items-gap,
+	.news-right-column {
+		display: none !important;
+	}
+	.news-item-table {
+		width: 100% !important;
+	}
+	.show-mobile-only {
+		display: table !important;
+	}
+	.mobile-full-width {
+		width: 100% !important;
+		display: block !important;
+		float: left !important;
+	}
+	.mobile-show-row {
+		display: table-row !important;
+	}
+	.mobile-hide {
+		display: none !important
+	}
+	.mobile-section-separator {
+		border-width: 0;
+		height: 1px;
+		background-color: #c3c3c3;
+	}
+}
+@media screen and (max-width:380px) {
+	.header-date-text {
+		font-size: 11px !important;
+	}
+}
+		</style>
+
+
+	<!-- http://templates.mailchimp.com/development/css/outlook-conditional-css/
+		Target Outlook 2007, 2010 and 2013
+		The first font in the list of fonts MUST be available on the client's machine in order for the font-family to work. -->
+	<!--[if gte mso 12]>
+		<style type="text/css">
+		body, td, p, h2, h1, ul, li, span { font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, sans-serif !important; }
+		</style>
+	<![endif]-->
+
+</head>
+<body>
+
+
+<div class="preheader">
+	<span style="font-family:'Open Sans', sans-serif;">Qualys Newsletter</span>
+</div>
+
+<table cellpadding="0" cellspacing="0" border="0" class="background-table">
+	<tr>
+		<td align="center">
+			<table cellpadding="0" cellspacing="0" border="0" class="wrapper-table" align="center">
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" class="master-table">
+		<tr>
+			<td height="20" class="vertical-padding hideOnMobile"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" class="wrapper">
+					<tr>
+						<td class="spacing-horizontal-72">
+							<table cellpadding="0" cellspacing="0" border="0" style="width: 100%">
+								<tr>
+									<td style="height: 55px"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" style="width: 100%">
+											<tr>
+												<td class="header-logo">
+													<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/qualys-logo-144-2x.png" width="144" alt="Qualys Logo" />
+												</td>
+												<td class="header-date">
+													<font face="'Open Sans', sans-serif" class="header-date-text">Wednesday, May 21, 2018</font>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 45px"></td>
+								</tr>
+								<tr>
+									<td>
+										<font face="'Open Sans', sans-serif" class="header-heading">Qualys in the News</font>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 25px"></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="https://blog.qualys.com/" class="big-buttons"><font face="'Open Sans', sans-serif" class="big-buttons-font">Visit the blog</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 100px" class="mobile-height-50"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="https://qualys.brighttalk.com/summit/4323-qualys-security-conference/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/mailer-banner.jpg" width="684" alt="QSC18 vitual banner" class="mailer-banner-img" /></a>
+						</td>
+					</tr>
+					<tr>
+						<td class="spacing-horizontal-72">
+							<table cellpadding="0" cellspacing="0" border="0" style="width: 100%">
+								<tr>
+									<td style="height: 46px"></td>
+								</tr>
+								<tr>
+									<td>
+										<font face="'Open Sans', sans-serif" class="mailer-subheading">QSC18 Virtual Edition</font>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 26px"></td>
+								</tr>
+								<tr>
+									<td>
+										<font face="'Open Sans', sans-serif" class="mailer-paragraph">In a free, one-day online seminar, learn how to regain visibility of your infrastructure, consolidate your security and compliance stack, and safeguard your digital transformation.</font>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 23px"></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="https://qualys.brighttalk.com/summit/4323-qualys-security-conference/" class="mailer-links"><font face="'Open Sans', sans-serif" class="mailer-links-font">VIEW AGENDA</font></a>
+									</td>
+								</tr>
+								<tr class="mobile-show-row" style="display: none">
+									<td style="height: 30px"></td>
+								</tr>
+								<tr class="mobile-show-row" style="display: none">
+									<td>
+										<hr class="mobile-news-seperator">
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 50px"></td>
+								</tr>
+								<tr>
+									<td>
+										
+										<table cellpadding="0" cellspacing="0" border="0" style="width: 100%" class="news-item-table-wrapper">
+											<tr>
+												<td>
+
+
+
+													<table cellpadding="0" cellspacing="0" border="0" align="left" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-announces-two-new-free-groundbreaking-services-to-help-organizations/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-new-services.jpg" class="mailer-thumbnail-img" width="250" alt="New Services" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">New Services for Cloud &amp; Certificates</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">Get full inventory of public cloud workloads and infrastructure for your DevOps teams, and get inventory and assessment of internet-facing SSL/TLS certificates, all for free.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-announces-two-new-free-groundbreaking-services-to-help-organizations/" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">MORE</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-announces-two-new-free-groundbreaking-services-to-help-organizations/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-new-services.jpg" class="mailer-thumbnail-img" width="250" alt="New Services" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<hr class="mobile-news-seperator">
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 46px"></td>
+														</tr>
+													</table>
+
+													<table cellpadding="0" cellspacing="0" border="0" align="right" width="250" class="news-item-table show-mobile-only">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://community.qualys.com/docs/DOC-6378"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-rsac-presentation.jpg" class="mailer-thumbnail-img" width="250" alt="RSAC Presentations" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">RSAC Presentations</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">Watch videos of the best practices presentations from the Qualys booth at RSA Conference 2018 in San Francisco!</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://community.qualys.com/docs/DOC-6378" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">VIEW NOW</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://community.qualys.com/docs/DOC-6378"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-rsac-presentation.jpg" class="mailer-thumbnail-img" width="250" alt="RSAC Presentations" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<hr class="mobile-news-seperator">
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 46px"></td>
+														</tr>
+													</table>
+
+
+													<table cellpadding="0" cellspacing="0" border="0" align="left" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-moves-into-no-5-position-in-worldwide-security-and-vulnerability/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-idc-logo.jpg" class="mailer-thumbnail-img" width="250" alt="IDC Security" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">IDC Security Market Share Report</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">The report shows how industry consolidation is driving organizations’ demand for better tools to effectively face today’s threat landscape as they digitally transform.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-moves-into-no-5-position-in-worldwide-security-and-vulnerability/" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">MORE</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-moves-into-no-5-position-in-worldwide-security-and-vulnerability/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-idc-logo.jpg" class="mailer-thumbnail-img" width="250" alt="IDC Security" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<hr class="mobile-news-seperator">
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 46px"></td>
+														</tr>
+													</table>
+
+													<table cellpadding="0" cellspacing="0" border="0" align="right" width="250" class="news-item-table show-mobile-only">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-brings-web-application-security-to-devops/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-was-icon.jpg" class="mailer-thumbnail-img" width="250" alt="WebAppSec for DevOps" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">WebAppSec for DevOps</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">Automate web application scanning in DevOps and streamline REST API testing with new Jenkins and Swagger integrations, and new Chrome Browser Recorder extension.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-brings-web-application-security-to-devops/" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">MORE</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-brings-web-application-security-to-devops/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-was-icon.jpg" class="mailer-thumbnail-img" width="250" alt="WebAppSec for DevOps" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<hr class="mobile-news-seperator">
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 46px"></td>
+														</tr>
+													</table>
+
+
+													<table cellpadding="0" cellspacing="0" border="0" align="left" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://cloud.withgoogle.com/next18/sf/?utm_source=google&utm_medium=email&utm_campaign=FY18-Q2-northam-eventnextsf-email-er-next18_reg_sponsor&utm_content=Qualys"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-google-next.jpg" class="mailer-thumbnail-img" width="250" alt="Google Cloud Next" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">Google Cloud Next</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">Learn how Qualys gives you total visibility of your public cloud deployments at Google Cloud Next.  Use discount code <strong>NEXTQLS18</strong> to get 10% off before June 1.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://cloud.withgoogle.com/next18/sf/?utm_source=google&utm_medium=email&utm_campaign=FY18-Q2-northam-eventnextsf-email-er-next18_reg_sponsor&utm_content=Qualys" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">JOIN US</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://cloud.withgoogle.com/next18/sf/?utm_source=google&utm_medium=email&utm_campaign=FY18-Q2-northam-eventnextsf-email-er-next18_reg_sponsor&utm_content=Qualys"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-google-next.jpg" class="mailer-thumbnail-img" width="250" alt="Google Cloud Next" /></a>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 48px"></td>
+														</tr>
+													</table>
+
+												</td>
+												<td class="news-items-gap" style="width: 40px"></td>
+												<td class="news-right-column">
+
+
+													<table cellpadding="0" cellspacing="0" border="0" align="right" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://community.qualys.com/docs/DOC-6378"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-rsac-presentation.jpg" class="mailer-thumbnail-img" width="250" alt="RSAC Presentations" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">RSAC Presentations</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">Watch videos of the best practices presentations from the Qualys booth at RSA Conference 2018 in San Francisco!</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://community.qualys.com/docs/DOC-6378" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">VIEW NOW</font></a>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 46px"></td>
+														</tr>
+													</table>
+													<table cellpadding="0" cellspacing="0" border="0" align="right" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-brings-web-application-security-to-devops/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-was-icon.jpg" class="mailer-thumbnail-img" width="250" alt="WebAppSec for DevOps" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">WebAppSec for DevOps</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">Automate web application scanning in DevOps and streamline REST API testing with new Jenkins and Swagger integrations, and new Chrome Browser Recorder extension.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-brings-web-application-security-to-devops/" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">MORE</font></a>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 46px"></td>
+														</tr>
+													</table>
+
+												</td>
+											</tr>
+										</table>
+
+
+
+
+
+									</td>
+								</tr>
+								<tr class="mobile-show-row" style="display: none">
+									<td>
+										<hr class="mobile-section-separator">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr class="mobile-hide">
+			<td height="30" style="height: 50px;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" class="wrapper">
+					<tr>
+						<td class="spacing-horizontal-72">
+							<table cellpadding="0" cellspacing="0" border="0" style="width: 100%">
+								<tr>
+									<td style="height: 49px"></td>
+								</tr>
+								<tr>
+									<td>
+										<font face="'Open Sans', sans-serif" class="header-heading">Partner News</font>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 25px"></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="https://www.qualys.com/partners/integration/" class="big-buttons-2"><font face="'Open Sans', sans-serif" class="big-buttons-font">Technology partners</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 50px"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" style="width: 100%" class="news-item-table-wrapper">
+											<tr>
+												<td style="vertical-align: top;" class="mobile-full-width">
+													<table cellpadding="0" cellspacing="0" border="0" align="right" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/illumio-and-qualys-integrate-deliver-the-industry-first-vuln-based-micro-segment/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-illumio-logo.jpg" class="mailer-thumbnail-img" width="250" alt="Illumio" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">Illumio</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">New integration enables organizations to visualize vulnerabilities across data centers and clouds through a real-time global vulnerability map.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/illumio-and-qualys-integrate-deliver-the-industry-first-vuln-based-micro-segment/" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">MORE</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/illumio-and-qualys-integrate-deliver-the-industry-first-vuln-based-micro-segment/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-illumio-logo.jpg" class="mailer-thumbnail-img" width="250" alt="Illumio" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<hr class="mobile-news-seperator">
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 52px"></td>
+														</tr>
+													</table>
+												</td>
+												<td class="news-items-gap" style="width: 40px"></td>
+												<td style="vertical-align: top;" class="mobile-full-width">
+													<table cellpadding="0" cellspacing="0" border="0" align="right" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-integrates-with-security-command-center-for-google-cloud-platform/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-google-cloud.jpg" class="mailer-thumbnail-img" width="250" alt="Google Cloud Platform" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">Google Cloud Platform</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">New integration provides visibility, continuous security and compliance seamlessly across cloud workloads.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-integrates-with-security-command-center-for-google-cloud-platform/" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">MORE</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-integrates-with-security-command-center-for-google-cloud-platform/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-google-cloud.jpg" class="mailer-thumbnail-img" width="250" alt="Google Cloud Platform" /></a>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 52px"></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr class="mobile-show-row" style="display: none">
+									<td>
+										<hr class="mobile-section-separator">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr class="mobile-hide">
+			<td height="30" style="height: 50px;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" class="wrapper">
+					<tr>
+						<td class="spacing-horizontal-72">
+							<table cellpadding="0" cellspacing="0" border="0" style="width: 100%">
+								<tr>
+									<td style="height: 48px"></td>
+								</tr>
+								<tr>
+									<td>
+										<font face="'Open Sans', sans-serif" class="header-heading">Customer Spotlight</font>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 25px"></td>
+								</tr>
+								<tr>
+									<td>
+										<a href="https://www.qualys.com/customers/" class="big-buttons"><font face="'Open Sans', sans-serif" class="big-buttons-font">Testimonials</font></a>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 50px"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" style="width: 100%" class="news-item-table-wrapper">
+											<tr>
+												<td style="vertical-align: top;" class="mobile-full-width">
+													<table cellpadding="0" cellspacing="0" border="0" align="right" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://vimeo.com/album/5132226/video/266222987"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-experian-spotlight.jpg" class="mailer-thumbnail-img" width="250" alt="Experian" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">Experian</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">How Experian automates and streamlines security and compliance to support business functions globally without compromising speed to market.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://vimeo.com/album/5132226/video/266222987" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">MORE</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://vimeo.com/album/5132226/video/266222987"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-experian-spotlight.jpg" class="mailer-thumbnail-img" width="250" alt="Experian" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<hr class="mobile-news-seperator">
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 45px"></td>
+														</tr>
+													</table>
+												</td>
+												<td class="news-items-gap" style="width: 40px"></td>
+												<td style="vertical-align: top;" class="mobile-full-width">
+													<table cellpadding="0" cellspacing="0" border="0" align="right" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://vimeo.com/album/5132226/video/266222730"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-capitalone-spotlight.jpg" class="mailer-thumbnail-img" width="250" alt="Capital One" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">Capital One</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">How Capital One DevOps teams automate security and get instant visibility into their elastic cloud deployments with Qualys Cloud Agent and APIs.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://vimeo.com/album/5132226/video/266222730" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">MORE</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://vimeo.com/album/5132226/video/266222730"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-capitalone-spotlight.jpg" class="mailer-thumbnail-img" width="250" alt="Capital One" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<hr class="mobile-news-seperator">
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 45px"></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" style="width: 100%" class="news-item-table-wrapper">
+											<tr>
+												<td style="vertical-align: top;" class="mobile-full-width">
+													<table cellpadding="0" cellspacing="0" border="0" align="right" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://vimeo.com/album/5132226/video/266223535"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-hca-spotlight.jpg" class="mailer-thumbnail-img" width="250" alt="HCA Healthcare" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 22px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">HCA Healthcare</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">How HCA Healthcare builds risk management processes for critical vulnerabilities within days instead of weeks, and better adheres to its own security policies.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://vimeo.com/album/5132226/video/266223535" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">MORE</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://vimeo.com/album/5132226/video/266223535"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-hca-spotlight.jpg" class="mailer-thumbnail-img" width="250" alt="HCA Healthcare" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<hr class="mobile-news-seperator">
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 45px"></td>
+														</tr>
+													</table>
+												</td>
+												<td class="news-items-gap" style="width: 40px"></td>
+												<td style="vertical-align: top;" class="mobile-full-width">
+													<table cellpadding="0" cellspacing="0" border="0" align="right" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://vimeo.com/album/5132226/video/266405662"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-ge-spotlight.jpg" class="mailer-thumbnail-img" width="250" alt="General Electric" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 22px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">General Electric</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 26px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">How General Electric efficiently processes a high volume of applications using Qualys WAS features including bulk import, tags, authentication and the scheduler.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://vimeo.com/album/5132226/video/266405662" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">MORE</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://vimeo.com/album/5132226/video/266405662"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-ge-spotlight.jpg" class="mailer-thumbnail-img" width="250" alt="General Electric" /></a>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 45px"></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr class="mobile-show-row" style="display: none">
+									<td>
+										<hr class="mobile-section-separator">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr class="mobile-hide">
+			<td height="30" style="height: 50px;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" class="wrapper">
+					<tr>
+						<td class="spacing-horizontal-72">
+							<table cellpadding="0" cellspacing="0" border="0" style="width: 100%">
+								<tr>
+									<td style="height: 48px"></td>
+								</tr>
+								<tr>
+									<td>
+										<font face="'Open Sans', sans-serif" class="header-heading">New Free Services</font>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 48px"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" style="width: 100%" class="news-item-table-wrapper">
+											<tr>
+												<td style="vertical-align: top;" class="mobile-full-width">
+													<table cellpadding="0" cellspacing="0" border="0" align="right" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://www.qualys.com/cloudview/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-cloudview-services.jpg" class="mailer-thumbnail-img" width="250" alt="CloudView" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 22px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">CloudView</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 25px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">Inventory and monitor your public cloud workloads and infrastructure for free.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://www.qualys.com/cloudview/" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">SIGN UP</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://www.qualys.com/cloudview/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-cloudview-services.jpg" class="mailer-thumbnail-img" width="250" alt="CloudView" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<hr class="mobile-news-seperator">
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 44px"></td>
+														</tr>
+													</table>
+												</td>
+												<td class="news-items-gap" style="width: 40px"></td>
+												<td style="vertical-align: top;" class="mobile-full-width">
+													<table cellpadding="0" cellspacing="0" border="0" align="right" width="250" class="news-item-table">
+														<tr class="mobile-hide">
+															<td>
+																<a href="https://www.qualys.com/certview/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-certview-services.jpg" class="mailer-thumbnail-img" width="250" alt="CertView" /></a>
+															</td>
+														</tr>
+														<tr class="mobile-hide">
+															<td style="height: 22px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-subheading">CertView</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 25px"></td>
+														</tr>
+														<tr>
+															<td>
+																<font face="'Open Sans', sans-serif" class="mailer-paragraph">Inventory and assess all your Internet-facing certificates for free.</font>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 23px"></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="https://www.qualys.com/certview/" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">SIGN UP</font></a>
+															</td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td style="height: 20px"></td>
+														</tr>
+														<tr class="mobile-show-row" style="display: none">
+															<td>
+																<a href="https://www.qualys.com/certview/"><img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/thumbnail-certview-services.jpg" class="mailer-thumbnail-img" width="250" alt="CertView" /></a>
+															</td>
+														</tr>
+														<tr>
+															<td style="height: 44px"></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr class="mobile-show-row" style="display: none">
+									<td>
+										<hr class="mobile-section-separator">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+
+				</table>
+			</td>
+		</tr>
+		<tr class="mobile-hide">
+			<td height="30" style="height: 50px;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" class="wrapper">
+					<tr>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" style="width: 100%">
+								<tr>
+									<td style="height: 50px"></td>
+								</tr>
+								<tr>
+									<td class="spacing-horizontal-72">
+										<font face="'Open Sans', sans-serif" class="header-heading">Free Trial</font>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 47px"></td>
+								</tr>
+								<tr>
+									<td class="spacing-horizontal-72">
+										<table cellpadding="0" cellspacing="0" border="0" style="width: 100%">
+											<tr>
+												<td>
+													<font face="'Open Sans', sans-serif" class="mailer-paragraph-trial">Easy to implement, easy to use, fully scalable – and requires no infrastructure or software to maintain.</font>
+												</td>
+											</tr>
+											<tr>
+												<td style="height: 20px"></td>
+											</tr>
+											<tr>
+												<td>
+													<a href="https://www.qualys.com/free-trial/" class="mailer-items-links"><font face="'Open Sans', sans-serif" class="mailer-items-links-font">TRY IT</font></a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 47px"></td>
+								</tr>
+								<tr>
+									<td style="vertical-align: top">
+										<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/newsletter-q2/poster-free-trial.jpg" class="free-trial-img" width="684" alt="Free Trial" />
+									</td>
+								</tr>
+								<tr>
+									<td style="height: 50px"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="30" style="height: 30px;"></td>
+		</tr>
+		<tr>
+			<td style="background-color: #EDEEED;">
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+					<tr>
+						<td height="52"></td>
+					</tr>
+					<tr>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center">
+								<tr>
+									<td>
+										<a href="https://twitter.com/qualys">
+											<img src="https://ik.imagekit.io/qualys/image/2018/rsa/mailer-twitter-icon-34-2x.jpg" width="37">
+										</a>
+									</td>
+									<td width="10" style="width: 10px;"></td>
+									<td>
+										<a href="https://www.facebook.com/qualys">
+											<img src="https://ik.imagekit.io/qualys/image/2018/rsa/mailer-facebook-icon-34-2x.jpg" width="37">
+										</a>
+									</td>
+									<td width="10" style="width: 10px;"></td>
+									<td>
+										<a href="https://www.linkedin.com/company/qualys">
+											<img src="https://ik.imagekit.io/qualys/image/2018/rsa/mailer-linkedin-icon-34-2x.jpg" width="37">
+										</a>
+									</td>
+									<td width="10" style="width: 10px;"></td>
+									<td>
+										<a href="https://vimeo.com/qualys">
+											<img src="https://d1dejaj6dcqv24.cloudfront.net/asset/image/icon/vimeo-circle-37-2x.png" width="37">
+										</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="13" style="height: 13px; background-color: #EDEEED;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table style="background-color: #EDEEED; width: 100%;" class="footer">
+					<tr>
+						<td width="30"></td>
+						<td>
+							<table style="width: 100%;">
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" align="center">
+											<tr>
+												<td align="center" style="line-height: 1.4;">
+													<font face="'Open Sans', sans-serif">
+														<span style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93; max-width: 500px;">This email was sent to <a style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;"></a>. <br>
+															You may adjust your <a href="https://lps.qualys.com/subscription-preference.html?utm_source=marketo&amp;utm_medium=email&amp;utm_campaign=demand-gen&amp;utm_term=certview-launch-q2-2018&amp;utm_content=subscription-preferences&amp;leadsource=344565186">email preferences or unsubscribe</a> at any time.</span></font>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" style="height: 16px;"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" align="center" style="text-align: center;">
+											<tr>
+												<td class="mailer-footer-links" style="text-align: center;">
+													<a href="https://www.qualys.com/company/privacy/?utm_source=marketo&amp;utm_medium=email&amp;utm_campaign=demand-gen&amp;utm_term=rsa-2018&amp;utm_content=privacy&amp;leadsource=344565186" style="text-decoration: none; color: #2e8be0"><font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt;  display: inline;">Privacy</font></a>
+													<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93; display: inline;" class="hideOnMobile">|</font><br style="display: none;" class="showOnMobile"><br style="display: none;" class="showOnMobile">
+
+													<a href="https://www.qualys.com/company/contacts/?utm_source=marketo&amp;utm_medium=email&amp;utm_campaign=demand-gen&amp;utm_term=rsa-2018&amp;utm_content=contacts&amp;leadsource=344565186" style="text-decoration: none; color: #707f93; display: inline;"><font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #2e8be0 ;display: inline;">Contacts</font></a>
+													<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93;  display: inline;"  class="hideOnMobile">|</font><br style="display: none;" class="showOnMobile"><br style="display: none;" class="showOnMobile">
+
+													<a href="https://www.qualys.com/support/?utm_source=marketo&amp;utm_medium=email&amp;utm_campaign=demand-gen&amp;utm_term=rsa-2018&amp;utm_content=support&amp;leadsource=344565186" style="text-decoration: none; color: #2e8be0">
+													<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt;  display: inline;">Support</font></a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="17" style="height: 17px;"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" align="center">
+											<tr>
+												<td align="center">
+													<a href="https://www.qualys.com/careers/?utm_source=marketo&amp;utm_medium=email&amp;utm_campaign=demand-gen&amp;utm_term=rsa-2018&amp;utm_content=careers&amp;leadsource=344565186" style="text-decoration: none; color: #707f93; font-weight: 600">
+														<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 14pt;">WE'RE HIRING ></font>
+													</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" style="height: 16px;"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" align="center">
+											<tr>
+												<td align="center" style="line-height: 1.4;">
+													<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">
+													<span class="address">
+														<span style="white-space: nowrap;"><a style="color: #707f93;">919 E Hillsdale Blvd,</a></span> 
+														<span style="white-space: nowrap;"><a style="color: #707f93;">4th Floor,</a></span> 
+														<span style="white-space: nowrap;"><a style="color: #707f93;">Foster City,</a></span> 
+														<a style="color: #707f93;">CA 94404</a> | 
+														<span style="white-space: nowrap;"><a style="color: #707f93;">(650) 801 6100</a></span>
+													</span>
+													<br><br class="showOnMobile">
+
+						Qualys is a global company with offices around the world. Find an <a href="https://www.qualys.com/company/contacts/?utm_source=marketo&amp;utm_medium=email&amp;utm_campaign=demand-gen&amp;utm_term=rsa-2018&amp;utm_content=global-offices&amp;leadsource=344565186#regional-offices" style="text-decoration: none; color: #2e8be0">office near you</a>.</font>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="18" style="height: 18px;"></td>
+								</tr>
+								<tr>
+									<td>
+										<table cellpadding="0" cellspacing="0" border="0" align="center">
+											<tr>
+												<td align="center">
+													<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">©  Qualys, Inc. All rights reserved.</font>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="100" style="height: 100px;"></td>
+								</tr>
+							</table>
+						</td>
+						<td width="30"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</html>

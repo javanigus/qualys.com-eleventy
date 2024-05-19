@@ -1,0 +1,1838 @@
+{
+	"/docs/jp/qualys_vmdr_2.0_platform_japanese_sept_2023.pdf": {
+		"to": "/docs/jp/qualys-vmdr-v2.0-platform_japanese.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-itsm-user-guide.pdf": {
+		"to": "/docs/qualys-vmdr-servicenow-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-edr-api-user-guide.pdf": {
+		"to": "/docs/qualys-vmdr-mobile-enrollment-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-certview-api-user-guide.pdf": {
+		"to": "/docs/qualys-vmdr-mobile-enrollment-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-logo-guidelines.pdf": {
+		"to": "/docs/qualys-vmdr-mobile-enrollment-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/partners/qualys_brand_guidelines.pdf": {
+		"to": "/docs/qualys-vmdr-mobile-enrollment-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-container-security-api-guide.pdf": {
+		"to": "/docs/qualys-vmdr-mobile-enrollment-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-container-runtime-security-api-guide.pdf": {
+		"to": "/docs/qualys-vmdr-mobile-enrollment-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-patch-management-api-user-guide.pdf": {
+		"to": "/docs/qualys-vmdr-mobile-enrollment-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-sem-enrollment-guide.pdf": {
+		"to": "/docs/qualys-vmdr-mobile-enrollment-guide.pdf",
+		"statusCode": 301
+	},
+	"2023-trurisk-research-report-pdf": {
+		"to": "/docs/qualys-2023-trurisk-threat-research-report.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-vmdr-trurisk-solution-brief.pdf": {
+		"to": "/docs/qualys-vmdr-trurisk-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cloud-agent-brief.pdf": {
+		"to": "/docs/qualys-cloud-agent-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cloud-agent-brief-pt.pdf": {
+		"to": "/docs/qualys-cloud-agent-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cloud-agent-datasheet-230118.pdf": {
+		"to": "/docs/qualys-cloud-agent-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-vmdr-ot-v220801.pdf": {
+		"to": "/docs/qualys-vmdr-ot-solution-brief.pdf",
+		"statusCode": 301
+	},
+	"/docs/release-notes/qualys-cloud-platform-10.20.0-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-platform-10.20-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cs-registry-scanning.pdf": {
+		"to": "/docs/qualys-container-security-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cloud-agent-mac-install-guide_donotuse.pdf": {
+		"to": "/docs/qualys-cloud-agent-macos-install-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-patch-management-user-guide.pdf": {
+		"to": "/docs/qualys-patch-management-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-scripts-summary.pdf": {
+		"to": "/docs/qualys-software-credits-scanner-appliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-scanner-appliance-software-credits.pdf": {
+		"to": "/docs/qualys-software-credits-scanner-appliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-assetview-brief.pdf": {
+		"to": "/docs/qualys-asset-inventory-brief.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-scanner-appliance-quick-start-guide-3120-a1.pdf": {
+		"to": "/docs/qualys-scanner-appliance-quick-start-guide-4120-a1.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-api-v1-user-guide.pdf": {
+		"to": "/docs/qualys-api-vmpc-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-api-v2-user-guide.pdf": {
+		"to": "/docs/qualys-api-vmpc-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-asset-management-tagging-api-user-guide.pdf": {
+		"to": "/docs/qualys-asset-management-tagging-api-v2-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-asset-management-tagging-api-v1-user-guide.pdf": {
+		"to": "/docs/qualys-asset-management-tagging-api-v2-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/web-application-security-datasheet.pdf": {
+		"to": "/docs/web-application-scanning-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cloud-fundamentals-amazon.pdf": {
+		"to": "/docs/idc-vulnerability-management-market-shares-2016.pdf",
+		"statusCode": 301
+	},
+	"/docs/ch08.pdf": {
+		"to": "/docs/idc-vulnerability-management-market-shares-2016.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-api-network-support.pdf": {
+		"to": "/docs/idc-vulnerability-management-market-shares-2016.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-asset_management-quick-start-guide.pdf": {
+		"to": "/docs/idc-vulnerability-management-market-shares-2016.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-questionnaire-answer-quick-start.pdf": {
+		"to": "/docs/idc-vulnerability-management-market-shares-2016.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-questionnaire-manage-quick-start.pdf": {
+		"to": "/docs/idc-vulnerability-management-market-shares-2016.pdf",
+		"statusCode": 301
+	},
+	"/docs/vm-for-dummies.pdf": {
+		"to": "/docs/vm-for-dummies-2nd-edition.pdf",
+		"statusCode": 301
+	},
+	"/docs/eula.pdf": {
+		"to": "/docs/qualys-master-cloud-services-agreement.pdf",
+		"statusCode": 301
+	},
+	"/docs/master-cloud-service-agreement.pdf": {
+		"to": "/docs/qualys-master-cloud-services-agreement.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.10/source/qualys-support-sla.pdf": {
+		"to": "/docs/service-level-agreement.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cloud-agent-linux-deployment.pdf": {
+		"to": "/docs/qualys-cloud-agent-linux-install-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.10/qualys-cloud-agent-linux-deployment.pdf": {
+		"to": "/docs/qualys-cloud-agent-linux-install-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cloud-agent-windows-deployment.pdf": {
+		"to": "/docs/qualys-cloud-agent-windows-install-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.10/qualys-cloud-agent-windows-deployment.pdf": {
+		"to": "/docs/qualys-cloud-agent-windows-install-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/geisinger.pdf": {
+		"to": "/docs/2007/cso-interchange/london/security-consequences-of-greening-it-background-bob-tarzey-quocirca.pdf",
+		"statusCode": 301
+	},
+	"/docs/2014/rsac/implementating-risk-based-web-application-security.pdf": {
+		"to": "/docs/2007/cso-interchange/london/security-consequences-of-greening-it-background-bob-tarzey-quocirca.pdf",
+		"statusCode": 301
+	},
+	"/docs/2007/cso-interchange/london/security-consequences-of-greening-it-bob-tarzey-quocirca.pdf": {
+		"to": "/docs/2007/cso-interchange/london/security-consequences-of-greening-it-background-bob-tarzey-quocirca.pdf",
+		"statusCode": 301
+	},
+	"/docs/brinks-france-plans-ahead-for-security-audits-with-qualys.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/University_of_Idaho.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/french-corporate-brochure.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_suite_brochure.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cloud-security-platform.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-continuous-security-global-enterprise.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-continuous-security-global-enterprise-pt.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_suite_brochure_fr.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_suite_brochure_ru.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_suite_brochure_it.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_suite_brochure_es.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_suite_brochure_de.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_suite_brochure_tr.pdf": {
+		"to": "/docs/corporate-brochure.pdf",
+		"statusCode": 301
+	},
+	"/docs/laws-report.pdf": {
+		"to": "/docs/laws-of-vulnerabilities.pdf",
+		"statusCode": 301
+	},
+	"/docs/laws_of_vulnerabilities.pdf": {
+		"to": "/docs/laws-of-vulnerabilities.pdf",
+		"statusCode": 301
+	},
+	"/docs/laws-presentation.pdf": {
+		"to": "/docs/laws-of-vulnerabilities-presentation.pdf",
+		"statusCode": 301
+	},
+	"/docs/laws_2.0.pdf": {
+		"to": "/docs/laws-of-vulnerabilities-2.0.pdf",
+		"statusCode": 301
+	},
+	"/docs/newsroom/reseaux-11-02.pdf": {
+		"to": "/docs/Qualys_01Reseaux_Securite_1103.pdf",
+		"statusCode": 301
+	},
+	"/docs/securityalerts/multiple-msft-h323-20040113.pdf": {
+		"to": "/docs/securityalerts/multiple-h323-20040113.pdf",
+		"statusCode": 301
+	},
+	"/docs/mktg/pci_compliance_2008_-_wyntk.pdf": {
+		"to": "/docs/PCI_Compliance_Brief.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/EarthMover.pdf": {
+		"to": "/docs/newsroom/mediacoverage/uk/2004-04-01-InfosecurityToday.pdf",
+		"statusCode": 301
+	},
+	"/docs/newsroom/reseaux-telecom_10-10-2002.pdf": {
+		"to": "/docs/newsroom/mediacoverage/uk/2004-04-01-InfosecurityToday.pdf",
+		"statusCode": 301
+	},
+	"/docs/2014/rsac/qualysguard-web-application-firewall.pdf": {
+		"to": "/docs/newsroom/mediacoverage/uk/2004-04-01-InfosecurityToday.pdf",
+		"statusCode": 301
+	},
+	"/docs/newsroom/mediacoverage/uk/2004-01-04-infosecuritytoday.pdf": {
+		"to": "/docs/newsroom/mediacoverage/uk/2004-04-01-InfosecurityToday.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/euro_bank.pdf": {
+		"to": "/docs/Laws_2.0.pdf",
+		"statusCode": 301
+	},
+	"/docs/Laws_2.0_PPT.pdf": {
+		"to": "/docs/Laws_2.0.pdf",
+		"statusCode": 301
+	},
+	"/docs/newsroom/netcost_10-11-02.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/fifth_third_bancorp.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/cartagena.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/partners/qualys_partner_newsletter_-_march_2008.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/partners/qualys_partner_newsletter_-_november_2007.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/partners/qualys_partner_newsletter_-_q2_2009.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/partners/qualys_contact_list_and_sales_reference_sheet_q4_2007.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/partners/qualys_partner_newsletter_-_august_2007.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/partners/qualys_partner_newsletter_-_august_2008.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/partners/qualys_partner_newsletter_-_q1_2009.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/partners/qualys_partner_newsletter_-_q3_2009.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/partners/qualys_partner_newsletter_-_q4_2010.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/partners/qualys_partner_newsletter_-_september_2007.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/journal_communications.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/cyber-ark_in.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_fdcc_module_gsg.pdf": {
+		"to": "/docs/qualys-scap-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/notifications/free-services-platform-maintenance.pdf": {
+		"to": "/docs/qualys-pci-dss-requirements-mapping.pdf",
+		"statusCode": 301
+	},
+	"/docs/notifications/us-platform-1-maintenance.pdf": {
+		"to": "/docs/qualys-pci-dss-requirements-mapping.pdf",
+		"statusCode": 301
+	},
+	"/docs/notifications/us-platform-2-maintenance.pdf": {
+		"to": "/docs/qualys-pci-dss-requirements-mapping.pdf",
+		"statusCode": 301
+	},
+	"/docs/notifications/us-platform-3-maintenance.pdf": {
+		"to": "/docs/qualys-pci-dss-requirements-mapping.pdf",
+		"statusCode": 301
+	},
+	"/docs/notifications/eu-platform-1-maintenance.pdf": {
+		"to": "/docs/qualys-pci-dss-requirements-mapping.pdf",
+		"statusCode": 301
+	},
+	"/docs/notifications/eu-platform-2-maintenance.pdf": {
+		"to": "/docs/qualys-pci-dss-requirements-mapping.pdf",
+		"statusCode": 301
+	},
+	"/docs/notifications/in-platform-1-maintenance.pdf": {
+		"to": "/docs/qualys-pci-dss-requirements-mapping.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pci_coverage.pdf": {
+		"to": "/docs/qualys-pci-dss-requirements-mapping.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pc_ds_jp.pdf": {
+		"to": "/docs/malware-detection-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_ent_govt_ds.pdf": {
+		"to": "/docs/malware-detection-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_mal_ds.pdf": {
+		"to": "/docs/malware-detection-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_express_ds.pdf": {
+		"to": "/docs/qualys-express-brief.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_express_ds_fr.pdf": {
+		"to": "/docs/qualys-express-brief.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_express_ds_uk.pdf": {
+		"to": "/docs/qualys-express-brief.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_express_ds_de.pdf": {
+		"to": "/docs/qualys-express-brief.pdf",
+		"statusCode": 301
+	},
+	"/docs/consultant-ds.pdf": {
+		"to": "/docs/qualys-consultant.pdf",
+		"statusCode": 301
+	},
+	"/docs/consultantds_me.qxd.pdf": {
+		"to": "/docs/qualys-consultant.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualy-cloud-agent-api-user-guide.pdf": {
+		"to": "/docs/qualys-api-v2-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cloud-agent-api-user-guide.pdf": {
+		"to": "/docs/qualys-api-v2-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysapiuserguide.pdf": {
+		"to": "/docs/qualys-api-v2-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-api-v1-quick-reference.pdf": {
+		"to": "/docs/qualys-api-quick-reference.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-api-v2-quick-reference.pdf": {
+		"to": "/docs/qualys-api-quick-reference.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.8/qualys-api-v1-quick-reference.pdf": {
+		"to": "/docs/version/8.8/qualys-api-quick-reference.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.8/qualys-api-v2-quick-reference.pdf": {
+		"to": "/docs/version/8.8/qualys-api-quick-reference.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard-scanner-appliance-quick-start-guide.pdf": {
+		"to": "/docs/qualys-scanner-appliance-quick-start-guide-3120-a1.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-scanner-appliance-quick-start-guide.pdf": {
+		"to": "/docs/qualys-scanner-appliance-quick-start-guide-3120-a1.pdf",
+		"statusCode": 301
+	},
+	"/docs/docs/idc_vendor_shares_2009.pdf": {
+		"to": "/docs/idc_vendor_shares_2009.pdf",
+		"statusCode": 301
+	},
+	"/docs/risk_i-o.pdf": {
+		"to": "/docs/qualys-gartner-rio-2016-invitation.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cloud-agent_proxy_windows.pdf": {
+		"to": "/docs/qualys-gartner-rio-2016-invitation.pdf",
+		"statusCode": 301
+	},
+	"/docs/jellybelly.pdf": {
+		"to": "/docs/VRSN_iDefense_QualysGuard_DS_20120604.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/phone-factor.pdf": {
+		"to": "/docs/VRSN_iDefense_QualysGuard_DS_20120604.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/officemax.pdf": {
+		"to": "/docs/VRSN_iDefense_QualysGuard_DS_20120604.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/arval.pdf": {
+		"to": "/docs/VRSN_iDefense_QualysGuard_DS_20120604.pdf",
+		"statusCode": 301
+	},
+	"/docs/idefenseintsvcqualysguard_datasheet.pdf": {
+		"to": "/docs/VRSN_iDefense_QualysGuard_DS_20120604.pdf",
+		"statusCode": 301
+	},
+	"/docs/mc-sdp-brief.pdf": {
+		"to": "/docs/pci-compliance-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pci_ds_uk.pdf": {
+		"to": "/docs/pci-compliance-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pci_connect_ds.pdf": {
+		"to": "/docs/pci-compliance-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/fiducia.pdf": {
+		"to": "/docs/version/8.7/qualys-was-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/fiducia_de.pdf": {
+		"to": "/docs/version/8.7/qualys-was-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/7.13/qualys-was-api-user-guide.pdf": {
+		"to": "/docs/version/8.7/qualys-was-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.0/qualys-was-api-user-guide.pdf": {
+		"to": "/docs/version/8.7/qualys-was-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.1/qualys-was-api-user-guide.pdf": {
+		"to": "/docs/version/8.7/qualys-was-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.2/qualys-was-api-user-guide.pdf": {
+		"to": "/docs/version/8.7/qualys-was-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.3/qualys-was-api-user-guide.pdf": {
+		"to": "/docs/version/8.7/qualys-was-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.4/qualys-was-api-user-guide.pdf": {
+		"to": "/docs/version/8.7/qualys-was-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.5/qualys-was-api-user-guide.pdf": {
+		"to": "/docs/version/8.7/qualys-was-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.6/qualys-was-api-user-guide.pdf": {
+		"to": "/docs/version/8.7/qualys-was-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pc_ds.pdf": {
+		"to": "/docs/policy-compliance-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pc_brief.pdf": {
+		"to": "/docs/policy-compliance-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/top-6-security-use-cases-asset-inventory.pdf": {
+		"to": "/docs/whitepapers/top-6-security-use-cases-asset-inventory.pdf",
+		"statusCode": 301
+	},
+	"/docs/why_vm.pdf": {
+		"to": "/docs/bay-dynamics-qualys-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/bd_qualys_datasheet_final.pdf": {
+		"to": "/docs/bay-dynamics-qualys-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_5_quick_tour.pdf": {
+		"to": "/docs/continuous-monitoring-blueprint-achieving-continuous-security-compliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_6.0_release_notes.pdf": {
+		"to": "/docs/continuous-monitoring-blueprint-achieving-continuous-security-compliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/qweb_fo_4.0_release_notes.pdf": {
+		"to": "/docs/continuous-monitoring-blueprint-achieving-continuous-security-compliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/qweb_fo_4.5_release_notes.pdf": {
+		"to": "/docs/continuous-monitoring-blueprint-achieving-continuous-security-compliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/qweb-3-3-release-notes.pdf": {
+		"to": "/docs/continuous-monitoring-blueprint-achieving-continuous-security-compliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/solutions/qgent/3-4-release/qweb-3-4-release-notes.pdf": {
+		"to": "/docs/continuous-monitoring-blueprint-achieving-continuous-security-compliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_api_faqs.pdf": {
+		"to": "/docs/continuous-monitoring-blueprint-achieving-continuous-security-compliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_nam_api.pdf": {
+		"to": "/docs/continuous-monitoring-blueprint-achieving-continuous-security-compliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_report_share.pdf": {
+		"to": "/docs/continuous-monitoring-blueprint-achieving-continuous-security-compliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/webservices/qgent/integrations/sesa-qualysguard-integration.pdf": {
+		"to": "/docs/continuous-monitoring-blueprint-achieving-continuous-security-compliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-continuous-monitoring-protect-global-perimeter.pdf": {
+		"to": "/docs/continuous-monitoring-blueprint-achieving-continuous-security-compliance.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_faqs_usability.pdf": {
+		"to": "/docs/qualys-was-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/sans-critical-security-controls.pdf": {
+		"to": "/docs/qualys-was-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/big_shift_cloud_based_security.pdf": {
+		"to": "/docs/qualys-was-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-big-shift-to-cloud-based-security.pdf": {
+		"to": "/docs/qualys-was-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/automating-sans-20-critical-security-controls-with-qualysguard.pdf": {
+		"to": "/docs/qualys-was-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/automating-sans-20-critical-security-controls-with-qualys.pdf": {
+		"to": "/docs/qualys-was-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/automating-sans-20-critical-security-controls-with-qualys-de.pdf": {
+		"to": "/docs/qualys-was-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/automating-sans-20-critical-security-controls-with-qualys-fr.pdf": {
+		"to": "/docs/qualys-was-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/apiuser_10282003a.pdf": {
+		"to": "/docs/qualys-was-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_was_gsg.pdf": {
+		"to": "/docs/qualys-was-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_was_gsg_v1.pdf": {
+		"to": "/docs/qualys-was-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_was_gsg_jp.pdf": {
+		"to": "/docs/qualys-was-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_customer_ds.pdf": {
+		"to": "/docs/qualys-overview-paper.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/sodexo.pdf": {
+		"to": "/docs/qualys-asset-management-quick-start-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/asset-management-quick-start-guide.pdf": {
+		"to": "/docs/qualys-asset-management-quick-start-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard-asset-management-quick-start-guide.pdf": {
+		"to": "/docs/qualys-asset-management-quick-start-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard-asset_management-quick-start-guide.pdf": {
+		"to": "/docs/qualys-asset-management-quick-start-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.1/qualys-asset_management-quick-start-guide.pdf": {
+		"to": "/docs/version/8.1/qualys-asset-management-quick-start-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/mds_enterprise_edition_getting_started_guide.pdf": {
+		"to": "/docs/qualys-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/corporate_backgrounder.pdf": {
+		"to": "/docs/qualys-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys_scanner_appliance.pdf": {
+		"to": "/docs/qualys-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_api_user_guide.pdf": {
+		"to": "/docs/qualysguard-api-v1-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_api_v2_user_guide.pdf": {
+		"to": "/docs/qualysguard-api-v2-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/was_api_user_guide.pdf": {
+		"to": "/docs/qualysguard-was-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/hipaa_guide.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/hipaa_security_final_rule_214-2003.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/glba_guide.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/narrowing-security-gap-automated-configuration-assessment.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_con_ds.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_con_ds_de.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_con_ds_es.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_con_ds_fr.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_consultant_faqs.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_consultant_jp.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/qgnac_ds_mech.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/dsw.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/frost-and-sullivan-vm2013-report.pdf": {
+		"to": "/docs/qualys-frost-sullivan-2013-global-vulnerability-management-market-leadership-award.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pci_gsg.pdf": {
+		"to": "/docs/qualys-pci-compliance-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard-asset-management-api-user-guide.pdf": {
+		"to": "/docs/qualys-asset-management-tagging-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_eval.pdf": {
+		"to": "/docs/qualys-evaluators-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_eval_newui.pdf": {
+		"to": "/docs/qualys-evaluators-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_policy_compliance.pdf": {
+		"to": "/docs/qualys-policy-compliance-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_policy_compliance_newui.pdf": {
+		"to": "/docs/qualys-policy-compliance-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_quick_tour.pdf": {
+		"to": "/docs/qualys-quick-tour.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_quick_tour_newui.pdf": {
+		"to": "/docs/qualys-quick-tour.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard-quick-tour.pdf": {
+		"to": "/docs/qualys-quick-tour.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_rollout.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_rollout_newui.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-rollout-guide.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/archer_in.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/customers/casestud/vgz.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_enterprise_ds.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_enterprise_ch.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_enterprise_ds_de.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_enterprise_ds_fr.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_enterprise_ds_uk.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_enterprise_jp.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_consultant_virtual_scanner_newui.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_enterprise_virtual_scanner_newui.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_consultant_virtual_scanner.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_enterprise_virtual_scanner.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_virtual_scanner_amazon.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard_virtual_scanner_vmware.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard-virtual-scanner.pdf": {
+		"to": "/docs/qualys-virtual-scanner-appliance-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/expressds_me.qxd.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/4_steps_to_automating_it_security_compliance.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/sb1386_guide_ver_kr5.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/it_grcm_guide.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/making_website_safe.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/nerc-brief.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/nsguide.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/patch-acceleration-for-stronger-security.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_ent_pub_ds.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_mds_ds.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pci_ds.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_vm_for_ent_ds.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_vm_for_exp_ds.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_was_ds.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_was_guide.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys_qgsa_3120_a1_ds.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys_secure_seal.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard-continuous-management-datasheet.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard-scanner-appliance-qgsa-3120-a1-specifications.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/top-10-reports.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/4_steps_to_automating_it_security_compliance.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/it_grcm_guide.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/justifying_it_security.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/keep-your-pcs-safe-while-surfing-the-web.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/making_website_safe.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/nerc-brief.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/patch-acceleration-for-stronger-security.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/qualys-security-in-the-cloud-eu.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/qualys-security-in-the-cloud.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/responding_to_risk.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/Skandia.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/2005-06-24-chicago-polling-results.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_ent_datasheet_german.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_msp_datasheet_german.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-vernier-solution.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/vm-compliance-guide.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/patch-acceleration-for-stronger-security-de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_mal_ds_de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pc_ds_de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pci_ds_de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_vm_for_ent_ds_de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_vm_for_exp_ds_de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_was_ds_de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-top-10-reports-vm-de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-was-guide-2011-de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys_secure_seal_de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/keep-your-pcs-safe-while-surfing-the-web-de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/patch-acceleration-for-stronger-security-de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/qualys-security-in-the-cloud-de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/qualys-top-10-reports-vm-de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/qualys-was-guide-2011-de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/patch-acceleration-for-stronger-security-fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_mal_ds_fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pc_ds_fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pci_ds_fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_vm_for_exp_ds_fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_was_ds_fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-top-ten-reports-fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-was-guide-fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys_secure_seal_fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/keep-your-pcs-safe-while-surfing-the-web-fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/patch-acceleration-for-stronger-security-fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/qualys-security-in-the-cloud-fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/qualys-top-ten-reports-fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/qualys-was-guide-fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_suite_brochure_jp.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_vm_for_ent_ds_jp.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_vm_for_exp_ds_jp.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pci_ds_jp.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_was_ds_jp.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_vm_for_ent_ds_es.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_vm_for_exp_ds_es.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pc_ds_es.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pc_brief_es.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pci_ds_es.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_was_ds_es.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_suite_brochure_pt.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_vm_for_ent_ds_pt.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pc_ds_pt.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_was_ds_pt.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_vm_for_ent_ds_ru.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pci_ds_ru.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/smart-security-for-small-businesses.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/smart-security-for-small-businesses.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-9-steps-fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/qualys-9-steps-fr.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-9-steps-de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/qualys-9-steps-de.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/yankee-whitepaper.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/yankee-whitepaper.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/msp-ds.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/msp_ds_me2.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/webserv_datasecurity.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/saas_debate.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/powerbroker.pdf": {
+		"to": "/docs/securityalerts/alert-microsoft-2004-07-02.pdf",
+		"statusCode": 301
+	},
+	"/docs/va_treport.pdf": {
+		"to": "/docs/Seal_Guidelines.pdf",
+		"statusCode": 301
+	},
+	"/docs/efficient_ciso.pdf": {
+		"to": "/docs/iSEC_Partners_-_Aurora_Response_Recommendations_-_Public_-_QUALYS.pdf",
+		"statusCode": 301
+	},
+	"/docs/efficient-ciso-fr.pdf": {
+		"to": "/docs/iSEC_Partners_-_Aurora_Response_Recommendations_-_Public_-_QUALYS.pdf",
+		"statusCode": 301
+	},
+	"/docs/efficient-ciso-de.pdf": {
+		"to": "/docs/iSEC_Partners_-_Aurora_Response_Recommendations_-_Public_-_QUALYS.pdf",
+		"statusCode": 301
+	},
+	"/docs/forrester-wc-pvm.pdf": {
+		"to": "/docs/Testimony_Gerhard_Eschelbeck.pdf",
+		"statusCode": 301
+	},
+	"/docs/gartner-magic-quadrant-application-security-testing-2015-08-06.pdf": {
+		"to": "/docs/Testimony_Gerhard_Eschelbeck.pdf",
+		"statusCode": 301
+	},
+	"/docs/gartner-magic-quadrant-application-security-testing.pdf": {
+		"to": "/docs/Testimony_Gerhard_Eschelbeck.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-new-info-risk-landscape-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-7-steps-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-security-in-the-cloud-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-the-need-for-vm-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/urgent-need-rethink-security-using-cloud-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-7-steps-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-new-info-risk-landscape-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-security-in-the-cloud-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/urgent-need-rethink-security-using-cloud-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-7-common-mistakes-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/7_steps_whitepaper.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/7_steps_whitepaper.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/best-practices-selecting-vulnerability-management-solution-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/best-practices-selecting-vulnerability-management-solution-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/best-practices-selecting-vulnerability-management-solution.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/best-practices-selecting-web-application-scanning-solution-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/best-practices-selecting-web-application-scanning-solution-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/best-practices-selecting-web-application-scanning-solution.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/continuous-monitoring-blueprint-achieving-continuous-security-compliance.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/discovering-vulnerable-web-applications-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/discovering-vulnerable-web-applications-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/discovering-vulnerable-web-applications.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/keep-your-pcs-safe-while-surfing-the-web-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/keep-your-pcs-safe-while-surfing-the-web-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/keep-your-pcs-safe-while-surfing-the-web.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_pci_wp.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-7-common-mistakes-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-big-shift-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-big-shift-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-efficient-ciso-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-efficient-ciso-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-justifying-it-security-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-justifying-it-security-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-pci-battle-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-pci-battle-fr-2011.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-security-in-the-cloud-eu.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-security-in-the-cloud.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-six-essential-elements-web-application-security-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-six-essential-elements-web-application-security-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-six-essential-elements-web-application-security.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/responding_to_risk.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/security-based-on-trust-not-fear-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/security-based-on-trust-not-fear.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/securosis-qualys-continuous-security-monitoring.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/securosis-vulnerability-management-evolution-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/securosis-vulnerability-management-evolution-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/webappsec_program_v1_qualys.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/zero-day-offense-vulnerability-management-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/zero-day-offense-vulnerability-management-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/zero-day-offense-vulnerability-management.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_faqs_vulnmgmt.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_faqs_general.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_faqs_audits.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/vrsn_idefense_qualysguard_ds_20120604.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/idefenseexcqualysguard_datasheet.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_nac_ds.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/axa-im.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/mazu-qualys.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/alban_muller_international.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/ash.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/automating-security-it-risk-management-miami-beach.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/axway-secures-cloud-services.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/bank_of_west.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/banque_nsmd_abn-amro_case_study.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/brinks-anticipe-les-audits-securite-du-groupe-avec-qualys.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/bskyb-fixing-security-vulnerabilities-complying-industry-standards-payment-protection.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/caixabank-relies-qualys-deal-security-threats-strengthen-customer-trust.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/casestudy_nybot.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/drg.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/dtring-de.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/ebay.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/ema_security-as-a-service-2010_cisco.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/enterpriseds_me.qxd.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/floridadoh.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/geisinger.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/le_groupe_geodis.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/mcdonalds-fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/ofgem-deploying-security-measures-enabling-compliance-multi-faceted-organisation.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/pakistan-telecommunication-adopts-approach-securing-it-assets-security-posture.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/reigning-in-global-web-application-security-risk-qualys.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/rtl-nederland-strengthens-defences-against-hackers-disruption.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/sodexho_fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/sodexo-automatiser-gestion-vulnerabilites-securiser-entreprise-denvergure-mondiale-premiercase-ordre.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/sodexo-securing-enterprise-automated-vulnerability-management.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/sodexo_fr.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/tower_records.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/ucmc_cs.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/university-westminster-maintaining-security-protecting-infrastructure-assets.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-8912-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-8912-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-agent-linux-1.5-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-agent-linux-1.5-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-agent-linux-mac-1.6-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-agent-linux-mac-1.6-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-agent-windows-1.5.5-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-agent-windows-1.5.5-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.8-api-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.8-api-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.8-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.8-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.8-update-2.15-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.8-update-2.15-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.8-update-2.15-waf-api-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.8-update-2.15-waf-api-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.8-update-2.15-was-api-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.8-update-2.15-was-api-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.8-update-2.15-was-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.8-update-2.15-was-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.8-update-2.16-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.8-update-2.16-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.8-update-2.16-waf-api-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.8-update-2.16-waf-api-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.8-update-2.16.1-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.8-update-2.16.1-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.8-update-2.17-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.8-update-2.17-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.8-update-2.18-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.8-update-2.18-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.8.4-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.8.4-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.9-api-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.9-api-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.9-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.9-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.9-update-2.19-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.9-update-2.19-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.9-update-2.19-waf-1.22-api-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.9-update-2.19-waf-1.22-api-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.9-update-2.19-was-4.13-api-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.9-update-2.19-was-4.13-api-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.9-update-2.19.02-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.9-update-2.19.02-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.9.1-api-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.9.1-api-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.9.1-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.9.1-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.9.1.1-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.9.1.1-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.9.1.2-update-2.20-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.9.1.2-update-2.20-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.9.2-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.9.2-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-8.9.2.1-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-8.9.2.1-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-update-2.21-api-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-update-2.21-api-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/research-notes/qualys-cloud-suite-update-2.21-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-suite-update-2.21-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-asset-management-quick-start-guide.pdf": {
+		"to": "/docs/qualys-api-limits.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.1/qualys-asset-management-quick-start-guide.pdf": {
+		"to": "/docs/qualys-api-limits.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-api-limits-810.pdf": {
+		"to": "/docs/qualys-api-limits.pdf",
+		"statusCode": 301
+	},
+	"/docs/version/8.10/qualys-api-limits-810.pdf": {
+		"to": "/docs/qualys-api-limits.pdf",
+		"statusCode": 301
+	},
+	"/docs/qg_tne_brief.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-was-iviz-solution-brief.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualysguard-integration-cyber-ark-pim-suite.pdf": {
+		"to": "/docs/cyberark-aim-integration-datasheet.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cloud-agent-mac-install-guide.pdf": {
+		"to": "/docs/qualys-cloud-agent-macos-install-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys_securing_google_cloud_platform.pdf": {
+		"to": "/docs/qualys-securing-google-cloud-platform.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-cloud-agent-rhel-coreos-install-guide.pdf": {
+		"to": "/docs/qualys-cloud-agent-redhat-openshift-coreos-install-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-xdr-zerodayenablement-guide.pdf": {
+		"to": "/docs/qualys-xdr-dayzeroenablement-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-xdr-zerooneenablement-guide.pdf": {
+		"to": "/docs/qualys-xdr-dayoneenablement-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-aws-security-hub-integration-api-user-guide.pdf": {
+		"to": "/docs/qualys-aws-cloud-integration-api-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/was-for-dummies.pdf": {
+		"to": "/docs/qualys-container-scanning-connector-jenkins-plugin-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/vm-for-dummies-2nd-edition.pdf": {
+		"to": "/docs/qualys-container-scanning-connector-jenkins-plugin-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/it_policy_compliance_for_dummies.pdf": {
+		"to": "/docs/qualys-container-scanning-connector-jenkins-plugin-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/pci-for-dummies.pdf": {
+		"to": "/docs/qualys-container-scanning-connector-jenkins-plugin-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-vulnerability-analysis-jenkins-plugin-guide.pdf": {
+		"to": "/docs/qualys-container-scanning-connector-jenkins-plugin-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-vulnerability-analysis-bamboo-plugin-guide.pdf": {
+		"to": "/docs/qualys-container-scanning-connector-bamboo-plugin-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-vmdr-itsm-user-guide.pdf": {
+		"to": "/docs/qualys-itsm-user-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-ics-getting-started-guide.pdf": {
+		"to": "/docs/qualys-vmdr-ot-getting-started-guide.pdf",
+		"statusCode": 301
+	},
+	"/docs/release-notes/qualys-cloud-platform-10.21.0-release-notes.pdf": {
+		"to": "/docs/release-notes/qualys-cloud-platform-10.21-release-notes.pdf",
+		"statusCode": 301
+	},
+	"/docs/qualys-vmdr-2-checklist-_essential-vm-must-haves-220708.pdf": {
+		"to": "/docs/qualys-vmdr-checklist-essential-vm-must-haves-condensed-230113.pdf",
+		"statusCode": 301
+	},
+	"/docs/whitepapers/qualys-guide-automating-cis-20-critical-controls.pdf": {
+		"to": "/docs/qualys-guide-automating-cis-20-critical-controls.pdf",
+		"statusCode": 301
+	}
+}

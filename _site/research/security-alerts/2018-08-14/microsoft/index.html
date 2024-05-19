@@ -1,0 +1,3375 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta property="og:image" content="https://q-website-images.s3.amazonaws.com/www/image/logo/qualys-vertical-sans-tagline-social.png" />
+		<meta name="twitter:card" content="summary" />
+	<meta name="description" content="New vulnerability checks in the Qualys
+		Cloud Platform to protect against
+			66 vulnerabilities
+		that were fixed in
+			10 bulletins 
+		announced today by Microsoft." class="swiftype" data-type="text">
+	<title>Microsoft Security Bulletins: August 2018</title>
+
+		<link rel="preconnect" href="https://ik.imagekit.io/qualys" crossorigin>
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+		<link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.png" sizes="32x32">
+	<link rel="icon" href="/favicon-64.png" sizes="64x64">
+	<link rel="icon" href="/favicon-128.png" sizes="128x128">
+	<link rel="icon" href="/favicon-256.png" sizes="256x256">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="/apple-touch-icon-1024x1024.png">
+	<link rel="mask-icon" href="/mask-icon.svg" color="#ED2E26">
+	<link rel="canonical" href="https://www.qualys.com/research/security-alerts/2018-08-14/microsoft/">
+	<meta name="theme-color" content="#2E8BE0">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="/asset/stylesheet/common.css?ts=062723">
+	<link rel="stylesheet" href="/research/security-alerts/security-alert.css">
+
+
+
+</head>
+<body>
+
+
+	<div class="">
+		<header class="q-header">
+			<div class="q-header__container">
+				<button class="q-header__hamburger js-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14">
+						<path fill="#4a4a4a" fill-rule="evenodd" d="M0 0h18v2H0V0zm0 6h18v2H0V6zm0 6h18v2H0v-2z"/>
+					</svg>
+				</button>
+		
+				<button class="q-header__hamburger--desktop js-show-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14">
+						<path fill="#4a4a4a" fill-rule="evenodd" d="M0 0h18v2H0V0zm0 6h18v2H0V6zm0 6h18v2H0v-2z"/>
+					</svg>
+				</button>
+		
+				<a href="/" class="q-header__logo" title="Qualys">
+					<img src="https://ik.imagekit.io/qualys/image/logo/qualys-shield.svg" height="35" alt="Qualys" class="q-logo__shield" />
+					<img src="https://ik.imagekit.io/qualys/image/logo/qualys.svg" width="111" height="35" alt="Qualys" class="q-logo__horizontal" /></a>
+		
+					<div class="q-header__navigation">
+						<ul class="q-navigation">
+							<li class="q-navigation__item q-navigation__item--parent">
+								<div class="q-navigation__link--wrapper">
+									<a href="/cloud-platform/" class="q-navigation__link q-navigation__link--menu q-navigation__link--menu-apps cloud-apps">
+										Platform
+									</a>
+									<img src="https://ik.imagekit.io/qualys/image/icon/global-nav-triangle-tick-mark.svg" width="19" height="11" class="q-navigation__item--tick"/>
+								</div>
+								<div class="q-sub-nav q-sub-nav--apps q-sub-nav--platform">
+									<div class="q-sub-nav__inner">
+										<div class="q-nav">
+											<div class="q-nav__group q-nav__group--apps">
+												<div class="q-nav-apps__container">
+													<div class="q-apps-nav__column q-overview-nav__column">
+														<h2 class="q-nav__heading q-nav__heading--icon">
+															<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/global-it-assets.svg" width="36" height="21" /></span>
+															<span class="q-nav--txt q-nav--txt-line-break">OVERVIEW</span>
+														</h2>
+														<ul class="q-nav__list">
+															<li class="q-nav__list-item">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/cloud-platform/">Enterprise TruRisk Platform</a></span>
+															</li>
+														</ul>
+														<p class="q-nav--description trurisk-desc">Everything you need to measure, manage, and reduce your cyber risk in one place</p>
+													</div>
+													<div class="q-apps-nav__column nav-border solutions-q-apps-nav__column q-capabilites-nav__column">
+														<h2 class="q-nav__heading q-nav__heading--icon solutions-q-nav__heading">
+															<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/solutions-overview.svg" width="36" height="21" /></span>
+															<span class="q-nav--txt q-nav--txt-line-break">CAPABILITIES</span>
+														</h2>
+														<ul class="q-nav__list">
+															<li class="q-nav__list-item solutions-q-nav__list-item active" id="all-capabilities-link" data-category="all-capabilities-link">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link solutions-q-nav__link" href="/apps/">All</a></span>
+															</li>
+															<li class="q-nav__list-item solutions-q-nav__list-item" data-category="asset-management">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link solutions-q-nav__link" href="/apps/cybersecurity-asset-management/">Asset Management</a></span>
+															</li>
+															<li class="q-nav__list-item solutions-q-nav__list-item" data-category="vulnerability-management">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link solutions-q-nav__link" href="/apps/vulnerability-management-detection-response/">Vulnerability & Configuration Management</a></span>
+															</li>
+															<li class="q-nav__list-item solutions-q-nav__list-item" data-category="risk-remediation">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link solutions-q-nav__link" href="/apps/patch-management/">Risk Remediation</a></span>
+															</li>
+															<li class="q-nav__list-item solutions-q-nav__list-item" data-category="threat-detection">
+																<a class="q-nav__link solutions-q-nav__link" href="/apps/threat-protection/">Threat Detection & Response</a>
+															</li>
+															<li class="q-nav__list-item solutions-q-nav__list-item" data-category="compliance">
+																<a class="q-nav__link solutions-q-nav__link" href="/solutions/compliance/">Compliance</a>
+															</li>
+															<li class="q-nav__list-item solutions-q-nav__list-item" data-category="cloud-security">
+																<a class="q-nav__link solutions-q-nav__link" href="/apps/totalcloud/">Cloud Security</a></span>
+															</li>
+														</ul>
+													</div>
+													<div class="q-apps-nav__column-6 nav-border" id="platform-apps-col">
+														<h2 class="q-nav__heading q-nav__heading--icon">
+															<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/platform-products.svg" width="36" height="21"></span>
+															<span class="q-nav--txt q-nav--txt-line-break">PLATFORM APPS</span>
+														</h2>
+														<ul class="q-nav__list all-active">
+															<div class="q-nav-warpper">
+																<h4 class="q-nav__sub__heading q-nav--txt-line-break"> ASSET MANAGEMENT</h4>
+						
+															<li class="q-nav__list-item asset-management q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/cybersecurity-asset-management/">CyberSecurity Asset Management (CSAM)</a></span>
+																<p class="q-nav--description">See entire attack surface, continuously maintain your CMDB, and track EOL/EOS software</p>
+															</li>
+						
+															<li class="q-nav__list-item asset-management q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/cybersecurity-asset-management/#easm">External Attack Surface Management (EASM) - <span class="q-nav__link--highlight">New</span></a></span>
+																<p class="q-nav--description">Gain an attacker’s view of your external internet-facing assets and unauthorized software</p>
+															</li>
+						
+															<h4 class="q-nav__sub__heading q-nav--txt-line-break"> Vulnerability &amp; Configuration Management</h4>
+						
+															<li class="q-nav__list-item vulnerability-management q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/vulnerability-management-detection-response/">Vulnerability Management, Detection &amp; Response (VMDR) - <span class="q-nav__link--highlight">Most Popular</span></a></span>
+																<p class="q-nav--description">Discover, assess, prioritize, and patch critical vulnerabilities up to 50% faster</p>
+															</li>
+						
+															<li class="q-nav__list-item vulnerability-management q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/beta-signup/enterprise-trurisk-management/">Enterprise TruRisk Management (ETM) - <span class="q-nav__link--highlight">New</span></a></span>
+																<p class="q-nav--description">Consolidate & translate security & vulnerability findings from 3rd party tools</p>
+															</li>
+						
+						
+															<li class="q-nav__list-item vulnerability-management q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/web-app-scanning/">Web App Scanning (WAS)</a></span>
+																<p class="q-nav--description">Automate scanning in CI/CD environments with shift left DAST testing</p>
+															</li>
+						
+															<li class="q-nav__list-item vulnerability-management q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/cloud-workload-protection/">Cloud Workload Protection (CWP)</a></span>
+																<p class="q-nav--description">Detect, prioritize, and remediate vulnerabilities in your cloud environment</p>
+															</li>
+															</div>
+															<div class="q-nav-warpper">
+															<h4 class="q-nav__sub__heading q-nav--txt-line-break"> Risk REMEDIATION</h4>
+						
+															<li class="q-nav__list-item risk-remediation q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/patch-management/">Patch Management (PM)</a></span>
+																<p class="q-nav--description">Efficiently remediate vulnerabilities and patch systems</p>
+															</li>
+						
+															<li class="q-nav__list-item risk-remediation q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/custom-assessment-remediation/">Custom Assessment and Remediation (CAR)</a></span>
+																<p class="q-nav--description">Quickly create custom scripts and controls for faster, more automated remediation</p>
+															</li>
+						
+															<h4 class="q-nav__sub__heading q-nav--txt-line-break"> Threat Detection and Response</h4>
+						
+															<li class="q-nav__list-item threat-detection q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/endpoint-detection-response/">Multi-Vector EDR</a></span>
+																<p class="q-nav--description">Advanced endpoint threat protection, improved threat context, and alert prioritization</p>
+															</li>
+						
+						
+															<li class="q-nav__list-item threat-detection q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/extended-detection-response/">Context XDR</a></span>
+																<p class="q-nav--description">Extend detection and response beyond the endpoint to the enterprise</p>
+															</li>
+						
+															<h4 class="q-nav__sub__heading q-nav--txt-line-break">Compliance</h4>
+						
+															<li class="q-nav__list-item compliance q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/policy-compliance/">Policy Compliance</a></span>
+																<p class="q-nav--description">Reduce risk, and comply with internal policies and external regulations with ease</p>
+															</li>
+						
+						
+															<li class="q-nav__list-item compliance q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/file-integrity-monitoring/">File Integrity Monitoring (FIM)</a></span>
+																<p class="q-nav--description">Reduce alert noise and safeguard files from nefarious actors and cyber threats</p>
+															</li>
+															</div>
+															<div class="q-nav-warpper">
+						
+															<h4 class="q-nav__sub__heading q-nav--txt-line-break"> Cloud Security</h4>
+						
+															<li class="q-nav__list-item cloud-security q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/totalcloud/">TotalCloud (CNAPP)</a></span>
+																<p class="q-nav--description">Cloud-Native Application Protection Platform (CNAPP) for multi-cloud environment.</p>
+															</li>
+						
+															<li class="q-nav__list-item cloud-security q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/cloud-security-posture-management/">Cloud Security Posture Management (CSPM)</a></span>
+																<p class="q-nav--description">Continuously discover, monitor, and analyze your cloud assets for misconfigurations and non-standard deployments.</p>
+															</li>
+						
+															<li class="q-nav__list-item cloud-security q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/infrastructure-as-code-security/">Infrastructure as Code Security (IaC)</a></span>
+																<p class="q-nav--description">Detect and remediate security issues within IaC templates</p>
+															</li>
+						
+															<li class="q-nav__list-item cloud-security q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/saas-security-posture-management/">SaaS Security Posture Management (SSPM) - <span class="q-nav__link--highlight">New</span></a></span>
+																<p class="q-nav--description">Manage your security posture and risk across your entire SaaS application stack</p>
+															</li>
+						
+															<li class="q-nav__list-item cloud-security q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/cloud-workload-protection/">Cloud Workload Protection (CWP)</a></span>
+																<p class="q-nav--description">Detect, prioritize, and remediate vulnerabilities in your cloud environment</p>
+															</li>
+						
+															<li class="q-nav__list-item cloud-security q-nav__list-item-b" style="display: list-item;">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/cloud-detection-response/">Cloud Detection and Response (CDR)</a></span>
+																<p class="q-nav--description">Continuous real-time protection of the multi-cloud environment against active exploitation, malware, and unknown threats.</p>
+															</li>
+						
+															<li class="q-nav__list-item cloud-security vulnerability-management q-nav__list-item-b">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/container-security/">Container Security (CS)</a></span>
+																<p class="q-nav--description">Discover, track, and continuously secure containers – from build to runtime</p>
+															</li>
+															</div>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="q-navigation__item q-navigation__item--parent">
+								<div class="q-navigation__link--wrapper">
+									<a href="/solutions/" class="q-navigation__link q-navigation__link--menu q-navigation__link--menu-apps cloud-apps">
+										Solutions
+									</a>
+									<img src="https://ik.imagekit.io/qualys/image/icon/global-nav-triangle-tick-mark.svg" width="19" height="11" class="q-navigation__item--tick"/>
+								</div>
+								<div class="q-sub-nav q-sub-nav--apps q-sub-nav--solution">
+									<div class="q-sub-nav__inner">
+										<div class="q-nav">
+											<div class="q-nav__group q-nav__group--apps">
+												<div class="q-nav-apps__container">
+													<div class="q-apps-nav__column q-sub-nav__group--resources">
+														<h2 class="q-nav__heading q-nav__heading--icon">
+															<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/business-need.svg" width="36" height="21" /></span>
+															<span class="q-nav--txt q-nav--txt-line-break">Use Cases</span>
+														</h2>
+														<ul class="q-nav__list">
+															<li class="q-nav__list-item">
+																<a class="q-nav__link" href="/solutions/endpoint/">Endpoint Security</a>
+															</li>
+															<li class="q-nav__list-item">
+																<a class="q-nav__link" href="/solutions/compliance/">Compliance</a>
+															</li>
+															<li class="q-nav__list-item">
+																<a class="q-nav__link" href="/solutions/pci-compliance/">PCI Compliance</a>
+															</li>
+															<li class="q-nav__list-item">
+																<a class="q-nav__link" href="/solutions/dora-compliance/">DORA Compliance</a>
+															</li>
+															<li class="q-nav__list-item">
+																<a class="q-nav__link" href="/apps/totalcloud/">Cloud Security</a></span>
+															</li>
+															<li class="q-nav__list-item hidden">
+																<a class="q-nav__link" href="#">Application Security</a></span>
+															</li>
+															<li class="q-nav__list-item">
+																<a class="q-nav__link" href="/solutions/devops/">DevOps</a>
+															</li>
+															<li class="q-nav__list-item">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/solutions/threat-protection/">Threat Protection</a></span>
+															</li>
+															<li class="q-nav__list-item">
+																<a class="q-nav__link-app-wrapper" href="/solutions/nis2/">NIS2</a>
+															</li>
+															<li class="q-nav__list-item hidden">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="#">Zero-Trust Security</a></span>
+															</li>
+														</ul>
+													</div>
+													<div class="q-apps-nav__column q-sub-nav__group--resources nav-border">
+														<h2 class="q-nav__heading q-nav__heading--icon">
+															<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/organization.svg" width="36" height="21" /></span>
+															<span class="q-nav--txt q-nav--txt-line-break">Segments</span>
+														</h2>
+														<ul class="q-nav__list">
+															<li class="q-nav__list-item">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/apps/vulnerability-management-detection-response/trurisk/">Small Business</a></span>
+															</li>
+															<li class="q-nav__list-item">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/subscriptions/sme/">Mid-Sized Business</a></span>
+															</li>
+															<li class="q-nav__list-item">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/subscriptions/enterprise/">Enterprise</a></span>
+															</li>
+															<li class="q-nav__list-item">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/subscriptions/government/">Federal</a></span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="q-navigation__item q-navigation__item--parent">
+								<div class="q-navigation__link--wrapper">
+									<a href="/resources/" class="q-navigation__link q-navigation__link--menu q-navigation__link--menu-apps cloud-apps">
+										Resources
+									</a>
+									<img src="https://ik.imagekit.io/qualys/image/icon/global-nav-triangle-tick-mark.svg" width="19" height="11" class="q-navigation__item--tick"/>
+								</div>
+								<div class="q-sub-nav q-sub-nav--apps q-sub-nav--resources">
+									<div class="q-sub-nav__inner">
+										<div class="q-nav">
+											<div class="q-nav__group q-nav__group--apps">
+												<div class="q-nav-apps__container">
+													<div class="q-apps-nav__column q-sub-nav__group--resources">
+														<h2 class="q-nav__heading q-nav__heading--icon">
+															<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/nav-resources.svg" width="36" height="21" /></span>
+															<span class="q-nav--txt q-nav--txt-line-break">RESOURCES</span>
+														</h2>
+														<ul class="q-nav__list">
+														<li class="q-nav__list-item">
+															<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/resources/">Resources Library</a></span>
+														</li>
+														<li class="q-nav__list-item">
+															<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="https://blog.qualys.com/">Blog</a></span>
+														</li>
+														<li class="q-nav__list-item">
+															<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/webinars/">Webinars</a></span>
+														</li>
+														<li class="q-nav__list-item">
+															<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/stream/">Qualys Stream</a></span>
+														</li>
+														<li class="q-nav__list-item hidden">
+															<a class="q-nav__link" href="#">Fundamentals</a>
+														</li>
+													</ul>
+													</div>
+													<div class="q-apps-nav__column q-sub-nav__group--resources nav-border">
+														<h2 class="q-nav__heading q-nav__heading--icon">
+															<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/nav-research.svg" width="36" height="21" /></span>
+															<span class="q-nav--txt q-nav--txt-line-break">RESEARCH</span>
+														</h2>
+														<ul class="q-nav__list">
+															<li class="q-nav__list-item">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/tru/">Threat Research Unit</a></span>
+															</li>
+															<li class="q-nav__list-item">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/research/security-alerts/">Security Alerts</a></span>
+															</li>
+															<li class="q-nav__list-item">
+																<span class="q-nav__link-app-wrapper"><a class="q-nav__link" href="/research/security-advisories/">Security Advisories</a></span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						
+							<li class="q-navigation__item q-navigation__item--parent q-navigation__item--solutions">
+								<div class="q-navigation__link--wrapper">
+									<a href="https://success.qualys.com/customersupport" class="q-navigation__link q-navigation__link--menu q-nav-actions__item--solutions">
+										Support
+									</a>
+									<img src="https://ik.imagekit.io/qualys/image/icon/global-nav-triangle-tick-mark.svg" width="19" height="11" class="q-navigation__item--tick"/>
+								</div>
+								<div class="q-sub-nav q-sub-nav--solutions">
+									<div class="q-sub-nav__inner">
+										<h2 class="q-nav__heading q-nav__heading--icon">
+											<span class="q-nav--icon support"><img src="https://ik.imagekit.io/qualys/image/icon/nav/support.svg" height="36" /></span>
+											<span class="q-nav--txt q-nav--txt-line-break">SUPPORT</span>
+										</h2>
+										<ul class="q-nav__list">
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="https://success.qualys.com/customersupport/">Support Portal</a>
+											</li>
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="/training/">Free Training</a>
+											</li>
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="/documentation/">Documentation</a>
+											</li>
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="https://success.qualys.com/discussions/s/">Community Discussions</a>
+											</li>
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="https://success.qualys.com/support/s/">Knowledgebase</a>
+											</li>
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="/documentation/release-notes/">Release Notes</a>
+											</li>
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="https://notifications.qualys.com/">Release Notifications</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="q-navigation__item q-navigation__item--parent">
+								<div class="q-navigation__link--wrapper">
+									<span class="q-navigation__link q-navigation__link--menu q-navigation__link--menu-more">
+										More
+									</span>
+									<img src="https://ik.imagekit.io/qualys/image/icon/global-nav-triangle-tick-mark.svg" width="19" height="11" class="q-navigation__item--tick"/>
+								</div>
+								<div class="q-sub-nav q-sub-nav--more">
+									<div class="q-sub-nav__inner">
+										<div class="q-nav">
+											<div class="q-nav__group q-nav__group--bordered">
+												<h2 class="q-nav__heading q-nav__heading--icon">
+													<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/customers.svg" width="30" height="27" /></span>
+													<span class="q-nav--txt q-nav--txt-line-break">Customers</span>
+												</h2>
+												<ul class="q-nav__list">
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/customers/">Overview</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/customers/#best-practices">Best Practices</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/customers/#success-stories">Success Stories</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/customers/#testimonials">Testimonials</a>
+													</li>
+												</ul>
+											</div>
+											<div class="q-nav__group q-nav__group--bordered">
+												<h2 class="q-nav__heading q-nav__heading--icon">
+													<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/partners.svg" width="36" height="21" /></span>
+													<span class="q-nav--txt q-nav--txt-line-break">Partners</span>
+												</h2>
+												<ul class="q-nav__list">
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/partners/">Overview</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/partners/program/">Partner Program</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/partners/vad/">VAD Partners</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/partners/var/">VAR Resellers</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/partners/mssp/">MSP/MSSP Partners</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/partners/integration/">Integration Partners</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/partners/faq/">Partner FAQs</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/partners/find/">Find a Partner</a>
+													</li>
+												</ul>
+											</div>
+											<div class="q-nav__group">
+												<h2 class="q-nav__heading q-nav__heading--icon">
+													<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/company.svg" width="30" height="31" /></span>
+													<span class="q-nav--txt q-nav--txt-line-break">Company</span>
+												</h2>
+												<ul class="q-nav__list">
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/company/">About Us</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/company/management/">Our Team</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="https://investor.qualys.com/">Investor Relations</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/company/newsroom/">News</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/customers/awards/">Awards</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/company/events/">Events</a>
+													</li>
+													<li class="q-nav__list-item">
+														<a class="q-nav__link" href="/careers/">Careers</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="underbar"></li>
+							<form name="q-site-search-form" class="q-site-search" action="/company/search/" method="get">
+								<button class="q-nav-actions__link q-nav-actions__item--search-btn" type="submit" title="Submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#627281" d="M6.5 1.24a5.26 5.26 0 105.26 5.26A5.263 5.263 0 006.5 1.24M6.5 13A6.5 6.5 0 1113 6.5 6.513 6.513 0 016.5 13"/><path fill="#627281" d="M10.215 11.054l.824-.824 4.947 4.947-.824.824z"/></svg></button>
+								<input class="q-site-search-form__field-input" type="text" name="q" placeholder="Search qualys.com">
+							</form>
+							<div class="underbar"></div>
+						</ul>			</div>
+		
+					<div class="q-header__actions">
+						<ul class="q-nav-actions">
+							<li class="q-nav-actions__item q-nav-actions__item--search">
+								<a class="q-nav-actions__item--search-btn" href="/company/search">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#627281" d="M6.5 1.24a5.26 5.26 0 105.26 5.26A5.263 5.263 0 006.5 1.24M6.5 13A6.5 6.5 0 1113 6.5 6.513 6.513 0 016.5 13"/><path fill="#627281" d="M10.215 11.054l.824-.824 4.947 4.947-.824.824z"/></svg>
+								</a>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--search-close">
+								<span class="q-nav-actions__link q-nav-actions__link--search-close">
+									<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+										<path fill="#6a778b" d="M7.0710678 5.6568542L1.4142136 0 0 1.4142136l5.6568542 5.6568542L0 12.7279221l1.4142136 1.4142135 5.6568542-5.6568542 5.6568543 5.6568542 1.4142135-1.4142135-5.6568542-5.6568543 5.6568542-5.6568542L12.7279221 0 7.0710678 5.6568542z"/>
+									</svg>
+								</span>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--community">
+								<div class="q-navigation__link--wrapper">
+									<a class="q-nav-actions__link q-nav-actions__link--community">Community</a>
+									<img src="https://ik.imagekit.io/qualys/image/icon/global-nav-triangle-tick-mark.svg" width="19" height="11" class="q-navigation__item--tick"/>
+								</div>
+								<div class="q-sub-nav q-sub-nav--community">
+									<div class="q-sub-nav__inner">
+										<ul class="q-nav__list">
+											<li class="q-nav__list-item q-nav__heading--icon">
+												<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/customers.svg" width="30" height="27" /></span>
+												<a class="q-nav__link" href="https://community.qualys.com/">Overview</a>
+											</li>
+											<li class="q-nav__list-item q-nav__heading--icon">
+												<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/discuss.svg" width="30" height="27" /></span>
+												<a class="q-nav__link" href="https://success.qualys.com/discussions/s/">Discuss</a>
+											</li>
+											<li class="q-nav__list-item q-nav__heading--icon">
+												<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/blog.svg" width="30" height="27" /></span>
+												<a class="q-nav__link" href="https://blog.qualys.com/">Blog</a>
+											</li>
+											<li class="q-nav__list-item q-nav__heading--icon">
+												<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/training.svg" width="29" height="36" /></span>
+												<a class="q-nav__link" href="/training/">Training</a>
+											</li>
+											<li class="q-nav__list-item q-nav__heading--icon">
+												<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/docs.svg" width="22" height="30" /></span>
+												<a class="q-nav__link" href="/documentation/">Docs</a>
+											</li>
+											<li class="q-nav__list-item q-nav__heading--icon">
+												<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/resources.svg" width="29" height="29" /></span>
+												<a class="q-nav__link" href="/resources/">Resources</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--login">
+								<div class="q-navigation__link--wrapper">
+									<span class="q-nav-actions__link q-nav-actions__link--menu">Login</span>
+									<img src="https://ik.imagekit.io/qualys/image/icon/global-nav-triangle-tick-mark.svg" width="19" height="11" class="q-navigation__item--tick"/>
+								</div>
+								<div class="q-sub-nav q-sub-nav--login">
+									<div class="q-sub-nav__inner">
+										<ul class="q-sub-nav-list">
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qualys.com/" class="q-sub-nav-list__link">US Platform 1</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qg2.apps.qualys.com/" class="q-sub-nav-list__link">US Platform 2</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qg3.apps.qualys.com/" class="q-sub-nav-list__link">US Platform 3</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qg4.apps.qualys.com/" class="q-sub-nav-list__link">US Platform 4</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qg1.apps.qualys.ca/" class="q-sub-nav-list__link">CA Platform 1</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qualys.eu/" class="q-sub-nav-list__link">EU Platform 1</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qg2.apps.qualys.eu/" class="q-sub-nav-list__link">EU Platform 2</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qg3.apps.qualys.it/qglogin/index.html" class="q-sub-nav-list__link">EU Platform 3</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qg1.apps.qualys.in/" class="q-sub-nav-list__link">IN Platform 1</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qg1.apps.qualys.ae/" class="q-sub-nav-list__link">AE Platform 1</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qg1.apps.qualys.co.uk/" class="q-sub-nav-list__link">UK Platform 1</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qg1.apps.qualys.com.au/" class="q-sub-nav-list__link">AU Platform 1</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://qualysguard.qg1.apps.qualysksa.com" class="q-sub-nav-list__link">KSA Platform 1</a>
+											</li>
+											<li class="q-sub-nav-list__item">
+												<a href="https://pci.qualys.com/" class="q-sub-nav-list__link">PCI Platform</a>
+											</li>
+										</ul>
+										<div class="q-sub-nav__action">
+											<a class="q-button q-button--secondary q-button--block right" href="https://www.qualys.com/platform-identification/"><span>What’s my platform?</span></a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--contact-us">
+								<div class="q-navigation__link--wrapper">
+									<span class="q-nav-actions__link q-nav-actions__link--menu">Contact us</span>
+									<img src="https://ik.imagekit.io/qualys/image/icon/global-nav-triangle-tick-mark.svg" width="19" height="11" class="q-navigation__item--tick"/>
+								</div>
+								<div class="q-sub-nav q-sub-nav--contact-us">
+									<div class="q-sub-nav__inner">
+										<p class="contact-intro">Contact us below to request a quote, or for any product-related questions</p>
+										<ul class="q-nav__list">
+											<li class="q-nav__list-item q-nav__heading--icon">
+												<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/chat.svg" width="30" height="27" /></span>
+												<a class="q-nav__link drift-open-chat">Chat With Us</a>
+											</li>
+											<li class="q-nav__list-item q-nav__heading--icon">
+												<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/schedule-demo.svg" width="30" height="28" /></span>
+												<a class="q-nav__link" href="/forms/schedule-demo/">Schedule a Demo</a>
+											</li>
+											<li class="q-nav__list-item q-nav__heading--icon">
+												<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/call.svg" width="28" height="28" /></span>
+												<a class="q-nav__link" href="tel:1-800-745-4355">+1 800 745 4355</a>
+											</li>
+											<li class="q-nav__list-item q-nav__heading--icon">
+												<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/request-call.svg" width="28" height="28" /></span>
+												<a class="q-nav__link" href="/forms/request-a-call/">Request a Call or Email</a>
+											</li>
+											<li class="q-nav__list-item q-nav__heading--icon">
+												<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/offices.svg" width="29" height="30" /></span>
+												<a class="q-nav__link" href="/company/contacts/#headquarters">Global Offices and Contacts</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--ai-signup">
+								<div class="q-header-ai-signup">
+									<input type="email" placeholder="name@company.com" class="hero-email"> <a href="#" class="q-button js-hero-create-account">
+										Create Account. <font>It’s Free!</font></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--pm-signup">
+								<div class="q-header-pm-signup">
+									<a href="/forms/patch-management/" class="q-button right js-hero-create-account"><span>Try PM for free</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--vmdr-signup">
+								<div class="q-header-vmdr-signup">
+									<a href="/forms/vmdr/" class="q-button right js-hero-create-account"><span>Try VMDR for free</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--trurisk-signup">
+								<div class="q-header-trurisk-signup">
+									<a href="/forms/vmdr-trurisk/" class="q-button right js-hero-create-account"><span>Try VMDR TruRisk for free</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--cs-signup">
+								<div class="q-header-cs-signup">
+									<a href="/forms/container-security/" class="q-button right"><span>Try CS for free</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--totalcloud-signup">
+								<div class="q-header-totalcloud-signup">
+									<a href="/forms/totalcloud/" class="q-button right js-hero-create-account"><span>Sign up for TotalCloud</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--cdr-signup">
+								<div class="q-header-cdr-signup">
+									<a href="/forms/cloud-detection-response/" class="q-button right js-hero-create-account"><span>Sign up for CDR</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--csam-signup">
+								<div class="q-header-csam-signup">
+									<a href="/forms/cybersecurity-asset-management/" class="q-button right"><span>Try CSAM for free</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--pci-signup">
+								<div class="q-header-pci-signup">
+									<a href="/forms/pci-compliance/" class="q-button right"><span>Try PCI for free</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--dora-signup">
+								<div class="q-header-dora-signup">
+									<a href="/forms/achieving-dora-compliance/" class="q-button right"><span>Try DORA for free</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--pc-signup">
+								<div class="q-header-pci-signup">
+									<a href="/forms/policy-compliance/" class="q-button right"><span>Try Policy Compliance for free</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--vmdr-mobile-signup">
+								<div class="q-header-vmdr-signup">
+									<a href="/apps/vulnerability-management-detection-response/mobile-devices/#trial" class="q-button right js-hero-create-account"><span>Try VMDR for Mobile Devices</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--saasdr-signup">
+								<div class="q-header-saasdr-signup">
+									<a href="/forms/saas-detection-response/" class="q-button right"><span>Try SaaSDR for free</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--edr-signup">
+								<div class="q-header-vmdr-signup">
+									<a href="/forms/endpoint-detection-response/" class="q-button right"><span>Try Multi-Vector EDR for Free</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--car-signup">
+								<div class="q-header-vmdr-signup">
+									<a href="/forms/custom-assessment-remediation/" class="q-button right"><span>Try CAR for Free</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--xdr-signup">
+								<div class="q-header-vmdr-signup">
+									<a href="/forms/extended-detection-response/" class="q-button right"><span>Request a Demo</span></a>
+								</div>
+							</li>
+							<li class="q-nav-actions__item q-nav-actions__item--trial">
+								<div class="q-navigation__link--wrapper">
+									<span class="q-button q-nav-actions__link--menu down"><span>Try it</span></span>
+									<img src="https://ik.imagekit.io/qualys/image/icon/global-nav-triangle-tick-mark.svg" width="19" height="11" class="q-navigation__item--tick"/>
+								</div>
+								<div class="q-sub-nav q-sub-nav--trial">
+									<div class="q-sub-nav__inner">
+										<h2 class="q-nav__heading q-nav__heading--icon">
+											<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/platform.svg" width="30" height="30" /></span>
+											<span class="q-nav--txt">Enterprise TruRisk Platform</span>
+										</h2>
+										<ul class="q-nav__list">
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="/free-trial/">Cloud Platform - Free Trial</a>
+											</li>
+										</ul>
+										<h2 class="q-nav__heading q-nav__heading--icon">
+											<span class="q-nav--icon"><img src="https://ik.imagekit.io/qualys/image/icon/nav/free-services.svg" width="24" height="27" /></span>
+											<span class="q-nav--txt free-services">Free Services</span>
+										</h2>
+										<ul class="q-nav__list">
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="/forms/remote-endpoint/">60-Day Remote Endpoint Protection</a>
+											</li>
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="/apps/global-assetview/">Global AssetView</a>
+											</li>
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="/community-edition/">Community Edition</a>
+											</li>
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="https://www.ssllabs.com/">SSL Labs</a>
+											</li>
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="/certview/">CertView</a>
+											</li>
+											<li class="q-nav__list-item">
+												<a class="q-nav__link" href="/free-tools-trials/browsercheck/">BrowserCheck</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+			</div>
+			<div class="q-search-links-container">
+				<div class="q-search-links-inner-container">
+					<ul class="q-search-links">
+						<li class="q-search-link--heading">Quick Links</li>
+						<li><a href="/resources/">Resources (guides, whitepapers, etc.)</a></li>
+						<li><a href="/apps/">Qualys Cloud Apps</a></li>
+						<li><a href="/free-trial/">Free trial</a></li>
+						<li><a href="/company/newsroom/">News</a></li>
+						<li><a href="/company/events/">Events calendar</a></li>
+						<li><a href="https://community.qualys.com">Qualys Community</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div class="overlay-mask"></div>
+		
+		<div class="q-navigation-mobile">
+			<div class="q-navigation-mobile__panel q-navigation-mobile__panel--first">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button js-menu">Close</button>
+				</div>
+				<div class="q-navigation-mobile-wrapper">
+					<img class="q-hide-search" src="https://q-website-images.s3.amazonaws.com/www/image/icon/chevron-selectbox.svg">
+					<ul class="q-navigation-mobile__list">
+						<div class="q-navigation-mobile__link-container">
+							<li class="q-navigation-mobile__item">
+								<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Platform">Platform</span>
+							</li>
+							<li class="q-navigation-mobile__item">
+								<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Solutions">Solutions</span>
+							</li>
+							<li class="q-navigation-mobile__item">
+								<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Resources">Resources</span>
+							</li>
+							<li class="q-navigation-mobile__item">
+								<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Customers">Customers</span>
+							</li>
+							<li class="q-navigation-mobile__item">
+								<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Partners">Partners</span>
+							</li>
+							<li class="q-navigation-mobile__item">
+								<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Support">Support</span>
+							</li>
+							<li class="q-navigation-mobile__item">
+								<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Company">Company</span>
+							</li>
+							<li class="q-navigation-mobile__item">
+								<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Community">Community</span>
+							</li>
+							<li class="q-navigation-mobile__item">
+								<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Login">Login</span>
+							</li>
+							<li class="q-navigation-mobile__item">
+								<span class="q-navigation-mobile__link q-navigation-mobile__link--has-children" data-target="Contactus">Contact us</span>
+							</li>
+						</div>
+						<div class="q-search-mobile">
+							<div class="q-click-helper"></div>
+							<li class="q-navigation-mobile__item ">
+								<form name="q-site-search-form" class="q-site-search" action="/company/search/" method="get">
+									<button class="q-nav-actions__link q-nav-actions__item--search-btn" type="submit" title="Submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#627281" d="M6.5 1.24a5.26 5.26 0 105.26 5.26A5.263 5.263 0 006.5 1.24M6.5 13A6.5 6.5 0 1113 6.5 6.513 6.513 0 016.5 13"/><path fill="#627281" d="M10.215 11.054l.824-.824 4.947 4.947-.824.824z"/></svg></button>
+									<input class="q-site-search-form__field-input" type="text" name="q" placeholder="Search qualys.com">
+								</form>
+							</li>
+		
+							<div class="q-search-links-mobile">
+								<li class="q-navigation-mobile__item">
+									<span class="q-navigation-mobile__link q-search-link--heading">Quick Links</span>
+								</li>
+								<li class="q-navigation-mobile__item">
+									<span class="q-navigation-mobile__link"><a href="/resources/">Resources (guides, whitepapers, etc.)</a></span>
+								</li>
+								<li class="q-navigation-mobile__item">
+									<span class="q-navigation-mobile__link"><a href="/apps/">Qualys Cloud Apps</a></span>
+								</li>
+								<li class="q-navigation-mobile__item">
+									<span class="q-navigation-mobile__link"><a href="/company/newsroom/">News</a></span>
+								</li
+								<li class="q-navigation-mobile__item">
+									<span class="q-navigation-mobile__link"><a href="/company/events/">Events Calendar</a></span>
+								</li>
+								<li class="q-navigation-mobile__item">
+									<span class="q-navigation-mobile__link"><a href="https://community.qualys.com">Qualys Community</a></span>
+								</li>
+							</div>
+						</div>
+						<li class="q-navigation-mobile__item free-trial">
+							<span class="q-button" href="/free-trial/" data-target="try-it">Try it</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="q-navigation-mobile__panel" data-title="Cloud Platform">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Cloud Platform
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/cloud-platform/">Cloud Platform</a>
+					</li>
+				</ul>
+			</div>
+		
+			<div class="q-navigation-mobile__panel q-navigation-mobile__panel--apps" data-title="Platform">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Platform
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/global-it-assets.svg" width="30" height="30" /></span>
+							Overview
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item q-navigation-mobile__item--seperator">
+						<a class="q-navigation-mobile__link" href="/cloud-platform/">Enterprise TruRisk Platform</a>
+						<p class="q-nav--description q-nav--description-b trurisk-desc">Everything you need to measure, manage, and reduce your cyber risk in one place</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/solutions-overview.svg" width="30" height="30" /></span>
+								CAPABILITIES
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link q-navigation-mobile__link--has-children q-navigation-mobile__link--has-children-b" href="/apps/cybersecurity-asset-management/" data-target="asset-management">Asset Management</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link q-navigation-mobile__link--has-children q-navigation-mobile__link--has-children-b" href="/apps/vulnerability-management-detection-response/" data-target="vulnerability-configuration-management">Vulnerability & Configuration Management</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link q-navigation-mobile__link--has-children q-navigation-mobile__link--has-children-b" href="/apps/patch-management/" data-target="risk-remediation">Risk Remediation</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link q-navigation-mobile__link--has-children q-navigation-mobile__link--has-children-b" href="/apps/threat-protection/" data-target="threat-detection-response">Threat Detection & Response</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link q-navigation-mobile__link--has-children q-navigation-mobile__link--has-children-b" href="/solutions/compliance/" data-target="compliance">Compliance</a>
+					</li>
+					<li class="q-navigation-mobile__item q-navigation-mobile__item--seperator">
+						<a class="q-navigation-mobile__link q-navigation-mobile__link--has-children q-navigation-mobile__link--has-children-b" href="/apps/totalcloud/" data-target="cloud-security">Cloud Security</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/platform-products.svg" width="31" height="28" /></span>
+							Platform Apps
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/cybersecurity-asset-management/">CyberSecurity Asset Management (CSAM)</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/cybersecurity-asset-management/#easm">External Attack Surface Management (EASM) - <span class="q-nav__link--highlight">New</span></a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/vulnerability-management-detection-response/">Vulnerability Management, Detection & Response (VMDR) – <span class="q-navigation-mobile__link--highlight">Most Popular</span></a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/beta-signup/enterprise-trurisk-management/">Enterprise TruRisk Management (ETM)<span class="q-navigation-mobile__link--highlight"> - New</span></a></a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/web-app-scanning/">Web App Scanning (WAS)</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/patch-management/">Patch Management (PM)</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/custom-assessment-remediation/">Custom Assessment and Remediation (CAR)</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/endpoint-detection-response/">Qualys Endpoint Security</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/extended-detection-response/">Context XDR</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/policy-compliance/">Policy Compliance</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/file-integrity-monitoring/">File Integrity Monitoring (FIM)</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/totalcloud/">TotalCloud (CNAPP)</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/cloud-security-posture-management/">Cloud Security Posture Management (CSPM)</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/infrastructure-as-code-security/">Infrastructure as Code Security (IaC)</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/saas-security-posture-management/">SaaS Security Posture Management (SSPM) - <span class="q-nav__link--highlight">New</span></a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/cloud-workload-protection/">Cloud Workload Protection (CWP)</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/cloud-detection-response/">Cloud Detection &amp; Response (CDR)</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/container-security/">Container Security (CS)</a>
+					</li>
+				</ul>
+		
+			</div>
+			<div class="q-navigation-mobile__panel" data-title="Solutions">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Solutions
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/solutions/">Overview</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/business-need.svg" width="30" height="34" /></span>
+							Use Cases
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/solutions/endpoint/">Endpoint Security</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/solutions/compliance/">Compliance</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/solutions/pci-compliance/">PCI Compliance</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/solutions/dora-compliance/">DORA Compliance</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/totalcloud/">Cloud Security</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/solutions/devops/">DevOps</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/solutions/threat-protection/">Threat Protection</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/solutions/nis2/">NIS2</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/organization.svg" width="30" height="34" /></span>
+							Segments
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/vulnerability-management-detection-response/trurisk/">Small Business</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/subscriptions/sme/">Mid-Sized Business</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/subscriptions/enterprise/">Enterprise</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/subscriptions/government/">Federal</a>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel q-navigation-mobile__panel--apps" data-title="Resources">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Resources
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/resources/">Overview</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/nav-resources.svg" width="30" height="30" /></span>
+							Resources
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/resources/">Resources Library</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://blog.qualys.com/">Blog</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/webinars/">Webinars</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/stream/">Qualys Stream</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/nav-research.svg" width="31" height="28" /></span>
+							Research
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/tru/">Threat Research Unit</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link"  href="/research/security-alerts/">Security Alerts</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link"  href="/research/security-advisories/">Security Advisories</a>
+					</li>
+				</ul>
+		
+			</div>
+			<div class="q-navigation-mobile__panel" data-title="Customers">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Customers
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/customers/">Overview</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/customers/#best-practices">Best Practices</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/customers/#success-stories">Success Stories</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/customers/#testimonials">Testimonials</a>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel" data-title="Partners">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Partners
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/partners/">Overview</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/partners/program/">Partner Program</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/partners/vad/">VAD Partners</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/partners/var/">VAR Resellers</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/partners/mssp/">MSP/MSSP Partners</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/partners/integration/">Integration Partners</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/partners/faq/">Partner FAQs</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/partners/find/">Find a Partner</a>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel" data-title="Community">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Community
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://community.qualys.com/">Overview</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://success-qa.qualys.com/discussions/s/">Discuss</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/documentation/">Docs</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://blog.qualys.com/">Blog</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/resources/">Resources</a>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel" data-title="Support">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Support
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://success-qa.qualys.com/customersupport/">Support Portal</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/training/">Free Training</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/documentation/">Documentation</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://success-qa.qualys.com/discussions/s/">Community Discussions</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://success-qa.qualys.com/support/s/">Knowledgebase</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/documentation/release-notes/">Release Notes</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://notifications.qualys.com/">Release Notifications</a>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel" data-title="Company">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Company
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/company/">About Us</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/company/management/">Our Team</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://investor.qualys.com/">Investor Relations</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/company/newsroom/">News</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/customers/awards/">Awards</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/company/events/">Events</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/careers/">Careers</a>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel" data-title="Login">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Login
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qualys.com/">US Platform 1</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qg2.apps.qualys.com/">US Platform 2</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qg3.apps.qualys.com/">US Platform 3</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qg4.apps.qualys.com/">US Platform 4</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qg1.apps.qualys.ca/">CA Platform 1</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://pci.qualys.com/">PCI Platform</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qualys.eu/">EU Platform 1</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qg2.apps.qualys.eu/">EU Platform 2</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qg3.apps.qualys.it/">EU Platform 3</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qg1.apps.qualys.in/">IN Platform 1</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qg1.apps.qualys.ae/">AE Platform 1</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qg1.apps.qualys.co.uk/">UK Platform 1</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qg1.apps.qualys.com.au/">AU Platform 1</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://qualysguard.qg1.apps.qualysksa.com">KSA Platform 1</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://www.qualys.com/platform-identification/">What's my platform?</a>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel" data-title="Contactus">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Contact us
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item">
+						<p class="contact-intro">Contact us below to request a quote, or for any product-related questions</p>
+					</li>
+					 <li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link drift-open-chat">Chat With Us</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/forms/schedule-demo/">Schedule a Demo</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="tel:1-800-745-4355">+1 800 745 4355</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/forms/request-a-call/">Request a Call or Email</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/company/contacts/#headquarters">Global Offices and Contacts</a>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel" data-title="try-it">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Try it
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/platform.svg" width="30" height="30" /></span>
+							Enterprise TruRisk Platform
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/free-trial/">Cloud Platform - Free Trial</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/free-services.svg" width="24" height="27" /></span>
+							Free Services
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/forms/remote-endpoint/">60-Day Remote Endpoint Protection</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/global-assetview/">Global AssetView</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/community-edition/">Community Edition</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="https://www.ssllabs.com/">SSL Labs</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/certview/">CertView</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/free-tools-trials/browsercheck/">BrowserCheck</a>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel q-navigation-mobile__panel-b" data-title="asset-management">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back-b">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Asset Management
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item q-navigation-mobile__item--seperator">
+						<a class="q-navigation-mobile__link" href="/apps/cybersecurity-asset-management/">Overview</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/platform-products.svg" width="31" height="28" /></span>
+							Platform Apps
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/cybersecurity-asset-management/">CyberSecurity Asset Management (CSAM) </a>
+						<p class="q-nav--description q-nav--description-b">See entire attack surface, continuously maintain your CMDB, and track EOL/EOS software</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/cybersecurity-asset-management/#easm/">External Attack Surface Management (EASM) – <span class="q-navigation-mobile__link--highlight">New</span></a>
+						<p class="q-nav--description q-nav--description-b asset-management">Gain an attacker’s view of your external internet-facing assets and unauthorized software</p>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel q-navigation-mobile__panel-b" data-title="vulnerability-configuration-management">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back-b">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Vulnerability & Configuration Management
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item q-navigation-mobile__item--seperator">
+						<a class="q-navigation-mobile__link" href="/apps/vulnerability-management-detection-response/">Overview</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/platform-products.svg" width="31" height="28" /></span>
+							Platform Apps
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/vulnerability-management-detection-response/">Vulnerability Management, Detection &amp; Response (VMDR) - <span class="q-navigation-mobile__link--highlight">Most Popular</span></a>
+						<p class="q-nav--description q-nav--description-b vulnerability-management">Discover, assess, prioritize, and patch critical vulnerabilities up to 50% faster</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/beta-signup/enterprise-trurisk-management/">Enterprise TruRisk Management (ETM) - <span class="q-navigation-mobile__link--highlight">New</span></a>
+						<p class="q-nav--description q-nav--description-b vulnerability-management">Consolidate & translate security & vulnerability findings from 3rd party tools</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/container-security/">Container Security (CS)</a>
+						<p class="q-nav--description q-nav--description-b cloud-security">Discover, track, and continuously secure containers – from build to runtime</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/cloud-workload-protection/">Cloud Workload Protection (CWP)</a>
+						<p class="q-nav--description q-nav--description-b cloud-security">Detect, prioritize, and remediate vulnerabilities in your cloud environment</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/web-app-scanning/">Web App Scanning (WAS)</a></span>
+						<p class="q-nav--description q-nav--description-b vulnerability-management">Automate scanning in CI/CD environments with shift left DAST testing</p>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel q-navigation-mobile__panel-b" data-title="risk-remediation">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back-b">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Risk Remediation
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item q-navigation-mobile__item--seperator">
+						<a class="q-navigation-mobile__link" href="/apps/patch-management/">Overview</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/platform-products.svg" width="31" height="28" /></span>
+							Platform Apps
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/patch-management/">Patch Management (PM)</a>
+						<p class="q-nav--description">Efficiently remediate vulnerabilities and patch systems</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/custom-assessment-remediation/">Custom Assessment and Remediation (CAR)</a>
+						<p class="q-nav--description">Quickly create custom scripts and controls for faster, more automated remediation</p>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel q-navigation-mobile__panel-b" data-title="threat-detection-response">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back-b">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Threat Detection & Response
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item q-navigation-mobile__item--seperator">
+						<a class="q-navigation-mobile__link" href="/apps/threat-protection/">Overview</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/platform-products.svg" width="31" height="28" /></span>
+							Platform Apps
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/endpoint-detection-response/">Qualys Endpoint Security</a>
+						<p class="q-nav--description q-nav--description-b threat-detection">Advanced endpoint threat protection, improved threat context, and alert prioritization</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/extended-detection-response/">Context XDR</a>
+						<p class="q-nav--description q-nav--description-b threat-detection">Extend detection and response beyond the endpoint to the enterprise</p>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel q-navigation-mobile__panel-b" data-title="compliance">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back-b">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Compliance
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item q-navigation-mobile__item--seperator">
+						<a class="q-navigation-mobile__link" href="/solutions/compliance/">Overview</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/platform-products.svg" width="31" height="28" /></span>
+							Platform Apps
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/policy-compliance/">Policy Compliance</a>
+						<p class="q-nav--description q-nav--description-b compliance">Reduce risk, and comply with internal policies and external regulations with ease</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/file-integrity-monitoring/">File Integrity Monitoring (FIM)</a>
+						<p class="q-nav--description q-nav--description-b compliance">Reduce alert noise and safeguard files from nefarious actors and cyber threats</p>
+					</li>
+				</ul>
+			</div>
+			<div class="q-navigation-mobile__panel q-navigation-mobile__panel-b" data-title="cloud-security">
+				<div class="q-navigation-mobile__header">
+					<button class="q-navigation-mobile__button q-navigation-mobile__button--back js-back-b">Back</button>
+					<div class="q-navigation-mobile__title q-navigation-mobile__title-b">
+						Cloud Security
+					</div>
+				</div>
+				<ul class="q-navigation-mobile__list">
+					<li class="q-navigation-mobile__item q-navigation-mobile__item--seperator">
+						<a class="q-navigation-mobile__link" href="/apps/totalcloud/">Overview</a>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<h3 class="q-navigation-mobile__appheading">
+							<span class="q-app-nav--icon"><img src="https://q-website-images.s3.amazonaws.com/www/image/icon/nav/platform-products.svg" width="31" height="28" /></span>
+							Platform Apps
+						</h3>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/totalcloud/">TotalCloud (CNAPP)</a>
+						<p class="q-nav--description q-nav--description-b cloud-security">Cloud-Native Application Protection Platform (CNAPP) for multi-cloud environment.</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/cloud-security-posture-management/">Cloud Security Posture Management (CSPM)</a>
+						<p class="q-nav--description q-nav--description-b cloud-security">Continuously discover, monitor, and analyze your cloud assets for misconfigurations and non-standard deployments.</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/infrastructure-as-code-security/">Infrastructure as Code Security (IaC)</a>
+						<p class="q-nav--description q-nav--description-b cloud-security">Detect and remediate security issues within IaC templates</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/saas-security-posture-management/">SaaS Security Posture Management (SSPM) - <span class="q-nav__link--highlight">New</span></a>
+						<p class="q-nav--description q-nav--description-b cloud-security">Manage your security posture and risk across your entire SaaS application stack</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/cloud-workload-protection/">Cloud Workload Protection (CWP)</a>
+						<p class="q-nav--description q-nav--description-b cloud-security">Detect, prioritize, and remediate vulnerabilities in your cloud environment</p>
+					</li>
+					<li class="q-navigation-mobile__item">
+						<a class="q-navigation-mobile__link" href="/apps/cloud-detection-response/">Cloud Detection and Response (CDR)</a>
+						<p class="q-nav--description q-nav--description-b cloud-security">Continuous real-time protection of the multi-cloud environment against active exploitation, malware, and unknown threats.</p>
+					</li>
+					<li class="q-navigation-mobile__item" data-category="solutions-vulnerability-management">
+						<a class="q-navigation-mobile__link" href="/apps/container-security/">Container Security (CS)</a>
+						<p class="q-nav--description q-nav--description-b cloud-security">Discover, track, and continuously secure containers – from build to runtime</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="q-grid hidden">
+		<div class="q-grid__container">
+			<div class="q-grid__row">
+				<div class="q-grid__column">
+					<div class="q-grid__visualize"></div>
+				</div>
+				<div class="q-grid__column">
+					<div class="q-grid__visualize"></div>
+				</div>
+				<div class="q-grid__column">
+					<div class="q-grid__visualize"></div>
+				</div>
+				<div class="q-grid__column">
+					<div class="q-grid__visualize"></div>
+				</div>
+				<div class="q-grid__column">
+					<div class="q-grid__visualize"></div>
+				</div>
+				<div class="q-grid__column">
+					<div class="q-grid__visualize"></div>
+				</div>
+				<div class="q-grid__column">
+					<div class="q-grid__visualize"></div>
+				</div>
+				<div class="q-grid__column">
+					<div class="q-grid__visualize"></div>
+				</div>
+				<div class="q-grid__column">
+					<div class="q-grid__visualize"></div>
+				</div>
+				<div class="q-grid__column">
+					<div class="q-grid__visualize"></div>
+				</div>
+				<div class="q-grid__column">
+					<div class="q-grid__visualize"></div>
+				</div>
+				<div class="q-grid__column">
+					<div class="q-grid__visualize"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="q-promo-banner js-promo-banner  q-promo-container promo--hidden" data-expires="2024-02-28T17:00:00Z">
+			<div class="q-promo-banner__container">
+				<div class="promo-wrapper">
+					<div class="q-promo-banner__inner">
+						<div class="q-promo-banner__row">
+							<div class="q-promo-banner__column">
+								<a href="/2024/02/cyber-risk-series/?utm_source=qualys&utm_medium=website-thin-strip&utm_campaign=global-eventvirtual-cyberriskseries-q12024&leadsource=344574831 " class="cta-wrapper">
+									<div class="heading-wrapper">
+										<span class="text">Cyber Risk Series | Cloud Security Edition | February 28 | <u>Register Now</u></span>
+									</div>
+								</a>					</div>
+						</div>
+					</div>
+					<button class="q-alert__close">
+						<svg class="q-alert__close-icon" viewBox="0 0 12 12">
+							<title>Close</title>
+							<g fill="#fff" fill-rule="evenodd">
+								<path d="M10.1421357.24264075l1.41421355 1.41421356-9.89949494 9.89949496L.24264077 10.1421357z"></path>
+								<path d="M.24264075 1.6568543L1.6568543.24264076l9.89949495 9.89949494-1.41421356 1.41421355z"></path>
+							</g>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	
+<div class="q-default-hero q-default-hero--curious-blue">
+	<div class="q-default-hero__container">
+		<div class="q-default-hero__content">
+
+			<h1 class="q-default-hero__heading heading--1">
+				Microsoft security alert.
+			</h1>
+			<h2 class="q-default-hero__subheading heading--sub">
+				August 14, 2018
+			</h2>
+
+		</div>
+	</div>
+</div>
+
+<div class="q-grid__container">
+	<div class="q-grid__inner">
+		<div class="q-grid__row">
+			<div class="q-grid__column q-grid__column--10">
+
+				<h2 class="heading--2">
+					Advisory overview
+				</h2>
+				<p class="paragraph--1">
+					Qualys Vulnerability R&amp;D Lab has released new
+					vulnerability checks in the Enterprise TruRisk Platform to protect
+					organizations against
+						66 vulnerabilities
+					that were fixed in
+						10 bulletins 
+					announced today by Microsoft. Customers can immediately audit 
+					their networks for these and other new vulnerabilities by accessing 
+					their Qualys subscription. <a href="https://blog.qualys.com/?category=vulnerabilities-research">Visit Qualys Security Blog to prioritize remediation</a>.
+				</p>
+				<p class="paragraph--1">
+					Non-Qualys customers can audit their network for these and other vulnerabilities by signing up for a <a href="/forms/trials/suite/">Qualys Free Trial</a>, or by trying <a href="/community-edition/"> Qualys Community Edition</a>.
+				</p>
+				<h2 class="heading--2">
+					Vulnerability details
+				</h2>
+				<p class="paragraph--1">
+					Microsoft has released 10 security 
+						bulletins
+					 to fix newly discovered flaws in their software. Qualys has released the following checks for these new vulnerabilities:
+				</p>
+				<ul class="security-bulletins">
+					<li class="bulletin js-bulletin">
+						<h3 class="heading--3 bulletin-title js-bulletin-control">
+							Microsoft Internet Explorer Security Update for August 2018
+						</h3>
+						<dl class="bulletin-severity">
+							<dt class="heading--4">
+								Severity
+							</dt>
+							<dd class="paragraph--2">
+								Critical
+								<span class="severity-gauge severity-4"></span>
+								4
+							</dd>
+						</dl>
+						<dl class="bulletin-detail">
+							<dt class="heading--4">
+								Qualys ID
+							</dt>
+							<dd class="paragraph--2">
+								100341
+							</dd>
+							<dt class="heading--4">
+								Vendor Reference
+							</dt>
+							<dd class="paragraph--2">
+										<a href="https://support.microsoft.com/en-us/help/4343205">
+											KB4343205</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343885/windows-10-update-kb4343885">
+											KB4343885</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343887/windows-10-update-kb4343887">
+											KB4343887</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343892/windows-10-update-kb4343892">
+											KB4343892</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343897/windows-10-update-kb4343897">
+											KB4343897</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343898/windows-81-update-kb4343898">
+											KB4343898</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343899/windows-7-update-kb4343899">
+											KB4343899</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343900/windows-7-update-kb4343900">
+											KB4343900</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343901/windows-server-2012-update-kb4343901">
+											KB4343901</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343909/windows-10-update-kb4343909">
+											KB4343909</a>
+							</dd>
+							<dt class="heading--4">
+								CVE Reference
+							</dt>
+							<dd class="paragraph--2">
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8316">
+										CVE-2018-8316</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8351">
+										CVE-2018-8351</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8353">
+										CVE-2018-8353</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8355">
+										CVE-2018-8355</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8357">
+										CVE-2018-8357</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8371">
+										CVE-2018-8371</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8372">
+										CVE-2018-8372</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8373">
+										CVE-2018-8373</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8385">
+										CVE-2018-8385</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8389">
+										CVE-2018-8389</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8403">
+										CVE-2018-8403</a>
+							</dd>
+							<dt class="heading--4">
+								CVSS Scores
+							</dt>
+							<dd class="paragraph--2">
+								Base 7.6 / 
+								Temporal 6.3
+							</dd>
+							<dt class="heading--4">
+								Description
+							</dt>
+							<dd class="paragraph--2">
+								Internet Explorer is a web-browser developed by Microsoft which is included in Microsoft Windows Operating Systems.<P>
+
+Microsoft has released Cumulative Security Updates for Internet Explorer which addresses various vulnerabilities found in Internet Explorer 9 (IE 9), Internet Explorer 10 (IE 10) and Internet Explorer 11 (IE 11). The security updated is rated Moderate for for Internet Explorer 9 (IE 9) and Internet Explorer 10 (IE 10) and  Important for Internet Explorer 11 (IE 11).  The most severe of the vulnerabilities could allow remote code execution. <P>
+
+KB Articles associated with the Update:<BR>
+
+1) 4343900<BR>
+2) 4343899<BR>
+3) 4343898<BR>
+4) 4343205<BR>
+5) 4343887<BR>
+6) 4343892<BR>
+7) 4343885<BR>
+8) 4343897<BR>
+9) 4343909<BR>
+10)4343901<P>
+
+QID Detection Logic (Authenticated):<BR>
+Operating Systems: Windows Server 2008, Windows Server 2008 R2, Windows 7, Windows 8.1, Windows RT 8.1, Windows10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016  <BR>
+This QID checks for the file version of %windir%\System32\mshtml.dll<BR>
+The following KBs are checked:<BR>
+
+The patch version is 11.0.9600.19101 (KB4343900 or KB4343898 or KB4343205)<BR>
+The patch version is 11.0.10240.17946 (KB4343892)<BR>
+The patch version is 11.0.14393.2430 (KB4343887)<BR>
+The patch version is 11.0.15063.1266 (KB4343885)<BR>
+The patch version is 11.0.16299.611 (KB4343897)<BR>
+The patch version is 11.0.17134.228 (KB4343909)<BR>
+The patch version is 10.0.9200.22522 (KB4343901 or KB4343205)<BR>
+The patch version is 9.0.8112.21252 (KB4343205)<P>
+
+On Windows Server 2008 R2, Windows 7 the QID also checks the file version of %windir%\System32\hlink.dll if Internet Explorer 11 is present.<BR>
+This is to verify fix for CVE-2018-8316.<BR>
+The patch version is 6.1.7601.24228 (KB4343899).<BR>
+<P>
+							</dd>
+							<dt class="heading--4">
+								Consequence
+							</dt>
+							<dd class="paragraph--2">
+								Successful exploitation of the vulnerability will lead to:<P> 
+
+1) Remote Code Execution<BR>
+2) Information Disclosure<BR>
+3) Elevation of Privilege<BR>
+							</dd>
+							<dt class="heading--4">
+								Solution
+							</dt>
+							<dd class="paragraph--2">
+								For more information, Customers are advised to refer the <A HREF="https://portal.msrc.microsoft.com/en-us/security-guidance" TARGET="_blank">Security Update Guide.</A><P>
+									<p>
+										Patches:<br>
+										The following are links for downloading patches to fix these vulnerabilities:
+										<br><a href="https://portal.msrc.microsoft.com/en-us/security-guidance">Microsoft Security Update Guide</a>
+									</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="bulletin js-bulletin">
+						<h3 class="heading--3 bulletin-title js-bulletin-control">
+							Microsoft Windows Adobe Flash Player Security Update for August 2018 (ADV180020)
+						</h3>
+						<dl class="bulletin-severity">
+							<dt class="heading--4">
+								Severity
+							</dt>
+							<dd class="paragraph--2">
+								Urgent
+								<span class="severity-gauge severity-5"></span>
+								5
+							</dd>
+						</dl>
+						<dl class="bulletin-detail">
+							<dt class="heading--4">
+								Qualys ID
+							</dt>
+							<dd class="paragraph--2">
+								100342
+							</dd>
+							<dt class="heading--4">
+								Vendor Reference
+							</dt>
+							<dd class="paragraph--2">
+										<a href="https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV180020">
+											ADV180020</a>
+							</dd>
+							<dt class="heading--4">
+								CVE Reference
+							</dt>
+							<dd class="paragraph--2">
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12824">
+										CVE-2018-12824</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12825">
+										CVE-2018-12825</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12826">
+										CVE-2018-12826</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12827">
+										CVE-2018-12827</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12828">
+										CVE-2018-12828</a>
+							</dd>
+							<dt class="heading--4">
+								CVSS Scores
+							</dt>
+							<dd class="paragraph--2">
+								Base 7.5 / 
+								Temporal 6.2
+							</dd>
+							<dt class="heading--4">
+								Description
+							</dt>
+							<dd class="paragraph--2">
+								This security update resolves vulnerabilities in Adobe Flash Player that is installed on any supported edition of Windows Server version 1803, Windows 10 Version 1803, Windows Server 2016 Version 1709, Windows 10 Version 1709, Windows RT, Windows 10 Version 1703, Windows Server 2016, Windows 10 Version 1607, Windows 10 RTM, Windows Server 2012 R2, Windows 8.1, Windows RT 8.1, and Windows Server 2012.<P>
+
+QID Detection Logic:<BR>
+This authenticated QID checks for the file version of %windir%\System32\Macromed\Flash\Flash.ocx for file versions lesser than 30.0.0.154.<P>
+The KB Article associated with this update is: KB44343902<P>
+							</dd>
+							<dt class="heading--4">
+								Consequence
+							</dt>
+							<dd class="paragraph--2">
+								Successful exploitation allows attacker to compromise the system.<P>
+							</dd>
+							<dt class="heading--4">
+								Solution
+							</dt>
+							<dd class="paragraph--2">
+								Customers are advised to follow <A HREF="https://support.microsoft.com/en-ph/help/4343902/security-update-for-adobe-flash-player" TARGET="_blank">KB4343902</A> for instructions pertaining to the remediation of these vulnerabilities.<P>
+									<p>
+										Patches:<br>
+										The following are links for downloading patches to fix these vulnerabilities:
+										<br><a href="https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV180020">ADV180020</a>
+									</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="bulletin js-bulletin">
+						<h3 class="heading--3 bulletin-title js-bulletin-control">
+							Microsoft Office and Microsoft Office Services and Web Apps Security Update August 2018
+						</h3>
+						<dl class="bulletin-severity">
+							<dt class="heading--4">
+								Severity
+							</dt>
+							<dd class="paragraph--2">
+								Critical
+								<span class="severity-gauge severity-4"></span>
+								4
+							</dd>
+						</dl>
+						<dl class="bulletin-detail">
+							<dt class="heading--4">
+								Qualys ID
+							</dt>
+							<dd class="paragraph--2">
+								110322
+							</dd>
+							<dt class="heading--4">
+								Vendor Reference
+							</dt>
+							<dd class="paragraph--2">
+										<a href="https://support.microsoft.com/en-us/kb/3213636">
+											KB3213636</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4018310">
+											KB4018310</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4018392">
+											KB4018392</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4022195">
+											KB4022195</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4022198">
+											KB4022198</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4022234">
+											KB4022234</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4022236">
+											KB4022236</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4022238">
+											KB4022238</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032212">
+											KB4032212</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032213">
+											KB4032213</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032215">
+											KB4032215</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032220">
+											KB4032220</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032222">
+											KB4032222</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032223">
+											KB4032223</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032229">
+											KB4032229</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032233">
+											KB4032233</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032235">
+											KB4032235</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032239">
+											KB4032239</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032240">
+											KB4032240</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032241">
+											KB4032241</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4032256">
+											KB4032256</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4092433">
+											KB4092433</a>, 
+										<a href="https://support.microsoft.com/en-us/kb/4092434">
+											KB4092434</a>
+							</dd>
+							<dt class="heading--4">
+								CVE Reference
+							</dt>
+							<dd class="paragraph--2">
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8375">
+										CVE-2018-8375</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8376">
+										CVE-2018-8376</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8378">
+										CVE-2018-8378</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8379">
+										CVE-2018-8379</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8382">
+										CVE-2018-8382</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8412">
+										CVE-2018-8412</a>
+							</dd>
+							<dt class="heading--4">
+								CVSS Scores
+							</dt>
+							<dd class="paragraph--2">
+								Base 9.3 / 
+								Temporal 6.9
+							</dd>
+							<dt class="heading--4">
+								Description
+							</dt>
+							<dd class="paragraph--2">
+								Microsoft releases security updates on August 2018 to fix multiple security vulnerabilities:<P>
+This security updates contain following KBs:<BR>
+KB3213636
+KB4018310
+KB4018392
+KB4022195
+KB4022198
+KB4022234
+KB4022236
+KB4022238
+KB4032212
+KB4032213
+KB4032215
+KB4032220
+KB4032222
+KB4032223
+KB4032229
+KB4032233
+KB4032235
+KB4032239
+KB4032240
+KB4032241
+KB4032256
+KB4092433
+KB4092434
+<P>
+QID Detection Logic:<BR>
+This authenticated QID checks the file versions from above Microsoft KB article with the versions on affected office system.
+							</dd>
+							<dt class="heading--4">
+								Consequence
+							</dt>
+							<dd class="paragraph--2">
+								Successful exploitation allows an attacker to execute arbitrary code.
+							</dd>
+							<dt class="heading--4">
+								Solution
+							</dt>
+							<dd class="paragraph--2">
+								Customers are advised to refer to <A HREF="https://portal.msrc.microsoft.com/en-us/security-guidance" TARGET="_blank">Microsoft Security Guidance</A> for more details pertaining to this vulnerability.<P>
+									<p>
+										Patches:<br>
+										The following are links for downloading patches to fix these vulnerabilities:
+										<br><a href="https://portal.msrc.microsoft.com/en-us/security-guidance">Microsoft Office and Microsoft Office Services and Web Apps Security Update August 2018</a>
+									</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="bulletin js-bulletin">
+						<h3 class="heading--3 bulletin-title js-bulletin-control">
+							Microsoft Security Update for SQL Server for August 2018
+						</h3>
+						<dl class="bulletin-severity">
+							<dt class="heading--4">
+								Severity
+							</dt>
+							<dd class="paragraph--2">
+								Critical
+								<span class="severity-gauge severity-4"></span>
+								4
+							</dd>
+						</dl>
+						<dl class="bulletin-detail">
+							<dt class="heading--4">
+								Qualys ID
+							</dt>
+							<dd class="paragraph--2">
+								22001
+							</dd>
+							<dt class="heading--4">
+								Vendor Reference
+							</dt>
+							<dd class="paragraph--2">
+										<a href="https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8273">
+											CVE-2018-8273</a>
+							</dd>
+							<dt class="heading--4">
+								CVE Reference
+							</dt>
+							<dd class="paragraph--2">
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8273">
+										CVE-2018-8273</a>
+							</dd>
+							<dt class="heading--4">
+								CVSS Scores
+							</dt>
+							<dd class="paragraph--2">
+								Base 10 / 
+								Temporal 7.4
+							</dd>
+							<dt class="heading--4">
+								Description
+							</dt>
+							<dd class="paragraph--2">
+								A buffer overflow vulnerability exists in the Microsoft SQL Server that could allow remote code execution on an affected system. An attacker who successfully exploited this vulnerability could execute code in the context of the SQL Server Database Engine service account.
+
+QID Detection Logic:<BR>
+This authenticated QID checks for vulnerable MSSQL versions lesser than &quot;2015.130.4224.16&quot; or &quot;2015.130.4522.0&quot; or &quot;2015.131.5081.1&quot;, &quot;2015.131.5201.2&quot;, &quot;2017.140.2002.14&quot; or &quot;2017.140.3035.2&quot;.<BR>
+
+Knowledge base articles: KB4293808, KB4458842, KB4293803, KB4293805, KB4293802, KB4458621.<P>
+
+<B>Note: Security Update KB4458621 has replaced KB4293807 and Security Update KB4458842 has replaced KB4293801. Refer to Revisions Section of <A HREF="https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8273" TARGET="_blank">CVE-2018-8273</A> for more information.<P></B>
+							</dd>
+							<dt class="heading--4">
+								Consequence
+							</dt>
+							<dd class="paragraph--2">
+								Successful exploitation allows an attacker to execute code.
+							</dd>
+							<dt class="heading--4">
+								Solution
+							</dt>
+							<dd class="paragraph--2">
+								Customers are advised to refer to <A HREF="https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8273" TARGET="_blank">CVE-2018-8273</A> for more information.<P>
+									<p>
+										Patches:<br>
+										The following are links for downloading patches to fix these vulnerabilities:
+										<br><a href="https://www.microsoft.com/download/details.aspx?familyid&#x3D;6b64e682-0dfb-4d82-8937-ae22eb8d49b2">KB4293801 Microsoft SQL Server 2016 for x64-based Systems Service Pack 1</a>
+										<br><a href="https://www.microsoft.com/download/details.aspx?familyid&#x3D;6b5930a8-d009-477a-b05b-f937d7adac82">KB4293802 Microsoft SQL Server 2016 for x64-based Systems Service Pack 2</a>
+										<br><a href="https://www.microsoft.com/download/details.aspx?familyid&#x3D;43af21f3-f11a-4e59-b715-49c504fd4b77">KB4293803 Microsoft SQL Server 2017 for x64-based Systems</a>
+										<br><a href="https://www.microsoft.com/download/details.aspx?familyid&#x3D;d530252c-65df-4245-b5f1-ce739381106c">KB4293805 Microsoft SQL Server 2017 for x64-based Systems (CU)</a>
+										<br><a href="https://www.microsoft.com/download/details.aspx?familyid&#x3D;452e1e28-e719-4773-ae4c-a0b716bea63a">KB4293807 Microsoft SQL Server 2016 for x64-based Systems Service Pack 2 (CU)</a>
+										<br><a href="https://www.microsoft.com/download/details.aspx?familyid&#x3D;f6516f1d-7ee5-4f47-a05d-bd923dfd07c7">KB4293808 Microsoft SQL Server 2016 for x64-based Systems Service Pack 1 (CU)</a>
+									</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="bulletin js-bulletin">
+						<h3 class="heading--3 bulletin-title js-bulletin-control">
+							Microsoft Exchange Server Security Update for August 2018
+						</h3>
+						<dl class="bulletin-severity">
+							<dt class="heading--4">
+								Severity
+							</dt>
+							<dd class="paragraph--2">
+								Critical
+								<span class="severity-gauge severity-4"></span>
+								4
+							</dd>
+						</dl>
+						<dl class="bulletin-detail">
+							<dt class="heading--4">
+								Qualys ID
+							</dt>
+							<dd class="paragraph--2">
+								53016
+							</dd>
+							<dt class="heading--4">
+								Vendor Reference
+							</dt>
+							<dd class="paragraph--2">
+										<a href="https://support.microsoft.com/en-us/help/4340733/update-rollup-23-for-exchange-server-2010-service-pack-3">
+											Exchange Server 2010</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4340731/description-of-the-security-update-for-microsoft-exchange-server-2013">
+											Exchange Server 2016,2013</a>
+							</dd>
+							<dt class="heading--4">
+								CVE Reference
+							</dt>
+							<dd class="paragraph--2">
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8302">
+										CVE-2018-8302</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8374">
+										CVE-2018-8374</a>
+							</dd>
+							<dt class="heading--4">
+								CVSS Scores
+							</dt>
+							<dd class="paragraph--2">
+								Base 10 / 
+								Temporal 7.4
+							</dd>
+							<dt class="heading--4">
+								Description
+							</dt>
+							<dd class="paragraph--2">
+								Microsoft Exchange Server 2013 and 2016 contain the following vulnerabilities:<BR>
+CVE-2018-8302: A remote code execution vulnerability exists in Microsoft Exchange software when the software fails to properly handle objects in memory. <BR>
+CVE-2018-8374: A tampering vulnerability exists when Microsoft Exchange Server fails to properly handle profile data. <P>
+Affected Versions:<BR>
+Microsoft Exchange Server 2010 Service Pack 3 Update Rollup 23<BR>
+Microsoft Exchange Server 2013 Cumulative Update 20, 21<BR>
+Microsoft Exchange Server 2016 Cumulative Update 9, 10<P>
+KB Articles: 4340733, 4340731 <P>
+QID Detection Logic:<BR>
+This authenticated QID detects if Exsetup.exe file versions is lesser than 15.1.1531.6, 15.1.1466.10, 15.0.1395.7, 14.3.417.1.
+							</dd>
+							<dt class="heading--4">
+								Consequence
+							</dt>
+							<dd class="paragraph--2">
+								Depending on the vulnerability being exploited, a remote attacker could modify a targeted users profile data or execute arbitrary code in the context of the System user.
+							</dd>
+							<dt class="heading--4">
+								Solution
+							</dt>
+							<dd class="paragraph--2">
+								Customers are advised to refer to <A HREF="https://support.microsoft.com/en-us/help/4340731/description-of-the-security-update-for-microsoft-exchange-server-2013" TARGET="_blank">KB4340731</A> and <A HREF="https://support.microsoft.com/en-us/help/4340733/update-rollup-23-for-exchange-server-2010-service-pack-3 " TARGET="_blank">KB4340733</A> for more information pertaining to these vulnerabilities.
+									<p>
+										Patches:<br>
+										The following are links for downloading patches to fix these vulnerabilities:
+										<br><a href="https://support.microsoft.com/en-us/help/4340731/description-of-the-security-update-for-microsoft-exchange-server-2013">KB4340731</a>
+										<br><a href="https://support.microsoft.com/en-us/help/4340733/update-rollup-23-for-exchange-server-2010-service-pack-3">KB4340733</a>
+									</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="bulletin js-bulletin">
+						<h3 class="heading--3 bulletin-title js-bulletin-control">
+							Microsoft Edge Security Update for August 2018
+						</h3>
+						<dl class="bulletin-severity">
+							<dt class="heading--4">
+								Severity
+							</dt>
+							<dd class="paragraph--2">
+								Urgent
+								<span class="severity-gauge severity-5"></span>
+								5
+							</dd>
+						</dl>
+						<dl class="bulletin-detail">
+							<dt class="heading--4">
+								Qualys ID
+							</dt>
+							<dd class="paragraph--2">
+								91464
+							</dd>
+							<dt class="heading--4">
+								Vendor Reference
+							</dt>
+							<dd class="paragraph--2">
+										<a href="https://support.microsoft.com/en-us/help/4343885/">
+											KB4343885</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343887/">
+											KB4343887</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343892/">
+											KB4343892</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343897/">
+											KB4343897</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343909/">
+											KB4343909</a>
+							</dd>
+							<dt class="heading--4">
+								CVE Reference
+							</dt>
+							<dd class="paragraph--2">
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8266">
+										CVE-2018-8266</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8351">
+										CVE-2018-8351</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8355">
+										CVE-2018-8355</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8357">
+										CVE-2018-8357</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8358">
+										CVE-2018-8358</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8370">
+										CVE-2018-8370</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8372">
+										CVE-2018-8372</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8377">
+										CVE-2018-8377</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8380">
+										CVE-2018-8380</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8381">
+										CVE-2018-8381</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8383">
+										CVE-2018-8383</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8385">
+										CVE-2018-8385</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8387">
+										CVE-2018-8387</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8388">
+										CVE-2018-8388</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8390">
+										CVE-2018-8390</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8403">
+										CVE-2018-8403</a>
+							</dd>
+							<dt class="heading--4">
+								CVSS Scores
+							</dt>
+							<dd class="paragraph--2">
+								Base 7.6 / 
+								Temporal 6
+							</dd>
+							<dt class="heading--4">
+								Description
+							</dt>
+							<dd class="paragraph--2">
+								Microsoft Edge is a web browser developed by Microsoft that replaces Internet Explorer as the default web browser. <P>
+Microsoft Edge is vulnerable to multiple issues. <P>
+KB Articles associated with the update:<BR>
+1) <A HREF="https://support.microsoft.com/en-us/help/4343887/" TARGET="_blank">KB4343887</A><BR>
+2) <A HREF="https://support.microsoft.com/en-us/help/4343892/" TARGET="_blank">KB4343892</A><BR>
+3) <A HREF="https://support.microsoft.com/en-us/help/4343885/" TARGET="_blank">KB4343885</A><BR>
+4) <A HREF="https://support.microsoft.com/en-us/help/4343897/" TARGET="_blank">KB4343897</A><BR>
+5) <A HREF="https://support.microsoft.com/en-us/help/4343909/" TARGET="_blank">KB4343909</A><P>
+QID Detection Logic (Authenticated):<BR>
+Operating Systems: Windows 10 (1507, 1607, 1703, 1709 and 1803) and Windows Server 2016<BR>
+This QID reviews the file version of %windir%\System32\edgehtml.dll<BR>
+The patch version is 11.0.10240.17946 (KB4343892)<BR> 
+The patch version is 11.0.14393.2430 (KB4343887)<BR> 
+The patch version is 11.0.15063.1266 (KB4343885)<BR> 
+The patch version is 11.0.16299.611 (KB4343897)<BR> 
+The patch version is 11.0.17134.228 (KB4343909)<BR>
+<P>
+							</dd>
+							<dt class="heading--4">
+								Consequence
+							</dt>
+							<dd class="paragraph--2">
+								Depending on the vulnerability being exploited, a remote attacker could exploit these vulnerabilities to bypass security restrictions, gain access to sensitive data or execute arbitrary code on the targeted system.<P>
+							</dd>
+							<dt class="heading--4">
+								Solution
+							</dt>
+							<dd class="paragraph--2">
+								Customers are advised to refer to <A HREF="https://portal.msrc.microsoft.com/en-us/security-guidance" TARGET="_blank">Security Update Guide</A> for more information pertaining to these vulnerabilities.<P>
+									<p>
+										Patches:<br>
+										The following are links for downloading patches to fix these vulnerabilities:
+										<br><a href="https://portal.msrc.microsoft.com/en-us/security-guidance">Microsoft Security Update Guide Windows(Edge)</a>
+									</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="bulletin js-bulletin">
+						<h3 class="heading--3 bulletin-title js-bulletin-control">
+							Microsoft Windows Security Update August 2018
+						</h3>
+						<dl class="bulletin-severity">
+							<dt class="heading--4">
+								Severity
+							</dt>
+							<dd class="paragraph--2">
+								Critical
+								<span class="severity-gauge severity-4"></span>
+								4
+							</dd>
+						</dl>
+						<dl class="bulletin-detail">
+							<dt class="heading--4">
+								Qualys ID
+							</dt>
+							<dd class="paragraph--2">
+								91465
+							</dd>
+							<dt class="heading--4">
+								Vendor Reference
+							</dt>
+							<dd class="paragraph--2">
+										<a href="https://support.microsoft.com/en-us/help/4341832">
+											4341832</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4338380">
+											KB4338380</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4340937">
+											KB4340937</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4340939">
+											KB4340939</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343674">
+											KB4343674</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343885">
+											KB4343885</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343887">
+											KB4343887</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343888">
+											KB4343888</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343892">
+											KB4343892</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343896">
+											KB4343896</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343897">
+											KB4343897</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343898">
+											KB4343898</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343899">
+											KB4343899</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343900">
+											KB4343900</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343901">
+											KB4343901</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343909">
+											KB4343909</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344104">
+											KB4344104</a>
+							</dd>
+							<dt class="heading--4">
+								CVE Reference
+							</dt>
+							<dd class="paragraph--2">
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-0952">
+										CVE-2018-0952</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8200">
+										CVE-2018-8200</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8204">
+										CVE-2018-8204</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8253">
+										CVE-2018-8253</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8339">
+										CVE-2018-8339</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8340">
+										CVE-2018-8340</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8341">
+										CVE-2018-8341</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8342">
+										CVE-2018-8342</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8343">
+										CVE-2018-8343</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8344">
+										CVE-2018-8344</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8345">
+										CVE-2018-8345</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8346">
+										CVE-2018-8346</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8347">
+										CVE-2018-8347</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8348">
+										CVE-2018-8348</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8349">
+										CVE-2018-8349</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8350">
+										CVE-2018-8350</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8394">
+										CVE-2018-8394</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8396">
+										CVE-2018-8396</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8397">
+										CVE-2018-8397</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8398">
+										CVE-2018-8398</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8399">
+										CVE-2018-8399</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8400">
+										CVE-2018-8400</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8401">
+										CVE-2018-8401</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8404">
+										CVE-2018-8404</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8405">
+										CVE-2018-8405</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8406">
+										CVE-2018-8406</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8414">
+										CVE-2018-8414</a>
+							</dd>
+							<dt class="heading--4">
+								CVSS Scores
+							</dt>
+							<dd class="paragraph--2">
+								Base 9.3 / 
+								Temporal 7.7
+							</dd>
+							<dt class="heading--4">
+								Description
+							</dt>
+							<dd class="paragraph--2">
+								Information disclosure vulnerability exists when the Windows GDI component improperly discloses the contents of its memory. (CVE-2018-8398)<P>
+Elevation of privilege vulnerability exists in Windows when the Win32k component fails to properly handle objects in memory.(CVE-2018-8399)<P>
+Elevation of privilege vulnerability exists in the DirectX Graphics Kernel(CVE-2018-8400, CVE-2018-8401 and CVE-2018-8405)<P>
+Elevation of privilege vulnerability exists in Windows when the Win32k .(CVE-2018-8404)<P>
+Elevation of Privilege vulnerability exists in Diagnostics Hub Standard Collector .(CVE-2018-0952)<P>
+Security feature bypass vulnerability exists in Device Guard t(CVE-2018-8200, CVE-2018-8204)<P>
+Elevation of privilege vulnerability exists when Microsoft Cortana allows arbitrary website Powsing on the lockscreen.(CVE-2018-8253)<P>
+Elevation of privilege vulnerability exists in the Windows Installer when the Windows Installer fails to properly sanitize input leading to an insecure liPary loading behavior.(CVE-2018-8339)<P>
+Security feature bypass vulnerability exists when Active Directory Federation Services (AD FS) improperly handles multi-factor authentication requests.(CVE-2018-8340)<P>
+Elevation of privilege vulnerability exists in the Network Driver Interface Specification (NDIS) when ndis.sys fails to check the length of a buffer prior to copying memory to it.(CVE-2018-8342 and CVE-2018-8343)<P>
+Remote code execution (RCE) vulnerability exists when the Windows font liPary improperly handles specially crafted embedded fonts.(CVE-2018-8344)<P>
+A vulnerability exists in Microsoft Windows that could allow RCE if a .LNK file is processed.(CVE-2018-8345 and CVE-2018-8346)<P>
+Elevation of privilege vulnerability exists in Microsoft Windows when the Windows kernel fails to properly handle parsing of certain symbolic links.(CVE-2018-8347)<P>
+Information disclosure vulnerability exists when the Windows kernel improperly handles objects in memory.(CVE-2018-8348)<P>
+RCE vulnerability exists in Microsoft COMwhen it fails to properly handle serialized objects.(CVE-2018-8349)<P>
+RCE vulnerability exists when Microsoft Windows PDF LiPary improperly handles objects in memory. (CVE-2018-8350)<P>
+Information disclosure vulnerability exists when the Windows kernel improperly handles objects in memory. (CVE-2018-8341)<P>
+Information disclosure vulnerability exists when the Windows GDI component improperly discloses the contents of its memory.(CVE-2018-8394 and CVE-2018-8396)<P>
+RCE vulnerability exists in the way that the Windows Graphics Device Interface  handles objects in the memory.(CVE-2018-8397)<P>
+Elevation of privilege vulnerability exists when the DirectX Graphics Kernel driver improperly handles objects in memory.(CVE-2018-8406)<P>
+RCE vulnerability exists when the Windows Shell does not properly validate file paths.(CVE-2018-8414)<P>
+QID Detection Logic (Authenticated): <BR>
+<P>
+Operating Systems: Windows
+<P>
+This QID checks for following file versions Win32k.sys for all affected OS except Windows 2008 SP2, Windows 10 and Windows 2016:<P>
+Version: 6.1.7601.24204 (KB4343900 or KB4343899) <P>
+Version: 6.2.9200.22515 (KB4343901 or KB4343896) <P>
+Version: 6.3.9600.19095 (KB4343898 or KB4343888) <P>
+This QID checks for following file versions Win32kfull.sys for Windows 10 and Windows 16:<P>
+Version: 10.0.10240.17946 (KB4343892)<P>
+Version: 10.0.14393.2430  (KB4343887)<P>
+Version: 10.0.15063.1266  (KB4343885)<P>
+Version: 10.0.16299.611   (KB4343897)<P>
+Version: 10.0.17134.228   (KB4343909)<P>
+This QID checks for following files and its versions for Windows 2008 SP2:<P>
+Version:  Advapi32.dll 6.0.6002.24444 (KB4341832)<P>
+Version:  Msimg32.dll 6.0.6002.24439 (KB4343674) <P> 
+Version:  Authui.dll 6.0.6002.24433 (KB4340937) <P>
+Version:  Fontsub.dll 6.0.6002.24441 (KB4344104) <P>
+Version:  Msshsq.dll 7.0.6002.24434 (KB4340939) <P>
+Version:  Cscsvc.dll 6.0.6002.24436 (KB4338380) <P>
+<P>
+							</dd>
+							<dt class="heading--4">
+								Consequence
+							</dt>
+							<dd class="paragraph--2">
+								Successful exploitation allows an attacker to execute arbitrary code and take control of an affected system.
+							</dd>
+							<dt class="heading--4">
+								Solution
+							</dt>
+							<dd class="paragraph--2">
+								Customers are advised to refer to <A HREF="https://portal.msrc.microsoft.com/en-us/security-guidance" TARGET="_blank">Microsoft Security Guidance</A> for more details pertaining to this vulnerability.<P>
+									<p>
+										Patches:<br>
+										The following are links for downloading patches to fix these vulnerabilities:
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4338380">4338380</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4340937">4340937</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4340939">4340939</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4341832">4341832</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4343674">4343674</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4343885">4343885</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4343887">4343887</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4343888">4343888</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4343892">4343892</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4343896">4343896</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4343897">4343897</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4343898">4343898</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4343899">4343899</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4343900">4343900</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4343901">4343901</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4343909">4343909</a>
+										<br><a href="http://www.catalog.update.microsoft.com/search.aspx?q&#x3D;4344104">4344104</a>
+									</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="bulletin js-bulletin">
+						<h3 class="heading--3 bulletin-title js-bulletin-control">
+							Microsoft Visual Studio Security Update for August 2018
+						</h3>
+						<dl class="bulletin-severity">
+							<dt class="heading--4">
+								Severity
+							</dt>
+							<dd class="paragraph--2">
+								Critical
+								<span class="severity-gauge severity-4"></span>
+								4
+							</dd>
+						</dl>
+						<dl class="bulletin-detail">
+							<dt class="heading--4">
+								Qualys ID
+							</dt>
+							<dd class="paragraph--2">
+								91466
+							</dd>
+							<dt class="heading--4">
+								Vendor Reference
+							</dt>
+							<dd class="paragraph--2">
+										<a href="https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-0952">
+											CVE-2018-0952</a>
+							</dd>
+							<dt class="heading--4">
+								CVE Reference
+							</dt>
+							<dd class="paragraph--2">
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-0952">
+										CVE-2018-0952</a>
+							</dd>
+							<dt class="heading--4">
+								CVSS Scores
+							</dt>
+							<dd class="paragraph--2">
+								Base 7.2 / 
+								Temporal 6
+							</dd>
+							<dt class="heading--4">
+								Description
+							</dt>
+							<dd class="paragraph--2">
+								An elevation of privilege vulnerability exists in a visual studio service, which can lead to system privileges by a non-admin user when writing files. An attacker who took advantage of this could write files as system while only having user level access. This security update addresses this issue by impersonating the current user to validate access to the file location.<P>
+Affected Software:<BR>
+Microsoft Visual Studio 2015 Update 3 <BR>
+Microsoft Visual Studio 2017 <BR>
+Microsoft Visual Studio 2017 Version 15.8<P>
+QID Detection Logic:<BR>
+This QID detects vulnerable versions of Microsoft Visual Studio 2017 Version 15.8.0 by checking if the devenv.exe file version is lesser than 15.0.28010.0.<BR>
+This QID detects vulnerable versions of Microsoft Visual Studio 2015 Update 3 by checking if the DiagnosticsHub.StandardCollector.Runtime.dll file version is lesser than 14.0.27526.0.<P>
+							</dd>
+							<dt class="heading--4">
+								Consequence
+							</dt>
+							<dd class="paragraph--2">
+								Successful exploitation of this vulnerability allows an attacker to write files as system while only having user level access.
+							</dd>
+							<dt class="heading--4">
+								Solution
+							</dt>
+							<dd class="paragraph--2">
+								Customers are advised to refer to <A HREF="https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-0952" TARGET="_blank">CVE-2018-0952</A> for more information pertaining to this vulnerability.<BR>
+									<p>
+										Patches:<br>
+										The following are links for downloading patches to fix these vulnerabilities:
+										<br><a href="https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-0952">CVE-2018-0952</a>
+									</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="bulletin js-bulletin">
+						<h3 class="heading--3 bulletin-title js-bulletin-control">
+							Microsoft .NET Framework Security Update August 2018
+						</h3>
+						<dl class="bulletin-severity">
+							<dt class="heading--4">
+								Severity
+							</dt>
+							<dd class="paragraph--2">
+								Critical
+								<span class="severity-gauge severity-4"></span>
+								4
+							</dd>
+						</dl>
+						<dl class="bulletin-detail">
+							<dt class="heading--4">
+								Qualys ID
+							</dt>
+							<dd class="paragraph--2">
+								91467
+							</dd>
+							<dt class="heading--4">
+								Vendor Reference
+							</dt>
+							<dd class="paragraph--2">
+										<a href="https://support.microsoft.com/en-us/help/4344151">
+											4344151</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343885">
+											KB4343885</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343887">
+											KB4343887</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343892">
+											KB4343892</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343897">
+											KB4343897</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4343909">
+											KB4343909</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344144">
+											KB4344144</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344145">
+											KB4344145</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344146">
+											KB4344146</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344147">
+											KB4344147</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344148">
+											KB4344148</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344149">
+											KB4344149</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344150">
+											KB4344150</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344152">
+											KB4344152</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344153">
+											KB4344153</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344165">
+											KB4344165</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344166">
+											KB4344166</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344167">
+											KB4344167</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344171">
+											KB4344171</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344172">
+											KB4344172</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344173">
+											KB4344173</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344175">
+											KB4344175</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344176">
+											KB4344176</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344177">
+											KB4344177</a>, 
+										<a href="https://support.microsoft.com/en-us/help/4344178">
+											KB4344178</a>
+							</dd>
+							<dt class="heading--4">
+								CVE Reference
+							</dt>
+							<dd class="paragraph--2">
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-8360">
+										CVE-2018-8360</a>
+							</dd>
+							<dt class="heading--4">
+								CVSS Scores
+							</dt>
+							<dd class="paragraph--2">
+								Base 5 / 
+								Temporal 3.7
+							</dd>
+							<dt class="heading--4">
+								Description
+							</dt>
+							<dd class="paragraph--2">
+								An information disclosure vulnerability exists in Microsoft .NET Framework that could allow an attacker to access information in multi-tenant environments. The vulnerability is caused when .NET Framework is used in high-load/high-density network connections where content from one stream can blend into another stream.<P>
+KB4343885,KB4343887,KB4343892,KB4343897,KB4343909,KB4344144,KB4344145,KB4344146,KB4344147,KB4344148,KB4344149,KB4344150,KB4344151,KB4344152,KB4344153,KB4344165,KB4344166,KB4344167,KB4344171,KB4344172,KB4344173,KB4344175,KB4344176,KB4344177,KB4344178 are covered in this QID
+<P>
+This security update is rated Important for supported versions of Microsoft .NET Framework.
+<P>
+QID Detection Logic (Authenticated):<BR>
+This QID checks for the vulnerable file version of mscorlib.dll
+							</dd>
+							<dt class="heading--4">
+								Consequence
+							</dt>
+							<dd class="paragraph--2">
+								Successful exploitation allows an attacker to access data from one customer to another.
+							</dd>
+							<dt class="heading--4">
+								Solution
+							</dt>
+							<dd class="paragraph--2">
+								Customers are advised to refer to <A HREF="https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8360" TARGET="_blank">Microsoft Security Guidance</A> for more details pertaining to this vulnerability.
+									<p>
+										Patches:<br>
+										The following are links for downloading patches to fix these vulnerabilities:
+										<br><a href="https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8360">.NET Framework August 2018</a>
+									</p>
+							</dd>
+						</dl>
+					</li>
+					<li class="bulletin js-bulletin">
+						<h3 class="heading--3 bulletin-title js-bulletin-control">
+							Microsoft Windows update for L1 Terminal Fault (L1TF) vulnerabilities (ADV180018)
+						</h3>
+						<dl class="bulletin-severity">
+							<dt class="heading--4">
+								Severity
+							</dt>
+							<dd class="paragraph--2">
+								Critical
+								<span class="severity-gauge severity-4"></span>
+								4
+							</dd>
+						</dl>
+						<dl class="bulletin-detail">
+							<dt class="heading--4">
+								Qualys ID
+							</dt>
+							<dd class="paragraph--2">
+								91468
+							</dd>
+							<dt class="heading--4">
+								Vendor Reference
+							</dt>
+							<dd class="paragraph--2">
+										<a href="https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180018">
+											ADV180018</a>
+							</dd>
+							<dt class="heading--4">
+								CVE Reference
+							</dt>
+							<dd class="paragraph--2">
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3615">
+										CVE-2018-3615</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3620">
+										CVE-2018-3620</a>, 
+									<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3646">
+										CVE-2018-3646</a>
+							</dd>
+							<dt class="heading--4">
+								CVSS Scores
+							</dt>
+							<dd class="paragraph--2">
+								Base 5.4 / 
+								Temporal 4.2
+							</dd>
+							<dt class="heading--4">
+								Description
+							</dt>
+							<dd class="paragraph--2">
+								On January 3 2018, Microsoft released an advisory and security updates related to hardware vulnerabilities (known as Spectre and Meltdown) involving speculative execution side channels.<P>
+
+On August 14 2018, a new subclass of speculative execution side channel vulnerabilities known as L1 Terminal Fault (L1TF)  has been announced and assigned CVE-2018-3615, CVE-2018-3620 and CVE-2018-3646. <P>
+
+The vulnerabilities affect Intel Core processors and Intel Xeon processors.<P>
+
+QID Detection Logic (Authenticated): <BR>
+Operating Systems: Windows Server 2008, Windows Server 2008 R2, Windows 7, Windows 8.1, Windows RT 8.1, Windows10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 
+<BR>
+This QID will check if the running processor is a Intel Processor by looking up the registry key &quot;HKLM\HARDWARE\DESCRIPTION\System\CentralProcessor{DESCRIPTION}&quot; value &quot;VendorIdentifier&quot;.<BR>
+This QID checks for following file versions %windir%\System32\Win32k.sys for all affected OS except Windows 2008 SP2, Windows 10 and Windows 2016:<BR>
+The patch version of 6.1.7601.24204 (KB4343900 or KB4343899) <BR>
+The patch version of 6.2.9200.22515 (KB4343901 or KB4343896) <BR>
+The patch version of 6.3.9600.19095 (KB4343898 or KB4343888) <BR><BR> 
+This QID checks for following file versions %windir%\System32\Win32kfull.sys for Windows 10 and Windows 16:<BR>
+The patch version of 10.0.10240.17946 (KB4343892)<BR>
+The patch version of 10.0.14393.2430  (KB4343887)<BR>
+The patch version of 10.0.15063.1266  (KB4343885)<BR>
+The patch version of 10.0.16299.611   (KB4343897)<BR>
+The patch version of 10.0.17134.228   (KB4343909)<BR><BR> 
+This QID checks for following files and its versions for Windows 2008 SP2:<BR>
+The patch version of  %windir%\System32\Advapi32.dll 6.0.6002.24444 (KB4341832)<BR>
+							</dd>
+							<dt class="heading--4">
+								Consequence
+							</dt>
+							<dd class="paragraph--2">
+								An attacker who has successfully exploited L1TF may be able to read privileged data across trust boundaries. In shared resource environments (such that exist in some cloud services configurations), this vulnerability could allow one virtual machine to improperly access information from another. An attacker would need prior access to the system or the ability to run code on the system to leverage this vulnerability. <P>
+							</dd>
+							<dt class="heading--4">
+								Solution
+							</dt>
+							<dd class="paragraph--2">
+								Customers are advised to refer to <A HREF="https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180018" TARGET="_blank">ADV180018</A> for more details pertaining to this vulnerability.<P>
+									<p>
+										Patches:<br>
+										The following are links for downloading patches to fix these vulnerabilities:
+										<br><a href="https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180018">ADV180018</a>
+									</p>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<div class="suffix suffix-microsoft">
+					<p>
+						These new vulnerability checks are included in Qualys
+						vulnerability signature
+							2.4.395-4.
+						Each Qualys account is automatically updated with the latest
+						vulnerability signatures as they become available. To view the
+						vulnerability signature version in your account, from the
+						Qualys Help menu, select the About tab.
+					</p>
+					<h2>
+						Selective Scan Instructions Using Qualys
+					</h2>
+					<p>
+						To perform a selective vulnerability scan, configure a scan profile to use the following options:
+					</p>
+					<ol>
+						<li>
+							Ensure access to TCP ports 135 and 139 are available.
+						</li>
+						<li>
+							Enable Windows Authentication (specify Authentication Records).
+						</li>
+						<li>
+							Enable the following Qualys IDs:
+							<ul>
+								<li>
+									100341
+								</li>
+								<li>
+									100342
+								</li>
+								<li>
+									110322
+								</li>
+								<li>
+									22001
+								</li>
+								<li>
+									53016
+								</li>
+								<li>
+									91464
+								</li>
+								<li>
+									91465
+								</li>
+								<li>
+									91466
+								</li>
+								<li>
+									91467
+								</li>
+								<li>
+									91468
+								</li>
+							</ul>
+						</li>
+						<li>If you would like the scan to return the Windows Hostname, also include QID 82044 and ensure access to UDP port 137 is available.
+						</li>
+						<li>If you would like to be notified if Qualys is unable to log on to a host (if Authentication fails), also include QID 105015.
+						</li>
+					</ol>
+					<p>
+						In addition, prior to running a scan for these new vulnerabilities, you can estimate your exposure to these new threats by running the Risk Analysis Report, available from the Qualys Vulnerability Management Reports tab.
+					</p>
+				</div>
+				<h2 class="heading--2">
+					Access for Qualys Customers
+				</h2>
+				<p>
+					<a class="q-link" href="/platform-identification/">
+								Platforms and Platform Identification</a>
+				</p>
+				<h2 class="heading--2">
+					Technical Support
+				</h2>
+				<p>
+					For more information, customers may contact <a href="/support/">Qualys Technical Support</a>.
+				</p>
+				<h2 class="heading--2">
+					About Qualys
+				</h2>
+				<p>
+					The Enterprise TruRisk Platform and its integrated suite of security and compliance applications provides organizations of all sizes with a global view of their security and compliance solutions, while drastically reducing their total cost of ownership. Qualys solutions include: continuous monitoring, vulnerability management, policy compliance, PCI compliance, security assessment questionnaire, web application scanning, web application firewall, malware detection and SECURE Seal for security testing of web sites.
+				</p>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+		<footer class="q-footer">
+			<div class="q-footer__container">
+				<div class="q-footer__row">
+		
+					<div class="q-footer__column--wide q-footer__column--desktop">
+						<h2 class="q-footer__heading">
+							Is your web server's SSL/TLS configuration secure?
+							<span class="nowrap">Find out for free.</span>
+						</h2>
+						<p class="q-footer__copy">
+							See the power of Qualys, instantly. We don’t use the domain names or the
+							test results, and we never will.
+						</p>
+						
+						<div class="q-footer__search">
+							<form
+								action="https://www.ssllabs.com/ssltest/analyze.html"
+								class="q-search-form"
+								method="GET"
+							>
+								<input type="hidden" name="viaform" value="on">
+								<input type="hidden" name="hideResults" value="on">
+								<input
+									type="text"
+									name="d"
+									autocomplete="off"
+									autocorrect="off"
+									autocapitalize="off"
+									spellcheck="false"
+									class="q-search-form__input"
+									placeholder="Enter your public website URL"
+								>
+								<button class="q-search-form__button q-button" type="submit">Go</button>
+							</form>
+						</div>
+						
+						<div class="q-footer__service">
+							<h3 class="q-footer__subheading">
+								More free services
+							</h3>
+							<ul class="q-footer__service-list">
+								<li class="q-footer__service-item">
+									<a class="q-footer__link" href="/forms/remote-endpoint/">
+										60-Day Remote Endpoint Protection</a>
+								</li>
+								<li class="q-footer__service-item">
+									<a class="q-footer__link" href="/apps/global-assetview/">
+										Global AssetView</a>
+								</li>
+								<li class="q-footer__service-item">
+									<a class="q-footer__link" href="/community-edition/">
+										Community Edition</a>
+								</li>
+								<li class="q-footer__service-item">
+									<a class="q-footer__link" href="/certview/">
+										CertView</a>
+								</li>
+								<li class="q-footer__service-item">
+									<a class="q-footer__link" href="https://www.ssllabs.com/">
+										SSL Labs</a>
+								</li>
+								<li class="q-footer__service-item">
+									<a class="q-footer__link" href="/free-tools-trials/browsercheck/">
+										BrowserCheck</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__social">
+							<ul class="q-social-list">
+								<li class="q-social-list__item">
+									<a href="https://twitter.com/qualys" title="Twitter" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 148.7 610.7 496.3" enable-background="new 0 148.7 610.7 496.3"><path fill="#FFF" d="M192.1 645c-70.8 0-136.7-20.7-192.1-56.2 9.8 1.1 19.9 1.8 29.9 1.8 58.7 0 112.8-20.1 155.7-53.6-54.7-1.1-101.2-37.3-117-87.1 7.6 1.6 15.4 2.2 23.7 2.2 11.4 0 22.6-1.6 33.1-4.5-57.5-11.6-100.6-62.1-100.6-122.9v-1.6c17 9.4 36.2 15 56.7 15.6-33.5-22.4-55.8-60.6-55.8-104.2 0-23 6.3-44.4 17-63 61.6 75.9 153.9 126 258 131.1-2.2-9.2-3.4-18.8-3.4-28.6 0-69.2 56.1-125.3 125.3-125.3 36 0 68.6 15.2 91.4 39.5 28.8-5.6 55.6-15.9 79.7-30.4-9.4 29.3-29 53.8-54.9 69.5 25.2-3.1 49.6-9.8 71.9-19.7-16.8 25-38 47.1-62.5 64.8.2 5.4.4 10.7.4 16.3 0 165.4-126.2 356.3-356.5 356.3"/></svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://www.linkedin.com/company/qualys" title="LinkedIn" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" enable-background="new 0 0 36 36"><path fill="#FFF" d="M33.3 0h-30.6c-1.5 0-2.7 1.2-2.7 2.6v30.8c0 1.4 1.2 2.6 2.7 2.6h30.7c1.5 0 2.7-1.2 2.7-2.6v-30.8c-.1-1.4-1.3-2.6-2.8-2.6zm-22.6 30.7h-5.4v-17.2h5.3v17.2zm-2.7-19.6c-1.7 0-3.1-1.4-3.1-3.1 0-1.7 1.4-3 3.1-3 1.7 0 3.1 1.4 3.1 3.1 0 1.7-1.4 3-3.1 3zm22.7 19.6h-5.3v-8.4c0-2 0-4.6-2.8-4.6s-3.2 2.2-3.2 4.4v8.5h-5.4v-17.1h5.1v2.3h.1c.7-1.4 2.5-2.8 5.1-2.8 5.4 0 6.4 3.6 6.4 8.2v9.5z"/></svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://www.facebook.com/qualys" title="Facebook" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 90 611.8 612.2" enable-background="new 0 90 611.8 612.2"><path fill="#FFF" d="M578.3 90h-544.6c-18.6 0-33.7 15.1-33.7 33.7v544.4c0 18.6 15.1 33.7 33.7 33.7h293v-236.9h-79.7v-92.4h79.8v-67.9c0-79.1 48.4-122 118.8-122 33.7 0 62.8 2.5 71.3 3.7v82.5h-48.9c-38.3 0-45.9 18.1-45.9 44.9v58.9h91.5l-11.9 92.4h-79.6v237.1h155.9c18.6 0 33.7-15.1 33.7-33.7v-544.7c.3-18.6-14.8-33.7-33.4-33.7z"/></svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://www.youtube.com/user/QualysGuard" title="YouTube" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="22" height="22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1021.5 718.4" enable-background="new 0 0 1021.5 718.4"><path fill="#E0E0E0" d="M647.3 366.3l-242.1-161.6 276 144-33.9 17.6"/><path fill="#FFF" d="M1011.2 155s-10-70.4-40.6-101.4c-38.8-40.7-82.4-40.9-102.3-43.3-142.9-10.3-357.4-10.3-357.4-10.3h-.4s-214.4 0-357.4 10.3c-20 2.4-63.5 2.6-102.3 43.3-30.6 31-40.6 101.4-40.6 101.4s-10.2 82.6-10.2 165.3v77.5c0 82.7 10.2 165.3 10.2 165.3s10 70.4 40.6 101.4c38.9 40.7 89.9 39.4 112.6 43.7 81.7 7.8 347.3 10.3 347.3 10.3s214.6-.3 357.6-10.7c20-2.4 63.5-2.6 102.3-43.3 30.6-31 40.6-101.4 40.6-101.4s10.2-82.7 10.2-165.3v-77.5c.1-82.7-10.2-165.3-10.2-165.3m-605.9 336.7v-287l276 144-276 143z"/></svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://vimeo.com/qualys" title="Vimeo" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 86.67"><path fill="#FFF" d="M100 20.05q-.72 14.63-20.44 40.06Q59.16 86.67 45 86.67q-8.74 0-14.79-16.17l-8.02-29.66q-4.49-16.17-9.64-16.18-1.12 0-7.85 4.72L0 23.31q7.4-6.52 14.59-13 9.87-8.55 14.82-9 11.67-1.12 14.37 16 2.91 18.47 4 23 3.36 15.32 7.41 15.31 3.14 0 9.43-9.94t6.73-15.13q.9-8.58-6.73-8.58a18.7 18.7 0 0 0-7.4 1.64Q64.63-.66 85.42 0 100.84.47 100 20.05z"></path></svg></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+		
+					<div class="q-footer__column q-footer__column--nav">
+								<div class="q-footer__group">
+									<h3 class="q-footer__subheading">Cloud Platform</h3>
+									<ul class="q-footer__list">
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/cloud-platform/">Enterprise TruRisk Platform</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/private-cloud/">Private Cloud Platform</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/docs/pcp-private-cloud-appliance-datasheet.pdf">Private Cloud Platform Appliance</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/public-cloud/">Public Cloud Integrations</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/cloud-agent/">Cloud Agent</a>
+											</li>
+									</ul>
+								</div>
+								<div class="q-footer__group">
+									<h3 class="q-footer__subheading">Cloud Apps</h3>
+									<ul class="q-footer__list">
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/">Overview</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/global-assetview/">Global AssetView – It&#x27;s Free!</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/cybersecurity-asset-management/">CyberSecurity Asset Management</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/certificate-inventory/">Certificate Inventory</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/vulnerability-management-detection-response/">Vulnerability Management, Detection and Response</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/threat-protection/">Threat Protection</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/continuous-monitoring/">Continuous Monitoring</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/endpoint-detection-response/">Multi-Vector EDR</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/patch-management/">Patch Management</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/custom-assessment-remediation/">Custom Assessment and Remediation</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/certificate-assessment/">Certificate Assessment</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/saas-detection-response/">SaaS Detection &amp; Response</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/extended-detection-response/">Context XDR</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/totalcloud/">TotalCloud</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/cloud-security-posture-management/">Cloud Security Posture Management</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/infrastructure-as-code-security/">Infrastructure as Code</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/saas-security-posture-management/">SaaS Security Posture Management</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/cloud-workload-protection/">Cloud Workload Protection</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/container-security/">Container Security</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/cloud-detection-response/">Cloud Detection &amp; Response</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/web-app-scanning/">Web App Scanning</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/web-app-firewall/">Web App Firewall</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/policy-compliance/">Policy Compliance</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/security-configuration-assessment/">Security Configuration Assessment</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/pci-asv-compliance/">PCI ASV Compliance</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/file-integrity-monitoring/">File Integrity Monitoring</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/security-assessment-questionnaire/">Security Assessment Questionnaire</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/out-of-band-configuration-assessment/">Out-of-Band Configuration Assessment</a>
+											</li>
+									</ul>
+								</div>
+								<div class="q-footer__group">
+									<h3 class="q-footer__subheading">Subscriptions</h3>
+									<ul class="q-footer__list">
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/subscriptions/">Cloud Apps “a la carte”</a>
+											</li>
+									</ul>
+								</div>
+								<div class="q-footer__group">
+									<h3 class="q-footer__subheading">Free Trials &amp; Apps</h3>
+									<ul class="q-footer__list">
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/vulnerability-management-detection-response/">Qualys VMDR</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/forms/remote-endpoint/">60-Day Remote Endpoint Protection</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/global-assetview/">Global AssetView – It&#x27;s Free!</a>
+											</li>
+									</ul>
+								</div>
+								<div class="q-footer__group">
+									<h3 class="q-footer__subheading">Partners</h3>
+									<ul class="q-footer__list">
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/partners/">Overview</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/partners/program/">Partner program</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/partners/vad/">VAD partners</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/partners/var/">VAR resellers</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/partners/mssp/">MSP/MSSP partners</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/partners/integration/">Integration partners</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/partners/faq/">Partner FAQs</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/partners/find/">Find a partner</a>
+											</li>
+									</ul>
+								</div>
+								<div class="q-footer__group">
+									<h3 class="q-footer__subheading">Solutions</h3>
+									<ul class="q-footer__list">
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/solutions/">Overview</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/solutions/infrastructure/">Infrastructure security</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/solutions/cloud/">Cloud Security</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/solutions/endpoint/">Endpoint security</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/solutions/devops/">DevOps</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/solutions/compliance/">Compliance</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/solutions/pci-compliance/">PCI Compliance</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/solutions/web-app/">Web App Security</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/subscriptions/government/">Government</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/apps/vulnerability-management-detection-response/trurisk/">Small business</a>
+											</li>
+									</ul>
+								</div>
+								<div class="q-footer__group">
+									<h3 class="q-footer__subheading">Company</h3>
+									<ul class="q-footer__list">
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/company/">About us</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/careers/">Careers</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="https://investor.qualys.com/">Investor relations</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/company/management/">Our team</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/company/newsroom/">News</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/company/events/">Events</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="/company/contacts/">Contact</a>
+											</li>
+											<li class="q-footer__list-item">
+												<a class="q-footer__link" href="https://store.qualys.com">Qualys Merchandise Store</a>
+											</li>
+									</ul>
+								</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">Resources</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+											<a class="q-footer__link" href="https://community.qualys.com/">Community</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a class="q-footer__link" href="/documentation/">Docs</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a class="q-footer__link" href="https://success.qualys.com/customersupport">Support</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a class="q-footer__link" href="/training/">Free training</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a class="q-footer__link" href="https://blog.qualys.com/">Blog</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a class="q-footer__link" href="/resources/">Resources</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a class="q-footer__link" href="/company/sitemap/">Sitemap</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+		
+					<div class="q-footer-mobile">
+						<ul class="q-footer-mobile__list">
+							<li class="q-footer-mobile__item">
+								<a class="q-button q-button--block q-button--secondary" href="/free-trial/">Free trial</a>
+							</li>
+							<li class="q-footer-mobile__item">
+								<a class="q-button q-button--block q-button--secondary" href="tel:+18007454355">Sales +1 800 745 4355</a>
+							</li>
+							<li class="q-footer-mobile__item">
+								<a href="/forms/schedule-demo/" class="q-button q-button--block q-button--secondary">Schedule a demo</a>
+							</li>
+						</ul>
+		
+						<div class="q-footer__social">
+							<ul class="q-social-list q-social-list--centered">
+								<li class="q-social-list__item">
+									<a href="https://twitter.com/qualys" title="Twitter" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 148.7 610.7 496.3" enable-background="new 0 148.7 610.7 496.3"><path fill="#FFF" d="M192.1 645c-70.8 0-136.7-20.7-192.1-56.2 9.8 1.1 19.9 1.8 29.9 1.8 58.7 0 112.8-20.1 155.7-53.6-54.7-1.1-101.2-37.3-117-87.1 7.6 1.6 15.4 2.2 23.7 2.2 11.4 0 22.6-1.6 33.1-4.5-57.5-11.6-100.6-62.1-100.6-122.9v-1.6c17 9.4 36.2 15 56.7 15.6-33.5-22.4-55.8-60.6-55.8-104.2 0-23 6.3-44.4 17-63 61.6 75.9 153.9 126 258 131.1-2.2-9.2-3.4-18.8-3.4-28.6 0-69.2 56.1-125.3 125.3-125.3 36 0 68.6 15.2 91.4 39.5 28.8-5.6 55.6-15.9 79.7-30.4-9.4 29.3-29 53.8-54.9 69.5 25.2-3.1 49.6-9.8 71.9-19.7-16.8 25-38 47.1-62.5 64.8.2 5.4.4 10.7.4 16.3 0 165.4-126.2 356.3-356.5 356.3"/></svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://www.linkedin.com/company/qualys" title="LinkedIn" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" enable-background="new 0 0 36 36"><path fill="#FFF" d="M33.3 0h-30.6c-1.5 0-2.7 1.2-2.7 2.6v30.8c0 1.4 1.2 2.6 2.7 2.6h30.7c1.5 0 2.7-1.2 2.7-2.6v-30.8c-.1-1.4-1.3-2.6-2.8-2.6zm-22.6 30.7h-5.4v-17.2h5.3v17.2zm-2.7-19.6c-1.7 0-3.1-1.4-3.1-3.1 0-1.7 1.4-3 3.1-3 1.7 0 3.1 1.4 3.1 3.1 0 1.7-1.4 3-3.1 3zm22.7 19.6h-5.3v-8.4c0-2 0-4.6-2.8-4.6s-3.2 2.2-3.2 4.4v8.5h-5.4v-17.1h5.1v2.3h.1c.7-1.4 2.5-2.8 5.1-2.8 5.4 0 6.4 3.6 6.4 8.2v9.5z"/></svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://www.facebook.com/qualys" title="Facebook" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 90 611.8 612.2" enable-background="new 0 90 611.8 612.2"><path fill="#FFF" d="M578.3 90h-544.6c-18.6 0-33.7 15.1-33.7 33.7v544.4c0 18.6 15.1 33.7 33.7 33.7h293v-236.9h-79.7v-92.4h79.8v-67.9c0-79.1 48.4-122 118.8-122 33.7 0 62.8 2.5 71.3 3.7v82.5h-48.9c-38.3 0-45.9 18.1-45.9 44.9v58.9h91.5l-11.9 92.4h-79.6v237.1h155.9c18.6 0 33.7-15.1 33.7-33.7v-544.7c.3-18.6-14.8-33.7-33.4-33.7z"/></svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://www.youtube.com/user/QualysGuard" title="YouTube" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="22" height="22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1021.5 718.4" enable-background="new 0 0 1021.5 718.4"><path fill="#E0E0E0" d="M647.3 366.3l-242.1-161.6 276 144-33.9 17.6"/><path fill="#FFF" d="M1011.2 155s-10-70.4-40.6-101.4c-38.8-40.7-82.4-40.9-102.3-43.3-142.9-10.3-357.4-10.3-357.4-10.3h-.4s-214.4 0-357.4 10.3c-20 2.4-63.5 2.6-102.3 43.3-30.6 31-40.6 101.4-40.6 101.4s-10.2 82.6-10.2 165.3v77.5c0 82.7 10.2 165.3 10.2 165.3s10 70.4 40.6 101.4c38.9 40.7 89.9 39.4 112.6 43.7 81.7 7.8 347.3 10.3 347.3 10.3s214.6-.3 357.6-10.7c20-2.4 63.5-2.6 102.3-43.3 30.6-31 40.6-101.4 40.6-101.4s10.2-82.7 10.2-165.3v-77.5c.1-82.7-10.2-165.3-10.2-165.3m-605.9 336.7v-287l276 144-276 143z"/></svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://vimeo.com/qualys" title="Vimeo" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 86.67"><path fill="#FFF" d="M100 20.05q-.72 14.63-20.44 40.06Q59.16 86.67 45 86.67q-8.74 0-14.79-16.17l-8.02-29.66q-4.49-16.17-9.64-16.18-1.12 0-7.85 4.72L0 23.31q7.4-6.52 14.59-13 9.87-8.55 14.82-9 11.67-1.12 14.37 16 2.91 18.47 4 23 3.36 15.32 7.41 15.31 3.14 0 9.43-9.94t6.73-15.13q.9-8.58-6.73-8.58a18.7 18.7 0 0 0-7.4 1.64Q64.63-.66 85.42 0 100.84.47 100 20.05z"></path></svg></a>
+								</li>
+							</ul>
+						</div>
+		
+					</div>
+					<small class="q-footer__copyright">
+						© 2024 Qualys, Inc.&nbsp; All rights reserved.&nbsp;
+						<a href="https://www.qualys.com/company/privacy/" class="nowrap">
+							Privacy Policy</a>.&nbsp;
+						<a href="https://www.qualys.com/company/accessibility/" class="nowrap">
+							Accessibility</a>.&nbsp;
+						<a href="https://www.qualys.com/company/privacy/#notice-at-collection" class="nowrap">
+							Notice at Collection</a>.&nbsp;
+						<a href="https://success.qualys.com/support/s/standards" class="nowrap">
+							Trust</a>.&nbsp;
+						<a href="https://www.qualys.com/cookie-consent/" class="nowrap">
+							Cookie Consent</a>.&nbsp;
+					</small>
+				</div>
+			</div>
+		</footer>
+
+		<div class="mobile-trial-overlay hidden" data-expires="2022-03-01T17:00:00Z">
+			<a class="close-button">
+				<svg class="x" xmlns="http://www.w3.org/2000/svg" width="12" height="12">
+					<g fill="#FFF" fill-rule="evenodd">
+						<path d="M10.142.243l1.414 1.414-9.9 9.9-1.414-1.415z" />
+						<path d="M.242 1.657L1.657.243l9.9 9.9-1.415 1.413z" />
+					</g>
+				</svg>
+			</a>
+			<p class="promo-text"><b>Log4Shell Response</b></p>
+			<div class="promo-banner-cta">
+				<a class="q-button right" href="https://www.qualys.com/log4shell-cve-2021-44228/"><span>See updates</span></a>
+			</div>
+		
+		</div>
+		<!-- polyfills -->
+		<!--[if lt IE 10]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.14/es5-shim.min.js" integrity="sha256-ULHaXAsr5JLD6L5PeGlMn0p+MJvrHn5lhBAPQwqdnQw=" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.14/es5-sham.min.js" integrity="sha256-ZekDZN5DegoC1n9w+2cjddAItLYFQrneylj0fc8ztxo=" crossorigin="anonymous"></script>
+		<![endif]-->
+		<!--[if IE]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/native-promise-only/0.8.1/npo.js" integrity="sha384-G1LHj+SfI1gc9FouJCB24YnAzzjhDNfhwrUPgo2Fb4Jde/lBnkHXjd83QvEZraLK" crossorigin="anonymous"></script>
+		<![endif]-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js" integrity="sha256-IylDNWjip7FK2TJUYck237qBTBeSiwnSFDCjLG686D4=" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/core-js-bundle@3.6.5/minified.js" integrity="sha384-TTVcaKdKKsLSvxkJU8mv/ZrkBlSMUiXn57PWhpGFzfeuzqQW/krdvVzW8yqtTqz5" crossorigin="anonymous"></script>
+
+		<!-- libraries -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha384-zZbyq8BQ4BvQcv4xPxkJWWGPSVW6z+MufIHfxNTdnFQwc7J2Idz0zxeP6/bMqWJn" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js" integrity="sha384-nK4khbhvZ/TNQaGnwee6RVFCDRfxcrLKZZqKCVqk1rF9AT8Etq3UZYCXZ7CCAd0K" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.js" integrity="sha512-dPYTaB+Ip4gAl9vo6U0jSmI8v1AZKjPKH367mfo7pR5gLf1IKpjm3bIXIwm+MmYWEf0eiBEWSBqE+MdKUx0jfg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js" integrity="sha256-VV47uJSoHZUeiBcCs3FcBOQLMn++yeG/zqZvaUkvGZM=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js" integrity="sha256-nuhNsfXzBFR6G1lKP8bK77dakkQDqdHcQ4OCFZvk6Qo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js" integrity="sha256-LBjlnpPrM6Aig8LDFc9PJctPHLGUc6RaUvnmXE4hV5Y=" crossorigin="anonymous"></script>
+		<script src="/asset/script/common.js?v=20240221"></script>
+	<script src="/research/security-alerts/security-alert.js"></script>
+
+</body>
+</html>

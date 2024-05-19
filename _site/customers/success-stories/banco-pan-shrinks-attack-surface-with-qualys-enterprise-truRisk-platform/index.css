@@ -1,0 +1,34 @@
+.q-story__header-box {
+	background-image:url('https://ik.imagekit.io/qualys/image/success-stories/q-bancopan-bg.png');
+	background-size:cover;
+	color: #FFF;
+}
+.highlight-color {
+ background-color: #07b2fd; 
+
+}
+.q-story-content-dash svg path,
+.q-story-quote-dash svg path,
+.q-story-carousel-dash svg path {
+	fill: #07b2fd;
+}
+
+.q-story-content-heading {
+	width:50%
+}
+
+@media (min-width:600px) {
+	.q-story-content-heading {
+		width:100%
+	}
+}
+
+.q-story__header-content h1 {
+	font-weight:600
+}
+
+@media (min-width:720px) {
+	.q-story__header-content h1 {
+	font-weight:700
+ }
+}

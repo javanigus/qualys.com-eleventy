@@ -1,0 +1,27 @@
+.hero {
+	background-image: url("https://q-website-images.s3.amazonaws.com/www/image/success-stories/ablv-bank-1440-2x.jpg");
+}
+.img-container.cloud-agent-ami {
+	height: 359px;
+}
+.cloud-agent-ami img {
+	width: 850px;
+}
+.img-container.container-security-plugin {
+	height: 377px;
+}
+.container-security-plugin img {
+	width: 849px;
+}
+.box.a {
+	background-color: #F89E39;
+}
+.box.b,
+.quote-box {
+	background-color: #F89E39;
+}
+@media (min-width: 1420px) {
+	.heading--sub {
+		max-width: 500px;
+	}
+}

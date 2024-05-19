@@ -1,0 +1,59 @@
+.hero-background {
+	background-image: url(https://ik.imagekit.io/qualys/image/vm-scale-bg-768-2x.jpg);
+}
+@media (min-width: 768px) {
+	.hero-background {
+		background-image: url(https://ik.imagekit.io/qualys/image/vm-scale-bg-1440-2x.jpg);
+	}
+}
+.heading--1 {
+	color: #FFF;
+}
+.heroContent .description {
+	color: #FFF;
+}
+.customer-logo {
+	width: 200px;
+	margin: 0 0 1.5em;
+	filter: contrast(0) brightness(2);
+}
+.q-icon-plus-content__image {
+	min-width: 70px;
+}
+.screenshot.desktop {
+	opacity: 1;
+}
+.screen2,
+.screen3,
+.screen4,
+.screen5 {
+	left: 100%;
+	opacity: 1;
+}
+.player-play,
+.player-pause {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	opacity: 0;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+@media (min-width: 1290px) {
+	.q-apps-features__heading {
+		max-width: 19em;
+	}
+}
+@media (min-width: 720px) {
+	.q-icon-plus-content__copy {
+		text-align: left;
+	}
+}
+
+/*# sourceMappingURL=index.css.map */

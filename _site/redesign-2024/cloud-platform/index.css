@@ -1,0 +1,16 @@
+.hero-box-bg {
+	background: linear-gradient(90deg, #0047AD 100.22%, #0E75E1 47.26%, #F3F5F8 32.15%)
+}
+
+@media (min-width: 1024px) {
+	.hero-box-bg {
+		background: linear-gradient(90deg, #0047AD 1.22%, #0E75E1 47.26%, #F3F5F8 32.15%)
+	}
+}
+.active-tab {
+	color: #ED2E26;
+	font-weight: 700;
+	border-bottom:3px solid #ED2E26;
+}
+
+/*# sourceMappingURL=index.css.map */

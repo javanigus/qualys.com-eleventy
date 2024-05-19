@@ -1,0 +1,56 @@
+@media (max-width: 720px) {
+  .q-apps-features__heading {
+    margin-bottom: 50px;
+  }
+
+  .m-p-0 {
+    padding: 0;
+  }
+}
+@media (min-width: 990px){
+  .saasdr-apps-intro {
+      margin-top: 100px;
+  }
+  }
+@media (min-width: 1140px){
+.saasdr-apps-intro {
+    margin-top: 120px;
+}
+}
+@media (min-width: 720px) {
+  .cloud-view .q-apps-features__col {
+    margin-bottom: 50px !important;
+  }
+  .saasdr-apps-intro .q-apps-screenshot__heading {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      max-width: 19.2em;
+  }
+  .saasdr-apps-intro .paragraph--1 {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+.saasdr-apps-intro {
+  margin-top: 60px;
+}
+.q-apps-screenshot__container-inner {
+  border: none;
+}
+
+.q-apps-screenshot__container-inner--separator {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+#cloudview:after,
+#csa-features::after {
+  background: none !important;
+}
+.q-header--fixed.q-header--compact .q-nav-actions__item--trial {
+  display: none;
+}
+.q-header--fixed.q-header--compact .q-nav-actions__item--totalcloud-signup {
+  display: block;
+}
+/*# sourceMappingURL=index.css.map */

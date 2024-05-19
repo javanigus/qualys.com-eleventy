@@ -1,0 +1,26 @@
+.section12 .q-trial {
+	background: #1D2737;
+	margin-bottom: 60px;
+	margin-top: 50px;
+}
+
+.section12 .q-trial__heading {
+	color: #fff;
+}
+
+.section12 .q-trial__textblock {
+	color: #fff;
+}
+
+.section12 .q-trial__link:hover {
+	color: #fff;
+}
+.section12 .q-trial__link {
+    border-bottom: 1px solid #fff !important;
+}
+
+@media (min-width:992px){
+	.section12 .q-trial {
+	margin-bottom:100px;
+}
+}

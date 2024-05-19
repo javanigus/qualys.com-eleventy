@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Test Page with Vimeo Video Embed With Lazy Loading and Without Vimeo API</title>
+</head>
+<body>
+	<h1>Test Page with Vimeo Video Embed With Lazy Loading and Without Vimeo API</h1>
+	<iframe loading="lazy" class="lazyload" data-src="https://player.vimeo.com/video/444953099" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+</body>
+<script>
+	/*
+	* Lazy Load Images
+	* https://www.stevefenton.co.uk/2019/09/html-loading-attribute-for-lazy-loading-images-and-iframes/
+	*/
+	(function () {
+		"use strict";
+
+		if ('loading' in HTMLImageElement.prototype) {
+			console.log("a");
+			// This uses the browser's own native lazy load
+			const imageElements = document.querySelectorAll('[loading="lazy"]');
+			imageElements.forEach(iframe => { iframe.src = iframe.dataset.src; });
+		} else { // for Safari
+			console.log("b");
+			// This downloads a polyfill from Cloudflare's CDN and makes it happen without the browser
+			const lazyScript = document.createElement('script');
+			lazyScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js';
+			lazyScript.crossOrigin = "anonymous";
+			document.body.appendChild(lazyScript);
+		}
+	}());
+</script>
+</html>

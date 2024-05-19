@@ -1,0 +1,105 @@
+h1 {
+	color: #000;
+	opacity: 1;
+}
+p {
+	margin-bottom: 1em;
+}
+h2 {
+	margin-bottom: 1em;
+}
+h3 {
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+.q-wrapper {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+@media (min-width: 1430px) {
+	.q-wrapper {
+		padding-top: 100px;
+	}
+}
+.definitions,
+.definitions th,
+.definitions td {
+	border: 1px solid #CCC;
+	padding: 1em;
+	font-family: Gotham, sans-serif;
+	border-collapse: collapse;
+	vertical-align: top;
+}
+.definitions td:first-child {
+	font-weight: 700;
+}
+td p {
+	margin-top: 0;
+}
+th {
+	background-color: #EFEFEF;
+}
+th h4 {
+	margin: 0;
+}
+.definitions {
+	width: 100%;
+	padding: 0;
+	margin-bottom: 5em;
+}
+td p:last-child {
+	margin-bottom: 0;
+}
+@media (max-width: 719px) {
+	.definitions {
+		border: 0;
+	}
+	.definitions thead {
+		display: none;
+	}
+	.definitions tbody tr {
+		display: block;
+		margin-bottom: 15px;
+	}
+	.definitions tbody td {
+		display: flex;
+		border-width: 1px 1px 0 1px;
+		border-style: solid;
+		border-color: #CCC;
+	}
+	.definitions tbody td > div {
+		flex: 1;
+	}
+	.definitions tbody tr td:last-child {
+		border-bottom-width: 1px;
+	}
+	.definitions tbody tr td::before {
+		float: left;
+		display: block;
+		max-width: 200px;
+		width: 35%;
+		font-family: Gotham, sans-serif;
+		font-size: 1em;
+		line-height: 1.35;
+		letter-spacing: -0.2px;
+		color: #30405B;
+		font-weight: 500;
+	}
+	.definitions tbody tr td:nth-child(1)::before {
+		content: "Severity";
+		
+	}
+	.definitions tbody tr td:nth-child(2)::before {
+		content: "Definition";
+		float: left;
+	}
+	.definitions tbody tr td:nth-child(3)::before {
+		content: "Targeted Initial Response Times";
+		float: left;
+	}
+	.definitions tbody tr td:nth-child(4)::before {
+		content: "Targeted Follow-up Response Times";
+		float: left;
+	}
+}
+/*# sourceMappingURL=index.css.map */

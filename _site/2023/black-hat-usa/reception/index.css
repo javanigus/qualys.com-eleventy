@@ -1,0 +1,45 @@
+.mktoButtonRow .mktoButtonWrap {
+	margin: 0 !important;
+}
+
+.q-lp-privacy-info {
+	margin-top: 2em;
+}
+
+/*
+ * Fancybox modal window for privacy policy content
+ */
+.fancybox-slide--iframe .fancybox-content {
+	width: 600px;
+	max-width: 80%;
+	max-height: 80%;
+	margin: 0;
+}
+
+.q-lp-privacy-info {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.mktoForm input[type="checkbox"]::before,
+.mktoCheckboxList label::before {
+	margin-top: -3px;
+}
+
+body {
+	padding-top: 0;
+}
+
+.mktoErrorMsg {
+	margin-top: 10px;
+}
+
+.mktoButton{
+ background: #ED2E26;
+}
+.h1 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.05;
+    color: #000;
+}
+/*# sourceMappingURL=index.css.map */

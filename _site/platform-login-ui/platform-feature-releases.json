@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Qualys announces TotalCloud™ 2.0 with TruRisk™ Insights",
+        "date": "2024-02-07T00:00",
+        "url": "https://blog.qualys.com/product-tech/2024/02/07/announcing-totalcloud-2-0-with-trurisk-insights-the-future-of-cloud-and-saas-security",
+        "newFlag": false
+    },
+    {
+        "title": "Qualys announces CyberSecurity Asset Management 3.0 with Expanded Discovery and Cyber Risk Assessment",
+        "date": "2024-05-06T00:00",
+        "url": "https://blog.qualys.com/product-tech/2024/05/06/introducing-cybersecurity-asset-management-3-0-with-expanded-discovery-and-cyber-risk-assessment",
+        "newFlag": true
+    },
+    {
+        "title": "Qualys integrates Software Composition Analysis (SCA) into VMDR",
+        "date": "2024-04-12T00:00",
+        "url": "https://blog.qualys.com/product-tech/2024/04/12/de-risk-the-software-supply-chain-by-expanding-unparalleled-detection-coverage-with-qualys-vmdr-and-software-composition-analysis",
+        "newFlag": false
+    },
+    {
+        "title": "Announcing MITRE ATT&CK Matrix Prioritization in Qualys VMDR",
+        "date": "2024-03-25T00:00",
+        "url": "https://blog.qualys.com/product-tech/2024/03/25/combine-qualys-trurisk-and-mitre-attck-to-adopt-a-threat-informed-defense-to-reduce-risk",
+        "newFlag": false
+    }
+]

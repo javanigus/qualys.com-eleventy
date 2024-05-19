@@ -1,0 +1,127 @@
+.q-square__heading {
+	font-size: 28px;
+	margin-bottom: 22px;
+}
+img.awards-square__logo {
+	margin-bottom: 23px;
+	max-width: 100%;
+	height: auto;
+}
+@media (min-width: 1080px) {
+	.q-content-hero__inner {
+		padding-bottom: 57px;
+	}
+}
+.awards-hero-content {
+	flex: none;
+	background: url(https://ik.imagekit.io/qualys/image/awards/hero-bg-1x.jpg) 0 0 no-repeat;
+	background-size: cover;
+	/* stylelint-disable */
+}
+.awards-description {
+	font-size: 1.125em;
+}
+.awards-description p {
+	margin: 0;
+}
+.q-grid__container {
+	margin-top: 30px;
+}
+@media (min-width: 720px) {
+	.q-grid__container {
+		margin-top: 7.5em;
+	}
+	.q-default-hero__subheading {
+		margin-bottom: 1.583em;
+	}
+}
+.q-default-hero__image {
+	background-position: left top;
+}
+
+.awards-hero-content::before {
+	content: "";
+	display: block;
+	padding-bottom: 77.12121%;
+}
+
+.awards-listing__container {
+	margin-bottom: 80px;
+}
+.awards-thumbnail {
+	background: #F6FAFD;
+	display: block;
+	min-height: 202px;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	transition: box-shadow 0.4s cubic-bezier(0, 1, 0.75, 1), transform 0.4s cubic-bezier(0, 1, 0.75, 1);
+}
+@media (pointer: fine),
+	(-moz-touch-enabled: 0) {
+	.awards-thumbnail:hover {
+		background: #FFF;
+		transform: translate3d(0, -5px, 0);
+		box-shadow: 0 11px 22px 0 rgba(170, 177, 188, 0.2);
+	}
+}
+.awards-thumbnail img {
+	filter: contrast(50%) grayscale(1);
+	max-width: 85%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	transition: filter 0.4s;
+}
+@media (pointer: fine),
+	(-moz-touch-enabled: 0) {
+	.awards-thumbnail:hover > img {
+		filter: contrast(1) grayscale(0);
+	}
+}
+.awards-heading__link {
+	text-decoration: none !important;
+}
+.awards-heading {
+	padding: 0;
+	margin: 0;
+	font-weight: inherit;
+	line-height: inherit;
+	font-style: normal;
+	vertical-align: baseline;
+	border: 0;
+	font-size: 1.625em;
+	font-family: Gotham, sans-serif;
+	font-weight: 400;
+	letter-spacing: -0.02ex;
+	line-height: 1.35;
+	color: #1D2737;
+	margin-bottom: 0.769em;
+}
+.awards-subheading {
+	padding: 0;
+	margin: 0;
+	font-weight: inherit;
+	line-height: inherit;
+	font-style: normal;
+	vertical-align: baseline;
+	border: 0;
+	font-size: 19px;
+	font-family: Gotham, sans-serif;
+	font-weight: 500;
+	letter-spacing: -0.01em;
+	line-height: 1.35;
+	color: #30405B;
+}
+
+@media (max-width: 719px) {
+	.awards-thumbnail {
+		margin-bottom: 30px;
+	}
+	.awards-listing__container {
+		margin-bottom: 60px;
+	}
+}
+
+/*# sourceMappingURL=awards.css.map */

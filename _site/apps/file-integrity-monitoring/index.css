@@ -1,0 +1,111 @@
+.q-apps-features__col:first-child .q-icon-plus-content__icon {
+	width: 63px;
+	height: 72px;
+}
+.q-apps-features__col:nth-child(2) .q-icon-plus-content__icon {
+	width: 67px;
+	height: 73px;
+}
+.q-apps-features__col:nth-child(3) .q-icon-plus-content__icon {
+	width: 60px;
+	height: 60px;
+}
+.q-apps-features__col:nth-child(4) .q-icon-plus-content__icon {
+	width: 94px;
+	height: 63px;
+}
+.q-apps-screenshot--rtl .q-apps-screenshot {
+	padding-top: 0;
+}
+@media (min-width: 1080px) {
+	.q-apps-screenshot--rtl .q-apps-screenshot__image {
+		order: 1;
+		direction: rtl;
+	}
+	.q-apps-screenshot--rtl .q-apps-screenshot__content {
+		order: 2;
+	}
+}
+@media (min-width: 720px) {
+	.q-apps-screenshot--fim .q-apps-screenshot__content {
+		margin-bottom: 30px;
+	}
+}
+.q-subscriptions-hero-cta {
+	will-change: opacity, transform;
+	opacity: 0;
+	display: flex;
+	margin-top: 2.15em;
+	margin-bottom: 1.45em;
+	justify-content: center;
+	flex-direction: column;
+}
+.q-default-hero__box-wrap {
+	margin-right: auto;
+}
+.q-subscriptions-hero-cta__button {
+	flex: none;
+}
+.q-subscriptions-hero-cta__link-wrap {
+	color: #262626;
+	margin-top: 1em;
+}
+.q-subscriptions-hero-cta__link-wrap p {
+	font-size: 14px;
+	font-size: calc(0.00109 * 100vw + (13.59016px));
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+.q-subscriptions-hero-cta__link {
+	color: inherit;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	font-style: normal;
+	vertical-align: baseline;
+	border: 0;
+	font-family: Gotham, sans-serif;
+	font-weight: 400;
+	letter-spacing: -0.01em;
+	line-height: 1.15;
+	color: #262626;
+	line-height: 1.33333;
+}
+.q-subscriptions-hero-cta__link-phone {
+	text-decoration: none;
+	font-family: Gotham, sans-serif;
+}
+.q-subscriptions-hero-cta__link .email-us {
+	font-weight: 500;
+}
+@media (min-width: 720px) {
+	.q-subscriptions-hero-cta__button {
+		padding-right: 1.5em;
+	}
+	.q-subscriptions-hero-cta__link-wrap {
+		margin-top: 0;
+	}
+	.q-subscriptions-hero-cta {
+		justify-content: flex-start;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+	.q-subscriptions-hero-cta__link-wrap {
+		text-align: left;
+	}
+}
+@media (min-width: 1165px) {
+	.q-subscriptions-hero-cta {
+		margin-bottom: 0;
+	}
+}
+.q-content-hero__subheading {
+	min-height: 2.33333em;
+	padding: 0 0 0.83333em;
+	line-height: 1.2;
+}
+/*# sourceMappingURL=index.css.map */

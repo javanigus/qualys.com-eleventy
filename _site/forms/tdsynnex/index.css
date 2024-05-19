@@ -1,0 +1,16 @@
+.main {
+	padding-top: 60px;
+	margin-bottom: 5em;
+}
+.form .heading--3 {
+	font-weight: 500;
+}
+iframe {
+	min-height: 2400px;
+	border: 0;
+	min-width: 914px;
+	z-index: 10;
+	position: relative;
+	margin-top: 10px;
+}
+/*# sourceMappingURL=index.css.map */

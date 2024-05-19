@@ -1,0 +1,24 @@
+
+<html>
+<head>
+	<title>Test Page with Vimeo Video Embed With Vimeo API</title>
+</head>
+<body>
+	<h1>Test Page with Vimeo Video Embed With Vimeo API</h1>
+	<p><a href="https://developer.vimeo.com/player/sdk/basics">https://developer.vimeo.com/player/sdk/basics</a></p>
+	<iframe class="first" src="https://player.vimeo.com/video/444953099" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<iframe src="https://player.vimeo.com/video/354052984" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<iframe src="https://player.vimeo.com/video/354041327" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script>
+		var iframe = document.querySelector('iframe.first');
+		var player = new Vimeo.Player(iframe);
+
+		player.getVideoTitle().then(function(title) {
+			console.log('title:', title);
+		});
+	</script>
+
+</body>
+</html>

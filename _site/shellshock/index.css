@@ -1,0 +1,366 @@
+#content.full-width {
+	border-top: 0;
+	padding-bottom: 0;
+}
+#content.full-width div.section.banner {
+	padding-bottom:38px;
+}
+div.banner {
+	background-image: url(https://ik.imagekit.io/qualys/image/code-background2.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	/*background-color: #00105f;*/
+	padding-top: 46px;
+	text-align: center;
+}
+h1 {
+	font-size: 42pt;
+	font-weight: bold;
+	line-height: 1.24;
+	margin-bottom: 40px;
+}
+#content h1 {
+	color: #FFF;
+}
+div.background-container {
+	width: 500px;
+	min-height: 721px;
+	position: absolute;
+	top: 0;
+}
+div.background-container.left {
+	left: 0;
+	background: rgba(0, 0, 0, 0) url(https://ik.imagekit.io/qualys/image/shellshock-left-background.jpg) repeat-x scroll 0 0;
+}
+div.background-container.right {
+	right: 0;
+	background: rgba(0, 0, 0, 0) url(https://ik.imagekit.io/qualys/image/shellshock-right-background.jpg) repeat-x scroll 0 0;
+}
+div.banner a.container {
+	display: inline-block;
+	color: #000;
+	max-width: 263px;
+	vertical-align: top;
+	text-align: center;
+	margin: 0 11px;
+	min-height: 222px;
+}
+#content div.banner a.container {
+	color: #000;
+	text-decoration: none;
+}
+#content div.banner a.container:hover {
+	text-decoration: none;
+}
+div.banner a.container.detect {
+	background-color: #72B5E4;
+	opacity: 0.75;
+}
+div.banner a.container.alerts {
+	background-color: #FFF;
+	opacity: 0.75;
+}
+div.banner a.container.attacks {
+	background-color: #7CD5FE;
+	opacity: 0.74;
+}
+div.banner a.container h2 {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 28pt;
+	text-align: center;
+	margin-top: 11px;
+	line-height: 1.15;
+	margin-bottom: -11px;
+}
+div.banner a.container p {
+	font-size: 16pt;
+	line-height: 1.3;
+}
+div.banner a.container p.learn-more {
+	font-weight: 700;
+	font-size: 14pt;
+	margin-top: 3px;
+}
+div.banner a.container p.learn-more {
+	color: #06C;
+}
+p.free-tool {
+	width: 690px;
+	margin: 38px auto 35px;
+}
+p.free-tool,
+p.free-tool b {
+	text-align: center;
+	font-size: 17pt;
+	line-height: 1.5;
+}
+#content p.free-tool,
+#content p.free-tool b {
+	color: #FFF;
+}
+p.free-tool b {
+	font-weight: 700;
+}
+div.banner a.button-type1 {
+	text-align: center;
+	margin: 0 auto 6px;
+	display: table;
+	font-size: 21pt;
+	padding: 16px 27px;
+}
+div.banner p.nothing-to-install {
+	font-size: 14pt;
+	font-weight: 400;
+	margin-top: 2px;
+}
+#content div.banner p.nothing-to-install {
+	color: #FFF;
+}
+#content.full-width div.section.webcast {
+	background-color: #000230;
+	color: #FFF;
+	padding-left: calc(50% - 502px);
+	padding-right: calc(50% - 502px);
+	padding-bottom: 28px;
+}
+div.section.webcast div.bash {
+	display: inline-block;
+	margin-right: 26px;
+	vertical-align: top;
+}
+div.section.webcast div.bash h2 {
+	font-size: 28pt;
+	font-weight: 600;
+	font-style: italic;
+	text-transform: uppercase;
+	margin-top: 15px;
+	margin-bottom: -13px;
+}
+#content div.section.webcast div.bash h2 {
+	color: #FFF;
+}
+div.section.webcast p {
+	font-size: 16pt;
+}
+div.section.webcast div.detect {
+	display: inline-block;
+	width: 492px;
+	vertical-align: top;
+}
+div.section.webcast div.detect h2 {
+	font-size: 24pt;
+	margin-top: 16px;
+	margin-bottom: -13px;
+}
+#content div.section.webcast div.detect h2 {
+	color: #FFF;
+}
+div.section.webcast a.button-type3 {
+	margin: 37px 0 0 30px;
+	padding: 12px 50px;
+	border-radius: 5px;
+}
+div.section.about h2 {
+	font-size: 22pt;
+	font-weight: 600;
+	margin-top: 37px;
+	margin-bottom: 24px;
+}
+div.section.about p {
+	font-size: 15pt;
+}
+img.shellshock-logo {
+	float: left;
+	margin: -10px 14px 10px 0;
+}
+#content.full-width div.section.about {
+	padding-bottom: 130px;
+}
+div.section.actions {
+	background-color: #ECF1F5;
+}
+div.section.actions h3 {
+	font-size: 23pt;
+	font-weight: 700;
+	margin-bottom: 23px;
+}
+div.section.actions p.text {
+	width: 430px;
+	text-align: left;
+	display: inline-block;
+	margin-right: 54px;
+	line-height: 1.6;
+	font-size: 12pt;
+}
+div.section.actions p b {
+	font-size: 14pt;
+	font-weight: 700;
+}
+#content div.section.actions p b {
+	color: #333;
+}
+div.section.actions h4 {
+	font-size: 12pt;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+div.section.actions p.link {
+	margin-bottom: 12px;
+	font-size: 12pt;
+}
+div.section.actions p.link b {
+	font-size: 12pt;
+}
+#content div.section.actions p.link b {
+	color: #06C;
+}
+div.section.actions a.button-type1 {
+	font-size: 14pt;
+	font-weight: 400;
+	padding: 10px 13px;
+	margin-bottom: 0;
+}
+div.section.actions a.button-type1 b {
+	font-weight: 600;
+}
+#content div.section.actions a.button-type1 b {
+	color: #FFF;
+}
+div.section.actions div.links {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+}
+#content.full-width div.section.actions {
+	padding-top: 0;
+	padding-bottom: 113px;
+}
+div.section.actions hr {
+	border-top: 2px solid #CBD3D9;
+	border-bottom: 2px solid #FFF;
+	width: 945px;
+	margin-left: -15px;
+	margin-bottom: 27px;
+	margin-top: 32px;
+}
+h3.real-time-alerts,
+h3.block-attacks {
+	padding-top: 115px;
+	margin-top: -90px;
+}
+div.button-container {
+	text-align: center;
+	position: absolute;
+	top: -27px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+div.button-container div.background {
+	background-color: #FFF;
+	background-color: #FFF;
+	width: 100%;
+	height: 144px;
+	position: absolute;
+	top: -90px;
+}
+div.button-container img.icon {
+	opacity: 0.4;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: -60px;
+}
+div.button-container a.attacks img.icon {
+	margin-left: 114px;
+}
+div.button-container img.drop-shadow {
+	position: absolute;
+	left: 0;
+	visibility: hidden;
+	bottom: -46px;
+}
+div.button-container a.active img.drop-shadow {
+	visibility: visible;
+}
+div.button-container a.active img.icon {
+	opacity: 1;
+}
+div.button-container a {
+	display: inline-block;
+	margin: 0 1px;
+	position: relative;
+}
+div.button-container a div.button {
+	display: inline-block;
+	width: 297px;
+	max-width: 297px;
+	border-radius: 5px;
+	font-size: 24pt;
+	font-weight: 700;
+	border: 2px solid #EAEAEA;
+	line-height: 1.1;
+	padding: 20px 0;
+	position: relative;
+	background-color: #FFF;
+}
+#content div.button-container a div.button {
+	color: #A8A8A8;
+}
+div.button-container a:hover {
+	text-decoration: none;
+}
+div.button-container a.detect.active div.button {
+	background-color: #72B5E4;
+	border: 2px solid #659BC1;
+	box-shadow:		 inset 0 0 16px 0 rgba(50, 50, 50, 0.4);
+}
+#content div.button-container a.detect.active div.button {
+	color: #000;
+}
+div.button-container a.alert.active div.button {
+	background-color: #BFC6D9;
+	border: 2px solid #A4AABA;
+	box-shadow:		 inset 0 0 16px 0 rgba(50, 50, 50, 0.4);
+}
+#content div.button-container a.alert.active div.button {
+	color: #000;
+}
+div.button-container a.attacks.active div.button {
+	background-color: #6CC8F3;
+	border: 2px solid #61ACCF;
+	box-shadow:		 inset 0 0 16px 0 rgba(50, 50, 50, 0.4);
+}
+#content div.button-container a.attacks.active div.button {
+	color: #000;
+}
+div.stuck {
+	position: fixed;
+	top: 90px !important;
+	z-index: 300;
+}
+#detect {
+	padding-top: 113px;
+}
+#content div.column {
+	display: inline-block;
+	vertical-align: top;
+	width: 430px;
+}
+div.section.actions div.column p.text {
+	margin-right: 0;
+}
+div.comp-detection {
+	float: right;
+}
+#content div.button-wrapper {
+	clear: both;
+	text-align: center;
+	padding-top: 20px;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,82 @@
+.section25 .q-blue-bg{
+    background: #2E8BE0;
+    color:#fff;
+    padding:15px 10px 15px 10px
+}
+
+.section25 .q-percentage{
+   font-size:50px;
+   margin:0;
+   color:#fff;
+}
+
+.section25 .q-percentage-copy{
+   margin:0;
+   margin-top:20px;
+   color:#fff;
+} 
+   .section25 .q-percentage-subcopy{
+   padding-top:20px;
+   margin:0;
+   font-size:16px;
+   font-family: Gotham, sans-serif;
+   font-weight:300
+} 
+
+@media (min-width:720px){
+   .section25 .q-percentage{
+   font-size:4rem;
+   padding-left:20px;
+} 
+   .section25 .q-percentage-copy{
+   margin:0
+} 
+   .section25 .q-percentage-subcopy{
+   font-size:18px;
+} 
+.section25 .q-blue-bg{
+    padding:20px 20px 15px 20px
+}
+}
+
+.section25 .q-percentage{
+   font-family: Gotham, sans-serif;
+   font-weight:500;
+   line-height: 1;
+} 
+
+@media (min-width:1290px){
+   .section25 .q-percentage{
+   font-size:100px;
+   padding:0
+} 
+.section25 .q-percentage-subcopy{
+   font-size:24px;
+} 
+}
+@media (min-width:1440px){
+   .section25 .q-percentage{
+   font-size:111px;
+   font-family: Gotham, sans-serif;
+   font-weight:500;
+   line-height: 1;
+} 
+}
+.section25 .q-percentage-copy{
+   font-size:24px;
+   line-height:30px;
+}
+
+@media (min-width:720px){
+   .section25 .q-percentage-copy{
+   font-size:34px;
+   line-height:38px;
+}
+}
+@media (min-width:1290px){
+   .section25 .q-percentage-copy{
+   font-size:44px;
+   line-height:46px;
+   font-weight: 300;
+}
+}

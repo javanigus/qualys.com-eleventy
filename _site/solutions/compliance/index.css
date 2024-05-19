@@ -1,0 +1,448 @@
+.compliance-icon {
+    max-width: 65px;
+}
+.q-blockquote__brand img {
+	filter: none;
+}
+.compliance-intro{
+	column-count: 2;
+}
+.compliance-intro-block{
+	margin: auto;
+	padding-bottom: 25px;
+}
+.q-solutions-intro__heading{
+	max-width: 100%
+}
+@media (min-width: 1290px)
+{
+.q-solutions-intro__heading {
+    font-size: 44px;
+    text-align: center;
+}
+}
+
+@media (min-width:720px) {
+	.q-complaince-box{
+		width: 33.3% !important;
+		padding:0 30px
+	}
+	.q-discover-track{
+	padding-top:80px;
+}
+}
+
+.q-complaince-content{
+	padding-top:30px
+}
+
+.q-discover-track .q-grid__column.q-grid__column-5 h3{
+ font-size:21px;
+ margin-bottom:0px
+}
+
+.q-discover-track{
+	padding-bottom: 50px;
+}
+
+.q-discover-track h2{
+	text-align: center;
+}
+
+ .discover-track-content{
+	margin: auto;
+	padding-bottom: 30px;
+}
+
+.q-app-link--highlight .q-app-link__text {
+    color: #2E8BE0;
+    padding-top: 15px;
+}
+
+.q-app-link.q-app-link--highlight::after {
+    margin-top: -3px;
+    color: #2E8BE0;
+}
+
+.q-complaince-policy{
+	background-color: #F7FAFC;
+	margin: 00px 0 80px 0;
+	padding: 70px 0 80px 0;
+}
+
+@media (min-width:720px){
+	.q-complaince-policy{
+	background-color: #F7FAFC;
+	margin: 60px 0 120px 0;
+	padding: 100px 0 80px 0;
+}
+}
+
+.q-complaince-policy-box-inner{
+	background-color: #ffffff;
+	padding:20px 15px 50px 15px;
+	text-align: center;
+	height: 100%;
+}
+
+.q-complaince-policy-box-inner h4{
+	margin-top: 30px;
+	margin-bottom:0
+}
+.q-complaince-policy-box-inner p{
+	margin-top:5px
+}
+@media (min-width:720px) {
+	.q-complaince-policy-box{
+		width: 25% !important;
+		height:auto
+	}
+}
+
+.q-complaince-policy-box-inner-number .number{
+	color:  #9BC0E0;
+	font-size: 4.5em;
+	font-family: Gotham, sans-serif;
+	margin: 0;
+}
+
+.q-complaince-policy-box-inner-number .text{
+	margin: 0;
+	font-family: Gotham, sans-serif;
+	color: #272727;
+	font-weight: 500;
+}
+
+.q-complaince-policy-box-inner-number{
+	border-top: 1px solid #E4E4E4;
+}
+
+.q-complaince-policy-heading{
+	text-align: center;
+	padding-bottom: 80px;
+}
+
+.q-complaince-policy-box-inner img{
+	margin: auto;
+    margin-top: -65px;
+	width: 90px;
+}
+
+.quote-block{
+	margin-top: 40px;
+}
+
+.quote-block-content{
+	font-style: italic;
+	line-height: 34px;
+	font-size: 19px;
+	color:#6A778B
+}
+
+@media (min-width:720px) {
+	.quote-block-content{
+		margin-top: 0px;
+	}
+}
+.quote-by{
+	color: #262626;
+    font-family: Gotham, sans-serif;
+	padding-left: 105px;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.quote-company-logo{
+	float: right;
+}
+
+.complaince{
+margin-bottom: 30px;
+}
+
+.complaince p{
+	column-count: 2;
+	column-gap: 40px;
+}
+
+.q-txt-block-icons {
+    padding-bottom:20px;
+}
+
+.q-txt-block-icons img {
+    margin-right: 40px;
+    display: inline-block;
+	Vertical-align: middle;
+	margin-bottom:20px
+}
+
+.text-center{
+	text-align: center;
+}
+
+.Compliance-Portfolio{
+	margin: 0px 0 80px 0;
+}
+
+@media (min-width:720px){
+	.Compliance-Portfolio{
+	padding: 80px 0 20px 0;
+}
+}
+
+.q-trial {
+    background: #1D2737;
+	margin-bottom: 150px;
+}
+
+.q-trial__textblock {
+    display: block;
+    color: #fff;
+}
+
+.q-content-hero__box-wrap{
+	opacity: 1;
+}
+
+.q-content-hero__content {
+    margin-top: 157px;
+}
+
+.q-content-hero__content{
+	background-image: url(https://q-website-images.s3.amazonaws.com/www/image/solutions/compliance/compliance-background.jpg);
+	background-size: cover;
+}
+
+.q-content-hero__content-inner {
+opacity: 1;
+margin: auto;
+}
+
+.q-square__pc-logos ul {
+    list-style: none;
+    list-style-position: inside;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0px;
+    margin-bottom: 40px;
+}
+
+.q-sqaure__pc-logos_list-3 li:nth-child(2) img{
+	margin-left: 20px;
+}
+
+
+.q-app-link::after {
+    background: url(https://q-website-images.s3.amazonaws.com/www/image/icon/arrow-blue.svg) 100% 13px no-repeat !important;
+}
+
+
+@media (min-width: 960px)
+{
+.q-apps-hero-content {
+    padding: 0 60px 0 0;
+    margin-top: 60px;
+    margin-left: 9.09091%;
+}
+}
+
+@media (min-width: 1080px)
+{
+.q-apps-hero-content {
+    margin-top: 60px;
+}
+.q-content-hero__content {
+    padding-bottom: 20px !important;
+}
+}
+
+.q-content-hero__content {
+    padding-bottom: 4%;
+}
+
+.Compliance-Portfolio img{
+	padding-top: 40px;
+}
+
+@media only screen and (min-width:720px) and (max-width:959px) {
+	.q-square__pc-logos{
+		padding-top: 40px;
+	}
+	.q-sqaure__pc-logos_list-1 li{
+		margin-right: 50px;
+	}
+}
+
+@media only screen and (min-width:600px) and (max-width:720px) {
+	.q-apps-hero-content{
+		width: 90% !important;
+		margin: auto;
+	}
+}
+
+@media only screen and (min-width:960px) and (max-width:1400px) {
+    .q-square__pc-logos{
+		padding-top: 20px;
+	}
+	.q-apps-hero-content{
+	padding-right: 20px !important;
+	}
+	.q-sqaure__pc-logos_list-1 li img{
+		width:80px !important
+	}
+	.q-sqaure__pc-logos_list-2 li img{
+		width:130px !important
+	}
+  }
+
+
+
+@media (max-width:720px) {
+	.complaince p {
+    column-count: auto;
+	}
+	.q-complaince-policy-box{
+		margin-bottom: 60px;
+	}
+	.quote-by {
+    padding-left: 0px;
+	}
+	.discover-track-content {
+		text-align: center;
+	}
+	.compliance-intro {
+		column-count: auto;
+	}
+	.q-default-hero__container{
+		padding: 0px;
+	}
+	.q-sqaure__pc-logos_list-1 li img{
+		width: 85px !important;
+		margin-right: 20px;
+	}
+	.q-content-hero__content {
+	    background-image: none;
+		margin-top: 50px;
+	}
+	.q-content-hero__box-wrap {
+		margin-top: -30px;
+	}
+	.q-sqaure__pc-logos_list-2 li img{
+        width: 150px !important;
+	}
+	.q-discover-track {
+		padding-top:40px;
+	}
+
+	.q-default-hero__content {
+		padding: 60px 30px 0 30px;
+	}
+}
+
+@media (max-width:380px)
+{
+.q-sqaure__pc-logos_list-1 li img {
+    width: 70px !important;
+}
+.q-sqaure__pc-logos_list-2 li img {
+    width: 120px !important;
+}
+.q-content-hero__box-wrap {
+    width: 300px;
+}
+}
+
+@media (max-width:340px)
+{
+.q-sqaure__pc-logos_list-1 li img {
+    width: 60px !important;
+}
+.q-sqaure__pc-logos_list-2 li img {
+    width: 100px !important;
+}
+.q-content-hero__box-wrap {
+    width: 280px;
+}
+}
+
+@media (max-width:959px) {
+	.q-content-hero__content {
+	    background-image: none;
+		margin-top: 50px;
+	}
+	.q-content-hero__content-inner {
+		opacity: 1;
+		margin: auto;
+		background-image: url(https://q-website-images.s3.amazonaws.com/www/image/solutions/compliance/compliance-bg.jpg);
+		background-size: cover;
+		width: 100%;
+		padding: 50px 40px 40px 40px;
+	}
+	.q-content-hero__box-wrap{
+		width: 80% !important;
+		margin-top: -30px;
+	}
+}
+
+@media only screen and (min-width:720px) and (max-width:959px) {
+	.q-content-hero__box-wrap{
+		width: 80% !important;
+		margin-top: -40px;
+	}
+
+   .q-complaince-policy-box {
+       width: 50% !important;
+       margin-bottom: 100px;
+    }
+
+   .q-app-link--highlight .q-app-link__text {
+      font-size: 12px !important;
+    }
+	
+   .q-app-link__icon {
+      width:40px;
+    }
+
+	.q-complaince-policy-box-inner-content{
+		min-height:290px;
+	}
+}
+
+@media (min-width:960px) {
+	.q-complaince-policy-box-inner-content{
+		min-height: 300px
+	}
+}
+
+.q-solutions-blocks__list-item {
+    margin-bottom: 25px;
+}
+
+.q-complaince-box p{
+	font-size:16px;
+	margin-top:0px
+}
+
+.q-complaince-box h3{
+	margin-bottom:5px
+}
+
+.q-solutions-intro__container-inner .heading--1{
+	text-align:center;
+	margin-bottom:15px
+}
+
+.q-complaince-box img{
+	width:53px
+}
+.q-complaince-box{
+	padding-bottom:30px
+}
+@media (min-width: 1430px)
+{
+.q-solutions-intro {
+    padding-top: 100px;
+}
+}

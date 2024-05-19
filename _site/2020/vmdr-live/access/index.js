@@ -1,0 +1,6 @@
+"use strict";/* global jQuery */ /*
+ * Wrap Marketo form fields to support two column layout
+ */(function(a){"use strict";// function to count # of bytes in a string
+// http://stackoverflow.com/questions/2848462/count-bytes-in-textarea-using-javascript/12206089#12206089
+function b(a){var b,c,d;if(b=0,void 0!==a)for(d=0;d<a.length;d+=1)c=a.charCodeAt(d),127>=c?b+=1:2047>=c?b+=2:55296<=c&&57343>=c?(b+=4,d+=1):65535>c?b+=3:b+=4;return b}function c(){var c,f,g;c=a("#Email").val().trim(),c!==void 0&&(f=c.split("@")[0],g=c.split("@")[1],null===c.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/gi)&&d.push(e.en.invalidEmail),100<b(c)&&d.push(e.en.emailTooLong),253<b(g)&&d.push(e.en.emailTooLong),64<b(f)&&d.push(e.en.emailTooLong),g!==void 0&&(null===g.match(/^[A-Za-z0-9\-.]+$/)&&d.push(e.en.emailInvalidDomain),null!==g.match(/\.{2}/)&&d.push(e.en.emailInvalidDomain)))}var d,e={en:{invalidEmail:"Enter the email address you used to register.",emailTooLong:"Enter the email address you used to register.",emailInvalidDomain:"Enter the email address you used to register.",workEmailRequired:"Enter the email address you used to register."}};a("form").on("submit",function(b){a(".mktoErrorMsg").empty(),d=[],c(),0<d.length&&(d.forEach(function(b){a(".mktoErrorMsg").append("<span>"+b+"</span>")}),b.preventDefault())})})(jQuery);
+//# sourceMappingURL=index.js.map

@@ -1,0 +1,130 @@
+.section29 .heading {
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+    font-family: Gotham, sans-serif;
+    font-size: clamp(30px, 5vw, 68px);
+    font-weight: 400;
+    line-height: 44px;
+    margin-bottom: 20px;
+}
+
+.section29.background {
+    background-image: url(https://q-website-images.s3.amazonaws.com/www/image/call-speakers-banner.jpg);
+    background-size: cover;
+    background-position-x: 70%;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.section29 .hero-content {
+    text-align: left;
+}
+
+.section29 .pt-0 {
+    padding-top: 0px;
+}
+
+.section29 .sub-heading {
+    color: #fff;
+    font-size: clamp(18px, 5vw, 32px);
+    margin: 0;
+    padding-top: 0px;
+    padding-bottom: 12px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.section29 .q-button {
+    margin-top: 25px;
+}
+
+.section29 .copyText {
+    color: #fff;
+    font-family: Gotham, sans-serif;
+}
+
+.section29 .left_text {
+    margin-right: 20px;
+}
+
+.section29 .right_text {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 20px;
+}
+
+.section29 .q-default-hero__content-image img {
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+    width: 80%;
+}
+
+.section29 .hero-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section29 .hero-content .heroContent {
+    margin-left: 0;
+}
+
+.section29 .q-default-hero__subheading {
+    max-width: 100%;
+}
+
+@media (min-width: 720px) {
+    .section29 .hero-content {
+        flex-direction: row;
+    }
+    .section29 .q-default-hero__content-image img {
+        padding-top: 0px;
+    }
+    .section29 .hero-content {
+        text-align: left;
+    }
+    .section29 .q-default-hero__subheading {
+        max-width: 23.11111em;
+    }
+    .section29 .q-default-hero__content-image img {
+        width: auto;
+    }
+}
+
+@media (min-width: 991px) {
+    .q-default-hero__content.heroContent {
+        width: 600px;
+    }
+    .section29 .heading {
+        line-height: normal;
+    }
+    .section29 .sub-heading {
+        line-height: 44px;
+    }
+    .section29.background {
+        padding: 60px 0 40px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .section29 .copyText {
+        font-size: 28px;
+        line-height: 44px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section29.background {
+        background-position-x: center;
+    }
+}
+
+@media (min-width: 720px) {
+    .section29 .hero-content .heroContent {
+        width: 60%;
+    }
+    .section29 .q-default-hero__content-image {
+        width: 40%;
+    }
+}
