@@ -1,0 +1,15 @@
+.hero {
+	background-image: url("https://q-website-images.s3.amazonaws.com/www/image/success-stories/building-an-industry-leading-security-posture.jpg");
+}
+.box.a {
+	background-color: #4c5dd0;
+}
+.box.b,
+.quote-box {
+	background-color: #4c5dd0;
+}
+@media (min-width:760px) {
+.q-quote {
+	margin-top:5em;
+}
+}

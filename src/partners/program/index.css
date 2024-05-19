@@ -1,0 +1,136 @@
+.q-apps-features__hgroup--centered {
+	margin-bottom: 5em;
+}
+.q-icon-plus-content__copy {
+	padding-top: 0;
+}
+.q-apps-features:after {
+	display: none;
+}
+.portal-link {
+	margin-top: 0;
+}
+
+.q-partners-hero-cta {
+	padding: 0;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	font-style: normal;
+	vertical-align: baseline;
+	border: 0;
+	list-style: none;
+	will-change: opacity, transform;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	margin-top: 3.75em;
+}
+@media (min-width: 480px) {
+	.q-partners-hero-cta {
+		flex-direction: row;
+	}
+}
+.q-partners-hero-cta__item {
+	flex: none;
+	margin-bottom: 10px;
+}
+@media (min-width: 480px) {
+	.q-partners-hero-cta__item {
+		margin-bottom: 0;
+	}
+	.q-partners-hero-cta__item:first-child {
+		margin-right: 20px;
+	}
+}
+.partner-network {
+	margin-bottom: 3em;
+}
+.partner-types {
+    display: flex;
+    flex-wrap: wrap;
+}
+.partner-type {
+    width: 33%;
+    padding-right: 3em;
+}
+.comparison {
+	margin-bottom: 5em;
+}
+.comparison table {
+	width: 100%;
+	font-family: Gotham, sans-serif;
+    border-collapse: collapse;
+}
+.comparison td:nth-of-type(2),
+.comparison td:nth-of-type(3) {
+	text-align: center;
+    width: 7em;
+}
+.comparison td {
+	border: 1px solid #ccc;
+	padding: 0.5em;
+}
+.heading--2 {
+	margin-top: 0;
+}
+.q-solutions-list {
+	padding: 0;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	font-style: normal;
+	vertical-align: baseline;
+	border: 0;
+	list-style: none;
+}
+@media (min-width: 1080px) {
+	.q-solutions-list {
+		padding-left: 15px;
+	}
+	.q-apps-features__heading {
+		margin-bottom: 0;
+	}
+}
+.q-solutions-list__item {
+	margin-bottom: 2.75em;
+}
+@media (min-width: 720px) {
+	.paragraph-intro__copy {
+		margin-bottom: 2em;
+	}
+	.q-apps-features__row {
+		justify-content: center;
+	}
+}
+@media (max-width: 915px) {
+	.q-square {
+		margin-top: 2em;
+	}
+}
+.left-column {
+	margin-bottom: 3em;
+}
+.q-square__list {
+	padding-left: 0;
+	list-style: none;
+}
+.q-square__list a {
+	text-decoration: none;
+}
+
+.q-icon-plus-content__icon {
+	width: 100%;
+	text-align: center;
+}
+.q-icon-plus-content__icon .q-icon-plus-content__image {
+	margin: 0 auto;
+}
+.q-icon-plus-content__content .q-icon-plus-content__heading {
+	text-align: center;
+}
+/*# sourceMappingURL=index.css.map */

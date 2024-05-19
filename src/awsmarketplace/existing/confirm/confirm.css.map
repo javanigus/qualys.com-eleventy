@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../site/pages/awsmarketplace/existing/confirm/confirm.css"],"names":[],"mappings":"AAAA;CACC,kBAAkB;CAClB,qBAAqB;AACtB","file":"confirm.css","sourcesContent":[".q-grid__container {\n\tpadding-top: 8.75%;\n\tpadding-bottom: 8.75%;\n}\n"]}

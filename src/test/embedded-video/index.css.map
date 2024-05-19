@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../site/pages/test/embedded-video/index.css"],"names":[],"mappings":"AAAA;CACC,aAAa;AACd;AACA;CACC,kBAAkB;CAClB,eAAe;CACf,+BAA+B;AAChC","file":"index.css","sourcesContent":[".video-container {\n\tmargin: 3em 0;\n}\n.stream {\n\ttext-align: center;\n\tmargin-top: 2em;\n\tfont-family: Gotham, sans-serif;\n}"]}

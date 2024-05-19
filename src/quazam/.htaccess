@@ -1,0 +1,14 @@
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+
+# increase max input variables for re-publishing media coverage
+php_value max_input_vars 8000
+
+# increase the memory limit for some reason
+php_value memory_limit 256M

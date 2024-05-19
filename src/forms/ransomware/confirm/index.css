@@ -1,0 +1,22 @@
+.text b {
+	color: #000;
+}
+.vmdr-pic {
+	margin-top: 2em;
+}
+.text {
+	padding-right: 1em;
+	position: relative;
+	z-index: 2;
+}
+@media (min-width: 684px) {
+	.vmdr-pic {
+		width: 100%;
+	}
+}
+.q-ransomware-confirm {
+	font-size: 20px;
+	font-family: 'Gotham';
+	
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,70 @@
+/*
+This NodeJS script will recursively read files in a folder
+and execute a series of search and replace commands.
+Set the name of the folder as the value of the "dir" variable.
+Run the script as follows: node recursive-replace.js
+*/
+
+const fs = require('fs');
+const path = require('path');
+
+const walk = dir => {
+  try {
+    let results = [];
+    const list = fs.readdirSync(dir);
+    list.forEach(file => {
+      file = path.join(dir, file);
+      const stat = fs.statSync(file);
+      if (stat && stat.isDirectory()) {
+        // Recurse into subdir
+        results = [...results, ...walk(file)];
+      } else {
+        // Is a file
+        results.push(file);
+      }
+    });
+    return results;
+  } catch (error) {
+    console.error(`Error when walking dir ${dir}`, error);
+  }
+};
+
+const edit = filePath => {
+  if (filePath.endsWith('company/index.njk') || filePath.endsWith('cybersecurity-asset-management/index.njk')) {
+    var oldContent = fs.readFileSync(filePath, {encoding: 'utf8'});
+
+    // REPLACE {{#if class}} with {% if class %}
+    var regex = /<header class="1-header"(.|\n)*?</header>/gi;
+    var replaceVal = '{% include "src/_includes/header-ueno.njk" %}';
+    var newContent = oldContent.replace(regex, replaceVal);
+
+    // REPLACE {{/if}} with {% endif %}
+    oldContent = newContent;
+    regex = /<footer class="q-footer"(.|\n)*?</footer>/gi;
+    var replaceVal = '{% include "src/_includes/footer-ueno.njk" %}';
+    var newContent = oldContent.replace(regex, replaceVal);
+
+    // REPLACE page.platform with platform
+    oldContent = newContent;
+    regex = /<header class="sticky"(.|\n)*?</header>/gi;
+    var replaceVal = '{% include "src/_includes/header-chaitrail.njk" %}';
+    var newContent = oldContent.replace(regex, replaceVal);
+
+    // REPLACE {{markdown biography}} with {{ biography | markdown | safe }}
+    oldContent = newContent;
+    regex = /<footer role="footer"(.|\n)*?</footer>/gi;
+    var replaceVal = '{% include "src/_includes/footer-chaitrail.njk" %}';
+    var newContent = oldContent.replace(regex, replaceVal);
+
+    fs.writeFileSync(filePath, newContent, {encoding: 'utf-8'});
+    console.log(`Edited file: ${filePath}`);
+  }
+};
+
+const main = () => {
+  const dir = 'src'; // folder name containing files
+  const filePaths = walk(dir);
+  filePaths.forEach(filePath => edit(filePath));
+};
+
+main();

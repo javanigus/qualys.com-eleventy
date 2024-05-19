@@ -1,0 +1,213 @@
+.q-home-hero__cta {
+	background: transparent;
+	border: 2px solid #FFF;
+}
+@media (min-width: 1119px) {
+	.q-home-hero__cta {
+		margin-top: 2em;
+	}
+}
+.form-subhead {
+	color: #fff;
+	font-family: Gotham, sans-serif;
+	font-size: 1.4em;
+}
+.q-container__register {
+	padding-top: 3em;
+	padding-bottom: 80px;
+}
+@media (min-width: 1430px) {
+	.q-container__register {
+		padding-top: 40px;
+		padding-bottom: 105px;
+	}
+}
+.including {
+	margin-bottom: 0;
+}
+.partners {
+	margin-top: 0;
+}
+.q-qsc__heading {
+	margin: 0 0 19px;
+}
+.q-qsc__copy {
+	max-width: unset;
+	line-height: 1.5;
+}
+.q-qsc__copy ul.paragraph--1 {
+	margin-top: 0;
+}
+.q-form__button,
+.mktoButton {
+	background: rgba(0,0,0,0.20);
+	border-radius: 0 0 2px 2px;
+}
+.q-square__content {
+	padding: 40px 40px;
+}
+.mktoButtonRow .mktoButtonWrap {
+	margin-left: -40px;
+	margin-right: -40px;
+}
+@media (min-width: 1080px) {
+	.q-square__content {
+		padding: 80px 55px;
+	}
+	.mktoButtonRow .mktoButtonWrap {
+		margin-left: -50px;
+		margin-right: -50px;
+	}
+}
+@media (min-width: 1430px) {
+	.mktoButtonRow .mktoButtonWrap {
+		margin-left: -80px;
+		margin-right: -80px;
+	}
+}
+.q-square__content h3 {
+	margin: 0 0 20px;
+	color: #FFF;
+	letter-spacing: -0.19px;
+	font-size: 35px;
+	font-weight: 500;
+	line-height: 43px;
+}
+.q-square__content h3 small {
+	font-weight: 300;
+	font-size: 0.75em;
+}
+.q-form__input,
+input[type=text].mktoField,
+input[type=email].mktoField,
+input[type=tel].mktoField,
+textarea.mktoField,
+select.mktoField,
+.q-form__input:focus,
+input[type=text].mktoField:focus,
+input[type=email].mktoField:focus,
+input[type=tel].mktoField:focus,
+textarea.mktoField:focus,
+select.mktoField:focus {
+	border-color: #FFF;
+	color: #FFF !important;
+}
+select.mktoField {
+	background-image: url(https://ik.imagekit.io/qualys/image/form/select-arrows-white.png);
+}
+.q-form__label,
+.mktoForm label {
+	color: #FFF;
+}
+.mktoForm .qmktoRadioListLabel {
+	margin-bottom: 0.5em;
+}
+.mktoForm input[type="checkbox"]:checked,
+.mktoForm input[type="radio"]:checked,
+.mktoRadioList label.checked::before,
+.mktoCheckboxList label.checked::before {
+	content: url(https://ik.imagekit.io/qualys/image/icon/circle-white.svg);
+}
+.mktoForm input[type="checkbox"]::before,
+.mktoForm input[type="radio"]::before,
+.mktoRadioList label::before,
+.mktoCheckboxList label::before {
+	border-color: #FFF;
+}
+.mktoErrorMsg {
+	color: #FFF;
+}
+
+.qsc-register__text--hidden {
+	display: none !important;
+}
+.mktoRadioList.attendingUserConference {
+	display: flex;
+}
+.mktoRadioList.attendingUserConference > label {
+	padding-right: 12px;
+}
+.q-qsc__header--cta {
+	display: none;
+}
+.q-qsc__event-schedule > b {
+	font-family: "Gotham", sans-serif;
+	font-weight: 500;
+	color: #1D2737;
+}
+@media (max-width: 479px) {
+	.q-default-hero__box-wrap {
+		width: 100%;
+	}
+}
+.q-default-hero__splash {
+	padding-bottom: 0;
+}
+@media (min-width: 480px) {
+	.q-default-hero__splash {
+		min-height: unset;
+		padding-top: 15%;
+	}
+	.q-default-hero__image {
+		top: 0;
+	}
+}
+@media (min-width: 820px) {
+	.q-default-hero__splash {
+		padding-top: 20%;
+	}
+}
+@media (min-width: 1020px) {
+	.q-default-hero__splash {
+		padding-top: 17em;
+	}
+}
+@media (min-width: 1080px) {
+	.q-default-hero__splash {
+		padding-top: 12em;
+	}
+}
+@media (min-width: 1280px) {
+	.q-default-hero__splash {
+		padding-top: 14em;
+	}
+}
+@media (min-width: 1400px) {
+	.q-default-hero__splash {
+		padding-top: 17em;
+	}
+}
+.q-default-hero__image {
+	background-color: unset;
+}
+@media (min-width: 375px) {
+	.heading--sub {
+		font-size: 26px;
+	}
+}
+@media (min-width: 1290px) {
+	.heading--sub {
+		font-size: 36px;
+	}
+}
+.mb-5{
+	margin-bottom:5px;
+}
+.q-qsc__logo img {
+	height: 36px;
+}
+.q-qsc__logo {
+	width: auto;
+	height:36px;
+	display: block;
+    flex: none;
+    margin: 0 auto 0;
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    text-indent: 100%;
+    transition: opacity 200ms;
+}
+
+/*# sourceMappingURL=index.css.map */

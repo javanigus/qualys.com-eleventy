@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../site/pages/forms/whitepapers/six-essential-elements-web-application-security/index.css"],"names":[],"mappings":"AAAA;CACC,gGAAgG;AACjG","file":"index.css","sourcesContent":["div.screenshot {\n\tbackground-image: url(https://ik.imagekit.io/qualys/image/sprite-six-essential-elements-was.png);\n}\n"]}

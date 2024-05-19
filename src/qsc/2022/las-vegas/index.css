@@ -1,0 +1,328 @@
+.cocktail {
+    width: 50px;
+    margin-right: 1em;
+}
+.kick-off {
+	margin: 0;
+    font-size: 1.3em;
+}
+.cocktails {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+	margin-bottom: 3em;
+    background-color: #F7FAFC;
+    padding: 2em;
+}
+.q-qsc__hero-cta {
+	display: block;
+}
+.session-description {
+	line-height: 1.55;
+}
+.session-description ul {
+	margin: 0;
+	padding: 0 0 0 20px;
+	line-height: 1.55;
+}
+.session-description ul li:not(:last-child) {
+	margin-bottom: 0.45em;
+}
+.session-description h3 {
+	margin: 0 0 10px;
+	font-weight: 500;
+	font-size: 18px;
+	color: #1D2737;
+	font-family: Gotham, sans-serif;
+}
+.session-description p {
+	margin: 0;
+}
+.session-description .conference-speaker {
+	font-family: Gotham, sans-serif;
+}
+.speaker-wrapper.chief-guests .q-qsc-speaker {
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.session-description .customer-session {
+	font-family: Gotham, sans-serif;
+	font-weight: 500;
+	color: #2E8BE0;
+	display: block;
+	line-height: 1.688;
+	font-size: 16px;
+	letter-spacing: -0.11px;
+}
+#conf-app p,
+#faqs p {
+
+	text-align: center;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.qr-code {
+	max-width: 250px;
+	margin: 0 auto;
+}
+#videos .q-button {
+	margin-top: 1em;
+}
+#videos {
+	margin-bottom: 2em;
+}
+.q-qsc-overview__container .when-videos-available {
+	font-family: Gotham, sans-serif;
+	font-size: 14px;
+	margin-top: 0.5em;
+}
+.q-qsc__hero-location {
+	margin-top: 0;
+}
+.speaker-wrapper.chief-guests {
+	margin-bottom: 4em;
+}
+.speaker-wrapper.chief-guests .q-qsc-speaker {
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.speaker-wrapper.chief-guests .q-qsc-speaker .company {
+	display: block;
+}
+.q-qsc-city__hero {
+	background-image: url(https://q-website-images.s3.amazonaws.com/www/image/2022/qsc/las-vegas/qsc22-microsite-herobanner-mobile-background-590x640.png);
+	background-position: center;
+}
+.q-trial {
+	background-image: url(https://q-website-images.s3.amazonaws.com/www/image/2022/qsc/las-vegas/qsc22-Microsite_FooterBanner_Background_1440x524.jpg);
+}
+.q-trial__content {
+	padding-top: 86px;
+}
+.q-trial__copy {
+	color: #fff;
+	font-family: Gotham, sans-serif;
+    font-size: 1em;
+    margin-bottom: 1.4em;
+}
+.q-qsc__hero-location .city {
+	white-space: nowrap;
+}
+.q-qsc__city-hero--heading,
+.q-qsc__city-hero--copy {
+	text-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+}
+.subheading {
+	font-size: 2.2em;
+	font-weight: 400;
+    line-height: 1.5;
+}
+.q-qsc__city-hero--copy {
+	font-size: 1.6em;
+}
+.q-qsc__hero-cta {
+	margin-bottom: 0;
+}
+.q-qsc-overview__container {
+	margin-top: 4em;
+}
+.room {
+	color: #2E8BE0;
+}
+@media (min-width: 720px) {
+	.q-trial__copy {
+		font-size: 1.4em;
+	}
+	.q-qsc-city__hero {
+		background-image: url(https://q-website-images.s3.amazonaws.com/www/image/2022/qsc/las-vegas/qsc22-microsite-herobanner-desktop-background-2580x594.png);
+		background-position: center;
+		justify-content: flex-start;
+	}
+	.q-qsc__hero-location {
+		padding-top: 80px;
+	}
+	.q-qsc__city-hero--heading {
+		color: #fff;
+		font-size: 6em;
+	}
+	.subheading {
+		font-size: 3em;
+	}
+	.q-qsc__city-hero--copy {
+		text-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+		color: #fff;
+	    font-size: 2em;
+	}
+}
+.session-container {
+	max-width: unset;
+}
+@media (min-width: 720px) {
+	.session-container td.conference-td {
+		padding: 0 0 15px 50px;
+	}
+	.conference-title-wrapper.label:before,
+	.conference-title-wrapper.label:after {
+		left: -50px;
+	}
+}
+.conference-title-wrapper.label {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+}
+@media (min-width: 720px) {
+	.q-qsc-section h3 {
+		margin-bottom: 1.526em;
+	}
+}
+.q-qsc-video__icon {
+	position: relative;
+	display: block;
+}
+.q-qsc-video__icon:hover .overlay {
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	background-color:#000;
+	opacity:0.5;
+}
+.video-container {
+	width: 329px;
+	margin-bottom: 40px;
+	margin-right: 2em;
+}
+.video-container:nth-child(2n) {
+	margin-right: 0;
+}
+@media (min-width: 425px) {
+	.video-container {
+		margin-bottom: 20px;
+	}
+}
+@media (min-width: 1408px) {
+	.video-container:nth-child(2n) {
+		margin-right: 2em;
+	}
+	.video-container:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+.q-qsc-videos__container .video {
+	width: 329px;
+	height: 185px;
+	display: block;
+	background-color: #D8D8D8;
+	margin-bottom: 1.5em;
+	position: relative;
+}
+.q-qsc-videos__container .poster {
+	margin-bottom: 1.5em;
+}
+.q-qsc-videos__container .video .play-icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 48px;
+	height: 48px;
+}
+.q-qsc-videos__container .video .lock-icon {
+	height: 29px;
+	margin-top: 15px;
+	margin-left: 2px;
+}
+.q-qsc-videos__container .video .play-icon .bg {
+	transition: fill 0.25s;
+}
+.q-qsc-videos__container .video:hover .play-icon .bg {
+	fill: #E3241C;
+}
+.q-qsc-videos__container .videos {
+	justify-content: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 2.1em;
+}
+@media (min-width: 1408px) {
+	.q-qsc-videos__container .videos {
+		flex-wrap: wrap;
+	}
+}
+.video-container .title,
+.video-container .subtitle {
+	font-size: 17px;
+	font-weight: 500;
+	font-family: Gotham, sans-serif;
+	color: #262626;
+	line-height: 1.4;
+}
+.video-container .subtitle {
+	color: #6A778B;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+@media (min-width: 425px) {
+	.video-container .title {
+		font-size: 20px;
+	}
+	.video-container .subtitle {
+		font-size: 18px;
+	}
+}
+.video-container .speaker {
+	font-size: 17px;
+	font-family: Gotham, sans-serif;
+	color: #262626;
+	line-height: 1.4;
+	margin-top: 5px;
+	margin-bottom: 4px;
+}
+@media (min-width: 425px) {
+	.video-container .speaker {
+		font-size: 18px;
+	}
+}
+.video-type-container {
+	margin-bottom: 5.3em;
+}
+.session-types {
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+.heading--2 {
+	margin-bottom: 1.2em;
+}
+.note {
+	color: #6a778b;
+	font-family: Gotham, sans-serif;
+	font-style: italic;
+	font-size: 13px;
+	margin-top: 0;
+	line-height: 1.4;
+}
+.panelists-link:hover {
+	cursor: pointer;
+}
+.speaker.panelists {
+	font-size: 15px;
+}
+.interviews .video-container {
+	margin-bottom: 36px;
+}
+.panelists b {
+	font-weight: 500;
+}
+.speaker-line-break {
+	display: block;
+	margin-bottom: 5px;
+}
+#conduct {
+    margin-top: 4em;
+    margin-bottom: 5em;
+}

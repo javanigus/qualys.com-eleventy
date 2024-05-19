@@ -1,0 +1,266 @@
+                 Qualys Security Alert QSA-2002-01-01
+                   "Remote Shell Trojan b" (RST.b)
+
+
+
+Release Date: 
+-------------
+January 9, 2002
+
+
+Platforms Affected:
+-------------------
+This new Remote Shell Trojan RST.b identified and examined by 
+Qualys has been verified to affect various Linux platforms. 
+Qualys researchers have concluded that the backdoor functionality 
+of this new Trojan can be triggered at any UDP port, which makes 
+it particularly easy to launch arbitrary commands on infected 
+machines.
+
+
+Applications Affected:
+----------------------
+The Remote Shell Trojan RST.b - named by Qualys due to its 
+backdoor functionality - is different in its activation and 
+backdoor functionality from the Remote Shell Trojan identified 
+earlier by Qualys in 
+http://www.qualys.com/2001/09/05/remote-shell-trojan/rst.txt. It shows 
+self-replicating capabilities and has been observed to infect Linux ELF 
+(Executable and Linking Format) binary executable programs. Based upon 
+appropriate permissions, the Remote Shell Trojan RST.b begins its replication 
+activities in the current working directory and in the /bin directory.
+
+
+Technical Description:
+----------------------
+The Remote Shell Trojan RST.b operates as both a self-replicating 
+program and a remote control backdoor program. Once a host has 
+been infected - commonly initiated through the execution of binary 
+email attachments or downloaded software - the Remote Shell Trojan 
+RST.b then initiates a virus-like self replication process that 
+infects additional executable binaries in the current working 
+directory and in the /bin directory. No memory resident infection 
+activities have been identified so far.
+
+
+The Infection Process:
+----------------------
+The infection method used by RST.b is a well-known parasite 
+technique for ELF. It will insert 4096 Bytes physically into the 
+file between the text and data segments. It then modifies the 
+appropriate headers of the binary to account for the change in 
+binary structure. The entry point of the binary is modified to jump 
+to the location of the parasite. Once any executable binary has been 
+infected and is launched, the Remote Shell Trojan code will be 
+executed. After calling ptrace to prevent analysis and debugging, 
+RST.b then issues the HTTP GET request 
+"GET /~telcom69/gov.php HTTP/1.0" to port 80 on the host 
+207.66.155.21 (ns1.xoasis.com). The requested content does not 
+appear to exist on this host. Additionally, the infected machine 
+will be turned into a network sniffer by turning on the promiscuous 
+flags on ppp0 and eth0 and the backdoor process will be created. 
+The installed backdoor process assumes the credentials of the 
+infected program and will remain active even after termination of 
+the "host" program. In some instances, due to a programming error 
+in the backdoor process, it will terminate together with the 
+termination of the "host" program.
+
+The Backdoor Process:
+---------------------
+As the infection process turns an infected machine into promiscuous 
+mode, it is listening for specially crafted UDP packets on any port. 
+An earlier posting on securityfocus.com on this new Trojan has 
+indicated the protocol to be EGP, which is incorrect after careful 
+analysis of the binary. To activate the backdoor, an attacker needs 
+to send a UDP packet containing the three-byte ASCII string "DOM" at 
+a specific offset. Additionally, the packet contains an activation 
+code, determining the type of action from the backdoor process. 
+This could be either: 
+
+1) A response UDP packet containing the three-byte ASCII string 
+"DOM" sent to port 0x1111 (4369) of the attacker's host.  This 
+provides a simple way querying for infected systems on the Internet.
+2) The execution of any command contained within the packet by 
+passing it to /bin/sh -c. This provides an attacker execution of 
+arbitrary commands on the target system at the credential- and 
+permissions-level of infected binary program that has been launched.
+
+Qualys security researchers have been able to simulate the client 
+portion for communicating with the backdoor process, however it is 
+likely that one or more client programs are in use by attackers. 
+
+Remote Shell Trojan RST.b has functionalities that have previously 
+been seen in Trojans and viruses affecting other operating systems 
+including Microsoft Windows. The specific components include the 
+virus-like file infector, adding 4,096 bytes for the bootstrap 
+segment and Trojan code. It is important to note that infected 
+ELF binary files remain fully functional. Also the Remote Shell 
+Trojan RST.b does not appear to apply any sophisticated stealth 
+mechanisms; for example, file sizes and file modification dates 
+are changed during infection and can easily be detected.
+
+
+Scope & Impact:
+---------------
+Hosts infected with the Remote Shell Trojan RST.b can be:
+
+
+*  Hijacked by the attacker
+*  Employed as secondary attack platforms for further 
+   intrusions within or external to an organization
+*  Scrutinized for information to be used in subsequent attacks 
+   and intrusions
+*  Scoured for sensitive organizational data
+*  Vandalized and/or destroyed in order to cause financial 
+   and/or operational harm to an organization
+
+
+Mitigating Factors:
+-------------------
+The replication process of the Remote Shell Program RST.b can 
+only effect binary files within the access privileges of the 
+user who launched the originally infected program.
+
+Hosts and networks protected by firewalls can be infected by 
+the Remote Shell Trojan RST.b through careless security policy 
+and practice regarding email attachments and downloaded software. 
+However, in current versions of the Trojan, attackers cannot 
+establish communication with the backdoor process if, for example, 
+a dynamic packet-filtering firewall effectively prohibits 
+uninitiated inbound UDP traffic at any port.
+
+Hosts equipped with checksum-based administration tools such as 
+tripwire can be configured to identify binaries that have been 
+altered by the propagation and infection activities of the 
+Remote Shell Trojan RST.b.
+
+
+Recommendations:
+----------------
+
+Administrators should take measures to review and perhaps 
+reassess current perimeter firewall policies, particularly 
+with regard to uninitiated inbound UDP communications.
+
+Organizational security policies relating to email attachments 
+and downloaded software should be reiterated to staff and employees.
+
+The Remote Shell Trojan RST.b changes file dates upon infection, 
+therefore administrators can examine file dates to determine 
+whether a binary file has been affected.
+
+Because the Remote Shell Trojan RST.b changes the size and 
+content of files during infection, host-based checksum tools 
+should be deployed to mission-critical servers. The scope of 
+such tools should include file system locations commonly used 
+for the storage of executable binaries, such /bin, /etc/bin, 
+and /usr/bin and other common locations.
+
+When an infected binary is launched, the resident backdoor 
+process is created with the name of the infected host program. 
+The process table should be examined to determine whether 
+unexpected processes (e.g., ls) are present. 
+
+On an infected system, the backdoor process creates lock 
+files /dev/hdx1 and /dev/hdx2. The presence of such lock files 
+is an indication for a potential infection with Remote Shell 
+Trojan RST.b.
+
+Outgoing UDP packets containing the three-byte ASCII string 
+"DOM" with destination port 0x1111 (4369) indicate a 
+potentially active backdoor process.
+
+Administrators, security officers, and concerned users may 
+freely download Qualys-developed Remote Shell Trojan RST.b 
+detection and cleaning tools from the Qualys web site at 
+http://www.qualys.com/2002/01/09/remote-shell-trojan-b/rstb.tgz
+
+
+Detection & Repair Procedures:
+------------------------------
+Identification and cleaning tools are available from 
+Qualys Inc. at http://www.qualys.com/2002/01/09/remote-shell-trojan-b/rstb.tgz 
+In addition, users may request a free perimeter vulnerability 
+scan from Qualys at http://www.qualys.com/freescan.
+
+The Qualys tool rstb_detector uses the following syntax: 
+rstb_detector host [source_port dest_port] [-r n]
+It takes an IP address as a command line parameter and probes 
+the requested system for the Remote Shell Trojan RST.b backdoor.
+Optional parameters allow specifying the source and destination 
+UDP ports (default ports are 53) to be used by the detector to 
+query for RST.b. Finally, there is an option -r which allows to 
+specify the number of simultaneous UDP query packets being sent 
+by the detector (the default value of n is set to 1). This 
+option is particularly useful within highly congested networks.
+
+The Qualys tool rstb_cleaner takes an infected file name as a 
+command line parameter and creates a cleansed version of the 
+infected file.  The tool also accepts wildcard parameters 
+(e.g. /bin/*). Cleaned copies of the file are created in the 
+source directory with the extension .clean. Source files are 
+left unchanged.
+
+Qualys has developed, tested and deployed a Remote Shell 
+Trojan RST.b vulnerability detection signature within its 
+QualysGuard online vulnerability assessment platform.
+
+
+Technical Data:
+---------------
+QualysGuard Vulnerability ID:
+1023
+
+CVE Identifier:
+CAN-1999-0660
+
+Supplementary Information & Resources:
+An earlier posting on securityfocus.com from December 27, 2001 
+on Remote Shell Trojan RST.b had inaccuracies in the analysis 
+as well as lack of detection and cleaning capabilities. No 
+other resources regarding the Remote Shell Trojan RST.b are 
+known at present.
+
+At this time, the Remote Shell Trojan RST.b source code is not 
+known to be available.
+
+
+Acknowledgements:
+-----------------
+The Qualys security research team has worked with security 
+researchers around the world to isolate and analyze this 
+Trojan. Qualys has security researchers at multiple sites 
+to identify new threats and vulnerabilities as they emerge.
+
+
+Qualys Contact Information:
+---------------------------
+1600 Bridge Parkway, Suite 201
+Redwood Shores, CA 94065
+tel. 650.801.6100
+fax. 650.801.6101
+email. research () qualys com
+http://www.qualys.com
+
+
+Disclaimer:
+-----------
+CONFIDENTIAL AND PROPRIETARY INFORMATION Qualys provides 
+this Security Advisory "As Is" without any warranty of any 
+kind. Qualys makes no warranty that this Security Advisory 
+or any associated information contained herein will identify 
+every vulnerability in your network or host systems, or that 
+the suggested solutions and advice provided in this report, 
+together with the results of any associated procedures or 
+recommendations contained herein, will be error-free or complete. 
+Qualys shall not be responsible or liable for the accuracy, 
+usefulness, or availability of any information transmitted 
+in this report, and shall not be responsible or liable for 
+any use or application of the information contained in 
+this report.
+
+QSA-2002-01-01
+
+
+
+(c) 2002, Qualys, Inc.  All rights reserved.

@@ -1,0 +1,10 @@
+.hero {
+	background-image: url("https://q-website-images.s3.amazonaws.com/www/image/success-stories/edinburgh-airport-1440-2x.jpg");
+}
+.box.a {
+	background-color: #B2C222;
+}
+.box.b,
+.quote-box {
+	background-color: #95127C;
+}

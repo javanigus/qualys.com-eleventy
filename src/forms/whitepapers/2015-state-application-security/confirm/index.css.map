@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../site/pages/forms/whitepapers/2015-state-application-security/confirm/index.css"],"names":[],"mappings":"AAAA;CACC,qGAAqG;AACtG","file":"index.css","sourcesContent":["div.screenshot {\n\tbackground-image: url(https://ik.imagekit.io/qualys/image/sprite-2015-state-application-security.png);\n}\n"]}

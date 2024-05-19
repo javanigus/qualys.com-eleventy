@@ -1,0 +1,41 @@
+@media (max-width: 720px) {
+  .q-apps-features__heading {
+    margin-bottom: 50px;
+  }
+
+  .m-p-0 {
+    padding: 0;
+  }
+}
+
+.cloud-view .q-apps-features__col .q-icon-plus-content__copy p {
+  font-size: 18px;
+  line-height: 33px;
+}
+@media (min-width: 720px) {
+  .cloud-view .q-apps-features__col {
+    margin-bottom: 50px !important;
+  }
+}
+
+.q-apps-screenshot__container-inner {
+  border: none;
+}
+
+.q-apps-screenshot__container-inner--separator {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+@media (max-width: 720px) {
+  #capabilities {
+    padding-top: 40px !important;
+  }
+}
+
+@media (min-width: 721px) {
+  #capabilities {
+    padding-top: 40px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

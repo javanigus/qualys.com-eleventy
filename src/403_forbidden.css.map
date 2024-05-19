@@ -1,0 +1,1 @@
+{"version":3,"sources":["../site/pages/403_forbidden.css"],"names":[],"mappings":"AAAA;;CAEC,kBAAkB;AACnB;AACA;CACC,iBAAiB;CACjB,kBAAkB;CAClB,eAAe;AAChB","file":"403_forbidden.css","sourcesContent":["h1,\np {\n\ttext-align: center;\n}\np {\n\tmargin-left: auto;\n\tmargin-right: auto;\n\tmax-width: 22em;\n}\n"]}

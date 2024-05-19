@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../site/pages/forms/whitepapers/narrowing-security-gap-automated-configuration-assessment/index.css"],"names":[],"mappings":"AAAA;CACC,+HAA+H;AAChI","file":"index.css","sourcesContent":["div.screenshot {\n\tbackground-image: url(https://ik.imagekit.io/qualys/image/sprite-narrowing-security-gap-automated-configuration-assessment.png);\n}\n"]}

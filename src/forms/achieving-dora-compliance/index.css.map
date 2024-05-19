@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../site/pages/forms/achieving-dora-compliance/index.css"],"names":[],"mappings":"AAAA;CACC,WAAW;AACZ;AACA;IACI,WAAW;AACf","file":"index.css","sourcesContent":[".communicationConsent .mktoCheckboxList label:before {\n\twidth: 26px;\n}\n.q-lp-form .communicationConsent label {\n    width: 100%;\n}"]}

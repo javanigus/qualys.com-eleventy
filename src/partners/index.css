@@ -1,0 +1,246 @@
+.q-square__list .q-link {
+	font-size: 16px;
+}
+.q-cloud-platform-cards {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	margin: 30px auto 0;
+	justify-content: center;
+}
+.q-cloud-platform-work__list {
+	margin-left: auto;
+	margin-right: auto;
+}
+@media (min-width: 818px) {
+	.q-cloud-platform-work__list {
+		width: 718px;
+	}
+	.q-cloud-platform-cards {
+		margin-top: 0;
+		max-width: none;
+	}
+}
+@media (min-width: 1440px) {
+	.q-cloud-platform-work__list {
+		width: 1070px;
+	}
+	.q-cloud-platform-cards {
+		margin-left: -8px;
+		margin-right: -8px;
+	}
+}
+.q-cloud-platform-cards__item {
+	will-change: opacity, transform;
+	opacity: 0;
+	flex: 0 1 auto;
+	position: relative;
+	margin: 20px 8px 12px;
+	padding: 0 31px 50px;
+	min-height: 292px;
+	width: 260px;
+	text-align: center;
+	background: #FFF;
+	border-radius: 2px;
+	box-shadow: 0 10px 20px 0 rgba(170, 177, 188, 0.2);
+}
+.q-cloud-platform-cards__content .q-link {
+	display: block;
+	bottom: 36px;
+	flex: none;
+}
+.q-cloud-platform-cards__content .q-link::after {
+	height: 20px;
+}
+.q-cloud-platform-cards__icon {
+	display: block;
+	margin: 47px auto 11px;
+	max-width: 60px;
+	min-height: 60px;
+}
+.cloud-connectors .q-cloud-platform-cards__icon {
+	margin: 54px auto 11px;
+    max-width: 70px;
+}
+.virtual-scanners .q-cloud-platform-cards__icon {
+	margin: 36px auto 19px;
+}
+.internet-scanners .q-cloud-platform-cards__icon,
+.passive-scanners .q-cloud-platform-cards__icon {
+	margin: 39px auto 18px;
+}
+.out-of-band-sensors .q-cloud-platform-cards__icon {
+	margin: 42px auto 15px;
+}
+.container-sensor .q-cloud-platform-cards__icon {
+	margin: 39px auto 15px;
+}
+.apis .q-cloud-platform-cards__icon {
+	margin: 47px auto 12px;
+	max-width: 68px;
+	min-height: 67px;
+}
+.q-cloud-platform-cards__icon > img {
+	margin: 0 auto;
+}
+.q-cloud-platform-cards__heading {
+	border: 0;
+	color: #262626;
+	font-family: Gotham, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: -0.01em;
+	line-height: 1.15;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+.q-cloud-platform-cards__subheading {
+	font-style: italic;
+	font-family: Gotham, sans-serif;
+	color: #30405B;
+}
+@media (min-width: 375px) {
+	.q-cloud-platform-cards__heading {
+		font-size: 15px;
+		font-size: calc(0.00219 * 100vw + (14.18033px));
+	}
+	.q-cloud-platform-cards__item {
+		width: 335px;
+	}
+}
+@media (min-width: 1290px) {
+	.q-cloud-platform-cards__heading {
+		font-size: 17px;
+	}
+}
+.q-cloud-platform-cards__copy {
+	border: 0;
+	color: #6A778B;
+	font-family: Caecilia, serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: inherit;
+	letter-spacing: 0;
+	line-height: 1.625;
+	margin: 1.18235em 0 0.58824em;
+	opacity: 0.8;
+	padding: 0;
+	vertical-align: baseline;
+}
+@media (min-width: 375px) {
+	.q-cloud-platform-cards__copy {
+		font-size: 14px;
+		font-size: calc(0.00219 * 100vw + (13.18033px));
+	}
+}
+@media (min-width: 1290px) {
+	.q-cloud-platform-cards__copy {
+		font-size: 16px;
+	}
+}
+.q-cloud-platform-cards__item {
+	opacity: 1;
+}
+
+
+
+
+
+.q-partners-hero-cta {
+	padding: 0;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	font-style: normal;
+	vertical-align: baseline;
+	border: 0;
+	list-style: none;
+	will-change: opacity, transform;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	margin-top: 3.75em;
+}
+@media (min-width: 480px) {
+	.q-partners-hero-cta {
+		flex-direction: row;
+	}
+}
+.q-partners-hero-cta__item {
+	flex: none;
+	margin-bottom: 10px;
+}
+@media (min-width: 480px) {
+	.q-partners-hero-cta__item {
+		margin-bottom: 0;
+	}
+	.q-partners-hero-cta__item:first-child {
+		margin-right: 20px;
+	}
+}
+.partner-network {
+	margin-bottom: 3em;
+}
+.partner-types {
+    display: flex;
+    flex-wrap: wrap;
+}
+.partner-type {
+    width: 33%;
+    padding-right: 3em;
+}
+.heading--2 {
+	margin-top: 0;
+}
+.q-solutions-list {
+	padding: 0;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	font-style: normal;
+	vertical-align: baseline;
+	border: 0;
+	list-style: none;
+}
+@media (min-width: 1080px) {
+	.q-solutions-list {
+		padding-left: 15px;
+	}
+}
+.q-solutions-list__item {
+	margin-bottom: 2.75em;
+}
+@media (min-width: 720px) {
+	.paragraph-intro__copy {
+		margin-bottom: 2em;
+	}
+}
+@media (max-width: 915px) {
+	.q-square {
+		margin-top: 2em;
+	}
+}
+.left-column {
+	margin-bottom: 3em;
+}
+.q-square__list {
+	padding-left: 0;
+	list-style: none;
+}
+.q-square__list a {
+	text-decoration: none;
+}
+
+@media (min-width:720px) {
+	.q-cloud-platform-cards__item {
+		width: 47%;
+	}
+}
+/*# sourceMappingURL=index.css.map */

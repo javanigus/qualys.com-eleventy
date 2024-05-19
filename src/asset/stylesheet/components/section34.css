@@ -1,0 +1,202 @@
+.section34 {
+    background: #0a234b;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.section34 p {
+    font-family: Gotham, sans-serif;
+    margin: 0;
+}
+    
+.section34 .dates-column {
+    width: 100%; 
+    padding: 20px 15px;
+    border-right: none;
+}
+
+.section34 .dates-column:last-child {
+    padding-right: 0;
+}
+
+.section34 .dates-wrapper {
+    margin: 0;
+    display: flex;
+    padding: 20px 0px;
+    flex-wrap: wrap;
+}
+
+.section34 .dates-column {
+    color: #FFFFFF;
+    padding: 20px 0px;
+}
+
+.section34 .dates-column:last-child {
+    padding-right: 0;
+}
+
+.section34 .dates-column:last-child {
+    border-right: none;
+}
+
+.section34 .date {
+    margin: 0;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px; /* 109.375% */
+}
+
+.section34 .date strong {
+    font-weight: 400;
+}
+
+.section34 .date-para {
+    color: #BAD0E3;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+.section34 .q-three-column {
+    width: 100%;
+    color: #fff;
+    margin-right: 9px;
+    border: none;
+    padding-bottom: 40px;
+}
+
+.section34 .q-content {
+    display: block;
+    margin-top: 10px;
+}
+
+@media (min-width: 720px) {
+    .section34 .q-content {
+        display: inline-block;
+        padding-left: 20px;
+        margin-top: 0;
+    }
+    .section34 .q-three-column {
+        color: #fff;
+        display: inline-block;
+    }
+}
+
+.section34 .q-content p {
+    color: #fff;
+    font-family: Gotham, sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 35px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.section34 .q-content span {
+    color: #FFFFFF;
+    font-family: Gotham, sans-serif;
+    font-size: 32px;
+    font-weight: 450;
+    line-height: 48px;
+}
+
+.section34 .q-content .date-para {
+    color: #BAD0E3;
+    font-family: Gotham, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+    margin-top: 5px;
+}
+
+@media (min-width: 480px) {
+    .section34 .dates-column {
+        width: 50%;
+        padding: 20px 0;
+    }
+    .section34 .dates-column:nth-child(2n-1) {
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 720px) {
+    .section34 .q-content p a {
+        font-size: 13px;
+    }
+    .section34 .dates-column {
+        width: 25%; 
+        padding-left: 0px;
+        padding-right: 20px;
+    }
+
+    .section34 .dates-column:nth-child(4n) {
+        padding-right: 0px;
+    }
+
+    .section34 .date-para {
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 980px) {
+    .section34 .q-content p {
+        letter-spacing: 1px;
+    }
+    .section34 .q-content p a {
+        font-size: 12px;
+    }
+   .section34 .dates-column:nth-child(4n) {
+        padding-right: 15px;
+    }
+}
+
+.section34 img {
+    display: inline-block;
+    width: 34px;
+    vertical-align: top;
+    margin-top: 5px;
+}
+
+@media (min-width: 720px) {
+    .section34 {
+        padding: 0px;
+    }
+}
+
+@media (min-width: 991px) {
+    .section34 {
+        padding: 0;
+    }
+}
+
+@media (min-width: 1290px) {
+    .section34 {
+        padding: 20px 0px;
+    }
+    .section34 .dates-column:first-child {
+        padding-left: 0;
+    }
+    .section34 .q-grid__row {
+        display: flex;
+        align-items: stretch;
+    }
+    .section34 .dates-column:last-child {
+        padding-left: 28px;
+        padding-top: 0px;
+    }
+
+    .section34 .dates-column {
+        width: unset;
+    }
+    .section34 .date {
+        font-size: 32px;
+        line-height: 35px; /* 109.375% */
+    }
+    .section34 .dates-column {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0 28px;
+    }
+}

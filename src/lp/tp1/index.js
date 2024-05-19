@@ -1,0 +1,4 @@
+"use strict";(function(){function a(a){var b=a.querySelector(".js-videoIframe");const c=a.dataset.src;// hide poster
+a.classList.add("videoWrapperActive"),b.innerHTML="<iframe autoplay=\"true\" frameborder=\"0\" allowTransparency=\"true\" allowfullscreen allow=\"autoplay; fullscreen\" src=\"https://player.vimeo.com/video/"+c+"?autoplay=1&title=0&byline=0&portrait=0&share=0\"></iframe>"}// poster frame click event
+const b=document.querySelector(".play-btn");b.addEventListener("click",function(b){if(b.target.parentElement.classList.contains("js-videoPoster")){b.preventDefault();var c=b.target,d=c.closest(".js-videoWrapper");a(d)}})})();
+//# sourceMappingURL=index.js.map

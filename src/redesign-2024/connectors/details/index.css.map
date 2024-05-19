@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../site/pages/redesign-2024/connectors/details/index.css"],"names":[],"mappings":"AAAA;CACC;EACC,sFAAsF;CACvF;AACD","file":"index.css","sourcesContent":["@media (min-width:720px) {\n\t.graybg {\n\t\tbackground: linear-gradient(107deg, rgba(243,245,248,1) 24%, rgba(255,255,255,1) 100%);\n\t}\n}"]}

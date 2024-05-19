@@ -1,0 +1,17 @@
+.apps-features__campaign .q-icon-plus-content__icon,
+.apps-features__tracking .q-icon-plus-content__icon {
+	min-width: 80px;
+}
+.gdpr .q-apps-screenshot__copy {
+	max-width: none;
+}
+.gdpr h4 {
+	margin: 0;
+}
+.saq-gdpr {
+	margin: 0 auto;
+}
+.q-apps-powered-by::before {
+	background-color: transparent;
+}
+/*# sourceMappingURL=index.css.map */

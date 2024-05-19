@@ -1,0 +1,77 @@
+[
+    {
+        "platform": "AU Platform 1",
+        "heading": "Notification title",
+        "severityLevel": "None"
+    },
+    {
+        "platform": "CA Platform 1",
+        "heading": "Notification title",
+        "severityLevel": "None"
+    },
+    {
+        "platform": "EU Platform 3",
+        "heading": "Notification title",
+        "severityLevel": "None"
+    },
+    {
+        "platform": "US Platform 3",
+        "heading": "Notification title",
+        "severityLevel": "None"
+    },
+    {
+        "platform": "AE Platform 1",
+        "heading": "Notification title",
+        "severityLevel": "None"
+    },
+    {
+        "platform": "US Platform 1",
+        "heading": "Notification title",
+        "severityLevel": "None"
+    },
+    {
+        "platform": "EU Platform 1",
+        "heading": "Notification title",
+        "severityLevel": "None"
+    },
+    {
+        "platform": "QA Platform 1",
+        "severityLevel": "High",
+        "startTime": "2024-04-30T00:00+05:30",
+        "endTime": "2024-05-01T00:00+05:30",
+        "heading": "AE Platform 1: QWEB 10.26.2.0-1 Release Notification (CMB-239731)",
+        "notice": "A new release of Qualys Suite is scheduled to be released into production.The deployment is completely transparent to users and will require no downtime. Ticket Reference for this activity: CMB-239731",
+        "readMoreText": "Learn More",
+        "readMoreLink": "https://status.qualys.com"
+    },
+    {
+        "platform": "EU Platform 2",
+        "heading": "Notification title",
+        "severityLevel": "None"
+    },
+    {
+        "platform": "IN Platform 1",
+        "heading": "Notification title",
+        "severityLevel": "None"
+    },
+    {
+        "platform": "US Platform 2",
+        "heading": "Notification title",
+        "severityLevel": "None"
+    },
+    {
+        "platform": "UK Platform 1",
+        "heading": "Notification title",
+        "severityLevel": "None"
+    },
+    {
+        "platform": "SA Platform 1",
+        "severityLevel": "None",
+        "heading": "Notification title"
+    },
+    {
+        "platform": "US Platform 4",
+        "heading": "Notification title",
+        "severityLevel": "None"
+    }
+]

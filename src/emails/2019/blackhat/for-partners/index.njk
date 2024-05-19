@@ -1,0 +1,634 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- this doctype has the least inconsistencies according to http://www.emailology.org/#1 -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="x-apple-disable-message-reformatting">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+	</style>
+	<style type="text/css">
+		/**************************/
+		/* CLIENT-SPECIFIC STYLES */
+		/**************************/
+		#outlook a { /* Force Outlook to provide a "view in browser" menu link. */
+			padding:0;
+		}
+		a[href^="x-apple-data-detectors:"] {
+			color: inherit;
+			text-decoration: none;
+		}
+		body { /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+			width:100% !important;
+			-webkit-text-size-adjust:100%;
+			-ms-text-size-adjust:100%;
+			margin:0;
+			padding:0;
+		}
+		body,
+		li:before,
+		.ui-widget,
+		input,
+		textarea {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+		}
+		.ExternalClass { /* Force Hotmail to display emails at full width */
+			width:100%;
+		}
+		.ExternalClass,
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td,
+		.ExternalClass div { /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+			line-height: 100%;
+		}
+		#backgroundTable {
+			margin:0;
+			padding:0;
+			width:100% !important;
+			line-height: 100% !important;
+		}
+		font {
+			display: block;
+		}
+		.nowrap {
+			white-space: nowrap;
+		}
+
+		/* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+		.text-link,
+		.long-text {
+			/* These are technically the same, but use both */
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+
+			-ms-word-break: break-all;
+			/* This is the dangerous one in WebKit, as it breaks things wherever */
+			word-break: break-all;
+			/* Instead use this non-standard one: */
+			word-break: break-word;
+
+			/* Adds a hyphen where the word breaks, if supported (No Blink) */
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+		}
+
+		/**************************/
+		/* RESET IMAGES           */
+		/**************************/
+		img {
+			outline:none;
+			text-decoration:none;
+			border: none;
+			-ms-interpolation-mode: bicubic; /* works to help ie properly resize images in IE. (if you are resizing them using the width and height attributes)*/
+		}
+		a img {
+			border:none; /* removes border when linking images */
+		}
+		.image_fix {
+			display:block; /* add this class to images that show extra space below them */
+		}
+		img.banner {
+			max-width: 100%;
+			height: auto;
+		}
+
+		/**************************/
+		/* RESET PARAGRAPHS       */
+		/**************************/
+		p,
+		li {
+			margin: 0;
+			color: #6A778B;
+			font-size: 15px;
+			line-height: 1.625;
+		}
+		a.text-link {
+			color: #2e8be0;
+			text-decoration: none;
+		}
+
+		/**************************/
+		/* RESET HEADINGS         */
+		/**************************/
+		/* To minimize inconsistencies, don't use heading tags (h1, h2, h3, h4, h5, h6). Instead, use span tags with a class indicating its heading level. */
+		span.h1 {
+			/* define h1 style here */
+		}
+		span.h2 {
+			/* define h1 style here */
+		}
+		span.h3 {
+			/* define h1 style here */
+		}
+		span.h4 {
+			/* define h1 style here */
+		}
+		span.h5 {
+			/* define h1 style here */
+		}
+		span.h6 {
+			/* define h1 style here */
+		}
+
+		/**************************/
+		/* RESET TABLES, CELLS    */
+		/**************************/
+		table td {
+			border-collapse: collapse;
+			padding: 0;
+		}
+		table {
+			border-collapse:collapse;
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+			padding: 0;
+			border-spacing: 0;
+		}
+		/**************************/
+		/* PREHEADER              */
+		/**************************/
+		div.preheader,
+		div.preheader font { /* prevents users from seeing the "If you're having trouble viewing this message, click here" message in their inbox */
+			display: none;
+			visibility: hidden;
+			color: #255496;
+			background-color: #255496;
+		}
+		/**************************/
+		/* OTHER                 */
+		/**************************/
+		.background-table {
+			border-collapse: collapse;
+			background-color: #EDEEED;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			line-height: 100% !important;
+		}
+		.wrapper-table {
+			max-width: 684px;
+			width: 684px;
+		}
+		.showOnMobile {
+			display: none;
+		}
+		.address a {
+			color: #2E8BE0;
+		}
+		.button a {
+			font-size: 16px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 600;
+			border-radius: 3px;
+			padding: 11px 18px;
+			border: 1px solid #ED2E26;
+			display: inline-block;
+			white-space: nowrap;
+		}
+		sup {
+			font-size: 0.6em;
+		}
+		/*********************************/
+		/* RESPONSIVE STYLES             */
+		/*********************************/
+		@media screen and (max-width:683px) {
+			
+		}
+		/* 414px MAX WIDTH OF MOBILE */
+		@media screen and (max-width:414px) {
+			/* OVERRIDE per-page CSS 
+			   Nick wants text margins on mobile to be 20px on all emails */
+			.mailer-padding.mailer-padding {
+				width: 20px !important;
+				min-width: 20px !important;
+			}
+		}
+	</style>
+
+	<style type="text/css">
+a {
+	font-family: 'Open Sans', sans-serif;
+}
+.mailer-table,
+.register-btn-mobil-wrapper {
+	background: #ffffff;
+	width: 100%;
+}
+.mailer-table td,
+.register-btn-mobil-wrapper {
+	vertical-align: middle;
+}
+.mailer-logo {
+	text-align: left;
+}
+p {
+	font-size: 16.3px;
+	line-height: 1.55;
+}
+.horizontal-padding {
+	width: 76px;
+}
+.footer a {
+	text-decoration: none;
+}
+b {
+	font-weight: 600;
+}
+.register-desktop {
+	max-width: 684px;
+}
+.vertical-space-logo {
+	height: 6px;
+}
+.mailer-overview-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: #6A778B;
+	letter-spacing: 0;
+	line-height: 1.325;
+}
+.mailer-footer-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: #6A778B;
+	letter-spacing: 0;
+	line-height: 1.667;
+}
+.mailer-footer-text2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	color: #6A778B;
+	letter-spacing: 0;
+	line-height: 1.667;
+}
+.register-button {
+	width: 145px;
+}
+.register-button a {
+	font-size: 15px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 600;
+	border-radius: 3px;
+	padding: 11px 0;
+	width: 145px;
+	border: 1px solid #ED2E26;
+	display: inline-block;
+	white-space: nowrap;
+	line-height: 1;
+}
+.grid-table {
+	width: 100%;
+}
+.grid-box {
+	text-align: left;
+}
+.thumbnail-table {
+	width: 250px;
+}
+.thumbnail-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #6A778B;
+	letter-spacing: 0;
+	line-height: 1.667;
+}
+.training-link {
+	text-decoration: underline;
+	color: #2E8BE0;
+	font-weight: 600;
+}
+.register-footer-table {
+	background: #F7FAFC;
+}
+td.register-table-td {
+	text-align: center;
+}
+.register-footer-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
+	color: #6A778B;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 1.476;
+	font-weight: 600;
+}
+.agenda-text-link {
+	text-decoration: none;
+	color: #2E8BE0;
+}
+.mailer-agenda-time {
+	font-family: 'Open Sans', sans-serif;
+	color: #6A778B;
+	line-height: 1.667;
+	font-size: 14px;
+}
+.mailer-agenda-desc-speaker {
+	color: #6a778b;
+	padding: 4px 0 0;
+	display: block;
+	font-size: 14px;
+}
+.agenda-seperator {
+	height: 20px;
+	border-top: 1px solid #6a778b;
+}
+.mailer-agenda-table td {
+	vertical-align: top;
+}
+.agenda-heading {
+	font-weight: 600;
+	font-size: 19px;
+	color: #1d2737;
+}
+.mailer-overview-text b {
+    font-weight: 600;
+    color: #44536B;
+}
+.line-break {
+	height: 15px;
+}
+li {
+	margin-bottom: 13px;
+}
+li .mailer-overview-text {
+	font-size: 13px;
+}
+/*********************************/
+/* RESPONSIVE STYLES             */
+/*********************************/
+@media screen and (max-width:683px) {
+	.mailer-table {
+		width: 100% !important;
+	}
+	.register-mobile,
+	.logo-mobile {
+		width: 100% !important;
+	}
+	.horizontal-padding {
+		width: 30px !important;
+	}
+	.mailer-logo {
+		text-align: center;
+	}
+	.vertical-space-logo {
+		height: 31px !important;
+	}
+	.grid-box {
+		display: block;
+		width: 100%;
+	}
+	.grid-seperator-mobile {
+		display: block !important;
+		height: 50px;
+		width: 100%;
+	}
+	.thumbnail-table {
+		width: 100% !important;
+	}
+	.vertical-space-80 {
+		height: 80px !important;
+	}
+	.register-btn-mobil-wrapper {
+		width: 147px !important;
+	}
+	.align-center-mobile {
+		text-align: center !important;
+	}
+	.mailer-agenda-table td {
+		display: block;
+	}
+	.mailer-agenda-time {
+		line-height: 1.85;
+	}
+	.mailer-signature-img {
+		max-width: 100%;
+	}
+	.full-width {
+		width: 100% !important;
+	}
+}
+@media screen and (max-width:414px) {
+	.no-column {
+		display: none;
+	}
+	.register-mobile {
+		max-width: 375px;
+	}
+}
+</style>
+
+
+	<!-- http://templates.mailchimp.com/development/css/outlook-conditional-css/
+		Target Outlook 2007, 2010 and 2013
+		The first font in the list of fonts MUST be available on the client's machine in order for the font-family to work. -->
+	<!--[if gte mso 12]>
+		<style type="text/css">
+		body, td, p, h2, h1, ul, li, span { font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, sans-serif !important; }
+		</style>
+	<![endif]-->
+
+</head>
+<body>
+
+
+<div class="preheader">
+	<span style="font-family:'Open Sans', sans-serif;">Announcing Free Global IT Asset Discovery and Inventory App</span>
+</div>
+
+<table cellpadding="0" cellspacing="0" border="0" class="background-table">
+	<tr>
+		<td align="center">
+			<table cellpadding="0" cellspacing="0" border="0" class="wrapper-table" align="center">
+				<tr>
+					<td>
+						<table class="hideOnMobile">
+	<tr>
+		<td height="35" style="height:35px"></td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;">
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%" class="mailer-table">
+					<tr class="hideOnMobile">
+						<td height="65" style="height:65px"></td>
+					</tr>
+					<!--[if !mso 9]><!-->
+					<tr class="showOnMobile">
+						<td height="35" style="height:35px"></td>
+					</tr>
+					<!--<![endif]-->
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="677">
+					<tr>
+						<td class="horizontal-padding"></td>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center" class="logo-table" width="100%">
+								<tr>
+									<td width="50%" align="left" class="logo-td">
+										<a href="https://www.qualys.com/">
+											<img src="https://ik.imagekit.io/qualys/image/logo/qualys-horizontal-sans-tagline-250-2x.png" width="168">
+										</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td class="horizontal-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td height="35" style="height:35px"></td>
+		</tr>
+
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%" class="mailer-table">
+					<tr>
+						<td class="horizontal-padding"></td>
+						<td>
+							<p><font class="mailer-overview-text" face="'Open Sans', sans-serif">Dear Qualys Partner,</font></p>
+							<br>
+							<p><font class="mailer-overview-text" face="'Open Sans', sans-serif">
+								It is my pleasure to let you know that after input from members of our CTO/CISO advisory board and many beta users, we have decided to offer the core of our groundbreaking Global IT Asset Discovery and Inventory App as a <b>free</b> service.
+								<table><tr><td class="line-break"></td></tr></table>
+								As you all know, it is increasingly difficult to secure our networks; regaining the visibility we lost is paramount. It is difficult, if not impossible, to secure <b>what we do not know or cannot see</b>.
+								<table><tr><td class="line-break"></td></tr></table>
+								The free Global IT Asset Discovery and Inventory App:
+								</font>
+								<ul>
+									<li><font class="mailer-overview-text" face="'Open Sans', sans-serif">Allows you to automatically create a continuous, real-time inventory of <b>known and unknown</b> assets across your global IT footprint. The assets can be on-premises, endpoints, multi-cloud, mobile, containers, OT and IoT.
+									</font></li>
+									<li><font class="mailer-overview-text" face="'Open Sans', sans-serif"><b>Automatically</b> classify, normalize, and categorize assets to ensure clean, reliable and consistent data. In-depth asset details provide fine-grained visibility on the system, services, installed software, network, and users.
+									</font></li>
+									<li><font class="mailer-overview-text" face="'Open Sans', sans-serif">Search across <b>millions</b> of assets and have full visibility of any device in <b>seconds</b>. This is because all the data collected is indexed on our Elasticsearch clusters.
+									</font></li>
+									<li><font class="mailer-overview-text" face="'Open Sans', sans-serif">Instantly detect any device that connects to your networks via our passive scanning technology. Upon an unknown device detection, users can install a light-weight Qualys <b>self-updating</b> agent (3Mb) to turn the device into a managed device or launch a vulnerability scan.</font></li>
+								</ul>
+								<font class="mailer-overview-text" face="'Open Sans', sans-serif">
+								Additional features, such as hardware and software lifecycle and license information, the ability to tag business-critical assets, new workflows, synchronization of assets with the ServiceNow CMDB and the ability to automatically quarantine unknown devices or known devices that have been deemed out of compliance or compromised, are available in a paid version of the app.
+								<table><tr><td class="line-break"></td></tr></table>
+								The public announcement will be on <b><a style="text-decoration: none; color:#44536B; white-space: nowrap;">Monday, July 29</a></b>, followed by a major launch at Black Hat to showcase these capabilities.
+								<table><tr><td class="line-break"></td></tr></table>
+								The free service, including the passive scanning, will be available globally to all new customers as of <b><a style="text-decoration: none; color:#44536B; white-space: nowrap;">August 3</a></b> (Asset Inventory with the Asset Discovery available in beta). For existing customers, availability is <b><a style="text-decoration: none; color:#44536B; white-space: nowrap;">September 2</a></b> for both apps, as we need time to migrate their data to the free service. Watch for an email from the <a href="mailto:alliances@qualys.com" class="text-link">Strategic Alliance Team</a> with details on how to sign in to the free service. <a href="https://www.qualys.com/docs/global-asset-inventory-customers.pdf" class="text-link">Click here</a> for more information.
+								<table><tr><td class="line-break"></td></tr></table>
+								We hope to see you at Black Hat. And, I’d like once again to thank you for your support.
+								<table><tr><td class="line-break"></td></tr></table>
+								Sincerely,
+								</font></p>
+						</td>
+						<td class="horizontal-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td height="15" style="height:15px"></td>
+		</tr>
+
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%" class="mailer-table">
+					<tr>
+						<td class="horizontal-padding"></td>
+						<td>
+							<table>
+								<tr>
+									<td width="250">
+										<p>
+											<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif;" class="mailer-overview-text">
+												<img src="https://ik.imagekit.io/qualys/image/cso-interchange-signature-100-2x.jpg" alt="" height="52" constrain="true" imagepreview="false" class="" alt="Philippe	Courtot">
+												<br>
+												<b>Philippe Courtot</b> <br>
+												Chairman & CEO, Qualys <br>
+												<a href="mailto:pcourtot@qualys.com" class="text-link">pcourtot@qualys.com</a> <br>
+												T <a style="text-decoration: none; color: #6A778B;">650.801.6135</a>  | 
+												C <a style="text-decoration: none; color: #6A778B;">415.713.4334</a>
+											</font>
+										</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td class="horizontal-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="line-break"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="677">
+					<tr>
+						<td class="horizontal-padding"></td>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center" class="logo-table" width="100%">
+								<tr>
+									<td width="100%" align="left" class="logo-td">
+										<a href="https://www.qualys.com/docs/global-asset-inventory-customers.pdf">
+											<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2019/blackhat/email-banner-global-it-asset-inventory-sans-button-384-2x.png" width="534" class="image_fix full-width">
+										</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td class="horizontal-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%" class="mailer-table">
+					<tr class="hideOnMobile">
+						<td height="65" style="height:65px"></td>
+					</tr>
+					<!--[if !mso 9]><!-->
+					<tr class="showOnMobile">
+						<td height="35" style="height:35px"></td>
+					</tr>
+					<!--<![endif]-->
+				</table>
+			</td>
+		</tr>
+	</table>
+<table class="hideOnMobile">
+	<tr>
+		<td height="35" style="height:35px"></td>
+	</tr>
+</table>
+
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</html>

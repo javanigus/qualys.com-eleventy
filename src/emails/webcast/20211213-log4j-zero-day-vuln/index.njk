@@ -1,0 +1,878 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- this doctype has the least inconsistencies according to http://www.emailology.org/#1 -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="x-apple-disable-message-reformatting">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+	</style>
+	<style type="text/css">
+		/**************************/
+		/* CLIENT-SPECIFIC STYLES */
+		/**************************/
+		#outlook a { /* Force Outlook to provide a "view in browser" menu link. */
+			padding:0;
+		}
+		a[href^="x-apple-data-detectors:"] {
+			color: inherit;
+			text-decoration: none;
+		}
+		body { /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+			width:100% !important;
+			-webkit-text-size-adjust:100%;
+			-ms-text-size-adjust:100%;
+			margin:0;
+			padding:0;
+		}
+		body,
+		li:before,
+		.ui-widget,
+		input,
+		textarea {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+		}
+		.ExternalClass { /* Force Hotmail to display emails at full width */
+			width:100%;
+		}
+		.ExternalClass,
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td,
+		.ExternalClass div { /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+			line-height: 100%;
+		}
+		#backgroundTable {
+			margin:0;
+			padding:0;
+			width:100% !important;
+			line-height: 100% !important;
+		}
+		font {
+			display: block;
+		}
+		.nowrap {
+			white-space: nowrap;
+		}
+
+		/* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+		.text-link,
+		.long-text {
+			/* These are technically the same, but use both */
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+
+			-ms-word-break: break-all;
+			/* This is the dangerous one in WebKit, as it breaks things wherever */
+			word-break: break-all;
+			/* Instead use this non-standard one: */
+			word-break: break-word;
+
+			/* Adds a hyphen where the word breaks, if supported (No Blink) */
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+		}
+
+		/**************************/
+		/* RESET IMAGES           */
+		/**************************/
+		img {
+			outline:none;
+			text-decoration:none;
+			border: none;
+			-ms-interpolation-mode: bicubic; /* works to help ie properly resize images in IE. (if you are resizing them using the width and height attributes)*/
+		}
+		a img {
+			border:none; /* removes border when linking images */
+		}
+		.image_fix {
+			display:block; /* add this class to images that show extra space below them */
+		}
+		img.banner {
+			max-width: 100%;
+			height: auto;
+		}
+
+		/**************************/
+		/* RESET PARAGRAPHS       */
+		/**************************/
+		p,
+		li {
+			margin: 0;
+			color: #6A778B;
+			font-size: 15px;
+			line-height: 1.625;
+		}
+		a.text-link {
+			color: #2e8be0;
+			text-decoration: none;
+		}
+
+		/**************************/
+		/* RESET HEADINGS         */
+		/**************************/
+		/* To minimize inconsistencies, don't use heading tags (h1, h2, h3, h4, h5, h6). Instead, use span tags with a class indicating its heading level. */
+		span.h1 {
+			/* define h1 style here */
+		}
+		span.h2 {
+			/* define h1 style here */
+		}
+		span.h3 {
+			/* define h1 style here */
+		}
+		span.h4 {
+			/* define h1 style here */
+		}
+		span.h5 {
+			/* define h1 style here */
+		}
+		span.h6 {
+			/* define h1 style here */
+		}
+
+		/**************************/
+		/* RESET TABLES, CELLS    */
+		/**************************/
+		table td {
+			border-collapse: collapse;
+			padding: 0;
+		}
+		table {
+			border-collapse:collapse;
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+			padding: 0;
+			border-spacing: 0;
+		}
+		/**************************/
+		/* PREHEADER              */
+		/**************************/
+		div.preheader,
+		div.preheader font { /* prevents users from seeing the "If you're having trouble viewing this message, click here" message in their inbox */
+			display: none;
+			visibility: hidden;
+			color: #255496;
+			background-color: #255496;
+		}
+		/**************************/
+		/* OTHER                 */
+		/**************************/
+		.background-table {
+			border-collapse: collapse;
+			background-color: #EDEEED;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			line-height: 100% !important;
+		}
+		.wrapper-table {
+			max-width: 684px;
+			width: 684px;
+		}
+		.showOnMobile {
+			display: none;
+		}
+		.address a {
+			color: #2E8BE0;
+		}
+		.button a {
+			font-size: 16px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 600;
+			border-radius: 3px;
+			padding: 11px 18px;
+			border: 1px solid #ED2E26;
+			display: inline-block;
+			white-space: nowrap;
+		}
+		sup {
+			font-size: 0.6em;
+		}
+		/*********************************/
+		/* RESPONSIVE STYLES             */
+		/*********************************/
+		@media screen and (max-width:683px) {
+			
+		}
+		/* 414px MAX WIDTH OF MOBILE */
+		@media screen and (max-width:414px) {
+			/* OVERRIDE per-page CSS 
+			   Nick wants text margins on mobile to be 20px on all emails */
+			.mailer-padding.mailer-padding {
+				width: 20px !important;
+				min-width: 20px !important;
+			}
+		}
+	</style>
+
+	<style type="text/css">
+	.mailer-padding {
+		width: 75px;
+	}
+
+	.mailer-padding2 {
+		width: 38px;
+	}
+
+	.button a {
+		font-size: 15px;
+		color: #fff !important;
+		text-decoration: none;
+		font-weight: 600;
+		border-radius: 3px;
+		padding: 11px 21px;
+		border: 1px solid #ED2E26;
+		background-color: #ED2E26;
+		display: inline-block;
+		white-space: nowrap;
+		line-height: 1;
+		min-width: 139px;
+		box-sizing: border-box;
+	}
+
+	.button.blue a {
+		border: 1px solid #2E8BE0;
+		background-color: #2E8BE0;
+	}
+
+	.column {
+		width: 50%;
+		text-align: center;
+		vertical-align: top;
+	}
+
+	.column-separator {
+		min-width: 30px;
+	}
+
+	.qualys-logo {
+		width: 145px;
+	}
+
+	.agenda-heading {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 15px;
+		color: #262626;
+		line-height: 1.533;
+		font-weight: bold;
+	}
+
+	.mailer-agenda-time {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 15px;
+		color: #6A778B;
+		line-height: 1.533;
+	}
+
+	.mailer-agenda-desc-speaker {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 15px;
+		color: #6A778B;
+		line-height: 1.533;
+	}
+
+	.mailer-overview-text {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 15px;
+		color: #262626;
+		line-height: 1.533;
+	}
+
+	.agenda-seperator {
+		border-top: 1px solid #D8D8D8;
+	}
+
+	.agenda-seperator-spacing {
+		height: 14px;
+	}
+
+	.mailer-agenda-table td {
+		vertical-align: top;
+	}
+
+	.time {
+		width: 129px;
+	}
+
+	.philippe-courtot {
+		width: 135px;
+	}
+
+	ul {
+		margin-top: 0;
+		margin-bottom: 0;
+		;
+	}
+
+	.h1 {
+		font-size: 36px;
+		font-weight: 600;
+		line-height: 1.3 !important;
+		letter-spacing: -0.6px;
+		color: #262626;
+	}
+
+	.subheading {
+		font-size: 20px;
+	}
+
+	.date {
+		font-size: 17px;
+	}
+
+	.live-webcast {
+		color: #ED2E26;
+		letter-spacing: -1.3px;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.in-webinar {
+		color: #6CA3CF;
+		font-weight: 600;
+		font-size: 18px;
+	}
+
+	.bullet-text {
+		color: #262626;
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 1.5;
+	}
+
+	.bullet-spacing {
+		width: 16px;
+	}
+
+	.bullet-icon {
+		vertical-align: top;
+	}
+
+	.bullet-spacer {
+		height: 0.5em;
+	}
+
+	/*********************************/
+	/* RESPONSIVE STYLES             */
+	/*********************************/
+	/* 683px MAX WIDTH OF TABLET */
+	@media screen and (max-width:683px) {
+
+		.banner-desktop {
+			width: 100%;
+		}
+
+		table.wrapper,
+		.wrapper-table {
+			width: 100% !important;
+		}
+
+		.mailer-padding,
+		.mailer-padding2 {
+			width: 5%;
+		}
+
+		.mailer-table,
+		.footer-trial-content {
+			width: 100% !important;
+		}
+	}
+
+	/* 414px MAX WIDTH OF MOBILE */
+	@media screen and (max-width:414px) {
+		.hideOnMobile {
+			display: none !important;
+		}
+
+		.showOnMobile {
+			display: block !important;
+		}
+
+		tr.showOnMobile {
+			display: table !important;
+		}
+
+		.qualys-logo {
+			width: 130px;
+		}
+
+		.wrapper-table,
+		.wrapper-table *,
+		.button {
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		.wrapper-table .left-aligned * {
+			text-align: left;
+		}
+
+		.mailer-padding {
+			width: 20px !important;
+			min-width: 20px !important;
+		}
+
+		.wrapper-table .agenda .description * {
+			text-align: left !important;
+			s
+		}
+
+		.time {
+			width: 81px;
+			min-width: 81px !important;
+		}
+
+		.time a {
+			font-size: 13px;
+		}
+
+		.screen .agenda-seperator-spacing {
+			height: 10px;
+		}
+
+		.philippe-courtot {
+			width: 104px;
+		}
+	}
+</style>
+
+
+	<!-- http://templates.mailchimp.com/development/css/outlook-conditional-css/
+		Target Outlook 2007, 2010 and 2013
+		The first font in the list of fonts MUST be available on the client's machine in order for the font-family to work. -->
+	<!--[if gte mso 12]>
+		<style type="text/css">
+		body, td, p, h2, h1, ul, li, span { font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, sans-serif !important; }
+		</style>
+	<![endif]-->
+
+</head>
+<body>
+
+
+<div class="preheader">
+	<span style="font-family:'Open Sans', sans-serif;"></span>
+</div>
+
+<table cellpadding="0" cellspacing="0" border="0" class="background-table">
+	<tr>
+		<td align="center">
+			<table cellpadding="0" cellspacing="0" border="0" class="wrapper-table" align="center">
+				<tr>
+					<td>
+						<table class="hideOnMobile">
+	<tr>
+		<td height="35"></td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="background-color:#fff;">
+	<tr>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="mailer-table">
+				<tr class="hideOnMobile">
+					<td height="58"></td>
+				</tr>
+				<!--[if !mso 9]><!-->
+				<tr class="showOnMobile">
+					<td height="30"></td>
+				</tr>
+				<!--<![endif]-->
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="mailer-table">
+				<tr>
+					<td class="mailer-padding"></td>
+					<td>
+						<a
+							href="https://www.qualys.com/?{{my.utm-tracking}}">
+							<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/webcasts/qualys-logo-145-2x.png"
+								width="145" class="qualys-logo">
+						</a>
+					</td>
+					<td class="mailer-padding"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="35"></td>
+	</tr>
+	<tr>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="highlight-table-inner" width="100%">
+				<tr>
+					<td class="mailer-padding"></td>
+					<td>
+						<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif;">
+							<p class="h1">CVE-2021-44228: Apache Log4j Zero-Day (Log4Shell)</p>
+						</font>
+					</td>
+					<td class="mailer-padding"></td>
+				</tr>
+				<tr>
+					<td class="mailer-padding"></td>
+					<td height="7"></td>
+					<td class="mailer-padding"></td>
+				</tr>
+				<tr>
+					<td class="mailer-padding"></td>
+					<td>
+						<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif;">
+							<p class="subheading"><span
+									class="live-webcast">LIVE WEBINAR:</span> <span class="date">Monday, December 13 |
+									<span class="nowrap">10:00 AM & 2:00 PM PT</span></span></p>
+						</font>
+					</td>
+					<td class="mailer-padding"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="23"></td>
+	</tr>
+	<tr class="hideOnMobile">
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="highlight-table-inner" width="100%">
+				<tr>
+					<td class="mailer-padding2"></td>
+					<td>
+							<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/cybersecurity-alert-desktop.png"
+								width="608" alt="" class="image_fix banner-desktop">
+					</td>
+					<td class="mailer-padding2"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!--[if !mso 9]><!-->
+	<tr class="showOnMobile">
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="highlight-table-inner" width="100%">
+				<tr>
+					<td>
+							<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/cybersecurity-alert-mobile.png"
+								alt="" class="image_fix" width="100%">
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<!--<![endif]-->
+	<tr>
+		<td height="31"></td>
+	</tr>
+	<tr class="left-aligned">
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="highlight-table-inner" width="100%">
+				<tr>
+					<td class="mailer-padding"></td>
+					<td>
+						<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif;">
+							<p>
+								Dear {{lead.First Name:default=Security Professional}},
+							</p>
+							<br>
+							<p>This email is to give you an update on Qualys' response to CVE-2021-44228: Apache Log4j Zero-Day disclosed on December 9.</p>
+							<br>
+							<p>We wanted to assure you that Qualys is 100% mobilized on this issue, and our teams are working around the clock to evolve our detection mechanisms to identify vulnerable systems via our authenticated, unauthenticated, and agent-based scans.  </p>
+							<br>
+							<p>Qualys has released information on how our apps can help you identify exposed systems in our blog, <a href="https://blog.qualys.com/vulnerabilities-threat-research/2021/12/10/apache-log4j2-zero-day-exploited-in-the-wild-log4shell" class="text-link">CVE-2021-44228: Apache Log4j2 Zero-Day Exploited in the Wild (Log4Shell)</a>. Additionally, we published technologies in our Web Application Scanning (WAS) app (QID 150440) and enhancements to existing authenticated QID for Linux.</p>
+							<br>
+							<p>Please note Log4j can be bundled and packaged as part of any custom application and placed anywhere on the system. The Qualys Research Team has pushed updates to our detection logic QID 376157 in authenticated scans that accurately detect vulnerable versions of Log4j by reviewing running java processes.</p>
+							<br>
+							<p>We have also released QID 730297 to detect the Log4j vulnerability without authentication and continue to work on improving our detection logic by attempting additional parameters that may be logged by the Log4j library. This will help us exploit the vulnerability and confirm its existence.</p>
+							<br>
+							<p>In addition, we recommend you implement several mitigations while unpatched systems are being identified. Steps that can be implemented immediately include:</p>
+							<br>
+							<ul>
+								<li>Roll out the latest version of Log4j where applicable or apply mitigation controls to reduce the risk of exploitation. See <a href="https://logging.apache.org/log4j/2.x/security.html" class="text-link">Apache advisory</a> for details.</li>
+								<li>Configure custom rules to intercept and drop malicious web requests and perform signature updates for perimeter security solutions like IPS/WAF to block any exploit attempts.</li>
+								<li>Block known IoCs available via threat feeds and research.</li>
+							</ul>
+							<br>
+							<p>We will share additional mitigation options as they become available.</p>
+							<br>
+							<p>The Enterprise TruRisk Platform has several additional capabilities (as mentioned in the <a href="https://blog.qualys.com/vulnerabilities-threat-research/2021/12/10/apache-log4j2-zero-day-exploited-in-the-wild-log4shell" class="text-link">blog</a>) that can be quickly activated and delivered through the same cloud agent you have already deployed. Additional information provided by these apps may help with your immediate incident response plans. We are standing by to enable these modules at your request.</p>
+							<br>
+							<p>To help answer any additional questions, we are holding two webinars </p>
+							<br>
+							<ul>
+								<li>Monday, December 13, at 10:00 am Pacific Time. Register at <a href="https://qualys.com/log4j-webinar" class="text-link">https://qualys.com/log4j-webinar</a>.</li>
+								<li>Monday December 13, at 2:00pm Pacific Time. Register at <a href="https://qualys.com/log4j-webinar-2" class="text-link">https://qualys.com/log4j-webinar-2</a>.</li>
+							</ul>
+							<br>
+							<p>In the meantime, feel free to reach out to your technical account manager with questions or if you need additional assistance. For immediate assistance on urgent issues, <a href="https://www.qualys.com/support/?{{my.utm-tracking}}#phone" class="text-link">call Qualys Support</a>, or access the <a href="https://success.qualys.com/support/s/article/000001106" class="text-link">Qualys Customer Support Portal</a> online. </p>
+							<br>
+							<p>Thank you, </p>
+							<br>
+							<p>Qualys Customer Support Team </p>
+						</font>
+					</td>
+					<td class="mailer-padding"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="29"></td>
+	</tr>
+	<tr>
+		<td>
+			<table cellpadding="0" cellspacing="0" border="0" class="highlight-table-inner" width="100%">
+				<tr>
+					<td class="mailer-padding"></td>
+					<td>
+						<table border="0" cellspacing="0" cellpadding="0" class="button">
+							<tr>
+								<td>
+									<table border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td align="center" style="border-radius: 3px;" bgcolor="#ED2E26"><a
+													href="https://qualys.com/log4j-webinar"
+													target="_blank">
+													<font face="'Open Sans', sans-serif">Register for 10 AM PT webinar</font>
+												</a></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td class="mailer-padding"></td>
+				</tr>
+				<tr><td height="20"></td></tr>
+				<tr>
+					<td class="mailer-padding"></td>
+					<td>
+						<table border="0" cellspacing="0" cellpadding="0" class="button">
+							<tr>
+								<td>
+									<table border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td align="center" style="border-radius: 3px;" bgcolor="#ED2E26"><a
+													href="https://qualys.com/log4j-webinar-2"
+													target="_blank">
+													<font face="'Open Sans', sans-serif">Register for 2 PM PT webinar</font>
+												</a></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td class="mailer-padding"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+	<tr>
+		<td height="60"></td>
+	</tr>
+	<tr>
+		<td style="background-color: #EDEEED;">
+			<table cellpadding="0" cellspacing="0" border="0" align="center">
+				<tr>
+					<td height="40"></td>
+				</tr>
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" align="center">
+							<tr>
+								<td>
+									<a href="https://twitter.com/qualys">
+										<img src="https://ik.imagekit.io/qualys/image/2018/rsa/mailer-twitter-icon-34-2x.jpg"
+											width="37">
+									</a>
+								</td>
+								<td width="10" style="width: 10px;"></td>
+								<td>
+									<a href="https://www.facebook.com/qualys">
+										<img src="https://ik.imagekit.io/qualys/image/2018/rsa/mailer-facebook-icon-34-2x.jpg"
+											width="37">
+									</a>
+								</td>
+								<td width="10" style="width: 10px;"></td>
+								<td>
+									<a href="https://www.linkedin.com/company/qualys">
+										<img src="https://ik.imagekit.io/qualys/image/2018/rsa/mailer-linkedin-icon-34-2x.jpg"
+											width="37">
+									</a>
+								</td>
+								<td width="10" style="width: 10px;"></td>
+								<td>
+									<a href="https://vimeo.com/qualys">
+										<img src="https://d1dejaj6dcqv24.cloudfront.net/asset/image/icon/vimeo-circle-37-2x.png"
+											width="37">
+									</a>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="13" style="background-color: #EDEEED;"></td>
+	</tr>
+	<tr>
+		<td>
+			<table style="background-color: #EDEEED; width: 100%;" class="footer">
+				<tr>
+					<td width="30"></td>
+					<td>
+						<table style="width: 100%;">
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center">
+										<tr>
+											<td align="center" style="line-height: 1.4;">
+												<font face="'Open Sans', sans-serif">
+													<span
+														style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93; max-width: 500px;">This
+														email was sent to <a
+															style="text-decoration: none; color: #707f93; font-family: 'Open Sans', sans-serif; border: none;">{{lead.Email
+															Address}}</a>.
+														<br>
+														You may adjust your <a
+															href="https://www.qualys.com/communication-preferences/?{{my.utm-tracking}}&email={{lead.Email Address}}"
+															class="text-link">email preferences or unsubscribe</a> at
+														any time.</span>
+												</font>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="16"></td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center"
+										style="text-align: center;">
+										<tr>
+											<td class="mailer-footer-links" style="text-align: center;">
+												<a href="https://www.qualys.com/company/privacy/?{{my.utm-tracking}}"
+													style="text-decoration: none; color: #2e8be0">
+													<font face="'Open Sans', sans-serif"
+														style="font-family: 'Open Sans', sans-serif; font-size: 11pt;  display: inline;">
+														Privacy</font>
+												</a>
+												<font face="'Open Sans', sans-serif"
+													style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93; display: inline;">
+													|</font>
+
+												<a href="https://www.qualys.com/company/contacts/?{{my.utm-tracking}}"
+													style="text-decoration: none; color: #707f93; display: inline;">
+													<font face="'Open Sans', sans-serif"
+														style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #2e8be0 ;display: inline;">
+														Contacts</font>
+												</a>
+												<font face="'Open Sans', sans-serif"
+													style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93;  display: inline;">
+													|</font>
+
+												<a href="https://www.qualys.com/support/?{{my.utm-tracking}}"
+													style="text-decoration: none; color: #2e8be0">
+													<font face="'Open Sans', sans-serif"
+														style="font-family: 'Open Sans', sans-serif; font-size: 11pt;  display: inline;">
+														Support</font>
+												</a>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="16"></td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center">
+										<tr>
+											<td align="center" style="line-height: 1.4;">
+												<font face="'Open Sans', sans-serif"
+													style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">
+													<span class="address">
+														<span style="white-space: nowrap;"><a
+																style="color: #707f93;">919 E Hillsdale Blvd,</a></span>
+														<span style="white-space: nowrap;"><a
+																style="color: #707f93;">4th Floor,</a></span>
+														<span style="white-space: nowrap;"><a
+																style="color: #707f93;">Foster City,</a></span>
+														<a style="color: #707f93;">CA 94404</a> |
+														<span style="white-space: nowrap;"><a
+																style="color: #707f93;">(650) 801 6100</a></span>
+													</span>
+													<br><br class="showOnMobile">
+
+													Qualys is a global company with offices around the world. Find an <a
+														href="https://www.qualys.com/company/contacts/?{{my.utm-tracking}}#regional-offices"
+														style="text-decoration: none; color: #2e8be0; white-space: nowrap;">office
+														near you</a>.
+												</font>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="18"></td>
+							</tr>
+							<tr>
+								<td>
+									<table cellpadding="0" cellspacing="0" border="0" align="center">
+										<tr>
+											<td align="center">
+												<font face="'Open Sans', sans-serif"
+													style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">
+													© {{my.Current Year}} <span class="nowrap">Qualys, Inc.</span> All
+													rights reserved.</font>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="100"></td>
+							</tr>
+						</table>
+					</td>
+					<td width="30"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</html>

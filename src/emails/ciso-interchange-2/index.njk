@@ -1,0 +1,1034 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- this doctype has the least inconsistencies according to http://www.emailology.org/#1 -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="x-apple-disable-message-reformatting">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+	</style>
+	<style type="text/css">
+		/**************************/
+		/* CLIENT-SPECIFIC STYLES */
+		/**************************/
+		#outlook a { /* Force Outlook to provide a "view in browser" menu link. */
+			padding:0;
+		}
+		a[href^="x-apple-data-detectors:"] {
+			color: inherit;
+			text-decoration: none;
+		}
+		body { /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+			width:100% !important;
+			-webkit-text-size-adjust:100%;
+			-ms-text-size-adjust:100%;
+			margin:0;
+			padding:0;
+		}
+		body,
+		li:before,
+		.ui-widget,
+		input,
+		textarea {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+		}
+		.ExternalClass { /* Force Hotmail to display emails at full width */
+			width:100%;
+		}
+		.ExternalClass,
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td,
+		.ExternalClass div { /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+			line-height: 100%;
+		}
+		#backgroundTable {
+			margin:0;
+			padding:0;
+			width:100% !important;
+			line-height: 100% !important;
+		}
+		font {
+			display: block;
+		}
+		.nowrap {
+			white-space: nowrap;
+		}
+
+		/* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+		.text-link,
+		.long-text {
+			/* These are technically the same, but use both */
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+
+			-ms-word-break: break-all;
+			/* This is the dangerous one in WebKit, as it breaks things wherever */
+			word-break: break-all;
+			/* Instead use this non-standard one: */
+			word-break: break-word;
+
+			/* Adds a hyphen where the word breaks, if supported (No Blink) */
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+		}
+
+		/**************************/
+		/* RESET IMAGES           */
+		/**************************/
+		img {
+			outline:none;
+			text-decoration:none;
+			border: none;
+			-ms-interpolation-mode: bicubic; /* works to help ie properly resize images in IE. (if you are resizing them using the width and height attributes)*/
+		}
+		a img {
+			border:none; /* removes border when linking images */
+		}
+		.image_fix {
+			display:block; /* add this class to images that show extra space below them */
+		}
+		img.banner {
+			max-width: 100%;
+			height: auto;
+		}
+
+		/**************************/
+		/* RESET PARAGRAPHS       */
+		/**************************/
+		p,
+		li {
+			margin: 0;
+			color: #6A778B;
+			font-size: 15px;
+			line-height: 1.625;
+		}
+		a.text-link {
+			color: #2e8be0;
+			text-decoration: none;
+		}
+
+		/**************************/
+		/* RESET HEADINGS         */
+		/**************************/
+		/* To minimize inconsistencies, don't use heading tags (h1, h2, h3, h4, h5, h6). Instead, use span tags with a class indicating its heading level. */
+		span.h1 {
+			/* define h1 style here */
+		}
+		span.h2 {
+			/* define h1 style here */
+		}
+		span.h3 {
+			/* define h1 style here */
+		}
+		span.h4 {
+			/* define h1 style here */
+		}
+		span.h5 {
+			/* define h1 style here */
+		}
+		span.h6 {
+			/* define h1 style here */
+		}
+
+		/**************************/
+		/* RESET TABLES, CELLS    */
+		/**************************/
+		table td {
+			border-collapse: collapse;
+			padding: 0;
+		}
+		table {
+			border-collapse:collapse;
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+			padding: 0;
+			border-spacing: 0;
+		}
+		/**************************/
+		/* PREHEADER              */
+		/**************************/
+		div.preheader,
+		div.preheader font { /* prevents users from seeing the "If you're having trouble viewing this message, click here" message in their inbox */
+			display: none;
+			visibility: hidden;
+			color: #255496;
+			background-color: #255496;
+		}
+		/**************************/
+		/* OTHER                 */
+		/**************************/
+		.background-table {
+			border-collapse: collapse;
+			background-color: #EDEEED;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			line-height: 100% !important;
+		}
+		.wrapper-table {
+			max-width: 684px;
+			width: 684px;
+		}
+		.showOnMobile {
+			display: none;
+		}
+		.address a {
+			color: #2E8BE0;
+		}
+		.button a {
+			font-size: 16px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 600;
+			border-radius: 3px;
+			padding: 11px 18px;
+			border: 1px solid #ED2E26;
+			display: inline-block;
+			white-space: nowrap;
+		}
+		sup {
+			font-size: 0.6em;
+		}
+		/*********************************/
+		/* RESPONSIVE STYLES             */
+		/*********************************/
+		@media screen and (max-width:683px) {
+			
+		}
+		/* 414px MAX WIDTH OF MOBILE */
+		@media screen and (max-width:414px) {
+			/* OVERRIDE per-page CSS 
+			   Nick wants text margins on mobile to be 20px on all emails */
+			.mailer-padding.mailer-padding {
+				width: 20px !important;
+				min-width: 20px !important;
+			}
+		}
+	</style>
+
+	        <style type="text/css">
+a {
+	font-family: 'Open Sans', sans-serif;
+}
+.master-table {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	line-height: 100%;
+	border-collapse: collapse;
+	background-color: #ffffff;
+}
+.mailer-logo {
+	text-align: left;
+}
+.mailer-footer-wrapper {
+	background: #EFEFEF;
+}
+p {
+	font-size: 12pt;
+}
+.agenda-time {
+	vertical-align: top;
+	text-align: left;
+	width: 65px;
+	line-height: 1.4;
+}
+.agenda-detail {
+	vertical-align: top;
+	text-align: left;
+	line-height: 1.4;
+}
+.agenda-seperator {
+	text-align: center;
+	vertical-align: top;
+	width: 20px;
+	font-size: 9px;
+	line-height: 2.6;
+}
+.agenda-time-font {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16.5px;
+	color: #627281;
+}
+.agenda-seperator-font {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 9px;
+	color: #627281;
+}
+.agenda-detail strong {
+	font-weight: 600;
+	padding-bottom: 5px;
+}
+.agenda-detail-heading {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16.5px;
+	color: #1D2737;
+}
+.agenda-detail-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #627281;
+}
+.mailer-section-heading {
+	font-family: 'Open Sans', sans-serif;
+	color: #1D2737;
+	font-size: 30pt;
+	margin: 0;
+	line-height: 1;
+	font-weight: 400;
+}
+.guest-picture-td {
+	text-align: left;
+	vertical-align: top;
+}
+.guest-picture-td img {
+	margin-bottom: 8px;
+}
+.guest-intro-td {
+	text-align: left;
+	vertical-align: top;
+}
+.guest-intro-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 17px;
+	line-height: 1.6;
+	color: #627281;
+}
+.guest-name {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15.5px;
+	line-height: 1.7;
+}
+.guest-title {
+	font-weight: 600;
+}
+.guest-title-text {
+	font-family: 'Open Sans', sans-serif;
+}
+.event-invite {
+	text-align: left;
+	vertical-align: top;
+}
+.event-invite-text {
+	font-size: 16px;
+	line-height: 1.7;
+	color: #627281;
+}
+.event-about-text {
+	color: #1D2737;
+	font-family: serif;
+	font-size: 20px;
+	line-height: 1.4;
+}
+.event-about-footer {
+	font-family: 'Open Sans', sans-serif;
+	color: #6A778B;
+	font-size: 14px;
+}
+.event-about-td {
+	text-align: left;
+	vertical-align: top;
+	padding-top: 5px;
+}
+.event-about-icon {
+	text-align: left;
+	vertical-align: top
+}
+
+/*********************************/
+/* RESPONSIVE STYLES             */
+/*********************************/
+@media screen and (max-width:616px) {
+	.mailer-table {
+		width: 100% !important;
+	}
+	.mailer-hero {
+		max-width: 100%;
+		height: auto;
+	}
+	.no-padding {
+		display: none;
+	}
+	.participation-logo-img {
+		max-width: 100%;
+	}
+}
+@media screen and (max-width:480px) {
+	.no-column {
+		display: none;
+	}
+	.agenda-right-padding {
+		width: 30px !important;
+	}
+	.guest-picture-td {
+		float: left;
+		width: 100%;
+		padding-bottom: 20px;
+	}
+	.guest-intro-td {
+		float: left;
+		width: 100%;
+	}
+	.participation-logo {
+		width: 100%;
+		float: left;
+		padding: 20px 0;
+		text-align: center;
+	}
+	.event-about-td {
+		float: left;
+		width: 100%;
+	}
+	.event-about-icon {
+		float: left;
+		width: 100%;
+		padding-top: 20px;
+	}
+	.mailer-section-heading {
+		font-size: 22pt;
+	}
+	.agenda-seperator {
+		text-align: left !important;
+	}
+}
+        </style>
+
+
+	<!-- http://templates.mailchimp.com/development/css/outlook-conditional-css/
+		Target Outlook 2007, 2010 and 2013
+		The first font in the list of fonts MUST be available on the client's machine in order for the font-family to work. -->
+	<!--[if gte mso 12]>
+		<style type="text/css">
+		body, td, p, h2, h1, ul, li, span { font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, sans-serif !important; }
+		</style>
+	<![endif]-->
+
+</head>
+<body>
+
+
+<div class="preheader">
+	<span style="font-family:'Open Sans', sans-serif;">CIO-CISO Interchange</span>
+</div>
+
+<table cellpadding="0" cellspacing="0" border="0" class="background-table">
+	<tr>
+		<td align="center">
+			<table cellpadding="0" cellspacing="0" border="0" class="wrapper-table" align="center">
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" class="master-table">
+		<tr>
+			<td height="23" style="height:23px"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-header mailer-table" width="617">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td class="mailer-logo">
+							<img src="https://ik.imagekit.io/qualys/image/cso-interchange-logo-163-2x.jpg" alt="CISO Interchange Logo" width="163" height="47" />
+						</td>
+						<td style="width:30px;" width="30"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="height:13px;" height="13"></td>
+						<td style="width:30px;" width="30"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-hero-wrapper mailer-table" width="617">
+					<tr>
+						<td style="width:30px;" width="30" class="no-padding"></td>
+						<td>
+							<a href="https://www.csointerchange.org/"><img src="https://ik.imagekit.io/qualys/image/cso-interchange-hero-6-617-2x.jpg" width="617" class="mailer-hero"></a>
+						</td>
+						<td style="width:30px;" width="30" class="no-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="padding-top: 13px; padding-bottom: 10px;">
+							<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt;">
+								<em>In participation with</em>
+							</font>
+						</td>
+						<td style="width:30px;" width="30"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td align="left">
+							<table cellpadding="0" cellspacing="0" border="0" align="left">
+								<tr>
+									<td class="participation-logo">
+										<img src="https://ik.imagekit.io/qualys/image/cso-interchange-csa-108-2x.jpg" width="108" class="participation-logo-img">
+									</td>
+									<td style="width: 35px" width="35" class="no-column"></td>
+									<td class="participation-logo" style="padding-top: 9px">
+										<img src="https://ik.imagekit.io/qualys/image/cso-interchange-dxc-2-130-2x.jpg" width="130" class="participation-logo-img">
+									</td>
+									<td style="width: 35px" width="35" class="no-column"></td>
+									<td class="participation-logo" style="padding-top: 7px">
+										<img src="https://ik.imagekit.io/qualys/image/cso-interchange-forrester-96-2x.jpg" width="96" class="participation-logo-img">
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td style="width:30px;" width="30"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="padding-top: 21px;">
+							<hr style="margin: 0; padding: 0;">
+						</td>
+						<td style="width:30px;" width="30"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="height: 45px" height="45"></td>
+						<td style="width:30px;" width="30"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td>
+							<h3 class="mailer-section-heading">
+								<font face="'Open Sans', sans-serif">Agenda</font>
+							</h3>
+						</td>
+						<td style="width:30px;" width="30"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="height: 31px" height="31"></td>
+						<td style="width:30px;" width="30"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td width="65" class="agenda-time">
+							<font face="'Open Sans', sans-serif" class="agenda-time-font">4:30 PM</font>
+						</td>
+						<td width="20" class="agenda-seperator">
+							<font face="'Open Sans', sans-serif" class="agenda-seperator-font">&mdash;</font>
+						</td>
+						<td class="agenda-detail">
+							<strong><font face="'Open Sans', sans-serif" class="agenda-detail-heading">Welcome and Introduction</font></strong><br>
+							<font face="'Open Sans', sans-serif" class="agenda-detail-text">Philippe Courtot, Chairman and CEO, Qualys</font>
+						</td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="height: 22px" height="22"></td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td width="65" class="agenda-time">
+							<font face="'Open Sans', sans-serif" class="agenda-time-font">4:50 PM</font>
+						</td>
+						<td width="20" class="agenda-seperator">
+							<font face="'Open Sans', sans-serif" class="agenda-seperator-font">&mdash;</font>
+						</td>
+						<td class="agenda-detail">
+							<strong><font face="'Open Sans', sans-serif" class="agenda-detail-heading">Presentation</font></strong><br>
+							<font face="'Open Sans', sans-serif" class="agenda-detail-text">Jim Reavis, Co-founder and Chief Executive Officer, Cloud Security Alliance</font>
+						</td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="height: 22px" height="22"></td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td width="65" class="agenda-time">
+							<font face="'Open Sans', sans-serif" class="agenda-time-font">5:10 PM</font>
+						</td>
+						<td width="20" class="agenda-seperator">
+							<font face="'Open Sans', sans-serif" class="agenda-seperator-font">&mdash;</font>
+						</td>
+						<td class="agenda-detail">
+							<strong><font face="'Open Sans', sans-serif" class="agenda-detail-heading">Presentation</font></strong><br>
+							<font face="'Open Sans', sans-serif" class="agenda-detail-text">Chris Moyer, Security, VP & General Manager, DXC Technology</font>
+						</td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="height: 22px" height="22"></td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td width="65" class="agenda-time">
+							<font face="'Open Sans', sans-serif" class="agenda-time-font">5:30 PM</font>
+						</td>
+						<td width="20" class="agenda-seperator">
+							<font face="'Open Sans', sans-serif" class="agenda-seperator-font">&mdash;</font>
+						</td>
+						<td class="agenda-detail">
+							<strong><font face="'Open Sans', sans-serif" class="agenda-detail-heading">Digital Business Transformations: Key Trends & The Impact On Security</font></strong><br>
+							<font face="'Open Sans', sans-serif" class="agenda-detail-text">Julie Ask, VP, Principal Analyst, Forrester</font>
+						</td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="height: 22px" height="22"></td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td width="65" class="agenda-time">
+							<font face="'Open Sans', sans-serif" class="agenda-time-font">6:00 PM</font>
+						</td>
+						<td width="20" class="agenda-seperator">
+							<font face="'Open Sans', sans-serif" class="agenda-seperator-font">&mdash;</font>
+						</td>
+						<td class="agenda-detail">
+							<strong><font face="'Open Sans', sans-serif" class="agenda-detail-heading">Introduction of Advisory Board Members</font></strong><br>
+							<font face="'Open Sans', sans-serif" class="agenda-detail-text">Philippe Courtot, Chairman and CEO, Qualys</font>
+						</td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="height: 22px" height="22"></td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td width="65" class="agenda-time">
+							<font face="'Open Sans', sans-serif" class="agenda-time-font">6:30 PM</font>
+						</td>
+						<td width="20" class="agenda-seperator">
+							<font face="'Open Sans', sans-serif" class="agenda-seperator-font">&mdash;</font>
+						</td>
+						<td class="agenda-detail">
+							<strong><font face="'Open Sans', sans-serif" class="agenda-detail-heading">Presentation and Book Signing</font></strong><br>
+							<font face="'Open Sans', sans-serif" class="agenda-detail-text">Dr. Michio Kaku, Physicist and Futurist</font>
+						</td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="height: 22px" height="22"></td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td width="65" class="agenda-time">
+							<font face="'Open Sans', sans-serif" class="agenda-time-font">7:00 PM</font>
+						</td>
+						<td width="20" class="agenda-seperator">
+							<font face="'Open Sans', sans-serif" class="agenda-seperator-font">&mdash;</font>
+						</td>
+						<td class="agenda-detail">
+							<strong><font face="'Open Sans', sans-serif" class="agenda-detail-heading">Networking Reception – SFMOMA</font></strong>
+						</td>
+						<td style="width:60px;" width="60" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td style="height: 23px;"></td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="padding-top: 21px;">
+							<hr style="margin: 0; padding: 0;">
+						</td>
+						<td style="width:30px;" width="30"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td style="height: 44px;"></td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td>
+							<h3 class="mailer-section-heading">
+								<font face="'Open Sans', sans-serif">Special Guest</font>
+							</h3>
+						</td>
+						<td style="width:30px;" width="30"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td style="height: 44px;"></td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td class="guest-picture-td">
+							<img src="https://ik.imagekit.io/qualys/image/dr-maku-183-2x.jpg" width="183"><br>
+							<font face="'Open Sans', sans-serif" class="guest-name">Michio Kaku</font><br>
+							<strong class="guest-title"><font face="'Open Sans', sans-serif" class="guest-title-text">Bestselling author</font></strong>
+						</td>
+						<td width="25" style="width: 25px;" class="no-column"></td>
+						<td class="guest-intro-td">
+							<font face="'Open Sans', sans-serif" class="guest-intro-text">The event will feature a special appearance by physicist, futurist and bestselling author Michio Kaku followed by a signing of his just-released book, <em>The Future of Humanity</em>.</font>
+						</td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td style="height: 25px;"></td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;" width="30"></td>
+						<td style="padding-top: 21px;">
+							<hr style="margin: 0; padding: 0;">
+						</td>
+						<td style="width:30px;" width="30"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td style="height: 45px;"></td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td class="event-invite">
+							<font face="'Open Sans', sans-serif" class="event-invite-text">Join us at the inaugural event of the CIO/CISO Interchange, a new initiative to discuss the challenges and opportunities of securing the Digital Transformation of our enterprises. Please register to save your seat, as space is limited. We hope you can make it.</font> 
+						</td>
+						<td style="width:60px;" class="agenda-right-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td style="height: 28px;"></td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td style="text-align: left">
+							<table cellpadding="0" cellspacing="0" border="0" align="left">
+								<tr>
+									<td style="background: #D0021B; text-align: center; width: 120px; height: 44px; border-radius: 2px;">
+										<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 12pt;"><a href="https://www.cio-cisointerchange.org/register/" style="text-decoration: none; width: 120px; display: inline-block; vertical-align: middle; color: #ffffff; padding-top: 11px; padding-bottom: 13px;">Register</a></font>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td style="height: 45px;"></td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td class="event-about-td">
+							<font face="serif" class="event-about-text">This private event has no product pitches and no sales personnel, just candid talk on the important topics and issues facing you and your peers to secure the digital transformation.</font><br><br>
+							<font face="'Open Sans', sans-serif" class="event-about-footer">Philippe Courtot, Chairman & CEO, Qualys</font>
+						</td>
+						<td style="width:40px;" class="no-column"></td>
+						<td class="event-about-icon">
+							<img src="https://ik.imagekit.io/qualys/image/ciso-interchange-icon-162-2x.jpg" width="162">
+						</td>
+						<td style="width:58px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td style="height: 23px;"></td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td style="height: 96px;"></td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="mailer-footer-wrapper">
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td style="height: 50px;"></td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="mailer-footer-wrapper">
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td class="mailer-footer">
+							<p style="line-height: 1.3; margin: 0;">
+								<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; color: #627281; font-size: 10pt;">
+									This email has been sent to you by CIO/CSO Interchange.<br>
+									<a href="geo:37.555683,-122.2791027" style="text-decoration: none; color: #627281;">919 E Hillsdale Blvd, 4th Floor, Foster City, CA 94404 USA</a> <br>
+									<a href="https://lps.qualys.com/subscription-preference.html" style="color: #627281; text-decoration: none;">Unsubscribe</a> | <a href="https://www.qualys.com/company/privacy/" style="color: #627281; text-decoration: none;">Privacy Policy</a>
+								</font>
+							</p>
+						</td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="mailer-footer-wrapper">
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="617" class="mailer-table">
+					<tr>
+						<td style="width:30px;"></td>
+						<td style="height: 132px;"></td>
+						<td style="width:30px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+	</table>
+
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</html>

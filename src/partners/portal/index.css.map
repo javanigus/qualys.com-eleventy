@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../site/pages/partners/portal/index.css"],"names":[],"mappings":"AAAA;IACI,eAAe;AACnB;AACA;IACI,oBAAoB;AACxB;AACA;IACI,kBAAkB;AACtB","file":"index.css","sourcesContent":[".heading--1 {\n    margin-top: 2em;\n}\n.screenshot {\n    margin: 3em auto 4em;\n}\n.content {\n    margin-bottom: 5em;\n}"]}

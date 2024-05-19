@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../site/pages/forms/whitepapers/smb-shift-cloud-security/confirm/index.css"],"names":[],"mappings":"AAAA;CACC,8FAA8F;CAC9F,wCAAwC;AACzC","file":"index.css","sourcesContent":["div.screenshot {\n\tbackground-image: url(https://ik.imagekit.io/qualys/image/sprite-smb-shift-cloud-security.png);\n\tbackground-position: 0 -450px !important;\n}\n"]}

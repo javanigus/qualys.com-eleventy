@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../site/pages/forms/whitepapers/continuous-security-monitoring/index.css"],"names":[],"mappings":"AAAA;CACC,oGAAoG;AACrG","file":"index.css","sourcesContent":["div.screenshot {\n\tbackground-image: url(https://ik.imagekit.io/qualys/image/sprite-continuous-security-monitoring.png);\n}\n"]}

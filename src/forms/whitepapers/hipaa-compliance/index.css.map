@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../site/pages/forms/whitepapers/hipaa-compliance/index.css"],"names":[],"mappings":"AAAA;CACC,sFAAsF;;AAEvF","file":"index.css","sourcesContent":["div.screenshot {\n\tbackground-image: url(https://ik.imagekit.io/qualys/image/sprite-hipaa-compliance.png);\n\t\n}\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../site/pages/solutions/cloud/index.css"],"names":[],"mappings":"AAAA;IACI;AACJ;AACA;IACI,kBAAkB;IAClB;AACJ","file":"index.css","sourcesContent":["li:nth-child(4) .q-app-link__icon > img{\n    width:100%\n}\n.q-app-link__icon{\n    margin-right: 10px;\n    width:70px\n}"]}

@@ -1,0 +1,8 @@
+li:nth-child(4) .q-app-link__icon > img{
+    width:100%
+}
+.q-app-link__icon{
+    margin-right: 10px;
+    width:70px
+}
+/*# sourceMappingURL=index.css.map */

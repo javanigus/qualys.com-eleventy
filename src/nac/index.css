@@ -1,0 +1,38 @@
+.q-page__heading {
+	max-width: 13em;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 400;
+	font-size: 3.1em;
+	font-family: Gotham, sans-serif;
+	line-height: 1.05;
+	letter-spacing: -0.5px;
+	color: #262626;
+	margin-top: 0;
+}
+.q-page__pargraph {
+	text-align: center;
+}
+@media (min-width: 720px){
+	.q-page__heading {
+		margin-bottom: 1.4em;
+	}
+	.q-page__pargraph {
+		margin-bottom: 1.6em;
+	}
+}
+.q-page__pargraph {
+	font-family: Gotham, sans-serif;
+}
+.q-page__pargraph a {
+	text-decoration: none;
+}
+.q-sales-inquiry {
+	text-align: center;
+}
+.q-body-text {
+	text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */

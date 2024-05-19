@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../site/pages/qsc/2018/paris/index.css"],"names":[],"mappings":"AAAA;CACC,aAAa;AACd;AACA;CACC,aAAa;AACd","file":"index.css","sourcesContent":[".q-qsc-intro__container h2.heading--2 {\n\tmin-height: 0;\n}\n.agenda-container {\n\tmargin-top: 0;\n}\n"]}

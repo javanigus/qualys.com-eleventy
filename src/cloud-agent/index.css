@@ -1,0 +1,488 @@
+.q-content-hero__container {
+	padding-top: 28px;
+}
+.q-content-hero__content-inner {
+	opacity: 1;
+}
+.q-content-hero__heading,
+.q-content-hero__subheading {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.q-content-hero__subheading.secondary-subheading {
+	font-size: 1.625em;
+	font-weight: 400;
+	color: #1D2737;
+	line-height: 1.308;
+	margin-top: 0.962em;
+}
+@media (min-width: 720px) {
+	.q-content-hero__subheading.secondary-subheading {
+		font-size: 26px;
+	}
+}
+.hero-video-link {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	color: #2E8BE0;
+}
+.q-play-button__icon {
+	width: 55px;
+	height: 32px;
+	margin-right: 13px;
+}
+.q-play-button__text {
+	color: #2E8BE0;
+	font-weight: 500;
+	font-family: Gotham, sans-serif;
+}
+.q-content-hero__hgroup {
+	margin-bottom: 107px;
+}
+.q-content-hero__link {
+	display: flex;
+	justify-content: center;
+	margin-top: 2.6em;
+}
+.install-anywhere {
+	background-color: #F7FAFC;
+	padding: 2em 0 4em;
+	margin: 3em 0 4em;
+}
+.install-anywhere .heading--2 {
+	text-align: center;
+	margin-bottom: 1.2em;
+}
+.q-square__content {
+	background-color: #2E8BE0;
+	max-width: 627px;
+	margin-bottom: 2em;
+}
+.heroImage {
+	width: 168%;
+	max-width: none;
+	left: -38%;
+	position: relative;
+	top: 0;
+	margin-bottom: -100px;
+}
+.scanners-worldwide {
+	width: 176%;
+	max-width: none;
+	left: -41%;
+	position: relative;
+	top: -28px;
+	margin-bottom: -170px;
+}
+.heroImage {
+	min-height: 500px;
+}
+.scanners-worldwide {
+	top: 0;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.beyond-traditional {
+	display: flex;
+	flex-direction: column;
+}
+.beyond-traditional .col1 {
+	order: 2;
+}
+.beyond-traditional .col2 {
+	order: 1;
+}
+.q-apps-features::after {
+	display: none;
+}
+.q-apps-features,
+.q-apps-screenshot__heading,
+.q-apps-screenshot__copy,
+.q-apps-outro__heading,
+.q-apps-outro__copy {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.q-apps-features {
+	padding-bottom: 0;
+}
+.q-apps-outro {
+	padding-top: 0;
+	padding-bottom: 20px;
+}
+.q-apps-features__copy {
+	margin-bottom: 3.5em;
+}
+.q-icon-plus-content__copy p {
+	margin-bottom: 5.9em;
+}
+.q-icon-plus-content__icon {
+	margin-right: 0;
+	width: auto;
+	justify-content: center;
+}
+.q-icon-plus-content__image {
+	width: 60px;
+}
+.millions-cloud-agents {
+	margin-top: 5em;
+	text-align: center;
+}
+.q-apps-outro:after {
+	display: none;
+}
+.three-agents {
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 270px;
+}
+.millions-cloud-agents .q-grid__inner::after {
+	content: "";
+	display: block;
+	height: 1px;
+	background: #E4E4E4;
+	width: 100%;
+	margin-top: 100px;
+}
+.cloud-agent {
+	min-height: 411px;
+	max-width: 700px;
+}
+.q-apps-outro__heading {
+	margin-bottom: 1em;
+}
+@media (min-width: 600px) {
+	.heroImage {
+		width: auto;
+		max-width: 100%;
+		position: static;
+		margin: 0px auto -80px;
+	}
+}
+@media (min-width: 720px) {
+	.heroImage {
+		margin: 0px auto -20px;
+	}
+}
+@media (min-width: 720px) {
+	.q-content-hero__container {
+		padding-top: 60px;
+	}
+	.install-anywhere .heading--2 {
+		text-align: left;
+	}
+	.install-anywhere-wrapper {
+		position: relative;
+		margin-bottom: 200px;
+	}
+	.q-grid__container.testimonial {
+		position: absolute;
+		top: 160px;
+		right: 0;
+		max-width: 57%;
+	}
+	.q-icon-plus-content__copy p {
+		margin-bottom: 0;
+	}
+	.beyond-traditional {
+		display: block;
+	}
+	.beyond-traditional .col2 {
+		position: absolute;
+		top: 90px;
+		right: 20px;
+	}
+	.q-apps-features,
+	.q-apps-screenshot__copy,
+	.q-apps-outro__copy {
+		text-align: left;
+	}
+	.q-icon-plus-content__icon {
+		width: 4.125em;
+		justify-content: unset;
+	}
+	.q-apps-outro__row {
+		flex-direction: column;
+	}
+	.q-apps-outro__col {
+		width: 100%;
+	}
+	.scanners-worldwide {
+		width: 100%;
+		position: static;
+		margin: 100px auto 0;
+	}
+	.q-apps-features, .q-apps-screenshot__heading, .q-apps-screenshot__copy, .q-apps-outro__heading, .q-apps-outro__copy {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.q-apps-outro {
+		padding-top: 8.39161%;
+		padding-bottom: 20px;
+	}
+	.q-apps-outro.q-ca-outro-cag {
+		padding-top: 90px;
+	}
+	.heroImage {
+		margin-top: 20px;
+	}
+	.q-content-hero__hgroup {
+		margin-bottom: 60px;
+	}
+	.millions-cloud-agents .q-apps-features__heading,
+	.q-apps-screenshot__heading {
+		max-width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media (min-width: 850px) {
+	.heroImage {
+		max-width: 780px;
+	}
+	.install-anywhere .heading--2 {
+		max-width: 50%;
+	}
+	.q-grid__container.testimonial {
+		top: 117px;
+	}
+	.install-anywhere-wrapper {
+		margin-bottom: 110px;
+	}
+	.beyond-traditional .col2 {
+		top: 30px;
+	}
+}
+@media (min-width: 1024px) {
+	.install-anywhere {
+		padding: 2.2em 0 5em;
+		background: linear-gradient(to right, rgba(247,250,252,1) 0%,rgba(247,250,252,1) 69%,rgba(41,137,216,0) 69%,rgba(125,185,232,0) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fafc', endColorstr='#007db9e8',GradientType=1 );
+	}
+	.q-content-hero__heading,
+	.q-content-hero__subheading {
+		text-align: left;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.q-content-hero__subheading {
+		max-width: 11em;
+	}
+	.q-content-hero__subheading.secondary-subheading {
+		max-width: 13em;
+	}
+	.q-content-hero__link {
+		justify-content: left;
+	}
+	.q-content-hero__hgroup {
+		position: relative;
+		margin-bottom: 280px;
+	}
+	.cloud-agents {
+		position: absolute;
+		top: -154px;
+		right: 0px;
+		max-width: none;
+		left: 370px;
+		width: 875px;
+		min-height: 580px;
+	}
+	.q-grid__container.testimonial {
+		max-width: 54%;
+		top: 90px;
+		right: 0;
+	}
+	.install-anywhere .heading--2 {
+		max-width: 40%;
+		margin-bottom: 1.2em;
+	}
+	.install-anywhere-wrapper {
+		margin-bottom: 300px;
+	}
+	.beyond-traditional .col2 {
+		position: absolute;
+		top: -218px;
+		right: 40px;
+		width: 55%;
+	}
+	.q-apps-features .q-apps-screenshot__container-inner--separator {
+		border-bottom: 1px solid #E4E4E4;
+		padding-bottom: 5em;
+	}
+	.q-apps-features, .q-apps-screenshot__heading, .q-apps-screenshot__copy, .q-apps-outro__heading, .q-apps-outro__copy {
+		text-align: left;
+	}
+	.q-apps-outro__row {
+		flex-wrap: nowrap;
+	}
+	.q-apps-outro__col {
+		width: 50%;
+	}
+	.millions-cloud-agents .q-apps-features__heading {
+		max-width: 650px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.q-apps-screenshot__heading {
+		width: auto;
+		margin-left: 0;
+		max-width: none;
+	}
+	.q-content-hero__container {
+		padding-top: 116px;
+	}
+	.q-content-hero__link {
+		margin-top: 2.2em;
+	}
+	.q-apps-features__heading {
+		margin-bottom: 0.9em;
+	}
+	.q-icon-plus-content__icon {
+		margin-bottom: -0.95em;
+		height: 65px;
+	}
+	.q-apps-features__col:first-child .q-icon-plus-content__icon{
+		width: 69px;
+	}
+	.q-apps-features__col:first-child .q-icon-plus-content__icon .q-icon-plus-content__image{
+		width: 69px;
+		height: 53px;
+		max-width: unset;
+	}
+	.q-apps-features__col:last-child .q-icon-plus-content__icon{
+		width: 65px;
+	}
+	.q-apps-features__col:last-child .q-icon-plus-content__icon .q-icon-plus-content__image{
+		width: 65px;
+		height: 65px;
+	}
+	.q-icon-plus-content__heading {
+		margin-bottom: 0;
+	}
+	.q-icon-plus-content__copy {
+		padding-top: 0;
+		margin-top: -5px;
+	}
+	.three-agents {
+		max-width: 100%;
+		width: 1100px;
+		margin-left: 50px;
+	    min-height: 584px;
+	}
+	q-apps-outro__container-inner .heading--3 {
+		margin-top: 15px;
+	}
+	.q-trial {
+		margin-top: 20px;
+	}
+}
+@media (min-width: 1068px) {
+	.beyond-traditional .col2 {
+		width: 50%;
+	}
+}
+@media (min-width: 1080px) {
+	.cloud-agents {
+		left: 390px;
+	}
+	.q-grid__container.testimonial {
+		max-width: 58%;
+		top: 105px;
+	}
+	.q-laptop--fixed-width {
+		margin-top: 2em;
+	}
+}
+@media (min-width: 1180px) {
+	.cloud-agents {
+		left: 385px;
+	}
+}
+@media (min-width: 1200px) {
+	.q-apps-features {
+		margin-top: 580px;
+	}
+}
+@media (min-width: 800px) {
+	.q-apps-features {
+		margin-top: 480px;
+	}
+}
+@media (min-width: 720px) {
+	.q-apps-features {
+		margin-top: 580px;
+	}
+}
+@media (min-width: 1024px) and (max-width: 1289px) {
+	.beyond-traditional .col2 {
+		top: 0;
+	}
+	.beyond-traditional .col2 {
+		left: auto;
+		right: 0;
+	}
+}
+@media (min-width: 1440px) {
+	.install-anywhere-wrapper {
+		margin-bottom: 324px;
+	}
+	.millions-cloud-agents {
+		margin-top: 6.25em;
+	}
+	.millions-cloud-agents .q-apps-features__heading {
+		max-width: 20.975em;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 1.8em;
+	}
+	.q-apps-screenshot__heading {
+		max-width: 50%;
+	}
+	.q-grid__container.testimonial {
+		right: 60px;
+		width: 767px;
+		left: 612px;
+	}
+	.beyond-traditional .col2 {
+		top: -138px;
+	}
+}
+.q-square__content{
+	margin-top: -1em;
+}
+.q-default-hero__splash {
+    margin-top: -16vw;
+}
+@media (min-width: 720px)
+{
+	.q-default-hero__splash {
+		margin-top: 0;
+	}
+}
+@media (min-width: 1080px)
+{
+	.q-default-hero__splash {
+		padding-bottom: 0;
+	}
+}
+.swiper-pagination-bullet-active{
+	background-color:#fff !important;
+}
+
+@media (min-width: 720px){
+	.q-apps-features__col:nth-child(3), .q-apps-features__col:nth-child(4) {
+		margin-bottom: 3.75em;
+	}
+}
+
+.q-cloud-platform {
+	border:1px solid #eee
+}
+
+.q-bullet-list__item {
+    background-size: 25px;
+}
+/*# sourceMappingURL=index.css.map */

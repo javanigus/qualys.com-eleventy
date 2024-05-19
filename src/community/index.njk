@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A community of security professionals discussing IT security and compliance topics and collaborating with peers.">
+	<title>Qualys Community</title>
+
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+		<link rel="preconnect" href="https://d1uyme8f6ss6qi.cloudfront.net">
+		<link rel="preconnect" href="https://static.cloud.coveo.com">
+		<link rel="preconnect" href="https://unpkg.com">
+		<link rel="preload" href="https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-light.woff" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-book.woff" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-medium.woff" as="font" type="font/woff2" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net">
+	<link rel="preconnect" href="https://i.vimeocdn.com">
+	<link rel="preconnect" href="https://i1.wp.com" />
+	<link rel="preconnect" href="https://qualys.my.salesforce.com" />
+	<link rel="preconnect" href="https://qualys-marketing-api.herokuapp.com">
+
+	
+		<link rel="preconnect" href="https://rum-static.pingdom.net">
+	
+	<!-- Pingdom Real User Monitoring -->
+	<script>
+	    if (!window.location.search.match(/[?&;]dnt=1([;&]|$)/)) {
+	
+	        var _prum = [['id', '51c3aa0fabe53d2109000000'],
+	                     ['mark', 'firstbyte', (new Date()).getTime()]];
+	        (function() {
+	            var s = document.getElementsByTagName('script')[0]
+	              , p = document.createElement('script');
+	            p.async = 'async';
+	            p.src = 'https://rum-static.pingdom.net/prum.min.js';
+	            s.parentNode.insertBefore(p, s);
+	        })();
+	
+	    }
+	</script>
+	<!-- SHA 256 Digest 7H2Pgm/9d1VFPIlhvmHOIhKCrotE4ilnq5ZRxC2wam8= -->
+	<!-- End Pingdom Real User Monitoring -->
+	
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.png" sizes="32x32">
+	<link rel="icon" href="/favicon-64.png" sizes="64x64">
+	<link rel="icon" href="/favicon-128.png" sizes="128x128">
+	<link rel="icon" href="/favicon-256.png" sizes="256x256">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="/apple-touch-icon-1024x1024.png">
+	<link rel="mask-icon" href="/mask-icon.svg" color="#ED2E26">
+	<link rel="canonical" href="https://community.qualys.com/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="/asset/community/coveo.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="/asset/community/shared.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="/asset/community/shared-min-30em.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="/asset/community/shared-min-60em.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="channels.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="index.css" media="print" onload="this.media='all'">
+
+
+	
+		<link rel="preconnect" href="https://www.googletagmanager.com">
+		<link rel="preconnect" href="https://cdn.bizible.com">
+		<link rel="preconnect" href="https://geoip-js.com">
+		<link rel="preconnect" href="https://js.maxmind.com">
+		<link rel="preconnect" href="https://munchkin.marketo.net">
+		<link rel="preconnect" href="https://snap.licdn.com">
+		<link rel="preconnect" href="https://www.google-analytics.com">
+	
+	<!-- Google Tag Manager -->
+	<script>
+	    if (!window.location.search.match(/[?&;]dnt=1([;&]|$)/)) {
+	
+	        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	        })(window,document,'script','dataLayer','GTM-W7DWPS');
+	
+	    }
+	</script>
+	<!-- End Google Tag Manager -->
+	
+
+</head>
+<body>
+
+	
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7DWPS"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	
+
+		<div class="q-header__background">
+			<header class="q-header">
+				<div class="q-header__container">
+					<div class="q-hamberger-menu">
+						<div class="q-hamburger-menu__icon">
+							<svg width="23" height="23" viewbox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg">
+								<g fill="currentColor">
+									<rect id="Rectangle1" x="0" y="5" width="23" height="3" rx="1.5"></rect>
+									<rect id="Rectangle2" x="0" y="10" width="23" height="3" rx="1.5"></rect>
+									<rect id="Rectangle3" x="0" y="15" width="23" height="3" rx="1.5"></rect>
+								</g>
+							</svg>
+						</div>
+						<div class="q-hamburger-menu__container">
+							<ul class="q-header__nav">
+								<li class="q-navigation__item q-navigation__mobile-only">
+									<a href="https://success.qualys.com/discussions/s/"
+									   title="Qualys Discussions">
+										Discussions
+									</a>
+								</li>
+								<li class="q-navigation__item">
+									<a href="https://success.qualys.com/discussions/s/"
+									   title="Qualys Discussions">
+										Discussions<span class="q-navigation__mobile-only"> by Topic…</span>
+									</a>
+									<ul class="q-header__nav-sub">
+										<li>
+											<a href="#back" class="q-header__nav-back">Back to main menu</a>
+										</li>
+										<li class="q-browser-by-topic">
+											<span>Browse by Topic</span>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRIWA4/asset-management"
+											   class="q-nav__link"
+											   title="Asset Management Discussions">
+												Asset Management</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRwWAO/it-security"
+											   class="q-nav__link"
+											   title="IT Security Discussions">
+												IT Security</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIS1WAO/compliance"
+											   class="q-nav__link"
+											   title="Compliance Discussions">
+												Compliance</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRnWAO/cloud-container"
+											   class="q-nav__link"
+											   title="Cloud &amp; Container Security Discussions">
+												Cloud &amp; Container Security</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISCWA4/web-app-security"
+											   class="q-nav__link"
+											   title="Web App Security Discussions">
+												Web App Security</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRfWAO/certificate-security"
+											   class="q-nav__link"
+											   title="SSL Labs &amp; Certificate Security Discussions">
+												Certificate Security &amp; SSL Labs</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIR8WAO/developer"
+											   class="q-nav__link"
+											   title="Qualys Developer API Discussions">
+												Developer API</a>
+										</li>
+										<li class="q-navigation__desktop-only">
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRAWA4/qualys-cloud-platform"
+											   class="q-nav__link"
+											   title="Qualys Cloud Platform Discussions">
+												Cloud Platform</a>
+										</li>
+										<li class="q-navigation__desktop-only">
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIYEWA4/consulting-edition"
+											   class="q-nav__link"
+											   title="Qualys Consulting Edition Discussions">
+												Consulting Edition</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/#start-a-discussion"
+											   class="q-button__start-a-discussion q-button__light-blue q-button-with-arrow">
+												<span>Start a discussion</span></a>
+										</li>
+									</ul>
+								</li>
+								<li class="q-navigation__item">
+									<a href="https://blog.qualys.com/"
+									   title="Qualys Blog">Blog</a>
+								</li>
+								<li class="q-navigation__item">
+									<a href="https://www.qualys.com/training/"
+									   title="Qualys Training &amp; Certification">Training</a>
+								</li>
+								<li class="q-navigation__item">
+									<a href="https://www.qualys.com/documentation/"
+									   title="Qualys Documentation">Docs</a>
+								</li>
+								<li class="q-navigation__item">
+									<a href="https://success.qualys.com/support/s/"
+									   title="Qualys Support">Support</a>
+								</li>
+								<!-- li class="q-navigation__item q-navigation__mobile-only">
+									<a href="https://www.qualys.com/"
+									   title="Qualys.com">Qualys.com</a>
+								</li -->
+								<li class="q-header__nav-underline"></li>
+							</ul>
+						</div>
+					</div>
+					<a class="q-header__logo q-header__logo-community" href="https://community.qualys.com/" title="Qualys Community">
+						<span class="q-logo-shield">
+							<img src="https://ik.imagekit.io/qualys/image/logo/qualys.svg" width="111" height="35" alt="Qualys" class="q-logo__horizontal">
+						</span>
+						<span class="q-logo-text">Community</span>
+					</a>
+					<div class="q-user-menu">
+						<div class="q-user-menu__icon hidden">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="23">
+								<g fill="currentColor">
+									<g transform="translate(3 -.093)">
+										<path d="M6.284.092a5.709 5.709 0 1 1-.002 11.418A5.709 5.709 0 0 1 6.284.092"/>
+									</g>
+									<g transform="translate(0 11.907)">
+										<path d="M.187 7.575C-.476 9.195.703 11 2.47 11h13.922c1.767 0 2.946-1.804 2.283-3.425C16.945 3.45 13.445.65 9.431.65c-4.015 0-7.55 2.8-9.244 6.925"/>
+									</g>
+								</g>
+							</svg>
+						</div>
+						<div class="q-user-menu__container hidden">
+							<div class="q-user-menu__not-logged-in">
+								<ul>
+									<li class="q-navigation__item">
+										<a href="https://success.qualys.com/discussions/s/login/"
+										   title="Qualys Community Login">
+											Login</a>
+									</li>
+									<li class="q-navigation__item">
+										<a href="https://success.qualys.com/discussions/s/login/SelfRegister"
+										   title="Qualys Community Registration">
+											Register</a>
+									</li>
+									<li class="q-header__nav-underline"></li>
+								</ul>
+							</div>
+							<div class="q-user-menu__logged-in"></div>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+			<div class="q-search__container q-search__container-banner">
+				<div class="q-search">
+
+					<h1>
+						Welcome to Qualys Community
+					</h1>
+					<div id="searchbox">
+						<div class="CoveoAnalytics" data-search-hub="communityCoveo"></div>
+						<div class="q-coveo__wrapper">
+							<div class="q-coveo-searchbutton">
+								<div class="CoveoSearchButton"></div>
+							</div>
+							<div class="q-coveo-querybox">
+								<div class="CoveoOmnibox" data-enable-query-suggest-addon="true">
+									<div class="CoveoFacetValueSuggestions" data-field="@sfdcproducts"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		<div class="q-sub-header">
+			<div class="q-sub-header__container">
+				
+			</div>
+		</div>
+
+		
+
+
+	<div class="q-body">
+		<div class="q-body__container">
+			
+<div class="q-nav-by-topic__container">
+	<div class="q-nav-by-topic">
+		<h2>
+			Choose a Topic
+		</h2>
+		<div class="q-topic-nav_tabs">
+			<ul class="q-topic-nav_tabs-list selected-index-0">
+				<li class="q-topic-nav_item active" data-index="0">
+					<a href="javascript:void(0)" class="q-topic-tab_link">Featured</a>
+				</li>
+				<li class="q-topic-nav_item" data-index="1">
+					<a href="javascript:void(0)" class="q-topic-tab_link">All</a>
+				</li>
+				<li class="q-topic-nav-underline"></li>
+			</ul>
+
+			<div class="q-topic-nav_featured">
+				<span class="q-topic-panel-arrow"></span>
+				<ul class="q-topic-nav_featured-list">
+						<li>
+							<a href="assetview/">
+								<span class="q-featured-topic_icon"><?undefined undefined?><svg class="q-topic-nav_icon" width="77" height="75" viewBox="0 0 77 75" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952" stroke="#2E8BE0"/><path d="M31.976 26.8L38.528 45h-4.03l-1.456-4.212h-6.526L25.06 45h-3.822l6.552-18.2h4.186zm-2.184 4.264h-.052c-.312 1.17-2.158 6.63-2.158 6.63h4.394s-1.872-5.46-2.184-6.63zm6.98-4.264h4.186s3.328 9.542 4.55 13.52h.052c1.196-3.978 4.524-13.52 4.524-13.52h4.004L47.38 45h-3.978l-6.63-18.2z" fill="#2E8BE0" fill-rule="nonzero"/></g></svg></span>
+								<span class="q-featured-topic_name">Global AssetView</span>
+							</a>
+						</li>
+						<li>
+							<a href="vmdr/">
+								<span class="q-featured-topic_icon"><?undefined undefined?><svg class="q-topic-nav_icon" width="77" height="75" viewBox="0 0 77 75" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952" stroke="#2E8BE0"/><path d="M16.702 44l5.16-14h-3.08s-2.56 7.34-3.48 10.4h-.04c-.94-3.06-3.5-10.4-3.5-10.4h-3.22l5.1 14h3.06zm9.41 0V33.94h.06c.76 2.5 2.56 7.86 3.34 10.06h2.8c.6-1.7 2.56-7.56 3.36-10.06h.06V44h2.76V30h-4.18l-.014.04c-.208.644-2.923 9.053-3.307 10.38C30.57 39.04 27.55 30 27.55 30h-4.2v14h2.76zm20.248 0c4.28 0 6.86-2.54 6.86-7s-2.58-7-6.86-7h-5.22v14h5.22zm-.08-2.48h-2.12v-9.04h2.12c2.66 0 3.84 1.8 3.84 4.52 0 2.72-1.18 4.52-3.84 4.52zM58.27 44v-5.3h1.86l2.9 5.3h3.3l-3.22-5.74c1.64-.64 2.66-1.92 2.66-4 0-2.98-2.12-4.26-5.36-4.26h-5.12v14h2.98zm1.8-7.74h-1.8v-3.78h1.8c1.74 0 2.62.44 2.62 1.8 0 1.42-.88 1.98-2.62 1.98z" fill="#2E8BE0" fill-rule="nonzero"/></g></svg></span>
+								<span class="q-featured-topic_name">VM, Detection, and Response</span>
+							</a>
+						</li>
+						<li>
+							<a href="endpoint-detection-response/">
+								<span class="q-featured-topic_icon"><?undefined undefined?><svg class="q-topic-nav_icon" width="77" height="75" viewBox="0 0 77 75" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952" stroke="#2E8BE0"/><path d="M26.757 45v-3.224h-8.684v-4.524h7.956v-3.224h-7.957v-4.004h8.554V26.8H14.225V45h12.532zm9.398 0c5.564 0 8.918-3.302 8.918-9.1s-3.354-9.1-8.918-9.1H29.37V45h6.785zm-.104-3.224h-2.755V30.024h2.756c3.46 0 4.993 2.34 4.993 5.876 0 3.536-1.534 5.876-4.992 5.876zM51.638 45v-6.89h2.418l3.77 6.89h4.29l-4.186-7.462c2.13-.832 3.457-2.496 3.457-5.2 0-3.874-2.756-5.538-6.968-5.538h-6.657V45h3.874zm2.34-10.062h-2.34v-4.914h2.34c2.262 0 3.406.572 3.406 2.34 0 1.846-1.144 2.574-3.406 2.574z" fill="#2E8BE0" fill-rule="nonzero"/></g></svg></span>
+								<span class="q-featured-topic_name">Multi-Vector EDR</span>
+							</a>
+						</li>
+						<li>
+							<a href="policy-compliance/">
+								<span class="q-featured-topic_icon"><svg class="q-topic-nav_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M29 38.604h-3.043V45h-3.874V26.8H29c4.34 0 7.2 1.742 7.2 5.798 0 4.134-2.99 6.006-7.2 6.006zm3.223-6.006c0-1.976-1.196-2.574-3.614-2.574h-2.653v5.356h2.652c2.417 0 3.613-.806 3.613-2.782zm5.524 3.302c0 5.98 3.458 9.464 8.814 9.464 3.98 0 6.5-1.898 7.697-4.966l-3.744-1.326c-.65 2.028-1.898 3.042-3.9 3.042-3.25 0-4.836-2.626-4.836-6.214 0-3.614 1.586-6.214 4.81-6.214 2.184 0 3.354 1.196 3.978 3.224l3.796-1.326c-1.09-3.432-3.82-5.148-7.695-5.148-5.486 0-8.918 3.51-8.918 9.464z"/></g></svg></span>
+								<span class="q-featured-topic_name">Policy Compliance</span>
+							</a>
+						</li>
+						<li>
+							<a href="web-app-scanning/">
+								<span class="q-featured-topic_icon"><svg class="q-topic-nav_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M29.435 26.8H33.1L28.55 45h-4.523s-2.002-8.814-2.73-12.064h-.078C20.542 36.186 18.384 45 18.384 45H13.86L9.286 26.8h3.952s2.392 10.244 2.99 13.598h.078c.65-3.354 3.146-13.598 3.146-13.598h3.667s2.496 10.244 3.172 13.598h.077c.65-3.354 3.068-13.598 3.068-13.598zm13.558 0L49.545 45h-4.03l-1.456-4.212h-6.527L36.077 45h-3.822l6.552-18.2h4.186zm-2.184 4.264h-.053c-.312 1.17-2.158 6.63-2.158 6.63h4.393s-1.872-5.46-2.184-6.63zm13.973.52c0-1.222.962-2.002 2.912-2.002 1.924 0 3.094 1.04 3.38 2.704l3.952-.858c-.624-3.198-3.458-4.992-7.228-4.992-4.03 0-6.97 1.82-6.97 5.46 0 3.666 2.887 4.914 6.683 5.512 2.834.442 3.822 1.092 3.822 2.444 0 1.664-1.508 2.366-3.354 2.366-2.287 0-3.457-1.274-3.64-3.016l-3.9.624c.157 2.938 2.94 5.538 7.54 5.538 4.24 0 7.333-2.21 7.333-5.72 0-3.276-1.976-4.784-6.292-5.512-2.963-.494-4.237-.988-4.237-2.548z"/></g></svg></span>
+								<span class="q-featured-topic_name">Web App Scanning</span>
+							</a>
+						</li>
+						<li>
+							<a href="cloud-agent/">
+								<span class="q-featured-topic_icon"><?undefined undefined?><svg class="q-topic-nav_icon" width="77" height="75" viewBox="0 0 77 75" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952" stroke="#2E8BE0"/><path d="M20.653 35.9c0-5.954 3.432-9.464 8.918-9.464 3.875 0 6.605 1.716 7.697 5.148L33.47 32.91c-.623-2.028-1.793-3.224-3.977-3.224-3.224 0-4.81 2.6-4.81 6.214 0 3.588 1.586 6.214 4.836 6.214 2 0 3.25-1.014 3.9-3.042l3.743 1.326c-1.196 3.068-3.718 4.966-7.696 4.966-5.356 0-8.814-3.484-8.814-9.464zm28.17-9.1L55.375 45h-4.03l-1.456-4.212h-6.527L41.907 45h-3.822l6.552-18.2h4.186zm-2.184 4.264h-.053c-.312 1.17-2.158 6.63-2.158 6.63h4.393s-1.872-5.46-2.184-6.63z" fill="#2E8BE0"/></g></svg></span>
+								<span class="q-featured-topic_name">Cloud Agent</span>
+							</a>
+						</li>
+				</ul>
+			</div>
+		
+			<div class="q-topic-nav_all">
+				<span class="q-topic-panel-arrow"></span>
+				<div class="q-topic-nav_solutions" data-index=0>
+					<div class="q-nav-by-topic__heading">
+						<span>IT Asset Management</span>
+						<span class="q-topic-heading-arrow"><svg width="8" height="10" viewBox="0 0 8 10" xmlns="http://www.w3.org/2000/svg"><path d="m6.84 4.333a.75.75 0 0 1 .073 1.055l-.072.073-4.739 4.16a.75.75 0 0 1 -1.061-1.054l.072-.073 4.097-3.598-4.097-3.596a.75.75 0 0 1 -.131-.978l.062-.08a.75.75 0 0 1 .976-.132l.081.062 4.739 4.16z" fill="#6a778b"/></svg></span>
+					</div>
+					<ul>
+						<li>
+							<a href="asset-view/">
+								<span class="q-apps-topic_icon"><?undefined undefined?><svg class="q-all-topic_icon" width="77" height="75" viewBox="0 0 77 75" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952" stroke="#2E8BE0"/><path d="M31.976 26.8L38.528 45h-4.03l-1.456-4.212h-6.526L25.06 45h-3.822l6.552-18.2h4.186zm-2.184 4.264h-.052c-.312 1.17-2.158 6.63-2.158 6.63h4.394s-1.872-5.46-2.184-6.63zm6.98-4.264h4.186s3.328 9.542 4.55 13.52h.052c1.196-3.978 4.524-13.52 4.524-13.52h4.004L47.38 45h-3.978l-6.63-18.2z" fill="#2E8BE0" fill-rule="nonzero"/></g></svg></span>
+								<span class="q-featured-topic_name">Global AssetView</span>
+							</a>
+						</li>
+						<li>
+							<a href="cmdb-sync/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M16.695 31.584c0-1.222.962-2.002 2.912-2.002 1.924 0 3.094 1.04 3.38 2.704l3.952-.858c-.625-3.198-3.46-4.992-7.23-4.992-4.03 0-6.967 1.82-6.967 5.46 0 3.666 2.886 4.914 6.682 5.512 2.834.442 3.822 1.092 3.822 2.444 0 1.664-1.508 2.366-3.354 2.366-2.288 0-3.458-1.274-3.64-3.016l-3.9.624c.156 2.938 2.938 5.538 7.54 5.538 4.238 0 7.332-2.21 7.332-5.72 0-3.276-1.976-4.784-6.292-5.512-2.964-.494-4.238-.988-4.238-2.548zM34.335 45h3.9v-7.618l6.89-10.582h-4.342l-4.42 6.968-4.446-6.968h-4.472l6.89 10.582V45zm12.596 0h3.693V33.04h.078C52.626 36.134 58.086 45 58.086 45h4.056V26.8h-3.69v11.96h-.08c-1.793-2.912-7.383-11.96-7.383-11.96H46.93V45z"/></g></svg></span>
+								<span class="q-featured-topic_name">CMDB Sync</span>
+							</a>
+						</li>
+						<li>
+							<a href="cloud-inventory/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 75"><path fill="none" stroke="#2E8BE0" d="M65.167 71.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C4.432 8 8.19 4.342 11.833 3.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M26.866 36.9c0-5.954 3.432-9.464 8.918-9.464 3.874 0 6.604 1.716 7.696 5.148l-3.796 1.326c-.624-2.028-1.794-3.224-3.978-3.224-3.224 0-4.81 2.6-4.81 6.214 0 3.588 1.586 6.214 4.836 6.214 2.002 0 3.25-1.014 3.9-3.042l3.744 1.326c-1.196 3.068-3.718 4.966-7.696 4.966-5.356 0-8.814-3.484-8.814-9.464zM45.78 46V27.8h3.9V46h-3.9z"/></svg></span>
+								<span class="q-featured-topic_name">Cloud Inventory</span>
+							</a>
+						</li>
+						<li>
+							<a href="certificate-inventory/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 75"><path fill="none" stroke="#2E8BE0" d="M65.167 71.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C4.432 8 8.19 4.342 11.833 3.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M18.488 36.9c0-5.954 3.432-9.464 8.918-9.464 3.874 0 6.604 1.716 7.696 5.148l-3.796 1.326c-.624-2.028-1.794-3.224-3.978-3.224-3.224 0-4.81 2.6-4.81 6.214 0 3.588 1.586 6.214 4.836 6.214 2.002 0 3.25-1.014 3.9-3.042l3.744 1.326c-1.196 3.068-3.718 4.966-7.696 4.966-5.356 0-8.814-3.484-8.814-9.464zm32.538-3.562c0 2.704-1.326 4.368-3.458 5.2L51.754 46h-4.29l-3.77-6.89h-2.418V46h-3.874V27.8h6.656c4.212 0 6.968 1.664 6.968 5.538zm-4.004.026c0-1.768-1.144-2.34-3.406-2.34h-2.34v4.914h2.34c2.262 0 3.406-.728 3.406-2.574zM54.158 46V27.8h3.9V46h-3.9z"/></svg></span>
+								<span class="q-featured-topic_name">Certificate Inventory</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="q-topic-nav_solutions" data-index=1>
+					<div class="q-nav-by-topic__heading">
+						<span>IT Security</span>
+						<span class="q-topic-heading-arrow"><svg width="8" height="10" viewBox="0 0 8 10" xmlns="http://www.w3.org/2000/svg"><path d="m6.84 4.333a.75.75 0 0 1 .073 1.055l-.072.073-4.739 4.16a.75.75 0 0 1 -1.061-1.054l.072-.073 4.097-3.598-4.097-3.596a.75.75 0 0 1 -.131-.978l.062-.08a.75.75 0 0 1 .976-.132l.081.062 4.739 4.16z" fill="#6a778b"/></svg></span>
+					</div>
+					<ul>
+						<li>
+							<a href="vmdr/">
+								<span class="q-apps-topic_icon"><?undefined undefined?><svg class="q-all-topic_icon" width="77" height="75" viewBox="0 0 77 75" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952" stroke="#2E8BE0"/><path d="M16.702 44l5.16-14h-3.08s-2.56 7.34-3.48 10.4h-.04c-.94-3.06-3.5-10.4-3.5-10.4h-3.22l5.1 14h3.06zm9.41 0V33.94h.06c.76 2.5 2.56 7.86 3.34 10.06h2.8c.6-1.7 2.56-7.56 3.36-10.06h.06V44h2.76V30h-4.18l-.014.04c-.208.644-2.923 9.053-3.307 10.38C30.57 39.04 27.55 30 27.55 30h-4.2v14h2.76zm20.248 0c4.28 0 6.86-2.54 6.86-7s-2.58-7-6.86-7h-5.22v14h5.22zm-.08-2.48h-2.12v-9.04h2.12c2.66 0 3.84 1.8 3.84 4.52 0 2.72-1.18 4.52-3.84 4.52zM58.27 44v-5.3h1.86l2.9 5.3h3.3l-3.22-5.74c1.64-.64 2.66-1.92 2.66-4 0-2.98-2.12-4.26-5.36-4.26h-5.12v14h2.98zm1.8-7.74h-1.8v-3.78h1.8c1.74 0 2.62.44 2.62 1.8 0 1.42-.88 1.98-2.62 1.98z" fill="#2E8BE0" fill-rule="nonzero"/></g></svg></span>
+								<span class="q-featured-topic_name">VM, Detection and Response</span>
+							</a>
+						</li>
+						<li>
+							<a href="vulnerability-management/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 74.026"><path fill="#FFF" stroke="#2E8BE0" d="M64.667 70.93c-17.778 3.462-35.555 3.462-53.334 0-3.644-.745-7.4-4.404-8.167-7.952-3.555-17.31-3.555-34.62 0-51.93.766-3.548 4.523-7.206 8.167-7.952 17.778-3.462 35.555-3.462 53.334 0 3.644.745 7.4 4.404 8.167 7.952 3.555 17.31 3.555 34.62 0 51.93-.766 3.548-4.523 7.207-8.167 7.952"/><path fill="#2E8BE0" d="M17.93 27.3l6.63 18.2h3.977l6.708-18.2H31.24s-3.327 9.542-4.523 13.52h-.052c-1.222-3.978-4.55-13.52-4.55-13.52H17.93zm30.9 18.2c.78-2.21 3.327-9.828 4.367-13.078h.078V45.5h3.588V27.3H51.43s-3.797 11.752-4.317 13.546C46.567 39.052 42.64 27.3 42.64 27.3h-5.46v18.2h3.59V32.422h.077c.988 3.25 3.328 10.218 4.342 13.078h3.64z"/></svg></span>
+								<span class="q-featured-topic_name">Vulnerability Management</span>
+							</a>
+						</li>
+						<li>
+							<a href="continuous-monitoring/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M17.975 35.9c0 5.98 3.458 9.464 8.814 9.464 3.977 0 6.5-1.898 7.695-4.966l-3.744-1.326c-.65 2.028-1.897 3.042-3.9 3.042-3.25 0-4.835-2.626-4.835-6.214 0-3.614 1.586-6.214 4.81-6.214 2.184 0 3.354 1.196 3.978 3.224l3.796-1.326c-1.093-3.432-3.823-5.148-7.697-5.148-5.486 0-8.918 3.51-8.918 9.464zM48.537 45c.78-2.21 3.328-9.828 4.368-13.078h.078V45h3.588V26.8h-5.433S47.34 38.552 46.82 40.346c-.545-1.794-4.47-13.546-4.47-13.546h-5.46V45h3.587V31.922h.078c.988 3.25 3.328 10.218 4.342 13.078h3.64z"/></g></svg></span>
+								<span class="q-featured-topic_name">Continuous Monitoring</span>
+							</a>
+						</li>
+						<li>
+							<a href="threat-protection/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M23.226 30.05h5.252V45h3.926V30.05h5.252V26.8h-14.43v3.25zm23.412 8.554h-3.042V45h-3.874V26.8h6.916c4.342 0 7.202 1.742 7.202 5.798 0 4.134-2.99 6.006-7.202 6.006zm3.224-6.006c0-1.976-1.196-2.574-3.614-2.574h-2.652v5.356h2.652c2.418 0 3.614-.806 3.614-2.782z"/></g></svg></span>
+								<span class="q-featured-topic_name">Threat Protection</span>
+							</a>
+						</li>
+						<li>
+							<a href="endpoint-detection-response/">
+								<span class="q-apps-topic_icon"><?undefined undefined?><svg class="q-all-topic_icon" width="77" height="75" viewBox="0 0 77 75" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952" stroke="#2E8BE0"/><path d="M26.757 45v-3.224h-8.684v-4.524h7.956v-3.224h-7.957v-4.004h8.554V26.8H14.225V45h12.532zm9.398 0c5.564 0 8.918-3.302 8.918-9.1s-3.354-9.1-8.918-9.1H29.37V45h6.785zm-.104-3.224h-2.755V30.024h2.756c3.46 0 4.993 2.34 4.993 5.876 0 3.536-1.534 5.876-4.992 5.876zM51.638 45v-6.89h2.418l3.77 6.89h4.29l-4.186-7.462c2.13-.832 3.457-2.496 3.457-5.2 0-3.874-2.756-5.538-6.968-5.538h-6.657V45h3.874zm2.34-10.062h-2.34v-4.914h2.34c2.262 0 3.406.572 3.406 2.34 0 1.846-1.144 2.574-3.406 2.574z" fill="#2E8BE0" fill-rule="nonzero"/></g></svg></span>
+								<span class="q-featured-topic_name">Multi-Vector EDR</span>
+							</a>
+						</li>
+						<li>
+							<a href="certificate-assessment/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 75"><path fill="none" stroke="#2E8BE0" d="M65.167 71.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C4.432 8 8.19 4.342 11.833 3.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M13.275 36.9c0-5.954 3.432-9.464 8.918-9.464 3.874 0 6.604 1.716 7.696 5.148L26.09 33.91c-.624-2.028-1.794-3.224-3.978-3.224-3.224 0-4.81 2.6-4.81 6.214 0 3.588 1.586 6.214 4.836 6.214 2.003 0 3.25-1.014 3.9-3.042l3.745 1.326c-1.196 3.068-3.718 4.966-7.696 4.966-5.358 0-8.816-3.484-8.816-9.464zm32.538-3.562c0 2.704-1.326 4.368-3.458 5.2L46.54 46h-4.29l-3.77-6.89h-2.417V46H32.19V27.8h6.655c4.212 0 6.968 1.664 6.968 5.538zm-4.004.026c0-1.768-1.146-2.34-3.408-2.34h-2.34v4.914h2.34c2.262 0 3.406-.728 3.406-2.574zM58.2 27.8L64.754 46h-4.03l-1.456-4.212H52.74L51.286 46h-3.822l6.552-18.2H58.2zm-2.183 4.264h-.052c-.312 1.17-2.158 6.63-2.158 6.63H58.2s-1.87-5.46-2.183-6.63z"/></svg></span>
+								<span class="q-featured-topic_name">Certificate Assessment</span>
+							</a>
+						</li>
+						<li>
+							<a href="patch-management/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M26.516 38.604h-3.042V45H19.6V26.8h6.916c4.342 0 7.202 1.742 7.202 5.798 0 4.134-2.99 6.006-7.202 6.006zm3.224-6.006c0-1.976-1.196-2.574-3.614-2.574h-2.652v5.356h2.652c2.418 0 3.614-.806 3.614-2.782zM47.666 45h-3.64c-1.014-2.86-3.354-9.828-4.342-13.078h-.078V45h-3.588V26.8h5.46s3.926 11.752 4.472 13.546c.52-1.794 4.316-13.546 4.316-13.546H55.7V45h-3.588V31.922h-.078c-1.04 3.25-3.588 10.868-4.368 13.078z"/></g></svg></span>
+								<span class="q-featured-topic_name">Patch Management</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="q-topic-nav_solutions" data-index=2>
+					<div class="q-nav-by-topic__heading">
+						<span>Compliance</span>
+						<span class="q-topic-heading-arrow"><svg width="8" height="10" viewBox="0 0 8 10" xmlns="http://www.w3.org/2000/svg"><path d="m6.84 4.333a.75.75 0 0 1 .073 1.055l-.072.073-4.739 4.16a.75.75 0 0 1 -1.061-1.054l.072-.073 4.097-3.598-4.097-3.596a.75.75 0 0 1 -.131-.978l.062-.08a.75.75 0 0 1 .976-.132l.081.062 4.739 4.16z" fill="#6a778b"/></svg></span>
+					</div>
+					<ul>
+						<li>
+							<a href="policy-compliance/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M29 38.604h-3.043V45h-3.874V26.8H29c4.34 0 7.2 1.742 7.2 5.798 0 4.134-2.99 6.006-7.2 6.006zm3.223-6.006c0-1.976-1.196-2.574-3.614-2.574h-2.653v5.356h2.652c2.417 0 3.613-.806 3.613-2.782zm5.524 3.302c0 5.98 3.458 9.464 8.814 9.464 3.98 0 6.5-1.898 7.697-4.966l-3.744-1.326c-.65 2.028-1.898 3.042-3.9 3.042-3.25 0-4.836-2.626-4.836-6.214 0-3.614 1.586-6.214 4.81-6.214 2.184 0 3.354 1.196 3.978 3.224l3.796-1.326c-1.09-3.432-3.82-5.148-7.695-5.148-5.486 0-8.918 3.51-8.918 9.464z"/></g></svg></span>
+								<span class="q-featured-topic_name">Policy Compliance</span>
+							</a>
+						</li>
+						<li>
+							<a href="pci-compliance/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M25.327 38.604h-3.042V45H18.41V26.8h6.917c4.342 0 7.202 1.742 7.202 5.798 0 4.134-2.99 6.006-7.203 6.006zm3.224-6.006c0-1.976-1.195-2.574-3.613-2.574h-2.652v5.356h2.652c2.418 0 3.614-.806 3.614-2.782zm5.525 3.302c0 5.98 3.458 9.464 8.814 9.464 3.977 0 6.5-1.898 7.695-4.966l-3.744-1.326c-.65 2.028-1.897 3.042-3.9 3.042-3.25 0-4.835-2.626-4.835-6.214 0-3.614 1.586-6.214 4.81-6.214 2.184 0 3.354 1.196 3.978 3.224l3.796-1.326c-1.093-3.432-3.823-5.148-7.697-5.148-5.486 0-8.918 3.51-8.918 9.464zM52.99 45h3.9V26.8h-3.9V45z"/></g></svg></span>
+								<span class="q-featured-topic_name">PCI Compliance</span>
+							</a>
+						</li>
+						<li>
+							<a href="security-assessment-questionnaire/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M16.292 31.584c0-1.222.962-2.002 2.912-2.002 1.924 0 3.094 1.04 3.38 2.704l3.952-.858c-.624-3.198-3.458-4.992-7.228-4.992-4.03 0-6.968 1.82-6.968 5.46 0 3.666 2.886 4.914 6.682 5.512 2.834.442 3.822 1.092 3.822 2.444 0 1.664-1.508 2.366-3.354 2.366-2.288 0-3.458-1.274-3.64-3.016l-3.9.624c.156 2.938 2.938 5.538 7.54 5.538 4.238 0 7.332-2.21 7.332-5.72 0-3.276-1.976-4.784-6.292-5.512-2.964-.494-4.238-.988-4.238-2.548zM38.716 26.8L45.268 45h-4.03l-1.456-4.212h-6.526L31.8 45h-3.822l6.552-18.2h4.186zm-2.184 4.264h-.052c-.312 1.17-2.158 6.63-2.158 6.63h4.394s-1.872-5.46-2.184-6.63zm23.49 15.834l-1.976-2.184c-1.066.416-2.288.65-3.614.65-5.33 0-8.866-3.562-8.866-9.464 0-5.902 3.536-9.464 8.866-9.464s8.866 3.562 8.866 9.464c0 3.146-1.014 5.642-2.756 7.254l1.664 1.82-2.184 1.924zM49.596 35.9c0 3.692 1.56 6.24 4.836 6.24.416 0 .806-.052 1.17-.13l-1.69-1.872 2.132-1.924 2.002 2.21c.832-1.092 1.222-2.652 1.222-4.524 0-3.692-1.56-6.24-4.836-6.24-3.276 0-4.836 2.548-4.836 6.24z"/></g></svg></span>
+								<span class="q-featured-topic_name">Security Assessment Questionnaire</span>
+							</a>
+						</li>
+						<li>
+							<a href="security-configuration-assessment/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M16.59 31.584c0-1.222.963-2.002 2.913-2.002 1.924 0 3.094 1.04 3.38 2.704l3.952-.858c-.624-3.198-3.458-4.992-7.228-4.992-4.03 0-6.968 1.82-6.968 5.46 0 3.666 2.885 4.914 6.68 5.512 2.835.442 3.823 1.092 3.823 2.444 0 1.664-1.508 2.366-3.354 2.366-2.29 0-3.46-1.274-3.64-3.016l-3.9.624c.155 2.938 2.937 5.538 7.54 5.538 4.237 0 7.33-2.21 7.33-5.72 0-3.276-1.975-4.784-6.29-5.512-2.965-.494-4.24-.988-4.24-2.548zM29.006 35.9c0 5.98 3.458 9.464 8.814 9.464 3.977 0 6.5-1.898 7.695-4.966l-3.744-1.326c-.65 2.028-1.897 3.042-3.9 3.042-3.25 0-4.835-2.626-4.835-6.214 0-3.614 1.586-6.214 4.81-6.214 2.184 0 3.354 1.196 3.978 3.224l3.796-1.326c-1.093-3.432-3.823-5.148-7.697-5.148-5.486 0-8.918 3.51-8.918 9.464zm28.17-9.1L63.727 45h-4.03l-1.456-4.212h-6.525L50.26 45h-3.823l6.552-18.2h4.185zm-2.184 4.264h-.05c-.313 1.17-2.16 6.63-2.16 6.63h4.395s-1.872-5.46-2.184-6.63z"/></g></svg></span>
+								<span class="q-featured-topic_name">Security Configuration Assessment</span>
+							</a>
+						</li>
+						<li>
+							<a href="file-integrity-monitoring/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M21.556 45v-7.748h7.93v-3.224h-7.93v-4.004h8.606V26.8H17.708V45h3.848zm11.01 0h3.9V26.8h-3.9V45zm18.992 0c.78-2.21 3.328-9.828 4.368-13.078h.078V45h3.588V26.8h-5.434s-3.796 11.752-4.316 13.546C49.296 38.552 45.37 26.8 45.37 26.8h-5.46V45h3.588V31.922h.078c.988 3.25 3.328 10.218 4.342 13.078h3.64z"/></g></svg></span>
+								<span class="q-featured-topic_name">File Integrity Monitoring</span>
+							</a>
+						</li>
+						<li>
+							<a href="out-of-band-configuration-assessment/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M10.69 35.9c0-5.902 3.535-9.464 8.865-9.464s8.866 3.562 8.866 9.464c0 5.902-3.535 9.464-8.865 9.464S10.69 41.802 10.69 35.9zm4.03 0c0 3.692 1.56 6.24 4.835 6.24 3.276 0 4.836-2.548 4.836-6.24s-1.56-6.24-4.835-6.24c-3.276 0-4.836 2.548-4.836 6.24zm15.897 0c0-5.954 3.432-9.464 8.918-9.464 3.874 0 6.604 1.716 7.696 5.148l-3.795 1.326c-.624-2.028-1.794-3.224-3.978-3.224-3.224 0-4.81 2.6-4.81 6.214 0 3.588 1.586 6.214 4.836 6.214 2.002 0 3.25-1.014 3.9-3.042l3.744 1.326c-1.196 3.068-3.718 4.966-7.696 4.966-5.355 0-8.813-3.484-8.813-9.464zm28.17-9.1L65.34 45h-4.03l-1.457-4.212h-6.526L51.87 45h-3.82l6.55-18.2h4.187zm-2.184 4.264h-.052c-.31 1.17-2.157 6.63-2.157 6.63h4.394s-1.872-5.46-2.184-6.63z"/></g></svg></span>
+								<span class="q-featured-topic_name">Out-of-Band Configuration Assessment</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="q-topic-nav_solutions" data-index=3>
+					<div class="q-nav-by-topic__heading">
+						<span>Web App Security</span>
+						<span class="q-topic-heading-arrow"><svg width="8" height="10" viewBox="0 0 8 10" xmlns="http://www.w3.org/2000/svg"><path d="m6.84 4.333a.75.75 0 0 1 .073 1.055l-.072.073-4.739 4.16a.75.75 0 0 1 -1.061-1.054l.072-.073 4.097-3.598-4.097-3.596a.75.75 0 0 1 -.131-.978l.062-.08a.75.75 0 0 1 .976-.132l.081.062 4.739 4.16z" fill="#6a778b"/></svg></span>
+					</div>
+					<ul>
+						<li>
+							<a href="web-app-scanning/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M29.435 26.8H33.1L28.55 45h-4.523s-2.002-8.814-2.73-12.064h-.078C20.542 36.186 18.384 45 18.384 45H13.86L9.286 26.8h3.952s2.392 10.244 2.99 13.598h.078c.65-3.354 3.146-13.598 3.146-13.598h3.667s2.496 10.244 3.172 13.598h.077c.65-3.354 3.068-13.598 3.068-13.598zm13.558 0L49.545 45h-4.03l-1.456-4.212h-6.527L36.077 45h-3.822l6.552-18.2h4.186zm-2.184 4.264h-.053c-.312 1.17-2.158 6.63-2.158 6.63h4.393s-1.872-5.46-2.184-6.63zm13.973.52c0-1.222.962-2.002 2.912-2.002 1.924 0 3.094 1.04 3.38 2.704l3.952-.858c-.624-3.198-3.458-4.992-7.228-4.992-4.03 0-6.97 1.82-6.97 5.46 0 3.666 2.887 4.914 6.683 5.512 2.834.442 3.822 1.092 3.822 2.444 0 1.664-1.508 2.366-3.354 2.366-2.287 0-3.457-1.274-3.64-3.016l-3.9.624c.157 2.938 2.94 5.538 7.54 5.538 4.24 0 7.333-2.21 7.333-5.72 0-3.276-1.976-4.784-6.292-5.512-2.963-.494-4.237-.988-4.237-2.548z"/></g></svg></span>
+								<span class="q-featured-topic_name">Web App Scanning</span>
+							</a>
+						</li>
+						<li>
+							<a href="web-app-firewall/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M31.228 26.8h3.666L30.344 45H25.82s-2.002-8.814-2.73-12.064h-.078C22.336 36.186 20.178 45 20.178 45h-4.524l-4.576-18.2h3.952s2.392 10.244 2.99 13.598h.078c.65-3.354 3.146-13.598 3.146-13.598h3.666s2.496 10.244 3.172 13.598h.078c.65-3.354 3.068-13.598 3.068-13.598zm13.558 0L51.338 45h-4.03l-1.456-4.212h-6.526L37.87 45h-3.822L40.6 26.8h4.186zm-2.184 4.264h-.052c-.312 1.17-2.158 6.63-2.158 6.63h4.394s-1.872-5.46-2.184-6.63zM57.148 45v-7.748h7.93v-3.224h-7.93v-4.004h8.606V26.8H53.3V45h3.848z"/></g></svg></span>
+								<span class="q-featured-topic_name">Web App Firewall</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="q-topic-nav_solutions" data-index=4>
+					<div class="q-nav-by-topic__heading">
+						<span>Cloud/Container Security</span>
+						<span class="q-topic-heading-arrow"><svg width="8" height="10" viewBox="0 0 8 10" xmlns="http://www.w3.org/2000/svg"><path d="m6.84 4.333a.75.75 0 0 1 .073 1.055l-.072.073-4.739 4.16a.75.75 0 0 1 -1.061-1.054l.072-.073 4.097-3.598-4.097-3.596a.75.75 0 0 1 -.131-.978l.062-.08a.75.75 0 0 1 .976-.132l.081.062 4.739 4.16z" fill="#6a778b"/></svg></span>
+					</div>
+					<ul>
+						<li>
+							<a href="container-security/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M21.186 35.9c0 5.98 3.458 9.464 8.814 9.464 3.978 0 6.5-1.898 7.696-4.966l-3.744-1.326c-.65 2.028-1.898 3.042-3.9 3.042-3.25 0-4.836-2.626-4.836-6.214 0-3.614 1.586-6.214 4.81-6.214 2.184 0 3.354 1.196 3.978 3.224l3.796-1.326c-1.092-3.432-3.822-5.148-7.696-5.148-5.486 0-8.918 3.51-8.918 9.464zm22.45-4.316c0-1.222.962-2.002 2.912-2.002 1.924 0 3.094 1.04 3.38 2.704l3.952-.858c-.624-3.198-3.458-4.992-7.228-4.992-4.03 0-6.968 1.82-6.968 5.46 0 3.666 2.886 4.914 6.682 5.512 2.834.442 3.822 1.092 3.822 2.444 0 1.664-1.508 2.366-3.354 2.366-2.288 0-3.458-1.274-3.64-3.016l-3.9.624c.156 2.938 2.938 5.538 7.54 5.538 4.238 0 7.332-2.21 7.332-5.72 0-3.276-1.976-4.784-6.292-5.512-2.964-.494-4.238-.988-4.238-2.548z"/></g></svg></span>
+								<span class="q-featured-topic_name">Container Security</span>
+							</a>
+						</li>
+						<li>
+							<a href="cloud-security-assessment/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M12.3 35.9c0 5.98 3.46 9.464 8.815 9.464 3.978 0 6.5-1.898 7.696-4.966l-3.743-1.326c-.65 2.028-1.898 3.042-3.9 3.042-3.25 0-4.836-2.626-4.836-6.214 0-3.614 1.587-6.214 4.81-6.214 2.185 0 3.355 1.196 3.98 3.224l3.795-1.326c-1.092-3.432-3.822-5.148-7.696-5.148-5.487 0-8.92 3.51-8.92 9.464zm22.45-4.316c0-1.222.963-2.002 2.913-2.002 1.924 0 3.094 1.04 3.38 2.704l3.952-.858c-.624-3.198-3.458-4.992-7.228-4.992-4.03 0-6.968 1.82-6.968 5.46 0 3.666 2.885 4.914 6.68 5.512 2.835.442 3.823 1.092 3.823 2.444 0 1.664-1.508 2.366-3.354 2.366-2.29 0-3.46-1.274-3.64-3.016l-3.9.624c.155 2.938 2.937 5.538 7.54 5.538 4.237 0 7.33-2.21 7.33-5.72 0-3.276-1.975-4.784-6.29-5.512-2.965-.494-4.24-.988-4.24-2.548zM57.176 26.8L63.727 45h-4.03l-1.456-4.212h-6.525L50.26 45h-3.823l6.552-18.2h4.185zm-2.184 4.264h-.05c-.313 1.17-2.16 6.63-2.16 6.63h4.395s-1.872-5.46-2.184-6.63z"/></g></svg></span>
+								<span class="q-featured-topic_name">Cloud Security Assessment</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="q-topic-nav_solutions" data-index=5>
+					<div class="q-nav-by-topic__heading">
+						<span>Cloud Platform</span>
+						<span class="q-topic-heading-arrow"><svg width="8" height="10" viewBox="0 0 8 10" xmlns="http://www.w3.org/2000/svg"><path d="m6.84 4.333a.75.75 0 0 1 .073 1.055l-.072.073-4.739 4.16a.75.75 0 0 1 -1.061-1.054l.072-.073 4.097-3.598-4.097-3.596a.75.75 0 0 1 -.131-.978l.062-.08a.75.75 0 0 1 .976-.132l.081.062 4.739 4.16z" fill="#6a778b"/></svg></span>
+					</div>
+					<ul>
+						<li>
+							<a href="consulting-edition/">
+								<span class="q-apps-topic_icon"><svg class="q-all-topic_icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><path d="M65.167 71.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C4.432 8 8.19 4.342 11.833 3.596c17.778-3.46 35.557-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952" stroke="#2E8BE0" fill="#FFF"/><path d="M38.497 12c14.652 0 22.02 7.9 22.02 7.9s.84 5.85.304 17.626C60.01 55.316 38.5 66 38.5 66c-.002 0-21.508-10.685-22.32-28.474-.538-11.776.304-17.625.304-17.625s7.36-7.9 22.013-7.9z" fill="#2E8BE0"/><path d="M27.464 35.594c0-6.16 4.95-11.173 11.036-11.173 6.097.007 11.038 4.87 11.045 10.867 0 4.783-4.18 8.72-7.4 10.74 1.25.703 4.007 1.44 6.647 1.678C52.706 44.735 55 40.15 55 35.287c.02-5.812-3.12-11.19-8.234-14.103a16.735 16.735 0 0 0-16.532 0C25.12 24.096 21.98 29.474 22 35.287c0 5.406 2.288 10.21 6.616 13.89 4.047 3.44 9.967 5.736 16.707 6.823 1.46-.794 3.957-3.138 4.893-4.51-5.628-.712-10.956-2.062-14.526-3.906-5.46-2.816-8.226-6.85-8.226-11.99z" fill="#FFF"/></svg></span>
+								<span class="q-featured-topic_name">Consulting Edition</span>
+							</a>
+						</li>
+						<li>
+							<a href="api/">
+								<span class="q-apps-topic_icon"><?undefined undefined?><svg class="q-all-topic_icon" width="77" height="75" viewBox="0 0 77 75" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952" stroke="#2E8BE0"/><path d="M27.862 26.8L34.414 45h-4.03l-1.456-4.212h-6.526L20.946 45h-3.822l6.552-18.2h4.186zm-2.184 4.264h-.052c-.312 1.17-2.158 6.63-2.158 6.63h4.394s-1.872-5.46-2.184-6.63zm17.614 7.54H40.25V45h-3.874V26.8h6.916c4.342 0 7.202 1.742 7.202 5.798 0 4.134-2.99 6.006-7.202 6.006zm3.224-6.006c0-1.976-1.196-2.574-3.614-2.574H40.25v5.356h2.652c2.418 0 3.614-.806 3.614-2.782zM52.794 45V26.8h3.9V45h-3.9z" fill="#2E8BE0"/></g></svg></span>
+								<span class="q-featured-topic_name">Developer API</span>
+							</a>
+						</li>
+						<li>
+							<a href="cloud-agent/">
+								<span class="q-apps-topic_icon"><?undefined undefined?><svg class="q-all-topic_icon" width="77" height="75" viewBox="0 0 77 75" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952" stroke="#2E8BE0"/><path d="M20.653 35.9c0-5.954 3.432-9.464 8.918-9.464 3.875 0 6.605 1.716 7.697 5.148L33.47 32.91c-.623-2.028-1.793-3.224-3.977-3.224-3.224 0-4.81 2.6-4.81 6.214 0 3.588 1.586 6.214 4.836 6.214 2 0 3.25-1.014 3.9-3.042l3.743 1.326c-1.196 3.068-3.718 4.966-7.696 4.966-5.356 0-8.814-3.484-8.814-9.464zm28.17-9.1L55.375 45h-4.03l-1.456-4.212h-6.527L41.907 45h-3.822l6.552-18.2h4.186zm-2.184 4.264h-.053c-.312 1.17-2.158 6.63-2.158 6.63h4.393s-1.872-5.46-2.184-6.63z" fill="#2E8BE0"/></g></svg></span>
+								<span class="q-featured-topic_name">Cloud Agent</span>
+							</a>
+						</li>
+						<li>
+							<a href="reporting/">
+								<span class="q-apps-topic_icon"><?undefined undefined?><svg class="q-all-topic_icon" width="77" height="75" viewBox="0 0 77 75" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952" stroke="#2E8BE0"/><path d="M28.85 32.338c0 2.704-1.326 4.368-3.458 5.2L29.578 45h-4.29l-3.77-6.89H19.1V45h-3.874V26.8h6.656c4.212 0 6.968 1.664 6.968 5.538zm-4.004.026c0-1.768-1.144-2.34-3.406-2.34H19.1v4.914h2.34c2.262 0 3.406-.728 3.406-2.574zm14.052 6.24h-3.042V45h-3.874V26.8h6.916c4.342 0 7.202 1.742 7.202 5.798 0 4.134-2.99 6.006-7.202 6.006zm3.224-6.006c0-1.976-1.196-2.574-3.614-2.574h-2.652v5.356h2.652c2.418 0 3.614-.806 3.614-2.782zm4.9-2.548V26.8h14.43v3.25H56.2V45h-3.926V30.05h-5.252z" fill="#2E8BE0"/></g></svg></span>
+								<span class="q-featured-topic_name">Unified Dashboard</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="homepage_container">
+	<div data-reactroot=""><div class="q-top-box__container"><div class="q-whats-new"><div><h3>What’s New</h3><div class="q-whats-new__container"><div class="q-news-item"><div class="q-news-item__container"><a href="https://success.qualys.com/discussions/s/article/000006842" class="q-recent-subject q-heading-4">Dashboard Toolbox: Samba OOB Heap Read/Write</a><div class="q-news-item__metadata"><time dateTime="2022-02-01">February 1, 2022</time></div></div></div><div class="q-news-item"><div class="q-news-item__container"><a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-adds-advanced-remediation-capabilities-to-minimize-vulnerability-risk/" class="q-recent-subject q-heading-4">Qualys Adds Advanced Remediation Capabilities to Minimize Vulnerability Risk</a><div class="q-news-item__metadata"><time dateTime="2022-02-01">February 1, 2022</time></div></div></div><div class="q-news-item"><div class="q-news-item__container"><a href="https://success.qualys.com/discussions/s/article/000006791" class="q-recent-subject q-heading-4">Dashboard for CISA Known Exploited Vulnerabilities</a><div class="q-news-item__metadata"><time dateTime="2021-11-05">November 5, 2021</time></div></div></div></div></div><button class="q-load-more q-button-with-arrow"><span>Load more</span></button></div><div class="q-trending-content"><div><h3>Trending Topics</h3><div class="q-trending-content__container"><div class="q-trending-item"><div class="q-trending-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00007Ri3OySAJ" class="q-recent-subject q-heading-4">Patch job config changes</a><div class="q-trending-item__metadata"><time dateTime="2022-07-10">July 10, 2022</time></div></div></div></div></div><button class="q-load-more q-button-with-arrow"><span>Load more</span></button></div><div class="q-top-articles"><div><h3>Top Articles</h3><div class="q-top-articles__container"><div class="q-top-articles-item"><div class="q-top-articles-item__container"><a href="https://blog.qualys.com/vulnerabilities-threat-research/2022/01/25/pwnkit-local-privilege-escalation-vulnerability-discovered-in-polkits-pkexec-cve-2021-4034" class="q-recent-subject q-heading-4">PwnKit Local Privilege Escalation</a><div class="q-top-articles-item__metadata"><time dateTime="2022-01-25">January 25, 2022</time></div></div></div><div class="q-top-articles-item"><div class="q-top-articles-item__container"><a href="https://www.qualys.com/log4shell-cve-2021-44228/" class="q-recent-subject q-heading-4">The Latest on Log4Shell</a><div class="q-top-articles-item__metadata"><time dateTime="2022-01-14">January 14, 2022</time></div></div></div><div class="q-top-articles-item"><div class="q-top-articles-item__container"><a href="https://success.qualys.com/support/s/article/000005975" class="q-recent-subject q-heading-4">Dashboards and Reporting Start Here</a><div class="q-top-articles-item__metadata"><time dateTime="2022-01-13">January 13, 2022</time></div></div></div></div></div><button class="q-load-more q-button-with-arrow"><span>Load more</span></button></div></div><div class="q-blog-posts"><h2><span>Blog Posts</span><a href="https://blog.qualys.com/" class="q-link-with-arrow nowrap" title="View all blog posts">View all</a></h2><div class="q-blog-posts__container"><article id="post-30278" class="q-post__article"><div class="q-post__article-container"><header class="entry-header q-post__entry-header"><div class="q-post__entry-avatar"><img src="https://secure.gravatar.com/avatar/abb8ecea6091638c8d95c48b7dc494c3?s=96&amp;d=mm&amp;r=g" width="54" alt="Jeff Leggett"/></div><div class="entry-meta q-post__entry-meta"><div class="q-post__entry-author"><span class="byline"><span class="author vcard"><a class="url fn n" href="">Jeff Leggett</a></span></span></div><div class="q-post__entry-time"><span class="posted-on"><a href="https://blog.qualys.com/product-tech/2022/07/11/qualys-cmdb-sync-integration" rel="bookmark"><time class="entry-date published" dateTime="2022-07-11T13:02:27-07:00">July 11, 2022</time></a></span> - <!-- -->3<!-- --> min read</div></div></header><div class="entry-content q-post__entry-content"><h3 class="entry-title q-post__entry-title"><a href="https://blog.qualys.com/product-tech/2022/07/11/qualys-cmdb-sync-integration" rel="bookmark">Qualys CMDB Sync Integration</a></h3></div><footer class="entry-footer q-post__entry-footer"><span class="cat-links">Posted in <a href="https://blog.qualys.com/product-tech" rel="category tag">Product and Tech</a></span></footer></div></article><article id="post-30252" class="q-post__article"><div class="q-post__article-container"><header class="entry-header q-post__entry-header"><div class="q-post__entry-avatar"><img src="https://secure.gravatar.com/avatar/be84de7ab3d568f0004869ba4985fe3a?s=96&amp;d=mm&amp;r=g" width="54" alt="Pablo Quiroga"/></div><div class="entry-meta q-post__entry-meta"><div class="q-post__entry-author"><span class="byline"><span class="author vcard"><a class="url fn n" href="">Pablo Quiroga</a></span></span></div><div class="q-post__entry-time"><span class="posted-on"><a href="https://blog.qualys.com/product-tech/2022/07/11/how-to-quickly-prioritize-risks-with-vmdr-2-0-and-orchestrate-response-with-cmdb-itsm-integration" rel="bookmark"><time class="entry-date published" dateTime="2022-07-11T06:00:00-07:00">July 11, 2022</time></a></span> - <!-- -->9<!-- --> min read</div></div></header><div class="entry-content q-post__entry-content"><h3 class="entry-title q-post__entry-title"><a href="https://blog.qualys.com/product-tech/2022/07/11/how-to-quickly-prioritize-risks-with-vmdr-2-0-and-orchestrate-response-with-cmdb-itsm-integration" rel="bookmark">How to Quickly Prioritize Risks with VMDR 2.0 and Orchestrate Response with CMDB &#038; ITSM Integration</a></h3></div><footer class="entry-footer q-post__entry-footer"><span class="cat-links">Posted in <a href="https://blog.qualys.com/product-tech" rel="category tag">Product and Tech</a></span></footer></div></article><article id="post-30235" class="q-post__article"><div class="q-post__article-container"><header class="entry-header q-post__entry-header"><div class="q-post__entry-avatar"><img src="https://secure.gravatar.com/avatar/c763b69be0cff503fa16d1273eefc5e3?s=96&amp;d=mm&amp;r=g" width="54" alt="Mayank Deshmukh"/></div><div class="entry-meta q-post__entry-meta"><div class="q-post__entry-author"><span class="byline"><span class="author vcard"><a class="url fn n" href="https://www.qualys.com">Mayank Deshmukh</a></span></span></div><div class="q-post__entry-time"><span class="posted-on"><a href="https://blog.qualys.com/vulnerabilities-threat-research/2022/06/29/atlassian-confluence-ognl-injection-remote-code-execution-rce-vulnerability-cve-2022-26134" rel="bookmark"><time class="entry-date published" dateTime="2022-06-29T13:23:28-07:00">June 29, 2022</time></a></span> - <!-- -->7<!-- --> min read</div></div></header><div class="entry-content q-post__entry-content"><h3 class="entry-title q-post__entry-title"><a href="https://blog.qualys.com/vulnerabilities-threat-research/2022/06/29/atlassian-confluence-ognl-injection-remote-code-execution-rce-vulnerability-cve-2022-26134" rel="bookmark">Atlassian Confluence OGNL Injection Remote Code Execution (RCE) Vulnerability (CVE-2022-26134)</a></h3></div><footer class="entry-footer q-post__entry-footer"><span class="cat-links">Posted in <a href="https://blog.qualys.com/vulnerabilities-threat-research" rel="category tag">Vulnerabilities and Threat Research</a></span></footer></div></article></div></div><div class="q-notifications"><h2><span>Release Notifications</span><a href="https://notifications.qualys.com/" class="q-link-with-arrow nowrap" title="View all notifications">View all</a></h2><div class="q-notifications__container"><div class="q-notification"><div class="q-notification__metadata"><time class="q-notification-date" dateTime="2022-07-11T12:40:53-07:00">July 11, 2022</time><h4 class="q-notification-title"><a href="https://notifications.qualys.com/api/2022/07/11/qualys-cmdb-sync-integration" title="Qualys CMDB Sync Integration"><span>Qualys CMDB Sync Integration</span></a></h4></div></div><div class="q-notification"><div class="q-notification__metadata"><time class="q-notification-date" dateTime="2022-07-11T06:31:13-07:00">July 11, 2022</time><h4 class="q-notification-title"><a href="https://notifications.qualys.com/api/2022/07/11/qualys-cloud-platform-2-11-csam-api-notification-1" title="Qualys Cloud Platform 2.11 (CSAM) API notification 1"><span>Qualys Cloud Platform 2.11 (CSAM) API notification 1</span></a></h4></div></div><div class="q-notification"><div class="q-notification__metadata"><time class="q-notification-date" dateTime="2022-07-08T10:34:58-07:00">July 8, 2022</time><h4 class="q-notification-title"><a href="https://notifications.qualys.com/product/2022/07/08/new-signatures-released-by-qualys-was-may-2022%ef%bf%bc" title="New Signatures Released by Qualys WAS, May 2022"><span>New Signatures Released by Qualys WAS, May 2022</span></a></h4></div></div><div class="q-notification"><div class="q-notification__metadata"><time class="q-notification-date" dateTime="2022-07-06T16:56:08-07:00">July 6, 2022</time><h4 class="q-notification-title"><a href="https://notifications.qualys.com/product/2022/07/06/july-2022-release-enhanced-vmdr-reports-and-new-templates-in-unified-dashboard" title="July 2022 Release: Enhanced VMDR Reports and New Templates in Unified Dashboard"><span>July 2022 Release: Enhanced VMDR Reports and New Templates in Unified Dashboard</span></a></h4></div></div></div></div><div class="q-top-qids-in-progress"><h2><span>Vulnerability Detection Pipeline</span><a href="vulnerability-detection-pipeline/" class="q-link-with-arrow nowrap" title="View all Detections Under Investigation">View all</a></h2><div class="q-top-qids-in-progress__container"><div class="q-top-qid"><a href="vulnerability-detection-pipeline/#qid-282929" title="View QID 282929"><div class="q-top-qid__header"><div class="q-top-qid__cve" title="">QID-282929</div><div class="severity-gauge__container"><span class="severity-gauge severity-4" title="Severity Level 5: Critical"></span></div></div><div class="q-top-qid__title">Fedora Security Update for podman (FEDORA-2022-fb8ed17b4e)</div><a href="vulnerability-detection-pipeline/#qid-282929" class="q-link-with-arrow nowrap" title="View QID 282929">More</a></a></div><div class="q-top-qid"><a href="vulnerability-detection-pipeline/#qid-282928" title="View QID 282928"><div class="q-top-qid__header"><div class="q-top-qid__cve" title="">QID-282928</div><div class="severity-gauge__container"><span class="severity-gauge severity-4" title="Severity Level 5: Critical"></span></div></div><div class="q-top-qid__title">Fedora Security Update for seamonkey (FEDORA-2022-37db345496)</div><a href="vulnerability-detection-pipeline/#qid-282928" class="q-link-with-arrow nowrap" title="View QID 282928">More</a></a></div><div class="q-top-qid"><a href="vulnerability-detection-pipeline/#qid-240540" title="View QID 240540"><div class="q-top-qid__header"><div class="q-top-qid__cve" title="">CVE-2021-46784</div><div class="severity-gauge__container"><span class="severity-gauge severity-4" title="Severity Level 5: Critical"></span></div></div><div class="q-top-qid__title">Red Hat Update for squid (RHSA-2022:5542)</div><a href="vulnerability-detection-pipeline/#qid-240540" class="q-link-with-arrow nowrap" title="View QID 240540">More</a></a></div><div class="q-top-qid"><a href="vulnerability-detection-pipeline/#qid-154118" title="View QID 154118"><div class="q-top-qid__header"><div class="q-top-qid__cve" title="">CVE-2021-41182</div><div class="severity-gauge__container"><span class="severity-gauge severity-3" title="Severity Level 5: Serious"></span></div></div><div class="q-top-qid__title">Drupal Core Cross-Site Scripting (XSS) Vulnerability (CVE-2021-41182)</div><a href="vulnerability-detection-pipeline/#qid-154118" class="q-link-with-arrow nowrap" title="View QID 154118">More</a></a></div></div></div><div class="q-top-videos"><h2><span>Top Videos</span><a href="https://vimeo.com/channels/1472579" class="q-link-with-arrow nowrap" title="View all videos">View all</a></h2><div class="q-top-videos__container"><div class="q-top-video"><a href="https://vimeo.com/354052856" class="q-top-video-poster-image__container" title="Responding To A Suspicious Device"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://i.vimeocdn.com/video/806439937-7d22d20eba0e3b6a24468ee90567960220ad23d73f148f957ab68d1309a377b4-d_960x540?r=pad" alt="Responding To A Suspicious Device" class="lazyload q-top-video-poster-image" height="230" width="360"/><span class="q-play-icon__crop"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="/asset/image/icon/play-icon.svg" alt="Play Button" class="lazyload q-play-icon" height="40" width="40"/></span></a><a href="https://vimeo.com/354052856" class="q-top-video-title">Responding To A Suspicious Device</a><div class="q-top-video-speakers"></div><time class="q-top-video-date" dateTime="2019-08-15T18:20:04+00:00">August 15, 2019</time></div><div class="q-top-video"><a href="https://vimeo.com/375331912" class="q-top-video-poster-image__container" title="The DevOps Transformation of the Qualys Platform: Lessons Learned"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://i.vimeocdn.com/video/834124164-d5e82747146b2e0fddda1869b11ab980c019bff31c60e1266437f84a979fa6e4-d_960x540?r=pad" alt="The DevOps Transformation of the Qualys Platform: Lessons Learned" class="lazyload q-top-video-poster-image" height="230" width="360"/><span class="q-play-icon__crop"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="/asset/image/icon/play-icon.svg" alt="Play Button" class="lazyload q-play-icon" height="40" width="40"/></span></a><a href="https://vimeo.com/375331912" class="q-top-video-title">The DevOps Transformation of the Qualys Platform: Lessons Learned</a><div class="q-top-video-speakers"></div><time class="q-top-video-date" dateTime="2019-11-25T05:00:42+00:00">November 24, 2019</time></div><div class="q-top-video"><a href="https://vimeo.com/328005082" class="q-top-video-poster-image__container" title="Qualys Cloud Platform"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://i.vimeocdn.com/video/772429622-ac224eaebe96a62359442fc7a8e4dbdea55ad0ad88d1c8450ab379463afc23ef-d_960x540?r=pad" alt="Qualys Cloud Platform" class="lazyload q-top-video-poster-image" height="230" width="360"/><span class="q-play-icon__crop"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="/asset/image/icon/play-icon.svg" alt="Play Button" class="lazyload q-play-icon" height="40" width="40"/></span></a><a href="https://vimeo.com/328005082" class="q-top-video-title">Qualys Cloud Platform</a><div class="q-top-video-speakers"></div><time class="q-top-video-date" dateTime="2019-04-02T18:01:08+00:00">April 2, 2019</time></div><div class="q-top-video"><a href="https://vimeo.com/354052984" class="q-top-video-poster-image__container" title="Search For Critical Exploit Demo"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://i.vimeocdn.com/video/806440209-4de5ee2585827c2e1c4b4d6b0d73eb9e17664962358f692941fefb7f72627f80-d_960x540?r=pad" alt="Search For Critical Exploit Demo" class="lazyload q-top-video-poster-image" height="230" width="360"/><span class="q-play-icon__crop"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="/asset/image/icon/play-icon.svg" alt="Play Button" class="lazyload q-play-icon" height="40" width="40"/></span></a><a href="https://vimeo.com/354052984" class="q-top-video-title">Search For Critical Exploit Demo</a><div class="q-top-video-speakers"></div><time class="q-top-video-date" dateTime="2019-08-15T18:20:46+00:00">August 15, 2019</time></div></div></div><div class="q-jive-content__container"><div class="q-recent-content"><h2><span>Recent Discussions</span><a href="https://success.qualys.com/discussions/s/" class="q-link-with-arrow nowrap" title="View all discussions">View all</a></h2><div class="q-recent-item__container"><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000004ICoiQAG" title="Jason Berra"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Jason Berra" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00007Ri3OySAJ" class="q-recent-subject q-heading-4">Patch job config changes</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2022-07-10T22:41:24.000Z" title="July 10, 2022 3:41 PM">moments ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRAWA4">Qualys Cloud Platform</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000004ICoiQAG">Jason Berra</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000004JFP6QAO" title="Mahe Gudi"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Mahe Gudi" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00007Rhmt5SAB" class="q-recent-subject q-heading-4">Hi, 
+
+Qualys is detecting &quot;Default webpage&quot; on a endpoint that&#x27;s publicly exposed.  its a service running on port 443 maybe using HTTP and in the results section it displays &quot;Error 404 : not found&quot;. my question is if no data is exposed or anything.</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2022-07-07T20:18:07.000Z" title="July 7, 2022 1:18 PM">4 days ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRwWAO">IT Security</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000004JFP6QAO">Mahe Gudi</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okprQAA" title="William Kolatac"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/ncsphoto/GeQF-o1nrLQ-7kLg3yC0IhmV9KZdLHXy33Oe6w1Pp-Kvn3iZGF3yBF6dgJxIwk9k?fromEmail=1" alt="William Kolatac" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00007JhBXuSAN" class="q-recent-subject q-heading-4">Sending scan completion notice to another email address</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2022-06-28T15:58:13.000Z" title="June 28, 2022 8:58 AM">13 days ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISCWA4">Web App Security</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000003okprQAA">William Kolatac</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000004ICoiQAG" title="Jason Berra"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Jason Berra" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00007JfJYBSA3" class="q-recent-subject q-heading-4">QID 9109</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2022-06-15T16:04:02.000Z" title="June 15, 2022 9:04 AM">a month ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRAWA4">Qualys Cloud Platform</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000004ICoiQAG">Jason Berra</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0051a000001VVKYAA4" title="Joe J"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Joe J" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00007Je6HFSAZ" class="q-recent-subject q-heading-4">Wireshark QID question</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2022-06-07T20:15:02.000Z" title="June 7, 2022 1:15 PM">a month ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRwWAO">IT Security</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0051a000001VVKYAA4">Joe J</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000004HJ00QAG" title="Catalyst"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Catalyst" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00007JdVNDSA3" class="q-recent-subject q-heading-4">How can I replicate the &quot;firstFound&quot; token in the API?</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2022-06-02T21:49:26.000Z" title="June 2, 2022 2:49 PM">a month ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIR8WAO">Developer</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000004HJ00QAG">Catalyst</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0051a000001VVKYAA4" title="Joe J"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Joe J" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00007JdUVXSA3" class="q-recent-subject q-heading-4">Missing &quot;Not&quot; operator in VMDR QQL</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2022-06-02T20:30:22.000Z" title="June 2, 2022 1:30 PM">a month ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRwWAO">IT Security</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0051a000001VVKYAA4">Joe J</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000004IRIyQAO" title="Pablo Armentanos"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Pablo Armentanos" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00007CrTWbSAN" class="q-recent-subject q-heading-4">Qualys VM - Scanning through VPN tunnels</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2022-05-31T20:41:56.000Z" title="May 31, 2022 1:41 PM">a month ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRAWA4">Qualys Cloud Platform</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000004IRIyQAO">Pablo Armentanos</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okiYQAQ" title="Herbon Lavera"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/ncsphoto/GeQF-o1nrLQ-7kLg3yC0IuC2JM_fWtK4gXOY9T2ths6KOQahnhoxNhYwHVqlEqOR?fromEmail=1" alt="Herbon Lavera" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00007CrIi6SAF" class="q-recent-subject q-heading-4">How can I identify older Cloud Agents?</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2022-05-30T23:31:21.000Z" title="May 30, 2022 4:31 PM">a month ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRIWA4">Asset Management</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000003okiYQAQ">Herbon Lavera</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000004HJ00QAG" title="Catalyst"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Catalyst" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00007CqiEVSAZ" class="q-recent-subject q-heading-4">Help identifying/understanding discrepancies between the API and portal results</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2022-05-25T18:59:50.000Z" title="May 25, 2022 11:59 AM">2 months ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIR8WAO">Developer</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000004HJ00QAG">Catalyst</a></span></div></div></div></div><button class="q-load-more q-button-with-arrow"><span>Load more</span></button></div><div><a href="https://success.qualys.com/discussions/s/#start-a-discussion" class="q-start-a-discussion q-button-with-arrow"><span>Start a discussion</span></a><div class="q-top-contributors"><h3>Trending Members</h3><div class="q-top-contributors__container"><div class="q-top-contributor"><span class="q-top-contributor-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okIoQAI"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/ncsphoto/GeQF-o1nrLQ-7kLg3yC0IrQ6U9aUnzcBXAmihgLkni3XyDyZ9bJk-0AYEjYJfTDf?fromEmail=1" alt="Busby" class="lazyload" height="48" width="48"/></a></span><div class="q-top-contributor__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okIoQAI" class="q-heading-4">Busby</a></div></div><div class="q-top-contributor"><span class="q-top-contributor-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okIpQAI"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/ncsphoto/GeQF-o1nrLQ-7kLg3yC0Io6063VrjUaKeFDSMp1cH2afP7pqljCuKY_p8LxSD4Lw?fromEmail=1" alt="derekv" class="lazyload" height="48" width="48"/></a></span><div class="q-top-contributor__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okIpQAI" class="q-heading-4">derekv</a></div></div><div class="q-top-contributor"><span class="q-top-contributor-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okIrQAI"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/ncsphoto/GeQF-o1nrLQ-7kLg3yC0Ij8huYHuQMqdefb_gzoIberfVVTzGPr4oyrA14Z-gsME?fromEmail=1" alt="Rusty Qualyz" class="lazyload" height="48" width="48"/></a></span><div class="q-top-contributor__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okIrQAI" class="q-heading-4">Rusty Qualyz</a></div></div><div class="q-top-contributor"><span class="q-top-contributor-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okIqQAI"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/ncsphoto/GeQF-o1nrLQ-7kLg3yC0ImTcEYjmdBSrsN5p83ucLqhE89uT2oxFijGTF3FqBnKO?fromEmail=1" alt="Ivan Ristić" class="lazyload" height="48" width="48"/></a></span><div class="q-top-contributor__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okIqQAI" class="q-heading-4">Ivan Ristić</a></div></div><div class="q-top-contributor"><span class="q-top-contributor-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okIsQAI"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/ncsphoto/GeQF-o1nrLQ-7kLg3yC0IoGPLYxcdjHytsXlnDu0TcpenvuBHeeR3SVDG4kHl4tq?fromEmail=1" alt="Stjepan Šušnjar" class="lazyload" height="48" width="48"/></a></span><div class="q-top-contributor__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okIsQAI" class="q-heading-4">Stjepan Šušnjar</a></div></div></div><button class="q-load-more q-button-with-arrow"><span>Load more</span></button></div></div></div></div>
+</div>
+
+<script type="application/json" id="channel_data">
+	[{"releaseDate":"1970-01-01","title":"Global AssetView","urlSlug":"asset-view","tags":["av","asset_view","assetview","ai","asset_inventory","asset","asset_tracking","tagging","asset_tags"],"solution":"IT Asset Management","salesforceTopicId":"0TO2L000000HIRSWA4","jivePlaceId":20036,"jiveContainerId":2057,"vimeoChannelId":1469903,"trainingLibraryUrl":"https://www.qualys.com/training/library/assetview-threatprotection/","abbr":"av","iconSrc":"/asset/image/app-icons/av-75x75.svg"},{"releaseDate":"1970-02-01","title":"VM, Detection and Response","urlSlug":"vmdr","tags":["vmdr","VMDR"],"solution":"IT Security","salesforceTopicId":"0TO2L000000HIaLWAW","jivePlaceId":19890,"jiveContainerId":2005,"vimeoChannelId":1568302,"subheading":"Vulnerability Management, Detection, and Response","abbr":"vmdr","iconSrc":"/asset/image/app-icons/vmdr-75x75.svg"},{"releaseDate":"1999-01-01","title":"Vulnerability Management","urlSlug":"vulnerability-management","tags":["vm","vulnerability management","vulnerability"],"solution":"IT Security","salesforceTopicId":"0TO2L000000HISzWAO","jivePlaceId":19890,"jiveContainerId":2005,"vimeoChannelId":1418699,"trainingLibraryUrl":"https://www.qualys.com/training/library/vulnerability-management/","abbr":"vm","iconSrc":"/asset/image/app-icons/vm-75x75.svg"},{"releaseDate":"2005-01-01","title":"Policy Compliance","urlSlug":"policy-compliance","tags":["pc","policy_compliance","compliance"],"solution":"Compliance","salesforceTopicId":"0TO2L000000HISVWA4","jivePlaceId":19878,"jiveContainerId":2006,"vimeoChannelId":1418700,"trainingLibraryUrl":"https://www.qualys.com/training/library/policy-compliance/","abbr":"pc","iconSrc":"/asset/image/app-icons/pc-75x75.svg"},{"releaseDate":"2006-01-01","title":"PCI Compliance","urlSlug":"pci-compliance","tags":["pci","pci_compliance","compliance","payment_card_industry"],"solution":"Compliance","salesforceTopicId":"0TO2L000000HISQWA4","jivePlaceId":19878,"jiveContainerId":2006,"vimeoChannelId":1418700,"trainingLibraryUrl":"https://www.qualys.com/training/library/policy-compliance/","abbr":"pci","iconSrc":"/asset/image/app-icons/pci-75x75.svg"},{"releaseDate":"2009-01-01","title":"Web App Scanning","urlSlug":"web-app-scanning","tags":["was","Web App Scanning","Web Application Scanning"],"solution":"Web App Security","salesforceTopicId":"0TO2L000000HIT9WAO","jivePlaceId":19995,"jiveContainerId":2018,"vimeoChannelId":1455505,"trainingLibraryUrl":"https://www.qualys.com/training/library/was/","abbr":"was","iconSrc":"/asset/image/app-icons/was-75x75.svg"},{"releaseDate":"2013-01-01","title":"Web App Firewall","urlSlug":"web-app-firewall","tags":["waf","Web App Firewall","Web application Firewall"],"solution":"Web App Security","salesforceTopicId":"0TO2L000000HIT4WAO","jivePlaceId":19995,"jiveContainerId":2018,"vimeoChannelId":1455505,"trainingLibraryUrl":"https://www.qualys.com/training/library/was/","abbr":"waf","iconSrc":"/asset/image/app-icons/waf-75x75.svg"},{"releaseDate":"2014-01-01","title":"Continuous Monitoring","urlSlug":"continuous-monitoring","tags":["cm","continuous monitoring"],"solution":"IT Security","salesforceTopicId":"0TO2L000000HIRxWAO","jivePlaceId":19890,"jiveContainerId":2005,"vimeoChannelId":1418699,"trainingLibraryUrl":"https://www.qualys.com/training/library/vulnerability-management/","abbr":"cm","iconSrc":"/asset/image/app-icons/cm-75x75.svg"},{"releaseDate":"2015-01-01","title":"Security Assessment Questionnaire","urlSlug":"security-assessment-questionnaire","tags":["saq","security assessment questionnaire","questionnaire"],"solution":"Compliance","salesforceTopicId":"0TO2L000000HISkWAO","jivePlaceId":19878,"jiveContainerId":2006,"vimeoChannelId":1473585,"trainingLibraryUrl":"https://www.qualys.com/training/library/security-assessment-questionnaire/","abbr":"saq","iconSrc":"/asset/image/app-icons/saq-75x75.svg"},{"releaseDate":"2016-01-01","title":"Threat Protection","urlSlug":"threat-protection","tags":["tp","threat protection","threat"],"solution":"IT Security","salesforceTopicId":"0TO2L000000HISuWAO","jivePlaceId":19890,"jiveContainerId":2005,"vimeoChannelId":1469908,"trainingLibraryUrl":"https://www.qualys.com/training/library/assetview-threatprotection/","abbr":"tp","iconSrc":"/asset/image/app-icons/tp-75x75.svg"},{"releaseDate":"2016-03-01","title":"CMDB Sync","urlSlug":"cmdb-sync","tags":["syn","sync","cmdb","syn","CMDB Sync"],"solution":"IT Asset Management","salesforceTopicId":"0TO2L000000HITFWA4","jivePlaceId":20036,"jiveContainerId":2057,"abbr":"syn","iconSrc":"/asset/image/app-icons/syn-75x75.svg"},{"releaseDate":"2017-01-01","title":"Multi-Vector EDR","urlSlug":"endpoint-detection-response","tags":["edr","ioc","indication of compromise","endpoint detection and response"],"solution":"IT Security","salesforceTopicId":"0TO2L000000HIS6WAO","jivePlaceId":19890,"jiveContainerId":2005,"vimeoChannelId":1418703,"trainingLibraryUrl":"https://www.qualys.com/training/library/ioc/","abbr":"edr","iconSrc":"/asset/image/app-icons/edr-75x75.svg"},{"releaseDate":"2017-02-01","title":"Security Configuration Assessment","urlSlug":"security-configuration-assessment","tags":["sca","security configuration assessment"],"solution":"Compliance","salesforceTopicId":"0TO2L000000HITJWA4","jivePlaceId":19878,"jiveContainerId":2006,"vimeoChannelId":1472574,"abbr":"sca","iconSrc":"/asset/image/app-icons/sca-75x75.svg"},{"releaseDate":"2017-03-01","title":"File Integrity Monitoring","urlSlug":"file-integrity-monitoring","tags":["fim","file integrity","file integrity monitoring"],"solution":"Compliance","salesforceTopicId":"0TO2L000000HIS2WAO","jivePlaceId":19878,"jiveContainerId":2006,"vimeoChannelId":1471679,"trainingLibraryUrl":"https://www.qualys.com/training/library/fim/","abbr":"fim","iconSrc":"/asset/image/app-icons/fim-75x75.svg"},{"releaseDate":"2018-01-01","title":"Cloud Inventory","urlSlug":"cloud-inventory","tags":["ci","cloud inventory"],"solution":"IT Asset Management","salesforceTopicId":"0TO2L000000HIRmWAO","jivePlaceId":20036,"jiveContainerId":2057,"vimeoChannelId":1469911,"trainingLibraryUrl":"https://www.qualys.com/training/library/cloudview/","abbr":"ci","iconSrc":"/asset/image/app-icons/ci-75x75.svg"},{"releaseDate":"2018-02-01","title":"Certificate Inventory","urlSlug":"certificate-inventory","tags":["cri","certificate invetory","certificate","inventory"],"solution":"IT Asset Management","salesforceTopicId":"0TO2L000000HIRcWAO","jivePlaceId":20036,"jiveContainerId":2057,"vimeoChannelId":1469898,"trainingLibraryUrl":"https://www.qualys.com/training/library/certview/","abbr":"cri","iconSrc":"/asset/image/app-icons/cri-75x75.svg"},{"releaseDate":"2018-03-01","title":"Container Security","urlSlug":"container-security","tags":["cs","container security","docker","kubernetes","netes"],"solution":"Cloud/Container Security","salesforceTopicId":"0TO2L000000HIRrWAO","jivePlaceId":67716,"jiveContainerId":2076,"vimeoChannelId":1469907,"trainingLibraryUrl":"https://www.qualys.com/training/library/container-security/","abbr":"cs","iconSrc":"/asset/image/app-icons/cs-75x75.svg"},{"releaseDate":"2018-04-01","title":"Cloud Security Assessment","urlSlug":"cloud-security-assessment","tags":["csa","cloud security assessment"],"solution":"Cloud/Container Security","salesforceTopicId":"0TO2L000000HIRpWAO","jivePlaceId":67716,"jiveContainerId":2076,"vimeoChannelId":1469911,"trainingLibraryUrl":"https://www.qualys.com/training/library/cloudview/","abbr":"csa","iconSrc":"/asset/image/app-icons/csa-75x75.svg"},{"releaseDate":"2018-05-01","title":"Certificate Assessment","urlSlug":"certificate-assessment","tags":["cra","certificate assessment","certificate","assessment"],"solution":"IT Security","salesforceTopicId":"0TO2L000000HIRdWAO","jivePlaceId":19890,"jiveContainerId":2005,"vimeoChannelId":1469898,"trainingLibraryUrl":"https://www.qualys.com/training/library/certview/","abbr":"cra","iconSrc":"/asset/image/app-icons/cra-75x75.svg"},{"releaseDate":"2019-01-01","title":"Out-of-Band Configuration Assessment","urlSlug":"out-of-band-configuration-assessment","tags":["oca","out-of-band","out-of-band configuration assessment"],"solution":"Compliance","salesforceTopicId":"0TO2L000000HITKWA4","jivePlaceId":19878,"jiveContainerId":2006,"abbr":"oca","iconSrc":"/asset/image/app-icons/oca-75x75.svg"},{"releaseDate":"2019-02-01","title":"Patch Management","urlSlug":"patch-management","tags":["pm","patch management"],"solution":"IT Security","salesforceTopicId":"0TO2L000000HISLWA4","jivePlaceId":19890,"jiveContainerId":2021,"vimeoChannelId":1469912,"abbr":"pm","iconSrc":"/asset/image/app-icons/pm-75x75.svg"},{"releaseDate":"2020-08-04","title":"Consulting Edition","urlSlug":"consulting-edition","tags":["consultant","consulting","consulting edition"],"solution":"Cloud Platform","salesforceTopicId":"0TO2L000000HIYEWA4","vimeoChannelId":1616680,"trainingLibraryUrl":"https://www.qualys.com/training/library/consulting-edition/","abbr":"consultant","iconSrc":"/asset/image/app-icons/consultant-75x75.svg"},{"releaseDate":"2100-01-01","title":"Developer API","urlSlug":"api","tags":["api","qualysguard_api","developer"],"solution":"Cloud Platform","salesforceTopicId":"0TO2L000000HIR8WAO","jivePlaceId":20021,"jiveContainerId":2003,"vimeoChannelId":1469876,"abbr":"api","iconSrc":"/asset/image/app-icons/api-75x75.svg"},{"releaseDate":"2100-02-01","title":"Cloud Agent","urlSlug":"cloud-agent","tags":["ca","cloud agent","agent"],"solution":"Cloud Platform","salesforceTopicId":"0TO2L000000HIRhWAO","jivePlaceId":19877,"jiveContainerId":2003,"vimeoChannelId":1469904,"trainingLibraryUrl":"https://www.qualys.com/training/library/cloud-agent/","abbr":"ca","iconSrc":"/asset/image/app-icons/ca-75x75.svg"},{"releaseDate":"2100-03-01","title":"Unified Dashboard","urlSlug":"reporting","tags":["rpt","reporting","reports","report","dashboard","dashboard_toolbox","reporting_toolbox"],"solution":"Cloud Platform","salesforceTopicId":"0TO2L000000HITPWA4","jivePlaceId":19877,"jiveContainerId":2003,"vimeoChannelId":1471678,"trainingLibraryUrl":"https://www.qualys.com/training/library/reporting-strategies/","abbr":"rpt","iconSrc":"/asset/image/app-icons/rpt-75x75.svg"}]
+</script>
+
+
+		</div>
+	</div>
+
+		<footer class="q-footer">
+			<div class="q-footer__container">
+				<div class="q-footer__row">
+		
+					<div class="q-footer__column--wide q-footer__column--desktop">
+						<h2 class="q-footer__heading">
+							Join the <span class="nowrap">discussion today!</span>
+						</h2>
+						<p class="q-footer__copy">
+							<strong>Learn</strong> more about Qualys and industry best practices.
+						</p>
+						<p class="q-footer__copy">
+							<strong>Share</strong> what you know and build a reputation.
+						</p>
+						<p class="q-footer__copy">
+							<strong>Secure</strong> your systems and improve security for everyone.
+						</p>
+						<div class="q-footer__search">
+							<a href="https://success.qualys.com/discussions/s/#start-a-discussion"
+								class="q-button__start-a-discussion q-button__light-blue q-button-with-arrow">
+								<span>Start a discussion</span></a>
+						</div>
+		
+						<div class="q-footer__social">
+							<ul class="q-social-list">
+								<li class="q-social-list__item">
+									<a href="https://twitter.com/qualys" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="20" height="20"
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 148.7 610.7 496.3"
+											enable-background="new 0 148.7 610.7 496.3">
+											<title>Visit Qualys on Twitter</title>
+											<path fill="#FFF"
+												d="M192.1 645c-70.8 0-136.7-20.7-192.1-56.2 9.8 1.1 19.9 1.8 29.9 1.8 58.7 0 112.8-20.1 155.7-53.6-54.7-1.1-101.2-37.3-117-87.1 7.6 1.6 15.4 2.2 23.7 2.2 11.4 0 22.6-1.6 33.1-4.5-57.5-11.6-100.6-62.1-100.6-122.9v-1.6c17 9.4 36.2 15 56.7 15.6-33.5-22.4-55.8-60.6-55.8-104.2 0-23 6.3-44.4 17-63 61.6 75.9 153.9 126 258 131.1-2.2-9.2-3.4-18.8-3.4-28.6 0-69.2 56.1-125.3 125.3-125.3 36 0 68.6 15.2 91.4 39.5 28.8-5.6 55.6-15.9 79.7-30.4-9.4 29.3-29 53.8-54.9 69.5 25.2-3.1 49.6-9.8 71.9-19.7-16.8 25-38 47.1-62.5 64.8.2 5.4.4 10.7.4 16.3 0 165.4-126.2 356.3-356.5 356.3">
+											</path>
+										</svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://www.linkedin.com/company/qualys" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="16" height="16"
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"
+											enable-background="new 0 0 36 36">
+											<title>Visit Qualys on LinkedIn</title>
+											<path fill="#FFF"
+												d="M33.3 0h-30.6c-1.5 0-2.7 1.2-2.7 2.6v30.8c0 1.4 1.2 2.6 2.7 2.6h30.7c1.5 0 2.7-1.2 2.7-2.6v-30.8c-.1-1.4-1.3-2.6-2.8-2.6zm-22.6 30.7h-5.4v-17.2h5.3v17.2zm-2.7-19.6c-1.7 0-3.1-1.4-3.1-3.1 0-1.7 1.4-3 3.1-3 1.7 0 3.1 1.4 3.1 3.1 0 1.7-1.4 3-3.1 3zm22.7 19.6h-5.3v-8.4c0-2 0-4.6-2.8-4.6s-3.2 2.2-3.2 4.4v8.5h-5.4v-17.1h5.1v2.3h.1c.7-1.4 2.5-2.8 5.1-2.8 5.4 0 6.4 3.6 6.4 8.2v9.5z">
+											</path>
+										</svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://www.facebook.com/qualys" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="16" height="16"
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 90 611.8 612.2"
+											enable-background="new 0 90 611.8 612.2">
+											<title>Visit Qualys on Facebook</title>
+											<path fill="#FFF"
+												d="M578.3 90h-544.6c-18.6 0-33.7 15.1-33.7 33.7v544.4c0 18.6 15.1 33.7 33.7 33.7h293v-236.9h-79.7v-92.4h79.8v-67.9c0-79.1 48.4-122 118.8-122 33.7 0 62.8 2.5 71.3 3.7v82.5h-48.9c-38.3 0-45.9 18.1-45.9 44.9v58.9h91.5l-11.9 92.4h-79.6v237.1h155.9c18.6 0 33.7-15.1 33.7-33.7v-544.7c.3-18.6-14.8-33.7-33.4-33.7z">
+											</path>
+										</svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://www.youtube.com/user/QualysGuard" target="_blank"
+										rel="noopener">
+										<svg class="q-social-list__icon" width="22" height="22"
+											xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+											viewBox="0 0 1021.5 718.4" enable-background="new 0 0 1021.5 718.4">
+											<title>Visit Qualys on YouTube</title>
+											<path fill="#E0E0E0" d="M647.3 366.3l-242.1-161.6 276 144-33.9 17.6"></path>
+											<path fill="#FFF"
+												d="M1011.2 155s-10-70.4-40.6-101.4c-38.8-40.7-82.4-40.9-102.3-43.3-142.9-10.3-357.4-10.3-357.4-10.3h-.4s-214.4 0-357.4 10.3c-20 2.4-63.5 2.6-102.3 43.3-30.6 31-40.6 101.4-40.6 101.4s-10.2 82.6-10.2 165.3v77.5c0 82.7 10.2 165.3 10.2 165.3s10 70.4 40.6 101.4c38.9 40.7 89.9 39.4 112.6 43.7 81.7 7.8 347.3 10.3 347.3 10.3s214.6-.3 357.6-10.7c20-2.4 63.5-2.6 102.3-43.3 30.6-31 40.6-101.4 40.6-101.4s10.2-82.7 10.2-165.3v-77.5c.1-82.7-10.2-165.3-10.2-165.3m-605.9 336.7v-287l276 144-276 143z">
+											</path>
+										</svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://vimeo.com/qualys" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="16" height="16"
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 86.67">
+											<title>Visit Qualys on Vimeo</title>
+											<path fill="#FFF"
+												d="M100 20.05q-.72 14.63-20.44 40.06Q59.16 86.67 45 86.67q-8.74 0-14.79-16.17l-8.02-29.66q-4.49-16.17-9.64-16.18-1.12 0-7.85 4.72L0 23.31q7.4-6.52 14.59-13 9.87-8.55 14.82-9 11.67-1.12 14.37 16 2.91 18.47 4 23 3.36 15.32 7.41 15.31 3.14 0 9.43-9.94t6.73-15.13q.9-8.58-6.73-8.58a18.7 18.7 0 0 0-7.4 1.64Q64.63-.66 85.42 0 100.84.47 100 20.05z">
+											</path>
+										</svg></a>
+								</li>
+							</ul>
+						</div>
+		
+					</div>
+					<div class="q-footer__column q-footer__column--nav">
+		
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Qualys
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/" class="q-footer__link"
+										title="Information Security and Compliance | Qualys">
+										Qualys.com</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/community-edition/" class="q-footer__link"
+										title="Qualys Community Edition">
+										Qualys Community Edition</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://store.qualys.com/" class="q-footer__link"
+										title="Qualys Merchandise Store">
+										Qualys Merchandise Store</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Qualys Communities
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/vulnerability-management/" class="q-footer__link"
+										title="Qualys Vulnerability Management Community">
+										Vulnerability Management</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/policy-compliance/" class="q-footer__link"
+										title="Qualys Policy Compliance Community">
+										Policy Compliance</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/pci-compliance/" class="q-footer__link"
+										title="Qualys PCI Compliance Community">
+										PCI Compliance</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/web-app-scanning/" class="q-footer__link"
+										title="Qualys Web App Scanning Community">
+										Web App Scanning</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/web-app-firewall/" class="q-footer__link"
+										title="Qualys Web App Firewall Community">
+										Web App Firewall</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/continuous-monitoring/" class="q-footer__link"
+										title="Qualys Continuous Monitoring Community">
+										Continuous Monitoring</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/security-assessment-questionnaire/"
+										class="q-footer__link" title="Qualys Security Assessment Questionnaire Community">
+										Security Assessment Questionnaire</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/threat-protection/" class="q-footer__link"
+										title="Qualys Threat Protection Community">
+										Threat Protection</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/global-assetview/" class="q-footer__link"
+										title="Qualys Asset Inventory Community">
+										Asset Inventory</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/asset-view/" class="q-footer__link"
+										title="Qualys AssetView Community">
+										AssetView</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/endpoint-detection-response/" class="q-footer__link"
+										title="Qualys Endpoint Detection and Response Community">
+										Endpoint Detection and Response</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/security-configuration-assessment/"
+										class="q-footer__link" title="Qualys Security Configuration Assessment Community">
+										Security Configuration Assessment</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/file-integrity-monitoring/" class="q-footer__link"
+										title="Qualys File Integrity Monitoring Community">
+										File Integrity Monitoring</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/cloud-inventory/" class="q-footer__link"
+										title="Qualys Cloud Inventory Community">
+										Cloud Inventory</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/certificate-inventory/" class="q-footer__link"
+										title="Qualys Certificate Inventory Community">
+										Certificate Inventory</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/container-security/" class="q-footer__link"
+										title="Qualys Container Security Community">
+										Container Security</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/cloud-security-assessment/" class="q-footer__link"
+										title="Qualys Cloud Security Assessment Community">
+										Cloud Security Assessment</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/certificate-assessment/" class="q-footer__link"
+										title="Qualys Certificate Assessment Community">
+										Certificate Assessment</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/out-of-band-configuration-assessment/"
+										class="q-footer__link" title="Qualys Out-of-band Configuration Assessment Community">
+										Out-of-band Configuration Assessment</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/patch-management/" class="q-footer__link"
+										title="Qualys Patch Management Community">
+										Patch Management</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/api/" class="q-footer__link"
+										title="Qualys Developer API Community">
+										Developer API</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/cloud-agent/" class="q-footer__link"
+										title="Qualys Cloud Agent Community">
+										Cloud Agent</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/reporting/" class="q-footer__link"
+										title="Qualys Dashboards &amp; Reporting Community">
+										Dashboards &amp; Reporting</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Discussions
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/" class="q-footer__link"
+										title="Qualys Discussions">
+										All discussions</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRIWA4/asset-management"
+										class="q-footer__link" title="Asset Management Discussions">
+										Asset Management</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRwWAO/it-security"
+										class="q-footer__link" title="IT Security Discussions">
+										IT Security</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIS1WAO/compliance"
+										class="q-footer__link" title="Compliance Discussions">
+										Compliance</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRnWAO/cloud-container"
+										class="q-footer__link" title="Cloud &amp; Container Security Discussions">
+										Cloud &amp; Container Security</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISCWA4/web-app-security"
+										class="q-footer__link" title="Web App Security Discussions">
+										Web App Security</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRfWAO/certificate-security"
+										class="q-footer__link" title="Certificate Security &amp; SSL Labs Discussions">
+										Certificate Security &amp; SSL Labs</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIR8WAO/developer"
+										class="q-footer__link" title="Qualys API Discussions">
+										Developer API</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRAWA4/qualys-cloud-platform"
+										class="q-footer__link" title="Qualys Cloud Platform Discussions">
+										Cloud Platform</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Blog
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://blog.qualys.com/" class="q-footer__link" title="Qualys Blog">
+										All</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://blog.qualys.com/qualys-insights" class="q-footer__link"
+										title="Qualys Insights">
+										Qualys Insights</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://blog.qualys.com/product-tech" class="q-footer__link"
+										title="Product and Tech">
+										Product and Tech</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://blog.qualys.com/vulnerabilities-threat-research" class="q-footer__link"
+										title="Vulnerabilities and Threat Research">
+										Vulnerabilities and Threat Research</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://notifications.qualys.com/" class="q-footer__link" title="Release Notifications">
+										Release Notifications</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Training
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/training/" class="q-footer__link"
+										title="Qualys Training &amp; Certification">Overview</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/training/#self-paced" class="q-footer__link"
+										title="Qualys Certified Training Courses">Certified Courses</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/training/#video-library" class="q-footer__link"
+										title="Qualys Training Video Library">Video Library</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/training/#instructor-led" class="q-footer__link"
+										title="Qualys Certified Instructor-led Training">Instructor-led Training</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Docs
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/documentation/" class="q-footer__link"
+										title="Qualys Documentation">Overview</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/documentation/release-notes/" class="q-footer__link"
+										title="Qualys Release Notes">Release Notes</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Support
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/support/s/" class="q-footer__link"
+										title="Qualys Support Portal">Support Portal</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+		
+				</div>
+				<div class="q-footer__row">
+		
+					<small class="q-footer__copyright">
+						© 2022 Qualys, Inc.&nbsp; All rights reserved.&nbsp;
+						<a href="https://www.qualys.com/company/privacy/" class="nowrap">
+							Privacy Policy</a>.&nbsp;
+						<a href="https://success.qualys.com/support/s/standards" class="nowrap">
+							Trust</a>.&nbsp;
+						<a href="https://www.qualys.com/cookie-consent/" class="nowrap">
+							Cookie Consent</a>.&nbsp;
+					</small>
+		
+				</div>
+			</div>
+		</footer>
+		<script id="site_data" type="application/json">
+			{"asset":"https://d1uyme8f6ss6qi.cloudfront.net","base":{"url":"https://www.qualys.com"},"community":{"base":{"url":"https://community.qualys.com"}},"coveo":{"public":{"api":{"key":"xx6fb1924a-c0ec-4e98-9dab-303e9c0f6437"}}},"env":{"production":true},"google":{"gtm":{"id":"GTM-MNLTS6"}},"marketo":{"base":{"url":"https://lps.qualys.com"},"munchkin":{"id":"797-ENI-742"}},"salesforce":{"base":{"url":"https://qualys.secure.force.com"},"discuss":{"url":"https://success.qualys.com/discussions/s"},"partners":{"url":"https://success.qualys.com/partners/s"},"support":{"url":"https://success.qualys.com/support/s"}},"azure":{"subscription":{"key":"bb09912e21f346afb31bd4f80d353792"}},"vulnOffice":{"base":{"url":"https://vuln.intranet.qualys.com"}},"lang":"en","title":"Qualys, Inc.","year":2022}
+		</script>
+		<script src="https://unpkg.com/coveo.analytics@2.18.24/dist/coveoua.js" integrity="sha384-8wcVSOM2hnT06Ca8hVEkWv2BAzl5l6oBL+vwJr6DNWMx74IEI6k3moVPSSkQApVs" crossorigin="anonymous"></script>
+		<script class="coveo-script" src="https://static.cloud.coveo.com/searchui/v2.10085/2/js/CoveoJsSearch.Lazy.min.js" integrity="sha512-vueueBf3ND6Jj5E31AIFE28WnA2gQaGt3jHb+Wx5c0bDFBiKgQ8in3T9L4nVHC02v1uEgsrD4vL6pgYUGwZ3Kw==" crossorigin="anonymous"></script>
+		<script src="/asset/community/shared.js"></script>
+		<script src="/asset/community/coveo.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/contentful@7.3.0/dist/contentful.browser.min.js" integrity="sha384-DX0o2Sr/ra9tg7er/YvF0xrF2O/ADneY6TxkW1EtIuD0ptdxxPlajg3JT0GI92JO" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js" integrity="sha256-CutOzxCRucUsn6C6TcEYsauvvYilEniTXldPa6/wu0k=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.21/moment-timezone-with-data-2012-2022.min.js" integrity="sha256-Jv+5wei4zCofi7M6D+HbGcXbFBOsshNv+aIJSodBGhM=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.2/umd/react.production.min.js" integrity="sha256-2EQx5J1ux3sjgPLtDevlo449XNXfvEplcRYWIF6ui8w=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.2/umd/react-dom.production.min.js" integrity="sha256-3NNU/yoE0R7VxxapKiw/hkgQzcSMztyclb5RpeVlV7Y=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/cross-fetch@3.0.1/dist/browser-polyfill.js" integrity="sha384-waGXQo+Fa0S3Cd/1sHV/mV000H/cCtQsGWYA9sgQzm7aglM+rHGuEHAmaAm9S62h" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js" integrity="sha256-IylDNWjip7FK2TJUYck237qBTBeSiwnSFDCjLG686D4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha256-+2SfyuYhd9/mPmcIHdzrgwtc4fBaQYTpu7fYesS49OU=" crossorigin="anonymous"></script>
+	<script src="channel.js"></script>
+	<script src="fetch-content.js"></script>
+	<script src="index.js"></script>
+
+</body>
+</html>

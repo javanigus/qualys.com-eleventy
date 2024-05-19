@@ -1,0 +1,106 @@
+.section31 {
+    font-family: Gotham, sans-serif;
+    padding: 40px 0px;
+}
+.section31 p {
+    margin-bottom: 0;
+}
+
+.section31 img.only-desktop {
+    display: none;
+}
+.section31 .heading--3 {
+    display: flex;
+    color: #262626;
+    font-family: Gotham, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 34px;
+}
+.section31 .heading-image {
+    flex: 0 0 auto;
+    padding-right: 8px;
+}
+.section31 .heading-text {
+    flex: 1;
+}
+.section31 ul {
+    padding-left: 22px;
+}
+.section31 p {
+    color: #475369;
+    font-size: 20px;
+    font-family: Gotham, sans-serif;
+    font-style: normal;
+    font-weight: 325;
+    line-height: 26px;
+    margin-top: 7px;
+}
+.section31 .q-grid__row .q-grid__column-6:last-child {
+    margin-top: 20px;
+}
+.section31 .including li {
+    padding-bottom: 20px;
+    color: #1d2737;
+    font-size: 18px;
+    font-family: Gotham, sans-serif;
+    line-height: 24px;
+    font-weight: 300;
+}
+.section31 .including .inner-list {
+    padding-top: 10px;
+    list-style: disc;
+}
+.section31 .including .inner-list li {
+    color: #44536b;
+    font-family: Gotham, sans-serif;
+    font-size: 16px;
+    padding-bottom: 3px;
+}
+
+@media (min-width: 375px) {
+    .section31 .q-grid__column {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 720px) {
+    .section31 .q-grid__column {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .section31 .left_ul {
+        padding-top: 46px;
+    }
+}
+
+@media (min-width: 768px) {
+    .section31 .q-grid__row .q-grid__column-6:last-child {
+        margin-top: 0px;
+    }
+    .section31 .q-grid__column {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 990px) { 
+    .section31 img.only-desktop {
+        display: unset;
+        width: 60px;
+    }
+    .section31 p {
+        margin-bottom: 20px;
+    }  
+}
+
+@media (min-width: 1200px) {
+    .section31 {
+        padding: 60px 0px;
+    }
+    .section31 img.only-desktop {
+        width: 80px;
+    }
+}

@@ -1,0 +1,22 @@
+p {
+	font-family: Caecilia, serif;
+    font-size: 16px;
+    line-height: 1.78;
+    letter-spacing: -0.1px;
+    color: #6A778B;
+    font-weight: 400;
+}
+
+@media (min-width: 1290px){
+	p {
+		font-size: 18px;
+	}
+}
+
+ul li p {
+	margin: 0;
+}
+.q-confirmPageText {
+	margin-top: 40px;
+}
+/*# sourceMappingURL=index.css.map */

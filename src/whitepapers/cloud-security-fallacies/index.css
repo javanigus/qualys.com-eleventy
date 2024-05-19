@@ -1,0 +1,56 @@
+.q-book-a-meeting-link {
+    font-size: 14px;
+    background-color: #D5E6F8 !important;
+    color: #2E8BE0;
+    min-width: 9.33333em;
+    padding: 0px 18px;
+    height: 44px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 200ms, color 200ms;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-top:0px;
+    display: block;
+}
+.q-btn{
+    margin: auto;
+    text-align: center;
+}
+.q-text-additional{
+    padding: 0 10px;
+    position: relative;
+    bottom: 10px;
+    display:none;
+    text-align: center;
+}
+.q-book-a-meeting-link:active{
+    background: #D5E6F8 !important;
+}
+.q-book-a-meeting-link.q-button span:after {
+    background: url(https://ik.imagekit.io/qualys/image/icon/link-arrow.svg);
+}
+.q-btn{
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content
+}
+@media (min-width:425px) {
+    .q-book-a-meeting-link {
+        display: inline-flex;
+        margin-top: -20px;
+        width: auto;
+    }
+    .q-text-additional{
+        display: inline-block;
+    }
+    .q-button{
+        display: inline-flex;
+        width: auto;
+    }
+    .q-btn{
+        text-align: left;
+        width: auto;
+    }
+}
+/*# sourceMappingURL=index.css.map */

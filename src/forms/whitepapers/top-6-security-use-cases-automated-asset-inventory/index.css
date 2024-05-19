@@ -1,0 +1,23 @@
+body.forms.whitepapers div.screenshot {
+	background-position: 0 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0;
+}
+div.full-width .form-content div.screenshots {
+	width: 516px;
+}
+div.scrollable {
+	border: 1px solid #CCC;
+}
+div.top_six_security_use_cases-1 {
+	background-image: url(https://ik.imagekit.io/qualys/image/top-6-security-use-cases-whitepaper-1-516-2x.jpg);
+}
+div.top_six_security_use_cases-2 {
+	background-image: url(https://ik.imagekit.io/qualys/image/top-6-security-use-cases-whitepaper-2-516-2x.jpg);
+}
+div.top_six_security_use_cases-3 {
+	background-image: url(https://ik.imagekit.io/qualys/image/top-6-security-use-cases-whitepaper-3-516-2x.jpg);
+}
+
+/*# sourceMappingURL=index.css.map */

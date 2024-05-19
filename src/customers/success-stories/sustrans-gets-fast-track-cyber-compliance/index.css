@@ -1,0 +1,25 @@
+.hero {
+	background-image: url("https://q-website-images.s3.amazonaws.com/www/image/success-stories/sustrans-1440-2x.jpg");
+    background-color: #c0d631;
+}
+.img-container.cloud-agent-ami {
+	height: 359px;
+}
+.cloud-agent-ami img {
+	width: 850px;
+}
+.img-container.container-security-plugin {
+	height: 377px;
+}
+.container-security-plugin img {
+	width: 849px;
+}
+.box.a {
+	background-color: #ffcf41;
+    color: #414042;
+}
+.box.b,
+.quote-box {
+	background-color: #c0d631;
+    color: #414042;
+}

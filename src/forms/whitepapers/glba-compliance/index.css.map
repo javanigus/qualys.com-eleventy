@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../site/pages/forms/whitepapers/glba-compliance/index.css"],"names":[],"mappings":"AAAA;CACC,qFAAqF;AACtF","file":"index.css","sourcesContent":["div.screenshot {\n\tbackground-image: url(https://ik.imagekit.io/qualys/image/sprite-glba-compliance.png);\n}\n"]}

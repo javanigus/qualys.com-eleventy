@@ -1,0 +1,11 @@
+
+User-agent: *
+Disallow: /docs/version/
+Disallow: /search/
+
+Sitemap: https://discussions.qualys.com/sitemap.xml
+Sitemap: https://blog.qualys.com/sitemap.xml
+Sitemap: https://community.qualys.com/sitemap/community.xml
+Sitemap: https://www.qualys.com/sitemap/training.xml
+Sitemap: https://www.qualys.com/sitemap/docs.xml
+Sitemap: https://www.qualys.com/sitemap/release-notes.xml

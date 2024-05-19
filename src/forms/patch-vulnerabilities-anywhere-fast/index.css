@@ -1,0 +1,116 @@
+.section1 {
+	padding-top: 45px;
+	margin-bottom: 7%;
+}
+.single-video-wrapper {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.heading--1 {
+    margin-bottom: 0.2em;
+}
+.mktoButtonRow .mktoButtonWrap {
+	margin: 30px 0 0;
+}
+.q-lp-privacy-info {
+    font-size: 13.125px;
+    margin-bottom: 3.3em;
+    text-align: center;
+    font-weight: 300;
+    font-family: Gotham, sans-serif;
+    display: inline-block;
+    width: 100%;
+    margin-top: 16px;
+    letter-spacing: -0.011em;
+    color: inherit;
+}
+.form-heading {
+	margin: 1em 0 0.75em;
+    color: #262626;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.15em;
+    font-family: Gotham, sans-serif;
+}
+.q-lp-form__subheading {
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    font-style: normal;
+    vertical-align: baseline;
+    border: 0;
+    font-size: 22px;
+    font-family: Gotham, sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.015em;
+    line-height: 1.16667;
+    color: #6A778B;
+    margin-bottom: 0.83333em;
+    max-width: 21.11111em;
+}
+.mktoButton {
+	background: #ED2E26;
+}
+textarea.mktoField {
+	height: auto;
+	padding: 1em 30px;
+	min-height: 105px;
+}
+@media (min-width: 720px) {
+	textarea.mktoField {
+		min-height: 9em;
+	}
+}
+@media (min-width: 785px) {
+	textarea.mktoField {
+		min-height: 7em;
+	}
+}
+@media (min-width: 1080px) {
+	textarea.mktoField {
+		min-height: 7em;
+	}
+}
+@media (min-width: 1170px) {
+	textarea.mktoField {
+		min-height: 5em;
+	}
+}
+@media (min-width: 1280px) {
+	textarea.mktoField {
+		min-height: 7em;
+	}
+}
+@media (min-width: 1340px) {
+	textarea.mktoField {
+		min-height: 5em;
+	}
+}
+@media (min-width: 375px) {
+	.q-lp-form__subheading {
+		font-size: 22px;
+		font-size: calc(0.0153 * 100vw + (16.2623px));
+	}
+}
+@media (min-width: 1290px) {
+	.q-lp-form__subheading {
+		font-size: 36px;
+	}
+}
+@media (min-width: 720px) {
+	.section1 {
+		padding-top: 6.99301%;
+	}
+	.form-heading {
+		margin-top: 0;
+	}
+}
+@media (min-width: 1430px) {
+	.section1 {
+		padding-top: 100px;
+	}
+}
+/*# sourceMappingURL=index.css.map */

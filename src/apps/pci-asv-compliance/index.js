@@ -1,0 +1,3 @@
+"use strict";/* global Waypoint TimelineLite  */ // Centered laptop dashboard animation
+(function(){var a=new TimelineLite,b=window.Power4.easeInOut,c=!1,d=document.querySelector("#pci-unified-dashboard .q-laptop");d.classList.add("q-laptop--will-animate"),new Waypoint({element:document.getElementById("pci-unified-dashboard"),offset:"45%",handler:function handler(d){"down"!==d||c||a.addLabel("start").fromTo("#pci-unified-dashboard .q-laptop",.75,{x:"10%",autoAlpha:0},{x:"0%",autoAlpha:1,ease:b}),c=!0}})})();
+//# sourceMappingURL=index.js.map

@@ -1,0 +1,115 @@
+.q-default-hero__form {
+	padding: 0 13px;
+	color: #FFF;
+	background: #222E41;
+}
+html,
+body {
+	background: #222E41;
+	padding-top: 0;
+}
+@media (min-width: 720px) {
+	body {
+		padding-top: 72px;
+	}
+}
+.heading--1 {
+	color: #FFF;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 0.8em;
+	font-weight: 400;
+}
+@media (min-width: 720px) {
+	.heading--1 {
+		font-size: 44px;
+	}
+}
+.description {
+	color: #F7FAFC;
+	text-align: center;
+	max-width: 85%;
+	margin: 0 auto 3em;
+	font-size: 15px;
+}
+@media (min-width: 720px) {
+	.paragraph--1.description {
+		font-size: 18px;
+	}
+}
+.apps-laptop {
+	max-width: none;
+	margin-top: 2em;
+}
+@media (min-width: 720px) {
+	.apps-laptop {
+		margin-left: -42px;
+		margin-top: 0;
+	}
+}
+.mktoForm label[for="qualysAccount"] {
+	width: 100%;
+}
+@media (min-width: 480px) {
+	.mktoForm label[for="qualysAccount"] {
+		width: 220px;
+	}
+}
+@media (min-width: 530px) {
+	.mktoForm label[for="qualysAccount"] {
+		width: 230px;
+	}
+}
+@media (min-width: 590px) {
+	.mktoForm label[for="qualysAccount"] {
+		width: 300px;
+		margin-right: 1.5em;
+	}
+}
+@media (min-width: 600px) {
+	.qualysAccount .mktoRadioList {
+		float: none;
+	}
+}
+.q-grid__container {
+	margin-bottom: 66px;
+	margin-top: 66px;
+}
+@media (min-width: 720px) {
+	.q-grid__container {
+		margin-top: 0;
+	}
+}
+.mktoButtonRow .mktoButtonWrap {
+	margin: 30px 0 0;
+}
+.apps-laptop {
+	display: none;
+}
+@media (min-width: 720px) {
+	.apps-laptop {
+		display: block;
+	}
+}
+
+/*
+ * Fancybox modal window for privacy policy content
+ */
+.fancybox-slide--iframe .fancybox-content {
+	width: 600px;
+	max-width: 80%;
+	max-height: 80%;
+	margin: 0;
+}
+.q-grid__container {
+	margin-bottom: 0;
+}
+.q-grid__column-5:first-child {
+	display: flex;
+	justify-content: flex-end;
+}
+.fancybox-slide--iframe .fancybox-close-small.privacy {
+	right: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

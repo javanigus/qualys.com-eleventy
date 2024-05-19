@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../site/pages/forms/briefs/pci_scanning_requirements/confirm/index.css"],"names":[],"mappings":"AAAA;CACC,+FAA+F;CAC/F,wCAAwC;AACzC","file":"index.css","sourcesContent":["div.screenshot {\n\tbackground-image: url(https://ik.imagekit.io/qualys/image/sprite-pci-scanning-requirements.png);\n\tbackground-position: 0 -450px !important;\n}\n"]}

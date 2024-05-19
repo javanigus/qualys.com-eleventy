@@ -1,0 +1,336 @@
+.tagline {
+	font-size: 21px;
+	margin-left: 21px;
+	color: #000;
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-style: normal;
+	margin-left: 0px;
+	display: block;
+	margin: 1em auto 0;
+}
+.tagline-mobile {
+	text-align: center;
+	margin: 1em auto;
+	max-width: 290px;
+}
+.q-presented-by {
+	line-height: 1;
+}
+.q-header__container {
+    flex-direction: column;
+	margin-bottom: 50px;
+}
+
+@media (min-width: 720px) {
+	.tagline-mobile {
+		display: none;
+		margin-left: 10px;
+	}
+	.tagline {
+		margin: 0
+	}
+	.q-header__container {
+		flex-direction: row;
+		margin-bottom: 0;
+	}
+	.tagline-mobile {
+		display: none;
+		margin-left: 10px;
+	}
+	.tagline-desktop {
+		display: block;
+		padding-right: 25px;
+		border-right: 1px solid #262626;
+	}
+	.q-presented-by{
+		color: #000;
+		font-family: Gotham;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin-left: 25px;
+		margin-right: 9px;
+		display: block;
+	}
+
+}
+.q-container__register {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+@media (min-width: 1430px) {
+	.q-container__register {
+		padding-top: 100px;
+		padding-bottom: 105px;
+	}
+}
+.including {
+	margin-bottom: 0;
+}
+.partners {
+	margin-top: 0;
+}
+.q-qsc__heading {
+	margin: 0 0 19px;
+}
+
+.q-qsc__copy {
+	max-width: unset;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+.q-qsc__copy ul.paragraph--1 {
+	margin-top: 0;
+}
+@media (min-width: 1080px) {
+	.q-qsc__copy {
+		max-width: 40%;
+	}
+}
+@media (min-width: 1160px) {
+	.q-qsc__copy {
+		max-width: 44.85%;
+	}
+}
+.q-form__button,
+.mktoButton {
+	background: rgba(0,0,0,0.20);
+	border-radius: 0 0 2px 2px;
+	font-size: 22px;
+}
+.q-square__content {
+	padding: 40px 40px 0 ;
+}
+.mktoButtonRow .mktoButtonWrap {
+	margin-left: -40px;
+	margin-right: -40px;
+}
+@media (min-width: 1080px) {
+	.q-square__content {
+		padding: 50px 50px 0 ;
+	}
+	.mktoButtonRow .mktoButtonWrap {
+		margin-left: -50px;
+		margin-right: -50px;
+	}
+}
+@media (min-width: 1430px) {
+	.q-square__content {
+		padding: 40px 80px 0;
+	}
+	.mktoButtonRow .mktoButtonWrap {
+		margin-left: -80px;
+		margin-right: -80px;
+	}
+}
+.q-square__content h3 {
+	margin: 0 0 20px;
+	color: #FFF;
+	letter-spacing: -0.19px;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 30px;
+}
+.q-square__content h3 small {
+	font-weight: 300;
+	font-size: 0.75em;
+}
+.q-form__input,
+input[type=text].mktoField,
+input[type=email].mktoField,
+input[type=tel].mktoField,
+textarea.mktoField,
+select.mktoField,
+.q-form__input:focus,
+input[type=text].mktoField:focus,
+input[type=email].mktoField:focus,
+input[type=tel].mktoField:focus,
+textarea.mktoField:focus,
+select.mktoField:focus {
+	border-color: #FFF;
+	color: #FFF !important;
+}
+select.mktoField {
+	background-image: url(https://ik.imagekit.io/qualys/image/form/select-arrows-white.png);
+}
+.q-form__label,
+.mktoForm label {
+	color: #FFF;
+}
+.mktoForm .qmktoRadioListLabel {
+	margin-bottom: 0.5em;
+}
+.mktoForm input[type="checkbox"]:checked,
+.mktoForm input[type="radio"]:checked,
+.mktoRadioList label.checked::before,
+.mktoCheckboxList label.checked::before {
+	content: url(https://ik.imagekit.io/qualys/image/icon/circle-white.svg);
+}
+.mktoForm input[type="checkbox"]::before,
+.mktoForm input[type="radio"]::before,
+.mktoRadioList label::before,
+.mktoCheckboxList label::before {
+	border-color: #FFF;
+}
+.mktoErrorMsg {
+	color: #FFF;
+}
+
+.crs-register__text--hidden {
+	display: none !important;
+}
+.mktoRadioList.attendingUserConference {
+	display: flex;
+}
+.mktoRadioList.attendingUserConference > label {
+	padding-right: 12px;
+}
+.q-qsc__header--cta {
+	display: none;
+}
+
+.q-qsc__logo img {
+	height: 36px;
+}
+.q-qsc__logo {
+	width: auto;
+	height:36px;
+	display: block;
+    flex: none;
+    margin: 0 auto 0;
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    text-indent: 100%;
+    transition: opacity 200ms;
+}
+.q-default-hero--square-baseline .q-default-hero__splash {
+    margin-top: 0;
+    padding-top: 0;
+}
+.q-default-hero__container {
+	padding-top: 0;
+}
+.q-default-hero--square-baseline .q-default-hero__splash {
+	padding-top: 0%;
+}
+.q-default-hero__image::before {
+	content: "";
+	display: block;
+	 padding-bottom: 0; 
+}
+@media (min-width: 720px){
+	.heroBox {
+		padding-top: 250px;
+	}
+}
+.q-crs-video {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+.q-default-hero__image {
+    display: block;
+}
+
+.q-default-hero__image {
+    background-color: transparent;
+    min-height: unset;
+    position: relative;
+}
+.q-default-hero__box-wrap {
+	width: 100%;
+}
+
+@media (min-width:720px) {
+	.q-default-hero__image {
+		min-height: 390px;
+		position: absolute;
+	}
+	.q-default-hero__box-wrap {
+		width: 40.31008%;
+		min-width: 420px;
+	
+	}
+}
+.q-crs__header--navigation {
+	display: none;
+	margin-bottom: 20px;
+}
+@media (min-width: 720px) {
+.q-crs__header--navigation {
+    display: block;
+    flex: 1 0 auto;
+    text-align: right;
+	margin-bottom: 0;
+ }
+ .q-square__content h3 {
+	font-size: 30px;
+	line-height: 43px;
+ }
+}
+.q-crs__menu {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0 38px 0 0;
+}
+.q-crs__menu > li:last-child {
+    margin-right: 0;
+}
+.q-crs__menu li > a {
+    font-family: Gotham, sans-serif;
+    font-size: 15px;
+    color: #262626;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    transition: color 0.3s;
+}
+
+.q-square {
+	margin-top: 20px;
+}
+.q-virtual-event {
+	background: #6CA3CF;
+	font-family: Gotham;
+	font-size: 14px;
+	font-weight: 500;
+	color: #fff;
+	padding:5px 6px;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	position: absolute;
+	bottom: 0px;
+	left: 20px;
+}
+@media (min-width:720px) {
+	.q-virtual-event {
+		display: none;
+	}
+}
+@media (min-width:920px) {
+	.q-virtual-event {
+		left: 60px;
+		font-size: 20px;
+		bottom: 0;
+		display: block;
+		padding: 12px;
+	}
+}
+
+@media (min-width:1200px) {
+	.q-virtual-event {
+		left: 110px;
+		font-size: 20px;
+	}
+}
+
+/*# sourceMappingURL=index.css.map */

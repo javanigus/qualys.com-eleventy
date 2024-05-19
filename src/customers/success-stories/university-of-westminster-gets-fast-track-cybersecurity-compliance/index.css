@@ -1,0 +1,26 @@
+.hero {
+	background-image: url("https://q-website-images.s3.amazonaws.com/www/image/success-stories/westminster-university-story-wallpaper-1440-2x.jpg");
+}
+.swiper-slide .logo{
+	filter: brightness(0) invert(1);
+}
+.aws-poster {
+	max-width: 575px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+.aws-poster img {
+	max-width: 100%;
+}
+.aws-poster h4 {
+	text-align: center;
+}
+.box.a {
+	background-color: #108480;
+}
+.box.b,
+.quote-box {
+	background-color: #108480;
+}

@@ -1,0 +1,228 @@
+.q-promo-banner {
+	display: none;
+	margin-bottom: 30px;
+	background-color: #000;
+	color: #FFF;
+	display: none;
+	display: relative;
+}
+.q-promo-banner .promo-wrapper {
+	background: #F7FAFC;
+	position: relative;
+	font-family: 'Gotham', sans-serif;
+	transition: box-shadow 0.4s cubic-bezier(0, 1, 0.75, 1), transform 0.4s cubic-bezier(0, 1, 0.75, 1);
+}
+.promo-cta {
+	margin: 0;
+	margin-bottom: -1px;
+}
+.q-promo-banner .q-alert__close {
+	position: absolute;
+	right: 30px;
+}
+.q-promo-banner__container {
+	height: 100%;
+	margin: 0 auto;
+	opacity: 1;
+	padding-left: 0;
+	padding-right: 0;
+	transition: none;
+}
+.q-promo-banner__inner {
+	margin-left: auto;
+	margin-right: auto;
+}
+.q-promo-banner__row {
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+.q-promo-banner__inner,
+.q-promo-banner__row,
+.promo-wrapper {
+	height: 100%;
+}
+.q-promo-banner__column {
+	display: flex;
+	flex-direction: column;
+	padding: 0 30px;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+.promo--hidden {
+	opacity: 0;
+	visibility: hidden;
+	height: 0;
+	min-height: 0;
+	transition: opacity 200ms, visibility 200ms, height 200ms 200ms;
+	margin-bottom: 0;
+}
+@media (min-width: 375px) {
+	.q-promo-banner__container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.q-promo-banner__row {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+}
+@media (max-width: 719px) {
+	.q-promo-banner.promo--hidden {
+		margin-top: 0;
+	}
+}
+@media (min-width: 720px) {
+	.q-promo-banner__container {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	.q-promo-banner__column {
+		width: calc(10 / 10 * 100%);
+		padding: 0 9.3%;
+		justify-content: center;
+	}
+	.q-promo-banner .text {
+		display: inline-block;
+	}
+}
+@media (min-width: 850px) {
+	.q-promo-banner {
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 920px) {
+	.q-promo-banner {
+		min-height: unset;
+		height: 40px;
+		margin-bottom: 0;
+		width: 100%;
+		display: block;
+	}
+	.q-promo-banner.promo--hidden {
+		height: 0;
+	}
+	.q-promo-banner .promo-wrapper {
+		background: transparent;
+		transition: unset;
+	}
+	.q-promo-banner__column {
+		padding-top: 0;
+		padding-bottom: 0;
+		justify-content: flex-start;
+		padding-left: 0;
+		padding-right: 0;
+		align-items: center;
+		flex-direction: row;
+	}
+	.q-promo-banner__row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.q-promo-banner .promo-cta {
+		margin-bottom: 0;
+	}
+	.q-promo-banner .q-alert__close {
+		color: #FFFFFF;
+		top: 0px;
+	}
+	.q-has-promo-banner {
+		padding-top: 118px;
+	}
+	.q-has-promo-banner .q-header {
+		top: 40px;
+		position: absolute;
+	}
+	.header-sticky.q-has-promo-banner .q-header {
+		position: fixed;
+		top: 0;
+	}
+}
+@media (min-width: 1080px) {
+	.q-promo-banner__container {
+		padding-left: 70px;
+		padding-right: 70px;
+		max-width: 1430px;
+	}
+	.q-promo-banner__inner {
+		width: 100%;
+	}
+	.q-promo-banner__column {
+		justify-content: space-between;
+	}
+
+}
+
+/** promo banner custom classes **/
+
+.q-promo-banner .heading-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.q-promo-banner .cta-wrapper {
+	text-decoration: none;
+}
+@media (min-width: 720px) {
+	.q-promo-banner .heading-wrapper {
+		display: inherit;
+		margin: 0 auto;
+	}
+	.q-promo-banner .cta-wrapper {
+		margin-left: unset;
+		margin-right: unset;
+	}
+}
+@media (min-width: 920px) {
+	.q-promo-banner .cta-wrapper {
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.q-promo-banner .heading-wrapper {
+		font-weight: 400;
+		color: #FFF;
+		margin-right: 0;
+		display: flex;
+		align-items: center;
+	}
+}
+@media (min-width: 1290px) {
+	.q-promo-banner .heading-wrapper {
+		font-size: 18px;
+		line-height: 1;
+		letter-spacing: -0.012em;
+	}
+}
+.q-alert__close {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	background: transparent;
+	border: 0;
+	bottom: 0;
+	color: #707D90;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: normal;
+	font-weight: inherit;
+	height: 12px;
+	line-height: 12px;
+	margin: auto 0;
+	padding: 0;
+	position: absolute;
+	right: 30px;
+	top: 0;
+	vertical-align: baseline;
+	width: 12px;
+}
+.q-alert__close:focus {
+	outline: none;
+}
+@media (pointer: fine), (-moz-touch-enabled: 0) {
+	.q-alert__close:hover {
+		color: gray;
+	}
+}
+/*# sourceMappingURL=ssllabs-banner.css.map */

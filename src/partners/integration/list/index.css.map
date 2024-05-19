@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../site/pages/partners/integration/list/index.css"],"names":[],"mappings":"AAAA;CACC,YAAY;CACZ,gBAAgB;AACjB;AACA;CACC,kBAAkB;AACnB","file":"index.css","sourcesContent":["body {\n\tpadding: 1em;\n\tmax-width: 800px;\n}\n.q-modal__image {\n\tmargin-bottom: 1em;\n}"]}

@@ -1,0 +1,25 @@
+.section14{
+    padding:50px 0
+}
+.section14 h2{
+   padding-bottom:50px
+}
+.section14 h2.is-center{
+    text-align:center;
+    margin:auto
+}
+.section14 .q-cloud-platform-content{
+    margin-bottom:30px
+}
+@media (min-width:720px){
+   .section14 .q-cloud-platform-content{
+        width:50%;
+    }
+}
+.section14 .q-apps-powered-by__cta{
+    padding-top:30px;
+    text-align:center
+}
+.section14 .q-icon-plus-content__content{
+    padding-top:20px
+}

@@ -1,0 +1,48 @@
+.hero {
+	margin-top: 50px;
+}
+@media (min-width: 720px) {
+	.hero {
+		margin-top: 80px;
+	}
+}
+.heading--3 {
+	margin-top: 2em;
+}
+.mapping,
+.mapping td,
+.mapping th {
+	border: 1px solid #EDEEF0;
+	border-collapse: collapse;
+	padding: 0.5em;
+	font-family: Gotham, sans-serif;
+	text-align: center;
+	font-size: 15px;
+}
+.mapping th {
+	background-color: #F7FAFC;
+	color: #262626;
+	font-weight: 500;
+}
+.username-diagram {
+	width: 400px;
+}
+.table-wrapper {
+	overflow-x:auto;
+}
+.q-footer {
+	margin-top: 4em;
+}
+.login-api-url {
+	margin-bottom: 1em;
+	width: 100%;
+}
+.login-api-url td.heading {
+	background-color: #F7FAFC;
+	color: #262626;
+	font-weight: 500;
+}
+.addl {
+	margin-top: 3em;
+}
+/*# sourceMappingURL=index.css.map */

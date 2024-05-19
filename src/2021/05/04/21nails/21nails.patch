@@ -1,0 +1,2073 @@
+From 87ce465cfd027db80429bdeea55d1e15f26da892 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 18:54:16 -0800
+Subject: [PATCH 01/26] CVE-2020-28025: Heap out-of-bounds read in
+ pdkim_finish_bodyhash()
+
+---
+ src/src/pdkim/pdkim.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/src/pdkim/pdkim.c b/src/src/pdkim/pdkim.c
+index f683240..d22c278 100644
+--- a/src/src/pdkim/pdkim.c
++++ b/src/src/pdkim/pdkim.c
+@@ -822,7 +822,7 @@ for (pdkim_signature * sig = ctx->sig; sig; sig = sig->next)
+   /* VERIFICATION --------------------------------------------------------- */
+   /* Be careful that the header sig included a bodyash */
+ 
+-    if (  sig->bodyhash.data
++    if (sig->bodyhash.data && sig->bodyhash.len == b->bh.len
+        && memcmp(b->bh.data, sig->bodyhash.data, b->bh.len) == 0)
+       {
+       DEBUG(D_acl) debug_printf("DKIM [%s] Body hash compared OK\n", sig->domain);
+
+From 5f51d47c9b2e3f63400553a6ebae3a8c80b9490c Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 19:05:56 -0800
+Subject: [PATCH 02/26] CVE-2020-28018: Use-after-free in tls-openssl.c
+
+---
+ src/src/tls-openssl.c | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/src/src/tls-openssl.c b/src/src/tls-openssl.c
+index 054b23d..499384b 100644
+--- a/src/src/tls-openssl.c
++++ b/src/src/tls-openssl.c
+@@ -3675,16 +3675,12 @@ if ((more || corked))
+   {
+   if (!len) buff = US &error;	/* dummy just so that string_catn is ok */
+ 
+-#ifndef DISABLE_PIPE_CONNECT
+   int save_pool = store_pool;
+   store_pool = POOL_PERM;
+-#endif
+ 
+   corked = string_catn(corked, buff, len);
+ 
+-#ifndef DISABLE_PIPE_CONNECT
+   store_pool = save_pool;
+-#endif
+ 
+   if (more)
+     {
+
+From b7cc4049b85019b5221c7612a645eb1f867064e3 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 19:11:55 -0800
+Subject: [PATCH 03/26] CVE-2020-28023: Out-of-bounds read in smtp_setup_msg()
+
+Extracted from Jeremy Harris's commit afaf5a50.
+---
+ src/src/acl.c     | 3 ++-
+ src/src/macros.h  | 1 +
+ src/src/smtp_in.c | 4 ++--
+ 3 files changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/src/src/acl.c b/src/src/acl.c
+index 90e1ce8..c8be2e0 100644
+--- a/src/src/acl.c
++++ b/src/src/acl.c
+@@ -4473,7 +4473,8 @@ switch (where)
+     /* Drop cutthrough conns, and drop heldopen verify conns if
+     the previous was not DATA */
+     {
+-    uschar prev = smtp_connection_had[smtp_ch_index-2];
++    uschar prev =
++      smtp_connection_had[SMTP_HBUFF_PREV(SMTP_HBUFF_PREV(smtp_ch_index))];
+     BOOL dropverify = !(prev == SCH_DATA || prev == SCH_BDAT);
+ 
+     cancel_cutthrough_connection(dropverify, US"quit or conndrop");
+diff --git a/src/src/macros.h b/src/src/macros.h
+index f78ae2e..c1c5de2 100644
+--- a/src/src/macros.h
++++ b/src/src/macros.h
+@@ -150,6 +150,7 @@ enough to hold all the headers from a normal kind of message. */
+ /* The size of the circular buffer that remembers recent SMTP commands */
+ 
+ #define SMTP_HBUFF_SIZE 20
++#define SMTP_HBUFF_PREV(n)	((n) ? (n)-1 : SMTP_HBUFF_SIZE-1)
+ 
+ /* The initial size of a big buffer for use in various places. It gets put
+ into big_buffer_size and in some circumstances increased. It should be at least
+diff --git a/src/src/smtp_in.c b/src/src/smtp_in.c
+index f53c3cf..b24c7e3 100644
+--- a/src/src/smtp_in.c
++++ b/src/src/smtp_in.c
+@@ -5303,10 +5303,10 @@ while (done <= 0)
+ 	  }
+ 	if (f.smtp_in_pipelining_advertised && last_was_rcpt)
+ 	  smtp_printf("503 Valid RCPT command must precede %s\r\n", FALSE,
+-	    smtp_names[smtp_connection_had[smtp_ch_index-1]]);
++	    smtp_names[smtp_connection_had[SMTP_HBUFF_PREV(smtp_ch_index)]]);
+ 	else
+ 	  done = synprot_error(L_smtp_protocol_error, 503, NULL,
+-	    smtp_connection_had[smtp_ch_index-1] == SCH_DATA
++	    smtp_connection_had[SMTP_HBUFF_PREV(smtp_ch_index)] == SCH_DATA
+ 	    ? US"valid RCPT command must precede DATA"
+ 	    : US"valid RCPT command must precede BDAT");
+ 
+
+From d5d40234a6f42c9492aca4dfa601dfca27a748ac Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 19:17:32 -0800
+Subject: [PATCH 04/26] CVE-2020-28010: Heap out-of-bounds write in main()
+
+Based on Phil Pennock's commit 0f57feb4.
+---
+ src/src/exim.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+diff --git a/src/src/exim.c b/src/src/exim.c
+index 630ac40..77b488e 100644
+--- a/src/src/exim.c
++++ b/src/src/exim.c
+@@ -3795,6 +3795,9 @@ during readconf_main() some expansion takes place already. */
+ /* Store the initial cwd before we change directories.  Can be NULL if the
+ dir has already been unlinked. */
+ initial_cwd = os_getcwd(NULL, 0);
++if (initial_cwd && strlen(CCS initial_cwd) >= BIG_BUFFER_SIZE) {
++  exim_fail("exim: initial cwd is far too long\n");
++}
+ 
+ /* checking:
+     -be[m] expansion test        -
+@@ -4082,11 +4085,9 @@ if (  (debug_selector & D_any  ||  LOGGING(arguments))
+     p += 13;
+   else
+     {
+-    Ustrncpy(p + 4, initial_cwd, big_buffer_size-5);
+-    p += 4 + Ustrlen(initial_cwd);
+-    /* in case p is near the end and we don't provide enough space for
+-     * string_format to be willing to write. */
+-    *p = '\0';
++    p += 4;
++    snprintf(CS p, big_buffer_size - (p - big_buffer), "%s", CCS initial_cwd);
++    p += strlen(CCS p);
+     }
+ 
+   (void)string_format(p, big_buffer_size - (p - big_buffer), " %d args:", argc);
+
+From 01efe43fff60d68460be176ac4c24da3996be3b5 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 19:22:33 -0800
+Subject: [PATCH 05/26] CVE-2020-28011: Heap buffer overflow in queue_run()
+
+---
+ src/src/queue.c | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
+
+diff --git a/src/src/queue.c b/src/src/queue.c
+index 37d6124..c0e0d97 100644
+--- a/src/src/queue.c
++++ b/src/src/queue.c
+@@ -393,12 +393,18 @@ if (!recurse)
+     p += sprintf(CS p, " -q%s", extras);
+ 
+   if (deliver_selectstring)
+-    p += sprintf(CS p, " -R%s %s", f.deliver_selectstring_regex? "r" : "",
+-      deliver_selectstring);
++    {
++    snprintf(CS p, big_buffer_size - (p - big_buffer), " -R%s %s",
++      f.deliver_selectstring_regex? "r" : "", deliver_selectstring);
++    p += strlen(CCS p);
++    }
+ 
+   if (deliver_selectstring_sender)
+-    p += sprintf(CS p, " -S%s %s", f.deliver_selectstring_sender_regex? "r" : "",
+-      deliver_selectstring_sender);
++    {
++    snprintf(CS p, big_buffer_size - (p - big_buffer), " -S%s %s",
++      f.deliver_selectstring_sender_regex? "r" : "", deliver_selectstring_sender);
++    p += strlen(CCS p);
++    }
+ 
+   log_detail = string_copy(big_buffer);
+   if (*queue_name)
+
+From 52bdace6536545c57f2d132d6890ca9a24f28d2b Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 19:28:28 -0800
+Subject: [PATCH 06/26] CVE-2020-28013: Heap buffer overflow in
+ parse_fix_phrase()
+
+Based on Phil Pennock's commit 8a50c88a.
+---
+ src/src/parse.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/src/src/parse.c b/src/src/parse.c
+index 3ea758a..bb8c473 100644
+--- a/src/src/parse.c
++++ b/src/src/parse.c
+@@ -1124,9 +1124,12 @@ while (s < end)
+             {
+             if (ss >= end) ss--;
+             *t++ = '(';
+-            Ustrncpy(t, s, ss-s);
+-            t += ss-s;
+-            s = ss;
++            if (ss > s)
++              {
++              Ustrncpy(t, s, ss-s);
++              t += ss-s;
++              s = ss;
++              }
+             }
+           }
+ 
+
+From e55d10469b885e4baaa838c41c59cf40f1ae5fe4 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 19:34:55 -0800
+Subject: [PATCH 07/26] CVE-2020-28016: Heap out-of-bounds write in
+ parse_fix_phrase()
+
+Based on Phil Pennock's commit 76a1ce77.
+---
+ src/src/parse.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/src/src/parse.c b/src/src/parse.c
+index bb8c473..0bf2b66 100644
+--- a/src/src/parse.c
++++ b/src/src/parse.c
+@@ -979,7 +979,12 @@ if (i < len)
+ 
+ /* No non-printers; use the RFC 822 quoting rules */
+ 
+-buffer = store_get(len*4, is_tainted(phrase));
++if (len <= 0 || len >= INT_MAX/4)
++  {
++  return string_copy_taint(CUS"", is_tainted(phrase));
++  }
++
++buffer = store_get((len+1)*4, is_tainted(phrase));
+ 
+ s = phrase;
+ end = s + len;
+
+From 7bff83571547249373257dd8906108e7fee63770 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 19:40:21 -0800
+Subject: [PATCH 08/26] Security: Refuse negative and large store allocations
+
+Based on Phil Pennock's commits b34d3046 and e6c1606a.
+---
+ src/src/store.c | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+
+diff --git a/src/src/store.c b/src/src/store.c
+index 7d08c98..bcc1088 100644
+--- a/src/src/store.c
++++ b/src/src/store.c
+@@ -233,6 +233,13 @@ store_get_3(int size, BOOL tainted, const char *func, int linenumber)
+ {
+ int pool = tainted ? store_pool + POOL_TAINT_BASE : store_pool;
+ 
++if (size < 0 || size >= INT_MAX/2)
++  {
++  log_write(0, LOG_MAIN|LOG_PANIC_DIE,
++            "bad memory allocation requested (%d bytes) at %s %d",
++            size, func, linenumber);
++  }
++
+ /* Round up the size to a multiple of the alignment. Although this looks a
+ messy statement, because "alignment" is a constant expression, the compiler can
+ do a reasonable job of optimizing, especially if the value of "alignment" is a
+@@ -379,6 +386,13 @@ int pool = tainted ? store_pool + POOL_TAINT_BASE : store_pool;
+ int inc = newsize - oldsize;
+ int rounded_oldsize = oldsize;
+ 
++if (oldsize < 0 || newsize < oldsize || newsize >= INT_MAX/2)
++  {
++  log_write(0, LOG_MAIN|LOG_PANIC_DIE,
++            "bad memory extension requested (%d -> %d bytes) at %s %d",
++            oldsize, newsize, func, linenumber);
++  }
++
+ /* Check that the block being extended was already of the required taint status;
+ refuse to extend if not. */
+ 
+@@ -739,6 +753,13 @@ if (is_tainted(block) != tainted)
+   die_tainted(US"store_newblock", CUS func, linenumber);
+ #endif
+ 
++if (len < 0 || len > newsize)
++  {
++  log_write(0, LOG_MAIN|LOG_PANIC_DIE,
++            "bad memory extension requested (%d -> %d bytes) at %s %d",
++            len, newsize, func, linenumber);
++  }
++
+ newtext = store_get(newsize, tainted);
+ memcpy(newtext, block, len);
+ if (release_ok) store_release_3(block, pool, func, linenumber);
+@@ -769,6 +790,13 @@ internal_store_malloc(int size, const char *func, int line)
+ {
+ void * yield;
+ 
++if (size < 0 || size >= INT_MAX/2)
++  {
++  log_write(0, LOG_MAIN|LOG_PANIC_DIE,
++            "bad memory allocation requested (%d bytes) at %s %d",
++            size, func, line);
++  }
++
+ if (size < 16) size = 16;
+ 
+ if (!(yield = malloc((size_t)size)))
+
+From c304b1b92bf0bb2519ee81e0628fa5a2c92ffb83 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 19:46:55 -0800
+Subject: [PATCH 09/26] CVE-2020-28017: Integer overflow in
+ receive_add_recipient()
+
+Based on Phil Pennock's commit e3b441f7.
+---
+ src/src/receive.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/src/src/receive.c b/src/src/receive.c
+index ec90e93..96d6d8c 100644
+--- a/src/src/receive.c
++++ b/src/src/receive.c
+@@ -489,6 +489,13 @@ if (recipients_count >= recipients_list_max)
+   {
+   recipient_item *oldlist = recipients_list;
+   int oldmax = recipients_list_max;
++
++  const int safe_recipients_limit = INT_MAX / 2 / sizeof(recipient_item);
++  if (recipients_list_max < 0 || recipients_list_max >= safe_recipients_limit)
++    {
++    log_write(0, LOG_MAIN|LOG_PANIC_DIE, "Too many recipients: %d", recipients_list_max);
++    }
++
+   recipients_list_max = recipients_list_max ? 2*recipients_list_max : 50;
+   recipients_list = store_get(recipients_list_max * sizeof(recipient_item), FALSE);
+   if (oldlist != NULL)
+
+From 6835e1f663032983c48ccd17426e0c89de7ab9d2 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 19:53:43 -0800
+Subject: [PATCH 10/26] CVE-2020-28022: Heap out-of-bounds read and write in
+ extract_option()
+
+Based on Phil Pennock's commit c5017adf.
+---
+ src/src/smtp_in.c | 20 +++++++++++++-------
+ 1 file changed, 13 insertions(+), 7 deletions(-)
+
+diff --git a/src/src/smtp_in.c b/src/src/smtp_in.c
+index b24c7e3..2b0c726 100644
+--- a/src/src/smtp_in.c
++++ b/src/src/smtp_in.c
+@@ -1995,29 +1995,35 @@ static BOOL
+ extract_option(uschar **name, uschar **value)
+ {
+ uschar *n;
+-uschar *v = smtp_cmd_data + Ustrlen(smtp_cmd_data) - 1;
+-while (isspace(*v)) v--;
++uschar *v;
++if (Ustrlen(smtp_cmd_data) <= 0) return FALSE;
++v = smtp_cmd_data + Ustrlen(smtp_cmd_data) - 1;
++while (v > smtp_cmd_data && isspace(*v)) v--;
+ v[1] = 0;
++
+ while (v > smtp_cmd_data && *v != '=' && !isspace(*v))
+   {
+   /* Take care to not stop at a space embedded in a quoted local-part */
+-
+-  if (*v == '"') do v--; while (*v != '"' && v > smtp_cmd_data+1);
++  if (*v == '"')
++    {
++    do v--; while (v > smtp_cmd_data && *v != '"');
++    if (v <= smtp_cmd_data) return FALSE;
++    }
+   v--;
+   }
++if (v <= smtp_cmd_data) return FALSE;
+ 
+ n = v;
+ if (*v == '=')
+   {
+-  while(isalpha(n[-1])) n--;
++  while (n > smtp_cmd_data && isalpha(n[-1])) n--;
+   /* RFC says SP, but TAB seen in wild and other major MTAs accept it */
+-  if (!isspace(n[-1])) return FALSE;
++  if (n <= smtp_cmd_data || !isspace(n[-1])) return FALSE;
+   n[-1] = 0;
+   }
+ else
+   {
+   n++;
+-  if (v == smtp_cmd_data) return FALSE;
+   }
+ *v++ = 0;
+ *name = n;
+
+From 9be06d582ad3a03f9b0f38964032df20de071e89 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 21:17:31 -0800
+Subject: [PATCH 11/26] CVE-2020-28026: Line truncation and injection in
+ spool_read_header()
+
+This also fixes:
+
+2/ In src/spool_in.c:
+
+ 462   while (  (len = Ustrlen(big_buffer)) == big_buffer_size-1
+ 463         && big_buffer[len-1] != '\n'
+ 464         )
+ 465     {   /* buffer not big enough for line; certs make this possible */
+ 466     uschar * buf;
+ 467     if (big_buffer_size >= BIG_BUFFER_SIZE*4) goto SPOOL_READ_ERROR;
+ 468     buf = store_get_perm(big_buffer_size *= 2, FALSE);
+ 469     memcpy(buf, big_buffer, --len);
+
+The --len in memcpy() chops off a useful byte (we know for sure that
+big_buffer[len-1] is not a '\n' because we entered the while loop).
+---
+ src/src/spool_in.c | 48 ++++++++++++++++++++++++++++++++----------------
+ 1 file changed, 32 insertions(+), 16 deletions(-)
+
+diff --git a/src/src/spool_in.c b/src/src/spool_in.c
+index 35e44df..b07b132 100644
+--- a/src/src/spool_in.c
++++ b/src/src/spool_in.c
+@@ -305,6 +305,35 @@ dsn_envid = NULL;
+ }
+ 
+ 
++static void *
++fgets_big_buffer(FILE *fp)
++{
++int len = 0;
++
++big_buffer[0] = 0;
++if (Ufgets(big_buffer, big_buffer_size, fp) == NULL) return NULL;
++
++while ((len = Ustrlen(big_buffer)) == big_buffer_size-1
++      && big_buffer[len-1] != '\n')
++  {
++  uschar *newbuffer;
++  int newsize;
++
++  if (big_buffer_size >= BIG_BUFFER_SIZE * 4) return NULL;
++  newsize = big_buffer_size * 2;
++  newbuffer = store_get_perm(newsize, FALSE);
++  memcpy(newbuffer, big_buffer, len);
++
++  big_buffer = newbuffer;
++  big_buffer_size = newsize;
++  if (Ufgets(big_buffer + len, big_buffer_size - len, fp) == NULL) return NULL;
++  }
++
++if (len <= 0 || big_buffer[len-1] != '\n') return NULL;
++return big_buffer;
++}
++
++
+ /*************************************************
+ *             Read spool header file             *
+ *************************************************/
+@@ -452,26 +481,13 @@ If the line starts with "--" the content of the variable is tainted.  */
+ 
+ for (;;)
+   {
+-  int len;
+   BOOL tainted;
+   uschar * var;
+   const uschar * p;
+ 
+-  if (Ufgets(big_buffer, big_buffer_size, fp) == NULL) goto SPOOL_READ_ERROR;
++  if (fgets_big_buffer(fp) == NULL) goto SPOOL_READ_ERROR;
+   if (big_buffer[0] != '-') break;
+-  while (  (len = Ustrlen(big_buffer)) == big_buffer_size-1
+-	&& big_buffer[len-1] != '\n'
+-	)
+-    {	/* buffer not big enough for line; certs make this possible */
+-    uschar * buf;
+-    if (big_buffer_size >= BIG_BUFFER_SIZE*4) goto SPOOL_READ_ERROR;
+-    buf = store_get_perm(big_buffer_size *= 2, FALSE);
+-    memcpy(buf, big_buffer, --len);
+-    big_buffer = buf;
+-    if (Ufgets(big_buffer+len, big_buffer_size-len, fp) == NULL)
+-      goto SPOOL_READ_ERROR;
+-    }
+-  big_buffer[len-1] = 0;
++  big_buffer[Ustrlen(big_buffer)-1] = 0;
+ 
+   tainted = big_buffer[1] == '-';
+   var =  big_buffer + (tainted ? 2 : 1);
+@@ -764,7 +780,7 @@ for (recipients_count = 0; recipients_count < rcount; recipients_count++)
+   uschar *errors_to = NULL;
+   uschar *p;
+ 
+-  if (Ufgets(big_buffer, big_buffer_size, fp) == NULL) goto SPOOL_READ_ERROR;
++  if (fgets_big_buffer(fp) == NULL) goto SPOOL_READ_ERROR;
+   nn = Ustrlen(big_buffer);
+   if (nn < 2) goto SPOOL_FORMAT_ERROR;
+ 
+
+From 03491cfa92e5032f86925fed3add0ad139bbd095 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 21:26:53 -0800
+Subject: [PATCH 12/26] CVE-2020-28015+28021: New-line injection into spool
+ header file
+
+---
+ src/src/spool_out.c | 23 ++++++++++++++++++-----
+ 1 file changed, 18 insertions(+), 5 deletions(-)
+
+diff --git a/src/src/spool_out.c b/src/src/spool_out.c
+index 0851ce9..a0c6995 100644
+--- a/src/src/spool_out.c
++++ b/src/src/spool_out.c
+@@ -105,6 +105,18 @@ return fd;
+ 
+ 
+ 
++static const uschar *
++zap_newlines(const uschar *s)
++{
++uschar *z, *p;
++
++if (Ustrchr(s, '\n') == NULL) return s;
++
++p = z = string_copy(s);
++while ((p = Ustrchr(p, '\n')) != NULL) *p++ = ' ';
++return z;
++}
++
+ static void
+ spool_var_write(FILE * fp, const uschar * name, const uschar * val)
+ {
+@@ -221,7 +233,7 @@ if (body_zerocount > 0) fprintf(fp, "-body_zerocount %d\n", body_zerocount);
+ if (authenticated_id)
+   spool_var_write(fp, US"auth_id", authenticated_id);
+ if (authenticated_sender)
+-  spool_var_write(fp, US"auth_sender", authenticated_sender);
++  spool_var_write(fp, US"auth_sender", zap_newlines(authenticated_sender));
+ 
+ if (f.allow_unqualified_recipient) fprintf(fp, "-allow_unqualified_recipient\n");
+ if (f.allow_unqualified_sender) fprintf(fp, "-allow_unqualified_sender\n");
+@@ -294,19 +306,20 @@ fprintf(fp, "%d\n", recipients_count);
+ for (int i = 0; i < recipients_count; i++)
+   {
+   recipient_item *r = recipients_list + i;
++  const uschar *address = zap_newlines(r->address);
+ 
+   /* DEBUG(D_deliver) debug_printf("DSN: Flags: 0x%x\n", r->dsn_flags); */
+ 
+   if (r->pno < 0 && !r->errors_to && r->dsn_flags == 0)
+-    fprintf(fp, "%s\n", r->address);
++    fprintf(fp, "%s\n", address);
+   else
+     {
+-    uschar * errors_to = r->errors_to ? r->errors_to : US"";
++    const uschar *errors_to = r->errors_to ? zap_newlines(r->errors_to) : CUS"";
+     /* for DSN SUPPORT extend exim 4 spool in a compatible way by
+     adding new values upfront and add flag 0x02 */
+-    uschar * orcpt = r->orcpt ? r->orcpt : US"";
++    const uschar *orcpt = r->orcpt ? zap_newlines(r->orcpt) : CUS"";
+ 
+-    fprintf(fp, "%s %s %d,%d %s %d,%d#3\n", r->address, orcpt, Ustrlen(orcpt),
++    fprintf(fp, "%s %s %d,%d %s %d,%d#3\n", address, orcpt, Ustrlen(orcpt),
+       r->dsn_flags, errors_to, Ustrlen(errors_to), r->pno);
+     }
+ 
+
+From 13bbbcf381cf7784c2c7fbac9de6585fd516cc75 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 21:45:19 -0800
+Subject: [PATCH 13/26] CVE-2020-28009: Integer overflow in get_stdinput()
+
+---
+ src/src/string.c | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+
+diff --git a/src/src/string.c b/src/src/string.c
+index f91a6a4..27e030b 100644
+--- a/src/src/string.c
++++ b/src/src/string.c
+@@ -1091,7 +1091,16 @@ existing length of the string. */
+ 
+ unsigned inc = oldsize < 4096 ? 127 : 1023;
+ 
++if (g->ptr < 0 || g->ptr > g->size || g->size >= INT_MAX/2)
++  log_write(0, LOG_MAIN|LOG_PANIC_DIE,
++    "internal error in gstring_grow (ptr %d size %d)", g->ptr, g->size);
++
+ if (count <= 0) return;
++
++if (count >= INT_MAX/2 - g->ptr)
++  log_write(0, LOG_MAIN|LOG_PANIC_DIE,
++    "internal error in gstring_grow (ptr %d count %d)", g->ptr, count);
++
+ g->size = (p + count + inc + 1) & ~inc;		/* one for a NUL */
+ 
+ /* Try to extend an existing allocation. If the result of calling
+@@ -1140,6 +1149,10 @@ string_catn(gstring * g, const uschar *s, int count)
+ int p;
+ BOOL srctaint = is_tainted(s);
+ 
++if (count < 0)
++  log_write(0, LOG_MAIN|LOG_PANIC_DIE,
++    "internal error in string_catn (count %d)", count);
++
+ if (!g)
+   {
+   unsigned inc = count < 4096 ? 127 : 1023;
+@@ -1149,8 +1162,12 @@ if (!g)
+ else if (srctaint && !is_tainted(g->s))
+   gstring_rebuffer(g);
+ 
++if (g->ptr < 0 || g->ptr > g->size)
++  log_write(0, LOG_MAIN|LOG_PANIC_DIE,
++    "internal error in string_catn (ptr %d size %d)", g->ptr, g->size);
++
+ p = g->ptr;
+-if (p + count >= g->size)
++if (count >= g->size - p)
+   gstring_grow(g, count);
+ 
+ /* Because we always specify the exact number of characters to copy, we can
+
+From 297cc448a79c0417e9b5494135c4a73b8ce43fab Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 21:49:30 -0800
+Subject: [PATCH 14/26] CVE-2020-28024: Heap buffer underflow in smtp_ungetc()
+
+---
+ src/src/smtp_in.c | 3 +++
+ src/src/tls.c     | 3 +++
+ 2 files changed, 6 insertions(+)
+
+diff --git a/src/src/smtp_in.c b/src/src/smtp_in.c
+index 2b0c726..50daab5 100644
+--- a/src/src/smtp_in.c
++++ b/src/src/smtp_in.c
+@@ -795,6 +795,9 @@ Returns:       the character
+ int
+ smtp_ungetc(int ch)
+ {
++if (smtp_inptr <= smtp_inbuffer)
++  log_write(0, LOG_MAIN|LOG_PANIC_DIE, "buffer underflow in smtp_ungetc");
++
+ *--smtp_inptr = ch;
+ return ch;
+ }
+diff --git a/src/src/tls.c b/src/src/tls.c
+index e5aabc6..d37a8f9 100644
+--- a/src/src/tls.c
++++ b/src/src/tls.c
+@@ -157,6 +157,9 @@ Returns:       the character
+ int
+ tls_ungetc(int ch)
+ {
++if (ssl_xfer_buffer_lwm <= 0)
++  log_write(0, LOG_MAIN|LOG_PANIC_DIE, "buffer underflow in tls_ungetc");
++
+ ssl_xfer_buffer[--ssl_xfer_buffer_lwm] = ch;
+ return ch;
+ }
+
+From e2b81d77693209ad6f87aa940dc7bc2749b9042c Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 21:53:55 -0800
+Subject: [PATCH 15/26] CVE-2020-28012: Missing close-on-exec flag for
+ privileged pipe
+
+---
+ src/src/rda.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/src/src/rda.c b/src/src/rda.c
+index aed8abc..ce6e7a3 100644
+--- a/src/src/rda.c
++++ b/src/src/rda.c
+@@ -618,9 +618,14 @@ search_tidyup();
+ if ((pid = exim_fork(US"router-interpret")) == 0)
+   {
+   header_line *waslast = header_last;   /* Save last header */
++  int fd_flags = -1;
+ 
+   fd = pfd[pipe_write];
+   (void)close(pfd[pipe_read]);
++
++  if ((fd_flags = fcntl(fd, F_GETFD)) == -1) goto bad;
++  if (fcntl(fd, F_SETFD, fd_flags | FD_CLOEXEC) == -1) goto bad;
++
+   exim_setugid(ugid->uid, ugid->gid, FALSE, rname);
+ 
+   /* Addresses can get rewritten in filters; if we are not root or the exim
+
+From 80461be099e4e16737bf08a1c362b1926792b161 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 22:00:31 -0800
+Subject: [PATCH 16/26] Security: Safeguard against relative names for msglog
+ files.
+
+Based on Heiko Schlittermann's commit 4f0ac4ad. This fixes:
+
+3/ In src/deliver.c:
+
+ 333 static int
+ 334 open_msglog_file(uschar *filename, int mode, uschar **error)
+ 335 {
+ 336 if (Ustrstr(filename, US"/../"))
+ 337   log_write(0, LOG_MAIN|LOG_PANIC,
+ 338     "Attempt to open msglog file path with upward-traversal: '%s'\n", filename);
+
+Should this be LOG_PANIC_DIE instead of LOG_PANIC? Right now it will log
+the /../ attempt but will open the file anyway.
+---
+ src/src/deliver.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/src/deliver.c b/src/src/deliver.c
+index d85edd7..74387b6 100644
+--- a/src/src/deliver.c
++++ b/src/src/deliver.c
+@@ -333,8 +333,8 @@ Returns:    a file descriptor, or -1 (with errno set)
+ static int
+ open_msglog_file(uschar *filename, int mode, uschar **error)
+ {
+-if (Ustrstr(filename, US"/../"))
+-  log_write(0, LOG_MAIN|LOG_PANIC,
++if (Ustrstr(filename, "/../"))
++  log_write(0, LOG_MAIN|LOG_PANIC_DIE,
+     "Attempt to open msglog file path with upward-traversal: '%s'\n", filename);
+ 
+ for (int i = 2; i > 0; i--)
+
+From d681b362da926cfcc1d3502ddad1eb6205ba86fe Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 22:05:37 -0800
+Subject: [PATCH 17/26] Security: Check overrun rcpt_count integer
+
+Based on Heiko Schlittermann's commit e5cb5e61. This fixes:
+
+4/ In src/smtp_in.c:
+
+4966     case RCPT_CMD:
+4967       HAD(SCH_RCPT);
+4968       rcpt_count++;
+....
+5123       if (rcpt_count > recipients_max && recipients_max > 0)
+
+In theory this recipients_max check can be bypassed, because the int
+rcpt_count can overflow (become negative). In practice this would either
+consume too much memory or generate too much network traffic, but maybe
+it should be fixed anyway.
+---
+ src/src/smtp_in.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/src/smtp_in.c b/src/src/smtp_in.c
+index 50daab5..297f55e 100644
+--- a/src/src/smtp_in.c
++++ b/src/src/smtp_in.c
+@@ -4974,6 +4974,8 @@ while (done <= 0)
+ 
+     case RCPT_CMD:
+       HAD(SCH_RCPT);
++      if (rcpt_count < 0 || rcpt_count >= INT_MAX/2)
++        log_write(0, LOG_MAIN|LOG_PANIC_DIE, "Too many recipients: %d", rcpt_count);
+       rcpt_count++;
+       was_rcpt = fl.rcpt_in_progress = TRUE;
+ 
+
+From aa0982d863dcaf6ea55f77f5c62e6340f832465c Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 22:09:06 -0800
+Subject: [PATCH 18/26] Security: Always exit when LOG_PANIC_DIE is set
+
+---
+ src/src/log.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/src/log.c b/src/src/log.c
+index 99eba5f..07bf2ce 100644
+--- a/src/src/log.c
++++ b/src/src/log.c
+@@ -900,6 +900,7 @@ if (!(flags & (LOG_MAIN|LOG_PANIC|LOG_REJECT)))
+ if (f.disable_logging)
+   {
+   DEBUG(D_any) debug_printf("log writing disabled\n");
++  if ((flags & LOG_PANIC_DIE) == LOG_PANIC_DIE) exim_exit(EXIT_FAILURE);
+   return;
+   }
+ 
+
+From 24e31c7b20b4d8ac35438f073336031e3d479909 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 22:13:18 -0800
+Subject: [PATCH 19/26] Security: Fix off-by-one in smtp transport (read
+ response)
+
+Based on Heiko Schlittermann's commit 1887a160. This fixes:
+
+1/ In src/transports/smtp.c:
+
+2281       int n = sizeof(sx->buffer);
+2282       uschar * rsp = sx->buffer;
+2283
+2284       if (sx->esmtp_sent && (n = Ustrlen(sx->buffer)) < sizeof(sx->buffer)/2)
+2285         { rsp = sx->buffer + n + 1; n = sizeof(sx->buffer) - n; }
+
+This should probably be either:
+
+rsp = sx->buffer + n + 1; n = sizeof(sx->buffer) - n - 1;
+
+or:
+
+rsp = sx->buffer + n; n = sizeof(sx->buffer) - n;
+
+(not sure which) to avoid an off-by-one.
+---
+ src/src/transports/smtp.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/src/transports/smtp.c b/src/src/transports/smtp.c
+index 6540e4d..f26e233 100644
+--- a/src/src/transports/smtp.c
++++ b/src/src/transports/smtp.c
+@@ -2359,8 +2359,8 @@ goto SEND_QUIT;
+       int n = sizeof(sx->buffer);
+       uschar * rsp = sx->buffer;
+ 
+-      if (sx->esmtp_sent && (n = Ustrlen(sx->buffer)) < sizeof(sx->buffer)/2)
+-	{ rsp = sx->buffer + n + 1; n = sizeof(sx->buffer) - n; }
++      if (sx->esmtp_sent && (n = Ustrlen(sx->buffer) + 1) < sizeof(sx->buffer)/2)
++	{ rsp = sx->buffer + n; n = sizeof(sx->buffer) - n; }
+ 
+       if (smtp_write_command(sx, SCMD_FLUSH, "HELO %s\r\n", sx->helo_data) < 0)
+ 	goto SEND_FAILED;
+
+From 2581f689575e07a9b3aaa70af51e36f00666d275 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 22:19:42 -0800
+Subject: [PATCH 20/26] Security: Avoid decrement of dkim_collect_input if
+ already at 0
+
+Based on Heiko Schlittermann's commit bf2d6e58. This fixes:
+
+5/ receive_msg() calls dkim_exim_verify_finish(), which sets
+dkim_collect_input to 0 and calls pdkim_feed_finish(), which calls
+pdkim_header_complete(), which decreases dkim_collect_input to UINT_MAX,
+which reactivates the DKIM code.
+
+As a result, pdkim_feed() is called again (through receive_getc at the
+end of receive_msg()), but functions like pdkim_finish_bodyhash() and
+exim_sha_finish() have already been called (in pdkim_feed_finish()).
+This suggests a use-after-free.
+
+But it seems that a use-after-free would happen only with
+EVP_DigestFinal() (in exim_sha_finish()), which does not seem to be
+reachable via DKIM (no SHA3). But we checked OpenSSL only, not GnuTLS.
+
+Here is a proof of concept that triggers the bug (which came very close
+to a security vulnerability):
+
+(sleep 10; echo 'EHLO test'; sleep 3; echo 'MAIL FROM:<>'; sleep 3; echo 'RCPT TO:postmaster'; sleep 3; echo 'BDAT 42 LAST'; date >&2; sleep 30; printf 'not a valid header line\r\n
+DKIM-Signature:\r\nXXX'; sleep 30) | nc -n -v 192.168.56.102 25
+
+(gdb) print &dkim_collect_input
+$2 = (unsigned int *) 0x55e180386d90 <dkim_collect_input>
+(gdb) watch *(unsigned int *) 0x55e180386d90
+
+Hardware watchpoint 1: *(unsigned int *) 0x55e180386d90
+Old value = 0
+New value = 4294967295
+#0  0x000055e18031f805 in pdkim_header_complete (ctx=ctx@entry=0x55e181b9e8e0) at pdkim.c:1006
+#1  0x000055e18032106c in pdkim_feed_finish (ctx=0x55e181b9e8e0, return_signatures=0x55e180386d78 <dkim_signatures>, err=err@entry=0x7ffe443e1d00) at pdkim.c:1490
+#2  0x000055e1802a3280 in dkim_exim_verify_finish () at dkim.c:328
+#3  0x000055e1802c9d1d in receive_msg (extract_recip=extract_recip@entry=0) at receive.c:3409
+---
+ src/src/pdkim/pdkim.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/src/pdkim/pdkim.c b/src/src/pdkim/pdkim.c
+index d22c278..ecb2ec3 100644
+--- a/src/src/pdkim/pdkim.c
++++ b/src/src/pdkim/pdkim.c
+@@ -1003,7 +1003,7 @@ else
+       last_sig->next = sig;
+       }
+ 
+-    if (--dkim_collect_input == 0)
++    if (dkim_collect_input && --dkim_collect_input == 0)
+       {
+       ctx->headers = pdkim_prepend_stringlist(ctx->headers, ctx->cur_header->s);
+       ctx->cur_header->s[ctx->cur_header->ptr = 0] = '\0';
+
+From caebeadfcbcc15b3483678275d094c71512e3799 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 22:24:13 -0800
+Subject: [PATCH 21/26] Security: Leave a clean smtp_out input buffer even in
+ case of read error
+
+Based on Heiko Schlittermann's commit 54895bc3. This fixes:
+
+7/ In src/smtp_out.c, read_response_line(), inblock->ptr is not updated
+when -1 is returned. This does not seem to have bad consequences, but is
+maybe not the intended behavior.
+---
+ src/src/smtp_out.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/src/src/smtp_out.c b/src/src/smtp_out.c
+index c4c4096..d1f6902 100644
+--- a/src/src/smtp_out.c
++++ b/src/src/smtp_out.c
+@@ -643,7 +643,7 @@ Arguments:
+   timelimit deadline for reading the lime, seconds past epoch
+ 
+ Returns:    length of a line that has been put in the buffer
+-            -1 otherwise, with errno set
++            -1 otherwise, with errno set, and inblock->ptr adjusted
+ */
+ 
+ static int
+@@ -684,6 +684,7 @@ for (;;)
+       {
+       *p = 0;                     /* Leave malformed line for error message */
+       errno = ERRNO_SMTPFORMAT;
++      inblock->ptr = ptr;
+       return -1;
+       }
+     }
+@@ -709,6 +710,7 @@ for (;;)
+ /* Get here if there has been some kind of recv() error; errno is set, but we
+ ensure that the result buffer is empty before returning. */
+ 
++inblock->ptr = inblock->ptrend = inblock->buffer;
+ *buffer = 0;
+ return -1;
+ }
+
+From 30aa4408e1f02ee06073386097fd478eeaa913c4 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 22:30:03 -0800
+Subject: [PATCH 22/26] Security: Avoid modification of constant data in dkim
+ handling
+
+Based on Heiko Schlittermann's commits f880c7f3 and c118c7f4. This
+fixes:
+
+6/ In src/pdkim/pdkim.c, pdkim_update_ctx_bodyhash() is sometimes called
+with a global orig_data and hence canon_data, and the following line can
+therefore modify data that should be constant:
+
+ 773   canon_data->len = b->bodylength - b->signed_body_bytes;
+
+For example, the following proof of concept sets lineending.len to 0
+(this should not be possible):
+
+(sleep 10; echo 'EHLO test'; sleep 3; echo 'MAIL FROM:<>'; sleep 3; echo 'RCPT TO:postmaster'; sleep 3; echo 'DATA'; date >&2; sleep 30; printf 'DKIM-Signature:a=rsa-sha1;c=simple/simple;l=0\r\n\r\n\r\nXXX\r\n.\r\n'; sleep 30) | nc -n -v 192.168.56.102 25
+
+(gdb) print lineending
+$1 = {data = 0x55e18035b2ad "\r\n", len = 2}
+(gdb) print &lineending.len
+$3 = (size_t *) 0x55e180385948 <lineending+8>
+(gdb) watch *(size_t *) 0x55e180385948
+
+Hardware watchpoint 1: *(size_t *) 0x55e180385948
+Old value = 2
+New value = 0
+(gdb) print lineending
+$5 = {data = 0x55e18035b2ad "\r\n", len = 0}
+---
+ src/src/pdkim/pdkim.c | 21 ++++++++++++---------
+ 1 file changed, 12 insertions(+), 9 deletions(-)
+
+diff --git a/src/src/pdkim/pdkim.c b/src/src/pdkim/pdkim.c
+index ecb2ec3..36e666f 100644
+--- a/src/src/pdkim/pdkim.c
++++ b/src/src/pdkim/pdkim.c
+@@ -107,7 +107,7 @@ pdkim_combined_canon_entry pdkim_combined_canons[] = {
+ };
+ 
+ 
+-static blob lineending = {.data = US"\r\n", .len = 2};
++static const blob lineending = {.data = US"\r\n", .len = 2};
+ 
+ /* -------------------------------------------------------------------------- */
+ uschar *
+@@ -720,9 +720,11 @@ return NULL;
+ If we have to relax the data for this sig, return our copy of it. */
+ 
+ static blob *
+-pdkim_update_ctx_bodyhash(pdkim_bodyhash * b, blob * orig_data, blob * relaxed_data)
++pdkim_update_ctx_bodyhash(pdkim_bodyhash * b, const blob * orig_data, blob * relaxed_data)
+ {
+-blob * canon_data = orig_data;
++const blob * canon_data = orig_data;
++size_t left;
++
+ /* Defaults to simple canon (no further treatment necessary) */
+ 
+ if (b->canon_method == PDKIM_CANON_RELAXED)
+@@ -767,16 +769,17 @@ if (b->canon_method == PDKIM_CANON_RELAXED)
+   }
+ 
+ /* Make sure we don't exceed the to-be-signed body length */
++left = canon_data->len;
+ if (  b->bodylength >= 0
+-   && b->signed_body_bytes + (unsigned long)canon_data->len > b->bodylength
++   && left > (unsigned long)b->bodylength - b->signed_body_bytes
+    )
+-  canon_data->len = b->bodylength - b->signed_body_bytes;
++  left = (unsigned long)b->bodylength - b->signed_body_bytes;
+ 
+-if (canon_data->len > 0)
++if (left > 0)
+   {
+-  exim_sha_update(&b->body_hash_ctx, CUS canon_data->data, canon_data->len);
+-  b->signed_body_bytes += canon_data->len;
+-  DEBUG(D_acl) pdkim_quoteprint(canon_data->data, canon_data->len);
++  exim_sha_update(&b->body_hash_ctx, CUS canon_data->data, left);
++  b->signed_body_bytes += left;
++  DEBUG(D_acl) pdkim_quoteprint(canon_data->data, left);
+   }
+ 
+ return relaxed_data;
+
+From 8fdf65e8d81d9ee429f40bd652b2379a13b4c36c Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Sun, 21 Feb 2021 22:36:10 -0800
+Subject: [PATCH 23/26] CVE-2020-28019: Failure to reset function pointer after
+ BDAT error
+
+Based on Phil Pennock's commits 4715403e and 151ffd72, and Jeremy
+Harris's commits aa171254 and 9aceb5c2.
+---
+ src/src/globals.c |  1 +
+ src/src/globals.h |  1 +
+ src/src/smtp_in.c | 92 +++++++++++++++++++++++++++++++++++++++++++------------
+ 3 files changed, 75 insertions(+), 19 deletions(-)
+
+diff --git a/src/src/globals.c b/src/src/globals.c
+index c34ac9d..f2e7a22 100644
+--- a/src/src/globals.c
++++ b/src/src/globals.c
+@@ -221,6 +221,7 @@ struct global_flags f =
+ 	.authentication_local   = FALSE,
+ 
+ 	.background_daemon      = TRUE,
++	.bdat_readers_wanted    = FALSE,
+ 
+ 	.chunking_offered       = FALSE,
+ 	.config_changed         = FALSE,
+diff --git a/src/src/globals.h b/src/src/globals.h
+index a4c1143..bb81155 100644
+--- a/src/src/globals.h
++++ b/src/src/globals.h
+@@ -183,6 +183,7 @@ extern struct global_flags {
+  BOOL   authentication_local		:1; /* TRUE if non-smtp (implicit authentication) */
+ 
+  BOOL   background_daemon		:1; /* Set FALSE to keep in foreground */
++ BOOL   bdat_readers_wanted		:1; /* BDAT-handling to be pushed on readfunc stack */
+ 
+  BOOL   chunking_offered		:1;
+  BOOL   config_changed			:1; /* True if -C used */
+diff --git a/src/src/smtp_in.c b/src/src/smtp_in.c
+index 297f55e..cfc767f 100644
+--- a/src/src/smtp_in.c
++++ b/src/src/smtp_in.c
+@@ -593,6 +593,11 @@ if (n > 0)
+ }
+ 
+ 
++/* Forward declarations */
++static inline void bdat_push_receive_functions(void);
++static inline void bdat_pop_receive_functions(void);
++
++
+ /* Get a byte from the smtp input, in CHUNKING mode.  Handle ack of the
+ previous BDAT chunk and getting new ones when we run out.  Uses the
+ underlying smtp_getc or tls_getc both for that and for getting the
+@@ -624,9 +629,7 @@ for(;;)
+   if (chunking_data_left > 0)
+     return lwr_receive_getc(chunking_data_left--);
+ 
+-  receive_getc = lwr_receive_getc;
+-  receive_getbuf = lwr_receive_getbuf;
+-  receive_ungetc = lwr_receive_ungetc;
++  bdat_pop_receive_functions();
+ #ifndef DISABLE_DKIM
+   dkim_save = dkim_collect_input;
+   dkim_collect_input = 0;
+@@ -730,9 +733,7 @@ next_cmd:
+ 	  goto repeat_until_rset;
+ 	  }
+ 
+-      receive_getc = bdat_getc;
+-      receive_getbuf = bdat_getbuf;	/* r~getbuf is never actually used */
+-      receive_ungetc = bdat_ungetc;
++      bdat_push_receive_functions();
+ #ifndef DISABLE_DKIM
+       dkim_collect_input = dkim_save;
+ #endif
+@@ -765,9 +766,7 @@ while (chunking_data_left)
+   if (!bdat_getbuf(&n)) break;
+   }
+ 
+-receive_getc = lwr_receive_getc;
+-receive_getbuf = lwr_receive_getbuf;
+-receive_ungetc = lwr_receive_ungetc;
++bdat_pop_receive_functions();
+ 
+ if (chunking_state != CHUNKING_LAST)
+   {
+@@ -777,7 +776,45 @@ if (chunking_state != CHUNKING_LAST)
+ }
+ 
+ 
++static inline void
++bdat_push_receive_functions(void)
++{
++/* push the current receive_* function on the "stack", and
++replace them by bdat_getc(), which in turn will use the lwr_receive_*
++functions to do the dirty work. */
++if (lwr_receive_getc == NULL)
++  {
++  lwr_receive_getc = receive_getc;
++  lwr_receive_getbuf = receive_getbuf;
++  lwr_receive_ungetc = receive_ungetc;
++  }
++else
++  {
++  DEBUG(D_receive) debug_printf("chunking double-push receive functions\n");
++  }
++
++receive_getc = bdat_getc;
++receive_getbuf = bdat_getbuf;
++receive_ungetc = bdat_ungetc;
++}
++
++static inline void
++bdat_pop_receive_functions(void)
++{
++if (lwr_receive_getc == NULL)
++  {
++  DEBUG(D_receive) debug_printf("chunking double-pop receive functions\n");
++  return;
++  }
++
++receive_getc = lwr_receive_getc;
++receive_getbuf = lwr_receive_getbuf;
++receive_ungetc = lwr_receive_ungetc;
+ 
++lwr_receive_getc = NULL;
++lwr_receive_getbuf = NULL;
++lwr_receive_ungetc = NULL;
++}
+ 
+ /*************************************************
+ *          SMTP version of ungetc()              *
+@@ -2573,6 +2610,11 @@ receive_ungetc = smtp_ungetc;
+ receive_feof = smtp_feof;
+ receive_ferror = smtp_ferror;
+ receive_smtp_buffered = smtp_buffered;
++
++lwr_receive_getc = NULL;
++lwr_receive_getbuf = NULL;
++lwr_receive_ungetc = NULL;
++
+ smtp_inptr = smtp_inend = smtp_inbuffer;
+ smtp_had_eof = smtp_had_error = 0;
+ 
+@@ -3954,6 +3996,14 @@ cmd_list[CMD_LIST_EHLO].is_mail_cmd = TRUE;
+ cmd_list[CMD_LIST_STARTTLS].is_mail_cmd = TRUE;
+ #endif
+ 
++if (lwr_receive_getc != NULL)
++  {
++  /* This should have already happened, but if we've gotten confused,
++  force a reset here. */
++  DEBUG(D_receive) debug_printf("WARNING: smtp_setup_msg had to restore receive functions to lowers\n");
++  bdat_pop_receive_functions();
++  }
++
+ /* Set the local signal handler for SIGTERM - it tries to end off tidily */
+ 
+ had_command_sigterm = 0;
+@@ -5276,16 +5326,7 @@ while (done <= 0)
+       DEBUG(D_receive) debug_printf("chunking state %d, %d bytes\n",
+ 				    (int)chunking_state, chunking_data_left);
+ 
+-      /* push the current receive_* function on the "stack", and
+-      replace them by bdat_getc(), which in turn will use the lwr_receive_*
+-      functions to do the dirty work. */
+-      lwr_receive_getc = receive_getc;
+-      lwr_receive_getbuf = receive_getbuf;
+-      lwr_receive_ungetc = receive_ungetc;
+-
+-      receive_getc = bdat_getc;
+-      receive_ungetc = bdat_ungetc;
+-
++      f.bdat_readers_wanted = TRUE;
+       f.dot_ends = FALSE;
+ 
+       goto DATA_BDAT;
+@@ -5294,6 +5335,7 @@ while (done <= 0)
+     case DATA_CMD:
+       HAD(SCH_DATA);
+       f.dot_ends = TRUE;
++      f.bdat_readers_wanted = FALSE;
+ 
+     DATA_BDAT:		/* Common code for DATA and BDAT */
+ #ifndef DISABLE_PIPE_CONNECT
+@@ -5322,7 +5364,10 @@ while (done <= 0)
+ 	    : US"valid RCPT command must precede BDAT");
+ 
+ 	if (chunking_state > CHUNKING_OFFERED)
++	  {
++	  bdat_push_receive_functions();
+ 	  bdat_flush_data();
++	  }
+ 	break;
+ 	}
+ 
+@@ -5331,6 +5376,12 @@ while (done <= 0)
+ 	sender_address = NULL;  /* This will allow a new MAIL without RSET */
+ 	sender_address_unrewritten = NULL;
+ 	smtp_printf("554 Too many recipients\r\n", FALSE);
++
++	if (chunking_state > CHUNKING_OFFERED)
++	  {
++	  bdat_push_receive_functions();
++	  bdat_flush_data();
++	  }
+ 	break;
+ 	}
+ 
+@@ -5368,6 +5419,9 @@ while (done <= 0)
+ 	    "354 Enter message, ending with \".\" on a line by itself\r\n", FALSE);
+ 	}
+ 
++      if (f.bdat_readers_wanted)
++	bdat_push_receive_functions();
++
+ #ifdef TCP_QUICKACK
+       if (smtp_in)	/* all ACKs needed to ramp window up for bulk data */
+ 	(void) setsockopt(fileno(smtp_in), IPPROTO_TCP, TCP_QUICKACK,
+
+From 4fb6d745c23581dba78d7c408fdfb14def1161d5 Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Tue, 23 Feb 2021 08:33:03 -0800
+Subject: [PATCH 24/26] CVE-2020-28007: Link attack in Exim's log directory
+
+We patch this vulnerability by opening (instead of just creating) the
+log file in an unprivileged (exim) child process, and by passing this
+file descriptor back to the privileged (root) parent process. The two
+functions log_send_fd() and log_recv_fd() are inspired by OpenSSH's
+functions mm_send_fd() and mm_receive_fd(); thanks!
+
+This patch also fixes:
+
+- a NULL-pointer dereference in usr1_handler() (this signal handler is
+  installed before process_log_path is initialized);
+
+- a file-descriptor leak in dmarc_write_history_file() (two return paths
+  did not close history_file_fd).
+
+Note: the use of log_open_as_exim() in dmarc_write_history_file() should
+be fine because the documentation explicitly states "Make sure the
+directory of this file is writable by the user exim runs as."
+---
+ src/src/dmarc.c     |  26 ++++---
+ src/src/exim.c      |  14 +---
+ src/src/functions.h |   3 +-
+ src/src/log.c       | 214 +++++++++++++++++++++++++++++++++-------------------
+ 4 files changed, 154 insertions(+), 103 deletions(-)
+
+diff --git a/src/src/dmarc.c b/src/src/dmarc.c
+index 2e43f84..9f11f58 100644
+--- a/src/src/dmarc.c
++++ b/src/src/dmarc.c
+@@ -517,8 +517,6 @@ return OK;
+ static int
+ dmarc_write_history_file()
+ {
+-int history_file_fd;
+-ssize_t written_len;
+ int tmp_ans;
+ u_char **rua; /* aggregate report addressees */
+ uschar *history_buffer = NULL;
+@@ -528,14 +526,6 @@ if (!dmarc_history_file)
+   DEBUG(D_receive) debug_printf("DMARC history file not set\n");
+   return DMARC_HIST_DISABLED;
+   }
+-history_file_fd = log_create(dmarc_history_file);
+-
+-if (history_file_fd < 0)
+-  {
+-  log_write(0, LOG_MAIN|LOG_PANIC, "failure to create DMARC history file: %s",
+-			   dmarc_history_file);
+-  return DMARC_HIST_FILE_ERR;
+-  }
+ 
+ /* Generate the contents of the history file */
+ history_buffer = string_sprintf(
+@@ -587,16 +577,28 @@ if (host_checking || f.running_in_test_harness)
+   }
+ else
+   {
++  ssize_t written_len;
++  const int history_file_fd = log_open_as_exim(dmarc_history_file);
++
++  if (history_file_fd < 0)
++    {
++    log_write(0, LOG_MAIN|LOG_PANIC, "failure to create DMARC history file: %s",
++			   dmarc_history_file);
++    return DMARC_HIST_FILE_ERR;
++    }
++
+   written_len = write_to_fd_buf(history_file_fd,
+ 				history_buffer,
+ 				Ustrlen(history_buffer));
+-  if (written_len == 0)
++
++  (void)close(history_file_fd);
++
++  if (written_len <= 0)
+     {
+     log_write(0, LOG_MAIN|LOG_PANIC, "failure to write to DMARC history file: %s",
+ 			   dmarc_history_file);
+     return DMARC_HIST_WRITE_ERR;
+     }
+-  (void)close(history_file_fd);
+   }
+ return DMARC_HIST_OK;
+ }
+diff --git a/src/src/exim.c b/src/src/exim.c
+index 77b488e..1b4a152 100644
+--- a/src/src/exim.c
++++ b/src/src/exim.c
+@@ -233,18 +233,8 @@ int fd;
+ 
+ os_restarting_signal(sig, usr1_handler);
+ 
+-if ((fd = Uopen(process_log_path, O_APPEND|O_WRONLY, LOG_MODE)) < 0)
+-  {
+-  /* If we are already running as the Exim user, try to create it in the
+-  current process (assuming spool_directory exists). Otherwise, if we are
+-  root, do the creation in an exim:exim subprocess. */
+-
+-  int euid = geteuid();
+-  if (euid == exim_uid)
+-    fd = Uopen(process_log_path, O_CREAT|O_APPEND|O_WRONLY, LOG_MODE);
+-  else if (euid == root_uid)
+-    fd = log_create_as_exim(process_log_path);
+-  }
++if (!process_log_path) return;
++fd = log_open_as_exim(process_log_path);
+ 
+ /* If we are neither exim nor root, or if we failed to create the log file,
+ give up. There is not much useful we can do with errors, since we don't want
+diff --git a/src/src/functions.h b/src/src/functions.h
+index 51bb17a..9b12b32 100644
+--- a/src/src/functions.h
++++ b/src/src/functions.h
+@@ -308,8 +308,7 @@ extern int     ip_streamsocket(const uschar *, uschar **, int, host_item *);
+ extern int     ipv6_nmtoa(int *, uschar *);
+ 
+ extern uschar *local_part_quote(uschar *);
+-extern int     log_create(uschar *);
+-extern int     log_create_as_exim(uschar *);
++extern int     log_open_as_exim(uschar *);
+ extern void    log_close_all(void);
+ 
+ extern macro_item * macro_create(const uschar *, const uschar *, BOOL);
+diff --git a/src/src/log.c b/src/src/log.c
+index 07bf2ce..5d36b49 100644
+--- a/src/src/log.c
++++ b/src/src/log.c
+@@ -264,14 +264,19 @@ overwrite it temporarily if it is necessary to create the directory.
+ Returns:       a file descriptor, or < 0 on failure (errno set)
+ */
+ 
+-int
+-log_create(uschar *name)
++static int
++log_open_already_exim(uschar * const name)
+ {
+-int fd = Uopen(name,
+-#ifdef O_CLOEXEC
+-	O_CLOEXEC |
+-#endif
+-	O_CREAT|O_APPEND|O_WRONLY, LOG_MODE);
++int fd = -1;
++const int flags = O_WRONLY | O_APPEND | O_CREAT | O_NONBLOCK;
++
++if (geteuid() != exim_uid)
++  {
++  errno = EACCES;
++  return -1;
++  }
++
++fd = Uopen(name, flags, LOG_MODE);
+ 
+ /* If creation failed, attempt to build a log directory in case that is the
+ problem. */
+@@ -285,11 +290,7 @@ if (fd < 0 && errno == ENOENT)
+   DEBUG(D_any) debug_printf("%s log directory %s\n",
+     created ? "created" : "failed to create", name);
+   *lastslash = '/';
+-  if (created) fd = Uopen(name,
+-#ifdef O_CLOEXEC
+-			O_CLOEXEC |
+-#endif
+-		       	O_CREAT|O_APPEND|O_WRONLY, LOG_MODE);
++  if (created) fd = Uopen(name, flags, LOG_MODE);
+   }
+ 
+ return fd;
+@@ -297,6 +298,81 @@ return fd;
+ 
+ 
+ 
++/* Inspired by OpenSSH's mm_send_fd(). Thanks! */
++
++static int
++log_send_fd(const int sock, const int fd)
++{
++struct msghdr msg;
++union {
++  struct cmsghdr hdr;
++  char buf[CMSG_SPACE(sizeof(int))];
++} cmsgbuf;
++struct cmsghdr *cmsg;
++struct iovec vec;
++char ch = 'A';
++ssize_t n;
++
++memset(&msg, 0, sizeof(msg));
++memset(&cmsgbuf, 0, sizeof(cmsgbuf));
++msg.msg_control = &cmsgbuf.buf;
++msg.msg_controllen = sizeof(cmsgbuf.buf);
++
++cmsg = CMSG_FIRSTHDR(&msg);
++cmsg->cmsg_len = CMSG_LEN(sizeof(int));
++cmsg->cmsg_level = SOL_SOCKET;
++cmsg->cmsg_type = SCM_RIGHTS;
++*(int *)CMSG_DATA(cmsg) = fd;
++
++vec.iov_base = &ch;
++vec.iov_len = 1;
++msg.msg_iov = &vec;
++msg.msg_iovlen = 1;
++
++while ((n = sendmsg(sock, &msg, 0)) == -1 && errno == EINTR);
++if (n != 1) return -1;
++return 0;
++}
++
++/* Inspired by OpenSSH's mm_receive_fd(). Thanks! */
++
++static int
++log_recv_fd(const int sock)
++{
++struct msghdr msg;
++union {
++  struct cmsghdr hdr;
++  char buf[CMSG_SPACE(sizeof(int))];
++} cmsgbuf;
++struct cmsghdr *cmsg;
++struct iovec vec;
++ssize_t n;
++char ch = '\0';
++int fd = -1;
++
++memset(&msg, 0, sizeof(msg));
++vec.iov_base = &ch;
++vec.iov_len = 1;
++msg.msg_iov = &vec;
++msg.msg_iovlen = 1;
++
++memset(&cmsgbuf, 0, sizeof(cmsgbuf));
++msg.msg_control = &cmsgbuf.buf;
++msg.msg_controllen = sizeof(cmsgbuf.buf);
++
++while ((n = recvmsg(sock, &msg, 0)) == -1 && errno == EINTR);
++if (n != 1 || ch != 'A') return -1;
++
++cmsg = CMSG_FIRSTHDR(&msg);
++if (cmsg == NULL) return -1;
++if (cmsg->cmsg_type != SCM_RIGHTS) return -1;
++fd = *(const int *)CMSG_DATA(cmsg);
++if (fd < 0) return -1;
++return fd;
++}
++
++
++
+ /*************************************************
+ *     Create a log file as the exim user         *
+ *************************************************/
+@@ -312,41 +388,60 @@ Returns:       a file descriptor, or < 0 on failure (errno set)
+ */
+ 
+ int
+-log_create_as_exim(uschar *name)
++log_open_as_exim(uschar * const name)
+ {
+-pid_t pid = exim_fork(US"logfile-create");
+-int status = 1;
+ int fd = -1;
++const uid_t euid = geteuid();
+ 
+-/* In the subprocess, change uid/gid and do the creation. Return 0 from the
+-subprocess on success. If we don't check for setuid failures, then the file
+-can be created as root, so vulnerabilities which cause setuid to fail mean
+-that the Exim user can use symlinks to cause a file to be opened/created as
+-root. We always open for append, so can't nuke existing content but it would
+-still be Rather Bad. */
+-
+-if (pid == 0)
++if (euid == exim_uid)
+   {
+-  if (setgid(exim_gid) < 0)
+-    die(US"exim: setgid for log-file creation failed, aborting",
+-      US"Unexpected log failure, please try later");
+-  if (setuid(exim_uid) < 0)
+-    die(US"exim: setuid for log-file creation failed, aborting",
+-      US"Unexpected log failure, please try later");
+-  _exit((log_create(name) < 0)? 1 : 0);
++  fd = log_open_already_exim(name);
+   }
++else if (euid == root_uid)
++  {
++  int sock[2];
++  if (socketpair(AF_UNIX, SOCK_STREAM, 0, sock) == 0)
++    {
++    const pid_t pid = exim_fork(US"logfile-open");
++    if (pid == 0)
++      {
++      (void)close(sock[0]);
++      if (setgroups(1, &exim_gid) != 0) _exit(EXIT_FAILURE);
++      if (setgid(exim_gid) != 0) _exit(EXIT_FAILURE);
++      if (setuid(exim_uid) != 0) _exit(EXIT_FAILURE);
++
++      if (getuid() != exim_uid || geteuid() != exim_uid) _exit(EXIT_FAILURE);
++      if (getgid() != exim_gid || getegid() != exim_gid) _exit(EXIT_FAILURE);
++
++      fd = log_open_already_exim(name);
++      if (fd < 0) _exit(EXIT_FAILURE);
++      if (log_send_fd(sock[1], fd) != 0) _exit(EXIT_FAILURE);
++      (void)close(sock[1]);
++      _exit(EXIT_SUCCESS);
++      }
+ 
+-/* If we created a subprocess, wait for it. If it succeeded, try the open. */
+-
+-while (pid > 0 && waitpid(pid, &status, 0) != pid);
+-if (status == 0) fd = Uopen(name,
+-#ifdef O_CLOEXEC
+-			O_CLOEXEC |
+-#endif
+-		       	O_APPEND|O_WRONLY, LOG_MODE);
++    (void)close(sock[1]);
++    if (pid > 0)
++      {
++      fd = log_recv_fd(sock[0]);
++      while (waitpid(pid, NULL, 0) == -1 && errno == EINTR);
++      }
++    (void)close(sock[0]);
++    }
++  }
+ 
+-/* If we failed to create a subprocess, we are in a bad way. We return
+-with fd still < 0, and errno set, letting the caller handle the error. */
++if (fd >= 0)
++  {
++  int flags;
++  flags = fcntl(fd, F_GETFD);
++  if (flags != -1) (void)fcntl(fd, F_SETFD, flags | FD_CLOEXEC);
++  flags = fcntl(fd, F_GETFL);
++  if (flags != -1) (void)fcntl(fd, F_SETFL, flags & ~O_NONBLOCK);
++  }
++else
++  {
++  errno = EACCES;
++  }
+ 
+ return fd;
+ }
+@@ -459,52 +554,17 @@ if (!ok)
+   die(US"exim: log file path too long: aborting",
+       US"Logging failure; please try later");
+ 
+-/* We now have the file name. Try to open an existing file. After a successful
+-open, arrange for automatic closure on exec(), and then return. */
++/* We now have the file name. After a successful open, return. */
+ 
+-*fd = Uopen(buffer,
+-#ifdef O_CLOEXEC
+-		O_CLOEXEC |
+-#endif
+-	       	O_APPEND|O_WRONLY, LOG_MODE);
++*fd = log_open_as_exim(buffer);
+ 
+ if (*fd >= 0)
+   {
+-#ifndef O_CLOEXEC
+-  (void)fcntl(*fd, F_SETFD, fcntl(*fd, F_GETFD) | FD_CLOEXEC);
+-#endif
+   return;
+   }
+ 
+-/* Open was not successful: try creating the file. If this is a root process,
+-we must do the creating in a subprocess set to exim:exim in order to ensure
+-that the file is created with the right ownership. Otherwise, there can be a
+-race if another Exim process is trying to write to the log at the same time.
+-The use of SIGUSR1 by the exiwhat utility can provoke a lot of simultaneous
+-writing. */
+-
+ euid = geteuid();
+ 
+-/* If we are already running as the Exim user (even if that user is root),
+-we can go ahead and create in the current process. */
+-
+-if (euid == exim_uid) *fd = log_create(buffer);
+-
+-/* Otherwise, if we are root, do the creation in an exim:exim subprocess. If we
+-are neither exim nor root, creation is not attempted. */
+-
+-else if (euid == root_uid) *fd = log_create_as_exim(buffer);
+-
+-/* If we now have an open file, set the close-on-exec flag and return. */
+-
+-if (*fd >= 0)
+-  {
+-#ifndef O_CLOEXEC
+-  (void)fcntl(*fd, F_SETFD, fcntl(*fd, F_GETFD) | FD_CLOEXEC);
+-#endif
+-  return;
+-  }
+-
+ /* Creation failed. There are some circumstances in which we get here when
+ the effective uid is not root or exim, which is the problem. (For example, a
+ non-setuid binary with log_arguments set, called in certain ways.) Rather than
+
+From 5d9f3f9eb76eb14754db8bd9cd99a8f9e704f6be Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Tue, 23 Feb 2021 10:14:06 -0800
+Subject: [PATCH 25/26] CVE-2020-28008: Assorted attacks in Exim's spool
+ directory
+
+We patch dbfn_open() by introducing two functions priv_drop_temp() and
+priv_restore() (inspired by OpenSSH's functions temporarily_use_uid()
+and restore_uid()), which temporarily drop and restore root privileges
+thanks to seteuid(). This goes against Exim's developers' wishes ("Exim
+(the project) doesn't trust seteuid to work reliably") but, to the best
+of our knowledge, seteuid() works everywhere and is the only way to
+securely fix dbfn_open().
+---
+ src/src/dbfn.c | 113 +++++++++++++++++++++++++++++++++------------------------
+ 1 file changed, 65 insertions(+), 48 deletions(-)
+
+diff --git a/src/src/dbfn.c b/src/src/dbfn.c
+index bbf20a1..dceb5f1 100644
+--- a/src/src/dbfn.c
++++ b/src/src/dbfn.c
+@@ -60,6 +60,66 @@ log_write(0, LOG_MAIN, "Berkeley DB error: %s", msg);
+ 
+ 
+ 
++static enum {
++  PRIV_DROPPING, PRIV_DROPPED,
++  PRIV_RESTORING, PRIV_RESTORED
++} priv_state = PRIV_RESTORED;
++
++static uid_t priv_euid;
++static gid_t priv_egid;
++static gid_t priv_groups[EXIM_GROUPLIST_SIZE + 1];
++static int priv_ngroups;
++
++/* Inspired by OpenSSH's temporarily_use_uid(). Thanks! */
++
++static void
++priv_drop_temp(const uid_t temp_uid, const gid_t temp_gid)
++{
++if (priv_state != PRIV_RESTORED) _exit(EXIT_FAILURE);
++priv_state = PRIV_DROPPING;
++
++priv_euid = geteuid();
++if (priv_euid == root_uid)
++  {
++  priv_egid = getegid();
++  priv_ngroups = getgroups(nelem(priv_groups), priv_groups);
++  if (priv_ngroups < 0) _exit(EXIT_FAILURE);
++
++  if (priv_ngroups > 0 && setgroups(1, &temp_gid) != 0) _exit(EXIT_FAILURE);
++  if (setegid(temp_gid) != 0) _exit(EXIT_FAILURE);
++  if (seteuid(temp_uid) != 0) _exit(EXIT_FAILURE);
++
++  if (geteuid() != temp_uid) _exit(EXIT_FAILURE);
++  if (getegid() != temp_gid) _exit(EXIT_FAILURE);
++  }
++
++priv_state = PRIV_DROPPED;
++}
++
++/* Inspired by OpenSSH's restore_uid(). Thanks! */
++
++static void
++priv_restore(void)
++{
++if (priv_state != PRIV_DROPPED) _exit(EXIT_FAILURE);
++priv_state = PRIV_RESTORING;
++
++if (priv_euid == root_uid)
++  {
++  if (seteuid(priv_euid) != 0) _exit(EXIT_FAILURE);
++  if (setegid(priv_egid) != 0) _exit(EXIT_FAILURE);
++  if (priv_ngroups > 0 && setgroups(priv_ngroups, priv_groups) != 0) _exit(EXIT_FAILURE);
++
++  if (geteuid() != priv_euid) _exit(EXIT_FAILURE);
++  if (getegid() != priv_egid) _exit(EXIT_FAILURE);
++  }
++
++priv_state = PRIV_RESTORED;
++}
++
++
++
++
+ /*************************************************
+ *          Open and lock a database file         *
+ *************************************************/
+@@ -91,7 +151,6 @@ dbfn_open(uschar *name, int flags, open_db *dbblock, BOOL lof, BOOL panic)
+ {
+ int rc, save_errno;
+ BOOL read_only = flags == O_RDONLY;
+-BOOL created = FALSE;
+ flock_t lock_data;
+ uschar dirname[256], filename[256];
+ 
+@@ -113,12 +172,13 @@ exists, there is no error. */
+ snprintf(CS dirname, sizeof(dirname), "%s/db", spool_directory);
+ snprintf(CS filename, sizeof(filename), "%s/%s.lockfile", dirname, name);
+ 
++priv_drop_temp(exim_uid, exim_gid);
+ if ((dbblock->lockfd = Uopen(filename, O_RDWR, EXIMDB_LOCKFILE_MODE)) < 0)
+   {
+-  created = TRUE;
+   (void)directory_make(spool_directory, US"db", EXIMDB_DIRECTORY_MODE, panic);
+   dbblock->lockfd = Uopen(filename, O_RDWR|O_CREAT, EXIMDB_LOCKFILE_MODE);
+   }
++priv_restore();
+ 
+ if (dbblock->lockfd < 0)
+   {
+@@ -167,60 +227,17 @@ it easy to pin this down, there are now debug statements on either side of the
+ open call. */
+ 
+ snprintf(CS filename, sizeof(filename), "%s/%s", dirname, name);
+-EXIM_DBOPEN(filename, dirname, flags, EXIMDB_MODE, &(dbblock->dbptr));
+ 
++priv_drop_temp(exim_uid, exim_gid);
++EXIM_DBOPEN(filename, dirname, flags, EXIMDB_MODE, &(dbblock->dbptr));
+ if (!dbblock->dbptr && errno == ENOENT && flags == O_RDWR)
+   {
+   DEBUG(D_hints_lookup)
+     debug_printf_indent("%s appears not to exist: trying to create\n", filename);
+-  created = TRUE;
+   EXIM_DBOPEN(filename, dirname, flags|O_CREAT, EXIMDB_MODE, &(dbblock->dbptr));
+   }
+-
+ save_errno = errno;
+-
+-/* If we are running as root and this is the first access to the database, its
+-files will be owned by root. We want them to be owned by exim. We detect this
+-situation by noting above when we had to create the lock file or the database
+-itself. Because the different dbm libraries use different extensions for their
+-files, I don't know of any easier way of arranging this than scanning the
+-directory for files with the appropriate base name. At least this deals with
+-the lock file at the same time. Also, the directory will typically have only
+-half a dozen files, so the scan will be quick.
+-
+-This code is placed here, before the test for successful opening, because there
+-was a case when a file was created, but the DBM library still returned NULL
+-because of some problem. It also sorts out the lock file if that was created
+-but creation of the database file failed. */
+-
+-if (created && geteuid() == root_uid)
+-  {
+-  DIR * dd;
+-  uschar *lastname = Ustrrchr(filename, '/') + 1;
+-  int namelen = Ustrlen(name);
+-
+-  *lastname = 0;
+-
+-  if ((dd = exim_opendir(filename)))
+-    for (struct dirent *ent; ent = readdir(dd); )
+-      if (Ustrncmp(ent->d_name, name, namelen) == 0)
+-	{
+-	struct stat statbuf;
+-	/* Filenames from readdir() are trusted,
+-	so use a taint-nonchecking copy */
+-	strcpy(CS lastname, CCS ent->d_name);
+-	if (Ustat(filename, &statbuf) >= 0 && statbuf.st_uid != exim_uid)
+-	  {
+-	  DEBUG(D_hints_lookup)
+-	    debug_printf_indent("ensuring %s is owned by exim\n", filename);
+-	  if (exim_chown(filename, exim_uid, exim_gid))
+-	    DEBUG(D_hints_lookup)
+-	      debug_printf_indent("failed setting %s to owned by exim\n", filename);
+-	  }
+-	}
+-
+-  closedir(dd);
+-  }
++priv_restore();
+ 
+ /* If the open has failed, return NULL, leaving errno set. If lof is TRUE,
+ log the event - also for debugging - but debug only if the file just doesn't
+
+From d32254cd60686e1c2edc57f78756ef588a075cee Mon Sep 17 00:00:00 2001
+From: Qualys Security Advisory <qsa@qualys.com>
+Date: Wed, 24 Feb 2021 04:48:32 -0800
+Subject: [PATCH 26/26] CVE-2020-28014 and CVE-2021-27216: Arbitrary PID file
+ creation, clobbering, and deletion
+
+This fixes CVE-2020-28014 (arbitrary PID file creation and arbitrary
+file clobbering, by the exim user) and CVE-2021-27216 (arbitrary file
+deletion, by any local user). However, because of Exim's following
+requirements:
+
+1/ root must be able to execute Exim with a -oP override_pid_file_path
+option;
+
+2/ Exim must be able to re-execute itself (upon catching SIGTERM), while
+already running as the exim user, to delete its PID file;
+
+3/ "We do this before giving up root privilege, because on some systems
+it is necessary to be root in order to write into the pid file
+directory" (from daemon.c);
+
+this fix is still partially vulnerable to CVE-2021-27216: local users
+cannot delete arbitrary files anymore, but the exim user can delete any
+regular file that contains a single line of the form "%d\n". Hopefully
+Exim's developers will waive either the requirement 2/ or the
+requirement 3/ in the future.
+---
+ src/src/daemon.c | 167 ++++++++++++++++++++++++++++++++++++++++++++-----------
+ src/src/exim.c   |   2 +
+ 2 files changed, 137 insertions(+), 32 deletions(-)
+
+diff --git a/src/src/daemon.c b/src/src/daemon.c
+index ca3dd2c..bc46580 100644
+--- a/src/src/daemon.c
++++ b/src/src/daemon.c
+@@ -945,35 +945,143 @@ if (!*pid_file_path)
+ }
+ 
+ 
+-/* Remove the daemon's pidfile.  Note: runs with root privilege,
+-as a direct child of the daemon.  Does not return. */
++enum pid_op { PID_WRITE, PID_CHECK, PID_DELETE };
+ 
+-void
+-delete_pid_file(void)
++static BOOL
++operate_on_pid_file(const enum pid_op operation, const pid_t pid)
+ {
+-uschar * daemon_pid = string_sprintf("%d\n", (int)getppid());
+-FILE * f;
++char pid_line[sizeof(int) * 3 + 2];
++const int pid_len = snprintf(pid_line, sizeof(pid_line), "%d\n", (int)pid);
++BOOL lines_match = FALSE;
++
++char * path = NULL;
++char * base = NULL;
++char * dir = NULL;
++
++const int dir_flags = O_RDONLY | O_NONBLOCK;
++const int base_flags =
++#ifdef O_NOFOLLOW
++       O_NOFOLLOW |
++#endif
++       O_NONBLOCK;
++const mode_t base_mode = 0644;
++struct stat sb;
++
++int cwd_fd = -1;
++int dir_fd = -1;
++int base_fd = -1;
++
++BOOL success = FALSE;
++errno = EACCES;
+ 
+ set_pid_file_path();
+-if ((f = Ufopen(pid_file_path, "rb")))
++if (real_uid != root_uid && real_uid != exim_uid) goto cleanup;
++if (pid_len < 2 || pid_len >= (int)sizeof(pid_line)) goto cleanup;
++
++path = CS string_copy(pid_file_path);
++base = strrchr(path, '/');
++if (!base)
++  {
++  dir = ".";
++  base = path;
++  }
++else
+   {
+-  if (  fgets(CS big_buffer, big_buffer_size, f)
+-	&& Ustrcmp(daemon_pid, big_buffer) == 0
+-     )
+-    if (Uunlink(pid_file_path) == 0)
++  dir = (base != path) ? path : "/";
++  *base++ = '\0';
++  }
++if (!dir || !*dir || *dir != '/') goto cleanup;
++if (!base || !*base || strchr(base, '/') != NULL) goto cleanup;
++
++cwd_fd = open(".", dir_flags);
++if (cwd_fd < 0 || fstat(cwd_fd, &sb) != 0 || !S_ISDIR(sb.st_mode)) goto cleanup;
++dir_fd = open(dir, dir_flags);
++if (dir_fd < 0 || fstat(dir_fd, &sb) != 0 || !S_ISDIR(sb.st_mode)) goto cleanup;
++
++/* emulate openat */
++if (fchdir(dir_fd) != 0) goto cleanup;
++base_fd = open(base, O_RDONLY | base_flags);
++if (fchdir(cwd_fd) != 0) _exit(EXIT_FAILURE);
++
++if (base_fd >= 0)
++  {
++  char line[sizeof(pid_line)];
++  ssize_t len = -1;
++
++  if (fstat(base_fd, &sb) != 0 || !S_ISREG(sb.st_mode)) goto cleanup;
++  if ((sb.st_mode & 07777) != base_mode || sb.st_nlink != 1) goto cleanup;
++  if (sb.st_size < 2 || sb.st_size >= (off_t)sizeof(line)) goto cleanup;
++
++  len = read(base_fd, line, sizeof(line));
++  if (len != (ssize_t)sb.st_size) goto cleanup;
++  line[len] = '\0';
++
++  if (strspn(line, "0123456789") != (size_t)len-1) goto cleanup;
++  if (line[len-1] != '\n') goto cleanup;
++  lines_match = (len == pid_len && strcmp(line, pid_line) == 0);
++  }
++
++if (operation == PID_WRITE)
++  {
++  if (!lines_match)
++    {
++    if (base_fd >= 0)
+       {
+-      DEBUG(D_any)
+-	debug_printf("%s unlink: %s\n", pid_file_path, strerror(errno));
++      int error = -1;
++      /* emulate unlinkat */
++      if (fchdir(dir_fd) != 0) goto cleanup;
++      error = unlink(base);
++      if (fchdir(cwd_fd) != 0) _exit(EXIT_FAILURE);
++      if (error) goto cleanup;
++      (void)close(base_fd);
++      base_fd = -1;
+       }
+-    else
+-      DEBUG(D_any)
+-	debug_printf("unlinked %s\n", pid_file_path);
+-  fclose(f);
++    /* emulate openat */
++    if (fchdir(dir_fd) != 0) goto cleanup;
++    base_fd = open(base, O_WRONLY | O_CREAT | O_EXCL | base_flags, base_mode);
++    if (fchdir(cwd_fd) != 0) _exit(EXIT_FAILURE);
++    if (base_fd < 0) goto cleanup;
++    if (fchmod(base_fd, base_mode) != 0) goto cleanup;
++    if (write(base_fd, pid_line, pid_len) != pid_len) goto cleanup;
++    }
+   }
+ else
+-  DEBUG(D_any)
+-    debug_printf("%s\n", string_open_failed(errno, "pid file %s",
+-      pid_file_path));
++  {
++  if (!lines_match) goto cleanup;
++  if (operation == PID_DELETE)
++    {
++    int error = -1;
++    /* emulate unlinkat */
++    if (fchdir(dir_fd) != 0) goto cleanup;
++    error = unlink(base);
++    if (fchdir(cwd_fd) != 0) _exit(EXIT_FAILURE);
++    if (error) goto cleanup;
++    }
++  }
++
++success = TRUE;
++errno = 0;
++
++cleanup:
++if (cwd_fd >= 0) (void)close(cwd_fd);
++if (dir_fd >= 0) (void)close(dir_fd);
++if (base_fd >= 0) (void)close(base_fd);
++return success;
++}
++
++
++/* Remove the daemon's pidfile.  Note: runs with root privilege,
++as a direct child of the daemon.  Does not return. */
++
++void
++delete_pid_file(void)
++{
++const BOOL success = operate_on_pid_file(PID_DELETE, getppid());
++
++DEBUG(D_any)
++  debug_printf("delete pid file %s %s: %s\n", pid_file_path,
++    success ? "success" : "failure", strerror(errno));
++
+ exim_exit(EXIT_SUCCESS);
+ }
+ 
+@@ -1829,19 +1937,14 @@ The variable daemon_write_pid is used to control this. */
+ 
+ if (f.running_in_test_harness || write_pid)
+   {
+-  FILE *f;
++  const enum pid_op operation = (real_uid == root_uid ||
++    (real_uid == exim_uid && !override_pid_file_path)) ? PID_WRITE : PID_CHECK;
++  const BOOL success = operate_on_pid_file(operation, getpid());
+ 
+-  set_pid_file_path();
+-  if ((f = modefopen(pid_file_path, "wb", 0644)))
+-    {
+-    (void)fprintf(f, "%d\n", (int)getpid());
+-    (void)fclose(f);
+-    DEBUG(D_any) debug_printf("pid written to %s\n", pid_file_path);
+-    }
+-  else
+-    DEBUG(D_any)
+-      debug_printf("%s\n", string_open_failed(errno, "pid file %s",
+-        pid_file_path));
++  DEBUG(D_any)
++    debug_printf("%s pid file %s %s: %s\n",
++      (operation == PID_WRITE) ? "write" : "check",
++      pid_file_path, success ? "success" : "failure", strerror(errno));
+   }
+ 
+ /* Set up the handler for SIGHUP, which causes a restart of the daemon. */
+diff --git a/src/src/exim.c b/src/src/exim.c
+index 1b4a152..84c3a22 100644
+--- a/src/src/exim.c
++++ b/src/src/exim.c
+@@ -3172,6 +3172,8 @@ on the second character (the one after '-'), to save some effort. */
+ 	 -oPX:       delete pid file of daemon */
+ 
+       case 'P':
++	if (real_uid != root_uid && real_uid != exim_uid)
++	  exim_fail("exim: only root and exim can use -oP and -oPX\n");
+ 	if (!*argrest) override_pid_file_path = argv[++i];
+ 	else if (Ustrcmp(argrest, "X") == 0) delete_pid_file();
+ 	else badarg = TRUE;

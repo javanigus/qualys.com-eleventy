@@ -1,0 +1,548 @@
+.session-description {
+	line-height: 1.55;
+}
+.session-description ul {
+	margin: 0;
+	padding: 0 0 0 20px;
+	line-height: 1.55;
+}
+.session-description ul li:not(:last-child) {
+	margin-bottom: 0.45em;
+}
+.session-description h3 {
+	margin: 0 0 10px;
+	font-weight: 500;
+	font-size: 18px;
+	color: #1D2737;
+	font-family: Gotham, sans-serif;
+}
+.session-description p {
+	margin: 0;
+}
+.session-description .conference-speaker {
+	font-family: Gotham, sans-serif;
+}
+.session-description .customer-session {
+	font-family: Gotham, sans-serif;
+	font-weight: 500;
+	color: #2E8BE0;
+	display: block;
+	line-height: 1.688;
+	font-size: 16px;
+	letter-spacing: -0.11px;
+}
+#conduct {
+	margin-top: 4em;
+	margin-bottom: 5em;
+}
+#conf-app p,
+#faqs p {
+
+	text-align: center;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.qr-code {
+	max-width: 250px;
+	margin: 0 auto;
+}
+#videos .q-button {
+	margin-top: 1em;
+}
+#videos {
+	margin-bottom: 2em;
+}
+.q-qsc-overview__container .when-videos-available {
+	font-family: Gotham, sans-serif;
+	font-size: 14px;
+	margin-top: 0.5em;
+}
+.q-qsc__hero-location {
+	margin-top: 0;
+}
+.session-container {
+	max-width: unset;
+}
+.q-qsc__hero-location {
+    margin-top: 40px;
+}
+.q-qsc-city__hero {
+    background-image: url(https://ik.imagekit.io/qualys/image/2023/qsc/orlando/qsc23-orlando-hero-desktop-hero-background.png);
+	justify-content: start;
+	background-position: left;
+}
+@media (min-width: 320px) {
+	.q-qsc__hero-location {
+		margin-top: 80px;
+	}
+	.session-container td.conference-td {
+		padding: 0 0 15px 50px;
+	}
+	.conference-title-wrapper.label:before,
+	.conference-title-wrapper.label:after {
+		left: -50px;
+		top: 14px;
+	}
+}
+.conference-title-wrapper.label {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+}
+.conference-title-wrapper.label .conference-title {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+.training .agenda {
+	margin-left: 0;
+}
+#agenda{
+	padding-top: 4rem;
+}
+@media (min-width: 720px) {
+	.q-qsc-section h3 {
+		margin-bottom: 1em;
+	}
+	.session-container td.conference-td {
+		padding: 0 0 15px 50px;
+	}
+}
+@media (min-width: 720px) {
+	.q-qsc-city__hero {
+		background-image: url(https://ik.imagekit.io/qualys/image/2023/qsc/orlando/qsc23-orlando-hero-desktop-hero-background.png);
+		background-position: left;
+	}
+	.q-qsc__city-hero--heading {
+		color: #fff;
+		font-size: 6em;
+	}
+	.q-qsc__city-hero--copy {
+		text-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+		color: #fff;
+	}
+	.q-qsc__hero-qsc,
+	.q-qsc__hero-cta,
+	.q-qsc__hero-location {
+		display: block;
+	}
+}
+.q-qsc-video__icon {
+	position: relative;
+	display: block;
+}
+.q-qsc-video__icon:hover .overlay {
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	background-color:#000;
+	opacity:0.5;
+}
+.video-container {
+	width: 329px;
+	margin-bottom: 40px;
+	margin-right: 2em;
+}
+.video-container:nth-child(2n) {
+	margin-right: 0;
+}
+@media (min-width: 425px) {
+	.video-container {
+		margin-bottom: 20px;
+	}
+}
+@media (min-width: 1408px) {
+	.video-container:nth-child(2n) {
+		margin-right: 2em;
+	}
+	.video-container:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+.q-qsc-videos__container .video {
+	width: 329px;
+	height: 185px;
+	display: block;
+	background-color: #D8D8D8;
+	margin-bottom: 1.5em;
+	position: relative;
+}
+.q-qsc-videos__container .poster {
+	margin-bottom: 1.5em;
+}
+.q-qsc-videos__container .video .play-icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 48px;
+	height: 48px;
+}
+.q-qsc-videos__container .video .lock-icon {
+	height: 29px;
+	margin-top: 15px;
+	margin-left: 2px;
+}
+.q-qsc-videos__container .video .play-icon .bg {
+	transition: fill 0.25s;
+}
+.q-qsc-videos__container .video:hover .play-icon .bg {
+	fill: #E3241C;
+}
+.q-qsc-videos__container .videos {
+	justify-content: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 2.1em;
+}
+@media (min-width: 1408px) {
+	.q-qsc-videos__container .videos {
+		flex-wrap: wrap;
+	}
+}
+.video-container .title,
+.video-container .subtitle {
+	font-size: 17px;
+	font-weight: 500;
+	font-family: Gotham, sans-serif;
+	color: #262626;
+	line-height: 1.4;
+}
+.video-container .subtitle {
+	color: #6A778B;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+@media (min-width: 425px) {
+	.video-container .title {
+		font-size: 20px;
+	}
+	.video-container .subtitle {
+		font-size: 18px;
+	}
+}
+.video-container .speaker {
+	font-size: 17px;
+	font-family: Gotham, sans-serif;
+	color: #262626;
+	line-height: 1.4;
+	margin-top: 5px;
+	margin-bottom: 4px;
+}
+@media (min-width: 425px) {
+	.video-container .speaker {
+		font-size: 18px;
+	}
+}
+.video-type-container {
+	margin-bottom: 5.3em;
+}
+.session-types {
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+.heading--2 {
+	margin-bottom: 1.2em;
+}
+.note {
+	color: #6a778b;
+	font-family: Gotham, sans-serif;
+	font-style: italic;
+	font-size: 13px;
+	margin-top: 0;
+	line-height: 1.4;
+}
+.panelists-link:hover {
+	cursor: pointer;
+}
+.speaker.panelists {
+	font-size: 15px;
+}
+.interviews .video-container {
+	margin-bottom: 36px;
+}
+.panelists b {
+	font-weight: 500;
+}
+.speaker-line-break {
+	display: block;
+	margin-bottom: 5px;
+}
+.training-register-form .conference-title-wrapper.label:before,
+.training-register-form .conference-title-wrapper.label:after {
+	top: unset;
+}
+.m-auto
+{
+	margin: auto;
+}
+.text-center{
+	text-align: center;
+}
+.q-qsc-speakers__container h4 {
+    font-size: 14px
+}
+@media (min-width: 720px) {
+.q-qsc-speaker h4 {
+    font-size: 15px;
+ }
+}
+.q-trial__copy {
+    color: #fff;
+}
+.q-register-confirm h4{
+	font-size: 20px;
+}
+.q-register-confirm .q-time-location{
+	margin-top:40px;
+}
+
+#highlights{
+	padding-top:4rem;
+}
+.training-description{
+	color:#6A778B;
+}
+.training-title{
+	font-size: 18px !important;
+}
+.conference-description p {
+    margin-bottom: 0.5em;
+}
+@media (min-width:932px)
+{
+#overview {
+    padding-top: 2em;
+ }
+}
+@media (min-width: 720px)
+{
+.bellagio-poster {
+    padding-left: 40px;
+}
+}
+
+.MktoPersonNotes .mktoFieldDescriptor .mktoRequiredField .mktoError .mktoErrorMsg{
+	margin-left: 0px !important;
+}
+
+ul.conference-description {
+    font-size: 16px;
+    line-height: 1.688;
+    margin: 0;
+    color: #6A778B;
+	font-family:'Caecilia', serif;
+}
+
+#highlights h3{
+	padding-bottom: 20px;
+}
+
+@media (min-width:720px) {
+.q-qsc__hero-location {
+    background-color: transparent;
+}
+}
+.qsc-banner-orlando{
+	margin: auto;
+	max-width: 90vw;
+}
+@media (min-width:600px) {
+	.qsc-banner-orlando{
+		max-width:70vw
+	}
+}
+@media (min-width:1024px) {
+	.qsc-banner-orlando{
+		max-width: 600px
+	}
+}
+.q-qsc__logo img{
+	height: 36px;
+}
+.q-qsc__logo{
+	width: auto;
+	height:36px;
+	display: block;
+    flex: none;
+    margin: 0 auto 0;
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    text-indent: 100%;
+    transition: opacity 200ms;
+}
+.q-qsc__hero-cta {
+	margin-top: 30px;
+}
+.tab-content .q-agenda-coming-soon {
+	padding-left:30px
+}
+.q-qsc-venue__container {
+    padding-bottom: 3em;
+	margin-bottom: 0em;
+}
+.q-qsc-intro__container {
+    padding-top: 5em;
+	padding-bottom:3em;
+}
+.q-qsc__tabs-date li:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 720px) {
+.tab-content {
+    margin-top: 40px;
+}
+}
+
+.q-qsc-class-category {
+	margin-bottom: 40px;
+}
+
+.q-qsc-afternoon-track {
+	    padding: 25px 0;
+    display: block;
+}
+
+@media (min-width: 920px) {
+.speaker-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  } 
+}
+
+/* @media (min-width:720px) {
+	.tab-content.training {
+		padding-left: 50px;
+	}
+} */
+.conference-event-day-time {
+	font-size: 20px;
+}
+
+@media (min-width: 920px) {
+.q-qsc-city__subnav li {
+    margin-right: 15px;
+ }
+}
+@media (min-width: 1320px) {
+.q-qsc-city__subnav li {
+    margin-right: 30px;
+ }
+}
+
+@media (min-width:720px) {
+	.tab-content.conference {
+		margin-left: -2.7em;
+	}
+	.conference-event-day-time {
+		font-size: 26px;
+	}
+}
+
+.q-qsc-section h3 {
+	margin-top: 20px;
+}
+.q-qsc-speaker {
+    margin: 0 2em;
+}
+@media (min-width:720px) {
+	.q-qsc-speaker {
+		margin: 0 1em;
+	}
+}
+.qsc-video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 0;
+	height: 0;
+}
+.qsc-video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(https://ik.imagekit.io/qualys/image/2023/qsc/orlando/qsc23-orlando-hero-desktop-hero-background.png);
+}
+
+.qsc-orlando-video::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+}
+
+.q-qsc-banner-text {
+	position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+	padding: 0 20px;
+}
+.qsc-video-wrapper h1 {
+	color: #fff;
+    z-index: 99;
+    text-align: center;
+    align-items: center;
+	position: relative;
+    font-size:28px;
+    width: 100%;
+    font-weight: 600;
+	margin: auto;
+	
+}
+.qsc-video-wrapper .q-qsc-banner-text__subcopy {
+	color: #fff;
+    z-index: 99;
+    text-align: center;
+    margin: auto;
+    font-size: 22px;
+    width: 100%;
+    font-weight: 500;
+	position: relative;
+	top: 10px;
+}
+
+@media (min-width:600px) {
+	.qsc-video-wrapper h1 { 
+		font-size: 40px;
+	}
+	.qsc-video-wrapper .q-qsc-banner-text__subcopy {
+		font-size: 34px;
+	}
+}
+
+@media (min-width:920px) {
+	.qsc-video-wrapper h1 { 
+		font-size: 54px;
+	}
+	.qsc-video-wrapper .q-qsc-banner-text__subcopy {
+		font-size: 34px;
+		top: 0px;
+	}
+}
+
+@media (min-width:1280px) {
+	.qsc-video-wrapper h1 { 
+		font-size: 64px;
+	}
+	.qsc-video-wrapper .q-qsc-banner-text__subcopy {
+		font-size: 40px;
+	}
+}
+/*# sourceMappingURL=index.css.map */

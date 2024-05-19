@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../site/pages/forms/whitepapers/continuous-monitoring-blueprint-achieving-continuous-security-compliance/index.css"],"names":[],"mappings":"AAAA;CACC,oHAAoH;AACrH","file":"index.css","sourcesContent":["div.screenshot {\n\tbackground-image: url(https://ik.imagekit.io/qualys/image/sprite-continuous-monitoring-protect-global-perimeter.png);\n}\n"]}

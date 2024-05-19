@@ -1,0 +1,676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- this doctype has the least inconsistencies according to http://www.emailology.org/#1 -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="x-apple-disable-message-reformatting">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+	</style>
+	<style type="text/css">
+		/**************************/
+		/* CLIENT-SPECIFIC STYLES */
+		/**************************/
+		#outlook a { /* Force Outlook to provide a "view in browser" menu link. */
+			padding:0;
+		}
+		a[href^="x-apple-data-detectors:"] {
+			color: inherit;
+			text-decoration: none;
+		}
+		body { /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+			width:100% !important;
+			-webkit-text-size-adjust:100%;
+			-ms-text-size-adjust:100%;
+			margin:0;
+			padding:0;
+		}
+		body,
+		li:before,
+		.ui-widget,
+		input,
+		textarea {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+		}
+		.ExternalClass { /* Force Hotmail to display emails at full width */
+			width:100%;
+		}
+		.ExternalClass,
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td,
+		.ExternalClass div { /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+			line-height: 100%;
+		}
+		#backgroundTable {
+			margin:0;
+			padding:0;
+			width:100% !important;
+			line-height: 100% !important;
+		}
+		font {
+			display: block;
+		}
+		.nowrap {
+			white-space: nowrap;
+		}
+
+		/* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+		.text-link,
+		.long-text {
+			/* These are technically the same, but use both */
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+
+			-ms-word-break: break-all;
+			/* This is the dangerous one in WebKit, as it breaks things wherever */
+			word-break: break-all;
+			/* Instead use this non-standard one: */
+			word-break: break-word;
+
+			/* Adds a hyphen where the word breaks, if supported (No Blink) */
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+		}
+
+		/**************************/
+		/* RESET IMAGES           */
+		/**************************/
+		img {
+			outline:none;
+			text-decoration:none;
+			border: none;
+			-ms-interpolation-mode: bicubic; /* works to help ie properly resize images in IE. (if you are resizing them using the width and height attributes)*/
+		}
+		a img {
+			border:none; /* removes border when linking images */
+		}
+		.image_fix {
+			display:block; /* add this class to images that show extra space below them */
+		}
+		img.banner {
+			max-width: 100%;
+			height: auto;
+		}
+
+		/**************************/
+		/* RESET PARAGRAPHS       */
+		/**************************/
+		p,
+		li {
+			margin: 0;
+			color: #6A778B;
+			font-size: 15px;
+			line-height: 1.625;
+		}
+		a.text-link {
+			color: #2e8be0;
+			text-decoration: none;
+		}
+
+		/**************************/
+		/* RESET HEADINGS         */
+		/**************************/
+		/* To minimize inconsistencies, don't use heading tags (h1, h2, h3, h4, h5, h6). Instead, use span tags with a class indicating its heading level. */
+		span.h1 {
+			/* define h1 style here */
+		}
+		span.h2 {
+			/* define h1 style here */
+		}
+		span.h3 {
+			/* define h1 style here */
+		}
+		span.h4 {
+			/* define h1 style here */
+		}
+		span.h5 {
+			/* define h1 style here */
+		}
+		span.h6 {
+			/* define h1 style here */
+		}
+
+		/**************************/
+		/* RESET TABLES, CELLS    */
+		/**************************/
+		table td {
+			border-collapse: collapse;
+			padding: 0;
+		}
+		table {
+			border-collapse:collapse;
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+			padding: 0;
+			border-spacing: 0;
+		}
+		/**************************/
+		/* PREHEADER              */
+		/**************************/
+		div.preheader,
+		div.preheader font { /* prevents users from seeing the "If you're having trouble viewing this message, click here" message in their inbox */
+			display: none;
+			visibility: hidden;
+			color: #255496;
+			background-color: #255496;
+		}
+		/**************************/
+		/* OTHER                 */
+		/**************************/
+		.background-table {
+			border-collapse: collapse;
+			background-color: #EDEEED;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			line-height: 100% !important;
+		}
+		.wrapper-table {
+			max-width: 684px;
+			width: 684px;
+		}
+		.showOnMobile {
+			display: none;
+		}
+		.address a {
+			color: #2E8BE0;
+		}
+		.button a {
+			font-size: 16px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 600;
+			border-radius: 3px;
+			padding: 11px 18px;
+			border: 1px solid #ED2E26;
+			display: inline-block;
+			white-space: nowrap;
+		}
+		sup {
+			font-size: 0.6em;
+		}
+		/*********************************/
+		/* RESPONSIVE STYLES             */
+		/*********************************/
+		@media screen and (max-width:683px) {
+			
+		}
+		/* 414px MAX WIDTH OF MOBILE */
+		@media screen and (max-width:414px) {
+			/* OVERRIDE per-page CSS 
+			   Nick wants text margins on mobile to be 20px on all emails */
+			.mailer-padding.mailer-padding {
+				width: 20px !important;
+				min-width: 20px !important;
+			}
+		}
+	</style>
+
+		<style type="text/css">
+	a {
+		font-family: 'Open Sans', sans-serif;
+	}
+	.master-table {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		line-height: 100%;
+		border-collapse: collapse;
+		background-color: #ffffff;
+	}
+	.nowrap {
+		white-space: nowrap;
+	}
+	.mailer-header-heading {
+		font-family: 'Open Sans', sans-serif;
+		margin: 0;
+		font-size: 26px;
+		color: #262626;
+		line-height: 1.2;
+		font-weight: 600;
+		padding-bottom: 12px;
+		letter-spacing: 0.5px;
+	}
+	.mailer-header-subheading {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 17px;
+		color: #6A778B;
+		letter-spacing: 0;
+		line-height: 1.4;
+	}
+	.mailer-participation {
+		padding-bottom: 20px;
+		text-align: left;
+	}
+	.mailer-participation-heading {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 14px;
+		color: #6A778B;
+		letter-spacing: -0.09px;
+		line-height: 27px;
+	}
+	.mailer-hero {
+		line-height: 0;
+	}
+	.mailer-hero-image {
+		vertical-align: baseline;
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+	.mailer-hero-image-mobile {
+		display: none;
+		vertical-align: baseline;
+		max-width: 100%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		border-bottom: 9px solid #2E8BE0;
+	}
+	.mailer-paragraph {
+		font-family: 'Open Sans', sans-serif;
+		color: #627281;
+		letter-spacing: -0.11px;
+	}
+	.mailer-register-link {
+		color: #D0021B;
+		text-decoration: none;
+		font-weight: 600;
+	}
+	td.mailer-padding {
+		width: 75px;
+	}
+	.mailer-logo {
+		text-align: left;
+	}
+	.mailer-footer-wrapper {
+		background: #EFEFEF;
+	}
+	p {
+		font-size: 14px;
+		line-height: 1.6;
+		margin-bottom: 1.57em;
+	}
+	div.preheader, div.preheader font {
+	    color: #fff;
+	    background-color: #fff;
+	}
+	.agenda-text-link {
+		text-decoration: none;
+		color: #2E8BE0;
+	}
+	.mailer-agenda-time {
+		font-family: 'Open Sans', sans-serif;
+		color: #6A778B;
+		line-height: 1.667;
+		font-size: 14px;
+	}
+	.mailer-agenda-desc-speaker {
+		color: #6a778b;
+		padding: 4px 0 0;
+		display: block;
+		font-size: 14px;
+	}
+	.agenda-seperator {
+		height: 20px;
+		border-top: 1px solid #6a778b;
+	}
+	.mailer-agenda-table td {
+		vertical-align: top;
+	}
+	.agenda-heading {
+		font-weight: 600;
+		font-size: 19px;
+		color: #1d2737;
+	}
+	.mailer-overview-text b {
+	    font-weight: 600;
+	    color: #1d2737;
+	}
+	.mailer-agenda-table p {
+		margin-bottom: 0;
+	}
+	.mailer-footer-text2 {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 13px;
+		color: #6A778B;
+		letter-spacing: 0;
+		line-height: 1.667;
+	}
+	/*********************************/
+	/* RESPONSIVE STYLES             */
+	/*********************************/
+	@media screen and (max-width:616px) {
+		.mailer-table {
+			width: 100% !important;
+		}
+		.mailer-hero {
+			max-width: 100%;
+			height: auto;
+		}
+		td.mailer-padding {
+			width: 30px !important;
+		}
+		.no-padding {
+			display: none;
+		}
+		.participation-logo-img {
+			max-width: 100%;
+		}
+		.mailer-hero-image {
+			display: none !important;
+		}
+		.mailer-hero-image-mobile {
+			display: block !important;
+		}
+		.mailer-seperator-line {
+			height: 40px !important;
+			border-bottom: 1px solid #9B9B9B;
+		}
+		.mailer-seperator {
+			height: 40px !important;
+		}
+		p {
+			font-size: 16px !important;
+		}
+		.mailer-header-subheading {
+			font-size: 18px !important;
+		}
+		.mailer-agenda-table td {
+			display: block;
+		}
+		.mailer-agenda-time {
+			line-height: 1.85;
+		}
+		.mailer-signature-img {
+			max-width: 100%;
+		}
+		.mailer-overview-text,
+		.mailer-agenda-time {
+			font-size: 16px !important;
+		}
+	}
+	@media screen and (max-width:414px) {
+		.no-column {
+			display: none;
+		}
+	}
+	</style>
+
+
+	<!-- http://templates.mailchimp.com/development/css/outlook-conditional-css/
+		Target Outlook 2007, 2010 and 2013
+		The first font in the list of fonts MUST be available on the client's machine in order for the font-family to work. -->
+	<!--[if gte mso 12]>
+		<style type="text/css">
+		body, td, p, h2, h1, ul, li, span { font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, sans-serif !important; }
+		</style>
+	<![endif]-->
+
+</head>
+<body>
+
+
+<div class="preheader">
+	<span style="font-family:'Open Sans', sans-serif;">We look forward to seeing you at our invitation-only CIO/CISO Event on Wednesday. </span>
+</div>
+
+<table cellpadding="0" cellspacing="0" border="0" class="background-table">
+	<tr>
+		<td align="center">
+			<table cellpadding="0" cellspacing="0" border="0" class="wrapper-table" align="center">
+				<tr>
+					<td>
+							<table class="hideOnMobile">
+		<tr>
+			<td height="35" style="height:35px"></td>
+		</tr>
+	</table>
+	<table cellpadding="0" cellspacing="0" border="0" style="background-color:#fff;">
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table">
+					<tr class="hideOnMobile">
+						<td height="65"></td>
+					</tr>
+					<!--[if !mso 9]><!-->
+					<tr class="showOnMobile">
+						<td height="35" style="height:35px"></td>
+					</tr>
+					<!--<![endif]-->
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" class="mailer-header mailer-table" width="684">
+					<tr>
+						<td class="mailer-padding" width="75"></td>
+						<td class="mailer-logo">
+							<a href="https://www.qualys.com/?utm_source={{my.utmSource}}&utm_medium={{my.utmMedium}}&utm_campaign={{my.utmCampaign}}&utm_term={{my.utmTerm}}&leadsource={{my.leadsource}}"><img src="https://ik.imagekit.io/qualys/image/logo/qualys-horizontal-sans-tagline-250-2x.png" width="168"></a>
+
+						</td>
+						<td class="mailer-padding" width="75"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="34" style="height:34px"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" class="mailer-header mailer-table" width="684">
+					<tr>
+						<td class="mailer-padding" width="75"></td>
+						<td class="mailer-header">
+							<font face="'Open Sans', sans-serif" class="mailer-header-heading">
+								Analysts & Investors Event<br>
+							</font>
+							<font face="'Open Sans', sans-serif" class="mailer-header-subheading">
+								Four Seasons Hotel <br>
+								<a style="color: #6A778B; text-decoration: none;">Wednesday, March 6, <span class="nowrap">11:00 AM – 1:00 PM</span></a>
+							</font>
+						</td>
+						<td class="mailer-padding" width="75"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="25" style="height:25px"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-header mailer-table" width="684">
+					<tr>
+						<td class="mailer-padding" width="75"></td>
+						<td>
+							<font face="'Open Sans', sans-serif" class="mailer-paragraph">
+								<p>Dear {{lead.First Name}},</p>
+								<p>We look forward to seeing you at the Analysts & Investors Event on Wednesday.  This is a reminder that you are confirmed to attend.</p>
+								<p>
+									<b>What:</b> Analysts & Investors Event <br>
+									<b>Where:</b> <a href="https://www.google.com/maps/place/Four+Seasons+Hotel+San+Francisco/@37.7863499,-122.4064519,17z/data=!3m1!4b1!4m5!3m4!1s0x8085808883879e69:0x31f749319c073bc5!8m2!3d37.7863499!4d-122.4042632" class="text-link">Four Seasons Hotel</a>, San Francisco <br>
+									<b>When:</b> <a style="color: #707f93; text-decoration: none;">11:00 AM – 1:00 PM on Wednesday, March 6</a> <br>
+								</p>
+								<p>See agenda details below.</p>
+								<p>If your plans have changed, and you cannot join us, please let us know, so we can open up your place to someone else.</p>
+								<p>Kind regards, <br><br>
+								<img src="https://d1dejaj6dcqv24.cloudfront.net/images/emails/2018/investor-day/melissa-fisher-signature-300-2x.jpg" alt="" width="230" constrain="true" imagepreview="false" class="melissa-fisher">
+									<br>
+									Melissa Fisher <br>
+									CFO, Qualys
+							</font>
+						</td>
+						<td class="mailer-padding" width="75"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="25" style="height:25px"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-header mailer-table" width="684">
+					<tr>
+						<td class="mailer-padding" width="75"></td>
+						<td>
+							<p><font class="agenda-heading" face="'Open Sans', sans-serif">Analysts & Investors Event Agenda</font></p>
+						</td>
+						<td class="mailer-padding" width="75"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-header mailer-table" width="684">
+					<tr>
+						<td class="mailer-padding" width="75"></td>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%" class="mailer-agenda-table">
+								<tr>
+									<td width="150"><font class="mailer-agenda-time" face="'Open Sans', sans-serif"><span class="nowrap"><a style="color: #707f93; text-decoration: none;">10:30 – 11:00 AM</a></span></font></td>
+									<td>
+										<font class="mailer-overview-text" face="'Open Sans', sans-serif"><p><b>Registration & Refreshments</b></p></font>
+									</td>
+								</tr>
+
+								<tr>
+									<td colspan="2" height="15"></td>
+								</tr>
+
+								<tr>
+									<td colspan="2" class="agenda-seperator" height="20"></td>
+								</tr>
+
+								<tr>
+									<td width="150"><font class="mailer-agenda-time" face="'Open Sans', sans-serif"><span class="nowrap"><a style="color: #707f93; text-decoration: none;">11:00 – 11:20 AM</a></span></font></td>
+									<td>
+										<font class="mailer-overview-text" face="'Open Sans', sans-serif"><p><b>Security at a Crossroads: Industry Dynamics and the Role Qualys Plays Within Them</b><br>
+																				<span class="mailer-agenda-desc-speaker">Philippe Courtot, Chairman and CEO</span></p></font>
+									</td>
+								</tr>
+
+								<tr>
+									<td colspan="2" height="15"></td>
+								</tr>
+
+								<tr>
+									<td colspan="2" class="agenda-seperator" height="20"></td>
+								</tr>
+
+								<tr>
+									<td width="150"><font class="mailer-agenda-time" face="'Open Sans', sans-serif"><span class="nowrap"><a style="color: #707f93; text-decoration: none;">11:20 – 11:35 AM</a></span></font></td>
+									<td>
+										<font class="mailer-overview-text" face="'Open Sans', sans-serif"><p><b>Qualys’ Business Model for the Digital Age</b><br><span class="mailer-agenda-desc-speaker">Melissa Fisher, Chief Financial Officer </span></p></font>
+									</td>
+								</tr>
+
+								<tr>
+									<td colspan="2" height="15"></td>
+								</tr>
+
+								<tr>
+									<td colspan="2" class="agenda-seperator" height="20"></td>
+								</tr>
+
+								<tr>
+									<td width="150"><font class="mailer-agenda-time" face="'Open Sans', sans-serif"><span class="nowrap"><a style="color: #707f93; text-decoration: none;">11:35 AM – 12:25 PM</a></span></font></td>
+									<td>
+										<font class="mailer-overview-text" face="'Open Sans', sans-serif"><p><b>Building Security for the Digital Age One App at a Time</b><br><span class="mailer-agenda-desc-speaker">Sumedh Thakar, Chief Product Officer</span></p></font>
+									</td>
+								</tr>
+
+								<tr>
+									<td colspan="2" height="15"></td>
+								</tr>
+
+								<tr>
+									<td colspan="2" class="agenda-seperator" height="20"></td>
+								</tr>
+
+								<tr>
+									<td width="150"><font class="mailer-agenda-time" face="'Open Sans', sans-serif"><span class="nowrap"><a style="color: #707f93; text-decoration: none;">12:25 – 1:00 PM</a></span></font></td>
+									<td>
+										<font class="mailer-overview-text" face="'Open Sans', sans-serif"><p><b>View from the Customer</b></p></font>
+									</td>
+								</tr>
+
+							</table>
+						</td>
+						<td class="mailer-padding" width="75"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="45" style="height:45px"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-header mailer-table" width="684">
+					<tr>
+						<td class="mailer-padding" width="75"></td>
+						<td>
+							<p><font class="mailer-overview-text" face="'Open Sans', sans-serif">
+								Lunch boxes will be available
+							</font></p>
+						</td>
+						<td class="mailer-padding" width="75"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="25" style="height:25px"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-header mailer-table" width="684">
+					<tr>
+						<td class="mailer-padding" width="75"></td>
+						<td>
+							<p><font class="mailer-footer-text2" face="'Open Sans', sans-serif">This email was sent to <a style="text-decoration: none; color: #707f93;">{{lead.Email Address}}</a>.<br>You may adjust your <a href="https://www.qualys.com/communication-preferences/?utm_source=&utm_medium=&utm_campaign=&utm_term=&leadsource=" class="text-link">email preferences or unsubscribe</a> at any time.</font></p>
+						</td>
+						<td class="mailer-padding" width="75"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="25" style="height:25px"></td>
+		</tr>
+	</table>
+	<table class="hideOnMobile">
+		<tr>
+			<td height="35" style="height:35px; background-color: #EDEEED;"></td>
+		</tr>
+	</table>
+
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+.q-default-hero {
+	margin-bottom: 2em;
+}
+.q-default-hero__splash {
+	margin-top: 3em;
+}
+.paragraph--1.description {
+	max-width: 500px;
+}
+textarea.mktoField {
+	height: auto;
+	padding: 1em 30px;
+	min-height: 105px;
+}
+@media (min-width: 720px) {
+	textarea.mktoField {
+		min-height: 0;
+	}
+}
+.q-default-hero__form {
+	background: #F7FAFC;
+	color: #6A778B;
+	padding-top: 27px;
+}
+@media (min-width: 720px) {
+	.q-default-hero__form {
+		padding: 50px 50px 15px;
+	}
+	.q-default-hero {
+		margin-bottom: 7em;
+	}
+}
+@media (min-width: 1280px) {
+	.q-default-hero__form {
+		padding: 50px 80px 27px;
+	}
+	.q-default-hero__splash {
+		margin-top: 0;
+	}
+}
+@media (min-width: 480px) {
+	.q-default-hero__image {
+		background-image: url(https://ik.imagekit.io/qualys/image/schedule-demo-bg.jpg);
+	}
+}
+.solutionInterested label {
+	display: none;
+}
+/*# sourceMappingURL=index.css.map */

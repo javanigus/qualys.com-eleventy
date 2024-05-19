@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="All the resources you need to setup and succeed with Qualys Patch Management.">
+	<title>Qualys Patch Management Community</title>
+
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+		<link rel="preconnect" href="https://d1uyme8f6ss6qi.cloudfront.net">
+		<link rel="preconnect" href="https://static.cloud.coveo.com">
+		<link rel="preconnect" href="https://unpkg.com">
+		<link rel="preload" href="https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-light.woff" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-book.woff" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="https://d1uyme8f6ss6qi.cloudfront.net/font/gotham-medium.woff" as="font" type="font/woff2" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net">
+	<link rel="preconnect" href="https://i.vimeocdn.com">
+	<link rel="preconnect" href="https://i1.wp.com" />
+	<link rel="preconnect" href="https://qualys.my.salesforce.com" />
+	<link rel="preconnect" href="https://qualys-marketing-api.herokuapp.com">
+
+	
+		<link rel="preconnect" href="https://rum-static.pingdom.net">
+	
+	<!-- Pingdom Real User Monitoring -->
+	<script>
+	    if (!window.location.search.match(/[?&;]dnt=1([;&]|$)/)) {
+	
+	        var _prum = [['id', '51c3aa0fabe53d2109000000'],
+	                     ['mark', 'firstbyte', (new Date()).getTime()]];
+	        (function() {
+	            var s = document.getElementsByTagName('script')[0]
+	              , p = document.createElement('script');
+	            p.async = 'async';
+	            p.src = 'https://rum-static.pingdom.net/prum.min.js';
+	            s.parentNode.insertBefore(p, s);
+	        })();
+	
+	    }
+	</script>
+	<!-- SHA 256 Digest 7H2Pgm/9d1VFPIlhvmHOIhKCrotE4ilnq5ZRxC2wam8= -->
+	<!-- End Pingdom Real User Monitoring -->
+	
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.png" sizes="32x32">
+	<link rel="icon" href="/favicon-64.png" sizes="64x64">
+	<link rel="icon" href="/favicon-128.png" sizes="128x128">
+	<link rel="icon" href="/favicon-256.png" sizes="256x256">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="/apple-touch-icon-1024x1024.png">
+	<link rel="mask-icon" href="/mask-icon.svg" color="#ED2E26">
+	<link rel="canonical" href="/community/patch-management/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="/asset/community/coveo.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="/asset/community/shared.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="/asset/community/shared-min-30em.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="/asset/community/shared-min-60em.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../channels.css">
+
+
+	
+		<link rel="preconnect" href="https://www.googletagmanager.com">
+		<link rel="preconnect" href="https://cdn.bizible.com">
+		<link rel="preconnect" href="https://geoip-js.com">
+		<link rel="preconnect" href="https://js.maxmind.com">
+		<link rel="preconnect" href="https://munchkin.marketo.net">
+		<link rel="preconnect" href="https://snap.licdn.com">
+		<link rel="preconnect" href="https://www.google-analytics.com">
+	
+	<!-- Google Tag Manager -->
+	<script>
+	    if (!window.location.search.match(/[?&;]dnt=1([;&]|$)/)) {
+	
+	        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	        })(window,document,'script','dataLayer','GTM-W7DWPS');
+	
+	    }
+	</script>
+	<!-- End Google Tag Manager -->
+	
+
+</head>
+<body>
+
+	
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7DWPS"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	
+
+		<div class="q-header__background">
+			<header class="q-header">
+				<div class="q-header__container">
+					<div class="q-hamberger-menu">
+						<div class="q-hamburger-menu__icon">
+							<svg width="23" height="23" viewbox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg">
+								<g fill="currentColor">
+									<rect id="Rectangle1" x="0" y="5" width="23" height="3" rx="1.5"></rect>
+									<rect id="Rectangle2" x="0" y="10" width="23" height="3" rx="1.5"></rect>
+									<rect id="Rectangle3" x="0" y="15" width="23" height="3" rx="1.5"></rect>
+								</g>
+							</svg>
+						</div>
+						<div class="q-hamburger-menu__container">
+							<ul class="q-header__nav">
+								<li class="q-navigation__item q-navigation__mobile-only">
+									<a href="https://success.qualys.com/discussions/s/"
+									   title="Qualys Discussions">
+										Discussions
+									</a>
+								</li>
+								<li class="q-navigation__item">
+									<a href="https://success.qualys.com/discussions/s/"
+									   title="Qualys Discussions">
+										Discussions<span class="q-navigation__mobile-only"> by Topic…</span>
+									</a>
+									<ul class="q-header__nav-sub">
+										<li>
+											<a href="#back" class="q-header__nav-back">Back to main menu</a>
+										</li>
+										<li class="q-browser-by-topic">
+											<span>Browse by Topic</span>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRIWA4/asset-management"
+											   class="q-nav__link"
+											   title="Asset Management Discussions">
+												Asset Management</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRwWAO/it-security"
+											   class="q-nav__link"
+											   title="IT Security Discussions">
+												IT Security</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIS1WAO/compliance"
+											   class="q-nav__link"
+											   title="Compliance Discussions">
+												Compliance</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRnWAO/cloud-container"
+											   class="q-nav__link"
+											   title="Cloud &amp; Container Security Discussions">
+												Cloud &amp; Container Security</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISCWA4/web-app-security"
+											   class="q-nav__link"
+											   title="Web App Security Discussions">
+												Web App Security</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRfWAO/certificate-security"
+											   class="q-nav__link"
+											   title="SSL Labs &amp; Certificate Security Discussions">
+												Certificate Security &amp; SSL Labs</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIR8WAO/developer"
+											   class="q-nav__link"
+											   title="Qualys Developer API Discussions">
+												Developer API</a>
+										</li>
+										<li class="q-navigation__desktop-only">
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRAWA4/qualys-cloud-platform"
+											   class="q-nav__link"
+											   title="Qualys Cloud Platform Discussions">
+												Cloud Platform</a>
+										</li>
+										<li class="q-navigation__desktop-only">
+											<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIYEWA4/consulting-edition"
+											   class="q-nav__link"
+											   title="Qualys Consulting Edition Discussions">
+												Consulting Edition</a>
+										</li>
+										<li>
+											<a href="https://success.qualys.com/discussions/s/#start-a-discussion"
+											   class="q-button__start-a-discussion q-button__light-blue q-button-with-arrow">
+												<span>Start a discussion</span></a>
+										</li>
+									</ul>
+								</li>
+								<li class="q-navigation__item">
+									<a href="https://blog.qualys.com/"
+									   title="Qualys Blog">Blog</a>
+								</li>
+								<li class="q-navigation__item">
+									<a href="https://www.qualys.com/training/"
+									   title="Qualys Training &amp; Certification">Training</a>
+								</li>
+								<li class="q-navigation__item">
+									<a href="https://www.qualys.com/documentation/"
+									   title="Qualys Documentation">Docs</a>
+								</li>
+								<li class="q-navigation__item">
+									<a href="https://success.qualys.com/support/s/"
+									   title="Qualys Support">Support</a>
+								</li>
+								<!-- li class="q-navigation__item q-navigation__mobile-only">
+									<a href="https://www.qualys.com/"
+									   title="Qualys.com">Qualys.com</a>
+								</li -->
+								<li class="q-header__nav-underline"></li>
+							</ul>
+						</div>
+					</div>
+					<a class="q-header__logo q-header__logo-community" href="https://community.qualys.com/" title="Qualys Community">
+						<span class="q-logo-shield">
+							<img src="https://ik.imagekit.io/qualys/image/logo/qualys.svg" width="111" height="35" alt="Qualys" class="q-logo__horizontal">
+						</span>
+						<span class="q-logo-text">Community</span>
+					</a>
+					<div class="q-user-menu">
+						<div class="q-user-menu__icon hidden">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="23">
+								<g fill="currentColor">
+									<g transform="translate(3 -.093)">
+										<path d="M6.284.092a5.709 5.709 0 1 1-.002 11.418A5.709 5.709 0 0 1 6.284.092"/>
+									</g>
+									<g transform="translate(0 11.907)">
+										<path d="M.187 7.575C-.476 9.195.703 11 2.47 11h13.922c1.767 0 2.946-1.804 2.283-3.425C16.945 3.45 13.445.65 9.431.65c-4.015 0-7.55 2.8-9.244 6.925"/>
+									</g>
+								</g>
+							</svg>
+						</div>
+						<div class="q-user-menu__container hidden">
+							<div class="q-user-menu__not-logged-in">
+								<ul>
+									<li class="q-navigation__item">
+										<a href="https://success.qualys.com/discussions/s/login/"
+										   title="Qualys Community Login">
+											Login</a>
+									</li>
+									<li class="q-navigation__item">
+										<a href="https://success.qualys.com/discussions/s/login/SelfRegister"
+										   title="Qualys Community Registration">
+											Register</a>
+									</li>
+									<li class="q-header__nav-underline"></li>
+								</ul>
+							</div>
+							<div class="q-user-menu__logged-in"></div>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+			<div class="q-search__container">
+				<div class="q-search">
+
+					<div id="searchbox">
+						<div class="CoveoAnalytics" data-search-hub="communityCoveo"></div>
+						<div class="q-coveo__wrapper">
+							<div class="q-coveo-searchbutton">
+								<div class="CoveoSearchButton"></div>
+							</div>
+							<div class="q-coveo-querybox">
+								<div class="CoveoOmnibox" data-enable-query-suggest-addon="true">
+									<div class="CoveoFacetValueSuggestions" data-field="@sfdcproducts"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		<div class="q-sub-header">
+			<div class="q-sub-header__container">
+				
+			</div>
+		</div>
+
+		
+
+
+	<div class="q-body">
+		<div class="q-body__container">
+			
+	<div class="q-channel__wrapper">
+		<div class="q-channel-header__container">
+
+			<svg class="q-channel__icon" xmlns="http://www.w3.org/2000/svg" width="77" height="75" viewBox="0 0 77 75"><g fill="none" fill-rule="evenodd"><path stroke="#2E8BE0" d="M64.167 70.43c-17.778 3.462-35.556 3.462-53.334 0-3.644-.745-7.4-4.404-8.166-7.952-3.556-17.31-3.556-34.62 0-51.93C3.432 7 7.19 3.342 10.833 2.596c17.778-3.46 35.556-3.46 53.334 0 3.644.746 7.4 4.404 8.166 7.952 3.556 17.31 3.556 34.62 0 51.93-.765 3.548-4.522 7.207-8.166 7.952"/><path fill="#2E8BE0" d="M26.516 38.604h-3.042V45H19.6V26.8h6.916c4.342 0 7.202 1.742 7.202 5.798 0 4.134-2.99 6.006-7.202 6.006zm3.224-6.006c0-1.976-1.196-2.574-3.614-2.574h-2.652v5.356h2.652c2.418 0 3.614-.806 3.614-2.782zM47.666 45h-3.64c-1.014-2.86-3.354-9.828-4.342-13.078h-.078V45h-3.588V26.8h5.46s3.926 11.752 4.472 13.546c.52-1.794 4.316-13.546 4.316-13.546H55.7V45h-3.588V31.922h-.078c-1.04 3.25-3.588 10.868-4.368 13.078z"/></g></svg>
+			<h1 class="q-heading">
+				Patch Management
+			</h1>
+			<!-- h1 class="q-subheading">
+				
+			</h1 -->
+
+		</div>
+		<div id="channel_list_container" data-channel-json="">
+			<div data-reactroot=""><div class="q-top-box__container"><div class="q-whats-new"><div><h3>What’s New</h3><div class="q-whats-new__container"><div class="q-news-item"><div class="q-news-item__container"><a href="https://www.qualys.com/company/newsroom/news-releases/usa/qualys-adds-advanced-remediation-capabilities-to-minimize-vulnerability-risk/" class="q-recent-subject q-heading-4">Qualys Adds Advanced Remediation Capabilities to Minimize Vulnerability Risk</a><div class="q-news-item__metadata"><time dateTime="2022-02-01">February 1, 2022</time></div></div></div><div class="q-news-item"><div class="q-news-item__container"><a href="https://event.on24.com/wcc/r/3414800/5C33F1BB37C86ABDF67D6CE5D168A55E" class="q-recent-subject q-heading-4">Webinar: Qualys Zero-Touch Patching for Proactive Vulnerability Remediation</a><div class="q-news-item__metadata"><time dateTime="2021-09-28">September 28, 2021</time></div></div></div><div class="q-news-item"><div class="q-news-item__container"><a href="https://blog.qualys.com/qualys-insights/2021/09/27/prioritize-remediation-with-a-perceived-risk-approach-to-strengthen-cybersecurity-effectiveness" class="q-recent-subject q-heading-4">Prioritize Remediation with a Perceived-Risk Approach</a><div class="q-news-item__metadata"><time dateTime="2021-09-27">September 27, 2021</time></div></div></div></div></div><button class="q-load-more q-button-with-arrow"><span>Load more</span></button></div><div class="q-trending-content"><div><h3>Trending Topics</h3><div class="q-trending-content__container"><div class="q-trending-item"><div class="q-trending-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00006fXwmOSAS" class="q-recent-subject q-heading-4">Anyone else on pod 4 having issues in PM where it is showing 0 assets and 0 patches?</a><div class="q-trending-item__metadata"><time dateTime="2022-01-13">January 13, 2022</time></div></div></div><div class="q-trending-item"><div class="q-trending-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00006UGt9LSAT" class="q-recent-subject q-heading-4">Is Qualys providing Adobe updates?</a><div class="q-trending-item__metadata"><time dateTime="2021-12-01">December 1, 2021</time></div></div></div><div class="q-trending-item"><div class="q-trending-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00006IdETlSAN" class="q-recent-subject q-heading-4">Where does Qualys store patch files ?</a><div class="q-trending-item__metadata"><time dateTime="2021-10-19">October 19, 2021</time></div></div></div></div></div><button class="q-load-more q-button-with-arrow"><span>Load more</span></button></div><div class="q-top-articles"><div><h3>Top Articles</h3><div class="q-top-articles__container"><div class="q-top-articles-item"><div class="q-top-articles-item__container"><a href="https://www.qualys.com/apps/patch-management/" class="q-recent-subject q-heading-4">About Patch Management</a><div class="q-top-articles-item__metadata"><time dateTime="2021-09-15">September 15, 2021</time></div></div></div><div class="q-top-articles-item"><div class="q-top-articles-item__container"><a href="https://www.brighttalk.com/webcast/11673/494962" class="q-recent-subject q-heading-4">This Month in Vulnerabilities and Patches Webinar July 15</a><div class="q-top-articles-item__metadata"><time dateTime="2021-07-13">July 13, 2021</time></div></div></div><div class="q-top-articles-item"><div class="q-top-articles-item__container"><a href="https://www.qualys.com/docs/vmdr-ebook.pdf" class="q-recent-subject q-heading-4">VMDR E-Book</a><div class="q-top-articles-item__metadata"><time dateTime="2021-07-01">July 1, 2021</time></div></div></div></div></div><button class="q-load-more q-button-with-arrow"><span>Load more</span></button></div></div><div class="q-top-videos"><h2><span>Top Videos</span><a href="https://vimeo.com/channels/1469912" class="q-link-with-arrow nowrap" title="View all videos">View all</a></h2><div class="q-top-videos__container"><div class="q-top-video"><a href="https://vimeo.com/400388383" class="q-top-video-poster-image__container" title="Patch Management - Free 60-day Trial"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://i.vimeocdn.com/video/868770438-f86b628780c01196f5d3bb3be56257037e560aa0cb4b73a363c6cb665bd2f058-d_960x540?r=pad" alt="Patch Management - Free 60-day Trial" class="lazyload q-top-video-poster-image" height="230" width="360"/><span class="q-play-icon__crop"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="/asset/image/icon/play-icon.svg" alt="Play Button" class="lazyload q-play-icon" height="40" width="40"/></span></a><a href="https://vimeo.com/400388383" class="q-top-video-title">Patch Management - Free 60-day Trial</a><div class="q-top-video-speakers"></div><time class="q-top-video-date" dateTime="2020-03-24T20:58:39+00:00">March 24, 2020</time></div><div class="q-top-video"><a href="https://vimeo.com/301686444" class="q-top-video-poster-image__container" title="Real-Time Vulnerability Management"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://i.vimeocdn.com/video/740577515-67e928a224866e94dd30b00edcbf968e5ade8b72b6f267430f1d0176ec35f8aa-d_960x540?r=pad" alt="Real-Time Vulnerability Management" class="lazyload q-top-video-poster-image" height="230" width="360"/><span class="q-play-icon__crop"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="/asset/image/icon/play-icon.svg" alt="Play Button" class="lazyload q-play-icon" height="40" width="40"/></span></a><a href="https://vimeo.com/301686444" class="q-top-video-title">Real-Time Vulnerability Management</a><div class="q-top-video-speakers"></div><time class="q-top-video-date" dateTime="2018-11-19T19:52:28+00:00">November 19, 2018</time></div><div class="q-top-video"><a href="https://vimeo.com/316102983" class="q-top-video-poster-image__container" title="Qualys Patch Management"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://i.vimeocdn.com/video/789507638-a8a3ffd899db6d36116b37213e6fbbafe752b6432f6259e369bf11f437f2a75e-d_960x540?r=pad" alt="Qualys Patch Management" class="lazyload q-top-video-poster-image" height="230" width="360"/><span class="q-play-icon__crop"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="/asset/image/icon/play-icon.svg" alt="Play Button" class="lazyload q-play-icon" height="40" width="40"/></span></a><a href="https://vimeo.com/316102983" class="q-top-video-title">Qualys Patch Management</a><div class="q-top-video-speakers"></div><time class="q-top-video-date" dateTime="2019-02-08T14:13:06+00:00">February 8, 2019</time></div><div class="q-top-video"><a href="https://vimeo.com/375330584" class="q-top-video-poster-image__container" title="Real-Time Vulnerability Prioritization and Response"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://i.vimeocdn.com/video/834126352-a25815a4a7b24908ca72a53b838e0c62265bab82036f35c6327e27840b82aab6-d_960x540?r=pad" alt="Real-Time Vulnerability Prioritization and Response" class="lazyload q-top-video-poster-image" height="230" width="360"/><span class="q-play-icon__crop"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="/asset/image/icon/play-icon.svg" alt="Play Button" class="lazyload q-play-icon" height="40" width="40"/></span></a><a href="https://vimeo.com/375330584" class="q-top-video-title">Real-Time Vulnerability Prioritization and Response</a><div class="q-top-video-speakers"></div><time class="q-top-video-date" dateTime="2019-11-25T04:48:49+00:00">November 24, 2019</time></div></div></div><div class="q-jive-content__container"><div class="q-recent-content"><h2><span>Recent Discussions</span><a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISLWA4" class="q-link-with-arrow nowrap" title="View all discussions">View all</a></h2><div class="q-recent-item__container"><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000004IPY2QAO" title="David B"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="David B" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00006fXwmOSAS" class="q-recent-subject q-heading-4">Anyone else on pod 4 having issues in PM where it is showing 0 assets and 0 patches?</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2022-01-13T16:03:57.000Z" title="January 13, 2022 8:03 AM">6 months ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISLWA4">Patch Management</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000004IPY2QAO">David B</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000004ICoiQAG" title="Jason Berra"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Jason Berra" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00006UGt9LSAT" class="q-recent-subject q-heading-4">Is Qualys providing Adobe updates?</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2021-12-01T15:22:27.000Z" title="December 1, 2021 7:22 AM">7 months ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISLWA4">Patch Management</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000004ICoiQAG">Jason Berra</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000004Hwk1QAC" title="Alexandru Pasarica"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Alexandru Pasarica" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00006IdETlSAN" class="q-recent-subject q-heading-4">Where does Qualys store patch files ?</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2021-10-19T11:28:36.000Z" title="October 19, 2021 4:28 AM">9 months ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISLWA4">Patch Management</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000004Hwk1QAC">Alexandru Pasarica</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003cLexQAE" title="Frederick"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Frederick" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00005g84RlSAI" class="q-recent-subject q-heading-4">Why Qualys doesn&#x27;t pick up latest missing patches for Windows devices?</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2021-05-13T02:28:02.000Z" title="May 12, 2021 7:28 PM">a year ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISLWA4">Patch Management</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000003cLexQAE">Frederick</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0051a000002j6HoAAI" title="Jayson Coulte"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Jayson Coulte" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00005b2ZZ1SAM" class="q-recent-subject q-heading-4">pendingReboot:true vs status:`Pending Reboot`</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2021-04-20T21:12:11.000Z" title="April 20, 2021 2:12 PM">a year ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRAWA4">Qualys Cloud Platform</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0051a000002j6HoAAI">Jayson Coulte</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003oZiDQAU" title="JamieT-Norm"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="JamieT-Norm" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L000053L1WLSA0" class="q-recent-subject q-heading-4">Unable to download patch due to Language issue</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2020-12-09T17:50:01.000Z" title="December 9, 2020 9:50 AM">2 years ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRwWAO">IT Security</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000003oZiDQAU">JamieT-Norm</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003cHf2QAE" title="Pedro Pinesso"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Pedro Pinesso" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00004rPjyoSAC" class="q-recent-subject q-heading-4">The installer failed to deploy the patch. Exitcode -2145124329.</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2020-10-19T10:33:22.000Z" title="October 19, 2020 3:33 AM">2 years ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISLWA4">Patch Management</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000003cHf2QAE">Pedro Pinesso</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003cHf2QAE" title="Pedro Pinesso"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Pedro Pinesso" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00004pgbQ0SAI" class="q-recent-subject q-heading-4">Patch Management - PoC - Is there a possibility to configure the VM to reboot automatically even with a user logged in?</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2020-10-08T09:10:38.000Z" title="October 8, 2020 2:10 AM">2 years ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRwWAO">IT Security</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000003cHf2QAE">Pedro Pinesso</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003cH6RQAU" title="Luiggi Alvarez"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Luiggi Alvarez" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00004oI2XHSA0" class="q-recent-subject q-heading-4">Why my assets status in the Patch Management Module is Enabled and not Scanned?</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2020-10-01T17:20:16.000Z" title="October 1, 2020 10:20 AM">2 years ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRAWA4">Qualys Cloud Platform</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000003cH6RQAU">Luiggi Alvarez</a></span></div></div></div><div class="q-recent-item"><span class="q-recent-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003cFDGQA2" title="Subhajit Dey"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Subhajit Dey" class="lazyload" height="48" width="48"/></a></span><div class="q-recent-item__container"><a href="https://success.qualys.com/discussions/s/question/0D52L00004jVQVBSA4" class="q-recent-subject q-heading-4">SCCM integration with Qualys cloud platform for patching</a><div class="q-recent-item__metadata"><time class="q-recent-date" dateTime="2020-09-09T11:22:53.000Z" title="September 9, 2020 4:22 AM">2 years ago</time><span class="q-recent-space"> in <a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRAWA4">Qualys Cloud Platform</a></span><span class="q-recent-byline__container"> by <a href="https://success.qualys.com/discussions/s/profile/0052L000003cFDGQA2">Subhajit Dey</a></span></div></div></div></div><button class="q-load-more q-button-with-arrow"><span>Load more</span></button></div><div><a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISLWA4/#start-a-discussion" class="q-start-a-discussion q-button-with-arrow"><span>Start a discussion</span></a><div class="q-top-contributors"><h3>Trending Members</h3><div class="q-top-contributors__container"><div class="q-top-contributor"><span class="q-top-contributor-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okJBQAY"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/ncsphoto/GeQF-o1nrLQ-7kLg3yC0Iu9DPNogLfpKA2InDCrlsL2gryRxFrjcuQ3wwd6KrJXY?fromEmail=1" alt="noxx" class="lazyload" height="48" width="48"/></a></span><div class="q-top-contributor__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okJBQAY" class="q-heading-4">noxx</a></div></div><div class="q-top-contributor"><span class="q-top-contributor-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0051a000002DRmGAAW"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/img/userprofile/default_profile_45_v2.png?fromEmail=1" alt="Robert Sloan" class="lazyload" height="48" width="48"/></a></span><div class="q-top-contributor__container"><a href="https://success.qualys.com/discussions/s/profile/0051a000002DRmGAAW" class="q-heading-4">Robert Sloan</a></div></div><div class="q-top-contributor"><span class="q-top-contributor-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okphQAA"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/ncsphoto/GeQF-o1nrLQ-7kLg3yC0IvksR5FliqWwrawzfA-BPnSI9HL4xhflv7sZP6UM8CCq?fromEmail=1" alt="Richard Mines" class="lazyload" height="48" width="48"/></a></span><div class="q-top-contributor__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okphQAA" class="q-heading-4">Richard Mines</a></div></div><div class="q-top-contributor"><span class="q-top-contributor-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okIpQAI"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/ncsphoto/GeQF-o1nrLQ-7kLg3yC0Io6063VrjUaKeFDSMp1cH2afP7pqljCuKY_p8LxSD4Lw?fromEmail=1" alt="derekv" class="lazyload" height="48" width="48"/></a></span><div class="q-top-contributor__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okIpQAI" class="q-heading-4">derekv</a></div></div><div class="q-top-contributor"><span class="q-top-contributor-avatar__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okJ1QAI"><img src="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;/%3E" data-src="https://qualys.my.salesforce.com/ncsphoto/GeQF-o1nrLQ-7kLg3yC0Ijjr0LoaRDSyuFXQ0L8m_MXdt3Kw5D99c_8QZpvPOq6c?fromEmail=1" alt="tsspawn" class="lazyload" height="48" width="48"/></a></span><div class="q-top-contributor__container"><a href="https://success.qualys.com/discussions/s/profile/0052L000003okJ1QAI" class="q-heading-4">tsspawn</a></div></div></div><button class="q-load-more q-button-with-arrow"><span>Load more</span></button></div></div></div></div>
+		</div>
+		<div class="q-top-videos q-apps-documents">
+			<h2 class="q-documents-panel-heading">
+				<span>Documentation</span>
+				<a href="/documentation/" class="q-link-with-arrow nowrap" title="View all Documents">View all</a>
+			</h2>
+			<h4 class="q-apps-documents__subheading-text">Custom Assessment and Remediation</h4>
+			<div class="q-top-videos__container">
+				<div class="q-apps-documents__list">
+					<ul>
+		<li><a href="https://qualysguard.qg2.apps.qualys.com/sm/help/get_started/get_started.htm">Online Help</a></li>
+		<li><a href="https://www.qualys.com/docs/qualys-car-getting-started-guide.pdf">Getting Started Guide</a></li>
+		<li><a href="https://www.qualys.com/docs/qualys-car-api-user-guide.pdf">API User Guide</a></li>
+		</ul>
+		
+				</div>
+			</div>
+		</div>
+		<div class="q-top-videos q-apps-documents">
+			<h2 class="q-documents-panel-heading">
+				<span>Documentation</span>
+				<a href="/documentation/" class="q-link-with-arrow nowrap" title="View all Documents">View all</a>
+			</h2>
+			<h4 class="q-apps-documents__subheading-text">Patch Management</h4>
+			<div class="q-top-videos__container">
+				<div class="q-apps-documents__list">
+					<ul>
+		<li><a href="https://qualysguard.qg2.apps.qualys.com/pm/help/index.htm#t=get_started/get_started.htm">Online Help</a></li>
+		<li><a href="https://www.qualys.com/docs/qualys-patch-management-getting-started-guide.pdf">Getting Started Guide</a></li>
+		<li><a href="https://www.qualys.com/docs/qualys-patch-management-supported-product-versions.pdf">Supported Product Versions Guide</a></li>
+		<li><a href="/docs/qualys-patch-management-api-user-guide.pdf">API User Guide</a></li>
+		<li><a href="https://www.qualys.com/documentation/release-notes/#pm">Release Notes</a></li>
+		<li><a href="https://www.qualys.com/training/library/patch-management">Training</a></li>
+		</ul>
+		
+				</div>
+			</div>
+		</div>
+		<script type="application/json" id="channel_data">
+			{"releaseDate":"2019-02-01","title":"Patch Management","urlSlug":"patch-management","tags":["pm","patch management"],"solution":"IT Security","salesforceTopicId":"0TO2L000000HISLWA4","jivePlaceId":19890,"jiveContainerId":2021,"vimeoChannelId":1469912,"abbr":"pm","iconSrc":"/asset/image/app-icons/pm-75x75.svg","documentList":[{"title":"Custom Assessment and Remediation","category":"Cloud Apps","documentsList":"- [Online Help][1]\n- [Getting Started Guide][2]\n- [API User Guide][3]\n\n[1]:https://qualysguard.qg2.apps.qualys.com/sm/help/get_started/get_started.htm\n[2]:https://www.qualys.com/docs/qualys-car-getting-started-guide.pdf\n[3]:https://www.qualys.com/docs/qualys-car-api-user-guide.pdf","appGroup":"IT Security","cloudApp":{"releaseDate":"2019-02-01","title":"Patch Management","urlSlug":"patch-management","tags":["pm","patch management"],"solution":"IT Security","salesforceTopicId":"0TO2L000000HISLWA4","jivePlaceId":19890,"jiveContainerId":2021,"vimeoChannelId":1469912},"appOrder":8},{"title":"Patch Management","category":"Cloud Apps","documentsList":"- [Online Help][2]\n- [Getting Started Guide][1]\n- [Supported Product Versions Guide][5]\n- [API User Guide][6]\n- [Release Notes][3]\n- [Training][4]\n\n[1]: https://www.qualys.com/docs/qualys-patch-management-getting-started-guide.pdf\n[2]: https://qualysguard.qg2.apps.qualys.com/pm/help/index.htm#t=get_started/get_started.htm\n[3]: https://www.qualys.com/documentation/release-notes/#pm\n[4]: https://www.qualys.com/training/library/patch-management\n[5]: https://www.qualys.com/docs/qualys-patch-management-supported-product-versions.pdf\n[6]: /docs/qualys-patch-management-api-user-guide.pdf","appGroup":"IT Security","cloudApp":{"releaseDate":"2019-02-01","title":"Patch Management","urlSlug":"patch-management","tags":["pm","patch management"],"solution":"IT Security","salesforceTopicId":"0TO2L000000HISLWA4","jivePlaceId":19890,"jiveContainerId":2021,"vimeoChannelId":1469912},"appOrder":7}]}
+		</script>
+
+	</div>
+
+
+		</div>
+	</div>
+
+		<footer class="q-footer">
+			<div class="q-footer__container">
+				<div class="q-footer__row">
+		
+					<div class="q-footer__column--wide q-footer__column--desktop">
+						<h2 class="q-footer__heading">
+							Join the <span class="nowrap">discussion today!</span>
+						</h2>
+						<p class="q-footer__copy">
+							<strong>Learn</strong> more about Qualys and industry best practices.
+						</p>
+						<p class="q-footer__copy">
+							<strong>Share</strong> what you know and build a reputation.
+						</p>
+						<p class="q-footer__copy">
+							<strong>Secure</strong> your systems and improve security for everyone.
+						</p>
+						<div class="q-footer__search">
+							<a href="https://success.qualys.com/discussions/s/#start-a-discussion"
+								class="q-button__start-a-discussion q-button__light-blue q-button-with-arrow">
+								<span>Start a discussion</span></a>
+						</div>
+		
+						<div class="q-footer__social">
+							<ul class="q-social-list">
+								<li class="q-social-list__item">
+									<a href="https://twitter.com/qualys" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="20" height="20"
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 148.7 610.7 496.3"
+											enable-background="new 0 148.7 610.7 496.3">
+											<title>Visit Qualys on Twitter</title>
+											<path fill="#FFF"
+												d="M192.1 645c-70.8 0-136.7-20.7-192.1-56.2 9.8 1.1 19.9 1.8 29.9 1.8 58.7 0 112.8-20.1 155.7-53.6-54.7-1.1-101.2-37.3-117-87.1 7.6 1.6 15.4 2.2 23.7 2.2 11.4 0 22.6-1.6 33.1-4.5-57.5-11.6-100.6-62.1-100.6-122.9v-1.6c17 9.4 36.2 15 56.7 15.6-33.5-22.4-55.8-60.6-55.8-104.2 0-23 6.3-44.4 17-63 61.6 75.9 153.9 126 258 131.1-2.2-9.2-3.4-18.8-3.4-28.6 0-69.2 56.1-125.3 125.3-125.3 36 0 68.6 15.2 91.4 39.5 28.8-5.6 55.6-15.9 79.7-30.4-9.4 29.3-29 53.8-54.9 69.5 25.2-3.1 49.6-9.8 71.9-19.7-16.8 25-38 47.1-62.5 64.8.2 5.4.4 10.7.4 16.3 0 165.4-126.2 356.3-356.5 356.3">
+											</path>
+										</svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://www.linkedin.com/company/qualys" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="16" height="16"
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"
+											enable-background="new 0 0 36 36">
+											<title>Visit Qualys on LinkedIn</title>
+											<path fill="#FFF"
+												d="M33.3 0h-30.6c-1.5 0-2.7 1.2-2.7 2.6v30.8c0 1.4 1.2 2.6 2.7 2.6h30.7c1.5 0 2.7-1.2 2.7-2.6v-30.8c-.1-1.4-1.3-2.6-2.8-2.6zm-22.6 30.7h-5.4v-17.2h5.3v17.2zm-2.7-19.6c-1.7 0-3.1-1.4-3.1-3.1 0-1.7 1.4-3 3.1-3 1.7 0 3.1 1.4 3.1 3.1 0 1.7-1.4 3-3.1 3zm22.7 19.6h-5.3v-8.4c0-2 0-4.6-2.8-4.6s-3.2 2.2-3.2 4.4v8.5h-5.4v-17.1h5.1v2.3h.1c.7-1.4 2.5-2.8 5.1-2.8 5.4 0 6.4 3.6 6.4 8.2v9.5z">
+											</path>
+										</svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://www.facebook.com/qualys" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="16" height="16"
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 90 611.8 612.2"
+											enable-background="new 0 90 611.8 612.2">
+											<title>Visit Qualys on Facebook</title>
+											<path fill="#FFF"
+												d="M578.3 90h-544.6c-18.6 0-33.7 15.1-33.7 33.7v544.4c0 18.6 15.1 33.7 33.7 33.7h293v-236.9h-79.7v-92.4h79.8v-67.9c0-79.1 48.4-122 118.8-122 33.7 0 62.8 2.5 71.3 3.7v82.5h-48.9c-38.3 0-45.9 18.1-45.9 44.9v58.9h91.5l-11.9 92.4h-79.6v237.1h155.9c18.6 0 33.7-15.1 33.7-33.7v-544.7c.3-18.6-14.8-33.7-33.4-33.7z">
+											</path>
+										</svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://www.youtube.com/user/QualysGuard" target="_blank"
+										rel="noopener">
+										<svg class="q-social-list__icon" width="22" height="22"
+											xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+											viewBox="0 0 1021.5 718.4" enable-background="new 0 0 1021.5 718.4">
+											<title>Visit Qualys on YouTube</title>
+											<path fill="#E0E0E0" d="M647.3 366.3l-242.1-161.6 276 144-33.9 17.6"></path>
+											<path fill="#FFF"
+												d="M1011.2 155s-10-70.4-40.6-101.4c-38.8-40.7-82.4-40.9-102.3-43.3-142.9-10.3-357.4-10.3-357.4-10.3h-.4s-214.4 0-357.4 10.3c-20 2.4-63.5 2.6-102.3 43.3-30.6 31-40.6 101.4-40.6 101.4s-10.2 82.6-10.2 165.3v77.5c0 82.7 10.2 165.3 10.2 165.3s10 70.4 40.6 101.4c38.9 40.7 89.9 39.4 112.6 43.7 81.7 7.8 347.3 10.3 347.3 10.3s214.6-.3 357.6-10.7c20-2.4 63.5-2.6 102.3-43.3 30.6-31 40.6-101.4 40.6-101.4s10.2-82.7 10.2-165.3v-77.5c.1-82.7-10.2-165.3-10.2-165.3m-605.9 336.7v-287l276 144-276 143z">
+											</path>
+										</svg></a>
+								</li>
+								<li class="q-social-list__item">
+									<a href="https://vimeo.com/qualys" target="_blank" rel="noopener">
+										<svg class="q-social-list__icon" width="16" height="16"
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 86.67">
+											<title>Visit Qualys on Vimeo</title>
+											<path fill="#FFF"
+												d="M100 20.05q-.72 14.63-20.44 40.06Q59.16 86.67 45 86.67q-8.74 0-14.79-16.17l-8.02-29.66q-4.49-16.17-9.64-16.18-1.12 0-7.85 4.72L0 23.31q7.4-6.52 14.59-13 9.87-8.55 14.82-9 11.67-1.12 14.37 16 2.91 18.47 4 23 3.36 15.32 7.41 15.31 3.14 0 9.43-9.94t6.73-15.13q.9-8.58-6.73-8.58a18.7 18.7 0 0 0-7.4 1.64Q64.63-.66 85.42 0 100.84.47 100 20.05z">
+											</path>
+										</svg></a>
+								</li>
+							</ul>
+						</div>
+		
+					</div>
+					<div class="q-footer__column q-footer__column--nav">
+		
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Qualys
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/" class="q-footer__link"
+										title="Information Security and Compliance | Qualys">
+										Qualys.com</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/community-edition/" class="q-footer__link"
+										title="Qualys Community Edition">
+										Qualys Community Edition</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://store.qualys.com/" class="q-footer__link"
+										title="Qualys Merchandise Store">
+										Qualys Merchandise Store</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Qualys Communities
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/vulnerability-management/" class="q-footer__link"
+										title="Qualys Vulnerability Management Community">
+										Vulnerability Management</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/policy-compliance/" class="q-footer__link"
+										title="Qualys Policy Compliance Community">
+										Policy Compliance</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/pci-compliance/" class="q-footer__link"
+										title="Qualys PCI Compliance Community">
+										PCI Compliance</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/web-app-scanning/" class="q-footer__link"
+										title="Qualys Web App Scanning Community">
+										Web App Scanning</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/web-app-firewall/" class="q-footer__link"
+										title="Qualys Web App Firewall Community">
+										Web App Firewall</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/continuous-monitoring/" class="q-footer__link"
+										title="Qualys Continuous Monitoring Community">
+										Continuous Monitoring</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/security-assessment-questionnaire/"
+										class="q-footer__link" title="Qualys Security Assessment Questionnaire Community">
+										Security Assessment Questionnaire</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/threat-protection/" class="q-footer__link"
+										title="Qualys Threat Protection Community">
+										Threat Protection</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/global-assetview/" class="q-footer__link"
+										title="Qualys Asset Inventory Community">
+										Asset Inventory</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/asset-view/" class="q-footer__link"
+										title="Qualys AssetView Community">
+										AssetView</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/endpoint-detection-response/" class="q-footer__link"
+										title="Qualys Endpoint Detection and Response Community">
+										Endpoint Detection and Response</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/security-configuration-assessment/"
+										class="q-footer__link" title="Qualys Security Configuration Assessment Community">
+										Security Configuration Assessment</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/file-integrity-monitoring/" class="q-footer__link"
+										title="Qualys File Integrity Monitoring Community">
+										File Integrity Monitoring</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/cloud-inventory/" class="q-footer__link"
+										title="Qualys Cloud Inventory Community">
+										Cloud Inventory</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/certificate-inventory/" class="q-footer__link"
+										title="Qualys Certificate Inventory Community">
+										Certificate Inventory</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/container-security/" class="q-footer__link"
+										title="Qualys Container Security Community">
+										Container Security</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/cloud-security-assessment/" class="q-footer__link"
+										title="Qualys Cloud Security Assessment Community">
+										Cloud Security Assessment</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/certificate-assessment/" class="q-footer__link"
+										title="Qualys Certificate Assessment Community">
+										Certificate Assessment</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/out-of-band-configuration-assessment/"
+										class="q-footer__link" title="Qualys Out-of-band Configuration Assessment Community">
+										Out-of-band Configuration Assessment</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/patch-management/" class="q-footer__link"
+										title="Qualys Patch Management Community">
+										Patch Management</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/api/" class="q-footer__link"
+										title="Qualys Developer API Community">
+										Developer API</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/cloud-agent/" class="q-footer__link"
+										title="Qualys Cloud Agent Community">
+										Cloud Agent</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://community.qualys.com/reporting/" class="q-footer__link"
+										title="Qualys Dashboards &amp; Reporting Community">
+										Dashboards &amp; Reporting</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Discussions
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/" class="q-footer__link"
+										title="Qualys Discussions">
+										All discussions</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRIWA4/asset-management"
+										class="q-footer__link" title="Asset Management Discussions">
+										Asset Management</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRwWAO/it-security"
+										class="q-footer__link" title="IT Security Discussions">
+										IT Security</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIS1WAO/compliance"
+										class="q-footer__link" title="Compliance Discussions">
+										Compliance</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRnWAO/cloud-container"
+										class="q-footer__link" title="Cloud &amp; Container Security Discussions">
+										Cloud &amp; Container Security</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISCWA4/web-app-security"
+										class="q-footer__link" title="Web App Security Discussions">
+										Web App Security</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRfWAO/certificate-security"
+										class="q-footer__link" title="Certificate Security &amp; SSL Labs Discussions">
+										Certificate Security &amp; SSL Labs</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIR8WAO/developer"
+										class="q-footer__link" title="Qualys API Discussions">
+										Developer API</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRAWA4/qualys-cloud-platform"
+										class="q-footer__link" title="Qualys Cloud Platform Discussions">
+										Cloud Platform</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Blog
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://blog.qualys.com/" class="q-footer__link" title="Qualys Blog">
+										All</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://blog.qualys.com/qualys-insights" class="q-footer__link"
+										title="Qualys Insights">
+										Qualys Insights</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://blog.qualys.com/product-tech" class="q-footer__link"
+										title="Product and Tech">
+										Product and Tech</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://blog.qualys.com/vulnerabilities-threat-research" class="q-footer__link"
+										title="Vulnerabilities and Threat Research">
+										Vulnerabilities and Threat Research</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://notifications.qualys.com/" class="q-footer__link" title="Release Notifications">
+										Release Notifications</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Training
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/training/" class="q-footer__link"
+										title="Qualys Training &amp; Certification">Overview</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/training/#self-paced" class="q-footer__link"
+										title="Qualys Certified Training Courses">Certified Courses</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/training/#video-library" class="q-footer__link"
+										title="Qualys Training Video Library">Video Library</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/training/#instructor-led" class="q-footer__link"
+										title="Qualys Certified Instructor-led Training">Instructor-led Training</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Docs
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/documentation/" class="q-footer__link"
+										title="Qualys Documentation">Overview</a>
+								</li>
+								<li class="q-footer__list-item">
+									<a href="https://www.qualys.com/documentation/release-notes/" class="q-footer__link"
+										title="Qualys Release Notes">Release Notes</a>
+								</li>
+							</ul>
+						</div>
+						<div class="q-footer__group">
+							<h3 class="q-footer__subheading">
+								Support
+							</h3>
+							<ul class="q-footer__list">
+								<li class="q-footer__list-item">
+									<a href="https://success.qualys.com/support/s/" class="q-footer__link"
+										title="Qualys Support Portal">Support Portal</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+		
+				</div>
+				<div class="q-footer__row">
+		
+					<small class="q-footer__copyright">
+						© 2022 Qualys, Inc.&nbsp; All rights reserved.&nbsp;
+						<a href="https://www.qualys.com/company/privacy/" class="nowrap">
+							Privacy Policy</a>.&nbsp;
+						<a href="https://success.qualys.com/support/s/standards" class="nowrap">
+							Trust</a>.&nbsp;
+						<a href="https://www.qualys.com/cookie-consent/" class="nowrap">
+							Cookie Consent</a>.&nbsp;
+					</small>
+		
+				</div>
+			</div>
+		</footer>
+		<script id="site_data" type="application/json">
+			{"asset":"https://d1uyme8f6ss6qi.cloudfront.net","base":{"url":"https://www.qualys.com"},"community":{"base":{"url":"https://community.qualys.com"}},"coveo":{"public":{"api":{"key":"xx6fb1924a-c0ec-4e98-9dab-303e9c0f6437"}}},"env":{"production":true},"google":{"gtm":{"id":"GTM-MNLTS6"}},"marketo":{"base":{"url":"https://lps.qualys.com"},"munchkin":{"id":"797-ENI-742"}},"salesforce":{"base":{"url":"https://qualys.secure.force.com"},"discuss":{"url":"https://success.qualys.com/discussions/s"},"partners":{"url":"https://success.qualys.com/partners/s"},"support":{"url":"https://success.qualys.com/support/s"}},"azure":{"subscription":{"key":"bb09912e21f346afb31bd4f80d353792"}},"vulnOffice":{"base":{"url":"https://vuln.intranet.qualys.com"}},"lang":"en","title":"Qualys, Inc.","year":2022}
+		</script>
+		<script src="https://unpkg.com/coveo.analytics@2.18.24/dist/coveoua.js" integrity="sha384-8wcVSOM2hnT06Ca8hVEkWv2BAzl5l6oBL+vwJr6DNWMx74IEI6k3moVPSSkQApVs" crossorigin="anonymous"></script>
+		<script class="coveo-script" src="https://static.cloud.coveo.com/searchui/v2.10085/2/js/CoveoJsSearch.Lazy.min.js" integrity="sha512-vueueBf3ND6Jj5E31AIFE28WnA2gQaGt3jHb+Wx5c0bDFBiKgQ8in3T9L4nVHC02v1uEgsrD4vL6pgYUGwZ3Kw==" crossorigin="anonymous"></script>
+		<script src="/asset/community/shared.js"></script>
+		<script src="/asset/community/coveo.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/contentful@7.3.0/dist/contentful.browser.min.js" integrity="sha384-DX0o2Sr/ra9tg7er/YvF0xrF2O/ADneY6TxkW1EtIuD0ptdxxPlajg3JT0GI92JO" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js" integrity="sha256-CutOzxCRucUsn6C6TcEYsauvvYilEniTXldPa6/wu0k=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.21/moment-timezone-with-data-2012-2022.min.js" integrity="sha256-Jv+5wei4zCofi7M6D+HbGcXbFBOsshNv+aIJSodBGhM=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.2/umd/react.production.min.js" integrity="sha256-2EQx5J1ux3sjgPLtDevlo449XNXfvEplcRYWIF6ui8w=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.2/umd/react-dom.production.min.js" integrity="sha256-3NNU/yoE0R7VxxapKiw/hkgQzcSMztyclb5RpeVlV7Y=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/cross-fetch@3.0.1/dist/browser-polyfill.js" integrity="sha384-waGXQo+Fa0S3Cd/1sHV/mV000H/cCtQsGWYA9sgQzm7aglM+rHGuEHAmaAm9S62h" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js" integrity="sha256-IylDNWjip7FK2TJUYck237qBTBeSiwnSFDCjLG686D4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha256-+2SfyuYhd9/mPmcIHdzrgwtc4fBaQYTpu7fYesS49OU=" crossorigin="anonymous"></script>
+	<script src="../channel.js"></script>
+	<script src="../fetch-content.js"></script>
+	<script src="../channels.js"></script>
+
+</body>
+</html>

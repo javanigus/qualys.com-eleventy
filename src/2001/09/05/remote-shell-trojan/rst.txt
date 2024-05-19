@@ -1,0 +1,201 @@
+             Qualys Security Alert QSA-2001-09-01
+                    "Remote Shell Trojan"
+
+Release Date: 
+-------------
+September 5, 2001
+
+Platforms Affected:
+-------------------
+The Remote Shell Trojan identified and examined by Qualys has been 
+verified to affect various Linux platforms. However, Qualys
+researchers have concluded that the backdoor functionality of the 
+trojan could be adapted to all variants of UNIX, all Microsoft 
+Windows platforms, and other operating systems.
+
+Applications Affected:
+----------------------
+The Remote Shell Trojan - named by Qualys due to its backdoor 
+functionality - has self-replicating capabilities and has been 
+observed to infect Linux ELF (Executable and Linking Format) binary 
+executable programs. On Linux systems, the Remote Shell Trojan 
+typically begins its replication activities in the current working 
+directory and in the /bin directory.
+
+Technical Description:
+----------------------
+The Remote Shell Trojan operates as both a self-replicating program
+and a remote control backdoor program. Once a host has been 
+infected - commonly initiated through the execution of binary email 
+attachments or downloaded software - the Remote Shell Trojan then 
+initiates a virus-like self replication process that infects 
+additional executable binaries in the current working directory and
+in the /bin directory. No memory resident infection activities have
+been identified so far.
+
+Once any executable binary has been infected and is being launched,
+the Remote Shell Trojan code will be executed and a backdoor process
+will be created. This backdoor process assumes the credentials of 
+the infected program and will remain active even after termination 
+of the "host" program 
+
+The backdoor process is listening on UDP port 5503 or higher for any
+incoming requests. If a remote attacker connects to this port with a 
+specially crafted packet containing the attacker's source IP address 
+and a port number, the backdoor responds by establishing a 
+TCP connection to the originating attacker's system. This TCP session 
+provides the attacker access to a shell on the target system at the 
+credential- and permissions-level of the originally infected binary 
+program. 
+
+Qualys security researchers have been able to simulate the client 
+portion for communicating with the backdoor process, however it is 
+likely that one or more client programs are in use by attackers. 
+
+Remote Shell Trojan has functionalities that have previously been 
+seen in trojans and viruses affecting other operating systems 
+including Microsoft Windows. The specific components include the 
+virus-like file infector, adding 4,096 bytes for the bootstrap 
+segment and appending 2,877 bytes of trojan code. It is important 
+to note that infected ELF binary files remain fully functional. 
+Also the Remote Shell Trojan does not appear to apply any 
+sophisticated stealth mechanisms; for example, file sizes and file 
+modification dates are changed during infection and can easily be 
+detected.
+
+The backdoor process of Remote Shell Trojan also issues an HTTP GET
+request to port 80 on the host 212.15.64.41 (orinoco.portland.co.uk). 
+This host does not appear to return any meaningful results upon 
+such a request.
+
+Scope & Impact:
+---------------
+Hosts infected with the Remote Shell Trojan can be:
+*  Hijacked by the attacker
+*  Employed as secondary attack platforms for further intrusions 
+   within or external to an organization
+*  Scrutinized for information to be used in subsequent attacks and 
+   intrusions
+*  Scoured for sensitive organizational data
+*  Vandalized and/or destroyed in order to cause financial and/or 
+   operational harm to an organization
+
+Mitigating Factors:
+-------------------
+The replication process of the Remote Shell Program can only effect 
+binary files within the access privileges of the user who launched 
+the originally infected program.
+
+Hosts and networks protected by firewalls can be infected by the 
+Remote Shell Trojan through careless security policy and practice 
+regarding email attachments and downloaded software. However, in 
+current versions of the trojan, attackers cannot establish 
+communication with the backdoor process if, for example, a dynamic 
+packet-filtering firewall effectively prohibits uninitiated inbound 
+UDP traffic from port 5503 and above.
+
+Hosts equipped with checksum-based administration tools such as 
+tripwire can be configured to identify binaries that have been 
+altered by the propagation and infection activities of the Remote 
+Shell Trojan.
+
+Recommendations:
+----------------
+Administrators should take measures to review and perhaps reassess 
+current perimeter firewall policies, particularly with regard to 
+uninitiated inbound UDP communications.
+
+Organizational security policies relating to email attachments and 
+downloaded software should be reiterated to staff and employees.
+
+The Remote Shell Trojan changes file dates upon infection, 
+therefore administrators can examine file dates to determine 
+whether a binary file has been affected.
+
+Because the Remote Shell Trojan changes the size and content of 
+files during infection, host-based checksum tools should be 
+deployed to mission-critical servers. The scope of such tools should 
+include file system locations commonly used for the storage of 
+executable binaries, such /bin, /etc/bin, and /usr/bin and other 
+common locations.
+
+When an infected binary is launched, the resident backdoor process 
+is created with the name of the infected host program. The 
+process table should be examined to determine whether unexpected 
+processes (e.g., ls) are present. 
+
+On an infected system, the backdoor process creates a lockfile 
+/tmp/982235016-gtkrc-429249277. The presence of this lockfile is 
+an indication for a potential infection with Remote Shell Trojan.
+
+Administrators, security officers, and concerned users may freely 
+download Qualys-developed Remote Shell Trojan detection and 
+cleaning tools from the Qualys web site at 
+http://www.qualys.com/2001/09/05/remote-shell-trojan/rst.tgz 
+
+Detection & Repair Procedures:
+------------------------------
+Identification and cleaning tools are available from Qualys Inc. at 
+http://www.qualys.com/2001/09/05/remote-shell-trojan/rst.tgz. In addition, 
+users may request a free perimeter vulnerability scan from Qualys at the 
+same address.
+
+The Qualys tool rst_detector takes an IP address as a command line 
+parameter and probes the requested machine for the Remote Shell 
+Trojan backdoor. An optional parameter allows probing for Remote 
+Shell Trojan on any port other than 5503.
+
+The Qualys tool rst_cleaner takes an infected file name as a 
+command line parameter and creates a cleansed version of the 
+infected file.  The tool also accepts wildcard parameters (e.g. 
+/bin/*). Cleaned copies of the file are created in the source 
+directory with the extension .clean. Source files are left unchanged.
+
+Qualys has developed, tested and deployed a Remote Shell Trojan 
+vulnerability detection signature within its QualysGuard online 
+vulnerability assessment platform.
+
+Technical Data:
+---------------
+QualysGuard Vulnerability ID:
+1019, 1020
+CVE Identifier:
+CAN-1999-0660
+Supplementary Information & Resources:
+No other resources regarding the Remote Shell Trojan are known at 
+present.
+
+At this time, the Remote Shell Trojan source code is not known to 
+be available.
+
+Acknowledgements:
+-----------------
+This Trojan was identified in Europe by the Qualys security research 
+team. Qualys has security researchers at multiple sites around the 
+world to identify new threats and vulnerabilities as they emerge.
+
+Qualys Contact Information:
+1326 Chesapeake Terrace 
+Sunnyvale, CA 94089 
+tel. 408.747.6000 
+fax. 408.747.5255 
+email: research () qualys com
+http://www.qualys.com
+
+Disclaimer:
+-----------
+CONFIDENTIAL AND PROPRIETARY INFORMATION Qualys provides this 
+Security Advisory "As Is" without any warranty of any kind. Qualys 
+makes no warranty that this Security Advisory or any associated 
+information contained herein will identify every vulnerability in 
+your network or host systems, or that the suggested solutions and 
+advice provided in this report, together with the results of any 
+associated procedures or recommendations contained herein, will be 
+error-free or complete. Qualys shall not be responsible or liable 
+for the accuracy, usefulness, or availability of any information 
+transmitted in this report, and shall not be responsible or liable 
+for any use or application of the information contained in this 
+report.
+
+
+(c) 2001, Qualys, Inc.  All rights reserved.

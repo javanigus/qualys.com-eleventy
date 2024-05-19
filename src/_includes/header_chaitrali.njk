@@ -1,0 +1,633 @@
+<header class="sticky top-0 w-full min-w-mobile z-header q-header-wrapper bg-white q-header-shadow" role="header">
+		<div class="q-wrapper">
+			<nav class="z-10 relative">
+	
+				<div class="q-header">
+	
+					<div class="h-[47px] sm:h-[60px] lg:h-navbar flex flex-row items-center relative">
+	
+						<div class="flex items-center lg:hidden mr-3 md:mr-4 lg:mr-0">
+							<button class="w-5 h-5 md:w-6 md:h-6 js-mobile-menu-control" data-target="q-mobile-menu" data-action="toggle">
+								<svg fill="none" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg"><g stroke="#848d9c" stroke-linejoin="round" stroke-width="1.5"><path d="m2.66406 8.32812h10.66664"/><path d="m2.66406 4.32812h10.66664"/><path d="m2.66406 12.3281h10.66664"/></g></svg>
+							</button>
+						</div>
+	
+						<div class="w-24 lg:w-auto lg:min-w-logo">
+							<a href="/">
+								<img src="https://ik.imagekit.io/qualys/image/logo/qualys.svg" width="104" />
+							</a>
+						</div>
+	
+						<div class="hidden lg:block ml-5 lg:ml-8 h-full js-megamenu">
+							<ul class="flex gap-0 text-base h-full items-center js-global-menu relative" id="q-global-nav">
+								<li class="h-full menu-item" data-menu="platform">
+									<a href="/cloud-platform/" class="p-2 lg:p-3 h-full flex items-center">
+										<span class="font-medium">Platform</span>
+									</a>
+								</li>
+								<li class="h-full menu-item" data-menu="solutions">
+									<a href="/solutions/" class="p-2 lg:p-3 h-full flex items-center">
+										<span class="font-medium">Solutions</span>
+									</a>
+								</li>
+							    <li class="h-full menu-item" data-menu="customers">
+									<a href="/customers/" class="p-2 lg:p-3 h-full flex items-center">
+										<span class="font-medium">Customers</span>
+									</a>
+								</li>
+								<li class="h-full menu-item" data-menu="resources">
+									<a href="/resources/" class="p-2 lg:p-3 h-full flex items-center">
+										<span class="font-medium">Resources</span>
+									</a>
+								</li>
+								<li class="h-full menu-item" data-menu="support">
+									<a href="https://success.qualys.com/customersupport" class="p-2 lg:p-3 h-full flex items-center">
+										<span class="font-medium">Support</span>
+									</a>
+								</li>
+								<li class="h-full menu-item" data-menu="more">
+									<a class="p-2 lg:p-3 h-full flex items-center" href="javascript:void(0)">
+										<span class="font-medium">More</span>
+									</a>
+								</li>
+							</ul>
+							
+							<div class="q-megamenu-dropdown js-megamenu">
+							
+								<div class="bg-transparent h-2"></div>
+							
+								<div class="megamenu-bg absolute bg-white drop-shadow-2xl max-w-full"></div>
+							
+								<div class="megamenu-wrap absolute overflow-hidden w-full max-w-full">
+							
+									<div class="megamenu-item invisible">
+										<div class="platform megamenu-content w-[1320px] max-w-full">
+											<div class="py-8 px-10">
+												<div class="grid grid-cols-4 divide-x">
+													<div class="col-span-1 pr-4">
+														<h4 class="border-b text-balance-8 py-2.5 mb-3 text-base font-semibold">Overview</h4>
+														<div class="mb-6">
+															<ul class="q-nav-items">
+																<li>
+																	<a href="/cloud-platform/" class="text-base text-balance-6 font-semibold">Enterprise TruRisk Platform</a>
+																	<p class="text-balance-6 text-sm leading-6 font-medium tracking-wide">Everything you need to measure, manage, and reduce your cyber risk in one place</p>
+																</li>
+															</ul>
+														</div>
+														<div class="">
+															<h4 class="border-b text-balance-8 py-2.5 mb-3 text-base font-semibold">Capabilities</h4>
+																<div class="flex flex-col gap-0 max-w-lg ">
+																	<div class="mb-3 lg:mb-0">
+																		<a href="javascript:void(0)" class="js-mm-filter active q-megamenu-platform-item" data-col="all">All</a>
+																	</div>
+																	<div class="mb-3 lg:mb-0">
+																		<a href="javascript:void(0)" class="js-mm-filter  q-megamenu-platform-item" data-col="asset-management">Asset Management</a>
+																	</div>
+																	<div class="mb-3 lg:mb-0">
+																		<a href="javascript:void(0)" class="js-mm-filter  q-megamenu-platform-item" data-col="vulnerability">Vulnerability &amp; Configuration Management</a>
+																	</div>
+																	<div class="mb-3 lg:mb-0">
+																		<a href="javascript:void(0)" class="js-mm-filter  q-megamenu-platform-item" data-col="risk-remediation">Risk Remediation</a>
+																	</div>
+																	<div class="mb-3 lg:mb-0">
+																		<a href="javascript:void(0)" class="js-mm-filter  q-megamenu-platform-item" data-col="threat-detection">Threat Detection &amp; Response</a>
+																	</div>
+																	<div class="mb-3 lg:mb-0">
+																		<a href="javascript:void(0)" class="js-mm-filter  q-megamenu-platform-item" data-col="compliance">Compliance</a>
+																	</div>
+																	<div class="mb-3 lg:mb-0">
+																		<a href="javascript:void(0)" class="js-mm-filter  q-megamenu-platform-item" data-col="cloud-security">Cloud Security</a>
+																	</div>
+																</div>							</div>
+													</div>
+													<div class="col-span-3 pl-4">
+														<h4 class="border-b text-balance-8 py-2.5 mb-3 text-base font-semibold" id="q_platformApp_label">Platform Apps</h4>
+														<div class="js-mm-apps-grid q-mm-apps-grid">
+															<div class="q-mm-col js-mm-col">
+																<div class="pb-5 js-mm-app" data-cat="asset-management">
+																	<h5 class="py-2.5 mb-3 border-l-[6px] pl-3 rounded uppercase text-sm font-semibold border-product-av text-product-av">Asset Management</h5>
+																		<div class="flex flex-col gap-0 max-w-lg ">
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/cybersecurity-asset-management/" class="  q-megamenu-platform-item" >CyberSecurity Asset Management (CSAM)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">See entire attack surface, continuously maintain your CMDB, and track EOL/EOS software</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/external-attack-surface-management/" class="  q-megamenu-platform-item" >External Attack Surface Management (EASM)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Gain an attacker’s view of your external internet-facing assets and unauthorized software</p>
+																			</div>
+																		</div>									</div>
+																<div class="pt-4 js-mm-app" data-cat="vulnerability">
+																	<h5 class="py-2.5 mb-3 border-l-[6px] pl-3 rounded uppercase text-sm font-semibold border-product-vm text-product-vm">Vulnerability & Configuration Management</h5>
+																		<div class="flex flex-col gap-0 max-w-lg q-nav-items-cols">
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/vulnerability-management-detection-response/" class="  q-megamenu-platform-item" >Vulnerability Management, Detection &amp; Response (VMDR)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Discover, assess, prioritize, and patch critical vulnerabilities up to 50% faster</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/beta-signup/enterprise-trurisk-management/" class="  q-megamenu-platform-item" >Enterprise TruRisk Management (ETM)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Consolidate &amp; translate security &amp; vulnerability findings from 3rd party tools</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/web-app-scanning/" class="  q-megamenu-platform-item" >Web App Scanning (WAS)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Automate scanning in CI/CD environments with shift left DAST testing</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/cloud-workload-protection/" class="  q-megamenu-platform-item" >Cloud Workload Protection (CWP)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Detect, prioritize, and remediate vulnerabilities in your cloud environment</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/container-security/" class="  q-megamenu-platform-item" >Kubernetes and Container Security (KCS)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Discover, track, and continuously secure containers – from build to runtime</p>
+																			</div>
+																		</div>									</div>
+															</div>
+															<div class="q-mm-col js-mm-col">
+																<div class="pb-5 js-mm-app" data-cat="risk-remediation">
+																	<h5 class="py-2.5 mb-3 border-l-[6px] pl-3 rounded uppercase text-sm font-semibold border-product-rr text-product-rr">Risk Remediation</h5>
+																		<div class="flex flex-col gap-0 max-w-lg ">
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/patch-management/" class="  q-megamenu-platform-item" >Patch Management (PM)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Efficiently remediate vulnerabilities and patch systems</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/custom-assessment-remediation/" class="  q-megamenu-platform-item" >Custom Assessment and Remediation (CAR)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Quickly create custom scripts and controls for faster, more automated remediation</p>
+																			</div>
+																		</div>									</div>
+																<div class="pb-5 pt-4 js-mm-app" data-cat="threat-detection">
+																	<h5 class="py-2.5 mb-3 border-l-[6px] pl-3 rounded uppercase text-sm font-semibold border-product-td text-product-td">Threat Detection & Response</h5>
+																		<div class="flex flex-col gap-0 max-w-lg ">
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/endpoint-detection-response/" class="  q-megamenu-platform-item" >Multi-Vector EDR</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Advanced endpoint threat protection, improved threat context, and alert prioritization</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/extended-detection-response/" class="  q-megamenu-platform-item" >Context XDR</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Quickly create custom scripts and controls for faster, more automated remediation</p>
+																			</div>
+																		</div>									</div>
+																<div class="pt-4 js-mm-app" data-cat="compliance">
+																	<h5 class="py-2.5 mb-3 border-l-[6px] pl-3 rounded uppercase text-sm font-semibold border-product-cp text-product-cp">Compliance</h5>
+																		<div class="flex flex-col gap-0 max-w-lg ">
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/policy-compliance/" class="  q-megamenu-platform-item" >Policy Compliance</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Reduce risk, and comply with internal policies and external regulations with ease</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/file-integrity-monitoring/" class="  q-megamenu-platform-item" >File Integrity Monitoring (FIM)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Reduce alert noise and safeguard files from nefarious actors and cyber threats</p>
+																			</div>
+																		</div>									</div>
+															</div>
+															<div>
+																<div class="js-mm-app" data-cat="cloud-security">
+																	<h5 class="py-2.5 mb-3 border-l-[6px] pl-3 rounded uppercase text-sm font-semibold border-product-cs text-product-cs">Cloud Security</h5>
+																		<div class="flex flex-col gap-0 max-w-lg q-nav-items-cols">
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/totalcloud/" class="  q-megamenu-platform-item" >TotalCloud (CNAPP)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Cloud-Native Application Protection Platform (CNAPP) for multi-cloud environment.</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/cloud-security-posture-management/" class="  q-megamenu-platform-item" >Cloud Security Posture Management (CSPM)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Continuously discover, monitor, and analyze your cloud assets for misconfigurations and non-standard deployments.</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/infrastructure-as-code-security/" class="  q-megamenu-platform-item" >Infrastructure as Code Security (IaC)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Detect and remediate security issues within IaC templates</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/saas-security-posture-management/" class="  q-megamenu-platform-item" >SaaS Security Posture Management (SSPM)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Automate the process of managing your SaaS apps, including global settings, user privileges, licenses, files, and their security and compliance posture.</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/cloud-workload-protection/" class="  q-megamenu-platform-item" >Cloud Workload Protection (CWP)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Detect, prioritize, and remediate vulnerabilities in your cloud environment</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/cloud-detection-response/" class="  q-megamenu-platform-item" >Cloud Detection and Response (CDR)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Continuous real-time protection of the multi-cloud environment against active exploitation, malware, and unknown threats.</p>
+																			</div>
+																			<div class="mb-3 lg:mb-0">
+																				<a href="/apps/container-security/" class="  q-megamenu-platform-item" >Kubernetes and Container Security (KCS)</a>
+																				<p class="text-sm text-balance-6 leading-6 font-medium pl-4 pt-1 pb-3 tracking-wide q-mm-desc">Discover, track, and continuously secure containers – from build to runtime</p>
+																			</div>
+																		</div>									</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+							
+									<div class="megamenu-item invisible">
+										<div class="solutions megamenu-content w-[686px]">
+											<div class="py-8 px-10">
+												<div class="grid grid-cols-2 divide-x">
+													<div class="col-span-1 pr-4">
+														<h4 class="border-b text-balance-8 text-base font-semibold py-2.5 mb-3 flex items-center">
+															Use Cases
+														</h4>
+															<div>
+																<ul class="q-nav-items">
+																	<li>
+																		<a href="/solutions/endpoint/" class="h5 ">Endpoint Security</a>
+																	</li>
+																	<li>
+																		<a href="/solutions/compliance/" class="h5 ">Compliance</a>
+																	</li>
+																	<li>
+																		<a href="/solutions/pci-compliance/" class="h5 ">PCI Compliance</a>
+																	</li>
+																	<li>
+																		<a href="/apps/totalcloud/" class="h5 ">Cloud Security</a>
+																	</li>
+																	<li>
+																		<a href="/solutions/devops/" class="h5 ">DevOps</a>
+																	</li>
+																	<li>
+																		<a href="/solutions/threat-protection/" class="h5 ">Threat Protection</a>
+																	</li>
+																	<li>
+																		<a href="/solutions/software-supply-chain-risk/" class="h5 ">Software Supply Chain Risk</a>
+																	</li>
+																	<li>
+																		<a href="/solutions/attack-surface-management/" class="h5 ">Attack Surface Management</a>
+																	</li>
+																	<li>
+																		<a href="/solutions/nis2/" class="h5 ">NIS2</a>
+																	</li>
+																</ul>
+															</div>						</div>
+													<div class="col-span-1 pl-4">
+														<h4 class="border-b text-balance-8 text-base font-semibold py-2.5 mb-3 flex items-center">
+															Segments
+														</h4>
+															<div>
+																<ul class="q-nav-items">
+																	<li>
+																		<a href="/subscriptions/smb/" class="h5 ">Small Business</a>
+																	</li>
+																	<li>
+																		<a href="/subscriptions/sme/" class="h5 ">Mid-Sized Business</a>
+																	</li>
+																	<li>
+																		<a href="/subscriptions/enterprise/" class="h5 ">Enterprise</a>
+																	</li>
+																	<li>
+																		<a href="/subscriptions/government/" class="h5 ">Federal</a>
+																	</li>
+																</ul>
+															</div>						</div>
+												</div>
+											</div>
+										</div>
+									</div>
+							
+									<div class="megamenu-item invisible">
+										<div class="customers megamenu-content w-[367px]">
+											<div class="py-8 px-10">
+												<h4 class="border-b text-balance-8 text-base font-semibold py-2.5 mb-3 flex items-center">
+													Customers
+												</h4>
+													<div>
+														<ul class="q-nav-items">
+															<li>
+																<a href="/customers/" class="h5 ">Overview</a>
+															</li>
+															<li>
+																<a href="/customers/#best-practices/" class="h5 ">Best Practices</a>
+															</li>
+															<li>
+																<a href="/customers/#success-stories/" class="h5 ">Success Stories</a>
+															</li>
+															<li>
+																<a href="/customers/#testimonials/" class="h5 ">Testimonials</a>
+															</li>
+														</ul>
+													</div>				</div>
+										</div>
+									</div>
+							
+									<div class="megamenu-item invisible">
+										<div class="resources megamenu-content w-[686px]">
+											<div class="py-8 px-10">
+												<div class="grid grid-cols-2 divide-x">
+													<div class="col-span-1 pr-4">
+														<h4 class="border-b text-balance-8 text-base font-semibold py-2.5 mb-3 flex items-center">
+															Resources
+														</h4>
+															<div>
+																<ul class="q-nav-items">
+																	<li>
+																		<a href="/resources/" class="h5 ">Resources Library</a>
+																	</li>
+																	<li>
+																		<a href="https://blog.qualys.com/" class="h5 ">Blog</a>
+																	</li>
+																	<li>
+																		<a href="/webinars/" class="h5 ">Webinars</a>
+																	</li>
+																	<li>
+																		<a href="/stream/" class="h5 ">Qualys Stream</a>
+																	</li>
+																</ul>
+															</div>						</div>
+													<div class="col-span-1 pl-4">
+														<h4 class="border-b text-balance-8 text-base font-semibold py-2.5 mb-3 flex items-center">
+															Research
+														</h4>
+															<div>
+																<ul class="q-nav-items">
+																	<li>
+																		<a href="/tru/" class="h5 ">Threat Research Unit</a>
+																	</li>
+																	<li>
+																		<a href="/research/security-alerts/" class="h5 ">Security Alerts</a>
+																	</li>
+																	<li>
+																		<a href="/research/security-advisories/" class="h5 ">Security Advisories</a>
+																	</li>
+																</ul>
+															</div>						</div>
+												</div>
+											</div>
+										</div>
+									</div>
+							
+									<div class="megamenu-item invisible">
+										<div class="support megamenu-content w-[367px]">
+											<div class="py-8 px-10">
+												<h4 class="border-b text-balance-8 text-base font-semibold py-2.5 mb-3 flex items-center">
+													Support
+												</h4>
+													<div>
+														<ul class="q-nav-items">
+															<li>
+																<a href="https://success.qualys.com/customersupport/" class="h5 ">Support Portal</a>
+															</li>
+															<li>
+																<a href="/training/" class="h5 ">Free Training</a>
+															</li>
+															<li>
+																<a href="/documentation/" class="h5 ">Documentation</a>
+															</li>
+															<li>
+																<a href="https://success.qualys.com/discussions/s/" class="h5 ">Community Discussions</a>
+															</li>
+															<li>
+																<a href="https://success.qualys.com/support/s/" class="h5 ">Knowledgebase</a>
+															</li>
+															<li>
+																<a href="/documentation/release-notes/" class="h5 ">Release Notes</a>
+															</li>
+															<li>
+																<a href="https://notifications.qualys.com/" class="h5 ">Release Notifications</a>
+															</li>
+														</ul>
+													</div>				</div>
+										</div>
+									</div>
+							
+									<div class="megamenu-item invisible">
+										<div class="more megamenu-content w-[686px]">
+											<div class="py-8 px-10">
+												<div class="grid grid-cols-2 divide-x">
+													<div class="col-span-1 px-4">
+														<h4 class="border-b text-balance-8 text-base font-semibold py-2.5 mb-3 flex items-center">
+															Partners
+														</h4>
+															<div>
+																<ul class="q-nav-items">
+																	<li>
+																		<a href="/partners/" class="h5 ">Overview</a>
+																	</li>
+																	<li>
+																		<a href="/partners/program/" class="h5 ">Partner Program</a>
+																	</li>
+																	<li>
+																		<a href="/partners/vad/" class="h5 ">VAD Partners</a>
+																	</li>
+																	<li>
+																		<a href="/partners/var/" class="h5 ">VAR Resellers</a>
+																	</li>
+																	<li>
+																		<a href="/partners/mssp/" class="h5 ">MSP/MSSP Partners</a>
+																	</li>
+																	<li>
+																		<a href="/partners/integration/" class="h5 ">Integration Partners</a>
+																	</li>
+																	<li>
+																		<a href="/partners/faq/" class="h5 ">Partner FAQs</a>
+																	</li>
+																	<li>
+																		<a href="/partners/find/" class="h5 ">Find Partner</a>
+																	</li>
+																</ul>
+															</div>						</div>
+													<div class="col-span-1 pl-4">
+														<h4 class="border-b text-balance-8 text-base font-semibold py-2.5 mb-3 flex items-center">
+															Company
+														</h4>
+															<div>
+																<ul class="q-nav-items">
+																	<li>
+																		<a href="/company/" class="h5 ">About Us</a>
+																	</li>
+																	<li>
+																		<a href="/company/management/" class="h5 ">Our Team</a>
+																	</li>
+																	<li>
+																		<a href="https://investor.qualys.com/" class="h5 ">Investor Relations</a>
+																	</li>
+																	<li>
+																		<a href="/company/newsroom/" class="h5 ">News</a>
+																	</li>
+																	<li>
+																		<a href="/customers/awards/" class="h5 ">Awards</a>
+																	</li>
+																	<li>
+																		<a href="/company/events/" class="h5 ">Events</a>
+																	</li>
+																	<li>
+																		<a href="/careers/" class="h5 ">Careers</a>
+																	</li>
+																</ul>
+															</div>						</div>
+												</div>
+											</div>
+										</div>
+									</div>
+							
+								</div>
+							
+							</div>					</div>
+	
+						<div class="ml-auto h-full js-megamenu">
+							<ul class="flex gap-0 text-base h-full items-center js-global-menu relative" id="q-action-nav">
+								<li class="mr-4 xl:mr-1 2xl:mr-4">
+									<a href="/company/search/" class="flex items-center">
+										<span class="w-4 h-4 sm:w-6 sm:h-6">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" fill="none">
+												<path d="M11 19.5C15.4183 19.5 19 15.9183 19 11.5C19 7.08172 15.4183 3.5 11 3.5C6.58172 3.5 3 7.08172 3 11.5C3 15.9183 6.58172 19.5 11 19.5Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												<path d="M21.0031 21.5031L16.7031 17.2031" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
+										</span>
+									</a>
+								</li>
+								<li class="h-full hidden xl:block menu-item" data-menu="community">
+									<a class="p-3 h-full flex items-center font-medium" href="https://community.qualys.com/">
+										Community
+									</a>
+								</li>
+								<li class="h-full hidden lg:block menu-item" data-menu="login">
+									<a class="p-3 h-full flex items-center font-medium" href="javascript:void(0)">
+										Login
+									</a>
+								</li>
+								<li class="h-full hidden xl:block menu-item" data-menu="contact">
+									<a class="p-3 h-full flex items-center font-medium" href="javascript:void(0)">
+										Contact Us
+									</a>
+								</li>
+								<li class="ml-0 lg:ml-4">
+									<a href="/free-trial/" class="py-2 md:py-3 px-5 h-full flex items-center justify-center bg-button q-cta-button transition-all rounded-full drop-shadow-xl" id="explore-button">
+										<span class="text-balance-1 text-sm font-semibold leading-none">Try Now</span>
+									</a>	</li>
+							</ul>
+							
+							<div class="q-megamenu-dropdown">
+							
+								<div class="bg-transparent h-2"></div>
+							
+								<div class="megamenu-bg absolute bg-white drop-shadow-2xl"></div>
+							
+								<div class="megamenu-wrap absolute overflow-hidden w-full">
+							
+									<div class="megamenu-item">
+										<div class="community megamenu-content w-[280px]">
+											<div class="py-8 px-10">
+													<div>
+														<ul class="q-nav-items">
+															<li>
+																<a href="https://community.qualys.com/" class="h5 ">Overview</a>
+															</li>
+															<li>
+																<a href="https://success.qualys.com/discussions/s/" class="h5 ">Discuss</a>
+															</li>
+															<li>
+																<a href="https://blog.qualys.com/" class="h5 ">Blog</a>
+															</li>
+															<li>
+																<a href="/training/" class="h5 ">Training</a>
+															</li>
+															<li>
+																<a href="/documentation/" class="h5 ">Docs</a>
+															</li>
+															<li>
+																<a href="/resources/" class="h5 ">Resources</a>
+															</li>
+														</ul>
+													</div>				</div>
+										</div>
+									</div>
+							
+									<div class="megamenu-item invisible">
+										<div class="login megamenu-content w-[460px]">
+											<div class="py-8 px-10">
+												<div class="grid grid-cols-2 divide-x">
+													<div class="col-span-1 pr-4">
+															<div>
+																<ul class="q-nav-items">
+																	<li>
+																		<a href="https://qualysguard.qualys.com/" class="h5 ">US Platform 1</a>
+																	</li>
+																	<li>
+																		<a href="https://qualysguard.qg2.apps.qualys.com/" class="h5 ">US Platform 2</a>
+																	</li>
+																	<li>
+																		<a href="https://qualysguard.qg3.apps.qualys.com/" class="h5 ">US Platform 3</a>
+																	</li>
+																	<li>
+																		<a href="https://qualysguard.qg4.apps.qualys.com/" class="h5 ">US Platform 4</a>
+																	</li>
+																	<li>
+																		<a href="https://qualysguard.qg1.apps.qualys.ca/" class="h5 ">CA Platform 1</a>
+																	</li>
+																	<li>
+																		<a href="https://qualysguard.qualys.eu/" class="h5 ">EU Platform 1</a>
+																	</li>
+																	<li>
+																		<a href="https://qualysguard.qg2.apps.qualys.eu/" class="h5 ">EU Platform 2</a>
+																	</li>
+																</ul>
+															</div>						</div>
+													<div class="col-span-1 pl-4">
+															<div>
+																<ul class="q-nav-items">
+																	<li>
+																		<a href="https://qualysguard.qg3.apps.qualys.it/" class="h5 ">EU Platform 3</a>
+																	</li>
+																	<li>
+																		<a href="https://qualysguard.qg1.apps.qualys.in/" class="h5 ">IN Platform 1</a>
+																	</li>
+																	<li>
+																		<a href="https://qualysguard.qg1.apps.qualys.ae/" class="h5 ">AE Platform 1</a>
+																	</li>
+																	<li>
+																		<a href="https://qualysguard.qg1.apps.qualys.co.uk/" class="h5 ">UK Platform 1</a>
+																	</li>
+																	<li>
+																		<a href="https://qualysguard.qg1.apps.qualys.com.au/" class="h5 ">AU Platform 1</a>
+																	</li>
+																	<li>
+																		<a href="https://qualysguard.qg1.apps.qualysksa.com" class="h5 ">KSA Platform 1</a>
+																	</li>
+																	<li>
+																		<a href="https://pci.qualys.com/" class="h5 ">PCI Platform</a>
+																	</li>
+																</ul>
+															</div>						</div>
+												</div>
+												<div class="mt-5 text-center">
+													<a href="https://www.qualys.com/platform-identification/" class="block rounded-full bg-primary-1 text-primary-4 px-5 py-4">What’s my Platform?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+							
+									<div class="megamenu-item invisible">
+										<div class="contact megamenu-content w-[320px]">
+											<div class="py-8 px-10">
+													<div>
+														<ul class="q-nav-items">
+															<li>
+																<a href="javascript:void(0)" class="h5 drift-open-chat">Chat with Us</a>
+															</li>
+															<li>
+																<a href="https://www.qualys.com/forms/schedule-demo/" class="h5 ">Schedule a Demo</a>
+															</li>
+															<li>
+																<a href="tel:+18007454355" class="h5 ">+1800 745 4355</a>
+															</li>
+															<li>
+																<a href="/forms/request-a-call/" class="h5 ">Request a call or Email</a>
+															</li>
+															<li>
+																<a href="/company/contacts/#headquarters" class="h5 ">Global Offices with Contacts</a>
+															</li>
+														</ul>
+													</div>				</div>
+										</div>
+									</div>
+							
+								</div>
+							
+							</div>					</div>
+					</div>
+	
+				</div>
+	
+			</nav>
+		</div>
+	</header>

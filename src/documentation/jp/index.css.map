@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../site/pages/documentation/jp/index.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,kBAAkB;AACtB;AACA;IACI,qBAAqB;AACzB","file":"index.css","sourcesContent":[".q-document-block > ul > li {\n    display: list-item;\n    margin-bottom: 4px;\n}\n.q-document-block > ul {\n    list-style-type: disc;\n}"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../site/pages/forms/whitepapers/endpoint-detection-and-response-must-have-features/confirm/index.css"],"names":[],"mappings":"AAAA;CACC,eAAe;CACf,gBAAgB;AACjB;AACA;CACC,aAAa;AACd","file":"index.css","sourcesContent":[".questions {\n\tmargin-top: 2em;\n\tmargin-bottom: 0;\n}\n.heading--sub {\n\tmargin-top: 0;\n}"]}

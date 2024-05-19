@@ -1,0 +1,1075 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- this doctype has the least inconsistencies according to http://www.emailology.org/#1 -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="x-apple-disable-message-reformatting">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+	</style>
+	<style type="text/css">
+		/**************************/
+		/* CLIENT-SPECIFIC STYLES */
+		/**************************/
+		#outlook a { /* Force Outlook to provide a "view in browser" menu link. */
+			padding:0;
+		}
+		a[href^="x-apple-data-detectors:"] {
+			color: inherit;
+			text-decoration: none;
+		}
+		body { /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+			width:100% !important;
+			-webkit-text-size-adjust:100%;
+			-ms-text-size-adjust:100%;
+			margin:0;
+			padding:0;
+		}
+		body,
+		li:before,
+		.ui-widget,
+		input,
+		textarea {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+		}
+		.ExternalClass { /* Force Hotmail to display emails at full width */
+			width:100%;
+		}
+		.ExternalClass,
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td,
+		.ExternalClass div { /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+			line-height: 100%;
+		}
+		#backgroundTable {
+			margin:0;
+			padding:0;
+			width:100% !important;
+			line-height: 100% !important;
+		}
+		font {
+			display: block;
+		}
+		.nowrap {
+			white-space: nowrap;
+		}
+
+		/* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+		.text-link,
+		.long-text {
+			/* These are technically the same, but use both */
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+
+			-ms-word-break: break-all;
+			/* This is the dangerous one in WebKit, as it breaks things wherever */
+			word-break: break-all;
+			/* Instead use this non-standard one: */
+			word-break: break-word;
+
+			/* Adds a hyphen where the word breaks, if supported (No Blink) */
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+		}
+
+		/**************************/
+		/* RESET IMAGES           */
+		/**************************/
+		img {
+			outline:none;
+			text-decoration:none;
+			border: none;
+			-ms-interpolation-mode: bicubic; /* works to help ie properly resize images in IE. (if you are resizing them using the width and height attributes)*/
+		}
+		a img {
+			border:none; /* removes border when linking images */
+		}
+		.image_fix {
+			display:block; /* add this class to images that show extra space below them */
+		}
+		img.banner {
+			max-width: 100%;
+			height: auto;
+		}
+
+		/**************************/
+		/* RESET PARAGRAPHS       */
+		/**************************/
+		p,
+		li {
+			margin: 0;
+			color: #6A778B;
+			font-size: 15px;
+			line-height: 1.625;
+		}
+		a.text-link {
+			color: #2e8be0;
+			text-decoration: none;
+		}
+
+		/**************************/
+		/* RESET HEADINGS         */
+		/**************************/
+		/* To minimize inconsistencies, don't use heading tags (h1, h2, h3, h4, h5, h6). Instead, use span tags with a class indicating its heading level. */
+		span.h1 {
+			/* define h1 style here */
+		}
+		span.h2 {
+			/* define h1 style here */
+		}
+		span.h3 {
+			/* define h1 style here */
+		}
+		span.h4 {
+			/* define h1 style here */
+		}
+		span.h5 {
+			/* define h1 style here */
+		}
+		span.h6 {
+			/* define h1 style here */
+		}
+
+		/**************************/
+		/* RESET TABLES, CELLS    */
+		/**************************/
+		table td {
+			border-collapse: collapse;
+			padding: 0;
+		}
+		table {
+			border-collapse:collapse;
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+			padding: 0;
+			border-spacing: 0;
+		}
+		/**************************/
+		/* PREHEADER              */
+		/**************************/
+		div.preheader,
+		div.preheader font { /* prevents users from seeing the "If you're having trouble viewing this message, click here" message in their inbox */
+			display: none;
+			visibility: hidden;
+			color: #255496;
+			background-color: #255496;
+		}
+		/**************************/
+		/* OTHER                 */
+		/**************************/
+		.background-table {
+			border-collapse: collapse;
+			background-color: #EDEEED;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			line-height: 100% !important;
+		}
+		.wrapper-table {
+			max-width: 684px;
+			width: 684px;
+		}
+		.showOnMobile {
+			display: none;
+		}
+		.address a {
+			color: #2E8BE0;
+		}
+		.button a {
+			font-size: 16px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 600;
+			border-radius: 3px;
+			padding: 11px 18px;
+			border: 1px solid #ED2E26;
+			display: inline-block;
+			white-space: nowrap;
+		}
+		sup {
+			font-size: 0.6em;
+		}
+		/*********************************/
+		/* RESPONSIVE STYLES             */
+		/*********************************/
+		@media screen and (max-width:683px) {
+			
+		}
+		/* 414px MAX WIDTH OF MOBILE */
+		@media screen and (max-width:414px) {
+			/* OVERRIDE per-page CSS 
+			   Nick wants text margins on mobile to be 20px on all emails */
+			.mailer-padding.mailer-padding {
+				width: 20px !important;
+				min-width: 20px !important;
+			}
+		}
+	</style>
+
+	        <style type="text/css">
+a {
+	font-family: 'Open Sans', sans-serif;
+}
+.master-table {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	line-height: 100%;
+	border-collapse: collapse;
+	background-color: #eef1f4;
+}
+.mailer-table {
+	background: #ffffff;
+}
+.mailer-padding {
+	width: 75px;
+}
+.mailer-padding2 {
+	width: 133px;
+}
+.mailer-logo {
+	text-align: left;
+}
+p {
+	font-size: 12pt;
+}
+.mailer-heading {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 36.5px;
+	letter-spacing: 0.25px;
+	color: #262626;
+	margin: 0;
+	line-height: 1.15;
+	font-weight: 600;
+}
+.mailer-subheading {
+	font-family: 'Open Sans', sans-serif;
+	color: #707F93;
+	margin: 2px 0 0;
+	font-weight: 300;
+	font-size: 30.65px;
+	line-height: 1.2;
+	letter-spacing: 0.65px;
+}
+.seperator-hr {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px;
+	border-bottom-color: #6A778B;
+}
+.mailer-hero {
+	vertical-align: top;
+}
+.mailer-section-heading {
+	margin: 0;
+	line-height: 1.1;
+	font-weight: 400;
+}
+.mailer-event-title {
+	font-size: 33px;
+	color: #1D2737;
+	letter-spacing: 0.65px;
+}
+.mailer-event-content {
+	font-size: 12pt;
+	color: #6A778B;
+	line-height: 18pt;
+	letter-spacing: 0.5px;
+}
+.mailer-event-info {
+	font-size: 12pt;
+	color: #262626;
+	line-height: 18pt;
+}
+.mailer-event-info strong {
+	font-weight: 600;
+}
+.mailer-agenda-label {
+	font-weight: 600;
+	font-size: 17px;
+	letter-spacing: -0.09px;
+	line-height: 21px;
+}
+.mailer-agenda-label font {
+	font-family: 'Open Sans', sans-serif;
+}
+.mailer-agenda-link {
+	text-decoration: none;
+	font-size: 17px;
+	letter-spacing: -0.09px;
+	line-height: 21px;
+}
+.mailer-agenda-link font {
+	font-family: 'Open Sans', sans-serif;
+}
+.mailer-logo-table {
+	width: 533px;
+}
+.mailer-logo-td {
+}
+.logo-trump-organization {
+	margin-top: 6px;
+}
+.hca-logo {
+	margin-top: 2px;
+}
+.benefits-title {
+	font-size: 12pt;
+	line-height: 1.35;
+	letter-spacing: 0.3px;
+	display: block;
+}
+.benefits-title strong {
+	font-weight: 600;
+}
+.table-benefits {
+	width: 529px;
+}
+
+/*********************************/
+/* RESPONSIVE STYLES             */
+/*********************************/
+@media screen and (max-width:683px) {
+	.mailer-table {
+		width: 100% !important;
+	}
+	.mailer-padding,
+	.mailer-padding2 {
+		width: 30px !important;
+	}
+	.logo-td {
+		float: left;
+		width: 100%;
+		padding-bottom: 30px;
+		text-align: center;
+	}
+	.mailer-footer-seperator {
+		display: none;
+	}
+	.mailer-footer-links {
+		float: left;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	.mailer-hero {
+		max-width: 100%;
+		height: auto;
+	}
+	.no-padding {
+		display: none;
+	}
+	.mailer-heading {
+		font-size: 1.8em;
+	}
+	.mailer-subheading {
+		font-size: 1.4em;
+	}
+	.logo-trump-organization,
+	.hca-logo {
+		margin-top: 0 !important;
+	}
+	.mailer-logo-padding {
+		float: left;
+		width: 100% !important;
+		height: 30px;
+	}
+	.mailer-logo-table {
+		width: 100% !important;
+	}
+	.mailer-logo-td {
+		float: left;
+		width: 100% !important;
+		text-align: center;
+	}
+	.table-benefits {
+		width: 100% !important;
+	}
+	.table-benefits-logo {
+		float: left;
+		width: 100%;
+		text-align: center;
+	}
+	.table-benefits-spacer {
+		float: left;
+		width: 100%;
+		height: 64px;
+	}
+	.benefits-title-td {
+		text-align: center !important;
+	}
+	.mailer-event-content,
+	.mailer-event-info,
+	.benefits-title {
+		font-size: 14pt !important;
+		line-height: 20pt !important;
+	}
+	.mailer-logo-padding--last {
+		display: none;
+	}
+}
+@media screen and (max-width:414px) {
+	.no-column {
+		display: none;
+	}
+}
+        </style>
+
+
+	<!-- http://templates.mailchimp.com/development/css/outlook-conditional-css/
+		Target Outlook 2007, 2010 and 2013
+		The first font in the list of fonts MUST be available on the client's machine in order for the font-family to work. -->
+	<!--[if gte mso 12]>
+		<style type="text/css">
+		body, td, p, h2, h1, ul, li, span { font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, sans-serif !important; }
+		</style>
+	<![endif]-->
+
+</head>
+<body>
+
+
+<div class="preheader">
+	<span style="font-family:'Open Sans', sans-serif;">RSAC General Invite Email</span>
+</div>
+
+<table cellpadding="0" cellspacing="0" border="0" class="background-table">
+	<tr>
+		<td align="center">
+			<table cellpadding="0" cellspacing="0" border="0" class="wrapper-table" align="center">
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" class="master-table">
+		<tr>
+			<td height="35" style="height:35px"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="65" style="height: 65px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center" class="logo-table" width="100%">
+								<tr>
+									<td width="50%" align="left" class="logo-td">
+										<a href="https://www.qualys.com/">
+											<img src="https://ik.imagekit.io/qualys/image/2018/rsa/qualys-logo-mailer-2x.png" width="166">
+										</a>
+									</td>
+									<td width="50%" align="right" class="logo-td">
+										<img src="https://ik.imagekit.io/qualys/image/2018/rsa/rsa-2018-logo-2x.jpg" width="215" class="rsa-logo">
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="44" style="height: 44px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td>
+							<h2 class="mailer-heading"><font face="'Open Sans', sans-serif">Visit us at Booth N3815.</font></h2>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td>
+							<h3 class="mailer-subheading"><font face="'Open Sans', sans-serif">Learn how Qualys is helping build security in, not bolting it on.</font></h3>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="28" style="height: 28px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td width="150" style="width: 150px">
+							<table cellpadding="0" cellspacing="0" border="0" align="left" style="margin-left: 1px;">
+								<tr>
+									<td style="background: #e24435; text-align: center; width: 139px; height: 39px; border-radius: 2px;">
+										<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 15px;"><a href="https://www.qualys.com/2018/rsac/reception/" style="text-decoration: none; width: 126px; display: inline-block; vertical-align: middle; color: #ffffff; padding-top: 11px; padding-bottom: 11px;"> Free Expo Pass</a></font>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<font face="'Open Sans', sans-serif" style="font-size: 13.45px">Enter code X8SQUALY</font>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="29" style="height: 29px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td style="text-align: center">
+							<img src="https://ik.imagekit.io/qualys/image/2018/rsa/rsac-2018-invite-hero.jpg" width="533" alt="Qualys at RSA Conference 2018" class="mailer-hero">
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="76" style="height: 76px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="133" class="mailer-padding2"></td>
+						<td>
+							<hr class="seperator-hr">
+						</td>
+						<td width="133" class="mailer-padding2"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="75" style="height: 75px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td>
+							<h3 class="mailer-section-heading">
+								<font face="'Open Sans', sans-serif" class="mailer-event-title">Featured guest</font>
+							</h3>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td style="height: 17px" height="17"></td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td>
+							<font face="'Open Sans', sans-serif" class="mailer-event-content">World-renowned physicist and futurist Michio Kaku will lead us on an intimate journey from the cutting-edge developments of today to the stars and heights we once thought unattainable. A book signing of his just-released New York Times bestseller, <em>The Future of Humanity</em>, will follow.</font>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td style="height: 19px" height="19"></td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td>
+							<font face="'Open Sans', sans-serif" class="mailer-event-info"><strong>Presentation &amp; QA:</strong>  Tuesday, April 17, 10:55 - 11:25 AM</font> <br>
+							<font face="'Open Sans', sans-serif" class="mailer-event-info"><strong>Book Signing:</strong> 11:30 AM - 12:30 PM</font>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td style="height: 29px" height="29"></td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td style="text-align: center">
+							<img src="https://ik.imagekit.io/qualys/image/2018/rsa/rsa18-invite-kaku-banner.jpg" width="533" alt="Featured guest - Michio Kaku" class="mailer-hero">
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="75" style="height: 75px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="133" class="mailer-padding2"></td>
+						<td>
+							<hr class="seperator-hr">
+						</td>
+						<td width="133" class="mailer-padding2"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="75" style="height: 75px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td>
+							<h3 class="mailer-section-heading">
+								<font face="'Open Sans', sans-serif" class="mailer-event-title">Best practices presentations.</font>
+							</h3>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td>
+							<h3 class="mailer-subheading" style="margin-top: 5px">
+								<font face="'Open Sans', sans-serif">Hear from leading enterprises, and see Qualys' new solutions</font>
+							</h3>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="26" style="height: 26px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td>
+							<strong class="mailer-agenda-label"><font face="'Open Sans', sans-serif">See agenda at</font></strong> <a href="https://www.qualys.com/rsac" class="mailer-agenda-link"><font face="'Open Sans', sans-serif" style="color: #2E8BE0;">qualys.com/RSAC</font></a>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="28" style="height: 28px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td style="text-align: center">
+							<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-logo-table">
+								<tr>
+									<td class="mailer-logo-padding" style="width: 105px"></td>
+									<td class="mailer-logo-td" style="width: 135px">
+										<img src="https://ik.imagekit.io/qualys/image/2018/rsa/experian-logo.jpg" width="135">
+									</td>
+									<td class="mailer-logo-padding" style="width: 71px"></td>
+									<td class="mailer-logo-td" style="width: 124px">
+										<img src="https://ik.imagekit.io/qualys/image/2018/rsa/hca-logo.jpg" width="124" class="hca-logo">
+									</td>
+									<td class="mailer-logo-padding mailer-logo-padding--last" style="width: 98px"></td>
+								</tr>
+							</table>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="21" style="height: 21px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td style="text-align: center">
+							<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-logo-table">
+								<tr>
+									<td class="mailer-logo-padding" style="width: 105px"></td>
+									<td class="mailer-logo-td" style="width: 120px">
+										<img src="https://ik.imagekit.io/qualys/image/2018/rsa/capital-one-logo.jpg" width="120">
+									</td>
+									<td class="mailer-logo-padding" style="width: 71px"></td>
+									<td class="mailer-logo-td" style="width: 150px">
+										<img src="https://ik.imagekit.io/qualys/image/2018/rsa/tscologo-logo.jpg" width="150">
+									</td>
+									<td class="mailer-logo-padding mailer-logo-padding--last" style="width: 87px"></td>
+								</tr>
+							</table>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="72" style="height: 72px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="133" class="mailer-padding2"></td>
+						<td>
+							<hr class="seperator-hr">
+						</td>
+						<td width="133" class="mailer-padding2"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="75" style="height: 75px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center" class="table-benefits">
+								<tr>
+									<td class="table-benefits-logo">
+										<table cellpadding="0" cellspacing="0" border="0" align="center">
+											<tr>
+												<td>
+													<img src="https://ik.imagekit.io/qualys/image/2018/rsa/nespresso-image.jpg" width="227">
+												</td>
+											</tr>
+											<tr>
+												<td height="24"></td>
+											</tr>
+											<tr>
+												<td style="text-align: left" class="benefits-title-td">
+													<font face="'Open Sans', sans-serif" class="benefits-title" style="padding-left: 2px;"><strong>Join us for coffee at our Nespresso bar</strong> - open all day</font>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td class="table-benefits-spacer" width="76"></td>
+									<td class="table-benefits-logo">
+										<table cellpadding="0" cellspacing="0" border="0" align="center">
+											<tr>
+												<td>
+													<img src="https://ik.imagekit.io/qualys/image/2018/rsa/prizes-image.jpg" width="227">
+												</td>
+											</tr>
+											<tr>
+												<td height="24"></td>
+											</tr>
+											<tr>
+												<td style="text-align: left" class="benefits-title-td">
+													<font face="'Open Sans', sans-serif" class="benefits-title" style="padding-left: 7px"><strong>Win high-tech prizes</strong> - after each presentation</font>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="64" style="height: 64px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td width="75" class="mailer-padding"></td>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center" class="table-benefits">
+								<tr>
+									<td class="table-benefits-logo">
+										<table cellpadding="0" cellspacing="0" border="0" align="center">
+											<tr>
+												<td>
+													<img src="https://ik.imagekit.io/qualys/image/2018/rsa/qualys-tote-image.jpg" width="227">
+												</td>
+											</tr>
+											<tr>
+												<td height="24"></td>
+											</tr>
+											<tr>
+												<td style="text-align: left" class="benefits-title-td">
+													<font face="'Open Sans', sans-serif" class="benefits-title"><strong>Get the famous Qualys Tote</strong> - after each presentation</font>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td class="table-benefits-spacer" width="76"></td>
+									<td class="table-benefits-logo">
+										<table cellpadding="0" cellspacing="0" border="0" align="center">
+											<tr>
+												<td>
+													<img src="https://ik.imagekit.io/qualys/image/2018/rsa/tshirt-image.jpg" width="227">
+												</td>
+											</tr>
+											<tr>
+												<td height="24"></td>
+											</tr>
+											<tr>
+												<td style="text-align: left" class="benefits-title-td">
+													<font face="'Open Sans', sans-serif" class="benefits-title" style="padding-left: 5px"><strong>Get the Qualys Shirt</strong> -exclusive &amp; limited</font>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td width="75" class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" class="mailer-table" width="684">
+					<tr>
+						<td height="100" style="height: 100px;"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td height="47" style="height: 47px;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+					<tr>
+						<td class="mailer-padding"></td>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center">
+								<tr>
+									<td>
+										<a href="https://twitter.com/qualys">
+											<img src="https://ik.imagekit.io/qualys/image/2018/rsa/mailer-twitter-icon-34-2x.jpg" width="37">
+										</a>
+									</td>
+									<td width="10" style="width: 10px;"></td>
+									<td>
+										<a href="https://www.facebook.com/qualys">
+											<img src="https://ik.imagekit.io/qualys/image/2018/rsa/mailer-facebook-icon-34-2x.jpg" width="37">
+										</a>
+									</td>
+									<td width="10" style="width: 10px;"></td>
+									<td>
+										<a href="https://www.linkedin.com/company/qualys">
+											<img src="https://ik.imagekit.io/qualys/image/2018/rsa/mailer-linkedin-icon-34-2x.jpg" width="37">
+										</a>
+									</td>
+									<td width="10" style="width: 10px;"></td>
+									<td>
+										<a href="https://vimeo.com/qualys">
+											<img src="https://d1dejaj6dcqv24.cloudfront.net/asset/image/icon/vimeo-circle-37-2x.png" width="37">
+										</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td class="mailer-padding"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr>
+			<td height="16" style="height: 16px;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+					<tr>
+						<td>
+							<table cellpadding="0" cellspacing="0" border="0" align="center">
+								<tr>
+									<td class="mailer-footer-links">
+										<a href="https://www.qualys.com/company/privacy/" style="text-decoration: none; color: #707f93"><font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt;">Privacy</font></a>
+									</td>
+									<td width="20" style="text-align: center;" class="mailer-footer-seperator"><font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93">|</font></td>
+									<td class="mailer-footer-links">
+										<a href="https://lps.qualys.com/subscription-preference.html?_ga=2.42669990.263175417.1519626781-1834129541.1514460500" style="text-decoration: none; color: #707f93"><font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93">Communication Preferences</font></a>
+									</td>
+									<td width="20" style="text-align: center;" class="mailer-footer-seperator"><font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93">|</font></td>
+									<td class="mailer-footer-links">
+										<a href="https://www.qualys.com/company/contacts/" style="text-decoration: none; color: #707f93"><font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93">Contacts</font></a>
+									</td>
+									<td width="20" style="text-align: center;" class="mailer-footer-seperator"><font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt; color: #707f93">|</font></td>
+									<td class="mailer-footer-links">
+										<a href="https://www.qualys.com/support/" style="text-decoration: none; color: #707f93"><font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 11pt;">Support</font></a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="17" style="height: 17px;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+					<tr>
+						<td align="center">
+							<a href="https://www.qualys.com/careers/" style="text-decoration: none; color: #707f93; font-weight: 600">
+								<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 14pt;">WE'RE HIRING ></font>
+							</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="18" style="height: 18px;"></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+					<tr>
+						<td align="center">
+							<font face="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif; font-size: 10.5pt; color: #707f93">© {{my.Current Year}} Qualys, Inc. All rights reserved.</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="100" style="height: 100px;"></td>
+		</tr>
+
+	</table>
+
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+</body>
+</html>

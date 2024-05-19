@@ -1,0 +1,16 @@
+.whitepaper-screenshot {
+	float: left;
+	width: 279px;
+	height: 388px;
+}
+.whitepaper-screenshot img {
+	max-width: 100%;
+	height: auto;
+}
+@media screen and (max-width: 640px) {
+	.whitepaper-screenshot {
+		display: none;
+	}
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,77 @@
+.q-single-video-wrapper {
+    margin: auto;
+    display: block;
+}
+
+.q-single-video-inner {
+    padding: 56.25% 0 0 0;
+    position: relative;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.q-single-video-inner:hover .poster {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+}
+
+.cloudview {
+    padding: 60px 0 60px;
+}
+
+.text-left-content {
+    margin-bottom: 30px
+}
+
+.text-left-content h3 {
+    font-size: 24px;
+    margin: 0
+}
+
+@media (min-width: 1024px) {
+    .text-left-content h3 {
+        font-size: 36px;
+    }
+}
+
+.heading-column {
+    height: auto;
+    display: flex;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    text-align: center
+}
+
+.text-left-content p {
+    font-size: 16px
+}
+
+.cloudview {
+    background-color: #F7FAFC;
+}
+
+@media (min-width:720px) {
+    .text-left-content {
+        width: 90%;
+        margin: auto
+    }
+
+    .heading-column {
+        text-align: left
+    }
+}
+
+@media (min-width:1024px) {
+    .text-left-content h3 {
+        font-size: 36px
+    }
+
+    .text-left-content .sub-copy {
+        font-size: 18px
+    }
+
+    .cloudview {
+        padding: 100px 0;
+    }
+}

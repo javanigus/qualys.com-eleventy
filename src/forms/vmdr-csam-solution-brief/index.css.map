@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../site/pages/forms/vmdr-csam-solution-brief/index.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,oBAAoB;AACxB;AACA;;IAEI,mBAAmB;AACvB","file":"index.css","sourcesContent":[".q-whitepaper__confirm--screenshots {\n    position: relative;\n    padding-bottom: 80px;\n}\n.q-lp-form__wrapper\n{\n    margin-bottom: 80px;\n}"]}

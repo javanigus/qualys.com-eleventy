@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../site/pages/forms/whitepapers/building_was_program/confirm/index.css"],"names":[],"mappings":"AAAA;CACC,0FAA0F;AAC3F","file":"index.css","sourcesContent":["div.screenshot {\n\tbackground-image: url(https://ik.imagekit.io/qualys/image/sprite-building-was-program.png);\n}\n"]}

@@ -1,0 +1,23 @@
+[type=submit],
+[type=submit]:focus,
+[type=submit]:active {
+    background: #ED2E26;
+    color: #fff;
+    border-color: #ED2E26;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;;
+}
+[type=submit]:hover {
+    background: #E3241C;
+}
+[type=submit] * {
+    margin: 0 0.2em;
+}
+.mktoErrorMsg {
+    margin-top: 5px;
+    margin-left: 30px;
+    text-align: left;
+}
+/*# sourceMappingURL=index.css.map */

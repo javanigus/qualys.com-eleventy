@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../site/pages/forms/whitepapers/best-practices-selecting-web-application-scanning-solution/index.css"],"names":[],"mappings":"AAAA;CACC,gIAAgI;AACjI","file":"index.css","sourcesContent":["div.screenshot {\n\tbackground-image: url(https://ik.imagekit.io/qualys/image/sprite-best-practices-selecting-web-application-scanning-solution.png);\n}\n"]}

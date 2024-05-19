@@ -1,0 +1,53 @@
+
+table.fedRAMP-table {
+	width: 100%;
+	border-spacing: 1px;
+	border-collapse: separate;
+}
+table.fedRAMP-table thead tr th {
+	background: #4579CB;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #FFF;
+	font-size: 9pt;
+	padding: 6px 5px;
+	text-align: center;
+}
+table.fedRAMP-table tbody tr td {
+	text-align: center;
+	padding: 10px 5px;
+	font-size: 9pt;
+	color: #FFF;
+	font-weight: 500;
+}
+table.fedRAMP-table tbody tr td:first-child {
+	font-weight: bold;
+}
+table.fedRAMP-table tbody tr td small {
+	font-size: 8pt;
+	margin-top: 7px;
+	display: block;
+}
+table.fedRAMP-table tbody tr.green-row td {
+	background: #B7CF89;
+}
+table.fedRAMP-table tbody tr.orange-row td {
+	background: #F7B37E;
+}
+table.fedRAMP-table tbody tr.red-row td {
+	background: #CF8282;
+}
+.fedramp-table-caption {
+	text-align: center;
+}
+@media screen and (max-width: 640px) {
+	table.fedRAMP-table {
+		display: inline-block;
+		vertical-align: top;
+		max-width: 100%;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+}
+
+/*# sourceMappingURL=index.css.map */

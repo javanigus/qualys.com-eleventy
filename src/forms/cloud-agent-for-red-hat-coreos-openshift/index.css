@@ -1,0 +1,122 @@
+.hero {
+	margin-bottom: 65px;
+	padding-top: 45px;
+}
+@media (min-width: 720px) {
+	.hero {
+		padding-top: 6.99301%;
+	}
+}
+@media (min-width: 1430px) {
+	.hero {
+		padding-top: 100px;
+	}
+}
+.features-list {
+	padding: 20px 0 0;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	font-style: normal;
+	vertical-align: baseline;
+	border: 0;
+	list-style: none;
+}
+.features-list li {
+	font-weight: 400;
+	line-height: 1.41176;
+	background: url(https://ik.imagekit.io/qualys/image/icon/checkmark.svg) 0 4px no-repeat;
+	background-size: 14px auto;
+	padding-left: 27px;
+	margin-bottom: 12px;
+}
+.features-list li:last-child {
+	margin-bottom: 0;
+}
+.form-heading {
+	font-size: 19px;
+	color: #2B2B2B;
+	letter-spacing: -0.012em;
+	line-height: 1.789;
+	font-weight: 500;
+	margin: 0 0 1em;
+}
+.q-default-hero__form {
+	padding-top: 37px;
+	max-width: 417px;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media (min-width: 720px) {
+	.q-default-hero__form {
+		padding: 40px 50px 0;
+		max-width: 455px;
+	}
+}
+@media (min-width: 920px) {
+	.q-default-hero__form {
+		max-width: unset;
+		position: relative;
+		z-index: 1;
+	}
+}
+@media (min-width: 1280px) {
+	.q-default-hero__form {
+		padding: 57px 80px 0;
+	}
+}
+.form-column {
+	z-index: 1;
+	padding-top: 20px;
+	position: relative;
+}
+.poster-row {
+	display: none;
+}
+@media (min-width: 920px) {
+	.form-column {
+		padding-top: 80px;
+	}
+	.poster-row {
+		display: block;
+		margin-top: -40px;
+		padding-top: 40px;
+		padding-bottom: 20px;
+		background-color: #2e8be0;
+	}
+}
+@media (min-width: 1290px) {
+	.form-column {
+		padding-top: 110px;
+		padding-bottom: 0;
+	}
+}
+.hero .q-grid__inner .q-grid__column-5 {
+	width: 100%;
+}
+@media (min-width: 920px) {
+	.hero .q-grid__inner .q-grid__column-5 {
+		width: calc(5 / 10 * 100%);
+	}
+}
+.heroContent {
+	max-width: unset;
+}
+.heroContent .paragraph--1 {
+	margin: 0;
+}
+@media (min-width: 1280px) {
+	.heroContent .paragraph--1 {
+		max-width: 27.5em;
+	}
+}
+.q-form,
+.q-form input[type="text"].mktoField,
+.q-form input[type="email"].mktoField,
+.q-form input[type="phone"].mktoField {
+	width: 100% !important;
+}
+
+/*# sourceMappingURL=index.css.map */

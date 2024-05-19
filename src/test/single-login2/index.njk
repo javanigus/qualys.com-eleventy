@@ -1,0 +1,1349 @@
+
+<!DOCTYPE html>
+<html lang="en" class="yes-client-supported no-client-deprecated no-client-outdated no-js no-cookies">
+<head>
+	<!-- BEGIN frame busting for browsers that don't respect X-Frame-Options header nor frame-ancestors in CSP -->
+	<style>
+		html {display: none;}
+	</style>
+	<script>
+		if(self===top)document.documentElement.style.display="block";else try{self.location.host===top.location.host?document.documentElement.style.display="block":top.location=self.location}catch(err){"undefined"!=typeof console&&console.error&&console.error(err.message),top.location=self.location}
+	</script>
+	<!-- END frame busting for browsers that don't respect X-Frame-Options header -->
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; connect-src 'self'; form-action 'self'; img-src data: https://d2tezji3pz4gvu.cloudfront.net; script-src 'unsafe-inline'; style-src 'unsafe-inline'">
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<meta name="description" content="New Features for Enterprise TruRisk Platform November 2022 release (Portal 3.13.1).">
+	<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFeElEQVR4Ab1XA7AlSwydb9vG2rZt27Zt27Zt27Zte3d47fw+U9V1X/+Zt95NVV92JyfJSTojPY+Eb17/zbdkYSVnu5YT9JKFDqiZUt1XksXzK8njExb77FWzpLmrlym2x9Wl/Wjf8iWlw/fu/iS9ipDP965/3eoijoa1F6oZUz1UEv5NSoI/SUn8LwzCsLiSxiUl0T+kxP+TsFfLmvaus0XjWYFtm/O8sHH/mlXF9KL5Dsr//kpy3N9JSRJHNAYAAAJQWDagcEaO8xs7/xsZ5YrvCOzYluuZhiNPnnzNUM9U4vwKT6xeJvqb5H9/MZVrOTISA2kuLXt6gMB/iIL1XLw/zOXq2GZ0xOH4xN74wwc/6oVyH5f//hneWMIL5Vq+bOQZM4KCp05QRNeJgkGiQIAimkrBY0fIM3QAA5YBey068F3+60cyKpbaETH0LywAAtu25JP//smCHp7BK8+wgRQxDHqWsCiSu1dXeGyfOpbS4Injqa15X7W8vIzQi8bNd/+GdfSi4ls0Hymzgoj/BwV2brfywTt7eh35n18EtOCBf/UKEiQUIv/aVeRs2QTkIqN8CXK2bU7+jQxkJCJs9c6aDiIKAEBK/6b1xa0A5sxoFhMA8shqWlAYvnWTjMplCftQIQCIhc/Y76hekVj9C2ecjeuSwkAIANavrmAHoDUHgLCpaZMyZXeixh89JD1/Dmb8Z+yxXSCwXiQvReQn0YBdOMeiGRcLe0zwzFY1OwCtOACEzdm6mehJm+aMxYykKRLEBgD/gekoN+Gso1YVkPL5ASCkvmWLo15cvoRSxLIzbClZNWVClq4bUS5MmWAa5gAY36rbAWiJP0E+lF3wxLEoo+fMEEP/jAU9/uVLiEtg+1YWgd9jOLeosh2ARjjIvQxduUxc3AN6Q+kLAfBOGENcgkcPmy0bzpkk3LKxrB2AWjwCABE6fy4KYHC/FwTwM/nmzY4C2LcH1cIBoGSL2lxAK8vxRgTCBHbtEJrK8wLgXAlduhA9v3g+yjTaiHbvzGkBENy/NyuuWx5Cz/jR0RK8cZ1UsP9ZJGR7UIrsQqOY4mrXkuAcIqAmixcOXTyfyHoZ3b/3k5Y2mQM9AOEyKpQSlKC0UGIwEptxRE7Lll5oRugJbIBBb0Frx815lxzGZ5KdMKO7eK6UBH9R8MDeGJfMY9IL5ASLLSDwHbllgwsFTx4XgHuG9OfhR0dEZ1wqxSbeqROb4Ebk3iAK6P1cwtevotOhIQnpQNkaVcpR+M5twXjwwD54jr3R8ly1rGzsA8njR9+pmVI/4bcgkHuGDhSU4u53de3AFP9rKuTXNTpnYP8etGyGNMTmg6OICMrP1IV3LVfma+QUBhKreEYN68xbLr+/vVMn0f8FQwl4wYZRM/xPfvma5D9/JDV9ctJLFMQ7jPJ0meT0zphS99ljmWF8puXLfsGsCM58BsLdvxeRz2cBApL5N6wlV/dOpJcuQmqapGZkZHQ+zhX2WS9VZB/5/e9JzyOBPTuzMDIGee4QCSg1yhSlwJ5dFKtEIhR+8MBs457hg5EaPrA6g6dPJpFeRFgfaMFSgcPCNIOwOupVp8CWjRRxu+1xGDpmP5QzeIRGVkV6GWGz3TDUvgAC0WApQVg1Nh+4enRGa6Xw7VvmkIoWrhfOY5YrKsozcmgn6VXE1anNGPR2GLYb0/mzA3KvF8tPaoaU+G6mzN27e0/pdYi7X8++UIjSe9odgPQg7CCtZ+zINtLrFAytzIgbPIgFBDzHMKKwZ8My0puQ4OFD6fSCuU6gphkYwXsQVi9VeE/ozKnE0psUxvDP3L27DWQt1oP7wgx5yoQG65idIx73B9LbksDe3RnZo/puo2LpjexJJ/nL6vkPMDOeAIeJWUQAAAAASUVORK5CYII=">
+	<style>
+		/* http://meyerweb.com/eric/tools/css/reset/ 
+		v2.0 | 20110126
+		License: none (public domain)
+		*/
+
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+		/* END RESET */
+
+
+		html {
+			font-size: 62.5%;
+		}
+		body {
+			background-color: #FFF;
+			font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			line-height: 1.5;
+			text-align: center;
+		}
+		a {
+			color: #06C;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		div.background {
+			background-color: #EEE;
+			background-image: url(//d2tezji3pz4gvu.cloudfront.net/image/light-blue-diagonal-streak-background-1312-2x.jpg);
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: 1312px 447px;
+			padding: 3.6rem 0 0;
+		}
+		div.login-box {
+			background: #FFF;
+			border-radius: 0.75rem;
+			border: 1px solid #B6B6B6;
+			box-shadow: 0 0 1.0rem 0 rgba(0, 34, 69, 0.5);
+			box-sizing: border-box;
+			margin: 1.0rem auto;
+			max-width: 400px;
+			padding: 2.7em 0 3.0em;
+			text-align: center;
+			width: 92%;
+		}
+		div.login-box * {
+			box-sizing: inherit;
+		}
+		div.qualys-logo {
+			display: inline-block;
+			height: 6.2rem;
+			margin: 0 0 1.8rem;
+			width: 21.5rem;
+		}
+		div.login-box form {
+			margin: 1.6rem 0 0;
+		}
+		div.maintenance,
+		div.qualys-client-outdated,
+		div.qualys-client-deprecated,
+		div.qualys-client-unsupported,
+		div.qualys-client-javascript-required,
+		div.qualys-client-cookie-support,
+		div.qualys-client-login-error {
+			width: 85%;
+			margin: 0 auto;
+		}
+		div.qualys-client-javascript-required,
+		div.qualys-client-javascript-required a {
+			color: #666;
+		}
+		div.qualys-client-deprecated,
+		div.qualys-client-deprecated a,
+		div.qualys-client-unsupported,
+		div.qualys-client-unsupported a,
+		div.qualys-client-cookie-support,
+		div.qualys-client-cookie-support a,
+		div.qualys-client-login-error,
+		div.qualys-client-login-error a {
+			color: #DE1D0B;
+		}
+		div.qualys-client-outdated,
+		div.qualys-client-outdated a {
+			color: #6A778B;
+		}
+		div.maintenance h5,
+		div.qualys-client-outdated h5,
+		div.qualys-client-deprecated h5,
+		div.qualys-client-unsupported h5,
+		div.qualys-client-javascript-required h5,
+		div.qualys-client-cookie-support h5,
+		div.qualys-client-login-error h5 {
+			font-size: 1.8rem;
+			font-weight: 500;
+			line-height: 1.5;
+			margin: 0;
+		}
+		div.maintenance p,
+		div.qualys-client-outdated p,
+		div.qualys-client-deprecated p,
+		div.qualys-client-unsupported p,
+		div.qualys-client-javascript-required p,
+		div.qualys-client-cookie-support p,
+		div.qualys-client-login-error p {
+			font-size: 1.4rem;
+			margin: 0 1.0rem 1.5em;
+		}
+		div.maintenance a,
+		div.qualys-client-outdated a,
+		div.qualys-client-deprecated a,
+		div.qualys-client-unsupported a,
+		div.qualys-client-javascript-required a,
+		div.qualys-client-cookie-support a,
+		div.qualys-client-login-error a {
+			font-weight: 500;
+		}
+		a.external {
+			white-space: nowrap;
+		}
+		a.external::after {
+			content: " »";
+		}
+		label,
+		legend {
+			display: none;
+			visibility: hidden;
+		}
+		input[type=text],
+		input[type=password] {
+			background-position: 0.8rem 0.7rem;
+			background-repeat: no-repeat;
+			background-size: 2.3rem 2.3rem;
+			border-radius: 0.5rem;
+			border: 1px solid #CCC;
+			box-shadow: inset 0 1px 0.3em rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.075);
+			color: #545454;
+			display: block;
+			font-size: 1.6rem;
+			height: 2.25em;
+			line-height: 2.25;
+			margin: 0 auto 1.8rem;
+			padding: 0 0 0 3.6rem;
+			width: 85%;
+		}
+		input[type=text]:focus,
+		input[type=password]:focus {
+			border-color: #06C;
+			box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 8px rgba(0, 102, 204, 0.6);
+			outline: 0;
+		}
+		#myform_UserLogin {
+			background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MS4xIDUxLjciIHdpZHRoPSI1MS43IiBoZWlnaHQ9IjUxLjciPjxwYXRoIGZpbGw9IiM3ZTdlN2UiIGQ9Ik0zNC43IDMyLjFjMi4yIDEuNyA4LjggMy4yIDE0IDYuMSAxLjcuOSAxLjkgMi4zIDIgMy4yLjEuOC40IDEwLjMuNCAxMC4zSDBzLjMtOS41LjQtMTAuM2MuMS0uOC4xLTIuMSAyLTMuMiA1LjItMi45IDExLjgtNC4zIDE0LTYgLjktLjcuNi0xLjguOC0yLjguMi0xIC44LS4zLjgtMS40IDAtMS4xLjItLjkuMS0yLjQtLjEtMS4zLTEuOS0xLjQtMi0zLjggMC0uNS0uOS0uOC0xLjQtMS42LS41LS44LTEuNC0yLjEtMS40LTMuN3MuMy0xLjIuMy0zLjFjMC0xLjktLjEtMy4xIDEtNy42LjYtMS44IDItMy44IDMuNC00LjYgMS45LTEuMiAxLjEuNCA3LjUtMUMyOS42LS43IDM2LjEgMy42IDM2LjIgN2MuMSA0LjcuNCA0LjMuNiA2LjIuMiAxLjQuNiAxIC42IDIuNnMtLjggMy41LTEuNCA0LjNjLS41LjgtMSAyLTEuMSAyLjUtLjMgMi42LTIuMSAyLTIuMiAzLjQtLjEgMS4zLS4xIDEuMSAwIDIuMS4yLjguNi0uMS44IDEgLjUgMSAuNCAyLjUgMS4yIDMiLz48L3N2Zz4=');
+		}
+		#myform_UserPasswd {
+			background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMi40IDMyLjYiIHdpZHRoPSIzMi40IiBoZWlnaHQ9IjMyLjYiPjxwYXRoIGZpbGw9IiM3ZTdlN2UiIGQ9Ik0xMi44IDI4LjdMMTAgMjUuOGw3LjktNy45YzMuNyAyLjIgOC42IDEuNyAxMS43LTEuNSAzLjgtMy44IDMuOC05LjkgMC0xMy43LTMuOC0zLjgtOS45LTMuOC0xMy43IDAtMy4yIDMuMi0zLjcgOC0xLjUgMTEuN0wuNSAyOC41Yy0uNi42LS42IDEuNiAwIDIuM2wxLjEgMS4xYy42LjYgMS42LjYgMi4zIDBsMi43LTIuN0w5LjQgMzJjLjYuNiAxLjYuNiAyLjMgMGwxLjEtMS4xYy42LS42LjYtMS42IDAtMi4ybTUuNC0yMy42YzIuNS0yLjUgNi42LTIuNSA5LjEgMHMyLjUgNi42IDAgOS4xLTYuNiAyLjUtOS4xIDAtMi41LTYuNiAwLTkuMSIvPjwvc3ZnPg==');
+		}
+		input[type=submit] {
+			background: #06C;
+			background: -webkit-linear-gradient(top, #56A4EC 0%, #2577E1 100%);
+			background: linear-gradient(to bottom, #56A4EC 0%, #2577E1 100%);
+			border-radius: 0.5rem;
+			border: 0 none;
+			color: #FFF;
+			cursor: pointer;
+			font-size: 1.7rem;
+			line-height: 2.25;
+			margin: 0 0 1.8rem;
+			min-width: 8em;
+			outline: none;
+			padding: 0 18%;
+		}
+		input[type=submit]:active {
+			background: #06C;
+			background: -webkit-linear-gradient(top, #1673CA 0%, #144990 100%);
+			background: linear-gradient(to bottom, #1673CA 0%, #144990 100%);
+		}
+		p.forgot-password {
+			font-size: 1.3rem;
+			line-height: 1;
+		}
+		p.forgot-password a {
+			color: #333;
+		}
+		div.notifications {
+			margin: 0 auto;
+			max-width: 570px;
+			max-width: calc(570px - 3em);
+			padding: 1.5em 1.5em 0;
+			text-align: center;
+		}
+		div.notifications h2 {
+			color: #333;
+			font-size: 3.2rem;
+			font-weight: 400;
+			line-height: 2.25;
+		}
+		div.notification h4 {
+			color: #333;
+			font-size: 2.0rem;
+			font-weight: 500;
+			padding: 0.65625em 0;
+			text-transform: uppercase;
+		}
+		div.notification h4 a[href] {
+			color: #06C;
+			font-size: 1.7rem;
+			text-transform: none;
+			white-space: nowrap;
+		}
+		div.notification p {
+			color: #666;
+			font-size: 1.3rem;
+			margin: 0 0 1.5em;
+			text-align: justify;
+		}
+		div.notification a {
+			color: #06C;
+			white-space: nowrap;
+		}
+		div.view-more-notifications {
+			margin: 2.0rem auto;
+		}
+		div.view-more-notifications a {
+			background-color: #DCDCDC;
+			border-radius: 0.75rem;
+			color: #06C;
+			display: block;
+			font-size: 1.5rem;
+			font-weight: 500;
+			line-height: 3;
+			max-width: 270px;
+			margin: 0 auto;
+		}
+		div.view-more-notifications a:active {
+			background-color: #CCC;
+			text-decoration: none;
+		}
+		div.qualys-promo {
+			display: flex;
+			margin: 4.0rem auto;
+		}
+		div.qualys-promo a,
+		div.qualys-promo img {
+			display: block;
+			margin: 0 auto;
+		}
+		div.qualys-info {
+			margin: 4.0rem auto 6.0rem;
+			text-align: center;
+			max-width: 835px;
+			max-width: calc(835px - 3em);
+			padding: 0 1.5em;
+		}
+		div.qualys-info h2 {
+			color: #666;
+			font-size: 2.0rem;
+			font-weight: 400;
+			padding: 0 0 0.375em;
+		}
+		div.qualys-info h2 a {
+			color: #333;
+		}
+		div.qualys-info p {
+			color: #999;
+			font-size: 1.3rem;
+			text-align: justify;
+		}
+		div.footer,
+		div.footer a {
+			color: #666;
+		}
+		div.footer {
+			background-color: #FFF;
+			border-top: 1px solid #CCC;
+			font-size: 1.3rem;
+			line-height: 3;
+			margin: 0 0 6em;
+			text-align: center;
+		}
+		div.footer ul,
+		div.footer li,
+		div.footer p {
+			display: inline-block;
+		}
+		div.footer li,
+		div.footer p {
+			padding: 0 0.75em;
+		}
+		div.footer p {
+			padding: 0 1.5em;
+		}
+		div.qualys-logo-with-continuous-security {
+			margin: 2.2rem 0 0.8rem;
+		}
+		div.qualys-logo-with-continuous-security > span,
+		div.qualys-logo-with-continuous-security svg {
+			vertical-align: top;
+		}
+		div.qualys-logo-with-continuous-security span.qualys-logo,
+		div.qualys-logo-with-continuous-security span.vertical-pipe,
+		div.qualys-logo-with-continuous-security span.continuous-security {
+			display: block;
+		}
+		div.qualys-logo-with-continuous-security span.qualys-logo svg {
+			height: 3.3rem;
+			width: 10.5rem;
+		}
+		div.qualys-logo-with-continuous-security span.vertical-pipe {
+			background: #666;
+			display: none;
+			height: 3.0rem;
+			margin: 0.1rem 0;
+			width: 1px;
+		}
+		div.qualys-logo-with-continuous-security span.continuous-security {
+			margin: 1.1rem 1.2rem 0;
+		}
+		div.qualys-logo-with-continuous-security span.continuous-security svg {
+			height: 1.5rem;
+			width: 16.23rem;
+		}
+		@media screen and (min-width: 375px) {
+			div.qualys-logo-with-continuous-security span.qualys-logo,
+			div.qualys-logo-with-continuous-security span.vertical-pipe,
+			div.qualys-logo-with-continuous-security span.continuous-security {
+				display: inline-block;
+			}
+			div.qualys-logo-with-continuous-security span.qualys-logo {
+				margin: 0 1.2rem 0 2.5rem;
+			}
+
+		}
+		html.no-js form,
+		html.yes-js.no-cookies form,
+		html.no-client-supported form,
+		html.no-js p.forgot-password,
+		html.yes-js.no-cookies p.forgot-password,
+		html.no-client-supported p.forgot-password,
+		html.no-js div.qualys-client-unsupported,
+		html.no-js div.qualys-client-outdated,
+		html.no-js div.qualys-client-deprecated,
+		html.no-js div.qualys-client-cookie-support,
+		html.no-cookies div.qualys-client-unsupported,
+		html.no-cookies div.qualys-client-outdated,
+		html.no-cookies div.qualys-client-deprecated {
+			display: none;
+			visibility: hidden;
+		}
+		html.yes-client-supported div.qualys-client-unsupported,
+		html.no-client-supported div.qualys-client-outdated,
+		html.no-client-supported div.qualys-client-deprecated,
+		html.no-client-deprecated div.qualys-client-deprecated,
+		html.no-client-outdated div.qualys-client-outdated,
+		html.yes-js div.qualys-client-javascript-required,
+		html.yes-cookies div.qualys-client-cookie-support {
+			display: none;
+			visibility: hidden;
+		}
+		.low-contrast {
+			font-family: monospace;
+			font-size: 9pt;
+			opacity: 0.5;
+		}
+		.footer .qualys-logo {
+			opacity: 0.625;
+		}
+		.footer .continuous-security {
+			filter: invert(100%);
+			opacity: 0.625;
+		}
+		.debug {
+			font-size: 3em;
+			margin: 1em 0 0;
+		}
+	</style>
+	<!--[if lte IE 8]><style>
+		/*
+		 * style fixes for IE8 and below
+		 */
+		* {
+			white-space: normal;
+		}
+		div.background {
+			background-image: url(//d2tezji3pz4gvu.cloudfront.net/image/light-blue-diagonal-streak-background-1312-1x.jpg);
+			padding-top: 45px;
+		}
+		div.qualys-info {
+			margin: 30px auto 45px;
+		}
+		p {
+			font-size: 12pt;
+		}
+		div.qualys-logo a {
+			background-image: url(//d2tezji3pz4gvu.cloudfront.net/image/qualys-215-1x.png);
+			display: block;
+			height: 62px;
+			width: 215px;
+			margin: 0 auto 21px;
+		}
+		/*
+		 * convert rem units to px units
+		 */
+		html {
+			font-size: 10px;
+		}
+		div.background {
+			padding: 36px 0 0;
+		}
+		div.login-box {
+			border-radius: 7.5px;
+			box-shadow: 0 0 10px 0 rgba(0, 34, 69, 0.5);
+			margin: 10px auto;
+		}
+		div.qualys-logo {
+			height: 62px;
+			margin: 0 0 18px;
+			width: 215px;
+		}
+		div.login-box form {
+			margin: 16px 0 0;
+		}
+		div.maintenance h5,
+		div.qualys-client-deprecated h5,
+		div.qualys-client-unsupported h5,
+		div.qualys-client-javascript-required h5,
+		div.qualys-client-cookie-support h5 {
+			font-size: 18px;
+		}
+		div.maintenance p,
+		div.qualys-client-deprecated p,
+		div.qualys-client-unsupported p,
+		div.qualys-client-javascript-required p,
+		div.qualys-client-cookie-support p {
+			font-size: 14px;
+			margin: 0 10px 1.5em;
+		}
+		input[type=text],
+		input[type=password] {
+			background-position: 8px 7px;
+			background-size: 23px 23px;
+			border-radius: 5px;
+			font-size: 16px;
+			margin: 0 auto 18px;
+			padding: 0 0 0 36px;
+		}
+		input[type=submit] {
+			border-radius: 5px;
+			font-size: 17px;
+			margin: 0 0 18px;
+		}
+		p.forgot-password {
+			font-size: 13px;
+		}
+		div.notifications h2 {
+			font-size: 20px;
+		}
+		div.notification h4 {
+			font-size: 16px;
+		}
+		div.notification p {
+			font-size: 13px;
+		}
+		div.view-more-notifications a {
+			border-radius: 7.5px;
+			font-size: 15px;
+		}
+		div.qualys-info {
+			margin: 30px auto 45px;
+		}
+		div.qualys-info h2 {
+			font-size: 20px;
+		}
+		div.qualys-info p {
+			font-size: 13px;
+		}
+		div.footer {
+			font-size: 13px;
+		}
+		div.qualys-logo-with-continuous-security {
+			margin: 8px 0;
+		}
+		div.qualys-logo-with-continuous-security span.qualys-logo {
+			margin: 0 12px 0 25px;
+		}
+		div.qualys-logo-with-continuous-security span.qualys-logo svg {
+			height: 33px;
+			width: 117px;
+		}
+		div.qualys-logo-with-continuous-security span.vertical-pipe {
+			height: 30px;
+			margin: 1px 0;
+			width: 1px;
+		}
+		div.qualys-logo-with-continuous-security span.continuous-security {
+			margin: 11px 12px 0;
+		}
+		div.qualys-logo-with-continuous-security span.continuous-security svg {
+			height: 9px;
+			width: 129px;
+		}
+	</style><![endif]-->
+	<title>
+		Qualys Security and Compliance Suite Login	</title>
+</head>
+<body>
+	<div class="background">
+		<div class="login-box">
+	<div class="qualys-logo">
+		<a href="https://www.qualys.com/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 933.8844 293.1108"><path d="M123.0733,0c80.1578,0,120.4615,42.888,120.4615,42.888s4.6084,31.7458,1.667,95.6667c-4.4434,96.56-122.1,154.55-122.1111,154.5562S5.4248,235.115.9814,138.5547C-1.96,74.6338,2.6483,42.888,2.6483,42.888S42.9155,0,123.0733,0Z" fill="#ed2e26"/><path d="M62.9244,126.9294c0-34.1421,26.9912-61.9185,60.167-61.9185a60.2847,60.2847,0,0,1,60.2168,60.2168c0,26.5072-22.7864,48.3157-40.3477,59.5225,6.8125,3.887,21.8486,7.9694,36.2451,9.2889a86.9056,86.9056,0,0,0,33.8428-68.8114,89.9565,89.9565,0,1,0-179.9131,0c0,29.9575,12.4736,56.5708,36.0723,76.9644,22.0625,19.0654,54.3361,31.791,91.0813,37.8164,7.96-4.399,21.5761-17.3866,26.6811-24.99-30.6885-3.9473-59.732-11.431-79.2027-21.6448C78.0123,177.7654,62.9244,155.41,62.9244,126.9294Z" fill="#fff"/><path d="M394.1777,75.8242A70.5859,70.5859,0,0,0,323.6719,146.33c0,23.5332,9.89,44.502,28.6,60.6406,17.5225,15.1133,42.6495,25.5316,71.66,30.36,4.1489-2.2791,11.9942-9.9687,14.492-15.2362-21.375-3.6875-31.1776-7.3465-31.1776-7.3465a40.6761,40.6761,0,0,0,8.23-1.652c28.5557-8.0094,49.4888-36.2142,49.208-66.7656C464.3271,107.4547,433.0557,75.8242,394.1777,75.8242Zm0,120.7139a50.208,50.208,0,1,1,50.209-50.208A50.2652,50.2652,0,0,1,394.1777,196.5381Z" fill="#262626"/><path d="M915.4876,189.8279a11.2919,11.2919,0,0,1,15.3768,0,11.5875,11.5875,0,0,1,0,15.6037,11.3013,11.3013,0,0,1-15.3768,0A11.5875,11.5875,0,0,1,915.4876,189.8279Zm1.5556,14.0945a8.9692,8.9692,0,0,0,12.2639,0,9.5389,9.5389,0,0,0,0-12.6094,9.0254,9.0254,0,0,0-12.2639,0A9.5441,9.5441,0,0,0,917.0431,203.9224Zm10.7084-9.1064a3.5581,3.5581,0,0,1-2.6539,3.5683l3.0664,4.8059h-2.3806l-2.7914-4.6684h-1.418V203.19H919.56V191.2889h4.3934a3.9242,3.9242,0,0,1,2.7467.9626A3.3031,3.3031,0,0,1,927.7515,194.816Zm-6.1775-1.65v3.4789H923.68a2.06,2.06,0,0,0,1.44-.4813,1.6222,1.6222,0,0,0,.526-1.2582q0-1.7377-1.9664-1.7395H921.574Z" fill="#262626"/><path d="M784.0866,178.7244L760.2724,115.537H739.0539L773.8,203.7364s-15.3711,36.5385-15.3653,36.5356c10.1131,0,21.1756-.7139,25.5038-11.37C794.09,203.9087,829.4438,115.537,829.4438,115.537H808.2192Z" fill="#262626"/><path d="M704.4931,210.2455s19.6952-.3646,19.6952-13.7292V76.4838H704.4931V210.2455Z" fill="#262626"/><path d="M663.6458,127.9761c-5.4845-7.649-16.1973-15.0729-31.9706-15.0729-26.92,0-47.2213,20.9372-47.2213,48.7014,0,12.9767,4.4375,25.036,12.4944,33.9551,8.7151,9.6486,20.7242,14.7483,34.7269,14.7483,13.5666,0,25.1837-5.5338,31.9706-15.0136v14.951s19.6952-.3125,19.6952-13.7187v-80.99H663.6458v12.4391Zm-29.5016,63.7894c-11.9076,0-29.72-7.9474-29.995-29.8392v-0.1568c0-17.2876,12.7537-30.3246,29.6664-30.3246,12.6331,0,22.8977,6.5959,27.4869,17.7106a27.2678,27.2678,0,0,1,2.5091,12.7326,32.62,32.62,0,0,1-3.0226,12.8692C656.1516,185.4068,646.19,191.7655,634.1442,191.7655Z" fill="#262626"/><path d="M548.5678,166.8742c0,15.9039-8.26,24.7446-23.2444,24.8913-15.1985,0-22.5872-8.6267-22.5872-26.3735V115.537H483.0421v53.8061c0,7.7665,1.3093,18.8421,7.5485,27.506,6.3748,8.8538,16.4515,13.3817,29.9448,13.4591,0.1849,0.002.37,0.003,0.5527,0.003,16.138,0,24.4482-7.3154,28.4676-13v12.9342s18.7074-.3191,18.7074-13.0617V115.537H548.5678v51.3372Z" fill="#262626"/><path d="M876.6613,152.9651c-10.2346-4.4245-17.6755-8.25-17.5448-14.185,0.0865-3.9272,5.2586-7.6872,10.637-7.5017,5.7558,0.1985,10.023,4.168,12.4047,7.3436,0,0,10.76-9.197,12.0619-10.1828a30.1638,30.1638,0,0,0-25.6609-14.6571,27.3166,27.3166,0,0,0-28.0637,26.4819c-0.285,12.9372,7.2924,18.2764,17.23,23.9125l16.3565,9.1964c3.7735,2.6389,5.5538,4.6089,5.4644,8.669-0.14,6.3621-5.4607,10.4863-12.3521,10.893-5.0694.2991-9.232-2.6313-13.1763-6.7594-7.6765-8.0341-19.46-4.172-23.0654-3.01,7.4971,17.24,21.68,27.2791,35.849,27.5913C884.6454,211.15,898.92,197.98,899.2989,180.773,899.4813,172.4917,895.8507,162.2042,876.6613,152.9651Z" fill="#262626"/></svg></a>
+	</div>
+					<div class="qualys-client-javascript-required">
+			<h5>
+				Page loading…
+			</h5>
+		</div>
+		<div class="qualys-client-cookie-support">
+			<h5>
+				Cookie Support
+			</h5>
+			<p>
+				It appears that cookies have been disabled in your browser. The
+				use of cookies is necessary for the proper functioning of the
+				site. Please enable cookies and
+				<span style="white-space: nowrap;">try again</span>.
+			</p>
+		</div>
+		<div class="qualys-client-unsupported">
+			<h5>
+				Unsupported Browser
+			</h5>
+			<p>
+				It appears that your browser is not supported. A secure, modern
+				browser is necessary for the proper functioning of the site.
+				<a href="https://browsercheck.qualys.com/"
+				   class="external" style="white-space: nowrap;"
+				   title="Qualys BrowserCheck">Run Qualys BrowserCheck</a>
+			</p>
+			<p>
+				If you feel this is an error, you may try and
+				<a href="javascript:loginAnyway();"
+				   style="white-space: nowrap;">login anyway</a>.
+			</p>
+		</div>
+		<div class="qualys-client-deprecated">
+			<h5>
+				Deprecated Browser
+			</h5>
+			<p>
+				Support for your browser has been deprecated and will end soon.
+				A secure, modern browser is necessary for the proper
+				functioning of the site.
+				<a href="https://browsercheck.qualys.com/"
+				   class="external"
+				   style="white-space: nowrap;"
+				   title="Qualys BrowserCheck">Run Qualys BrowserCheck</a>
+			</p>
+		</div>
+		<div class="qualys-client-outdated">
+			<h5>
+				Outdated Browser
+			</h5>
+			<p>
+				It appears that your browser version is falling behind. An
+				up-to-date browser is recommended for the proper functioning of
+				the site.
+				<a href="https://browsercheck.qualys.com/"
+				   class="external"
+				   style="white-space: nowrap;"
+				   title="Qualys BrowserCheck">Run Qualys BrowserCheck</a>
+			</p>
+		</div>
+<form action="/fo/user_login.php" autocomplete="off" method="post" name="myform">
+	<fieldset>
+		<legend>Login</legend>
+		<label for="myform_UserLogin">User Login</label>
+		<input autocomplete="off" id="myform_UserLogin" name="UserLogin" placeholder="User Login" type="text" />
+		<label for="myform_UserPasswd">Password</label>
+		<input autocomplete="off" id="myform_UserPasswd" name="UserPasswd" placeholder="Password" type="password" />
+		<input type="submit" name="_form_action1" value="Log In" />
+	</fieldset>
+	<input type="hidden" name="_form_action">
+	<input type="hidden" name="_form_visited" value="1">
+</form>
+<p class="forgot-password">
+	<a href="/fo/reset/index.php" target="_blank">Forgot Password?</a>
+</p>
+</div>
+
+<div class="debug">
+	<p>For debugging purposes</p>
+	<p>id = <span class="id"></span></p>
+	<p>platform login URL = <span class="platformElem"></span></p>
+</div>
+
+<div class="notifications">
+
+	<div class="view-more-notifications">
+		<a href="https://status.qualys.com/">View Platform Status</a>
+	</div>
+
+</div>
+		<div class="qualys-info">
+			<h2>
+				<a href="https://www.qualys.com/free-trial/">Don’t have an account?
+					<span style="white-space: nowrap;">Sign up for a free trial</span></a>
+			</h2>
+			<p>
+				The Enterprise TruRisk Platform and its integrated suite of security
+				and compliance applications provides organizations of all sizes
+				with a global view of their network security and compliance
+				solutions, while drastically reducing their total cost of
+				ownership. Qualys solutions include: asset discovery and
+				categorization, continuous monitoring, vulnerability assessment,
+				vulnerability management, policy compliance, PCI compliance,
+				security assessment questionnaire, web application security,
+				web application scanning, web application firewall,
+				malware detection and SECURE Seal for security testing of
+				websites.
+			</p>
+		</div>
+		<div class="footer">
+			<p>
+				&copy; 2022 Qualys, Inc.
+			</p>
+			<ul>
+				<li><a href="https://www.qualys.com/support/faq/login/">
+					Login FAQs</a></li>
+				<li><a href="https://www.qualys.com/forms/contact-support/">
+					Contact Support</a></li>
+				<li><a href="https://community.qualys.com/">
+					Qualys Community</a></li>
+				<li><a href="https://blog.qualys.com/">
+					Qualys Blog</a></li>
+				<li><a href="https://www.qualys.com/company/privacy/">
+					Privacy</a></li>
+			</ul>
+			<div class="qualys-logo-with-continuous-security">
+				<span class="qualys-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 933.884 293.111"><path d="M394.178,75.824a70.586,70.586,0,0,0-70.506,70.506c0,23.533,9.89,44.5,28.6,60.641,17.522,15.113,42.65,25.532,71.66,30.36,4.149-2.279,11.994-9.969,14.492-15.236-21.375-3.687-31.178-7.347-31.178-7.347a40.677,40.677,0,0,0,8.23-1.652c28.556-8.009,49.489-36.214,49.208-66.766C464.327,107.455,433.056,75.824,394.178,75.824Zm0,120.714a50.208,50.208,0,1,1,50.209-50.208A50.208,50.208,0,0,1,394.178,196.538Z"/><path d="M915.488,189.828a11.292,11.292,0,0,1,15.377,0,11.588,11.588,0,0,1,0,15.6,11.3,11.3,0,0,1-15.377,0A11.588,11.588,0,0,1,915.488,189.828Zm1.556,14.094a8.969,8.969,0,0,0,12.264,0,9.539,9.539,0,0,0,0-12.609,9.025,9.025,0,0,0-12.264,0,9.394,9.394,0,0,0,0,12.609Zm10.708-9.106a3.558,3.558,0,0,1-2.654,3.568l3.066,4.806h-2.381l-2.791-4.668h-1.418v4.668H919.56v-11.9h4.393a3.924,3.924,0,0,1,2.747.963,3.3,3.3,0,0,1,1.051,2.565Zm-6.177-1.65v3.479h2.106a2.06,2.06,0,0,0,1.44-.481,1.622,1.622,0,0,0,.526-1.258q0-1.738-1.966-1.74h-2.106Z"/><path d="M784.087,178.724l-23.814-63.187H739.054l34.746,88.2s-15.371,36.538-15.365,36.536c10.113,0,21.176-.714,25.5-11.37,10.152-24.993,45.505-113.365,45.505-113.365H808.219Z"/><path d="M704.493,210.245s19.7-.365,19.7-13.729V76.484h-19.7V210.245Z"/><path d="M663.646,127.976c-5.484-7.649-16.2-15.073-31.971-15.073-26.92,0-47.221,20.937-47.221,48.7,0,12.977,4.438,25.036,12.494,33.955,8.715,9.649,20.724,14.748,34.727,14.748,13.567,0,25.184-5.534,31.971-15.014v14.951s19.7-.312,19.7-13.719v-80.99h-19.7Zm-29.5,63.789c-11.908,0-29.72-7.947-29.995-29.839v-.157c0-17.288,12.754-30.325,29.666-30.325,12.633,0,22.9,6.6,27.487,17.711a27.267,27.267,0,0,1,2.509,12.733,32.62,32.62,0,0,1-3.023,12.869c-4.637,10.649-14.6,17.008-26.645,17.008Z"/><path d="M548.568,166.874c0,15.9-8.26,24.745-23.244,24.891-15.2,0-22.587-8.627-22.587-26.374V115.537H483.042v53.806c0,7.766,1.309,18.842,7.548,27.506,6.375,8.854,16.452,13.382,29.945,13.459.185,0,.37,0,.553,0,16.138,0,24.448-7.315,28.468-13v12.934s18.707-.319,18.707-13.062V115.537h-19.7Z"/><path d="M876.661,152.965c-10.235-4.425-17.675-8.25-17.545-14.185.086-3.927,5.259-7.687,10.637-7.5,5.756.2,10.023,4.168,12.4,7.344,0,0,10.76-9.2,12.062-10.183a30.164,30.164,0,0,0-25.661-14.657A27.317,27.317,0,0,0,840.5,140.264c-.285,12.937,7.292,18.276,17.23,23.912l16.357,9.2c3.773,2.639,5.554,4.609,5.464,8.669-.14,6.362-5.461,10.486-12.352,10.893-5.069.3-9.232-2.631-13.176-6.759-7.677-8.034-19.46-4.172-23.065-3.01,7.5,17.24,21.68,27.279,35.849,27.591,17.844.393,32.118-12.777,32.5-29.984C899.481,172.492,895.851,162.2,876.661,152.965Z"/><path d="M243.535,42.888S203.231,0,123.073,0,2.648,42.888,2.648,42.888-1.96,74.634.981,138.555c4.443,96.56,122.1,154.562,122.109,154.556s117.668-58,122.111-154.556C248.143,74.634,243.535,42.888,243.535,42.888ZM179.206,194.039c-14.4-1.32-29.433-5.4-36.245-9.289,17.561-11.207,40.348-33.015,40.348-59.522a60.285,60.285,0,0,0-60.217-60.217c-33.176,0-60.167,27.776-60.167,61.918,0,28.48,15.088,50.836,44.843,66.444,19.471,10.214,48.514,17.7,79.2,21.645-5.1,7.6-18.721,20.591-26.681,24.99-36.745-6.025-69.019-18.751-91.081-37.816-23.6-20.394-36.072-47.007-36.072-76.964a89.957,89.957,0,0,1,179.913,0,86.906,86.906,0,0,1-33.843,68.811Z"/></svg></span><span class="vertical-pipe"></span><span class="continuous-security"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 422.189 39.456"><path d="M42.607,31.972a12,12,0,1,1,12-12A12.03,12.03,0,0,1,42.607,31.972Zm.042-21.365A9.257,9.257,0,0,0,33.618,20.1a9.172,9.172,0,0,0,9.031,9.24c5.268,0,9.031-4.348,9.031-9.491A9.2,9.2,0,0,0,42.649,10.606Z" fill="#fff"/><path d="M77.191,31.429V18.843c0-2.174-.543-4.724-2.173-6.271a7.281,7.281,0,0,0-9.951,0c-1.589,1.506-2.133,3.972-2.133,6.062V31.429H60.007V8.558h2.927v2.928h.084a8.293,8.293,0,0,1,7.025-3.513c6.564,0,10.077,4.558,10.077,10.871V31.429Z" fill="#fff"/><path d="M91.987,11.192V31.429H89.061V11.192H84.252V8.558h4.808V.488h2.927v8.07h5.477v2.634Z" fill="#fff"/><path d="M102.407,4.683V.488h2.927V4.683Zm0,26.746V8.558h2.927V31.429Z" fill="#fff"/><path d="M130,31.429V18.843c0-2.174-.543-4.724-2.173-6.271a7.281,7.281,0,0,0-9.951,0c-1.589,1.506-2.133,3.972-2.133,6.062V31.429h-2.927V8.558h2.927v2.928h.084a8.293,8.293,0,0,1,7.025-3.513c6.564,0,10.077,4.558,10.077,10.871V31.429Z" fill="#fff"/><path d="M156.306,31.429V27.875h-.084c-1.337,2.8-4.306,4.1-7.316,4.1a9.849,9.849,0,0,1-7.861-3.428c-1.631-2.049-2.007-4.808-2.007-7.359V8.558h2.927V21.143c0,4.725,1.715,8.195,6.941,8.195a6.545,6.545,0,0,0,4.849-1.839c2.007-1.924,2.383-4.182,2.383-6.857V8.558h2.927V31.429Z" fill="#fff"/><path d="M176.421,31.972a12,12,0,1,1,12-12A12.03,12.03,0,0,1,176.421,31.972Zm.042-21.365a9.257,9.257,0,0,0-9.031,9.492,9.172,9.172,0,0,0,9.031,9.24c5.268,0,9.032-4.348,9.032-9.491A9.2,9.2,0,0,0,176.463,10.606Z" fill="#fff"/><path d="M210.766,31.429V27.875h-.084c-1.337,2.8-4.306,4.1-7.316,4.1a9.849,9.849,0,0,1-7.861-3.428c-1.631-2.049-2.007-4.808-2.007-7.359V8.558h2.927V21.143c0,4.725,1.715,8.195,6.941,8.195a6.545,6.545,0,0,0,4.849-1.839c2.007-1.924,2.383-4.182,2.383-6.857V8.558h2.927V31.429Z" fill="#fff"/><path d="M349.083,31.429V27.875H349c-1.337,2.8-4.306,4.1-7.316,4.1a9.849,9.849,0,0,1-7.861-3.428c-1.631-2.049-2.007-4.808-2.007-7.359V8.558h2.927V21.143c0,4.725,1.715,8.195,6.941,8.195a6.545,6.545,0,0,0,4.849-1.839c2.007-1.924,2.383-4.182,2.383-6.857V8.558h2.927V31.429Z" fill="#fff"/><path d="M375.86,4.683V.488h2.927V4.683Zm0,26.746V8.558h2.927V31.429Z" fill="#fff"/><path d="M392.516,11.192V31.429H389.59V11.192h-4.808V8.558h4.808V.488h2.927v8.07h5.477v2.634Z" fill="#fff"/><path d="M408.935,39.456h-3.052l3.973-8.78L400.949,8.558h3.094l7.275,18.23L419.1,8.558h3.094Z" fill="#fff"/><path d="M298.938,26.256a12.38,12.38,0,0,1-2.772,2.058,9.192,9.192,0,0,1-4.49,1.031,9.627,9.627,0,0,1-3.344-.572,7.89,7.89,0,0,1-4.6-4.306,9.337,9.337,0,0,1-.756-3.642l0-.321h19.29v-.824a15.073,15.073,0,0,0-.664-4.512,10.634,10.634,0,0,0-2.015-3.734,9.623,9.623,0,0,0-3.391-2.542,12.2,12.2,0,0,0-9.39,0,10.542,10.542,0,0,0-3.549,2.565A11.5,11.5,0,0,0,280.98,15.3a14,14,0,0,0-.8,4.787,13.546,13.546,0,0,0,.848,4.9,10.6,10.6,0,0,0,2.382,3.734,10.722,10.722,0,0,0,3.664,2.381,12.716,12.716,0,0,0,4.741.848,10.947,10.947,0,0,0,5.36-1.214,15.552,15.552,0,0,0,3.594-2.657ZM285.653,12.694a7.893,7.893,0,0,1,5.84-2.13,8.175,8.175,0,0,1,3.23.6,6.854,6.854,0,0,1,2.359,1.626,7.279,7.279,0,0,1,1.489,2.428,10.058,10.058,0,0,1,.569,2.655H283.186A9.022,9.022,0,0,1,285.653,12.694Z" fill="#fff"/><path d="M228.093,18.17c-4.052-.952-5.746-1.673-5.746-3.68,0-2.093,2.116-3.5,5.265-3.5a8.807,8.807,0,0,1,6.421,2.521l2.108-2.108a11.8,11.8,0,0,0-8.53-3.4c-4.858,0-8.251,2.666-8.251,6.484,0,4.7,4.653,5.789,8.05,6.586,4.169.98,6.029,1.8,6.029,4.1,0,2.4-2.117,3.828-5.664,3.828a9.744,9.744,0,0,1-7.117-2.815L218.551,28.3a12.742,12.742,0,0,0,9.225,3.693c5.975,0,8.65-3.422,8.65-6.814C236.426,20.127,231.411,18.949,228.093,18.17Z" fill="#fff"/><path d="M25.146,25.4A12.829,12.829,0,0,1,16.139,29.2,13.443,13.443,0,0,1,3.094,16.076c0-7.024,5.9-13.254,13-13.254a13.068,13.068,0,0,1,9.127,3.731L27.3,4.474A16.23,16.23,0,0,0,16.139.021a15.994,15.994,0,1,0,.042,31.985A16.069,16.069,0,0,0,27.252,27.5Z" fill="#fff"/><path d="M325.218,26.744a9.148,9.148,0,0,1-6.576,2.593,9.366,9.366,0,1,1,0-18.731,9.047,9.047,0,0,1,6.6,2.8l1.987-1.987a12.368,12.368,0,0,0-8.672-3.452,12.18,12.18,0,0,0-12.292,12.042,12.03,12.03,0,0,0,12.292,11.957,11.722,11.722,0,0,0,8.548-3.339Z" fill="#fff"/><path d="M265.1,14.033c-5.063-1.189-8.382-2.223-8.382-5.641,0-3.233,3.153-5.405,7.847-5.405a12.726,12.726,0,0,1,9.327,3.7L276,4.577A15.725,15.725,0,0,0,264.567,0c-6.378,0-10.833,3.451-10.833,8.391,0,6.041,6.176,7.49,10.686,8.548,5.136,1.206,8.772,2.359,8.772,6.226,0,3.615-3.218,5.861-8.4,5.861a14.007,14.007,0,0,1-10.341-4.157l-2.108,2.108a17.012,17.012,0,0,0,12.449,5.034c6.916,0,11.384-3.473,11.384-8.847C276.179,16.633,269.777,15.13,265.1,14.033Z" fill="#fff"/><path d="M361.368,8.558h-2.927V31.429h2.927V18.634a8.223,8.223,0,0,1,2.132-5.968,7.191,7.191,0,0,1,4.976-1.834,9.091,9.091,0,0,1,1.271.1V8.022c-.367-.031-.883-.05-1.271-.05a8.556,8.556,0,0,0-7.106,3.644Z" fill="#fff"/></svg></span>
+			</div>
+			<p class="low-contrast">
+				Last Modified: <span style="white-space: nowrap;">Thu, 27 Oct 2022 10:19:02 UTC</span>
+			</p>
+		</div>
+	</div>
+	<script>
+		!function(){"use strict";var e,n;e=function(e){function r(e){window.console&&(console.warn?console.warn(e):console.log(e))}var i,o,d;switch(e=e||navigator.userAgent,i={browser:{name:null,version:null},cookies:null,flash:{version:null},ip:null,java:{version:null},os:{name:null,version:null},screen:{colors:null,dppx:null,height:null,width:null},scripts:!0,userAgent:e,viewport:{height:null,layout:{height:null,width:null},width:null,zoom:null},websockets:null},(e.indexOf("Trident")>=0||e.indexOf("MSIE")>=0)&&(e.indexOf("Mobile")>=0?i.browser.name="IE Mobile":i.browser.name="Internet Explorer"),e.indexOf("Firefox")>=0&&-1===e.indexOf("Seamonkey")&&(e.indexOf("Android")>=0?i.browser.name="Firefox for Android":i.browser.name="Firefox"),e.indexOf("Safari")>=0&&-1===e.indexOf("Chrome")&&-1===e.indexOf("Chromium")&&-1===e.indexOf("Android")&&(e.indexOf("CriOS")>=0?i.browser.name="Chrome for iOS":e.indexOf("FxiOS")>=0?i.browser.name="Firefox for iOS":i.browser.name="Safari"),e.indexOf("Chrome")>=0&&(e.match(/\bChrome\/[.0-9]* Mobile\b/)?e.match(/\bVersion\/\d+\.\d+\b/)||e.match(/\bwv\b/)?i.browser.name="WebView on Android":i.browser.name="Chrome for Android":i.browser.name="Chrome"),e.indexOf("Android")>=0&&-1===e.indexOf("Chrome")&&-1===e.indexOf("Chromium")&&-1===e.indexOf("Trident")&&-1===e.indexOf("Firefox")&&(i.browser.name="Android Browser"),e.indexOf("Edge")>=0&&(i.browser.name="Edge"),e.indexOf("UCBrowser")>=0&&(i.browser.name="UC Browser for Android"),e.indexOf("SamsungBrowser")>=0&&(i.browser.name="Samsung Internet"),(e.indexOf("OPR")>=0||e.indexOf("Opera")>=0)&&(e.indexOf("Opera Mini")>=0?i.browser.name="Opera Mini":e.indexOf("Opera Mobi")>=0||e.indexOf("Opera Tablet")>=0||e.indexOf("Mobile")>=0?i.browser.name="Opera Mobile":i.browser.name="Opera"),(e.indexOf("BB10")>=0||e.indexOf("PlayBook")>=0||e.indexOf("BlackBerry")>=0)&&(i.browser.name="BlackBerry"),o=null,i.browser.name){case"Chrome":case"Chrome for Android":case"WebView on Android":o=e.match(/Chrome\/((\d+\.)+\d+)/);break;case"Firefox":case"Firefox for Android":o=e.match(/Firefox\/((\d+\.)+\d+)/);break;case"Firefox for iOS":o=e.match(/FxiOS\/((\d+\.)+\d+)/);break;case"Edge":case"Internet Explorer":case"IE Mobile":e.indexOf("Edge")>=0?o=e.match(/Edge\/((\d+\.)+\d+)/):e.indexOf("rv:11")>=0?o=e.match(/rv:((\d+\.)+\d+)/):e.indexOf("MSIE")>=0&&(o=e.match(/MSIE\ ((\d+\.)+\d+)/));break;case"Safari":o=e.match(/Version\/((\d+\.)+\d+)/);break;case"Android Browser":o=e.match(/Android ((\d+\.)+\d+)/);break;case"UC Browser for Android":o=e.match(/UCBrowser\/((\d+\.)+\d+)/);break;case"Samsung Internet":o=e.match(/SamsungBrowser\/((\d+\.)+\d+)/);break;case"Opera Mini":o=e.match(/Opera Mini\/((\d+\.)+\d+)/);break;case"Opera":o=e.match(/OPR/)?e.match(/OPR\/((\d+\.)+\d+)/):e.match(/Version/)?e.match(/Version\/((\d+\.)+\d+)/):e.match(/Opera\/((\d+\.)+\d+)/);break;case"BlackBerry":o=e.match(/Version\/((\d+\.)+\d+)/);break;default:o=e.match(/\/((\d+\.)+\d+)$/)}o&&o[1]&&(i.browser.version=o[1]),i.viewport.width=window.innerWidth||document.documentElement.clientWidth,i.viewport.height=window.innerHeight||document.documentElement.clientHeight;try{Object.defineProperty({},"x",{}),n=!0}catch(a){n=!1}switch(n&&Object.defineProperty(i.browser,"size",{get:function(){return r("browser.size is deprecated; use viewport.width and viewport.height"),i.viewport.width+" x "+i.viewport.height}}),i.viewport.layout.width=document.documentElement.clientWidth,i.viewport.layout.height=document.documentElement.clientHeight,i.viewport.zoom=i.viewport.layout.width/i.viewport.width,d="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",d=d.replace(/[xy]/g,function(e){var n,r;return n=16*Math.random()|0,r="x"===e?n:3&n|8,r.toString(16)}),document.cookie=d,document.cookie.indexOf(d)>=0?i.cookies=!0:i.cookies=!1,document.cookie=d+"=; expires=Thu, 01 Jan 1970 00:00:01 GMT;",function(e){var n,r,d;if(e)for(r=e.length,n=0;r>n;n+=1)d=e.item(n),d.name.indexOf("Flash")>=0&&(o=d.description.match(/\b((\d+\.)+\d+)\b/),o&&o[1]&&(i.flash.version=o[1])),d.name.indexOf("Java")>=0&&(o=d.description.match(/\b((\d+\.)+\d+)\b/),o&&o[1]&&(i.java.version=o[1]))}(navigator.plugins),e.indexOf("Windows")>=0&&(e.indexOf("Windows Phone")>=0?i.os.name="Windows Phone":i.os.name="Windows"),e.indexOf("OS X")>=0&&-1===e.indexOf("Android")&&(i.os.name="OS X"),e.indexOf("Linux")>=0&&(i.os.name="Linux"),e.indexOf("like Mac OS X")>=0&&(i.os.name="iOS"),(e.indexOf("Android")>=0||e.indexOf("Adr")>=0)&&-1===e.indexOf("Windows Phone")&&(i.os.name="Android"),e.indexOf("BB10")>=0&&(i.os.name="BlackBerry"),e.indexOf("RIM Tablet OS")>=0&&(i.os.name="BlackBerry Tablet OS"),e.indexOf("BlackBerry")>=0&&(i.os.name="BlackBerryOS"),o=null,i.os.name){case"Windows":case"Windows Phone":if(e.indexOf("Win16")>=0)i.os.version="3.1.1";else if(e.indexOf("Windows CE")>=0)i.os.version="CE";else if(e.indexOf("Windows 95")>=0)i.os.version="95";else if(e.indexOf("Windows 98")>=0)e.indexOf("Windows 98; Win 9x 4.90")>=0?i.os.version="Millennium Edition":i.os.version="98";else if(o=e.match(/Win(?:dows)?(?: Phone)?[\ _]?(?:(?:NT|9x)\ )?((?:(\d+\.)*\d+)|XP|ME|CE)\b/),o&&o[1])switch(o[1]){case"6.4":o[1]="10.0";break;case"6.3":o[1]="8.1";break;case"6.2":o[1]="8";break;case"6.1":o[1]="7";break;case"6.0":o[1]="Vista";break;case"5.2":o[1]="Server 2003";break;case"5.1":o[1]="XP";break;case"5.01":o[1]="2000 SP1";break;case"5.0":o[1]="2000";break;case"4.0":o[1]="4.0"}break;case"OS X":o=e.match(/OS\ X\ ((\d+[._])+\d+)\b/);break;case"Linux":i.os.version=null;break;case"iOS":o=e.match(/OS\ ((\d+[._])+\d+)\ like\ Mac\ OS\ X/);break;case"Android":o=e.match(/(?:Android|Adr)\ ((\d+[._])+\d+)/);break;case"BlackBerry":case"BlackBerryOS":o=e.match(/Version\/((\d+\.)+\d+)/);break;case"BlackBerry Tablet OS":o=e.match(/RIM Tablet OS ((\d+\.)+\d+)/);break;default:i.os.version=null}return o&&o[1]&&(o[1]=o[1].replace(/_/g,"."),i.os.version=o[1]),i.screen.width=screen.width,i.screen.height=screen.height,i.screen.colors=screen.colorDepth,window.devicePixelRatio&&!isNaN(window.devicePixelRatio)?i.screen.dppx=window.devicePixelRatio:i.screen.dppx=1,n&&Object.defineProperty(i.screen,"size",{get:function(){return r("screen.size is deprecated; use screen.width and screen.height"),i.screen.width+" x "+i.screen.height}}),n&&Object.defineProperty(i.screen,"resolution",{get:function(){return r("screen.resolution is deprecated; multiply screen.width and screen.height by screen.dppx"),i.screen.dppx*i.screen.width+" x "+i.screen.dppx*i.screen.height}}),i.websockets=!!window.WebSocket,i.lang=navigator.languages||navigator.language,i.timestamp=(new Date).toString(),i},window.browserReport=window.browserReport||function(n){var r,i,o;r=e(),window.getip=window.getip||function(e){r.ip=e.ip,n(null,r)},i=document.createElement("script"),i.src="https://api.ipify.org?format=jsonp&callback=getip",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(i,o),i.onerror=n},window.browserReportSync=window.browserReportSync||function(n){return e(n)}}();	</script>
+	<script>
+		/*
+		 * detect unsupported browsers and deprecated browsers
+		 */
+		(function () {
+			"use strict";
+
+			/*
+			 * helper function to remove CSS class names from elements
+			 */
+			function removeClassName(element, className) {
+				if (element) {
+					if (element.classList) {
+						element.classList.remove(className);
+					} else {
+						var pattern = new RegExp("\\b" + className + " ?", "g");
+						element.className = element.className.replace(pattern, "");
+					}
+				}
+			}
+
+
+			/*
+			 * helper function to add CSS class names from elements
+			 */
+			function addClassName(element, className) {
+				if (element) {
+					if (element.classList) {
+						element.classList.add(className);
+					} else {
+						removeClassName(element, className);
+						element.className += " " + className;
+					}
+				}
+			}
+
+			var report, version, clients;
+
+			clients = {
+				/*
+				 * unsupported clients from current system requirements
+				 * less than these numbers
+				 */
+				"unsupported": {
+					"Internet Explorer": 11,
+					"Netscape Navigator": Infinity,
+					"Firefox": 25,
+					"Safari": 7
+				},
+				/*
+				 * deprecated clients from new system requirements
+				 * deprecating IE11 caused too much load on the Support Team
+				 * so, we have un-deprecated it.
+				 * someday, we will deprecate IE11
+				 * less than these numbers
+				 */
+				"deprecated": {
+					"Internet Explorer": 11,
+				},
+				/*
+				 * outdated clients
+				 * never tell visitors with modern browsers that their browser
+				 * is deprecated when it's simply outdated
+				 * less than these numbers
+				 */
+				"outdated": {
+					"Firefox": 49,
+					"Safari": 10,
+					"Chrome": 53,
+					"Edge": 14
+				}
+			};
+
+			report = browserReportSync();
+			version = parseInt(report.browser.version, 10);
+
+			// only procede if the browser version can be parsed
+			if (isNaN(version)) {
+				if (console) {
+					console.log(report);
+				}
+				return;
+			}
+
+			function outdated() {
+				removeClassName(document.documentElement, "no-client-outdated");
+				addClassName(document.documentElement, "yes-client-outdated");
+			}
+
+			function deprecated() {
+				removeClassName(document.documentElement, "no-client-deprecated");
+				addClassName(document.documentElement, "yes-client-deprecated");
+			}
+
+			function unsupported() {
+				removeClassName(document.documentElement, "yes-client-supported");
+				addClassName(document.documentElement, "no-client-supported");
+			}
+
+			function loginAnyway() {
+				removeClassName(document.documentElement, "no-cookies");
+				addClassName(document.documentElement, "yes-cookies");
+				removeClassName(document.documentElement, "no-client-supported");
+				addClassName(document.documentElement, "yes-client-supported");
+				removeClassName(document.documentElement, "yes-client-deprecated");
+				addClassName(document.documentElement, "no-client-deprecated");
+				removeClassName(document.documentElement, "yes-client-outdated");
+				addClassName(document.documentElement, "no-client-outdated");
+			}
+
+			if (!window.loginAnyway) {
+				window.loginAnyway = loginAnyway;
+			}
+
+			// iterate over outdated clients
+			var client, minimum;
+			for (client in clients.outdated) {
+				if (clients.outdated.hasOwnProperty(client)) {
+					if (report.browser.name === client) {
+						minimum = clients.outdated[client];
+						if (version < minimum) {
+							outdated();
+						}
+					}
+				}
+			}
+
+			// iterate over deprecated clients
+			var client, minimum;
+			for (client in clients.deprecated) {
+				if (clients.deprecated.hasOwnProperty(client)) {
+					if (report.browser.name === client) {
+						minimum = clients.deprecated[client];
+						if (version < minimum) {
+							deprecated();
+						}
+					}
+				}
+			}
+
+			// iterate over unsupported clients
+			var client, minimum;
+			for (client in clients.unsupported) {
+				if (clients.unsupported.hasOwnProperty(client)) {
+					if (report.browser.name === client) {
+						minimum = clients.unsupported[client];
+						if (version < minimum) {
+							// special logic for IE
+							if (client === "Internet Explorer") {
+								if (version === 9) {
+									// os version must be Vista SP2
+									// or Server 2008 the user agent does not
+									// provide service packs and
+									// Server 2008 is the same as Vista
+									if (report.os && report.os.version === "Vista") {
+										deprecated();
+									} else {
+										unsupported();
+									}
+								} else if (version === 10) {
+									// os version must be Server 2012
+									// which is Windows 8 in the user agent
+									if (report.os && report.os.version === "8") {
+										deprecated();
+									} else {
+										unsupported();
+									}
+								} else {
+									unsupported();
+								}
+							} else {
+								unsupported();
+							}
+						}
+					}
+				}
+			}
+
+			// IE must be 6.0 and greater
+			// 10 and lower are deprecated
+			// 10 is allowed on Server 2012
+			// 9 is allowed on Vista SP2 and Server 2008
+
+			// Netscape Navigator must be 8.0 and greater
+			// discontinued, all versions are deprecated
+
+			// Mozilla Firefox must be 2.0 and greater
+			// less than previous version is outdated (current is 43)
+
+			// Safari must be 2.0.4 and greater
+			// less than previous version is outdated (current is 9)
+
+			// Chrome must be any version
+			// less than previous version is outdated (current is 48)
+
+			// Edge must be any version
+			// less than previous version is outdated (current is 13)
+
+			/*
+			 * mark JS support
+			 * send visitors to an error page unless cookies are enabled
+			 * change class name on HTML element
+			 * set client focus to the username field
+			 */
+			removeClassName(document.documentElement, "no-js");
+			addClassName(document.documentElement, "yes-js");
+
+			if ((report && report.cookies) || (!report && navigator.cookieEnabled)) {
+				removeClassName(document.documentElement, "no-cookies");
+				addClassName(document.documentElement, "yes-cookies");
+			}
+
+			document.forms[0].elements.UserLogin.focus();
+
+		}());
+
+		/*
+		 * add timezone, timezone abbr, timezone offset, and is DST
+		 * as hidden input on form
+		 */
+		(function addTimeZone () {
+
+			"use strict";
+
+			var now, timeZone;
+
+			/**
+			 * helper function to add hidden input elements to the form
+			 * @param {string} name The name of the field
+			 * @param {string} value The value of the field
+			 * @return {undefined}
+			 */
+			function addHiddenInputToForm (name, value) {
+
+				var input;
+
+				input = document.createElement("input");
+				input.type = "hidden";
+				input.name = name;
+				input.value = value;
+
+				document.forms[0].appendChild(input);
+
+			}
+
+			/**
+			 * getTimezone function from Ext 3.4.1.1
+			 * @param {Date} date A date object
+			 * @return {String} The time zone abbreviation
+			 */
+			function getTimezoneAbbr (date) {
+
+				return date.toString().replace(/^.* (?:\((.*)\)|([A-Z]{1,4})(?:[\-+][0-9]{4})?(?: -?\d+)?)$/, "$1$2").replace(/[^A-Z]/g, "");
+
+			}
+
+			/**
+			 * isDST function from Ext 3.4.1.1
+			 * fixed to work in the southern hemisphere as well as the northern
+			 * @param {Date} date A date object
+			 * @return {Boolean} if this date is observing daylight savings time
+			 */
+			function isDST (date) {
+
+				var januaryOffset, julyOffset;
+
+				januaryOffset = new Date(date.getFullYear(), 0).getTimezoneOffset();
+				julyOffset = new Date(date.getFullYear(), 6).getTimezoneOffset();
+				if (julyOffset < januaryOffset) {
+
+					// daylight savings time is observed in July
+					return julyOffset === date.getTimezoneOffset();
+
+				} else if (januaryOffset < julyOffset) {
+
+					// daylight savings time is observed in January
+					return januaryOffset === date.getTimezoneOffset();
+
+				}
+
+				// time zone does not observe daylight savings time
+				return false;
+
+			}
+
+			/**
+			 * get time zone value from the ECMAScript Internationalization API
+			 * @return {String} The IANA zone info key, e.g. America/Los_Angeles
+			 */
+			function getTimeZone () {
+
+				var intlOptions;
+
+				if (window.Intl && Intl.DateTimeFormat) {
+
+					intlOptions = (new Intl.DateTimeFormat()).resolvedOptions();
+					if (intlOptions && intlOptions.timeZone) {
+
+						return intlOptions.timeZone;
+
+					}
+
+				}
+
+				return "";
+
+			}
+
+			timeZone = getTimeZone();
+			if (timeZone) {
+
+				addHiddenInputToForm("timezone", timeZone);
+
+			}
+
+			now = new Date();
+			addHiddenInputToForm("gmtoffset", now.getTimezoneOffset());
+			addHiddenInputToForm("timezone_abbr", getTimezoneAbbr(now));
+			addHiddenInputToForm("is_dst", Number(isDST(now)));
+
+			function updateFormAction () {
+				var usernameElem = document.getElementById("myform_UserLogin");
+				usernameElem.addEventListener("blur", function () {
+					var username = usernameElem.value.trim();
+					usernameElem.value = username;
+					console.log(username);
+					var id = username.charAt(5);
+					console.log(id);
+					var formaction = "";
+					switch (id) {
+						case "_":
+							formaction = "https://qualysguard.qualys.com";
+							break;
+						case "2":
+							formaction = "https://qualysguard.qg2.apps.qualys.com";
+							break;
+						case "3":
+							formaction = "https://qualysguard.qg3.apps.qualys.com";
+							break;
+						case "6":
+							formaction = "https://qualysguard.qg4.apps.qualys.com";
+							break;
+						case "-":
+							formaction = "https://qualysguard.qualys.eu";
+							break;
+						case "5":
+						case "!":
+							formaction = "https://qualysguard.qg2.apps.qualys.eu";
+							break;
+						case "8":
+							formaction = "https://qualysguard.qg1.apps.qualys.in";
+							break;
+						case "9":
+							formaction = "https://qualysguard.qg1.apps.qualys.ca";
+							break;
+						case "7":
+							formaction = "https://qualysguard.qg1.apps.qualys.ae";
+							break;
+						case "#":
+							formaction = "https://qualysguard.qg1.apps.qualys.co.uk";
+							break;
+						case "4":
+							formaction = "https://qualysguard.qg1.apps.qualys.com.au";
+							break;
+						default:
+							formaction = "Invalid username";
+							break;
+					}
+					
+					var idElem = document.querySelector('.id');
+					idElem.textContent = id;
+
+					var actionElem = document.querySelector('[name="myform"]');
+					actionElem.setAttribute('action', formaction + "/fo/login.php");
+
+					var platformElem = document.querySelector('.platformElem');
+					platformElem.textContent = formaction + "/fo/login.php";
+				});
+
+			}
+
+			updateFormAction();
+
+		}());
+
+
+		/*
+		 * login via AJAX
+		 */
+		(function initLogin () {
+
+			"use strict";
+
+			var loginForm;
+
+
+			/**
+			 * form url encode inputs for sending over XHR
+			 * @arg {Object} form - the form element
+			 * @returns {String} the form-urlencoded parameters
+			 */
+			function formURLEncode (form) {
+
+				var data, i, input, inputs, l;
+
+				// get all the form inputs
+				inputs = form.querySelectorAll("input, select, textarea, button");
+				l = inputs.length;
+				data = [];
+				for (i = 0; i < l; i += 1) {
+
+					input = inputs.item(i);
+					if (input.name && input.value) {
+
+						data.push(
+							encodeURIComponent(input.name) + "=" +
+							encodeURIComponent(input.value)
+						);
+
+					}
+
+				}
+
+				return data.join("&");
+
+			}
+
+
+			/**
+			 * reset login form after failed login attempt
+			 * @arg {Event} event - the form submit event
+			 * @returns {null} undefined
+			 */
+			function resetForm (event) {
+
+				// clear Password field
+				event.target.UserPasswd.value = "";
+
+				// enable submit button and reset button label
+				event.target._form_action1.disabled = false;
+				event.target._form_action.value = "Please wait...";
+				event.target._form_action1.value = "Try Again";
+
+			}
+
+			/**
+			 * handle error responses from XHR
+			 * @this {XMLHttpRequest}
+			 * @arg {Event} event - the form submit event
+			 * @arg {String} error - the error message
+			 * @returns {null} undefined
+			 */
+			function handleErrorResponse (event, error) {
+
+				var div, msg, template;
+
+				if (!error) {
+
+					// set error message to response status
+					msg = [
+						"Failed to load resource: ",
+						"the server responded with a status of ",
+						this.status,
+						" (" + this.statusText + ")"
+					].join("");
+
+				}
+
+				// create HTML template for error message
+				template = "<h5>Error!</h5><p></p>";
+
+				if (error.toString) {
+
+					// ensure msg is a string
+					msg = error.toString();
+
+				} else {
+
+					msg = "An unknown error occurred.";
+
+				}
+
+				// wrap last two words in error message with span to prevent wrapping
+				msg = msg.replace(
+					/\s+(\d+\s+)?([a-zA-Z0-9_\-()]+\s+[a-zA-Z0-9_\-()]+[.?!]?)$/,
+					" <span style=\"white-space: nowrap\">$1$2</span>"
+				);
+
+				// insert or update the error message in the DOM
+				div = document.querySelector(".qualys-client-login-error");
+				if (div) {
+
+					div.innerHTML = template.replace("", msg);
+
+				} else {
+
+					div = document.createElement("div");
+					div.className = "qualys-client-login-error";
+					div.innerHTML = template.replace("", msg);
+
+					// make element focus manageable for Section 508
+					div.setAttribute("tabindex", "-1");
+					event.target.parentNode.insertBefore(div, event.target);
+
+				}
+
+				// send focus to error message for section 508
+				div.focus();
+				resetForm(event);
+
+			}
+
+			/**
+			 * handle response from backend
+			 * @this {XMLHttpRequest}
+			 * @arg {Event} event - event
+			 * @returns {null} undefined
+			 */
+			function handleResponse (event) {
+
+				var error, response;
+
+				// handle response
+				if (this.readyState === 4) {
+
+					if (this.status >= 200 && this.status < 300) {
+
+						// Success
+						try {
+
+							response = JSON.parse(this.responseText);
+
+							if (response.status && response.status === "true") {
+
+								window.location = response.response.redirect;
+
+							} else {
+
+								error = response.response.msg;
+
+							}
+
+						} catch (err) {
+
+							// Error, invalid JSON
+							console.error && console.error(err);
+
+							// give the customer a more friendly error
+							error = "Service Unavailable";
+
+						}
+
+					} else {
+
+						// Error, response was not 2xx
+						// set error message to response status
+						var err = [
+							"Failed to load resource: ",
+							"the server responded with a status of ",
+							this.status,
+							" (" + this.statusText + ")"
+						].join("");
+						console.error && console.error(err);
+
+						// give the customer a more friendly error
+						error = "Service Unavailable";
+					}
+
+				}
+
+				// display error to visitor
+				if (error) {
+
+					handleErrorResponse.call(this, event, error);
+
+				}
+
+			}
+
+
+			/**
+			 * handle the form submit event
+			 * @arg {Object} event - the form submit event
+			 * @returns {Boolean} prevent default
+			 */
+			function handleLoginFormSubmit (event) {
+
+				var data, div, request, url;
+
+				// stop submission
+				event.preventDefault();
+
+				// existing code from the onclick for the submit button
+				event.target._form_action1.disabled = true;
+				event.target._form_action.value = "Login";
+				event.target._form_action1.value = "Please wait...";
+
+				// clear any previous error messages
+				div = document.querySelector(".qualys-client-login-error");
+				if (div) {
+
+					div.parentElement.removeChild(div);
+
+				}
+
+				// get url from the form action attribute
+				url = event.target.getAttribute("action");
+
+				// generate string of form field parameters, url encoded
+				data = formURLEncode(event.target);
+
+				// POST JSON to backend and await response
+				request = new XMLHttpRequest();
+				if (request.timeout) {
+
+					request.timeout = 16000;
+
+				}
+				request.open("POST", url, true);
+				request.setRequestHeader(
+					"Content-Type",
+					"application/x-www-form-urlencoded; charset=UTF-8"
+				);
+				request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+				request.onload = handleResponse.bind(request, event);
+				request.onerror = handleErrorResponse.bind(request, event);
+				request.send(data);
+
+				return false;
+
+			}
+
+			loginForm = document.querySelector("form[name=\"myform\"]");
+			if (loginForm.addEventListener) {
+
+				loginForm.addEventListener("submit", handleLoginFormSubmit, false);
+
+			}
+
+		}());
+	</script>
+</body>
+</html>
