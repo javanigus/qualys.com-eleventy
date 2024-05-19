@@ -30,7 +30,7 @@ const walk = dir => {
 };
 
 const edit = filePath => {
-  // if (filePath.endsWith('/company/index.njk') || filePath.endsWith('/apps/cybersecurity-asset-management/index.njk')) {
+  // if (filePath.endsWith('/company/index.njk') || filePath.endsWith('/apps/cybersecurity-asset-management/index.njk') || filePath.endsWith('/emails/lunch-learn/2022-02-03/ransomware-virtual/confirm/index.njk')) {
   if (filePath.endsWith('.njk')) {
     var oldContent = fs.readFileSync(filePath, {encoding: 'utf8'});
 
@@ -55,6 +55,11 @@ const edit = filePath => {
     oldContent = newContent;
     regex = /<footer role="footer"(.|\n)*?<\/footer>/gi;
     var replaceVal = '{% include "src/_includes/footer-chaitrail.njk" %}';
+    var newContent = oldContent.replace(regex, replaceVal);
+
+	oldContent = newContent;
+    regex = /{{(.|\n)*?}}/gi;
+    var replaceVal = '{# marketo variable #}';
     var newContent = oldContent.replace(regex, replaceVal);
 
     fs.writeFileSync(filePath, newContent, {encoding: 'utf-8'});
