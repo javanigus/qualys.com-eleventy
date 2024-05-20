@@ -7,6 +7,7 @@ Run the script as follows: node recursive-replace.js
 
 const fs = require('fs');
 const path = require('path');
+var dryrun = false;
 
 const walk = dir => {
   try {
@@ -34,35 +35,39 @@ const edit = filePath => {
   if (filePath.endsWith('.njk') && !filePath.includes("_includes")) {
     var oldContent = fs.readFileSync(filePath, {encoding: 'utf8'});
 
-    // REPLACE {{#if class}} with {% if class %}
+    // REPLACE old header
     var regex = /<header class="q-header"(.|\n)*?\<\/header>/gi;
     var replaceVal = '{% include "src/_includes/header-ueno.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
-    // REPLACE {{/if}} with {% endif %}
+    // REPLACE old footer
     oldContent = newContent;
     regex = /<footer class="q-footer"(.|\n)*?<\/footer>/gi;
     var replaceVal = '{% include "src/_includes/footer-ueno.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
-    // REPLACE page.platform with platform
+    // REPLACE new header
     oldContent = newContent;
     regex = /<header class="sticky(.|\n)*?<\/header>/gi;
     var replaceVal = '{% include "src/_includes/header-chaitrali.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
-    // REPLACE {{markdown biography}} with {{ biography | markdown | safe }}
+    // REPLACE new footer
     oldContent = newContent;
     regex = /<footer role="footer"(.|\n)*?<\/footer>/gi;
     var replaceVal = '{% include "src/_includes/footer-chaitrali.njk" %}';
     var newContent = oldContent.replace(regex, replaceVal);
 
+	// REPLACE Marketo variables
 	oldContent = newContent;
     regex = /{{(.|\n)*?}}/gi;
     var replaceVal = '{# marketo variable #}';
     var newContent = oldContent.replace(regex, replaceVal);
 
-    fs.writeFileSync(filePath, newContent, {encoding: 'utf-8'});
+	if (!dryrun) {
+		fs.writeFileSync(filePath, newContent, {encoding: 'utf-8'});
+	}
+    
     console.log(`Edited file: ${filePath}`);
   }
 };
