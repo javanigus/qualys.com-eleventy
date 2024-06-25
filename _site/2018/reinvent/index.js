@@ -1,5 +1,0 @@
-"use strict";/* global jQuery:false */ // expand / collapse agenda rows
-// agenda tab functionality
-(function(a){"use strict";a(".title-speaker-container").on("click",function(b){a(b.currentTarget).hasClass("expanded")?(a(b.currentTarget).removeClass("expanded").addClass("collapsed"),a(b.currentTarget).parent(".description").find(".abstract").addClass("hidden")):a(b.currentTarget).hasClass("collapsed")&&(a(b.currentTarget).removeClass("collapsed").addClass("expanded"),a(b.currentTarget).parent(".description").find(".abstract").removeClass("hidden"))})})(jQuery),function(a){"use strict";a(".tablink").on("click",function(b){var c=a(b.currentTarget).attr("data-tab-id");a(".tablink").removeClass("active"),a(b.currentTarget).addClass("active"),a(".tab-content").addClass("hidden"),a("#"+c).removeClass("hidden")});// if hash value containing tab ID exists, trigger a click on the tab
-var b=window.location.hash.replace(/#|\//gi,"");a("[data-tab-id=\""+b+"\"]").click()}(jQuery);
-//# sourceMappingURL=index.js.map

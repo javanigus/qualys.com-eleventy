@@ -1,3 +1,0 @@
-"use strict";/* eslint-disable */webpackJsonp([5],{/***/23:(/***/function _(a,b,c){"use strict";function d(a){return a&&a.__esModule?a:{default:a}}var e=c(2),f=d(e),g=c(4),h=d(g),i=document.querySelector(".q-solutions-report");i&&(0,h.default)(),(0,f.default)()}),/***/40:(/***/function _(){// removed by extract-text-webpack-plugin
-/***/}),/***/77:(/***/function _(a,b,c){c(23),a.exports=c(40)})},[77]);
-//# sourceMappingURL=solutions.js.map

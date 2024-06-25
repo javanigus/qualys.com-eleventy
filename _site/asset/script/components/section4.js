@@ -1,5 +1,0 @@
-"use strict";/* global jQuery */(function(a){// put JavaScript here
-"use strict";var b=a(".js-txt-header");b.length&&!b.parents(".q-accordion-item").hasClass("active")&&a(".js-txt-header").mouseenter(function(){let b=a(this),c=b.parents(".js-accordion-items"),d=c.next(".q-accordion-images"),e=b.data("image");/* $screnshots.find(".js-img-screenshot").fadeOut("fast", function(){
-				$("."+ $imageData).fadeIn("fast");
-			});*/c.hasClass("accordion-init")&&c.removeClass("accordion-init"),b.parents(".q-accordion-items").find(".q-accordion-item").removeClass("active"),b.parents(".q-accordion-item").addClass("active"),a(this).parents(".q-accordion-items").find(".q-accordion-item:not(.active) .js-txt-content").hide(),b.next().slideDown(350),d.find(".js-img-screenshot").hide(0,function(){a("."+e).show(0)})})})(jQuery);
-//# sourceMappingURL=section4.js.map

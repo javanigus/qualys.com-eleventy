@@ -1,4 +1,0 @@
-"use strict";/* global  Swiper:false */ //slider
-(function(){"use strict";var a=new Swiper(".q-section21-testimonial-container",{slidesPerView:"auto",observer:!0,observeParents:!0,centeredSlides:!1,spaceBetween:30,autoplay:!1,breakpoints:{720:{spaceBetween:0}}});document.querySelector(".q-section-21-slide-0").addEventListener("click",function(){a.slideTo(0,400)}),document.querySelector(".q-section-21-slide-1").addEventListener("click",function(){a.slideTo(1,400)}),document.querySelector(".q-section-21-slide-2").addEventListener("click",function(){a.slideTo(2,400)});var b=document.querySelectorAll(".slide-tab");a.on("slideChange",function(){var c=document.querySelector(".q-section-21-slide-"+a.activeIndex);Array.prototype.forEach.call(b,function(a){a.classList.remove("q-section21-active-slide-tab"),c.classList.add("q-section21-active-slide-tab")})})})();
-
-//# sourceMappingURL=section21.mjs.map

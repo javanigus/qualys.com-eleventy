@@ -1,3 +1,0 @@
-"use strict";/* global jQuery */ // expand / collapse agenda rows
-(function(a){"use strict";a(".js-read-more").on("click",function(b){var c=a(b.currentTarget).parents(".q-grid__column").find(".q-ignite__video-description");c.toggleClass("hidden"),c.hasClass("hidden")?a(b.currentTarget).html("Read <span class=\"nowrap\">more<img class=\"link-arrow\" src=\"https://ik.imagekit.io/qualys/image/icon/link-arrow.svg\" width=\"7\" height=\"10\"></span>"):a(b.currentTarget).html("Read <span class=\"nowrap\">less<img class=\"link-arrow\" src=\"https://ik.imagekit.io/qualys/image/icon/link-arrow.svg\" width=\"7\" height=\"10\"></span>")})})(jQuery);
-//# sourceMappingURL=index.js.map

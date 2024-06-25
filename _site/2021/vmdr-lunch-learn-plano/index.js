@@ -1,4 +1,0 @@
-"use strict";/* global jQuery MktoForms2 */ /*
- * Wrap Marketo form fields to support two column layout
- */(function(a,b){"use strict";a(document).on("alterFormValuesComplete",function(){a(".mktoFormRow.Email, \t\t\t.mktoFormRow.FirstName, \t\t\t.mktoFormRow.LastName, \t\t\t.mktoFormRow.Company, \t\t\t.mktoFormRow.Phone, \t\t\t.mktoFormRow.Country, \t\t\t.mktoFormRow.State, \t\t\t.mktoFormRow.Company_Size_Range__c_account").wrapAll("<div class=\"fieldsWrapper\" />")}),b.onFormRender(function(){console.log("a"),setTimeout(function(){a(".mktoFormRow.State").detach().insertAfter(a(".mktoFormRow.Country"))},0)})})(jQuery,MktoForms2);
-//# sourceMappingURL=index.js.map

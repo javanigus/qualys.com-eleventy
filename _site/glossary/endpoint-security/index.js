@@ -1,5 +1,0 @@
-"use strict";/* global TimelineLite Waypoint */ /* eslint-disable */(function(){"use strict";function a(){window.CustomEvent?b=new CustomEvent("timeLineLiteCompleteEvent"):(b=document.createEvent("CustomEvent"),b.initCustomEvent("timeLineLiteCompleteEvent",!0,!0)),f.dispatchEvent(b)}var b,c=!1,d=new TimelineLite,e=window.Power4.easeInOut,f=document.querySelector(".edr-diagram")||null,g=document.querySelector(".multi-vector-edr-diagram")||null;new Waypoint({element:document.getElementById("edr-diagram"),offset:"75%",handler:function handler(b){"down"!==b||c||(c=!0,d.fromTo(f,1,{x:"25%",autoAlpha:0},{x:"0%",autoAlpha:1,ease:e}),d.to(f,1,{//transform: "rotate(180deg)",
-rotation:"+=180",transformOrigin:"center center",// autoAlpha: 1,
-// ease: ease,
-onComplete:a}),d.to(f,1,{autoAlpha:0}),d.to(g,1,{autoAlpha:1},"-=1"))}})})();
-//# sourceMappingURL=index.js.map

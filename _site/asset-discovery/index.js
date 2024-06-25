@@ -1,5 +1,0 @@
-"use strict";/* global jQuery */(function(a){"use strict";// when header is below banner, change its colors
-a(document).ready(function(){function b(){e.removeClass("transparent"),g.removeClass("transparent"),f.addClass("hidden"),h.addClass("hidden"),d.removeClass("hidden"),i.removeClass("hidden")}function c(){e.addClass("transparent"),g.addClass("transparent"),f.removeClass("hidden"),h.removeClass("hidden"),d.addClass("hidden"),i.addClass("hidden")}// cut local nav HTML
-var d=a("div.local-nav").detach("div.local-nav");// paste it into header
-a("#header").append(d);var e=a("div.header-wrapper"),f=a("#nav"),g=a("div.mobile-header"),h=a("#header div.toolbar"),i=a("#header a.global-link");document.body.scrollTop>a("div.banner h2").offset().top-200?setTimeout(b,0):setTimeout(c,0);a(window).on("scroll",function descroll(){document.body.scrollTop>a("div.banner h2").offset().top-200?setTimeout(b,0):setTimeout(c,0)})})})(jQuery);
-//# sourceMappingURL=index.js.map

@@ -1,3 +1,0 @@
-"use strict";/* global jQuery bodymovin qualys*/ // populate form with email address from URL
-(function(a){"use strict";a(document).ready(function(){a(".js-hero-create-account").on("click",function(){a(".email-field-wrapper").hide(),a(".marketo-form-wrapper").show();var b=a(this).parent().find(".hero-email").val();a("[name=Email]").val(b)})})})(jQuery),function(){"use strict";var a=function(a,b){return bodymovin.loadAnimation({container:document.querySelector(a),renderer:"svg",loop:!1,autoplay:!1,path:b})}(".ai-screenshot-animation","/asset/data/apps/asset-inventory/ai-screenshots.json");a.play()}(),function(a){"use strict";a("[type=\"email\"]").val(qualys.parseQueryString(window.location.search).email)}(jQuery);
-//# sourceMappingURL=index.js.map

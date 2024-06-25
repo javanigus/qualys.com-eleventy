@@ -1,4 +1,0 @@
-"use strict";const moment=require("moment-timezone"),contentful=require("contentful-sync-cli/contentful-local"),client=contentful.createClient({space:"4l0w8syj29ap",localPath:"site/cache/contentful"});module.exports=client.getEntries({content_type:"onDemandLiveEvents"}).then(client.unWrap).then(function(a){// function to sort array of objects by property
-function b(c){var d=1;return"-"===c[0]&&(d=-1,c=c.substr(1)),function(e,a){var b=e[c]<a[c]?-1:e[c]>a[c]?1:0;return b*d}}// remove empty objects from result set
-var c={highlightVideoId:a.items[0].highlightVideoId,items:a.items[0].liveEventItems};if(c.items){c.items=c.items.filter(a=>0<Object.keys(a).length);var d=c.items.filter(a=>!a.eventDate||moment(a.eventDate).isAfter());0<d.length&&(d.sort(b("eventDate")),c.items=d)}return c});
-//# sourceMappingURL=live-events-data.js.map
